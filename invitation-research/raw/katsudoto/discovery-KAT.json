@@ -1,0 +1,267 @@
+{
+ "code": "KAT",
+ "competitor": "katsudoto",
+ "observedAt": "2026-10-29T10:30:50.750+07:00",
+ "homepage": {
+  "url": "https://katsudoto.id/",
+  "finalUrl": "https://katsudoto.id/",
+  "skipped": null,
+  "links": 27
+ },
+ "catalogCandidates": [
+  "https://katsudoto.id/desain",
+  "https://katsudoto.id/portofolio?cat=custom"
+ ],
+ "catalog": {
+  "url": "https://katsudoto.id/desain",
+  "finalUrl": "https://katsudoto.id/desain/",
+  "skipped": null,
+  "links": 176
+ },
+ "demos": [
+  {
+   "href": "https://rdct-0df8db6a41.katsudoto.id/736184",
+   "label": "Lihat Preview"
+  },
+  {
+   "href": "https://rdct-046dd21a69.katsudoto.id/197049",
+   "label": "Lihat Preview"
+  },
+  {
+   "href": "https://rdct-3e2647e153.katsudoto.id/731900",
+   "label": "Lihat Preview"
+  },
+  {
+   "href": "https://rdct-5517764521.katsudoto.id/107754",
+   "label": "Lihat Preview"
+  },
+  {
+   "href": "https://rdct-d87d519960.katsudoto.id/435344",
+   "label": "Lihat Preview"
+  },
+  {
+   "href": "https://rdct-f9bc73b2c5.katsudoto.id/133695",
+   "label": "Lihat Preview"
+  },
+  {
+   "href": "https://rdct-9deb924f93.katsudoto.id/940751",
+   "label": "Lihat Preview"
+  },
+  {
+   "href": "https://rdct-4510b78249.katsudoto.id/961199",
+   "label": "Lihat Preview"
+  },
+  {
+   "href": "https://rdct-52e69c9cf1.katsudoto.id/821963",
+   "label": "Lihat Preview"
+  },
+  {
+   "href": "https://rdct-bc9ca09161.katsudoto.id/241557",
+   "label": "Lihat Preview"
+  },
+  {
+   "href": "https://rdct-4d52ff3a45.katsudoto.id/187469",
+   "label": "Lihat Preview"
+  },
+  {
+   "href": "https://rdct-dcf2c7ad8c.katsudoto.id/952317",
+   "label": "Lihat Preview"
+  },
+  {
+   "href": "https://rdct-9e23446152.katsudoto.id/581249",
+   "label": "Lihat Preview"
+  },
+  {
+   "href": "https://rdct-2719ece58c.katsudoto.id/554904",
+   "label": "Lihat Preview"
+  },
+  {
+   "href": "https://rdct-7d7866e9b5.katsudoto.id/728632",
+   "label": "Lihat Preview"
+  },
+  {
+   "href": "http://rdct-958ee5091e.katsudoto.id/816257",
+   "label": "Lihat Preview"
+  },
+  {
+   "href": "https://rdct-970ac2c550.katsudoto.id/785289",
+   "label": "Lihat Preview"
+  },
+  {
+   "href": "https://rdct-167a88d62e.katsudoto.id/173463",
+   "label": "Lihat Preview"
+  },
+  {
+   "href": "https://rdct-7b1b4bb81a.katsudoto.id/739342",
+   "label": "Lihat Preview"
+  },
+  {
+   "href": "https://rdct-6d29060070.katsudoto.id/190005",
+   "label": "Lihat Preview"
+  },
+  {
+   "href": "https://rdct-35b0ed9377.katsudoto.id/552440",
+   "label": "Lihat Preview"
+  },
+  {
+   "href": "http://rdct-9e3954a193.katsudoto.id/585807",
+   "label": "Lihat Preview"
+  },
+  {
+   "href": "https://rdct-1cf8a3bf38.katsudoto.id/912865",
+   "label": "Lihat Preview"
+  },
+  {
+   "href": "https://rdct-777874db78.katsudoto.id/785653",
+   "label": "Lihat Preview"
+  },
+  {
+   "href": "https://rdct-e0cd0c9f03.katsudoto.id/605540",
+   "label": "Lihat Preview"
+  },
+  {
+   "href": "https://rdct-5de331ae0f.katsudoto.id/968513",
+   "label": "Lihat Preview"
+  },
+  {
+   "href": "https://rdct-a093546720.katsudoto.id/879235",
+   "label": "Lihat Preview"
+  },
+  {
+   "href": "https://rdct-733bf60487.katsudoto.id/461021",
+   "label": "Lihat Preview"
+  },
+  {
+   "href": "https://rdct-f9b8529e2b.katsudoto.id/185536",
+   "label": "Lihat Preview"
+  },
+  {
+   "href": "https://rdct-548a464a72.katsudoto.id/864113",
+   "label": "Lihat Preview"
+  },
+  {
+   "href": "https://rdct-5de8980aaa.katsudoto.id/968801",
+   "label": "Lihat Preview"
+  },
+  {
+   "href": "http://rdct-b82e44e8a3.katsudoto.id/381301",
+   "label": "Lihat Preview"
+  },
+  {
+   "href": "https://rdct-368d30fcd6.katsudoto.id/844618",
+   "label": "Lihat Preview"
+  },
+  {
+   "href": "https://rdct-6e04bcf198.katsudoto.id/843472",
+   "label": "Lihat Preview"
+  },
+  {
+   "href": "https://rdct-305027c8b2.katsudoto.id/106225",
+   "label": "Lihat Preview"
+  },
+  {
+   "href": "https://rdct-f4f7d1f7f1.katsudoto.id/629425",
+   "label": "Lihat Preview"
+  },
+  {
+   "href": "https://rdct-066064a280.katsudoto.id/344983",
+   "label": "Lihat Preview"
+  },
+  {
+   "href": "https://rdct-3d53d55705.katsudoto.id/490068",
+   "label": "Lihat Preview"
+  },
+  {
+   "href": "https://rdct-78ab485227.katsudoto.id/526925",
+   "label": "Lihat Preview"
+  },
+  {
+   "href": "https://rdct-4ba7d21d5b.katsudoto.id/184339",
+   "label": "Lihat Preview"
+  },
+  {
+   "href": "https://rdct-a2342f88dc.katsudoto.id/725643",
+   "label": "Lihat Preview"
+  },
+  {
+   "href": "https://rdct-0da39054df.katsudoto.id/483049",
+   "label": "Lihat Preview"
+  },
+  {
+   "href": "https://rdct-92513e9b1c.katsudoto.id/",
+   "label": "Lihat Preview"
+  },
+  {
+   "href": "https://rdct-9e0ffb9eb4.katsudoto.id/804203",
+   "label": "Lihat Preview"
+  },
+  {
+   "href": "https://rdct-052d1d550f.katsudoto.id/905033",
+   "label": "Lihat Preview"
+  },
+  {
+   "href": "https://rdct-73b254401c.katsudoto.id/189183",
+   "label": "Lihat Preview"
+  },
+  {
+   "href": "https://rdct-060b4fe321.katsudoto.id/470636",
+   "label": "Lihat Preview"
+  },
+  {
+   "href": "https://rdct-32e3ee9059.katsudoto.id/",
+   "label": "Lihat Preview"
+  },
+  {
+   "href": "https://rdct-b7c5ce19a6.katsudoto.id/609544",
+   "label": "Lihat Preview"
+  },
+  {
+   "href": "https://rdct-4ee9b2fad0.katsudoto.id/970223",
+   "label": "Lihat Preview"
+  },
+  {
+   "href": "https://rdct-e8fd939e2e.katsudoto.id/",
+   "label": "Lihat Preview"
+  },
+  {
+   "href": "https://rdct-f3c114f41d.katsudoto.id/181252",
+   "label": "Lihat Preview"
+  },
+  {
+   "href": "https://rdct-d4ab8eaa79.katsudoto.id/",
+   "label": "Lihat Preview"
+  },
+  {
+   "href": "https://rdct-17887d5561.katsudoto.id/",
+   "label": "Lihat Preview"
+  },
+  {
+   "href": "https://rdct-2fed64a9cf.katsudoto.id/",
+   "label": "Lihat Preview"
+  },
+  {
+   "href": "https://rdct-73da8c469d.katsudoto.id/",
+   "label": "Lihat Preview"
+  },
+  {
+   "href": "https://rdct-dbc45ce503.katsudoto.id/577665",
+   "label": "Lihat Preview"
+  },
+  {
+   "href": "https://rdct-5860ff9f68.katsudoto.id/",
+   "label": "Lihat Preview"
+  },
+  {
+   "href": "https://rdct-45c2bd629f.katsudoto.id/",
+   "label": "Lihat Preview"
+  },
+  {
+   "href": "https://rdct-248935bd72.katsudoto.id/923752",
+   "label": "Lihat Preview"
+  },
+  {
+   "href": "https://rdct-63dced3fba.katsudoto.id/934301",
+   "label": "Lihat Preview"
+  }
+ ]
+}

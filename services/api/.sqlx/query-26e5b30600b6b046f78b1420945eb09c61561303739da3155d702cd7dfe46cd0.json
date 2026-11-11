@@ -1,0 +1,16 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "update invitations set deleted_at = $2, purge_after = $3 where id = $1 and deleted_at is null",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Left": [
+        "Int4",
+        "Timestamp",
+        "Timestamp"
+      ]
+    },
+    "nullable": []
+  },
+  "hash": "26e5b30600b6b046f78b1420945eb09c61561303739da3155d702cd7dfe46cd0"
+}

@@ -1,0 +1,4 @@
+# Session 13, RQ-COMP-05 pass B, --no-follow: Google Play listings. IDI and PLO are re-reads of S-IDI-007 / S-PLO-004, whose
+# page text was lost with the s12 sandbox before any review theme was written. Store listing pages only; reviewer names are never recorded.
+IDI	Indoinvite (Play listing, re-read)	https://play.google.com/store/apps/details?id=com.indoinvite.apps&hl=id&gl=ID
+PLO	PALEO (Play listing, re-read)	https://play.google.com/store/apps/details?id=id.paleo.undangandigital&hl=id&gl=ID

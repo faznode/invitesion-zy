@@ -1,0 +1,17 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "update guest_messages set host_reply = $1, replied_at = case when $1::text is null then null else $2::timestamp end where id = $3 and invitation_id = $4",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Left": [
+        "Text",
+        "Timestamp",
+        "Int4",
+        "Int4"
+      ]
+    },
+    "nullable": []
+  },
+  "hash": "32dd51067057c5bb24e3da71bdc5013006ce9f85c6fc15ac46bbfe94ac3a5438"
+}

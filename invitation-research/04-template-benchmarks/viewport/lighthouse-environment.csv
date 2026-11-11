@@ -1,0 +1,164 @@
+capture_id,competitor,profile,lighthouse_fetch_time_utc,benchmark_index,slow_cpu_warning,report_source
+C-BRN-101,barunson,v1-412,,,,report not retained
+C-BRN-102,barunson,v1-412,,,,report not retained
+C-BRN-103,barunson,v1-412,,,,report not retained
+C-BRN-201,barunson,v2-412,,,,report not retained
+C-BRN-202,barunson,v2-360,,,,report not retained
+C-BRN-203,barunson,v2-390,,,,report not retained
+C-BRN-204,barunson,v2-412-rm,,,,report not retained
+C-BRN-205,barunson,v2-412,,,,report not retained
+C-BRN-206,barunson,v2-360,,,,report not retained
+C-BRN-207,barunson,v2-390,,,,report not retained
+C-BRN-208,barunson,v2-412-rm,,,,report not retained
+C-BRN-209,barunson,v2-412,,,,report not retained
+C-BRN-210,barunson,v2-360,,,,report not retained
+C-BRN-211,barunson,v2-390,,,,report not retained
+C-BRN-212,barunson,v2-412-rm,,,,report not retained
+C-ENV-101,enviory,v1-412,,,,report not retained
+C-ENV-102,enviory,v1-412,,,,report not retained
+C-ENV-103,enviory,v1-412,,,,report not retained
+C-ENV-104,enviory,v1-412,,,,report not retained
+C-ENV-105,enviory,v1-412,,,,report not retained
+C-ENV-106,enviory,v1-412,,,,report not retained
+C-ENV-111,enviory,v1-412,,,,report not retained
+C-ENV-112,enviory,v1-412,,,,report not retained
+C-ENV-113,enviory,v1-412,,,,report not retained
+C-ENV-114,enviory,v1-412,,,,report not retained
+C-ENV-115,enviory,v1-412,,,,report not retained
+C-ENV-116,enviory,v1-412,,,,report not retained
+C-ENV-117,enviory,v1-412,,,,report not retained
+C-ENV-118,enviory,v1-412,,,,report not retained
+C-ENV-119,enviory,v1-412,,,,report not retained
+C-ENV-120,enviory,v1-412,,,,report not retained
+C-ENV-121,enviory,v1-412,,,,report not retained
+C-ENV-122,enviory,v1-412,,,,report not retained
+C-ENV-123,enviory,v1-412,,,,report not retained
+C-IDI-101,indoinvite,v1-412,,,,report not retained
+C-IDI-102,indoinvite,v1-412,,,,report not retained
+C-IDI-103,indoinvite,v1-412,,,,report not retained
+C-IDI-105,indoinvite,v1-412,,,,report not retained
+C-IDI-106,indoinvite,v1-412,,,,report not retained
+C-IDI-107,indoinvite,v1-412,,,,report not retained
+C-INV-111,invi,v1-412,,,,report not retained
+C-INV-112,invi,v1-412,,,,report not retained
+C-INV-113,invi,v1-412,,,,report not retained
+C-INV-114,invi,v1-412,,,,report not retained
+C-INV-115,invi,v1-412,,,,report not retained
+C-INV-116,invi,v1-412,,,,report not retained
+C-INV-201,invi,v2-412,,,,report not retained
+C-INV-202,invi,v2-360,,,,report not retained
+C-INV-203,invi,v2-390,,,,report not retained
+C-INV-204,invi,v2-412-rm,,,,report not retained
+C-INV-205,invi,v2-412,,,,report not retained
+C-INV-206,invi,v2-360,,,,report not retained
+C-INV-207,invi,v2-390,,,,report not retained
+C-INV-208,invi,v2-412-rm,,,,report not retained
+C-INV-209,invi,v2-412,,,,report not retained
+C-INV-210,invi,v2-360,,,,report not retained
+C-INV-211,invi,v2-390,,,,report not retained
+C-INV-212,invi,v2-412-rm,,,,report not retained
+C-INV-213,invi,v2-412,,,,report not retained
+C-INV-214,invi,v2-360,,,,report not retained
+C-INV-215,invi,v2-390,,,,report not retained
+C-INV-216,invi,v2-412-rm,,,,report not retained
+C-INV-217,invi,v2-412,2026-11-04T16:18:31,1309.5,False,private report
+C-INV-218,invi,v2-360,2026-11-04T16:19:49,1204,False,private report
+C-INV-219,invi,v2-390,2026-11-04T16:21:08,1134,False,private report
+C-INV-220,invi,v2-412-rm,2026-11-04T16:22:27,1167,False,private report
+C-INV-221,invi,v2-412,2026-11-04T16:35:01,1005,False,private report
+C-INV-222,invi,v2-360,2026-11-04T16:36:19,1185,False,private report
+C-INV-223,invi,v2-390,2026-11-04T16:37:32,1147.5,False,private report
+C-INV-224,invi,v2-412-rm,2026-11-04T16:38:48,940,True,private report
+C-IVT-101,invitato,v1-412,,,,report not retained
+C-IVT-102,invitato,v1-412,,,,report not retained
+C-IVT-103,invitato,v1-412,,,,report not retained
+C-IVT-104,invitato,v1-412,,,,report not retained
+C-INV-001,invitesion,v1-412,2026-10-28T22:33:10,1450,False,own report (committed)
+C-INV-002,invitesion,v1-412,2026-10-28T22:34:21,1454.5,False,own report (committed)
+C-INV-003,invitesion,v1-412,2026-10-28T22:35:34,1434.5,False,own report (committed)
+C-INV-004,invitesion,v1-412,2026-10-28T22:36:51,1470,False,own report (committed)
+C-INV-005,invitesion,v1-412,2026-10-29T21:03:40,1415.5,False,own report (committed)
+C-INV-006,invitesion,v1-412,2026-11-04T13:32:38,820,True,own report (committed)
+C-INV-007,invitesion,v1-412,2026-11-04T13:34:13,1061.5,False,own report (committed)
+C-INV-008,invitesion,v2-412,2026-11-04T13:35:00,1091.5,False,own report (committed)
+C-INV-009,invitesion,v2-360,2026-11-04T13:35:48,1251.5,False,own report (committed)
+C-INV-010,invitesion,v2-390,2026-11-04T13:36:36,909,True,own report (committed)
+C-INV-011,invitesion,v2-412-rm,2026-11-04T13:37:23,1246,False,own report (committed)
+C-INV-012,invitesion,v2-412,2026-11-04T13:38:12,1167.5,False,own report (committed)
+C-INV-013,invitesion,v2-360,2026-11-04T13:39:00,893,True,own report (committed)
+C-INV-014,invitesion,v2-390,2026-11-04T13:39:48,1027,False,own report (committed)
+C-INV-015,invitesion,v2-412-rm,2026-11-04T13:40:36,1179,False,own report (committed)
+C-KAT-101,katsudoto,v1-412,,,,report not retained
+C-KAT-102,katsudoto,v1-412,,,,report not retained
+C-KAT-103,katsudoto,v1-412,,,,report not retained
+C-KAT-104,katsudoto,v1-412,,,,report not retained
+C-KAT-105,katsudoto,v1-412,,,,report not retained
+C-KAT-106,katsudoto,v1-412,,,,report not retained
+C-VID-101,viding,v1-412,,,,report not retained
+C-VID-102,viding,v1-412,,,,report not retained
+C-VID-103,viding,v1-412,,,,report not retained
+C-VID-104,viding,v1-412,,,,report not retained
+C-VID-105,viding,v1-412,,,,report not retained
+C-VID-106,viding,v1-412,,,,report not retained
+C-VID-107,viding,v1-412,,,,report not retained
+C-VID-108,viding,v1-412,,,,report not retained
+C-VID-109,viding,v1-412,,,,report not retained
+C-VID-201,viding,v2-412,,,,report not retained
+C-VID-202,viding,v2-360,,,,report not retained
+C-VID-203,viding,v2-390,,,,report not retained
+C-VID-204,viding,v2-412-rm,,,,report not retained
+C-VID-205,viding,v2-412,,,,report not retained
+C-VID-206,viding,v2-360,,,,report not retained
+C-VID-207,viding,v2-390,,,,report not retained
+C-VID-208,viding,v2-412-rm,,,,report not retained
+C-VID-209,viding,v2-412,,,,report not retained
+C-VID-210,viding,v2-360,,,,report not retained
+C-VID-211,viding,v2-390,,,,report not retained
+C-VID-212,viding,v2-412-rm,,,,report not retained
+C-VID-213,viding,v2-412,,,,report not retained
+C-VID-214,viding,v2-360,,,,report not retained
+C-VID-215,viding,v2-390,,,,report not retained
+C-VID-216,viding,v2-412-rm,,,,report not retained
+C-VID-217,viding,v2-412,2026-11-04T16:13:22,948,True,private report
+C-VID-218,viding,v2-360,2026-11-04T16:14:40,1280.5,False,private report
+C-VID-219,viding,v2-390,2026-11-04T16:16:00,1178.5,False,private report
+C-VID-220,viding,v2-412-rm,2026-11-04T16:17:11,952.5,True,private report
+C-VID-221,viding,v2-412,2026-11-04T16:30:12,1066,False,private report
+C-VID-222,viding,v2-360,2026-11-04T16:31:31,1007,False,private report
+C-VID-223,viding,v2-390,2026-11-04T16:32:46,1172.5,False,private report
+C-VID-224,viding,v2-412-rm,2026-11-04T16:33:53,1276,False,private report
+C-WEV-001,wevitation,v1-412,,,,report not retained
+C-WEV-101,wevitation,v1-412,,,,report not retained
+C-WEV-102,wevitation,v1-412,,,,report not retained
+C-WEV-103,wevitation,v1-412,,,,report not retained
+C-WEV-104,wevitation,v1-412,,,,report not retained
+C-WEV-105,wevitation,v1-412,,,,report not retained
+C-WEV-106,wevitation,v1-412,,,,report not retained
+C-WEV-201,wevitation,v2-412,,,,report not retained
+C-WEV-202,wevitation,v2-360,,,,report not retained
+C-WEV-203,wevitation,v2-390,,,,report not retained
+C-WEV-204,wevitation,v2-412-rm,,,,report not retained
+C-WEV-205,wevitation,v2-412,,,,report not retained
+C-WEV-206,wevitation,v2-360,,,,report not retained
+C-WEV-207,wevitation,v2-390,,,,report not retained
+C-WEV-208,wevitation,v2-412-rm,,,,report not retained
+C-WEV-209,wevitation,v2-412,,,,report not retained
+C-WEV-210,wevitation,v2-360,,,,report not retained
+C-WEV-211,wevitation,v2-390,,,,report not retained
+C-WEV-212,wevitation,v2-412-rm,,,,report not retained
+C-WEV-213,wevitation,v2-412,,,,report not retained
+C-WEV-214,wevitation,v2-360,,,,report not retained
+C-WEV-215,wevitation,v2-390,,,,report not retained
+C-WEV-216,wevitation,v2-412-rm,,,,report not retained
+C-WEV-217,wevitation,v2-412,,,,report not retained
+C-WEV-218,wevitation,v2-360,2026-11-04T16:09:25,1257,False,private report
+C-WEV-219,wevitation,v2-390,2026-11-04T16:10:59,1296,False,private report
+C-WEV-220,wevitation,v2-412-rm,2026-11-04T16:12:09,1308,False,private report
+C-WEV-221,wevitation,v2-412,2026-11-04T16:23:54,1227,False,private report
+C-WEV-222,wevitation,v2-360,2026-11-04T16:25:36,1297,False,private report
+C-WEV-223,wevitation,v2-390,2026-11-04T16:27:10,1216.5,False,private report
+C-WEV-224,wevitation,v2-412-rm,2026-11-04T16:28:44,1174,False,private report
+C-WEV-225,wevitation,v2-412,2026-11-04T16:40:14,1332,False,private report
+C-WEV-226,wevitation,v2-360,2026-11-04T16:41:37,1247,False,private report
+C-WEV-227,wevitation,v2-390,2026-11-04T16:43:02,1318,False,private report
+C-WEV-228,wevitation,v2-412-rm,2026-11-04T16:44:28,911,True,private report

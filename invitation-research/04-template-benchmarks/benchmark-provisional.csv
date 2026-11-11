@@ -1,0 +1,14 @@
+capture_id,decision,question,reason,evidence,revisit_when
+C-ENV-111,D-031,Q-O09,guest-page capture after a plain fetch of the same demo route met a Cloudflare challenge (G2); browser not challenged,_evidence-index.md s04 S-ENV-002 + s05,owner or independent reviewer answers Q-O09
+C-ENV-112,D-031,Q-O09,guest-page capture after a plain fetch of the same demo route met a Cloudflare challenge (G2); browser not challenged,_evidence-index.md s04 S-ENV-002 + s05,owner or independent reviewer answers Q-O09
+C-ENV-113,D-031,Q-O09,guest-page capture after a plain fetch of the same demo route met a Cloudflare challenge (G2); browser not challenged,_evidence-index.md s04 S-ENV-002 + s05,owner or independent reviewer answers Q-O09
+C-ENV-114,D-031,Q-O09,guest-page capture after a plain fetch of the same demo route met a Cloudflare challenge (G2); browser not challenged,_evidence-index.md s04 S-ENV-002 + s05,owner or independent reviewer answers Q-O09
+C-ENV-115,D-031,Q-O09,guest-page capture after a plain fetch of the same demo route met a Cloudflare challenge (G2); browser not challenged,_evidence-index.md s04 S-ENV-002 + s05,owner or independent reviewer answers Q-O09
+C-ENV-116,D-031,Q-O09,guest-page capture after a plain fetch of the same demo route met a Cloudflare challenge (G2); browser not challenged,_evidence-index.md s04 S-ENV-002 + s05,owner or independent reviewer answers Q-O09
+C-ENV-117,D-031,Q-O09,guest-page re-capture of the challenged demo route (G2); browser not challenged,_evidence-index.md s04 S-ENV-002 + s06,owner or independent reviewer answers Q-O09
+C-ENV-118,D-031,Q-O09,guest-page re-capture of the challenged demo route (G2); browser not challenged,_evidence-index.md s04 S-ENV-002 + s06,owner or independent reviewer answers Q-O09
+C-ENV-119,D-031,Q-O09,guest-page re-capture of the challenged demo route (G2); browser not challenged,_evidence-index.md s04 S-ENV-002 + s06,owner or independent reviewer answers Q-O09
+C-ENV-120,D-031,Q-O09,guest-page re-capture of the challenged demo route (G2); browser not challenged,_evidence-index.md s04 S-ENV-002 + s06,owner or independent reviewer answers Q-O09
+C-ENV-121,D-031,Q-O09,guest-page re-capture of the challenged demo route (G2); browser not challenged,_evidence-index.md s04 S-ENV-002 + s06,owner or independent reviewer answers Q-O09
+C-ENV-122,D-031,Q-O09,guest-page re-capture of the challenged demo route (G2); browser not challenged,_evidence-index.md s04 S-ENV-002 + s06,owner or independent reviewer answers Q-O09
+C-ENV-123,D-031,Q-O09,guest-page re-capture of the challenged demo route (G2); browser not challenged,_evidence-index.md s04 S-ENV-002 + s06,owner or independent reviewer answers Q-O09

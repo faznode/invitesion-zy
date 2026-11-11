@@ -1,0 +1,15 @@
+# Session 26, RQ-COMP-05 pass D and RQ-COMP-04 third-party pass, --no-follow. The platform search tool still returns URL-less
+# summaries (one s26 pilot, not repeated), and Apple's search / lookup / review-feed paths are robots-disallowed (s26 audit), so only
+# pages with predictable public URLs on origins whose robots.txt allows them are read: G2 and Product Hunt product pages (public
+# reviews) and Wikipedia articles (third-party company facts for Tier-B vendors whose own origin refuses us). Never the vendor's own
+# denied origin, never a cache or archive of it. Reviewer names are never recorded; page text stays in the private directory.
+RSV-G2	RSVPify (G2 reviews)	https://www.g2.com/products/rsvpify/reviews
+PPO-G2	Paperless Post (G2 reviews)	https://www.g2.com/products/paperless-post/reviews
+GRV-G2	Greenvelope (G2 reviews)	https://www.g2.com/products/greenvelope/reviews
+RSV-PH	RSVPify (Product Hunt)	https://www.producthunt.com/products/rsvpify
+PPO-PH	Paperless Post (Product Hunt)	https://www.producthunt.com/products/paperless-post
+JOY-PH	Joy (Product Hunt)	https://www.producthunt.com/products/joy
+CNV-WP	Canva (Wikipedia)	https://en.wikipedia.org/wiki/Canva
+MTD-WP	Minted (Wikipedia)	https://en.wikipedia.org/wiki/Minted
+WMG-WP	WedMeGood (Wikipedia)	https://en.wikipedia.org/wiki/WedMeGood
+GRV-WP	Greenvelope (Wikipedia)	https://en.wikipedia.org/wiki/Greenvelope

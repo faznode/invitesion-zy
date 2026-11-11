@@ -1,0 +1,752 @@
+{
+ "id": "C-INV-220",
+ "competitor": "invi",
+ "kind": "demo",
+ "url": "https://demo.invi.id/pernikahan/white-lily/?to=Nama%20Tamu",
+ "capturedAt": "2026-11-04T23:22:51.644+07:00",
+ "robots": {
+  "allowed": true,
+  "note": "no matching rule"
+ },
+ "method": "REA capture-browser-scenario (connect mode) drives navigation, settle and keyboard scroll; optional cover click (trusted CDP mouse click on the settled control: coverClickMethod, coverClickLanding) and scroll through the opened page by CDP after REA's scenario; CDP mobile emulation 412x915 @2.625 + prefers-reduced-motion reduce, re-applied (clear + set) after REA's scenario + Android Chrome UA, cold cache (no throttling); REA inspect/bundle skipped (lean); custom structure pass (text features + animation libraries: no REA coverage) + layout and motion probes; Lighthouse 12 mobile simulate (Slow 4G, 4x CPU) when present",
+ "measurement": {
+  "protocol": "v2",
+  "profile": "v2-412-rm",
+  "viewport": {
+   "width": 412,
+   "height": 915,
+   "device_scale_factor": 2.625
+  },
+  "reduced_motion": "reduce",
+  "method": "protocol v2 (lean): REA scenario + CDP structure / layout / motion probes + Lighthouse; no REA inspect or bundle analysis",
+  "lighthouse_screen": {
+   "width": 412,
+   "height": 915,
+   "deviceScaleFactor": 2.625,
+   "mobile": true
+  },
+  "lighthouse_motion": "chrome --force-prefers-reduced-motion",
+  "cdp_reapply": "clear + set",
+  "emulation_verified": true,
+  "emulation_mismatches": [],
+  "emulation_final": {
+   "android": true,
+   "screenWidth": 412,
+   "screenHeight": 915,
+   "width": 412,
+   "dpr": 2.625,
+   "coarsePointer": false,
+   "reducedMotion": true
+  },
+  "emulation_during_scenario": {
+   "ok": false,
+   "mismatches": [
+    "screen.width 800 != 412",
+    "screen.height 600 != 915"
+   ]
+  }
+ },
+ "driver": "rea",
+ "rea": {
+  "version": "6.8.0",
+  "scenario": {
+   "ok": true,
+   "exit": 0,
+   "ms": 23153,
+   "evidenceId": "ev_15024f8cdd6fe650d6af58abe4cbdf63167bd42b3ea89a2c9d37936d44b0982d",
+   "status": "incomplete",
+   "stepsCompleted": 32,
+   "stepsTotal": 32,
+   "failed": [],
+   "events": 337,
+   "error": null,
+   "sha256": "dfa490d20937505bce58dbd16acf8b3d48f06f198d874cdf0f35c3353f25f74b",
+   "file": "_private/rea/C-INV-220/rea-scenario.json"
+  },
+  "emulation": {
+   "duringScenario": {
+    "android": true,
+    "screenWidth": 800,
+    "screenHeight": 600,
+    "width": 412,
+    "dpr": 2.625,
+    "coarsePointer": false,
+    "reducedMotion": true
+   },
+   "afterScenario": {
+    "android": true,
+    "screenWidth": 800,
+    "screenHeight": 600,
+    "width": 500,
+    "dpr": 1,
+    "coarsePointer": false,
+    "reducedMotion": false
+   }
+  },
+  "inspectEvidenceId": null,
+  "bundleEvidenceId": null,
+  "inspectError": "skipped: lean profile v2-412-rm",
+  "bundleError": "skipped: lean profile v2-412-rm",
+  "domNodes": null,
+  "scripts": null,
+  "resources": null,
+  "completeness": null,
+  "bundleChunks": null,
+  "bundleEndpoints": [],
+  "bundleInferences": []
+ },
+ "network": {
+  "loadEventMs": 6337,
+  "requests": 133,
+  "bytes": 3574235,
+  "byType": {
+   "Document": {
+    "requests": 3,
+    "bytes": 43711
+   },
+   "Stylesheet": {
+    "requests": 44,
+    "bytes": 151292
+   },
+   "Image": {
+    "requests": 14,
+    "bytes": 477667
+   },
+   "Script": {
+    "requests": 38,
+    "bytes": 779102
+   },
+   "Font": {
+    "requests": 23,
+    "bytes": 826158
+   },
+   "Media": {
+    "requests": 2,
+    "bytes": 1279762
+   },
+   "Fetch": {
+    "requests": 2,
+    "bytes": 0
+   },
+   "Other": {
+    "requests": 1,
+    "bytes": 1630
+   },
+   "XHR": {
+    "requests": 6,
+    "bytes": 14913
+   }
+  },
+  "protocols": [
+   "h3",
+   "h2"
+  ],
+  "scriptHosts": [
+   "demo.invi.id",
+   "unpkg.com",
+   "www.googletagmanager.com",
+   "cdnjs.cloudflare.com"
+  ],
+  "scriptFiles": [
+   "wds-rsvp.js",
+   "jquery-migrate.min.js",
+   "saic_lib.js",
+   "invi.js",
+   "jquery.min.js",
+   "wdp-swiper.min.js",
+   "qr-code.js",
+   "exad-scripts.min.js",
+   "main.js",
+   "autosize.min.js",
+   "jquery.textareaCounter.js",
+   "jquery.jPages.min.js",
+   "jquery.sticky.min.js",
+   "hooks.min.js",
+   "jquery.placeholder.min.js",
+   "webpack-pro.runtime.min.js",
+   "qr-code-styling.js",
+   "frontend.min.js",
+   "frontend-modules.min.js",
+   "webpack.runtime.min.js",
+   "lottie.min.js",
+   "guest-form.js",
+   "core.min.js",
+   "comment-reply.min.js",
+   "i18n.min.js",
+   "cui_script.js",
+   "wdp.min.js",
+   "frontend.min.js",
+   "jet-elements.min.js",
+   "elements-handlers.min.js",
+   "bdt-uikit.js",
+   "js",
+   "xlsx.full.min.js",
+   "641.41d6784859f93ced2969.js",
+   "lottie.e74a53bfa4c0bd939250.bundle.min.js",
+   "328.9e358dc63741a0f66a7b.js",
+   "783.ab7283116f3102720a7b.js",
+   "318.1cd39a22ca4e96328011.js"
+  ],
+  "fontFiles": [
+   {
+    "host": "fonts.gstatic.com",
+    "file": "memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS-mu0SC55I.woff2",
+    "bytes": 42996
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "H4clBXOCl9bbnla_nHIq75u9qKS-aw.woff2",
+    "bytes": 35312
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBHMdazQ.woff2",
+    "bytes": 37552
+   },
+   {
+    "host": "demo.invi.id",
+    "file": "Bahagia.ttf",
+    "bytes": 53449
+   },
+   {
+    "host": "demo.invi.id",
+    "file": "fa-regular-400.woff2",
+    "bytes": 13825
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "pxiEyp8kv8JHgFVrJJfecnFHGPc.woff2",
+    "bytes": 7927
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "QldNNTtLsx4E__B0XQmWaXx0xKVu.woff2",
+    "bytes": 10191
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "HhyPU44g9vKiM1sORYSiWeAsLN997_cV2RkDTq8.woff2",
+    "bytes": 35740
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "qkBXXvoO_M3CSss-d7eu455KsgbLMA.woff2",
+    "bytes": 23417
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "e3tmeuGtX-Co5MNzeAOqinEQfEnXgPRE4g.woff2",
+    "bytes": 12411
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "q5uDsoa5M_tv7IihmnkabARboYF6CsKj.woff2",
+    "bytes": 48184
+   },
+   {
+    "host": "demo.invi.id",
+    "file": "fa-solid-900.woff2",
+    "bytes": 78756
+   },
+   {
+    "host": "demo.invi.id",
+    "file": "fa-brands-400.woff2",
+    "bytes": 82174
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "PbytFmztEwbIoce9zqYzQ1OW.woff2",
+    "bytes": 33372
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "0QIvMX1D_JOuMwr7I_FMl_E.woff2",
+    "bytes": 37824
+   },
+   {
+    "host": "demo.invi.id",
+    "file": "Iskry-Regular.woff",
+    "bytes": 117049
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "0QIhMX1D_JOuMw_LIftLtfOm8w.woff2",
+    "bytes": 40684
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "VuJudM3I2Y35poFONtLdafkUCHw1y1N5piDrWdTYR-zR.woff2",
+    "bytes": 22811
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "esDT311QOP6BJUrwdteUkp8DOJKuGA.woff2",
+    "bytes": 16565
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "VuJrdM3I2Y35poFONtLdafkUCHw1y1vShDXGe9ny.woff2",
+    "bytes": 23036
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "pxiByp8kv8JHgFVrLCz7Z1xlFd2JQEk.woff2",
+    "bytes": 7883
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "S6uyw4BMUTPHjx4wXiWtFCc.woff2",
+    "bytes": 14015
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "pe0TMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp7t1R-tQ",
+    "bytes": 30985
+   }
+  ],
+  "thirdPartyHosts": [
+   "fonts.googleapis.com",
+   "unpkg.com",
+   "fonts.gstatic.com",
+   "www.googletagmanager.com",
+   "cdnjs.cloudflare.com",
+   "file.invi.id",
+   "www.google-analytics.com",
+   "i0.wp.com",
+   "www.google.com"
+  ]
+ },
+ "structure": {
+  "coverClicked": "Buka Undangan",
+  "coverClickMethod": "trusted",
+  "coverClickLanding": "inside",
+  "beforeOpen": {
+   "sectionCount": 14,
+   "features": {
+    "coverGate": true,
+    "toGuest": true,
+    "countdown": true,
+    "rsvp": false,
+    "wishes": false,
+    "gift": false,
+    "copyButton": true,
+    "maps": true,
+    "calendar": false,
+    "livestream": false,
+    "qr": false,
+    "loveStory": false,
+    "gallery": false,
+    "dressCode": false,
+    "quranVerse": false,
+    "protocol": false,
+    "timezoneLabel": [],
+    "watermark": false,
+    "instagramFilter": false,
+    "musicControl": true
+   },
+   "buttons": [
+    "Buka Undangan",
+    "Simpan di Kalender",
+    "Google Maps",
+    "Live via Youtube",
+    "Elyana Azkiya Nur Jalan Raya Bojongsari No.5, Gunung Putri, ",
+    "Salin",
+    "# Salin",
+    "Konfirmasi Hadiah"
+   ],
+   "motion": {
+    "reducedMotionMatches": true,
+    "animations": 30,
+    "running": 30,
+    "runningCssAnimations": 30,
+    "runningCssTransitions": 0,
+    "runningWebAnimations": 0,
+    "runningInfinite": 28,
+    "gsapActiveTweens": null,
+    "playingVideos": 0
+   }
+  },
+  "afterOpen": {
+   "title": "White Lily - Tema Invi",
+   "lang": "id",
+   "generator": "WordPress 7.1.4",
+   "viewport": "width=device-width, initial-scale=1.0, viewport-fit=cover",
+   "og": {
+    "image": true,
+    "title": true,
+    "description": true
+   },
+   "reducedMotionCss": true,
+   "libs": {
+    "gsap": false,
+    "scrollTrigger": false,
+    "aos": false,
+    "animateCss": false,
+    "wow": false,
+    "swiper": true,
+    "slick": false,
+    "owl": false,
+    "lottie": true,
+    "three": false,
+    "pixi": false,
+    "anime": false,
+    "motionOne": false,
+    "howler": false,
+    "jquery": true,
+    "bootstrap": false,
+    "tailwind": false,
+    "alpine": false,
+    "vue": false,
+    "nuxt": false,
+    "next": false,
+    "react": false,
+    "svelte": false,
+    "flutterWeb": false,
+    "wordpress": true,
+    "elementor": true,
+    "livewire": false,
+    "inertia": false
+   },
+   "sections": [
+    {
+     "tag": "section",
+     "id": "home",
+     "cls": "elementor-section elementor-top-section elementor-element elementor-element-f26d",
+     "heading": "Save The Date",
+     "h": 915
+    },
+    {
+     "tag": "section",
+     "id": "home",
+     "cls": "elementor-section elementor-top-section elementor-element elementor-element-f26d",
+     "heading": "Save The Date",
+     "h": 915
+    },
+    {
+     "tag": "section",
+     "id": "",
+     "cls": "elementor-section elementor-top-section elementor-element elementor-element-101f",
+     "heading": "Assalamu'alaikum Wr. Wb. Segala Puji Bagi Allah SWT yang tel",
+     "h": 686
+    },
+    {
+     "tag": "section",
+     "id": "",
+     "cls": "elementor-section elementor-top-section elementor-element elementor-element-1138",
+     "heading": "Bride & Groom",
+     "h": 915
+    },
+    {
+     "tag": "section",
+     "id": "",
+     "cls": "elementor-section elementor-top-section elementor-element elementor-element-700a",
+     "heading": "\"Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptak",
+     "h": 412
+    },
+    {
+     "tag": "section",
+     "id": "",
+     "cls": "elementor-section elementor-top-section elementor-element elementor-element-6acf",
+     "heading": "Save The Date",
+     "h": 2068
+    },
+    {
+     "tag": "section",
+     "id": "",
+     "cls": "elementor-section elementor-top-section elementor-element elementor-element-5c1b",
+     "heading": "Live Streaming",
+     "h": 366
+    },
+    {
+     "tag": "section",
+     "id": "",
+     "cls": "elementor-section elementor-top-section elementor-element elementor-element-10e3",
+     "heading": "Our Story",
+     "h": 915
+    },
+    {
+     "tag": "section",
+     "id": "",
+     "cls": "elementor-section elementor-top-section elementor-element elementor-element-1154",
+     "heading": "RSVP",
+     "h": 915
+    },
+    {
+     "tag": "section",
+     "id": "",
+     "cls": "elementor-section elementor-top-section elementor-element elementor-element-2d97",
+     "heading": "Wedding Gift",
+     "h": 1091
+    },
+    {
+     "tag": "section",
+     "id": "",
+     "cls": "elementor-section elementor-top-section elementor-element elementor-element-4df6",
+     "heading": "Terimakasih",
+     "h": 915
+    },
+    {
+     "tag": "section",
+     "id": "",
+     "cls": "elementor-section elementor-top-section elementor-element elementor-element-9bc5",
+     "heading": "",
+     "h": 254
+    },
+    {
+     "tag": "section",
+     "id": "",
+     "cls": "elementor-section elementor-top-section elementor-element elementor-element-0c72",
+     "heading": "",
+     "h": 165
+    }
+   ],
+   "sectionCount": 13,
+   "buttons": [
+    "Simpan di Kalender",
+    "Google Maps",
+    "Live via Youtube",
+    "Elyana Azkiya Nur Jalan Raya Bojongsari No.5, Gunung Putri, ",
+    "Salin",
+    "# Salin",
+    "Konfirmasi Hadiah"
+   ],
+   "media": {
+    "audio": [
+     {
+      "autoplay": false,
+      "loop": true,
+      "type": ""
+     },
+     {
+      "autoplay": false,
+      "loop": false,
+      "type": "mp3"
+     }
+    ],
+    "video": 0,
+    "iframes": [
+     "maps.google.com",
+     "maps.google.com"
+    ],
+    "canvases": 0,
+    "svgs": 14,
+    "images": 35,
+    "lazyImages": 11
+   },
+   "forms": [
+    {
+     "fields": [
+      "text",
+      "textarea",
+      "select-one",
+      "text",
+      "text",
+      "text",
+      "button",
+      "submit",
+      "hidden",
+      "hidden",
+      "hidden"
+     ],
+     "hasRadio": false,
+     "hasSelect": true
+    }
+   ],
+   "fontsUsed": [
+    "Bahagia",
+    "iskry-regular",
+    "Abhaya Libre",
+    "Alata",
+    "Caudex",
+    "Cormorant",
+    "Cormorant Infant",
+    "Cormorant Upright",
+    "Crimson Pro",
+    "Gwendolyn",
+    "Italiana",
+    "Lato",
+    "Lora",
+    "Nunito Sans",
+    "Open Sans",
+    "Poppins",
+    "Roboto",
+    "Font Awesome 5 Free",
+    "Font Awesome 5 Brands"
+   ],
+   "features": {
+    "coverGate": false,
+    "toGuest": true,
+    "countdown": true,
+    "rsvp": true,
+    "wishes": true,
+    "gift": true,
+    "copyButton": true,
+    "maps": true,
+    "calendar": true,
+    "livestream": true,
+    "qr": false,
+    "loveStory": true,
+    "gallery": false,
+    "dressCode": false,
+    "quranVerse": true,
+    "protocol": false,
+    "timezoneLabel": [
+     "WIB"
+    ],
+    "watermark": false,
+    "instagramFilter": false,
+    "musicControl": true
+   },
+   "domNodes": 1211,
+   "docHeight": 9693,
+   "layout": {
+    "innerWidth": 412,
+    "scrollWidth": 412,
+    "horizontalOverflowPx": 0,
+    "overflowingElements": 0,
+    "smallTextElements": 8,
+    "interactiveTargets": 14,
+    "smallTargets": 3,
+    "viewportMeta": "width=device-width, initial-scale=1.0, viewport-fit=cover",
+    "zoomBlocked": false
+   },
+   "motion": {
+    "reducedMotionMatches": true,
+    "animations": 35,
+    "running": 35,
+    "runningCssAnimations": 35,
+    "runningCssTransitions": 0,
+    "runningWebAnimations": 0,
+    "runningInfinite": 27,
+    "gsapActiveTweens": null,
+    "playingVideos": 0
+   }
+  }
+ },
+ "lighthouse": {
+  "ok": true,
+  "lighthouseVersion": "12.8.2",
+  "finalUrl": "https://demo.invi.id/pernikahan/white-lily/?to=Nama%20Tamu",
+  "throttling": {
+   "rttMs": 150,
+   "throughputKbps": 1638.4,
+   "requestLatencyMs": 562.5,
+   "downloadThroughputKbps": 1474.5600000000002,
+   "uploadThroughputKbps": 675,
+   "cpuSlowdownMultiplier": 4
+  },
+  "screen": {
+   "mobile": true,
+   "width": 412,
+   "height": 915,
+   "deviceScaleFactor": 2.625,
+   "disabled": false
+  },
+  "scores": {
+   "performance": 3,
+   "accessibility": 97,
+   "best-practices": 100,
+   "seo": 66
+  },
+  "metrics": {
+   "fcpMs": 6852.6065,
+   "lcpMs": 17981.9815,
+   "tbtMs": 2972.383499999998,
+   "cls": 1,
+   "siMs": 9606.419183492055,
+   "ttiMs": 18039.037450000003
+  },
+  "byType": {
+   "total": {
+    "requests": 147,
+    "bytes": 2574296
+   },
+   "script": {
+    "requests": 61,
+    "bytes": 1223974
+   },
+   "font": {
+    "requests": 23,
+    "bytes": 826152
+   },
+   "image": {
+    "requests": 10,
+    "bytes": 325103
+   },
+   "stylesheet": {
+    "requests": 43,
+    "bytes": 150263
+   },
+   "document": {
+    "requests": 3,
+    "bytes": 45769
+   },
+   "other": {
+    "requests": 6,
+    "bytes": 2579
+   },
+   "media": {
+    "requests": 1,
+    "bytes": 456
+   },
+   "third-party": {
+    "requests": 58,
+    "bytes": 1386724
+   }
+  },
+  "totalBytes": 2574296,
+  "requests": 147,
+  "thirdParties": [
+   {
+    "entity": "Google Tag Manager",
+    "bytes": 181416,
+    "blockingMs": 1164.76796183111
+   },
+   {
+    "entity": "Cloudflare CDN",
+    "bytes": 216330,
+    "blockingMs": 1091.7664307079738
+   },
+   {
+    "entity": "Unpkg",
+    "bytes": 16227,
+    "blockingMs": 60.175074799300916
+   },
+   {
+    "entity": "Google Fonts",
+    "bytes": 491888,
+    "blockingMs": 18
+   },
+   {
+    "entity": "Other Google APIs/SDKs",
+    "bytes": 2057,
+    "blockingMs": 0.8709685255504682
+   },
+   {
+    "entity": "Google Maps",
+    "bytes": 476629,
+    "blockingMs": 0
+   },
+   {
+    "entity": "WordPress",
+    "bytes": 1631,
+    "blockingMs": 0
+   },
+   {
+    "entity": "Google Analytics",
+    "bytes": 546,
+    "blockingMs": 0
+   }
+  ],
+  "fontDisplayIssues": 2,
+  "unusedJsBytes": 332937,
+  "a11yFailures": [
+   "skip-link"
+  ]
+ },
+ "files": {
+  "_private/rea/C-INV-220/rea-scenario.json": "dfa490d20937505bce58dbd16acf8b3d48f06f198d874cdf0f35c3353f25f74b",
+  "_private/lh/C-INV-220.json": "c5d0476455ac1baa48f066e8f4652e7d8f420f43e52c6ebca2dd64409a474586"
+ },
+ "screenshot": "_private/thumbs (competitor, not committed)"
+}

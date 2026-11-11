@@ -1,0 +1,17 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "insert into analytics_events (invitation_id, guest_id, event_type, meta, created_at) values ($1, $2, 'RSVP', $3, $4)",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Left": [
+        "Int4",
+        "Int4",
+        "Jsonb",
+        "Timestamp"
+      ]
+    },
+    "nullable": []
+  },
+  "hash": "18da624d38b0a892c0e9d6ed2cbe7c4d5a73e651aa56e1a142cfbece85411543"
+}

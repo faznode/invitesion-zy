@@ -1,0 +1,15 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "insert into guest_registration_links (invitation_id, token) values ($1, $2) on conflict (invitation_id) do update set token = excluded.token, created_at = now()",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Left": [
+        "Int4",
+        "Varchar"
+      ]
+    },
+    "nullable": []
+  },
+  "hash": "05bcd028f67aea7abc9288e191d55d35e220f46022981771c2df3e1e3a988daf"
+}

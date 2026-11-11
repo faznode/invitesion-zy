@@ -1,0 +1,417 @@
+/* Preview undangan interaktif — mengikuti pola undangan digital lokal:
+   gate “Buka Undangan” dengan nama tamu, hero dengan ornamen beranimasi,
+   countdown, tombol maps/kalender/salin, RSVP demo, dan bottom nav. */
+
+.stage {
+  --bg: #faf7f2; --ink: #3f3a34; --a: #a1743c; --s: #f1e9dd;
+  min-height: 100vh;
+  background: color-mix(in srgb, var(--bg) 55%, var(--s));
+  color: var(--ink);
+}
+
+/* ——— Chip melayang (muncul setelah gate dibuka) ——— */
+.chipBack,
+.chipUse {
+  position: fixed; top: 14px; z-index: 45;
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 9px 13px; font-size: 12.5px; font-weight: 700; text-decoration: none;
+  opacity: 0; pointer-events: none; transition: opacity 0.5s ease 0.6s;
+}
+.chipBack {
+  left: 14px; color: var(--ink);
+  background: color-mix(in srgb, var(--bg) 85%, transparent);
+  border: 1px solid color-mix(in srgb, var(--ink) 20%, transparent);
+  backdrop-filter: blur(8px);
+}
+.chipUse { right: 14px; color: var(--bg); background: var(--ink); }
+.chipUse:hover { opacity: 0.88; }
+.stage[data-opened='true'] .chipBack,
+.stage[data-opened='true'] .chipUse { opacity: 1; pointer-events: auto; }
+
+/* ——— Gate “Buka Undangan” ——— */
+.gate {
+  position: fixed; inset: 0; z-index: 60; display: flex;
+  transition: transform 1.1s cubic-bezier(0.72, 0, 0.28, 1), visibility 0s linear 1.1s;
+}
+.gate[data-open='true'] { transform: translateY(-103%); visibility: hidden; }
+.gateInner { position: relative; z-index: 3; display: flex; flex-direction: column; align-items: center; gap: 14px; }
+.gTo {
+  display: flex; flex-direction: column; gap: 4px; margin-top: 22px;
+  font-size: 12px; letter-spacing: 0.08em; opacity: 0.85;
+}
+.gGuest {
+  font-size: 19px; letter-spacing: 0.02em; font-weight: 600;
+  padding: 6px 18px 8px;
+  border-top: 1px solid color-mix(in srgb, var(--a) 60%, transparent);
+  border-bottom: 1px solid color-mix(in srgb, var(--a) 60%, transparent);
+}
+.stage[data-font='serif'] .gGuest { font-family: Georgia, 'Times New Roman', serif; }
+.gBtn {
+  display: inline-flex; align-items: center; gap: 8px; margin-top: 18px;
+  padding: 12px 22px; font-size: 13.5px; font-weight: 700; cursor: pointer;
+  background: var(--ink); color: var(--bg); border: none;
+}
+.gBtn:hover { opacity: 0.9; }
+
+/* ——— Scene: kanvas ornamen (dipakai gate & hero) ——— */
+.scene {
+  position: relative; overflow: hidden; flex: 1;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 14px; text-align: center; padding: 64px 32px;
+  background: var(--bg); color: var(--ink);
+}
+.frame {
+  position: absolute; inset: 16px; z-index: 2; pointer-events: none;
+  border: 1px solid color-mix(in srgb, var(--a) 55%, transparent);
+}
+.frame::after {
+  content: ''; position: absolute; inset: 4px;
+  border: 1px solid color-mix(in srgb, var(--a) 24%, transparent);
+}
+/* Full-strength ink over theme art: at 72 % the eyebrow and date fell below 4.5:1 on most pools (G-016, session 44). */
+.cEyebrow { position: relative; z-index: 3; font-size: 10px; font-weight: 700; letter-spacing: 0.3em; margin: 0; }
+.cNames, .gNames { position: relative; z-index: 3; margin: 0; font-size: 38px; line-height: 1.15; font-weight: 600; }
+.stage[data-font='serif'] .cNames,
+.stage[data-font='serif'] .gNames { font-family: Georgia, 'Times New Roman', serif; font-weight: 500; }
+.cDate { position: relative; z-index: 3; font-size: 11px; letter-spacing: 0.24em; margin: 0; }
+.scrollHint {
+  position: absolute; bottom: 24px; left: 50%; transform: translateX(-50%); z-index: 3;
+  font-size: 16px; opacity: 0.55; animation: hintBob 2.2s ease-in-out infinite;
+}
+@keyframes hintBob { 0%, 100% { transform: translate(-50%, 0); } 50% { transform: translate(-50%, 7px); } }
+
+/* Kelopak jatuh — floral & botanical */
+.petals {
+  position: absolute; inset: 0; z-index: 1; pointer-events: none; opacity: 0;
+  background-image:
+    radial-gradient(ellipse 6px 5px at 40px 50px, color-mix(in srgb, var(--a) 55%, transparent) 98%, transparent),
+    radial-gradient(ellipse 5px 4px at 150px 110px, color-mix(in srgb, var(--a) 38%, transparent) 98%, transparent),
+    radial-gradient(ellipse 7px 5px at 90px 210px, color-mix(in srgb, var(--a) 46%, transparent) 98%, transparent),
+    radial-gradient(ellipse 5px 4px at 200px 280px, color-mix(in srgb, var(--ink) 24%, transparent) 98%, transparent);
+  background-repeat: repeat; background-size: 240px 320px;
+}
+.scene[data-motif='floral'] .petals,
+.scene[data-motif='botanical'] .petals { opacity: 1; animation: petalScroll 16s linear infinite; }
+@keyframes petalScroll { to { background-position: 32px 320px; } }
+
+/* Buket sudut — floral */
+.scene[data-motif='floral']::before,
+.scene[data-motif='floral']::after { content: ''; position: absolute; z-index: 1; width: 240px; height: 240px; pointer-events: none; }
+.scene[data-motif='floral']::before {
+  top: -44px; left: -44px; transform-origin: 18% 18%;
+  background:
+    radial-gradient(circle 36px at 86px 90px, color-mix(in srgb, var(--a) 52%, var(--bg)) 98%, transparent),
+    radial-gradient(circle 24px at 146px 62px, color-mix(in srgb, var(--a) 34%, var(--bg)) 98%, transparent),
+    radial-gradient(circle 19px at 62px 150px, color-mix(in srgb, var(--a) 42%, var(--bg)) 98%, transparent),
+    radial-gradient(circle 12px at 134px 134px, color-mix(in srgb, var(--ink) 26%, var(--bg)) 98%, transparent);
+  animation: sway 7s ease-in-out infinite;
+}
+.scene[data-motif='floral']::after {
+  bottom: -50px; right: -50px; transform-origin: 82% 82%;
+  background:
+    radial-gradient(circle 40px at 150px 148px, color-mix(in srgb, var(--a) 46%, var(--bg)) 98%, transparent),
+    radial-gradient(circle 24px at 94px 178px, color-mix(in srgb, var(--a) 32%, var(--bg)) 98%, transparent),
+    radial-gradient(circle 17px at 178px 88px, color-mix(in srgb, var(--a) 40%, var(--bg)) 98%, transparent);
+  animation: sway 8.5s ease-in-out infinite reverse;
+}
+@keyframes sway { 0%, 100% { transform: rotate(0deg); } 50% { transform: rotate(2.2deg); } }
+
+/* Sulur daun — botanical */
+.scene[data-motif='botanical']::before,
+.scene[data-motif='botanical']::after { content: ''; position: absolute; z-index: 1; pointer-events: none; }
+.scene[data-motif='botanical']::before {
+  top: -8px; left: -12px; width: 200px; height: 300px; transform-origin: 10% 0%;
+  background:
+    radial-gradient(ellipse 46px 17px at 60px 84px, color-mix(in srgb, var(--a) 42%, var(--bg)) 96%, transparent),
+    radial-gradient(ellipse 40px 15px at 104px 150px, color-mix(in srgb, var(--a) 32%, var(--bg)) 96%, transparent),
+    radial-gradient(ellipse 35px 13px at 62px 216px, color-mix(in srgb, var(--a) 38%, var(--bg)) 96%, transparent);
+  animation: sway 9s ease-in-out infinite;
+}
+.scene[data-motif='botanical']::after {
+  bottom: -8px; right: -12px; width: 200px; height: 280px; transform-origin: 90% 100%;
+  background:
+    radial-gradient(ellipse 43px 16px at 134px 80px, color-mix(in srgb, var(--a) 36%, var(--bg)) 96%, transparent),
+    radial-gradient(ellipse 38px 14px at 94px 154px, color-mix(in srgb, var(--a) 42%, var(--bg)) 96%, transparent),
+    radial-gradient(ellipse 32px 12px at 138px 208px, color-mix(in srgb, var(--a) 30%, var(--bg)) 96%, transparent);
+  animation: sway 10s ease-in-out infinite reverse;
+}
+
+/* Deco / stars / waves / crescent / geometric / confetti / balloons / arch / monogram / rings */
+.scene[data-motif='deco']::before {
+  content: ''; position: absolute; inset: 0; z-index: 1; pointer-events: none;
+  background: repeating-linear-gradient(90deg, transparent 0 21px, color-mix(in srgb, var(--a) 26%, transparent) 21px 22px);
+  -webkit-mask-image: linear-gradient(180deg, transparent 36%, #000 100%);
+  mask-image: linear-gradient(180deg, transparent 36%, #000 100%);
+}
+.scene[data-motif='deco']::after {
+  content: ''; position: absolute; z-index: 1; top: 0; left: -55%; width: 40%; height: 100%; pointer-events: none;
+  background: linear-gradient(105deg, transparent, color-mix(in srgb, var(--a) 20%, transparent), transparent);
+  animation: shimmer 5.5s ease-in-out infinite;
+}
+@keyframes shimmer { 0%, 55% { transform: translateX(0); } 100% { transform: translateX(390%); } }
+.scene[data-motif='stars']::before {
+  content: ''; position: absolute; inset: 0; z-index: 1; pointer-events: none;
+  background:
+    radial-gradient(circle 2px at 22% 18%, var(--a) 99%, transparent),
+    radial-gradient(circle 1.5px at 68% 12%, color-mix(in srgb, var(--a) 70%, transparent) 99%, transparent),
+    radial-gradient(circle 2.4px at 84% 30%, color-mix(in srgb, var(--a) 85%, transparent) 99%, transparent),
+    radial-gradient(circle 1.5px at 14% 44%, color-mix(in srgb, var(--a) 60%, transparent) 99%, transparent),
+    radial-gradient(circle 2px at 80% 66%, color-mix(in srgb, var(--a) 75%, transparent) 99%, transparent),
+    radial-gradient(circle 1.5px at 30% 80%, color-mix(in srgb, var(--a) 55%, transparent) 99%, transparent);
+  animation: twinkle 3.8s ease-in-out infinite alternate;
+}
+@keyframes twinkle { from { opacity: 0.4; } to { opacity: 1; } }
+.scene[data-motif='waves']::before {
+  content: ''; position: absolute; z-index: 1; left: 0; right: 0; bottom: 0; height: 40%; pointer-events: none;
+  background:
+    radial-gradient(circle 16px at 12px 28px, transparent 15px, color-mix(in srgb, var(--a) 34%, transparent) 15.5px 16.5px, transparent 17px),
+    radial-gradient(circle 16px at 44px 28px, transparent 15px, color-mix(in srgb, var(--a) 34%, transparent) 15.5px 16.5px, transparent 17px);
+  background-size: 64px 38px; background-repeat: repeat;
+  -webkit-mask-image: linear-gradient(180deg, transparent, #000 45%);
+  mask-image: linear-gradient(180deg, transparent, #000 45%);
+  animation: waveDrift 9s linear infinite;
+}
+@keyframes waveDrift { to { background-position: 64px 0; } }
+.scene[data-motif='crescent']::before {
+  content: ''; position: absolute; z-index: 1; top: 13%; right: 16%; width: 70px; height: 70px; border-radius: 50%; pointer-events: none;
+  background: color-mix(in srgb, var(--a) 62%, var(--bg));
+  -webkit-mask-image: radial-gradient(circle 58px at 32% 38%, transparent 56px, #000 57px);
+  mask-image: radial-gradient(circle 58px at 32% 38%, transparent 56px, #000 57px);
+  animation: floaty 6s ease-in-out infinite;
+}
+@keyframes floaty { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-7px); } }
+.scene[data-motif='geometric']::before {
+  content: ''; position: absolute; inset: 0; z-index: 1; pointer-events: none;
+  background:
+    repeating-linear-gradient(45deg, transparent 0 30px, color-mix(in srgb, var(--a) 22%, transparent) 30px 31px),
+    repeating-linear-gradient(-45deg, transparent 0 30px, color-mix(in srgb, var(--a) 14%, transparent) 30px 31px);
+  -webkit-mask-image: radial-gradient(140% 100% at 50% 50%, transparent 44%, #000 90%);
+  mask-image: radial-gradient(140% 100% at 50% 50%, transparent 44%, #000 90%);
+}
+.scene[data-motif='confetti']::before {
+  content: ''; position: absolute; inset: 0; z-index: 1; pointer-events: none;
+  background-image:
+    radial-gradient(circle 3.5px at 26px 36px, color-mix(in srgb, var(--a) 65%, transparent) 98%, transparent),
+    radial-gradient(circle 3px at 110px 84px, color-mix(in srgb, var(--ink) 35%, transparent) 98%, transparent),
+    radial-gradient(circle 3.5px at 184px 30px, color-mix(in srgb, var(--a) 45%, transparent) 98%, transparent),
+    radial-gradient(circle 3px at 60px 160px, color-mix(in srgb, var(--a) 55%, transparent) 98%, transparent),
+    radial-gradient(circle 3.5px at 158px 208px, color-mix(in srgb, var(--ink) 28%, transparent) 98%, transparent);
+  background-repeat: repeat; background-size: 220px 240px;
+  animation: petalScroll 13s linear infinite;
+}
+.scene[data-motif='balloons']::before,
+.scene[data-motif='balloons']::after {
+  content: ''; position: absolute; z-index: 1; border-radius: 50% 50% 50% 50% / 55% 55% 45% 45%; pointer-events: none;
+}
+.scene[data-motif='balloons']::before { top: 14%; left: 16%; width: 44px; height: 55px; background: color-mix(in srgb, var(--a) 55%, var(--bg)); animation: floaty 5.5s ease-in-out infinite; }
+.scene[data-motif='balloons']::after { top: 22%; right: 14%; width: 34px; height: 43px; background: color-mix(in srgb, var(--a) 32%, var(--bg)); animation: floaty 7s ease-in-out infinite reverse; }
+.scene[data-motif='arch']::before {
+  content: ''; position: absolute; z-index: 1; left: 50%; top: 11%; width: 64%; height: 78%; transform: translateX(-50%); pointer-events: none;
+  border: 1.5px solid color-mix(in srgb, var(--a) 55%, transparent);
+  border-bottom: none; border-radius: 999px 999px 0 0;
+}
+.scene[data-motif='monogram']::before {
+  content: ''; position: absolute; z-index: 1; top: 50%; left: 50%; width: 250px; height: 250px; border-radius: 50%;
+  transform: translate(-50%, -50%); pointer-events: none;
+  border: 1px solid color-mix(in srgb, var(--a) 45%, transparent);
+}
+.scene[data-motif='rings']::before,
+.scene[data-motif='rings']::after {
+  content: ''; position: absolute; z-index: 1; bottom: 12%; width: 66px; height: 66px; border-radius: 50%; pointer-events: none;
+  border: 2px solid color-mix(in srgb, var(--a) 60%, transparent);
+}
+.scene[data-motif='rings']::before { left: calc(50% - 54px); }
+.scene[data-motif='rings']::after { left: calc(50% - 12px); border-color: color-mix(in srgb, var(--a) 36%, transparent); }
+
+/* ——— Kolom undangan ——— */
+.invite {
+  max-width: 460px; margin: 0 auto;
+  background: var(--bg);
+  border-inline: 1px solid color-mix(in srgb, var(--ink) 10%, transparent);
+  padding-bottom: 120px;
+}
+.hero { min-height: 100vh; }
+
+/* ——— Reveal saat scroll ——— */
+.reveal { opacity: 0; transform: translateY(26px); transition: opacity 0.8s ease, transform 0.8s ease; }
+.reveal[data-shown='true'] { opacity: 1; transform: none; }
+
+/* ——— Seksi ——— */
+.section { padding: 52px 30px; text-align: center; border-top: 1px solid color-mix(in srgb, var(--ink) 8%, transparent); }
+.sTitle {
+  margin: 0 0 8px; font-size: 21px; font-weight: 600; letter-spacing: 0.02em;
+  display: flex; align-items: center; justify-content: center; gap: 14px;
+}
+.stage[data-font='serif'] .sTitle { font-family: Georgia, 'Times New Roman', serif; font-weight: 500; }
+.sTitle::before, .sTitle::after { content: ''; height: 1px; width: 28px; background: color-mix(in srgb, var(--a) 55%, transparent); }
+.sSub { margin: 0 0 22px; font-size: 12.5px; line-height: 1.6; opacity: 0.65; font-style: italic; }
+.prayer { margin: 0 0 12px; font-size: 13px; font-weight: 700; letter-spacing: 0.08em; color: color-mix(in srgb, var(--a) 80%, var(--ink)); }
+.opening { margin: 0 auto; max-width: 40ch; font-size: 14.5px; line-height: 1.8; opacity: 0.85; }
+.quoteText { margin: 0 auto 12px; max-width: 38ch; font-size: 16px; line-height: 1.75; font-style: italic; }
+.stage[data-font='serif'] .quoteText { font-family: Georgia, 'Times New Roman', serif; }
+.quoteAuthor { margin: 0; font-size: 11px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; opacity: 0.6; }
+
+/* ——— Mempelai ——— */
+.couple { display: grid; gap: 26px; max-width: 320px; margin: 0 auto; }
+.avatar {
+  width: 86px; height: 86px; margin: 0 auto 12px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 34px; font-weight: 600;
+  color: color-mix(in srgb, var(--a) 85%, var(--ink));
+  background: color-mix(in srgb, var(--s) 65%, var(--bg));
+  border: 1px solid color-mix(in srgb, var(--a) 50%, transparent);
+  box-shadow: 0 0 0 5px var(--bg), 0 0 0 6px color-mix(in srgb, var(--a) 28%, transparent);
+}
+.stage[data-font='serif'] .avatar { font-family: Georgia, 'Times New Roman', serif; }
+.pRole { margin: 0 0 4px; font-size: 10px; font-weight: 700; letter-spacing: 0.22em; opacity: 0.6; }
+.pName { margin: 0 0 6px; font-size: 21px; font-weight: 600; }
+.stage[data-font='serif'] .pName { font-family: Georgia, 'Times New Roman', serif; font-weight: 500; }
+.pParents { margin: 0 0 12px; font-size: 12.5px; line-height: 1.65; opacity: 0.72; }
+.igChip {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 7px 13px; font-size: 11.5px; font-weight: 700; text-decoration: none;
+  color: var(--ink); border: 1px solid color-mix(in srgb, var(--ink) 30%, transparent);
+}
+.igChip:hover { background: color-mix(in srgb, var(--s) 60%, var(--bg)); }
+
+/* ——— Acara ——— */
+.eventCard {
+  margin: 0 auto 14px; max-width: 330px; padding: 24px 22px;
+  border: 1px solid color-mix(in srgb, var(--a) 40%, transparent);
+  background: color-mix(in srgb, var(--s) 55%, var(--bg));
+}
+.eventTitle { margin: 0 0 8px; font-size: 17px; font-weight: 600; }
+.stage[data-font='serif'] .eventTitle { font-family: Georgia, 'Times New Roman', serif; }
+.eventTime { margin: 0 0 10px; font-size: 12px; font-weight: 700; letter-spacing: 0.1em; color: color-mix(in srgb, var(--a) 85%, var(--ink)); }
+.eventVenue { margin: 0; font-size: 13.5px; font-weight: 600; }
+.eventAddr { margin: 4px 0 12px; font-size: 12.5px; line-height: 1.6; opacity: 0.7; }
+.mapBtn {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 8px 14px; font-size: 11.5px; font-weight: 700; text-decoration: none;
+  color: var(--bg); background: var(--ink);
+}
+.mapBtn:hover { opacity: 0.88; }
+
+/* ——— Countdown ——— */
+.countWrap { display: flex; justify-content: center; gap: 10px; margin: 4px 0 18px; }
+.countBox {
+  width: 62px; padding: 12px 0 10px;
+  border: 1px solid color-mix(in srgb, var(--a) 45%, transparent);
+  background: color-mix(in srgb, var(--bg) 80%, var(--s));
+  display: flex; flex-direction: column; gap: 2px;
+}
+.countNum { font-size: 22px; font-weight: 600; font-variant-numeric: tabular-nums; }
+.stage[data-font='serif'] .countNum { font-family: Georgia, 'Times New Roman', serif; }
+.countLabel { font-size: 9.5px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; opacity: 0.6; }
+.calBtn {
+  display: inline-flex; align-items: center; gap: 7px;
+  padding: 10px 16px; font-size: 12px; font-weight: 700; text-decoration: none;
+  color: var(--ink); border: 1px solid color-mix(in srgb, var(--ink) 35%, transparent);
+}
+.calBtn:hover { background: color-mix(in srgb, var(--s) 60%, var(--bg)); }
+
+/* ——— Galeri & cerita ——— */
+.gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.ph { aspect-ratio: 1; background: linear-gradient(135deg, color-mix(in srgb, var(--s) 80%, var(--bg)), color-mix(in srgb, var(--a) 26%, var(--bg))); }
+.ph:nth-child(2) { background: linear-gradient(200deg, color-mix(in srgb, var(--a) 32%, var(--bg)), color-mix(in srgb, var(--s) 70%, var(--bg))); }
+.ph:nth-child(4) { background: linear-gradient(320deg, color-mix(in srgb, var(--s) 85%, var(--bg)), color-mix(in srgb, var(--a) 20%, var(--bg))); }
+.ph:nth-child(6) { background: linear-gradient(45deg, color-mix(in srgb, var(--a) 24%, var(--bg)), color-mix(in srgb, var(--s) 75%, var(--bg))); }
+.timeline { display: grid; gap: 18px; max-width: 330px; margin: 0 auto; text-align: left; }
+.tItem { position: relative; padding-left: 20px; border-left: 1px solid color-mix(in srgb, var(--a) 45%, transparent); }
+.tItem::before { content: ''; position: absolute; left: -4px; top: 4px; width: 7px; height: 7px; border-radius: 50%; background: var(--a); }
+.tDate { margin: 0 0 3px; font-size: 10.5px; font-weight: 700; letter-spacing: 0.16em; opacity: 0.6; }
+.tTitle { margin: 0 0 4px; font-size: 15px; font-weight: 600; }
+.tBody { margin: 0; font-size: 13px; line-height: 1.65; opacity: 0.78; }
+
+/* ——— Kado ——— */
+.giftCard {
+  margin: 0 auto 12px; max-width: 310px; padding: 18px 20px;
+  border: 1px dashed color-mix(in srgb, var(--a) 55%, transparent);
+}
+.giftLabel { margin: 0 0 6px; font-size: 11px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: color-mix(in srgb, var(--a) 85%, var(--ink)); }
+.giftNumber { margin: 0; font-size: 17px; font-weight: 600; letter-spacing: 0.04em; }
+.giftHolder { margin: 4px 0 12px; font-size: 12px; opacity: 0.7; }
+.copyBtn {
+  display: inline-flex; align-items: center; gap: 6px; cursor: pointer;
+  padding: 8px 14px; font-size: 11.5px; font-weight: 700;
+  color: var(--ink); background: transparent;
+  border: 1px solid color-mix(in srgb, var(--ink) 35%, transparent);
+}
+.copyBtn:hover { background: color-mix(in srgb, var(--s) 60%, var(--bg)); }
+
+/* ——— RSVP demo ——— */
+.rsvpForm { display: grid; gap: 12px; max-width: 330px; margin: 0 auto; text-align: left; }
+.fLabel { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; opacity: 0.65; display: grid; gap: 6px; }
+.fInput, .fTextarea, .fSelect {
+  width: 100%; padding: 11px 12px; font-size: 14px; font-family: inherit;
+  border: 1px solid color-mix(in srgb, var(--ink) 22%, transparent);
+  background: color-mix(in srgb, var(--bg) 88%, var(--s)); color: var(--ink);
+}
+.fTextarea { min-height: 84px; resize: vertical; }
+.choiceRow { display: flex; gap: 8px; }
+.choice {
+  flex: 1; padding: 10px 6px; font-size: 12px; font-weight: 700; cursor: pointer;
+  color: var(--ink); background: transparent; text-align: center;
+  border: 1px solid color-mix(in srgb, var(--ink) 22%, transparent);
+}
+.choiceOn { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+.submitBtn {
+  margin-top: 4px; padding: 13px; font-size: 13px; font-weight: 700; cursor: pointer;
+  background: var(--ink); color: var(--bg); border: none;
+}
+.submitBtn:hover { opacity: 0.9; }
+.demoNote { margin: 16px auto 0; max-width: 40ch; font-size: 12px; line-height: 1.6; opacity: 0.65; font-style: italic; text-align: center; }
+
+.wishes { display: grid; gap: 12px; max-width: 330px; margin: 22px auto 0; text-align: left; }
+.wish { padding: 14px 16px; background: color-mix(in srgb, var(--s) 60%, var(--bg)); border-left: 2px solid var(--a); }
+.wishName { margin: 0 0 4px; font-size: 12.5px; font-weight: 700; display: flex; align-items: center; gap: 8px; }
+.wishBadge { font-size: 9px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 2px 7px; background: color-mix(in srgb, var(--a) 24%, var(--bg)); color: color-mix(in srgb, var(--a) 90%, var(--ink)); }
+.wishText { margin: 0; font-size: 13px; line-height: 1.6; opacity: 0.82; }
+
+/* ——— Penutup ——— */
+.closing { margin: 0 auto; max-width: 40ch; font-size: 14px; line-height: 1.8; opacity: 0.85; }
+.closingKicker { margin: 26px 0 6px; font-size: 10px; font-weight: 700; letter-spacing: 0.28em; opacity: 0.6; }
+.closingNames { margin: 0; font-size: 30px; font-weight: 600; }
+.stage[data-font='serif'] .closingNames { font-family: Georgia, 'Times New Roman', serif; font-weight: 500; }
+.footer { padding: 40px 32px 20px; text-align: center; font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; opacity: 0.5; }
+
+/* ——— Musik & bottom nav ——— */
+.musicBtn {
+  position: fixed; right: 14px; bottom: 84px; z-index: 40;
+  width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; cursor: pointer;
+  color: var(--bg); background: var(--ink); border: none;
+  opacity: 0; pointer-events: none; transition: opacity 0.5s ease 0.7s;
+}
+.stage[data-opened='true'] .musicBtn { opacity: 1; pointer-events: auto; }
+.musicBtn[data-on='true'] .musicIcon { animation: spinSlow 5s linear infinite; }
+.musicIcon { display: block; }
+@keyframes spinSlow { to { transform: rotate(360deg); } }
+
+.nav {
+  position: fixed; bottom: 14px; left: 50%; transform: translateX(-50%) translateY(80px); z-index: 40;
+  display: flex; gap: 2px; padding: 7px 9px;
+  background: color-mix(in srgb, var(--ink) 94%, transparent); color: var(--bg);
+  box-shadow: 0 12px 34px rgb(0 0 0 / 0.3);
+  transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) 0.5s;
+}
+.stage[data-opened='true'] .nav { transform: translateX(-50%) translateY(0); }
+.navBtn {
+  display: flex; flex-direction: column; align-items: center; gap: 3px; cursor: pointer;
+  min-width: 56px; padding: 7px 8px; border: none; background: transparent; color: inherit;
+  opacity: 0.72;
+}
+.navBtn:hover { opacity: 1; }
+.navLabel { font-size: 9px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+
+@media (max-width: 560px) {
+  .cNames, .gNames { font-size: 31px; }
+  .section { padding: 44px 22px; }
+  .countBox { width: 56px; }
+  .chipUse { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scene::before, .scene::after, .petals, .scrollHint, .musicBtn[data-on='true'] .musicIcon { animation: none !important; }
+  .reveal { opacity: 1; transform: none; transition: none; }
+  .gate { transition: none; }
+}

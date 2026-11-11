@@ -1,0 +1,24 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "select true as \"locked!\" from pg_advisory_xact_lock($1::int4, $2::int4)",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "locked!",
+        "type_info": "Bool",
+        "origin": "Expression"
+      }
+    ],
+    "parameters": {
+      "Left": [
+        "Int4",
+        "Int4"
+      ]
+    },
+    "nullable": [
+      null
+    ]
+  },
+  "hash": "f57fd8754c148410566b08123e512e78c42987dd6981deab42c76f9e05cdd856"
+}

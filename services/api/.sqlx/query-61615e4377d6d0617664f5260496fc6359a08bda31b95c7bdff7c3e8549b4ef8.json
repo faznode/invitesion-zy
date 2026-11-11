@@ -1,0 +1,29 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "select g.invited_event_ids from guests g where g.id = $1 and g.invitation_id = $2 for update",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "invited_event_ids",
+        "type_info": "Jsonb",
+        "origin": {
+          "Table": {
+            "table": "guests",
+            "name": "invited_event_ids"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Left": [
+        "Int4",
+        "Int4"
+      ]
+    },
+    "nullable": [
+      true
+    ]
+  },
+  "hash": "61615e4377d6d0617664f5260496fc6359a08bda31b95c7bdff7c3e8549b4ef8"
+}

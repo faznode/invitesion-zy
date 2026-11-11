@@ -1,0 +1,13 @@
+# Session 13, RQ-COMP-05 pass A, --no-follow: official homepages, read only to find the vendor's own store links (app ids)
+# for the public-review pass. Sitemu is not re-read: S-STM-008 already records no store link. Reviewer names are never recorded.
+VID	Viding (homepage, store links)	https://viding.co/
+KAT	Katsudoto (homepage, store links)	https://katsudoto.id/
+IVT	Invitato (homepage, store links)	https://invitato.net/
+INV	INVI.ID (homepage, store links)	https://invi.id/
+SMO	Satu Momen (homepage, store links)	https://satumomen.com/
+ENV	Enviory (marketing homepage, store links; D-031 bars only the demo guest route)	https://enviory.com/
+JOY	Joy (homepage, store links)	https://withjoy.com/
+PTF	Partiful (homepage, store links)	https://partiful.com/
+PPO	Paperless Post (homepage, store links)	https://www.paperlesspost.com/
+RSV	RSVPify (homepage, store links)	https://rsvpify.com/
+BRN	Barunson (homepage, store links)	https://mcard.barunsoncard.com/

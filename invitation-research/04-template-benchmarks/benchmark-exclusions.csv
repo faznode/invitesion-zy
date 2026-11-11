@@ -1,0 +1,27 @@
+capture_id,scope,page_class,reason,decision,evidence,revisit_when
+C-ENV-101,all,wrapper,vendor preview wrapper (iframe) not the guest page,D-006,_evidence-index.md s03/s04,never (guest pages C-ENV-111…123 replace it)
+C-ENV-102,all,wrapper,vendor preview wrapper (iframe) not the guest page,D-006,_evidence-index.md s03,never
+C-ENV-103,all,wrapper,vendor preview wrapper (iframe) not the guest page,D-006,_evidence-index.md s03,never
+C-ENV-104,all,wrapper,vendor preview wrapper (iframe) not the guest page,D-006,_evidence-index.md s03,never
+C-ENV-105,all,wrapper,vendor preview wrapper (iframe) not the guest page,D-006,_evidence-index.md s03,never
+C-ENV-106,all,wrapper,vendor preview wrapper (iframe) not the guest page,D-006,_evidence-index.md s03,never
+C-INV-101,all,wrapper,vendor preview wrapper (cross-origin iframe; Lighthouse NO_FCP),D-006,_evidence-index.md s04,never (C-INV-111…116 replace it)
+C-ENV-112,structure,guest_page,cover never opened; Lighthouse cold load stays valid,D-016,_evidence-index.md s06,never (C-ENV-123 replaces the structure)
+C-ENV-113,structure,guest_page,cover never opened; Lighthouse cold load stays valid,D-016,_evidence-index.md s06,never (C-ENV-122/123 replace the structure)
+C-ENV-117,structure,guest_page,cover never opened (synthetic click ignored); Lighthouse cold load stays valid,D-016,_evidence-index.md s06,never
+C-ENV-118,structure,guest_page,cover never opened (control not matched); Lighthouse cold load stays valid,D-016,_evidence-index.md s06,never
+C-ENV-119,structure,guest_page,cover never opened (click mid-intro); Lighthouse cold load stays valid,D-016,_evidence-index.md s06,never
+C-ENV-120,structure,guest_page,cover never opened (control not matched); Lighthouse cold load stays valid,D-016,_evidence-index.md s06,never
+C-ENV-121,structure,guest_page,cover never opened (click during REA scenario); Lighthouse cold load stays valid,D-016,_evidence-index.md s06,never
+C-IVT-102,structure,guest_page,cover stayed closed (English cover wording unknown to the pre-s06 detector; some content text behind it); Lighthouse cold load stays valid,D-023,03-teardowns/invitato/dossier.md §4.1 (s07),a D-016 re-capture under a new id
+C-IVT-103,structure,guest_page,cover stayed closed (English cover wording unknown to the pre-s06 detector; no content behind it); Lighthouse cold load stays valid,D-023,03-teardowns/invitato/dossier.md §4.1 (s07),a D-016 re-capture under a new id
+C-IDI-101,all,catalog,vendor SEO article + theme catalog page; not a guest page,D-020,_evidence-index.md s07,if Indoinvite publishes a placeholder demo (capture that instead)
+C-IDI-102,all,catalog,vendor SEO article + theme catalog page; not a guest page,D-020,_evidence-index.md s07,same
+C-IDI-103,all,catalog,vendor SEO article + theme catalog page; not a guest page,D-020,_evidence-index.md s07,same
+C-IDI-104,all,catalog,catalog page; also no Lighthouse (CDP timeout during a platform restart),D-020,_evidence-index.md s06/s07,never
+C-IDI-105,all,catalog,vendor SEO article + theme catalog page; not a guest page,D-020,_evidence-index.md s07,same as C-IDI-101
+C-IDI-106,all,catalog,vendor SEO article + theme catalog page; not a guest page,D-020,_evidence-index.md s07,same as C-IDI-101
+C-IDI-107,all,catalog,vendor SEO article + theme catalog page; not a guest page,D-020,_evidence-index.md s07,same as C-IDI-101
+C-VID-104,all,guest_page,captured while studio.viding.co/robots.txt answered HTTP 500 (RFC 9309: assume disallow) under the old lenient tool policy,D-022,H-VID-001,when studio.viding.co serves robots.txt with 2xx or 4xx and allows the path
+C-VID-105,all,guest_page,captured while studio.viding.co/robots.txt answered HTTP 500 (RFC 9309: assume disallow) under the old lenient tool policy,D-022,H-VID-001,same as C-VID-104
+C-VID-106,all,guest_page,captured while studio.viding.co/robots.txt answered HTTP 500 (RFC 9309: assume disallow) under the old lenient tool policy,D-022,H-VID-001,same as C-VID-104

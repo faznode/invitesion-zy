@@ -1,0 +1,17 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "update guest_messages set is_hidden = $1, reviewed_at = $2 where id = $3 and invitation_id = $4",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Left": [
+        "Bool",
+        "Timestamp",
+        "Int4",
+        "Int4"
+      ]
+    },
+    "nullable": []
+  },
+  "hash": "d89fb71c24d01064466820ad1e5d09dc9f71b5483a744f6d82e0e97e89fb61f6"
+}

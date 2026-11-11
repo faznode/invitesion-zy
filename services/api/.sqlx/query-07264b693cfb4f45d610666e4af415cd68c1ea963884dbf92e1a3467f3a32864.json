@@ -1,0 +1,16 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "update invitations set status = 'PUBLISHED', published_at = $2, expires_at = $3 where id = $1 and deleted_at is null and status <> 'PUBLISHED'",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Left": [
+        "Int4",
+        "Timestamp",
+        "Timestamp"
+      ]
+    },
+    "nullable": []
+  },
+  "hash": "07264b693cfb4f45d610666e4af415cd68c1ea963884dbf92e1a3467f3a32864"
+}

@@ -1,0 +1,508 @@
+{
+ "id": "C-ENV-121",
+ "competitor": "enviory",
+ "kind": "demo",
+ "url": "https://enviory.com/rdct-6687484a60?tpl=rocaille",
+ "capturedAt": "2026-10-30T05:17:39.904+07:00",
+ "robots": {
+  "allowed": true,
+  "note": "Allow: /"
+ },
+ "method": "REA capture-browser-scenario (connect mode) drives navigation, settle and keyboard scroll; optional cover click by CDP inside REA's settle window (trusted mouse click when hit-testable, else el.click(): coverClickMethod); CDP mobile emulation 412x915 @2.625 + Android Chrome UA, cold cache (no throttling); REA 6.8.0 inspect-web-page/analyze-web-bundle; custom structure pass (text features + animation libraries: no REA coverage); Lighthouse 12 mobile simulate (Slow 4G, 4x CPU) when present",
+ "driver": "rea",
+ "rea": {
+  "version": "6.8.0",
+  "scenario": {
+   "ok": true,
+   "exit": 0,
+   "ms": 32416,
+   "evidenceId": "ev_5a91a0bd90cd90927693c46b38cea9dfcff2f66d786d25fbc87644065156c454",
+   "status": "incomplete",
+   "stepsCompleted": 32,
+   "stepsTotal": 32,
+   "failed": [],
+   "events": 131,
+   "error": null,
+   "sha256": "02a597693ee64ed208071b6035ddb9a127e2990771cd45280eb168fbfa12fe42",
+   "file": "_private/rea/C-ENV-121/rea-scenario.json"
+  },
+  "emulation": {
+   "duringScenario": {
+    "android": true,
+    "width": 412,
+    "dpr": 2.625,
+    "coarsePointer": false,
+    "reducedMotion": false
+   },
+   "afterScenario": {
+    "android": true,
+    "width": 500,
+    "dpr": 1,
+    "coarsePointer": false,
+    "reducedMotion": false
+   }
+  },
+  "inspectEvidenceId": "ev_3449eb732f6a1be4d28e884e9042181d68dd1d47ca240a33ebf594467f8c84d4",
+  "bundleEvidenceId": "ev_9b63f9a6a0a80ca4776d7a4be7ea9b9a51969b579da4aa2852f0d6f464ebfb6c",
+  "inspectError": null,
+  "bundleError": null,
+  "domNodes": 155,
+  "scripts": 17,
+  "resources": 5,
+  "completeness": "policy_filtered",
+  "bundleChunks": 17,
+  "bundleEndpoints": [],
+  "bundleInferences": [
+   {
+    "kind": "endpoint_candidate",
+    "value": "u",
+    "confidence": "low",
+    "basis": [
+     {
+      "script_key": "scr_0d35f026d6dfbd0f6393cd3e6a5ce3d3986c4fb07f2b1a74f6071cc7dbb1513d",
+      "artifact_sha256": "b3dcf40de3f3d5d66a250e93f6ab98941f75d9ebb11d019fe1754ce31bd1db9c",
+      "line": 3,
+      "column": 35230,
+      "detector": "call:n.get:unverified-network-receiver"
+     }
+    ]
+   },
+   {
+    "kind": "endpoint_candidate",
+    "value": "name",
+    "confidence": "low",
+    "basis": [
+     {
+      "script_key": "scr_0d35f026d6dfbd0f6393cd3e6a5ce3d3986c4fb07f2b1a74f6071cc7dbb1513d",
+      "artifact_sha256": "b3dcf40de3f3d5d66a250e93f6ab98941f75d9ebb11d019fe1754ce31bd1db9c",
+      "line": 3,
+      "column": 35369,
+      "detector": "call:o.get:unverified-network-receiver"
+     }
+    ]
+   },
+   {
+    "kind": "vendor_fingerprint",
+    "value": "Next.js",
+    "confidence": "high",
+    "basis": [
+     {
+      "script_key": "scr_1052792c548d166445f36ad9e9a159ce2ef893ccbde970a0645b61be1e98db96",
+      "artifact_sha256": "59114f6c66168ad7bd52e9710a4dbc732394746edc864469f4d053c6c0a1b76b",
+      "line": null,
+      "column": null,
+      "detector": "next-runtime"
+     }
+    ]
+   },
+   {
+    "kind": "endpoint_candidate",
+    "value": "dpl",
+    "confidence": "low",
+    "basis": [
+     {
+      "script_key": "scr_1052792c548d166445f36ad9e9a159ce2ef893ccbde970a0645b61be1e98db96",
+      "artifact_sha256": "59114f6c66168ad7bd52e9710a4dbc732394746edc864469f4d053c6c0a1b76b",
+      "line": 1,
+      "column": 9524,
+      "detector": "call:r.get:unverified-network-receiver"
+     }
+    ]
+   },
+   {
+    "kind": "endpoint_candidate",
+    "value": "dpl",
+    "confidence": "low",
+    "basis": [
+     {
+      "script_key": "scr_1052792c548d166445f36ad9e9a159ce2ef893ccbde970a0645b61be1e98db96",
+      "artifact_sha256": "59114f6c66168ad7bd52e9710a4dbc732394746edc864469f4d053c6c0a1b76b",
+      "line": 1,
+      "column": 9547,
+      "detector": "call:r.delete:unverified-network-receiver"
+     }
+    ]
+   },
+   {
+    "kind": "endpoint_candidate",
+    "value": "dpl",
+    "confidence": "low",
+    "basis": [
+     {
+      "script_key": "scr_1052792c548d166445f36ad9e9a159ce2ef893ccbde970a0645b61be1e98db96",
+      "artifact_sha256": "59114f6c66168ad7bd52e9710a4dbc732394746edc864469f4d053c6c0a1b76b",
+      "line": 3,
+      "column": 2368,
+      "detector": "call:l.get:unverified-network-receiver"
+     }
+    ]
+   },
+   {
+    "kind": "vendor_fingerprint",
+    "value": "Next.js",
+    "confidence": "high",
+    "basis": [
+     {
+      "script_key": "scr_13d11a858cb64a92c80bc1ed1797612dd2cdff002b6b0398df8f779f6acdd1cb",
+      "artifact_sha256": "06c6915261c2cc7e4c12d4eabffb39a4c813f91ab4caf0ae4dddc248c9007eca",
+      "line": null,
+      "column": null,
+      "detector": "next-runtime"
+     }
+    ]
+   },
+   {
+    "kind": "vendor_fingerprint",
+    "value": "Next.js",
+    "confidence": "high",
+    "basis": [
+     {
+      "script_key": "scr_88e1612e7c1d1181625effad65533d660550831119622e71a2c4f3adf686face",
+      "artifact_sha256": "1079ba438948e40938666aced2962fa4f33a108eba4679c6819ecf0c09a42b57",
+      "line": null,
+      "column": null,
+      "detector": "next-runtime"
+     }
+    ]
+   },
+   {
+    "kind": "vendor_fingerprint",
+    "value": "Next.js",
+    "confidence": "high",
+    "basis": [
+     {
+      "script_key": "scr_a8a4f44cd766a503e054f9fd4c497134f9ba485e7b798fa9d35e333dd565cfda",
+      "artifact_sha256": "189be9dc92acfe3bdb3d14cded9df522ee679a6c9c94c4a13c821d7b55480bb7",
+      "line": null,
+      "column": null,
+      "detector": "next-runtime"
+     }
+    ]
+   },
+   {
+    "kind": "vendor_fingerprint",
+    "value": "React",
+    "confidence": "medium",
+    "basis": [
+     {
+      "script_key": "scr_e247b608b126d130fb7978d58f9e3b1eb04400335111c1ebd4709ee42012289a",
+      "artifact_sha256": "8f68f227b1f45ad9dde59e6d35dd7491c315d9bb9a2092e600fb53a72698f8aa",
+      "line": null,
+      "column": null,
+      "detector": "react-runtime"
+     }
+    ]
+   }
+  ]
+ },
+ "network": {
+  "loadEventMs": 5500,
+  "requests": 34,
+  "bytes": 6969138,
+  "byType": {
+   "Document": {
+    "requests": 1,
+    "bytes": 5880
+   },
+   "Other": {
+    "requests": 2,
+    "bytes": 2672
+   },
+   "Stylesheet": {
+    "requests": 8,
+    "bytes": 26827
+   },
+   "Script": {
+    "requests": 14,
+    "bytes": 280430
+   },
+   "Image": {
+    "requests": 4,
+    "bytes": 6557840
+   },
+   "Font": {
+    "requests": 4,
+    "bytes": 95489
+   },
+   "Media": {
+    "requests": 1,
+    "bytes": 0
+   }
+  },
+  "protocols": [
+   "h3"
+  ],
+  "scriptHosts": [
+   "enviory.com"
+  ],
+  "scriptFiles": [
+   "3zktz-1ygh6sy.js",
+   "1omje1ehw_sx_.js",
+   "turbopack-2vykj9ofcp5cd.js",
+   "37izdbtglmhkm.js",
+   "2g4do3umo1kha.js",
+   "2tk6_dlthosge.js",
+   "36yaqkidkk98p.js",
+   "1q4itoff--b7w.js",
+   "1lb0u7w33nck_.js",
+   "0xwbes2ghrovd.js",
+   "3oo74yffkypsg.js",
+   "3dhiri9lsfnla.js",
+   "1al9ix1ezx7ws.js",
+   "37wszccyjscxh.js"
+  ],
+  "fontFiles": [
+   {
+    "host": "fonts.gstatic.com",
+    "file": "u-490qaujRI2PbsvB_xynAxrUQRBXw.woff2",
+    "bytes": 10835
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "nuFiD-vYSZviVYUb_rj3ij__anPXDTzYgEM86xQ.woff2",
+    "bytes": 38492
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "u-4-0qaujRI2Pbsn2NhnsS5mew.woff2",
+    "bytes": 10779
+   },
+   {
+    "host": "enviory.com",
+    "file": "normal.woff2",
+    "bytes": 35383
+   }
+  ],
+  "thirdPartyHosts": [
+   "fonts.googleapis.com",
+   "fonts.gstatic.com"
+  ]
+ },
+ "structure": {
+  "coverClicked": "[aria] Buka undangan",
+  "coverClickMethod": "trusted",
+  "beforeOpen": {
+   "sectionCount": 1,
+   "features": {
+    "coverGate": true,
+    "toGuest": false,
+    "countdown": false,
+    "rsvp": false,
+    "wishes": false,
+    "gift": false,
+    "copyButton": false,
+    "maps": false,
+    "calendar": false,
+    "livestream": false,
+    "qr": false,
+    "loveStory": false,
+    "gallery": false,
+    "dressCode": false,
+    "quranVerse": false,
+    "protocol": false,
+    "timezoneLabel": [],
+    "watermark": false,
+    "instagramFilter": false,
+    "musicControl": false
+   },
+   "buttons": [
+    "Buka undangan",
+    "Putar musik",
+    "✎Ganti Data"
+   ]
+  },
+  "afterOpen": {
+   "title": "[name] [name] [name] & [name] [name] [name] — Undangan Pe…",
+   "lang": "id",
+   "generator": null,
+   "viewport": "width=device-width, initial-scale=1, maximum-scale=5",
+   "og": {
+    "image": true,
+    "title": true,
+    "description": true
+   },
+   "reducedMotionCss": true,
+   "libs": {
+    "gsap": false,
+    "scrollTrigger": false,
+    "aos": false,
+    "animateCss": false,
+    "wow": false,
+    "swiper": false,
+    "slick": false,
+    "owl": false,
+    "lottie": false,
+    "three": false,
+    "pixi": false,
+    "anime": false,
+    "motionOne": false,
+    "howler": false,
+    "jquery": false,
+    "bootstrap": false,
+    "tailwind": false,
+    "alpine": false,
+    "vue": false,
+    "nuxt": false,
+    "next": true,
+    "react": false,
+    "svelte": false,
+    "flutterWeb": false,
+    "wordpress": false,
+    "elementor": false,
+    "livewire": false,
+    "inertia": false
+   },
+   "sections": [
+    {
+     "tag": "section",
+     "id": "",
+     "cls": "Gate-module__hUE29a__scene",
+     "heading": "",
+     "h": 915
+    }
+   ],
+   "sectionCount": 1,
+   "buttons": [
+    "Buka undangan",
+    "Putar musik",
+    "✎Ganti Data"
+   ],
+   "media": {
+    "audio": [
+     {
+      "autoplay": false,
+      "loop": true,
+      "type": "mp3"
+     }
+    ],
+    "video": 0,
+    "iframes": [],
+    "canvases": 0,
+    "svgs": 1,
+    "images": 5,
+    "lazyImages": 0
+   },
+   "forms": [],
+   "fontsUsed": [
+    "Halant",
+    "Playfair Display",
+    "Ballet"
+   ],
+   "features": {
+    "coverGate": true,
+    "toGuest": true,
+    "countdown": false,
+    "rsvp": false,
+    "wishes": false,
+    "gift": false,
+    "copyButton": false,
+    "maps": false,
+    "calendar": false,
+    "livestream": false,
+    "qr": false,
+    "loveStory": false,
+    "gallery": false,
+    "dressCode": false,
+    "quranVerse": false,
+    "protocol": false,
+    "timezoneLabel": [],
+    "watermark": false,
+    "instagramFilter": false,
+    "musicControl": false
+   },
+   "domNodes": 130,
+   "docHeight": 915
+  }
+ },
+ "lighthouse": {
+  "ok": true,
+  "lighthouseVersion": "12.8.2",
+  "finalUrl": "https://enviory.com/rdct-6687484a60?tpl=rocaille",
+  "throttling": {
+   "rttMs": 150,
+   "throughputKbps": 1638.4,
+   "requestLatencyMs": 562.5,
+   "downloadThroughputKbps": 1474.5600000000002,
+   "uploadThroughputKbps": 675,
+   "cpuSlowdownMultiplier": 4
+  },
+  "screen": {
+   "mobile": true,
+   "width": 412,
+   "height": 915,
+   "deviceScaleFactor": 2.625,
+   "disabled": false
+  },
+  "scores": {
+   "performance": 54,
+   "accessibility": 100,
+   "best-practices": 79,
+   "seo": 54
+  },
+  "metrics": {
+   "fcpMs": 2037.2979999999998,
+   "lcpMs": 4408.121,
+   "tbtMs": 1137.5742500000001,
+   "cls": 0,
+   "siMs": 6427.872689866806,
+   "ttiMs": 6807.2786
+  },
+  "byType": {
+   "total": {
+    "requests": 37,
+    "bytes": 10260752
+   },
+   "image": {
+    "requests": 4,
+    "bytes": 6557985
+   },
+   "media": {
+    "requests": 1,
+    "bytes": 3278152
+   },
+   "script": {
+    "requests": 15,
+    "bytes": 296661
+   },
+   "font": {
+    "requests": 4,
+    "bytes": 95480
+   },
+   "stylesheet": {
+    "requests": 8,
+    "bytes": 22404
+   },
+   "document": {
+    "requests": 1,
+    "bytes": 6368
+   },
+   "other": {
+    "requests": 4,
+    "bytes": 3702
+   },
+   "third-party": {
+    "requests": 4,
+    "bytes": 61610
+   }
+  },
+  "totalBytes": 10267210,
+  "requests": 37,
+  "thirdParties": [
+   {
+    "entity": "Google Fonts",
+    "bytes": 61610,
+    "blockingMs": 0
+   }
+  ],
+  "fontDisplayIssues": 0,
+  "unusedJsBytes": 77623,
+  "a11yFailures": []
+ },
+ "files": {
+  "rea-inspect.json": "1c408680439604b43077b2f8b56231a1610a2fe3f015ffa471c199756b9feadc",
+  "rea-bundle.json": "e7ea6bb6e2a2dcca8ffbf2c3e31eadbee8fa6ae99983d883faed2e6576edd478",
+  "_private/rea/C-ENV-121/rea-scenario.json": "02a597693ee64ed208071b6035ddb9a127e2990771cd45280eb168fbfa12fe42",
+  "_private/lh/C-ENV-121.json": "b6af947bca408bdfcc9f3224b9716ac8eef7b4c7b582674fc8dcdddf2c1d5620"
+ },
+ "screenshot": "_private/thumbs (competitor, not committed)"
+}

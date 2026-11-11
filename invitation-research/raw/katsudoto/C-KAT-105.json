@@ -1,0 +1,498 @@
+{
+ "id": "C-KAT-105",
+ "competitor": "katsudoto",
+ "kind": "demo",
+ "url": "https://rdct-5de8980aaa.katsudoto.id/968801",
+ "capturedAt": "2026-10-29T11:38:13.482+07:00",
+ "robots": {
+  "allowed": true,
+  "note": "no matching rule"
+ },
+ "method": "CDP mobile emulation 412x915 @2.625, Android Chrome UA, cold cache (no throttling) + REA 6.8.0 inspect-web-page/analyze-web-bundle; Lighthouse 12 mobile simulate (Slow 4G, 4x CPU) when present",
+ "rea": {
+  "inspectEvidenceId": "ev_bc5e186485485a7a9afaa27ce4322bf78706486f6ce54d785cb9cc4d623d3120",
+  "bundleEvidenceId": "ev_733149da7e223ac8421b6f9afd3e4d506e0f83725e66744921630ad99b691a43",
+  "inspectError": null,
+  "bundleError": null,
+  "domNodes": 3394,
+  "scripts": 17,
+  "resources": 49,
+  "completeness": "policy_filtered",
+  "bundleChunks": 14,
+  "bundleEndpoints": [
+   "https://www.google.com/generate_204"
+  ],
+  "bundleInferences": []
+ },
+ "network": {
+  "loadEventMs": 3533,
+  "requests": 113,
+  "bytes": 5046020,
+  "byType": {
+   "Document": {
+    "requests": 2,
+    "bytes": 29770
+   },
+   "Other": {
+    "requests": 2,
+    "bytes": 59022
+   },
+   "Stylesheet": {
+    "requests": 25,
+    "bytes": 177173
+   },
+   "Script": {
+    "requests": 20,
+    "bytes": 786998
+   },
+   "Image": {
+    "requests": 46,
+    "bytes": 3542973
+   },
+   "Font": {
+    "requests": 9,
+    "bytes": 442576
+   },
+   "Media": {
+    "requests": 1,
+    "bytes": 0
+   },
+   "XHR": {
+    "requests": 4,
+    "bytes": 7508
+   },
+   "Fetch": {
+    "requests": 4,
+    "bytes": 0
+   }
+  },
+  "protocols": [
+   "h3",
+   "h2",
+   "data"
+  ],
+  "scriptHosts": [
+   "rdct-5de8980aaa.katsudoto.id",
+   "cdn.jsdelivr.net",
+   "unpkg.com",
+   "vjs.zencdn.net",
+   "www.youtube.com",
+   "www.googletagmanager.com"
+  ],
+  "scriptFiles": [
+   "jquery.js",
+   "tsparticles.bundle.min.js",
+   "index.js",
+   "jquery-modal-video.min.js",
+   "Youtube.min.js",
+   "universal.1793083831.js",
+   "video.min.js",
+   "selectize.min.js",
+   "7148ae03.js",
+   "html2canvas-1.4.1.1793083831.js",
+   "slick.min.js",
+   "aos.js",
+   "48d0fdb0.js",
+   "scroll-lock.1793083831.js",
+   "lightgallery.min.js",
+   "307ce208.js",
+   "iframe_api",
+   "www-widgetapi.js",
+   "gtm.js",
+   "js"
+  ],
+  "fontFiles": [
+   {
+    "host": "rdct-5de8980aaa.katsudoto.id",
+    "file": "normal.woff2",
+    "bytes": 35253
+   },
+   {
+    "host": "rdct-5de8980aaa.katsudoto.id",
+    "file": "normal.woff2",
+    "bytes": 35219
+   },
+   {
+    "host": "rdct-5de8980aaa.katsudoto.id",
+    "file": "normal.woff2",
+    "bytes": 16420
+   },
+   {
+    "host": "cdnjs.cloudflare.com",
+    "file": "fa-solid-900.woff2",
+    "bytes": 76121
+   },
+   {
+    "host": "cdnjs.cloudflare.com",
+    "file": "fa-brands-400.woff2",
+    "bytes": 75156
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBHMdazQ.woff2",
+    "bytes": 37552
+   },
+   {
+    "host": "cdn.jsdelivr.net",
+    "file": "Phosphor.woff2",
+    "bytes": 148134
+   },
+   {
+    "host": "",
+    "file": "hQfqxa6XWZHMXFl56RS4TvPXSaDeoy0zUUZB109KstDK8lHo5q6Qi1hcOnqkImubPS6aqRq7mlnaEWab",
+    "bytes": 5356
+   },
+   {
+    "host": "katsudoto.id",
+    "file": "montserrat-500.woff2",
+    "bytes": 13365
+   }
+  ],
+  "thirdPartyHosts": [
+   "vjs.zencdn.net",
+   "cdnjs.cloudflare.com",
+   "fonts.googleapis.com",
+   "img.katsudoto.id",
+   "katsudoto.id",
+   "i3.ytimg.com",
+   "cdn.jsdelivr.net",
+   "unpkg.com",
+   "fonts.gstatic.com",
+   "www.youtube.com",
+   "",
+   "img.youtube.com",
+   "media.katsudoto.id",
+   "www.googletagmanager.com",
+   "www.google.com",
+   "ad.doubleclick.net",
+   "www.google-analytics.com"
+  ]
+ },
+ "structure": {
+  "coverClicked": "Open Invitation",
+  "beforeOpen": {
+   "sectionCount": 1,
+   "features": {
+    "coverGate": true,
+    "toGuest": false,
+    "countdown": true,
+    "rsvp": true,
+    "wishes": false,
+    "gift": true,
+    "copyButton": false,
+    "maps": false,
+    "calendar": true,
+    "livestream": true,
+    "qr": false,
+    "loveStory": true,
+    "gallery": true,
+    "dressCode": true,
+    "quranVerse": true,
+    "protocol": false,
+    "timezoneLabel": [],
+    "watermark": true,
+    "instagramFilter": true,
+    "musicControl": true
+   },
+   "buttons": [
+    "Change",
+    "Play Video",
+    "Play",
+    "Skip Backward",
+    "Skip Forward",
+    "Unmute",
+    "Seek to live, currently behind liveLIVE",
+    "1xPlayback Rate",
+    "Playback Rate",
+    "ChaptersChapters"
+   ]
+  },
+  "afterOpen": {
+   "title": "[name] & [name] | Katsudoto",
+   "lang": "en",
+   "generator": null,
+   "viewport": "width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no",
+   "og": {
+    "image": true,
+    "title": true,
+    "description": true
+   },
+   "reducedMotionCss": false,
+   "libs": {
+    "gsap": false,
+    "scrollTrigger": false,
+    "aos": true,
+    "animateCss": false,
+    "wow": false,
+    "swiper": false,
+    "slick": true,
+    "owl": false,
+    "lottie": false,
+    "three": false,
+    "pixi": false,
+    "anime": false,
+    "motionOne": false,
+    "howler": false,
+    "jquery": true,
+    "bootstrap": false,
+    "tailwind": false,
+    "alpine": false,
+    "vue": false,
+    "nuxt": false,
+    "next": false,
+    "react": false,
+    "svelte": false,
+    "flutterWeb": false,
+    "wordpress": false,
+    "elementor": false,
+    "livewire": false,
+    "inertia": false
+   },
+   "sections": [
+    {
+     "tag": "section",
+     "id": "",
+     "cls": "kat-page__side-to-side",
+     "heading": "[name] & [name]",
+     "h": 915
+    }
+   ],
+   "sectionCount": 1,
+   "buttons": [
+    "Change",
+    "Play Video",
+    "Play",
+    "Skip Backward",
+    "Skip Forward",
+    "Unmute",
+    "Seek to live, currently behind liveLIVE",
+    "1xPlayback Rate",
+    "Playback Rate",
+    "ChaptersChapters",
+    "Chapters",
+    "Descriptionsdescriptions off, selected",
+    "Descriptions",
+    "Captionscaptions settings, opens captions settings dialogcap",
+    "Captions",
+    "Audio Track",
+    "Picture-in-Picture",
+    "Fullscreen",
+    "Reset",
+    "Done",
+    "Close Modal Dialog",
+    "1",
+    "2",
+    "Next",
+    "Confirm"
+   ],
+   "media": {
+    "audio": [],
+    "video": 0,
+    "iframes": [
+     "www.youtube.com"
+    ],
+    "canvases": 0,
+    "svgs": 4,
+    "images": 175,
+    "lazyImages": 1
+   },
+   "forms": [
+    {
+     "fields": [
+      "select-one",
+      "text",
+      "text",
+      "text",
+      "textarea",
+      "text",
+      "file",
+      "hidden",
+      "hidden",
+      "button",
+      "button",
+      "submit"
+     ],
+     "hasRadio": false,
+     "hasSelect": true
+    },
+    {
+     "fields": [
+      "hidden",
+      "hidden",
+      "hidden",
+      "text",
+      "textarea",
+      "submit"
+     ],
+     "hasRadio": false,
+     "hasSelect": false
+    }
+   ],
+   "fontsUsed": [
+    "Font Awesome 5 Brands",
+    "Font Awesome 5 Free",
+    "VideoJS",
+    "Roboto",
+    "Montserrat",
+    "Cormorant Upright",
+    "Ovo",
+    "Phosphor"
+   ],
+   "features": {
+    "coverGate": false,
+    "toGuest": false,
+    "countdown": true,
+    "rsvp": true,
+    "wishes": false,
+    "gift": true,
+    "copyButton": false,
+    "maps": false,
+    "calendar": true,
+    "livestream": true,
+    "qr": false,
+    "loveStory": true,
+    "gallery": true,
+    "dressCode": true,
+    "quranVerse": true,
+    "protocol": false,
+    "timezoneLabel": [],
+    "watermark": true,
+    "instagramFilter": true,
+    "musicControl": true
+   },
+   "domNodes": 1271,
+   "docHeight": 915
+  }
+ },
+ "lighthouse": {
+  "ok": true,
+  "lighthouseVersion": "12.8.2",
+  "finalUrl": "https://rdct-5de8980aaa.katsudoto.id/968801",
+  "throttling": {
+   "rttMs": 150,
+   "throughputKbps": 1638.4,
+   "requestLatencyMs": 562.5,
+   "downloadThroughputKbps": 1474.5600000000002,
+   "uploadThroughputKbps": 675,
+   "cpuSlowdownMultiplier": 4
+  },
+  "screen": {
+   "mobile": true,
+   "width": 412,
+   "height": 915,
+   "deviceScaleFactor": 2.625,
+   "disabled": false
+  },
+  "scores": {
+   "performance": 6,
+   "accessibility": 82,
+   "best-practices": 75,
+   "seo": 100
+  },
+  "metrics": {
+   "fcpMs": 4035.3419999999996,
+   "lcpMs": 17030.456,
+   "tbtMs": 4341.6525,
+   "cls": 0.570934655665853,
+   "siMs": 13039.359957143837,
+   "ttiMs": 20514.527049999997
+  },
+  "byType": {
+   "total": {
+    "requests": 126,
+    "bytes": 5758956
+   },
+   "image": {
+    "requests": 49,
+    "bytes": 3561202
+   },
+   "script": {
+    "requests": 24,
+    "bytes": 1373781
+   },
+   "font": {
+    "requests": 9,
+    "bytes": 471814
+   },
+   "stylesheet": {
+    "requests": 27,
+    "bytes": 238822
+   },
+   "document": {
+    "requests": 2,
+    "bytes": 100810
+   },
+   "other": {
+    "requests": 14,
+    "bytes": 11882
+   },
+   "media": {
+    "requests": 1,
+    "bytes": 645
+   },
+   "third-party": {
+    "requests": 43,
+    "bytes": 1932209
+   }
+  },
+  "totalBytes": 5817488,
+  "requests": 126,
+  "thirdParties": [
+   {
+    "entity": "Brightcove",
+    "bytes": 207861,
+    "blockingMs": 1023.7392556545244
+   },
+   {
+    "entity": "JSDelivr CDN",
+    "bytes": 286131,
+    "blockingMs": 250.8862647607196
+   },
+   {
+    "entity": "YouTube",
+    "bytes": 1167254,
+    "blockingMs": 169.55414214379758
+   },
+   {
+    "entity": "Cloudflare CDN",
+    "bytes": 161866,
+    "blockingMs": 0
+   },
+   {
+    "entity": "Google Fonts",
+    "bytes": 77912,
+    "blockingMs": 0
+   },
+   {
+    "entity": "Other Google APIs/SDKs",
+    "bytes": 25004,
+    "blockingMs": 0
+   },
+   {
+    "entity": "Unpkg",
+    "bytes": 5517,
+    "blockingMs": 0
+   },
+   {
+    "entity": "Google/Doubleclick Ads",
+    "bytes": 664,
+    "blockingMs": 0
+   }
+  ],
+  "fontDisplayIssues": 2,
+  "unusedJsBytes": 349108,
+  "a11yFailures": [
+   "button-name",
+   "heading-order",
+   "label",
+   "link-name",
+   "meta-viewport"
+  ]
+ },
+ "files": {
+  "rea-inspect.json": "a376db02ddc245d7b0d0a6174c88fb8cd0887fe3a94cef2b10c3364743daaf2b",
+  "rea-bundle.json": "ab99b969873ab8778f8726d852419490aef9daeb88f7046d7a4b8246fedad904",
+  "_private/lh/C-KAT-105.json": "8c0075f9edca44c552d1c26aaa369b65d88f443359f316a658a9e907d731b7e8"
+ },
+ "screenshot": "_private/thumbs (competitor, not committed)"
+}

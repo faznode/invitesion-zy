@@ -1,0 +1,29 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "insert into api_idempotency_keys (scope, key, request_hash, response_status, response_body, created_at)\n           values ($1, $2, $3, $4, $5, $6)\n           on conflict (scope, key) do update set\n             request_hash = excluded.request_hash, response_status = excluded.response_status,\n             response_body = excluded.response_body, created_at = excluded.created_at\n           where api_idempotency_keys.created_at < $7\n           returning true as \"inserted!\"",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "inserted!",
+        "type_info": "Bool",
+        "origin": "Expression"
+      }
+    ],
+    "parameters": {
+      "Left": [
+        "Varchar",
+        "Varchar",
+        "Varchar",
+        "Int4",
+        "Jsonb",
+        "Timestamp",
+        "Timestamp"
+      ]
+    },
+    "nullable": [
+      null
+    ]
+  },
+  "hash": "f92431c9615eb8ad7348cecb0395b618884b0c6e1ee6e12500b7b73ec0634585"
+}

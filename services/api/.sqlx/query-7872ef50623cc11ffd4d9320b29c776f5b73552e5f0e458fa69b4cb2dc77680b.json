@@ -1,0 +1,36 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "select g.id, (g.opened_count > 0 or g.opened_at is not null or g.rsvp_status <> 'PENDING'\n             or g.attending_count is not null or g.rsvp_answers is not null or g.rsvp_event_answers is not null\n             or g.sent_at is not null or g.checked_in_at is not null\n             or exists (select 1 from analytics_events a where a.guest_id = g.id)\n             or exists (select 1 from guest_messages m where m.guest_id = g.id)\n             or exists (select 1 from wa_log w where w.guest_id = g.id)) as \"touched!\"\n           from guests g where g.invitation_id = $1 and g.import_batch_id = $2 for update of g",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "id",
+        "type_info": "Int4",
+        "origin": {
+          "Table": {
+            "table": "guests",
+            "name": "id"
+          }
+        }
+      },
+      {
+        "ordinal": 1,
+        "name": "touched!",
+        "type_info": "Bool",
+        "origin": "Expression"
+      }
+    ],
+    "parameters": {
+      "Left": [
+        "Int4",
+        "Text"
+      ]
+    },
+    "nullable": [
+      false,
+      null
+    ]
+  },
+  "hash": "7872ef50623cc11ffd4d9320b29c776f5b73552e5f0e458fa69b4cb2dc77680b"
+}

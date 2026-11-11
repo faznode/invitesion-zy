@@ -1,0 +1,81 @@
+{
+  "description": "R-04 (D-044): the wish decisions as data. `read` pins the lenient read of the guestbook section (zod 3.24.4: JavaScript trim, UTF-16 lengths, the visibility enum; a failing section is dropped, so the guestbook reads as open, unmoderated and public) projected to the rules (lib/invitation/wish-decision.ts guestbookRules). `guest` runs decideGuestWish on the stored config after the lenient read; `reply` runs decideHostReply; `state` runs wishState; `moderate` runs moderationUpdate. A text is a string or {prefix?, repeat, times, suffix?}. Expected values were derived by hand from the rules and confirmed against the TypeScript; tests/wish-decisions.test.ts and services/api/tests/wish_vectors.rs run this file.",
+  "configs": {
+    "absent": {},
+    "open": { "guestbook": { "enabled": true } },
+    "empty": { "guestbook": {} },
+    "disabled": { "guestbook": { "enabled": false } },
+    "moderated": { "guestbook": { "moderation": true } },
+    "hostOnly": { "guestbook": { "visibility": "host" } },
+    "moderatedHostOnly": { "guestbook": { "moderation": true, "visibility": "host" } },
+    "disabledButBroken": { "guestbook": { "enabled": false, "visibility": "everyone" } },
+    "moderatedButBroken": { "guestbook": { "moderation": true, "heading": { "prefix": "", "repeat": "x", "times": 161 } } },
+    "notAnObject": "guestbook"
+  },
+  "read": [
+    { "name": "an absent section reads as the defaults", "config": "absent", "expect": { "enabled": true, "moderation": false, "visibility": "public" } },
+    { "name": "an empty section takes every default", "config": "empty", "expect": { "enabled": true, "moderation": false, "visibility": "public" } },
+    { "name": "switched off", "config": "disabled", "expect": { "enabled": false, "moderation": false, "visibility": "public" } },
+    { "name": "moderated", "config": "moderated", "expect": { "enabled": true, "moderation": true, "visibility": "public" } },
+    { "name": "hosts only", "config": "hostOnly", "expect": { "enabled": true, "moderation": false, "visibility": "host" } },
+    { "name": "an unknown visibility drops the section, switch included", "config": "disabledButBroken", "expect": { "enabled": true, "moderation": false, "visibility": "public" } },
+    { "name": "a heading of 161 units drops the section, moderation included", "config": "moderatedButBroken", "expect": { "enabled": true, "moderation": false, "visibility": "public" } },
+    { "name": "a config that is not an object reads as empty", "config": "notAnObject", "expect": { "enabled": true, "moderation": false, "visibility": "public" } },
+    { "name": "a section that is not an object is dropped", "raw": { "guestbook": true }, "expect": { "enabled": true, "moderation": false, "visibility": "public" } },
+    { "name": "a null section is dropped (optional accepts undefined only)", "raw": { "guestbook": null }, "expect": { "enabled": true, "moderation": false, "visibility": "public" } },
+    { "name": "a null switch fails the boolean and drops the section", "raw": { "guestbook": { "enabled": null } }, "expect": { "enabled": true, "moderation": false, "visibility": "public" } },
+    { "name": "a string switch is not a boolean", "raw": { "guestbook": { "enabled": "false" } }, "expect": { "enabled": true, "moderation": false, "visibility": "public" } },
+    { "name": "a numeric moderation flag is not a boolean", "raw": { "guestbook": { "enabled": false, "moderation": 1 } }, "expect": { "enabled": true, "moderation": false, "visibility": "public" } },
+    { "name": "unknown keys are stripped, not refused", "raw": { "guestbook": { "enabled": false, "colour": "red" } }, "expect": { "enabled": false, "moderation": false, "visibility": "public" } },
+    { "name": "visibility is case-sensitive", "raw": { "guestbook": { "moderation": true, "visibility": "Host" } }, "expect": { "enabled": true, "moderation": false, "visibility": "public" } },
+    { "name": "a heading of 160 units after trimming passes", "raw": { "guestbook": { "moderation": true, "heading": { "prefix": "  ", "repeat": "x", "times": 160, "suffix": "\u3000" } } }, "expect": { "enabled": true, "moderation": true, "visibility": "public" } },
+    { "name": "80 emoji are 160 units and pass; one more letter fails", "raw": { "guestbook": { "visibility": "host", "heading": { "repeat": "\ud83c\udf89", "times": 80, "suffix": "a" } } }, "expect": { "enabled": true, "moderation": false, "visibility": "public" } },
+    { "name": "a prompt of 500 units passes", "raw": { "guestbook": { "visibility": "host", "prompt": { "repeat": "y", "times": 500 } } }, "expect": { "enabled": true, "moderation": false, "visibility": "host" } },
+    { "name": "a prompt of 501 units fails", "raw": { "guestbook": { "visibility": "host", "prompt": { "repeat": "y", "times": 501 } } }, "expect": { "enabled": true, "moderation": false, "visibility": "public" } },
+    { "name": "a numeric heading fails", "raw": { "guestbook": { "enabled": false, "heading": 7 } }, "expect": { "enabled": true, "moderation": false, "visibility": "public" } }
+  ],
+  "guest": [
+    { "name": "an open guestbook stores the trimmed message, visible", "config": "open", "message": "  Selamat menempuh hidup baru!  ", "expect": { "kind": "write", "message": "Selamat menempuh hidup baru!", "isHidden": false } },
+    { "name": "an absent section is an open guestbook", "config": "absent", "message": "Barakallah", "expect": { "kind": "write", "message": "Barakallah", "isHidden": false } },
+    { "name": "a moderated guestbook stores the wish pending", "config": "moderated", "message": "Semoga sakinah", "expect": { "kind": "write", "message": "Semoga sakinah", "isHidden": true } },
+    { "name": "hosts-only visibility still stores it visible to the host", "config": "hostOnly", "message": "Untuk tuan rumah", "expect": { "kind": "write", "message": "Untuk tuan rumah", "isHidden": false } },
+    { "name": "moderated and hosts only", "config": "moderatedHostOnly", "message": "Halo", "expect": { "kind": "write", "message": "Halo", "isHidden": true } },
+    { "name": "switched off", "config": "disabled", "message": "Halo", "expect": { "kind": "closed", "reason": "disabled" } },
+    { "name": "switched off refuses before judging the message", "config": "disabled", "message": "", "expect": { "kind": "closed", "reason": "disabled" } },
+    { "name": "a broken section reopens the guestbook (the lenient read drops the switch)", "config": "disabledButBroken", "message": "Tetap tersimpan", "expect": { "kind": "write", "message": "Tetap tersimpan", "isHidden": false } },
+    { "name": "a broken section loses moderation", "config": "moderatedButBroken", "message": "Langsung tampil", "expect": { "kind": "write", "message": "Langsung tampil", "isHidden": false } },
+    { "name": "empty", "config": "open", "message": "", "expect": { "kind": "invalid" } },
+    { "name": "spaces, tabs and line breaks only", "config": "open", "message": " \t\r\n \u000b\f ", "expect": { "kind": "invalid" } },
+    { "name": "JavaScript whitespace only (NBSP, BOM, ideographic space, line separator)", "config": "open", "message": "\u00a0\ufeff\u3000\u2028\u205f", "expect": { "kind": "invalid" } },
+    { "name": "NEL is not JavaScript whitespace, so it is a message", "config": "open", "message": "\u0085", "expect": { "kind": "write", "message": "\u0085", "isHidden": false } },
+    { "name": "line breaks inside are kept", "config": "open", "message": "Baris satu\r\nBaris dua\n", "expect": { "kind": "write", "message": "Baris satu\r\nBaris dua", "isHidden": false } },
+    { "name": "1,000 units pass", "config": "open", "message": { "repeat": "a", "times": 1000 }, "expect": { "kind": "write", "message": { "repeat": "a", "times": 1000 }, "isHidden": false } },
+    { "name": "1,001 units fail", "config": "open", "message": { "repeat": "a", "times": 1001 }, "expect": { "kind": "invalid" } },
+    { "name": "1,000 units after trimming pass", "config": "open", "message": { "prefix": "  ", "repeat": "a", "times": 1000, "suffix": "\n\n" }, "expect": { "kind": "write", "message": { "repeat": "a", "times": 1000 }, "isHidden": false } },
+    { "name": "500 emoji are 1,000 units and pass", "config": "open", "message": { "repeat": "\ud83c\udf89", "times": 500 }, "expect": { "kind": "write", "message": { "repeat": "\ud83c\udf89", "times": 500 }, "isHidden": false } },
+    { "name": "501 emoji are 1,002 units and fail", "config": "open", "message": { "repeat": "\ud83c\udf89", "times": 501 }, "expect": { "kind": "invalid" } },
+    { "name": "999 letters and one emoji are 1,001 units and fail", "config": "open", "message": { "repeat": "a", "times": 999, "suffix": "\ud83c\udf89" }, "expect": { "kind": "invalid" } },
+    { "name": "a NUL character is refused", "config": "open", "message": "Halo\u0000dunia", "expect": { "kind": "invalid" } },
+    { "name": "combining marks count as their own units", "config": "moderated", "message": { "repeat": "e\u0301", "times": 500 }, "expect": { "kind": "write", "message": { "repeat": "e\u0301", "times": 500 }, "isHidden": true } }
+  ],
+  "reply": [
+    { "name": "a reply is stored trimmed", "reply": "  Terima kasih, Budi!\n", "expect": { "kind": "write", "hostReply": "Terima kasih, Budi!" } },
+    { "name": "an empty reply clears it", "reply": "", "expect": { "kind": "write", "hostReply": null } },
+    { "name": "a whitespace-only reply clears it", "reply": " \u00a0\t\n", "expect": { "kind": "write", "hostReply": null } },
+    { "name": "1,000 units pass", "reply": { "repeat": "b", "times": 1000 }, "expect": { "kind": "write", "hostReply": { "repeat": "b", "times": 1000 } } },
+    { "name": "1,001 units fail", "reply": { "repeat": "b", "times": 1001 }, "expect": { "kind": "invalid" } },
+    { "name": "501 emoji fail", "reply": { "repeat": "\ud83d\ude4f", "times": 501 }, "expect": { "kind": "invalid" } },
+    { "name": "NEL alone is a reply", "reply": "\u0085", "expect": { "kind": "write", "hostReply": "\u0085" } },
+    { "name": "a NUL character is refused", "reply": "Terima\u0000kasih", "expect": { "kind": "invalid" } }
+  ],
+  "state": [
+    { "name": "visible, never reviewed", "isHidden": false, "reviewed": false, "expect": "VISIBLE" },
+    { "name": "visible after approval", "isHidden": false, "reviewed": true, "expect": "VISIBLE" },
+    { "name": "waiting for the host", "isHidden": true, "reviewed": false, "expect": "PENDING" },
+    { "name": "hidden by the host", "isHidden": true, "reviewed": true, "expect": "HIDDEN" }
+  ],
+  "moderate": [
+    { "name": "show approves or restores", "action": "show", "expect": { "isHidden": false, "reviewed": true } },
+    { "name": "hide hides and marks reviewed", "action": "hide", "expect": { "isHidden": true, "reviewed": true } }
+  ]
+}

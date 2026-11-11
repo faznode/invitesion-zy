@@ -1,0 +1,478 @@
+{
+ "id": "C-IVT-102",
+ "competitor": "invitato",
+ "kind": "demo",
+ "url": "https://invitato.net/template-rdct-d1992d6927/?code=DUMMY-P0001",
+ "capturedAt": "2026-10-30T04:42:52.516+07:00",
+ "robots": {
+  "allowed": true,
+  "note": "robots.txt 404"
+ },
+ "method": "CDP drives navigation/click/scroll (driver rea+cdp-fallback); CDP mobile emulation 412x915 @2.625 + Android Chrome UA, cold cache (no throttling); REA 6.8.0 inspect-web-page/analyze-web-bundle; custom structure pass (text features + animation libraries: no REA coverage); Lighthouse 12 mobile simulate (Slow 4G, 4x CPU) when present",
+ "driver": "rea+cdp-fallback",
+ "rea": {
+  "version": "6.8.0",
+  "scenario": {
+   "ok": true,
+   "exit": 0,
+   "ms": 17188,
+   "evidenceId": "ev_275492d104653d3429ef74fc1a01329096917945502a7949980df7531ee5a500",
+   "status": "incomplete",
+   "stepsCompleted": 2,
+   "stepsTotal": 34,
+   "failed": [
+    "open-cover",
+    "after-cover",
+    "scroll-1",
+    "pause-1",
+    "scroll-2",
+    "pause-2",
+    "scroll-3",
+    "pause-3",
+    "scroll-4",
+    "pause-4"
+   ],
+   "events": 138,
+   "error": null,
+   "sha256": "60b6bea0e4d26bf246b3929a0097227b4677c71f771f73cd7cb16e0ee92b402e",
+   "file": "_private/rea/C-IVT-102/rea-scenario.json"
+  },
+  "emulation": {
+   "duringScenario": {
+    "android": true,
+    "width": 412,
+    "dpr": 2.625,
+    "coarsePointer": false,
+    "reducedMotion": false
+   },
+   "afterScenario": {
+    "android": true,
+    "width": 500,
+    "dpr": 1,
+    "coarsePointer": false,
+    "reducedMotion": false
+   }
+  },
+  "inspectEvidenceId": "ev_0a3fc6568915c6c08b23d760fbe5f70fa060cc3a202f289bdfcf76a193fb4073",
+  "bundleEvidenceId": "ev_badbef378e40a3f3e0f86d68265d00e08182a499cc37eddd1f5bc76453b40966",
+  "inspectError": null,
+  "bundleError": null,
+  "domNodes": 463,
+  "scripts": 16,
+  "resources": 15,
+  "completeness": "policy_filtered",
+  "bundleChunks": 16,
+  "bundleEndpoints": [],
+  "bundleInferences": [
+   {
+    "kind": "endpoint_candidate",
+    "value": "hide_live_simulation",
+    "confidence": "low",
+    "basis": [
+     {
+      "script_key": "scr_29a378adfa75a4873169c2ac61ef7e67564c30968d7878324bf76e0d3ae49082",
+      "artifact_sha256": "56b6314b9a22ba83bb428d232338972104ebbe6cbc0d1cbb17c1dea3064521fe",
+      "line": 1,
+      "column": 7445,
+      "detector": "call:t.get:unverified-network-receiver"
+     }
+    ]
+   },
+   {
+    "kind": "endpoint_candidate",
+    "value": "lang",
+    "confidence": "low",
+    "basis": [
+     {
+      "script_key": "scr_8450e2160402611bab510ab1c9e736e8cacbda55e4b2b87d9479dd4bcb45690f",
+      "artifact_sha256": "1a3bca2855351ede91ed5fd0ff5fbec398b8caef737fe40c916de88629234a1a",
+      "line": 2,
+      "column": 90074,
+      "detector": "call:i.get:unverified-network-receiver"
+     }
+    ]
+   }
+  ]
+ },
+ "network": {
+  "loadEventMs": 3854,
+  "requests": 46,
+  "bytes": 6376608,
+  "byType": {
+   "Document": {
+    "requests": 1,
+    "bytes": 17024
+   },
+   "Other": {
+    "requests": 2,
+    "bytes": 9926
+   },
+   "Script": {
+    "requests": 13,
+    "bytes": 407567
+   },
+   "Stylesheet": {
+    "requests": 2,
+    "bytes": 12305
+   },
+   "Image": {
+    "requests": 12,
+    "bytes": 4332376
+   },
+   "Font": {
+    "requests": 7,
+    "bytes": 113461
+   },
+   "Media": {
+    "requests": 2,
+    "bytes": 1464054
+   },
+   "XHR": {
+    "requests": 3,
+    "bytes": 2180
+   },
+   "Fetch": {
+    "requests": 4,
+    "bytes": 17715
+   }
+  },
+  "protocols": [
+   "h3",
+   "h2"
+  ],
+  "scriptHosts": [
+   "static.cloudflareinsights.com",
+   "invitato.net"
+  ],
+  "scriptFiles": [
+   "vce701823e78c4301a35b7e07294d87301792088814092",
+   "webpack-runtime-2c9ce1326c76a9a05c21.js",
+   "framework-fc6693e7ecf3944cb7aa.js",
+   "app-95bb2d83bd4e77ce809f.js",
+   "3a17f596-768b2b166bf1bf9addd3.js",
+   "92399191-d286214486e545f8d80d.js",
+   "fea29d9f-a9bd93e8b9f60945e257.js",
+   "257e8032-cc6d0590692939a4ff8e.js",
+   "component---src-pages-index-jsx-dd2e75d698954f36c790.js",
+   "commons-e242cd5c7fdc9d5f422b.js",
+   "invitato-modal-darkmode-c296a65c1d546824508a.js",
+   "invitato-floating-music-0c4939ad9730d901a524.js",
+   "invitato-simulation-drawer-920f64c89a29130bfbec.js"
+  ],
+  "fontFiles": [
+   {
+    "host": "invitato.net",
+    "file": "Champignon-969551ffe8efcc094557872d38264021.otf",
+    "bytes": 36311
+   },
+   {
+    "host": "invitato.net",
+    "file": "instrument-serif-italic-latin-6804771de1c805a5bc75a0e51994c3f7.woff2",
+    "bytes": 22905
+   },
+   {
+    "host": "invitato.net",
+    "file": "instrument-serif-latin-3134e59245730678fd734a44bf383c79.woff2",
+    "bytes": 21830
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "pxiGyp8kv8JHgFVrJJLucHtAOvWDSA.woff2",
+    "bytes": 8703
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "pxiByp8kv8JHgFVrLEj6Z1xlFd2JQEk.woff2",
+    "bytes": 8019
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "pxiEyp8kv8JHgFVrJJfecnFHGPc.woff2",
+    "bytes": 7927
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "pxiByp8kv8JHgFVrLGT9Z1xlFd2JQEk.woff2",
+    "bytes": 7766
+   }
+  ],
+  "thirdPartyHosts": [
+   "static.cloudflareinsights.com",
+   "fonts.googleapis.com",
+   "fonts.gstatic.com",
+   "api.invitato.net",
+   "invitato.id"
+  ]
+ },
+ "structure": {
+  "coverClicked": false,
+  "beforeOpen": {
+   "sectionCount": 1,
+   "features": {
+    "coverGate": false,
+    "toGuest": false,
+    "countdown": false,
+    "rsvp": true,
+    "wishes": true,
+    "gift": false,
+    "copyButton": false,
+    "maps": false,
+    "calendar": false,
+    "livestream": false,
+    "qr": false,
+    "loveStory": false,
+    "gallery": true,
+    "dressCode": false,
+    "quranVerse": false,
+    "protocol": false,
+    "timezoneLabel": [],
+    "watermark": false,
+    "instagramFilter": false,
+    "musicControl": false
+   },
+   "buttons": [
+    "EN",
+    "Bahasa Indonesia",
+    "English",
+    "Tap to Open",
+    "Imagination Room",
+    "Reset Foto",
+    "Video Background",
+    "Background Welcome",
+    "Foto Groom",
+    "Foto Bride"
+   ]
+  },
+  "afterOpen": {
+   "title": "The Wedding of [name] & [name] by Invitato",
+   "lang": "en",
+   "generator": "Gatsby 5.13.3",
+   "viewport": "width=device-width, initial-scale=1, shrink-to-fit=no",
+   "og": {
+    "image": true,
+    "title": true,
+    "description": true
+   },
+   "reducedMotionCss": false,
+   "libs": {
+    "gsap": false,
+    "scrollTrigger": false,
+    "aos": false,
+    "animateCss": false,
+    "wow": false,
+    "swiper": false,
+    "slick": false,
+    "owl": false,
+    "lottie": false,
+    "three": false,
+    "pixi": false,
+    "anime": false,
+    "motionOne": false,
+    "howler": false,
+    "jquery": false,
+    "bootstrap": false,
+    "tailwind": false,
+    "alpine": false,
+    "vue": false,
+    "nuxt": false,
+    "next": false,
+    "react": false,
+    "svelte": false,
+    "flutterWeb": false,
+    "wordpress": false,
+    "elementor": false,
+    "livewire": false,
+    "inertia": false
+   },
+   "sections": [
+    {
+     "tag": "section",
+     "id": "",
+     "cls": "css-1gtvc88",
+     "heading": "",
+     "h": 915
+    }
+   ],
+   "sectionCount": 1,
+   "buttons": [
+    "EN",
+    "Bahasa Indonesia",
+    "English",
+    "Tap to Open",
+    "Imagination Room",
+    "Reset Foto",
+    "Video Background",
+    "Background Welcome",
+    "Foto Groom",
+    "Foto Bride",
+    "Foto RSVP",
+    "Foto QR Card",
+    "Cover Galeri 1",
+    "Cover Galeri 2",
+    "Cover Galeri 3",
+    "Cover Galeri 4",
+    "Cover Galeri 5",
+    "Cover Galeri 6",
+    "Foto Wishes",
+    "Foto Desktop",
+    "Complete",
+    "Complete+ & Ultimate"
+   ],
+   "media": {
+    "audio": [
+     {
+      "autoplay": false,
+      "loop": true,
+      "type": ""
+     },
+     {
+      "autoplay": false,
+      "loop": false,
+      "type": "mp3"
+     }
+    ],
+    "video": 1,
+    "iframes": [],
+    "canvases": 0,
+    "svgs": 18,
+    "images": 15,
+    "lazyImages": 0
+   },
+   "forms": [],
+   "fontsUsed": [
+    "Instrument Serif",
+    "Champignon",
+    "Poppins"
+   ],
+   "features": {
+    "coverGate": false,
+    "toGuest": false,
+    "countdown": false,
+    "rsvp": true,
+    "wishes": true,
+    "gift": false,
+    "copyButton": false,
+    "maps": false,
+    "calendar": false,
+    "livestream": false,
+    "qr": false,
+    "loveStory": false,
+    "gallery": true,
+    "dressCode": false,
+    "quranVerse": false,
+    "protocol": false,
+    "timezoneLabel": [],
+    "watermark": false,
+    "instagramFilter": false,
+    "musicControl": false
+   },
+   "domNodes": 347,
+   "docHeight": 915
+  }
+ },
+ "lighthouse": {
+  "ok": true,
+  "lighthouseVersion": "12.8.2",
+  "finalUrl": "https://invitato.net/template-rdct-d1992d6927/?code=DUMMY-P0001",
+  "throttling": {
+   "rttMs": 150,
+   "throughputKbps": 1638.4,
+   "requestLatencyMs": 562.5,
+   "downloadThroughputKbps": 1474.5600000000002,
+   "uploadThroughputKbps": 675,
+   "cpuSlowdownMultiplier": 4
+  },
+  "screen": {
+   "mobile": true,
+   "width": 412,
+   "height": 915,
+   "deviceScaleFactor": 2.625,
+   "disabled": false
+  },
+  "scores": {
+   "performance": 36,
+   "accessibility": 85,
+   "best-practices": 100,
+   "seo": 91
+  },
+  "metrics": {
+   "fcpMs": 4524.5785000000005,
+   "lcpMs": 19422.952999999994,
+   "tbtMs": 925.0070000000001,
+   "cls": 0.00008179761678012227,
+   "siMs": 10053.323918944197,
+   "ttiMs": 20164.1642
+  },
+  "byType": {
+   "total": {
+    "requests": 46,
+    "bytes": 6280287
+   },
+   "image": {
+    "requests": 12,
+    "bytes": 4235477
+   },
+   "media": {
+    "requests": 2,
+    "bytes": 1464738
+   },
+   "script": {
+    "requests": 13,
+    "bytes": 407555
+   },
+   "font": {
+    "requests": 7,
+    "bytes": 113444
+   },
+   "other": {
+    "requests": 9,
+    "bytes": 29764
+   },
+   "document": {
+    "requests": 1,
+    "bytes": 17022
+   },
+   "stylesheet": {
+    "requests": 2,
+    "bytes": 12287
+   },
+   "third-party": {
+    "requests": 9,
+    "bytes": 70979
+   }
+  },
+  "totalBytes": 6280287,
+  "requests": 46,
+  "thirdParties": [
+   {
+    "entity": "Google Fonts",
+    "bytes": 44703,
+    "blockingMs": 0
+   },
+   {
+    "entity": "invitato.id",
+    "bytes": 15798,
+    "blockingMs": 0
+   },
+   {
+    "entity": "Cloudflare",
+    "bytes": 10478,
+    "blockingMs": 0
+   }
+  ],
+  "fontDisplayIssues": 0,
+  "unusedJsBytes": 176937,
+  "a11yFailures": [
+   "aria-prohibited-attr",
+   "button-name",
+   "color-contrast"
+  ]
+ },
+ "files": {
+  "rea-inspect.json": "1e594fe1a8f68be0a7920c200af1a3852ce139c39f08d541208241a1f64a3db3",
+  "rea-bundle.json": "c9fdd2773772c6035540f9c4d21fb2828d7bf387f6e7b5be88b586fe84ba7935",
+  "_private/rea/C-IVT-102/rea-scenario.json": "60b6bea0e4d26bf246b3929a0097227b4677c71f771f73cd7cb16e0ee92b402e",
+  "_private/lh/C-IVT-102.json": "491a6b579af5262cd0ed45eccb0544f0ee7546643d7fd9b8e66009214c89e157"
+ },
+ "screenshot": "_private/thumbs (competitor, not committed)"
+}

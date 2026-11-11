@@ -1,0 +1,15 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "insert into invitation_versions (invitation_id, version_no, config, created_by, is_live) values ($1, 1, $2, 'customer', true)",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Left": [
+        "Int4",
+        "Jsonb"
+      ]
+    },
+    "nullable": []
+  },
+  "hash": "06f37b36435636e55e9d4216ceb304ca42dd93f627b1676760f6c961f0ced366"
+}

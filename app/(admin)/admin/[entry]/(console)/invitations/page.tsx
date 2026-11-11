@@ -1,0 +1,9 @@
+import { desc } from 'drizzle-orm';
+import { redirect } from 'next/navigation';
+import { getUser } from '@/lib/db/queries';
+import { db } from '@/lib/db/drizzle';
+import { invitations } from '@/lib/db/schema';
+
+import { assertAuthorizedAdmin } from '@/lib/auth/admin-access';
+export default async function UndanganPage(){const me=assertAuthorizedAdmin(await getUser());const rows=await db.select().from(invitations).orderBy(desc(invitations.createdAt));return <section className="p-4 lg:p-8"><div className="mx-auto max-w-7xl"><p className="text-sm font-medium text-brand-700">Ruang kerja</p><h1 className="mt-1 text-2xl font-semibold">Undangan</h1><p className="mt-2 text-sm text-muted-foreground">Semua undangan yang dibuat customer.</p><div className="mt-8 overflow-x-auto rounded-xl border bg-white shadow-sm"><table className="min-w-[42rem] w-full text-left text-sm"><thead className="border-b bg-slate-50 text-xs text-muted-foreground"><tr><th className="px-5 py-3 font-medium">Slug</th><th className="px-5 py-3 font-medium">Acara</th><th className="px-5 py-3 font-medium">Status</th><th className="px-5 py-3 font-medium">Dibuat</th></tr></thead><tbody className="divide-y">{rows.map(r=><tr key={r.id} className="hover:bg-slate-50"><td className="px-5 py-4 font-medium">/{r.slug}</td><td className="px-5 py-4 capitalize text-muted-foreground">{r.eventType}</td><td className="px-5 py-4"><span className={`rounded-full px-2.5 py-1 text-xs ${r.deletedAt?'bg-rose-50 text-rose-700':r.status==='PUBLISHED'?'bg-emerald-50 text-emerald-700':'bg-slate-100 text-slate-600'}`}>{r.purgedAt?'PURGED':r.deletedAt?'DELETED':r.status}</span></td><td className="px-5 py-4 text-muted-foreground">{r.createdAt.toLocaleDateString('id-ID')}</td></tr>)}</tbody></table>{rows.length===0&&<p className="p-12 text-center text-sm text-muted-foreground">Belum ada undangan.</p>}</div></div></section>}
+export const dynamic='force-dynamic';

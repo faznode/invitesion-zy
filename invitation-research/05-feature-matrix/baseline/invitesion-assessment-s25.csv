@@ -1,0 +1,180 @@
+feature_id,status,basis,evidence,note
+FM-001,Full,CODE,F-001;F-049,Guest slug derived from the name is guessable (QA-003)
+FM-002,Full,CODE,F-002;C-INV-002,React-escaped; long names wrap
+FM-003,None,CODE,F-003,Cover gate exists only in the marketing preview mock (M-005)
+FM-004,None,CODE,F-004,config.music is never rendered
+FM-005,None,CODE,F-004,No player rendered
+FM-006,None,CODE,F-072,
+FM-007,None,CODE,F-072,
+FM-008,None,CODE,F-005,
+FM-009,Full,CODE,F-030,
+FM-010,Full,CODE,F-029,Three presets carry Qur'an translations of unknown provenance (QA-015; ADR-O04)
+FM-011,Partial,CODE,F-006,Captured in the editor; only nicknames rendered
+FM-012,None,CODE,F-006,Captured in the editor; not rendered
+FM-013,Full,CODE,F-007,Plain card list
+FM-014,Partial,CODE,F-008,Grid only; layout setting ignored; originals served
+FM-015,None,CODE,F-008,
+FM-016,None,CODE,F-009,Media API accepts video; renderer ignores it
+FM-017,Partial,CODE,F-010,Times wrong on UTC servers (QA-002)
+FM-018,Partial,CODE,F-033;C-INV-002,Hard-coded WIB plus server time zone (QA-002); C-INV-002 shows a WITA event labelled with both zones
+FM-019,Full,CODE,F-011,External link only
+FM-020,None,CODE,F-011,
+FM-021,None,CODE,F-012,
+FM-022,Full,CODE,F-013,Personal link only
+FM-023,None,CODE,F-014,
+FM-024,Partial,CODE,F-015,The answer overwrites the allowance (QA-005)
+FM-025,None,CODE,F-016,Config only; not enforced
+FM-026,None,CODE,F-017,Config only; no guest UI
+FM-027,None,CODE,F-018,Config only; no guest UI
+FM-028,None,CODE,F-043,Config only
+FM-029,None,CODE,F-015,Count only; no companion names
+FM-030,Full,CODE,F-019,Latest 50 plus count
+FM-031,None,CODE,M-019,No reply action
+FM-032,Full,CODE,F-021,Visible without a guest link
+FM-033,None,CODE,F-021,No copy button
+FM-034,None,CODE,F-022,
+FM-035,Partial,CODE,F-023,Address shown as plain text
+FM-036,None,CODE,F-023,
+FM-037,None,CODE,F-023,
+FM-038,None,CODE,M-013,
+FM-039,Full,CODE,F-024,
+FM-040,None,CODE,F-009,
+FM-041,None,CODE,F-025,Config only (corporateProfile.dressCode)
+FM-042,None,CODE,F-026,guests.qr_code column unused
+FM-043,None,CODE,F-027,
+FM-044,None,CODE,F-028,Config only
+FM-045,None,CODE,M-013,
+FM-046,Full,CODE,F-031,
+FM-047,Partial,CODE,F-032;C-INV-005,Title only; no og:image (QA-009)
+FM-048,None,CODE,F-034,settings.language ignored
+FM-049,None,CODE,F-035,
+FM-050,None,CODE,M-013,
+FM-051,None,CODE,F-036,One layout for all 64 templates; palette is the only variable
+FM-052,None,CODE,F-037,
+FM-053,None,CODE,F-037,
+FM-054,None,CODE,F-038,
+FM-055,None,CODE,C-INV-005,No motion on guest pages and no reduced-motion CSS there (reducedMotionCss=false); the marketing site and template preview honour it
+FM-056,None,CODE,F-039,Config only
+FM-057,Partial,CODE,F-040,Only the name is rendered
+FM-058,None,CODE,F-041,Config only
+FM-059,None,CODE,F-042,Config only
+FM-060,None,CODE,F-044,Tracking undisclosed (QA-023)
+FM-061,None,CODE,M-013,
+FM-062,None,CODE,M-013,
+FM-063,None,CODE,M-013,Single page
+FM-064,None,CODE,M-013,
+FM-065,Full,CODE,F-045,
+FM-066,None,CODE,F-046,
+FM-067,None,CODE,F-046,
+FM-068,Full,CODE,F-047,CSV formula-injection risk (QA-012)
+FM-069,Partial,CODE,F-048,Free-text category
+FM-070,Full,CODE,F-045,No guest cap in code (only maxGuestsPerRsvp <= 50 per answer)
+FM-071,Partial,CODE,F-050,Manual; one wa.me variant skips 08->62 normalisation (QA-013)
+FM-072,Partial,CODE,F-050,Editor has a whatsappTemplate field; the operational guest list's wa.me link sends no text
+FM-073,None,CODE,F-051,wa_log table only (M-040)
+FM-074,None,CODE,M-019,No invitation e-mail sender
+FM-075,None,CODE,M-019,
+FM-076,None,CODE,F-052,Config only; no scheduler
+FM-077,Partial,CODE,F-053,Per-guest list plus four totals
+FM-078,Full,CODE,F-054,
+FM-079,None,CODE,F-055,
+FM-080,Full,CODE,F-056,
+FM-081,None,CODE,M-019,
+FM-082,Partial,CODE,F-056,Check-in total on the guest-operations page; not live
+FM-083,None,CODE,F-057,
+FM-084,None,CODE,F-058,
+FM-085,Partial,CODE,F-059,Collected; visible in the CSV and as one total
+FM-086,None,CODE,F-059,
+FM-087,None,CODE,F-060;F-020,is_hidden never set
+FM-088,Full,CODE,F-061,
+FM-089,Partial,CODE,F-062,Stored; no UI; never pruned
+FM-090,Full,CODE,F-063;F-061,Revision cap exists in the schema but is never enforced
+FM-091,Full,CODE,F-064,12 months on both paid tiers
+FM-092,None,CODE,F-065,Config only
+FM-093,None,CODE,F-066,
+FM-094,None,CODE,F-067,
+FM-095,None,CODE,F-068,Credit always shown
+FM-096,None,CODE,F-069,"""Pratinjau"" links to a 404 path (M-018)"
+FM-097,None,CODE,F-070,
+FM-098,Full,CODE,F-071,<= 5 MB; no resizing
+FM-099,None,CODE,M-027,
+FM-100,Full,CODE,M-018;M-013,Per-section enabled flags in the editor and the renderer
+FM-101,None,CODE,M-018,
+FM-102,None,CODE,F-036,Font fixed per template
+FM-103,None,CODE,F-036,Palette fixed per template; theme tab unreachable (M-018)
+FM-104,None,CODE,M-018,Form-based module editor
+FM-105,None,CODE,REPO@2c94140,No assisted-production flow
+FM-106,Partial,CODE,F-074,Re-pay per theme; theme tab unreachable
+FM-107,None,CODE,F-074,
+FM-108,Full,CODE,F-075,
+FM-109,None,CODE,F-076,Single owner
+FM-110,Full,CODE,F-073,
+FM-111,None,CODE,F-042,Config only
+FM-112,None,CODE,REPO@2c94140,No native app
+FM-113,None,CODE,M-019,
+FM-114,None,CODE,M-013,
+FM-115,None,CODE,M-017,No duplicate action in the invitation list
+FM-116,Full,CODE,M-005,Marketing preview mock with fictional data; it is not the guest renderer
+FM-117,Partial,CODE,F-100,Placeholder WhatsApp number
+FM-118,Full,CODE,F-075;F-085,"Drafting is free; publishing needs a paid order. Marketing advertises ""Rp0 / GRATIS"" (ADR-O02)"
+FM-119,Full,CODE,F-085,IDR 149k / 299k
+FM-120,None,CODE,F-085,One-time by design (lib/pricing.ts)
+FM-121,Full,CODE,F-085,Standard and premium tiers
+FM-122,Partial,CODE,F-085,lib/pricing.ts disagrees with the homepage and /pricing copy (ADR-O02)
+FM-123,Partial,CODE,F-081,Acquirer not chosen; manual confirmation
+FM-124,None,CODE,F-082,
+FM-125,None,CODE,F-082,
+FM-126,Partial,CODE,F-083,Stripe adapter untested against a real account
+FM-127,None,CODE,M-025,
+FM-128,None,CODE,M-025,
+FM-129,Partial,CODE,F-086,Signed idempotent webhooks (M-026); QRIS confirmed manually
+FM-130,None,CODE,F-084,
+FM-131,Full,CODE,F-085,IDR and USD by locale
+FM-132,None,CODE,F-080,
+FM-133,None,CODE,F-080,
+FM-134,None,CODE,F-080,
+FM-135,None,CODE,F-079,
+FM-136,None,CODE,F-079,
+FM-137,None,CODE,F-079,
+FM-138,None,CODE,F-077,
+FM-139,None,CODE,F-078,
+FM-140,None,CODE,REPO@2c94140,
+FM-141,None,CODE,M-003,
+FM-142,Full,CODE,F-086,
+FM-143,Partial,CODE,F-087,Stub
+FM-144,None,CODE,F-088,Tables only
+FM-145,None,CODE,F-088,
+FM-146,None,CODE,F-089,
+FM-147,None,CODE,F-089,
+FM-148,None,CODE,F-090,
+FM-149,None,CODE,F-090,
+FM-150,None,CODE,F-091,
+FM-151,None,CODE,M-013,
+FM-152,Full,CODE,F-092,About 90 pages; some over-claim (QA-024)
+FM-153,Full,CODE,F-093,27 categories
+FM-154,Full,CODE,F-093,
+FM-155,Partial,CODE,F-093,See ../01-codebase-audit/niche-coverage.md
+FM-161,None,CODE,M-027,Originals served; no next/image
+FM-162,Full,CODE,M-013,"Gallery images use loading=lazy; the cover image is eager (above the fold). The captured pages had no gallery photos (lazyImages 0/0)"
+FM-165,Partial,CODE,F-096,Guest renderer is Indonesian-only
+FM-166,Partial,CODE,F-094,CSP is report-only
+FM-167,None,CODE,F-095,
+FM-168,None,CODE,F-098,
+FM-169,None,CODE,REPO@2c94140,
+FM-170,None,CODE,F-099,
+FM-171,Partial,CODE,M-002,Only the marketing page /resources/privacy-and-security; no legal policy
+FM-172,Full,CODE,M-005,Template previews use fictional data
+FM-173,Full,CODE,C-INV-005,"robots: index false, follow false on both guest routes"
+FM-174,None,CODE,REPO@2c94140,
+FM-175,None,CODE,REPO@2c94140,
+FM-176,Partial,CODE,F-092,Marketing resources pages only
+FM-177,Partial,CODE,F-101,49 cases; no renderer or guest-action coverage
+FM-178,None,CODE,F-102,
+FM-180,None,CODE,F-022,
+FM-181,None,CODE,F-046,
+FM-182,None,CODE,M-013,
+FM-183,None,CODE,F-048,
+FM-184,None,CODE,M-005,
+FM-185,None,CODE,F-075,Publishing requires a paid order
+FM-186,None,CODE,F-056,
+FM-187,None,CODE,F-001;M-015,Guest slug derived from the guest's name (QA-003)

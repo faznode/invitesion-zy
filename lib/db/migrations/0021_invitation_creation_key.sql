@@ -1,0 +1,2 @@
+ALTER TABLE "invitations" ADD COLUMN "creation_key" varchar(255);--> statement-breakpoint
+CREATE UNIQUE INDEX "invitations_user_creation_key_idx" ON "invitations" USING btree ("user_id","creation_key") WHERE "invitations"."creation_key" is not null;

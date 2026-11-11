@@ -1,0 +1,15 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "update invitations set config = $1 where id = $2 and deleted_at is null",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Left": [
+        "Jsonb",
+        "Int4"
+      ]
+    },
+    "nullable": []
+  },
+  "hash": "d24501d7b7532d8a6abd0147501536f42746267ad7e43a653eeb7a1f40c73fa9"
+}

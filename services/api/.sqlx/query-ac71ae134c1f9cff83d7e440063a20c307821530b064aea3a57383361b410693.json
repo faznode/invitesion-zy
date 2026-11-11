@@ -1,0 +1,16 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "update orders set status = 'PAID', paid_at = $2, provider_payment_id = coalesce($3, provider_payment_id) where id = $1 and status = 'PENDING'",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Left": [
+        "Int4",
+        "Timestamp",
+        "Varchar"
+      ]
+    },
+    "nullable": []
+  },
+  "hash": "ac71ae134c1f9cff83d7e440063a20c307821530b064aea3a57383361b410693"
+}

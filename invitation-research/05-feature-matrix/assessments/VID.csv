@@ -1,0 +1,47 @@
+feature_id,status,basis,evidence,note
+FM-001,Full,CLAIMED,S-VID-002,"""One name, one exclusive invitation"" (demos carry no guest parameter)"
+FM-002,Full,CLAIMED,S-VID-002,
+FM-004,Full,CLAIMED,S-VID-002;C-VID-103,Music on all tiers; two audio elements on the demos; playback not measured
+FM-005,Full,OBSERVED,C-VID-101;C-VID-102;C-VID-103,Music control on 3/3
+FM-008,Full,OBSERVED,C-VID-101;C-VID-102;C-VID-103,
+FM-013,Full,OBSERVED,C-VID-103,"""Our story"" section"
+FM-014,Full,OBSERVED,C-VID-103,
+FM-019,Full,OBSERVED,C-VID-103,Location button
+FM-021,Full,OBSERVED,C-VID-103,"""Save the Date"" button"
+FM-022,Full,OBSERVED,C-VID-103,
+FM-024,Full,OBSERVED,C-VID-103,Guest-count field
+FM-030,Full,OBSERVED,C-VID-103,300-character limit
+FM-032,Full,OBSERVED,C-VID-103,E-Angpao digital envelope
+FM-036,Full,OBSERVED,C-VID-103,"Gift Registry (""Send Gift"", ""Give as a Gift"")"
+FM-039,Full,OBSERVED,C-VID-103,"""Join YouTube"""
+FM-040,Full,OBSERVED,C-VID-103,YouTube iframe
+FM-041,Full,OBSERVED,C-VID-103,
+FM-042,Full,CLAIMED,S-VID-004,RSVP returns an entry QR (E-Guest Book tier)
+FM-047,Full,OBSERVED,C-VID-101;C-VID-102;C-VID-103,"og:image, og:title and og:description"
+FM-052,Full,OBSERVED,C-VID-101,GSAP + ScrollTrigger
+FM-069,Full,CLAIMED,S-VID-002,Split invitation per guest category
+FM-073,Full,CLAIMED,S-VID-002,WA AutoBlast quota 50 / 100 / 300
+FM-079,Full,CLAIMED,S-VID-004,Tablets and crew scan QR codes (staffed service)
+FM-081,Full,CLAIMED,S-VID-004,Greeting screen
+FM-090,Full,CLAIMED,S-VID-002,Unlimited revisions on every invitation tier
+FM-094,Full,CLAIMED,S-VID-002,Password protection from Intimate
+FM-098,Full,CLAIMED,S-VID-002,50 uploads (Basic / Intimate) or unlimited (Royal)
+FM-101,Full,CLAIMED,S-VID-003,Viding Studio canvas with full element control
+FM-102,Full,CLAIMED,S-VID-003,Studio
+FM-103,Full,OBSERVED,C-VID-101;S-VID-003,Colour-variation picker on the demo; Studio
+FM-105,Partial,CLAIMED,S-VID-002,Human assistants help during creation
+FM-111,Full,CLAIMED,S-VID-004,Table management in the E-Guest Book service
+FM-116,Full,OBSERVED,C-VID-101;C-VID-102;C-VID-103,Vendor placeholder couple repeated across themes [INFERRED high]
+FM-117,Full,OBSERVED,S-VID-001,WhatsApp chat CTA
+FM-118,Partial,OBSERVED,S-VID-001,Free Trial; limits not public
+FM-119,Full,OBSERVED,S-VID-002,Rp 300k-850k one-time packages
+FM-121,Full,OBSERVED,S-VID-002,
+FM-122,Full,OBSERVED,S-VID-002;S-VID-004;S-VID-005,Published with strikethrough list prices
+FM-133,Full,CLAIMED,S-VID-006,Commission-based agents with tiered commission
+FM-135,Partial,CLAIMED,S-VID-006,"One partner per city on commission; white-label or quota resale not described"
+FM-152,Partial,OBSERVED,S-VID-001,Blog and FAQ
+FM-153,Partial,OBSERVED,S-VID-003,Six numbered themes plus Studio twins in server HTML; filters not observed
+FM-165,Full,OBSERVED,S-VID-001,"/id, /en, /ms routes"
+FM-172,Full,OBSERVED,C-VID-101;C-VID-102;C-VID-103,
+FM-176,Partial,OBSERVED,S-VID-001,Blog and FAQ
+FM-183,Full,CLAIMED,S-VID-002,Split invitation per guest category at no extra cost

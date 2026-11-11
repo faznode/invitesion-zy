@@ -1,0 +1,35 @@
+{
+ "code": "PPO",
+ "competitor": "paperlesspost",
+ "observedAt": "2026-10-29T11:18:56.053+07:00",
+ "homepage": {
+  "url": "https://www.paperlesspost.com/",
+  "finalUrl": "https://www.paperlesspost.com/",
+  "skipped": null,
+  "links": 358
+ },
+ "catalogCandidates": [
+  "https://www.paperlesspost.com/cards/category/holiday-invitations",
+  "https://www.paperlesspost.com/cards/category/holiday-invitations?tab=flyers",
+  "https://www.paperlesspost.com/cards/category/holiday-cards",
+  "https://www.paperlesspost.com/cards/category/halloween-invitations",
+  "https://www.paperlesspost.com/cards/category/thanksgiving-invitations",
+  "https://www.paperlesspost.com/cards/category/christmas-party-invitations",
+  "https://www.paperlesspost.com/cards/category/hanukkah_invitations",
+  "https://www.paperlesspost.com/cards/category/kwanzaa_invitations",
+  "https://www.paperlesspost.com/cards/category/new-years-eve-invitations",
+  "https://www.paperlesspost.com/cards/category/holiday-cocktail-party-invitations",
+  "https://www.paperlesspost.com/cards/category/holiday-invitations/gift-exchange",
+  "https://www.paperlesspost.com/cards/category/holiday-invitations/cookie-swap",
+  "https://www.paperlesspost.com/cards/category/holiday-invitations/favorite-things",
+  "https://www.paperlesspost.com/cards/category/holiday-invitations/ugly-sweater-party",
+  "https://www.paperlesspost.com/cards/category/business-holiday-invitations"
+ ],
+ "catalog": {
+  "url": "https://www.paperlesspost.com/cards/category/holiday-invitations",
+  "finalUrl": "https://www.paperlesspost.com/cards/category/holiday-invitations",
+  "skipped": null,
+  "links": 583
+ },
+ "demos": []
+}

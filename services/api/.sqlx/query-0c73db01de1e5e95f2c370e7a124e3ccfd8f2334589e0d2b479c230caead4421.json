@@ -1,0 +1,28 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "select is_premium from templates where id = $1",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "is_premium",
+        "type_info": "Bool",
+        "origin": {
+          "Table": {
+            "table": "templates",
+            "name": "is_premium"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Left": [
+        "Int4"
+      ]
+    },
+    "nullable": [
+      false
+    ]
+  },
+  "hash": "0c73db01de1e5e95f2c370e7a124e3ccfd8f2334589e0d2b479c230caead4421"
+}

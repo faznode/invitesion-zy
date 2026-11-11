@@ -1,0 +1,450 @@
+{
+ "id": "C-INV-007",
+ "competitor": "invitesion",
+ "kind": "demo",
+ "url": "http://127.0.0.1:3100/i/dimas-laras-makassar/nama-panjang",
+ "capturedAt": "2026-11-04T20:34:23.838+07:00",
+ "robots": {
+  "allowed": true,
+  "note": "own instance"
+ },
+ "method": "REA capture-browser-scenario (connect mode) drives navigation, settle and keyboard scroll; optional cover click (trusted CDP mouse click on the settled control: coverClickMethod, coverClickLanding) and scroll through the opened page by CDP after REA's scenario; CDP mobile emulation 412x915 @2.625 + Android Chrome UA, cold cache (no throttling); REA 6.8.0 inspect-web-page/analyze-web-bundle; custom structure pass (text features + animation libraries: no REA coverage); Lighthouse 12 mobile simulate (Slow 4G, 4x CPU) when present",
+ "driver": "rea",
+ "rea": {
+  "version": "6.8.0",
+  "scenario": {
+   "ok": true,
+   "exit": 0,
+   "ms": 19804,
+   "evidenceId": "ev_9450356c3de111562facc091222580393ca8578fa8969bfcdde1a7a17d8358a7",
+   "status": "incomplete",
+   "stepsCompleted": 32,
+   "stepsTotal": 32,
+   "failed": [],
+   "events": 86,
+   "error": null,
+   "sha256": "96df9b308957ce5f703c02c57ec96a0164337a6d90c2d33a3da699a77c0ba62b",
+   "file": "_private/rea/C-INV-007/rea-scenario.json"
+  },
+  "emulation": {
+   "duringScenario": {
+    "android": true,
+    "width": 412,
+    "dpr": 2.625,
+    "coarsePointer": false,
+    "reducedMotion": false
+   },
+   "afterScenario": {
+    "android": true,
+    "width": 500,
+    "dpr": 1,
+    "coarsePointer": false,
+    "reducedMotion": false
+   }
+  },
+  "inspectEvidenceId": "ev_6ab4e7656f34e07561cf1a2fb7a21e01f6aed34687e161b77d642f989a79641c",
+  "bundleEvidenceId": "ev_956f912970206d4768eda171bc5294dac5adfdff1b4fa41be80706812bd94dca",
+  "inspectError": null,
+  "bundleError": null,
+  "domNodes": 248,
+  "scripts": 32,
+  "resources": 3,
+  "completeness": "policy_filtered",
+  "bundleChunks": 14,
+  "bundleEndpoints": [],
+  "bundleInferences": [
+   {
+    "kind": "vendor_fingerprint",
+    "value": "Next.js",
+    "confidence": "high",
+    "basis": [
+     {
+      "script_key": "scr_22e504b2516f032674514a9d88304e442bc5ca33fd647a0e809a45714b04aacb",
+      "artifact_sha256": "e6e418d9aa87ee78d4d3f059951c63e4bf6e8c16aa6e138d65231e81345603c4",
+      "line": null,
+      "column": null,
+      "detector": "next-runtime"
+     }
+    ]
+   },
+   {
+    "kind": "vendor_fingerprint",
+    "value": "React",
+    "confidence": "medium",
+    "basis": [
+     {
+      "script_key": "scr_33e19bb78a2af27515db108f6a58a0ce2782f5f90c7cd557abbab20a178d0527",
+      "artifact_sha256": "93c8b74cb7d5ee832a3d3e8554ff91216a1807d540ec6a2f604500824a3e3b15",
+      "line": null,
+      "column": null,
+      "detector": "react-runtime"
+     }
+    ]
+   },
+   {
+    "kind": "vendor_fingerprint",
+    "value": "Next.js",
+    "confidence": "high",
+    "basis": [
+     {
+      "script_key": "scr_3694ebe079c56e8ad10e0a9d9dcc05547b29fcf0ee06b96f250a5b93f4a3a73e",
+      "artifact_sha256": "ce6bbb2258dbccec122158d574839f5f331e8de14a90eaf09139944f891a595f",
+      "line": null,
+      "column": null,
+      "detector": "next-runtime"
+     }
+    ]
+   },
+   {
+    "kind": "vendor_fingerprint",
+    "value": "Next.js",
+    "confidence": "high",
+    "basis": [
+     {
+      "script_key": "scr_b64dcaeb74912b8dc0075f2efb51429fa2eec29b208fcd8c86b9af46475317b3",
+      "artifact_sha256": "c3f12e83f6eca6dcd4ebafbbf9f10a8203098d9b004c84a4676f5eb1c1e193a1",
+      "line": null,
+      "column": null,
+      "detector": "next-runtime"
+     }
+    ]
+   }
+  ]
+ },
+ "network": {
+  "loadEventMs": 3603,
+  "requests": 19,
+  "bytes": 302187,
+  "byType": {
+   "Document": {
+    "requests": 1,
+    "bytes": 27183
+   },
+   "Stylesheet": {
+    "requests": 1,
+    "bytes": 17230
+   },
+   "Font": {
+    "requests": 3,
+    "bytes": 56810
+   },
+   "Script": {
+    "requests": 14,
+    "bytes": 200964
+   }
+  },
+  "protocols": [
+   "http/1.1"
+  ],
+  "scriptHosts": [
+   "127.0.0.1"
+  ],
+  "scriptFiles": [
+   "c86dc58b78f42f03.js",
+   "94b264acefa627a8.js",
+   "636a68c55a1ab35f.js",
+   "5a4e913764f6a112.js",
+   "3c530c24ce279779.js",
+   "turbopack-0aefcb99206477ac.js",
+   "ba288541a2d772bc.js",
+   "e75d08fa83341e9f.js",
+   "2a9a0a27b99be573.js",
+   "3fcbd60a2308aaca.js",
+   "833b791a5ea1a311.js",
+   "2030e2a47a61921e.js",
+   "3631f6f3fd5c1047.js",
+   "b401745f06ed2788.js"
+  ],
+  "fontFiles": [
+   {
+    "host": "127.0.0.1",
+    "file": "7ebf22b5a21034f8-s.p.d8bad3ab.woff2",
+    "bytes": 16234
+   },
+   {
+    "host": "127.0.0.1",
+    "file": "e41d5df559864f9e-s.p.380d09ea.woff2",
+    "bytes": 15590
+   },
+   {
+    "host": "127.0.0.1",
+    "file": "a343f882a40d2cc9-s.p.07ce798a.woff2",
+    "bytes": 24986
+   }
+  ],
+  "thirdPartyHosts": []
+ },
+ "structure": {
+  "coverClicked": false,
+  "coverClickMethod": null,
+  "coverClickLanding": null,
+  "beforeOpen": {
+   "sectionCount": 4,
+   "features": {
+    "coverGate": false,
+    "toGuest": true,
+    "countdown": true,
+    "rsvp": true,
+    "wishes": true,
+    "gift": false,
+    "copyButton": false,
+    "maps": false,
+    "calendar": true,
+    "livestream": false,
+    "qr": false,
+    "loveStory": false,
+    "gallery": false,
+    "dressCode": false,
+    "quranVerse": false,
+    "protocol": false,
+    "timezoneLabel": [
+     "WITA"
+    ],
+    "watermark": true,
+    "instagramFilter": false,
+    "musicControl": false
+   },
+   "buttons": [
+    "Ya, saya hadir",
+    "Maaf, belum bisa",
+    "Kirim ucapan"
+   ]
+  },
+  "afterOpen": {
+   "title": "Undangan Digital",
+   "lang": "id",
+   "generator": null,
+   "viewport": "width=device-width, initial-scale=1",
+   "og": {
+    "image": true,
+    "title": true,
+    "description": true
+   },
+   "reducedMotionCss": false,
+   "libs": {
+    "gsap": false,
+    "scrollTrigger": false,
+    "aos": false,
+    "animateCss": false,
+    "wow": false,
+    "swiper": false,
+    "slick": false,
+    "owl": false,
+    "lottie": false,
+    "three": false,
+    "pixi": false,
+    "anime": false,
+    "motionOne": false,
+    "howler": false,
+    "jquery": false,
+    "bootstrap": false,
+    "tailwind": false,
+    "alpine": false,
+    "vue": false,
+    "nuxt": false,
+    "next": true,
+    "react": false,
+    "svelte": false,
+    "flutterWeb": false,
+    "wordpress": false,
+    "elementor": false,
+    "livewire": false,
+    "inertia": false
+   },
+   "sections": [
+    {
+     "tag": "section",
+     "id": "",
+     "cls": "mx-auto w-full max-w-xl px-6",
+     "heading": "",
+     "h": 168
+    },
+    {
+     "tag": "section",
+     "id": "",
+     "cls": "mx-auto w-full max-w-xl px-6",
+     "heading": "Rangkaian Acara",
+     "h": 596
+    },
+    {
+     "tag": "section",
+     "id": "",
+     "cls": "mx-auto w-full max-w-xl px-6",
+     "heading": "Konfirmasi Kehadiran",
+     "h": 528
+    },
+    {
+     "tag": "section",
+     "id": "",
+     "cls": "mx-auto w-full max-w-xl px-6",
+     "heading": "Ucapan & Doa",
+     "h": 752
+    }
+   ],
+   "sectionCount": 4,
+   "buttons": [
+    "Ya, saya hadir",
+    "Maaf, belum bisa",
+    "Kirim ucapan"
+   ],
+   "media": {
+    "audio": [],
+    "video": 0,
+    "iframes": [],
+    "canvases": 0,
+    "svgs": 5,
+    "images": 0,
+    "lazyImages": 0
+   },
+   "forms": [
+    {
+     "fields": [
+      "hidden",
+      "hidden",
+      "hidden",
+      "text",
+      "number",
+      "submit",
+      "submit"
+     ],
+     "hasRadio": false,
+     "hasSelect": false
+    },
+    {
+     "fields": [
+      "hidden",
+      "hidden",
+      "hidden",
+      "textarea",
+      "submit"
+     ],
+     "hasRadio": false,
+     "hasSelect": false
+    }
+   ],
+   "fontsUsed": [
+    "Manrope",
+    "Instrument Serif"
+   ],
+   "features": {
+    "coverGate": false,
+    "toGuest": true,
+    "countdown": true,
+    "rsvp": true,
+    "wishes": true,
+    "gift": false,
+    "copyButton": false,
+    "maps": false,
+    "calendar": true,
+    "livestream": false,
+    "qr": false,
+    "loveStory": false,
+    "gallery": false,
+    "dressCode": false,
+    "quranVerse": false,
+    "protocol": false,
+    "timezoneLabel": [
+     "WITA"
+    ],
+    "watermark": true,
+    "instagramFilter": false,
+    "musicControl": false
+   },
+   "domNodes": 177,
+   "docHeight": 2856
+  }
+ },
+ "lighthouse": {
+  "ok": true,
+  "lighthouseVersion": "12.8.2",
+  "finalUrl": "http://127.0.0.1:3100/i/dimas-laras-makassar/nama-panjang",
+  "throttling": {
+   "rttMs": 150,
+   "throughputKbps": 1638.4,
+   "requestLatencyMs": 562.5,
+   "downloadThroughputKbps": 1474.5600000000002,
+   "uploadThroughputKbps": 675,
+   "cpuSlowdownMultiplier": 4
+  },
+  "screen": {
+   "mobile": true,
+   "width": 412,
+   "height": 915,
+   "deviceScaleFactor": 2.625,
+   "disabled": false
+  },
+  "scores": {
+   "performance": 80,
+   "accessibility": 96,
+   "best-practices": 96,
+   "seo": 60
+  },
+  "metrics": {
+   "fcpMs": 1954.3395,
+   "lcpMs": 4147.0185,
+   "tbtMs": 255,
+   "cls": 0,
+   "siMs": 2629.2797640001354,
+   "ttiMs": 4147.0185
+  },
+  "byType": {
+   "total": {
+    "requests": 27,
+    "bytes": 328699
+   },
+   "script": {
+    "requests": 21,
+    "bytes": 200964
+   },
+   "font": {
+    "requests": 3,
+    "bytes": 56810
+   },
+   "document": {
+    "requests": 1,
+    "bytes": 27183
+   },
+   "other": {
+    "requests": 1,
+    "bytes": 26512
+   },
+   "stylesheet": {
+    "requests": 1,
+    "bytes": 17230
+   },
+   "image": {
+    "requests": 0,
+    "bytes": 0
+   },
+   "media": {
+    "requests": 0,
+    "bytes": 0
+   },
+   "third-party": {
+    "requests": 7,
+    "bytes": 0
+   }
+  },
+  "totalBytes": 328699,
+  "requests": 27,
+  "thirdParties": [
+   {
+    "entity": "invitesion.invalid",
+    "bytes": 0,
+    "blockingMs": 0
+   }
+  ],
+  "fontDisplayIssues": 0,
+  "unusedJsBytes": 51439,
+  "a11yFailures": [
+   "color-contrast"
+  ]
+ },
+ "files": {
+  "rea-inspect.json": "7f2feab0f0f0acb06b24e76ea6bff41682a058e7344c1241b907b8269f9f26d1",
+  "rea-bundle.json": "7879328879211887bc7c194818053f31b035406f623aeff46b5e08357c1d4a8f",
+  "_private/rea/C-INV-007/rea-scenario.json": "96df9b308957ce5f703c02c57ec96a0164337a6d90c2d33a3da699a77c0ba62b",
+  "lighthouse.json": "82afa390fa9030b666cf2aca0e46e1fecc894eb3713406c905188f7df588bb56"
+ },
+ "screenshot": "viewport-412.webp (public, own product)"
+}

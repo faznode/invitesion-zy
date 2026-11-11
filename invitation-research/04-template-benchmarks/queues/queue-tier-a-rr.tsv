@@ -1,0 +1,32 @@
+# queue-tier-a-rr.tsv — DERIVED from queue-tier-a.tsv (same picks, ids and urls), round-robin across competitors (session 04).
+# INV rows removed: invi.id/tema/* are preview wrappers; their guest pages are queue-tier-a-4.tsv (C-INV-111…116).
+# Finished ids are skipped by run-batch.sh. Never overwrite this file while a batch reads it.
+# columns: id<TAB>competitor<TAB>kind<TAB>url — consumed by _tools/capture/run-batch.sh
+C-ENV-101	enviory	demo	https://enviory.com/tema/hydrangea/pratinjau
+C-IDI-101	indoinvite	demo	https://indoinvite.com/preview/contoh-undangan-online-pernikahan
+C-IVT-101	invitato	demo	https://invitato.net/template-rdct-7497f9926d/?code=DUMMY-P0001
+C-VID-101	viding	demo	https://viding.co/theme/preview/167
+C-WEV-101	wevitation	demo	https://www.wevitation.com/demo/timeless-snapshot
+C-ENV-102	enviory	demo	https://enviory.com/tema/rocaille/pratinjau
+C-IDI-102	indoinvite	demo	https://indoinvite.com/preview/contoh-undangan-online-khitanan
+C-IVT-102	invitato	demo	https://invitato.net/template-rdct-d1992d6927/?code=DUMMY-P0001
+C-VID-102	viding	demo	https://viding.co/theme/preview/165
+C-WEV-102	wevitation	demo	https://www.wevitation.com/demo/mildness
+C-ENV-103	enviory	demo	https://enviory.com/tema/velora-linear/pratinjau
+C-IDI-103	indoinvite	demo	https://indoinvite.com/preview/contoh-undangan-online-ulang-tahun
+C-IVT-103	invitato	demo	https://invitato.net/template-rdct-db8bbf4542/?code=DUMMY-P0001
+C-VID-103	viding	demo	https://viding.co/theme/preview/72
+C-WEV-103	wevitation	demo	https://www.wevitation.com/demo/visual-journey
+C-ENV-104	enviory	demo	https://enviory.com/tema/velora/pratinjau
+C-IDI-104	indoinvite	demo	https://indoinvite.com/preview/contoh-undangan-online-tahlilan
+C-IVT-104	invitato	demo	https://invitato.net/template-rdct-def02db760/?code=DUMMY-P0001
+C-VID-104	viding	demo	https://studio.viding.co/theme/preview/194
+C-WEV-104	wevitation	demo	https://www.wevitation.com/demo/espresso
+C-ENV-105	enviory	demo	https://enviory.com/tema/aurelia/pratinjau
+C-IDI-105	indoinvite	demo	https://indoinvite.com/preview/contoh-undangan-online-aqiqah
+C-VID-105	viding	demo	https://studio.viding.co/theme/preview/192
+C-WEV-105	wevitation	demo	https://www.wevitation.com/demo/photovit
+C-ENV-106	enviory	demo	https://enviory.com/tema/noctivelle/pratinjau
+C-IDI-106	indoinvite	demo	https://indoinvite.com/preview/contoh-undangan-online-peresmian-kantor
+C-VID-106	viding	demo	https://studio.viding.co/theme/preview/191
+C-WEV-106	wevitation	demo	https://www.wevitation.com/demo/wayang

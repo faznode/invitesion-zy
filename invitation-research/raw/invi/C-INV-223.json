@@ -1,0 +1,692 @@
+{
+ "id": "C-INV-223",
+ "competitor": "invi",
+ "kind": "demo",
+ "url": "https://demo.invi.id/premium/art-royal-garden/?to=Nama%20Tamu",
+ "capturedAt": "2026-11-04T23:38:02.394+07:00",
+ "robots": {
+  "allowed": true,
+  "note": "no matching rule"
+ },
+ "method": "REA capture-browser-scenario (connect mode) drives navigation, settle and keyboard scroll; optional cover click (trusted CDP mouse click on the settled control: coverClickMethod, coverClickLanding) and scroll through the opened page by CDP after REA's scenario; CDP mobile emulation 390x844 @3 + prefers-reduced-motion no-preference, re-applied (clear + set) after REA's scenario + Android Chrome UA, cold cache (no throttling); REA inspect/bundle skipped (lean); custom structure pass (text features + animation libraries: no REA coverage) + layout and motion probes; Lighthouse 12 mobile simulate (Slow 4G, 4x CPU) when present",
+ "measurement": {
+  "protocol": "v2",
+  "profile": "v2-390",
+  "viewport": {
+   "width": 390,
+   "height": 844,
+   "device_scale_factor": 3
+  },
+  "reduced_motion": "no-preference",
+  "method": "protocol v2 (lean): REA scenario + CDP structure / layout / motion probes + Lighthouse; no REA inspect or bundle analysis",
+  "lighthouse_screen": {
+   "width": 390,
+   "height": 844,
+   "deviceScaleFactor": 3,
+   "mobile": true
+  },
+  "lighthouse_motion": "no-preference (default)",
+  "cdp_reapply": "clear + set",
+  "emulation_verified": true,
+  "emulation_mismatches": [],
+  "emulation_final": {
+   "android": true,
+   "screenWidth": 390,
+   "screenHeight": 844,
+   "width": 390,
+   "dpr": 3,
+   "coarsePointer": false,
+   "reducedMotion": false
+  },
+  "emulation_during_scenario": {
+   "ok": false,
+   "mismatches": [
+    "screen.width 800 != 390",
+    "screen.height 600 != 844"
+   ]
+  }
+ },
+ "driver": "rea",
+ "rea": {
+  "version": "6.8.0",
+  "scenario": {
+   "ok": true,
+   "exit": 0,
+   "ms": 22624,
+   "evidenceId": "ev_3df8d13a0ac305308c635ef07fed5e7fcec3925c6ecd536af3d8f399c0816940",
+   "status": "incomplete",
+   "stepsCompleted": 32,
+   "stepsTotal": 32,
+   "failed": [],
+   "events": 450,
+   "error": null,
+   "sha256": "7e60c54b347bdfb2eb4ece97ea102764fa43d5dac020293e4791d5d9cfcfdc35",
+   "file": "_private/rea/C-INV-223/rea-scenario.json"
+  },
+  "emulation": {
+   "duringScenario": {
+    "android": true,
+    "screenWidth": 800,
+    "screenHeight": 600,
+    "width": 390,
+    "dpr": 3,
+    "coarsePointer": false,
+    "reducedMotion": false
+   },
+   "afterScenario": {
+    "android": true,
+    "screenWidth": 800,
+    "screenHeight": 600,
+    "width": 500,
+    "dpr": 1,
+    "coarsePointer": false,
+    "reducedMotion": false
+   }
+  },
+  "inspectEvidenceId": null,
+  "bundleEvidenceId": null,
+  "inspectError": "skipped: lean profile v2-390",
+  "bundleError": "skipped: lean profile v2-390",
+  "domNodes": null,
+  "scripts": null,
+  "resources": null,
+  "completeness": null,
+  "bundleChunks": null,
+  "bundleEndpoints": [],
+  "bundleInferences": []
+ },
+ "network": {
+  "loadEventMs": 6216,
+  "requests": 167,
+  "bytes": 7072947,
+  "byType": {
+   "Document": {
+    "requests": 4,
+    "bytes": 40409
+   },
+   "Stylesheet": {
+    "requests": 54,
+    "bytes": 170509
+   },
+   "Image": {
+    "requests": 34,
+    "bytes": 2406990
+   },
+   "Script": {
+    "requests": 47,
+    "bytes": 787595
+   },
+   "Font": {
+    "requests": 23,
+    "bytes": 757342
+   },
+   "Media": {
+    "requests": 2,
+    "bytes": 2907786
+   },
+   "XHR": {
+    "requests": 1,
+    "bytes": 686
+   },
+   "Fetch": {
+    "requests": 1,
+    "bytes": 0
+   },
+   "Other": {
+    "requests": 1,
+    "bytes": 1630
+   }
+  },
+  "protocols": [
+   "h3",
+   "h2",
+   "data"
+  ],
+  "scriptHosts": [
+   "demo.invi.id",
+   "unpkg.com",
+   "www.googletagmanager.com",
+   "cdnjs.cloudflare.com",
+   "",
+   "www.youtube.com"
+  ],
+  "scriptFiles": [
+   "jquery.min.js",
+   "saic_lib.js",
+   "jquery-migrate.min.js",
+   "invi.js",
+   "wds-rsvp.js",
+   "qr-code.js",
+   "wdp-swiper.min.js",
+   "exad-scripts.min.js",
+   "jquery.jPages.min.js",
+   "jquery.sticky.min.js",
+   "main.js",
+   "autosize.min.js",
+   "cui_script.js",
+   "jquery.placeholder.min.js",
+   "core.min.js",
+   "i18n.min.js",
+   "frontend-modules.min.js",
+   "e-gallery.min.js",
+   "webpack-pro.runtime.min.js",
+   "jquery.textareaCounter.js",
+   "swiper.min.js",
+   "qr-code-styling.js",
+   "webpack.runtime.min.js",
+   "frontend.min.js",
+   "wdp.min.js",
+   "comment-reply.min.js",
+   "frontend.min.js",
+   "hooks.min.js",
+   "elements-handlers.min.js",
+   "jet-elements.min.js",
+   "bdt-uikit.js",
+   "guest-form.js",
+   "js",
+   "xlsx.full.min.js",
+   "javascript;base64,ZG9jdW1lbnQuYWRkRXZlbnRMaXN0ZW5lcigiRE9NQ29udGVudExv",
+   "javascript;base64,ZnVuY3Rpb24gcmV2ZWFsRWxlbWVudHMoc2VsZWN0b3IpIHsKICB2",
+   "641.41d6784859f93ced2969.js",
+   "lightbox.f3fa607b705962362647.bundle.min.js",
+   "dialog.min.js",
+   "video.4343afefd25b5ede51a4.bundle.min.js"
+  ],
+  "fontFiles": [
+   {
+    "host": "fonts.gstatic.com",
+    "file": "6xKpdSJbL9-e9LuoeQiDRQR8WOXaOqTimDc.woff2",
+    "bytes": 28101
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "or38Q6P12-iJxAIgLa78DkrbXsDgk0oVDaDlbJ5W7i5aOg.woff2",
+    "bytes": 52754
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "5DCXAKLhwDDQ4N8bpKPUAk6t1Sc.woff2",
+    "bytes": 10663
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "esDQ311QOP6BJUr4zfKBv70OEg.woff2",
+    "bytes": 16059
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "7cHrv4c3ipenMKlEavs7wH8Dnzcj.woff2",
+    "bytes": 15911
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "esDT311QOP6BJUrwdteUkp8DOJKuGA.woff2",
+    "bytes": 16557
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "0QIvMX1D_JOuMwr7I_FMl_E.woff2",
+    "bytes": 37824
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "0QIhMX1D_JOuMw_LIftLtfOm8w.woff2",
+    "bytes": 40680
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "PbytFmztEwbIoce9zqYzQ1OW.woff2",
+    "bytes": 33372
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS-mu0SC55I.woff2",
+    "bytes": 42996
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "pxiByp8kv8JHgFVrLGT9Z1xlFd2JQEk.woff2",
+    "bytes": 7767
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "pxiEyp8kv8JHgFVrJJfecnFHGPc.woff2",
+    "bytes": 7931
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "pe0TMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp7t1R-tQ",
+    "bytes": 30983
+   },
+   {
+    "host": "demo.invi.id",
+    "file": "fa-regular-400.woff2",
+    "bytes": 13825
+   },
+   {
+    "host": "demo.invi.id",
+    "file": "fa-solid-900.woff2",
+    "bytes": 78764
+   },
+   {
+    "host": "demo.invi.id",
+    "file": "fa-brands-400.woff2",
+    "bytes": 82183
+   },
+   {
+    "host": "demo.invi.id",
+    "file": "Iskry-Regular.woff",
+    "bytes": 117076
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "S6uyw4BMUTPHjx4wXiWtFCc.woff2",
+    "bytes": 14015
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "2sDcZGJYnIjSi6H75xkzaGW5Kb8VZA.woff2",
+    "bytes": 22093
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "VuJrdM3I2Y35poFONtLdafkUCHw1y1vShDXGe9ny.woff2",
+    "bytes": 23037
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "VuJudM3I2Y35poFONtLdafkUCHw1y1N5piDrWdTYR-zR.woff2",
+    "bytes": 22813
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBHMdazQ.woff2",
+    "bytes": 37560
+   },
+   {
+    "host": "demo.invi.id",
+    "file": "cuifont.ttf",
+    "bytes": 4378
+   }
+  ],
+  "thirdPartyHosts": [
+   "i0.wp.com",
+   "fonts.googleapis.com",
+   "fonts.gstatic.com",
+   "unpkg.com",
+   "www.googletagmanager.com",
+   "cdnjs.cloudflare.com",
+   "",
+   "file.invi.id",
+   "www.youtube.com",
+   "www.google-analytics.com",
+   "www.google.com"
+  ]
+ },
+ "structure": {
+  "coverClicked": "BUKA UNDANGAN",
+  "coverClickMethod": "trusted",
+  "coverClickLanding": "inside",
+  "beforeOpen": {
+   "sectionCount": 1,
+   "features": {
+    "coverGate": true,
+    "toGuest": true,
+    "countdown": true,
+    "rsvp": true,
+    "wishes": true,
+    "gift": true,
+    "copyButton": true,
+    "maps": true,
+    "calendar": true,
+    "livestream": true,
+    "qr": false,
+    "loveStory": true,
+    "gallery": true,
+    "dressCode": false,
+    "quranVerse": true,
+    "protocol": false,
+    "timezoneLabel": [
+     "WIB"
+    ],
+    "watermark": false,
+    "instagramFilter": false,
+    "musicControl": true
+   },
+   "buttons": [
+    "BUKA UNDANGAN",
+    "Google Maps",
+    "Simpan di Kalender",
+    "Live Streaming",
+    "Jl. Raden Wijaya, Kedung Solo, Kec. Porong, Kab. Sidoarjo Sa",
+    "Salin",
+    "123456 Copy No. Rekening",
+    "Copy No. Rekening",
+    "Konfirmasi Hadiah"
+   ],
+   "motion": {
+    "reducedMotionMatches": false,
+    "animations": 1,
+    "running": 1,
+    "runningCssAnimations": 1,
+    "runningCssTransitions": 0,
+    "runningWebAnimations": 0,
+    "runningInfinite": 1,
+    "gsapActiveTweens": null,
+    "playingVideos": 0
+   }
+  },
+  "afterOpen": {
+   "title": "Art Royal Garden - Tema Invi",
+   "lang": "id",
+   "generator": "WordPress 7.1.4",
+   "viewport": "width=device-width, initial-scale=1.0, viewport-fit=cover",
+   "og": {
+    "image": true,
+    "title": true,
+    "description": true
+   },
+   "reducedMotionCss": true,
+   "libs": {
+    "gsap": false,
+    "scrollTrigger": false,
+    "aos": false,
+    "animateCss": false,
+    "wow": false,
+    "swiper": true,
+    "slick": false,
+    "owl": false,
+    "lottie": false,
+    "three": false,
+    "pixi": false,
+    "anime": false,
+    "motionOne": false,
+    "howler": false,
+    "jquery": true,
+    "bootstrap": false,
+    "tailwind": false,
+    "alpine": false,
+    "vue": false,
+    "nuxt": false,
+    "next": false,
+    "react": false,
+    "svelte": false,
+    "flutterWeb": false,
+    "wordpress": true,
+    "elementor": true,
+    "livewire": false,
+    "inertia": false
+   },
+   "sections": [
+    {
+     "tag": "section",
+     "id": "",
+     "cls": "elementor-section elementor-top-section elementor-element elementor-element-3633",
+     "heading": "The Wedding Of",
+     "h": 11667
+    }
+   ],
+   "sectionCount": 1,
+   "buttons": [
+    "BUKA UNDANGAN",
+    "Google Maps",
+    "Simpan di Kalender",
+    "Live Streaming",
+    "Jl. Raden Wijaya, Kedung Solo, Kec. Porong, Kab. Sidoarjo Sa",
+    "Salin",
+    "123456 Copy No. Rekening",
+    "Copy No. Rekening",
+    "Konfirmasi Hadiah"
+   ],
+   "media": {
+    "audio": [
+     {
+      "autoplay": false,
+      "loop": false,
+      "type": ""
+     },
+     {
+      "autoplay": false,
+      "loop": false,
+      "type": "mp3"
+     }
+    ],
+    "video": 0,
+    "iframes": [
+     "maps.google.com",
+     "maps.google.com",
+     "www.youtube.com"
+    ],
+    "canvases": 0,
+    "svgs": 3,
+    "images": 18,
+    "lazyImages": 11
+   },
+   "forms": [
+    {
+     "fields": [
+      "text",
+      "textarea",
+      "select-one",
+      "text",
+      "text",
+      "text",
+      "button",
+      "submit",
+      "hidden",
+      "hidden",
+      "hidden"
+     ],
+     "hasRadio": false,
+     "hasSelect": true
+    }
+   ],
+   "fontsUsed": [
+    "iskry-regular",
+    "Alata",
+    "Assistant",
+    "Caudex",
+    "Cormorant Upright",
+    "Lato",
+    "Lora",
+    "Nunito Sans",
+    "Open Sans",
+    "Pinyon Script",
+    "Poppins",
+    "Roboto",
+    "Vidaloka",
+    "Font Awesome 5 Free",
+    "Font Awesome 5 Brands"
+   ],
+   "features": {
+    "coverGate": false,
+    "toGuest": true,
+    "countdown": true,
+    "rsvp": true,
+    "wishes": true,
+    "gift": true,
+    "copyButton": true,
+    "maps": true,
+    "calendar": true,
+    "livestream": true,
+    "qr": false,
+    "loveStory": true,
+    "gallery": true,
+    "dressCode": false,
+    "quranVerse": true,
+    "protocol": false,
+    "timezoneLabel": [
+     "WIB"
+    ],
+    "watermark": false,
+    "instagramFilter": false,
+    "musicControl": true
+   },
+   "domNodes": 951,
+   "docHeight": 11667,
+   "layout": {
+    "innerWidth": 390,
+    "scrollWidth": 390,
+    "horizontalOverflowPx": 0,
+    "overflowingElements": 0,
+    "smallTextElements": 8,
+    "interactiveTargets": 15,
+    "smallTargets": 4,
+    "viewportMeta": "width=device-width, initial-scale=1.0, viewport-fit=cover",
+    "zoomBlocked": false
+   },
+   "motion": {
+    "reducedMotionMatches": false,
+    "animations": 18,
+    "running": 18,
+    "runningCssAnimations": 1,
+    "runningCssTransitions": 17,
+    "runningWebAnimations": 0,
+    "runningInfinite": 1,
+    "gsapActiveTweens": null,
+    "playingVideos": 0
+   }
+  }
+ },
+ "lighthouse": {
+  "ok": true,
+  "lighthouseVersion": "12.8.2",
+  "finalUrl": "https://demo.invi.id/premium/art-royal-garden/?to=Nama%20Tamu",
+  "throttling": {
+   "rttMs": 150,
+   "throughputKbps": 1638.4,
+   "requestLatencyMs": 562.5,
+   "downloadThroughputKbps": 1474.5600000000002,
+   "uploadThroughputKbps": 675,
+   "cpuSlowdownMultiplier": 4
+  },
+  "screen": {
+   "mobile": true,
+   "width": 390,
+   "height": 844,
+   "deviceScaleFactor": 3,
+   "disabled": false
+  },
+  "scores": {
+   "performance": 10,
+   "accessibility": 81,
+   "best-practices": 93,
+   "seo": 66
+  },
+  "metrics": {
+   "fcpMs": 3985.691999999999,
+   "lcpMs": 18006.992750000005,
+   "tbtMs": 1657.4999999999982,
+   "cls": 1.0034362514670043,
+   "siMs": 6202.147892304304,
+   "ttiMs": 19007.512025000004
+  },
+  "byType": {
+   "total": {
+    "requests": 166,
+    "bytes": 4705029
+   },
+   "script": {
+    "requests": 61,
+    "bytes": 2146107
+   },
+   "image": {
+    "requests": 12,
+    "bytes": 1410659
+   },
+   "font": {
+    "requests": 24,
+    "bytes": 791994
+   },
+   "stylesheet": {
+    "requests": 53,
+    "bytes": 231837
+   },
+   "document": {
+    "requests": 3,
+    "bytes": 116727
+   },
+   "other": {
+    "requests": 12,
+    "bytes": 7252
+   },
+   "media": {
+    "requests": 1,
+    "bytes": 453
+   },
+   "third-party": {
+    "requests": 64,
+    "bytes": 2581749
+   }
+  },
+  "totalBytes": 4705029,
+  "requests": 166,
+  "thirdParties": [
+   {
+    "entity": "Cloudflare CDN",
+    "bytes": 216321,
+    "blockingMs": 775.6839239826332
+   },
+   {
+    "entity": "Google Tag Manager",
+    "bytes": 181418,
+    "blockingMs": 729.0000000000015
+   },
+   {
+    "entity": "Unpkg",
+    "bytes": 16281,
+    "blockingMs": 12.449093444909344
+   },
+   {
+    "entity": "Other Google APIs/SDKs",
+    "bytes": 26162,
+    "blockingMs": 1.23780287763078
+   },
+   {
+    "entity": "YouTube",
+    "bytes": 1039003,
+    "blockingMs": 0
+   },
+   {
+    "entity": "Google Fonts",
+    "bytes": 506255,
+    "blockingMs": 0
+   },
+   {
+    "entity": "Google Maps",
+    "bytes": 472050,
+    "blockingMs": 0
+   },
+   {
+    "entity": "WordPress",
+    "bytes": 123048,
+    "blockingMs": 0
+   },
+   {
+    "entity": "Google/Doubleclick Ads",
+    "bytes": 664,
+    "blockingMs": 0
+   },
+   {
+    "entity": "Google Analytics",
+    "bytes": 547,
+    "blockingMs": 0
+   }
+  ],
+  "fontDisplayIssues": 2,
+  "unusedJsBytes": 317520,
+  "a11yFailures": [
+   "heading-order",
+   "link-name",
+   "list",
+   "meta-viewport",
+   "select-name",
+   "skip-link"
+  ]
+ },
+ "files": {
+  "_private/rea/C-INV-223/rea-scenario.json": "7e60c54b347bdfb2eb4ece97ea102764fa43d5dac020293e4791d5d9cfcfdc35",
+  "_private/lh/C-INV-223.json": "9217120b916ac10eacdd97f57cf9775d37a3e11dbbbe78ee768ba4d854eb4784"
+ },
+ "screenshot": "_private/thumbs (competitor, not committed)"
+}

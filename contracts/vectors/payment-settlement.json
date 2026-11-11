@@ -1,0 +1,212 @@
+{
+  "description": "B-039 (09 §8.6, s39): what one settlement event does, as data. Each case names an order and an invitation from the fixtures (or null) and gives the event; `recorded` is false when the event row conflicted on UNIQUE (rail, event_id). `invitation` is the row the writer reads under its lock with deleted_at IS NULL, so null means none, deleted or purged (B-031, D-063). Times are UTC wall time as stored; `paidAt` defaults to the file's value. `expect.outcome` is duplicate | unknown_order | rail_mismatch | already_final | closed (with `status`) | amount_unverifiable | amount_mismatch | paid (with `activation`: activated with publishedAt and expiresAt, no_invitation, not_live, already_published, theme_mismatch). Twelve months from 29 February clamp to 28 February (lib/invitation/publish-rules.ts addMonths under the deployment's UTC). No writer sets an invitation's status to EXPIRED (expiry is read from expires_at); a row carrying it is treated as any unpublished row, as the Next.js writer always has, and that case pins it. Expected values were derived by hand from the rules and confirmed against the TypeScript; tests/payment-settlement.test.ts and services/api/tests/payment_vectors.rs run this file.",
+  "paidAt": "2026-11-10T03:00:00.000Z",
+  "orders": {
+    "qrisPending": { "status": "PENDING", "rail": "qris", "amount": 149000, "currency": "IDR", "invitationId": 11, "templateId": 3 },
+    "qrisPendingLegacy": { "status": "PENDING", "rail": "qris", "amount": 149000, "currency": "IDR", "invitationId": 11, "templateId": null },
+    "qrisPendingNoInvitation": { "status": "PENDING", "rail": "qris", "amount": 149000, "currency": "IDR", "invitationId": null, "templateId": null },
+    "qrisPendingOddCurrency": { "status": "PENDING", "rail": "qris", "amount": 149000, "currency": "XXX", "invitationId": 11, "templateId": 3 },
+    "qrisPaid": { "status": "PAID", "rail": "qris", "amount": 149000, "currency": "IDR", "invitationId": 11, "templateId": 3 },
+    "qrisExpired": { "status": "EXPIRED", "rail": "qris", "amount": 149000, "currency": "IDR", "invitationId": 11, "templateId": 3 },
+    "qrisFailed": { "status": "FAILED", "rail": "qris", "amount": 149000, "currency": "IDR", "invitationId": 11, "templateId": 3 },
+    "stripePending": { "status": "PENDING", "rail": "stripe", "amount": 1900, "currency": "USD", "invitationId": 12, "templateId": 5 }
+  },
+  "invitations": {
+    "draft": { "status": "DRAFT", "templateId": 3, "publishedAt": null, "expiresAt": null },
+    "draftOtherTheme": { "status": "DRAFT", "templateId": 4, "publishedAt": null, "expiresAt": null },
+    "draftNoTheme": { "status": "DRAFT", "templateId": null, "publishedAt": null, "expiresAt": null },
+    "published": { "status": "PUBLISHED", "templateId": 3, "publishedAt": "2026-06-01T00:00:00.000Z", "expiresAt": "2027-06-01T00:00:00.000Z" },
+    "unpublishedWithWindow": { "status": "DRAFT", "templateId": 3, "publishedAt": "2026-06-01T00:00:00.000Z", "expiresAt": "2027-06-01T00:00:00.000Z" },
+    "unpublishedNoExpiry": { "status": "DRAFT", "templateId": 3, "publishedAt": "2026-06-01T08:30:00.000Z", "expiresAt": null },
+    "expiredStatus": { "status": "EXPIRED", "templateId": 3, "publishedAt": "2025-01-10T00:00:00.000Z", "expiresAt": "2026-01-10T00:00:00.000Z" },
+    "stripeDraft": { "status": "DRAFT", "templateId": 5, "publishedAt": null, "expiresAt": null }
+  },
+  "cases": [
+    {
+      "name": "a new PAID event activates a draft on the theme the order bought, for twelve months",
+      "recorded": true, "order": "qrisPending", "invitation": "draft",
+      "event": { "rail": "qris", "status": "PAID", "paid": { "amount": 149000, "currency": "IDR" } },
+      "expect": { "outcome": "paid", "activation": { "kind": "activated", "publishedAt": "2026-11-10T03:00:00.000Z", "expiresAt": "2027-11-10T03:00:00.000Z" } }
+    },
+    {
+      "name": "a duplicate delivery is a no-op",
+      "recorded": false, "order": "qrisPending", "invitation": "draft",
+      "event": { "rail": "qris", "status": "PAID", "paid": { "amount": 149000, "currency": "IDR" } },
+      "expect": { "outcome": "duplicate" }
+    },
+    {
+      "name": "a duplicate is answered before the order is looked at",
+      "recorded": false, "order": null, "invitation": null,
+      "event": { "rail": "stripe", "status": "PAID", "paid": { "amount": 1, "currency": "USD" } },
+      "expect": { "outcome": "duplicate" }
+    },
+    {
+      "name": "an unknown reference is refused",
+      "recorded": true, "order": null, "invitation": null,
+      "event": { "rail": "qris", "status": "PAID", "paid": { "amount": 149000, "currency": "IDR" } },
+      "expect": { "outcome": "unknown_order" }
+    },
+    {
+      "name": "an event of another rail never touches the order",
+      "recorded": true, "order": "qrisPending", "invitation": "draft",
+      "event": { "rail": "stripe", "status": "PAID", "paid": { "amount": 149000, "currency": "IDR" } },
+      "expect": { "outcome": "rail_mismatch" }
+    },
+    {
+      "name": "an event of another rail is refused on a final order too",
+      "recorded": true, "order": "qrisPaid", "invitation": "published",
+      "event": { "rail": "stripe", "status": "FAILED", "paid": null },
+      "expect": { "outcome": "rail_mismatch" }
+    },
+    {
+      "name": "a different PAID event on a paid order is kept and changes nothing",
+      "recorded": true, "order": "qrisPaid", "invitation": "published",
+      "event": { "rail": "qris", "status": "PAID", "paid": { "amount": 149000, "currency": "IDR" } },
+      "expect": { "outcome": "already_final" }
+    },
+    {
+      "name": "a FAILED event on a paid order changes nothing",
+      "recorded": true, "order": "qrisPaid", "invitation": "published",
+      "event": { "rail": "qris", "status": "FAILED", "paid": null },
+      "expect": { "outcome": "already_final" }
+    },
+    {
+      "name": "a PAID event on an expired order changes nothing (a person reconciles it)",
+      "recorded": true, "order": "qrisExpired", "invitation": "draft",
+      "event": { "rail": "qris", "status": "PAID", "paid": { "amount": 149000, "currency": "IDR" } },
+      "expect": { "outcome": "already_final" }
+    },
+    {
+      "name": "a PAID event on a failed order changes nothing",
+      "recorded": true, "order": "qrisFailed", "invitation": "draft",
+      "event": { "rail": "qris", "status": "PAID", "paid": { "amount": 149000, "currency": "IDR" } },
+      "expect": { "outcome": "already_final" }
+    },
+    {
+      "name": "FAILED closes a pending order",
+      "recorded": true, "order": "qrisPending", "invitation": "draft",
+      "event": { "rail": "qris", "status": "FAILED", "paid": null },
+      "expect": { "outcome": "closed", "status": "FAILED" }
+    },
+    {
+      "name": "EXPIRED closes a pending order whatever amount it reports",
+      "recorded": true, "order": "stripePending", "invitation": "stripeDraft",
+      "event": { "rail": "stripe", "status": "EXPIRED", "paid": { "amount": 1, "currency": "USD" } },
+      "expect": { "outcome": "closed", "status": "EXPIRED" }
+    },
+    {
+      "name": "PAID without an amount is refused and the order stays pending",
+      "recorded": true, "order": "qrisPending", "invitation": "draft",
+      "event": { "rail": "qris", "status": "PAID", "paid": null },
+      "expect": { "outcome": "amount_unverifiable" }
+    },
+    {
+      "name": "an underpayment is refused",
+      "recorded": true, "order": "qrisPending", "invitation": "draft",
+      "event": { "rail": "qris", "status": "PAID", "paid": { "amount": 148999, "currency": "IDR" } },
+      "expect": { "outcome": "amount_mismatch" }
+    },
+    {
+      "name": "an overpayment is refused",
+      "recorded": true, "order": "qrisPending", "invitation": "draft",
+      "event": { "rail": "qris", "status": "PAID", "paid": { "amount": 149001, "currency": "IDR" } },
+      "expect": { "outcome": "amount_mismatch" }
+    },
+    {
+      "name": "the right number in another currency is refused",
+      "recorded": true, "order": "qrisPending", "invitation": "draft",
+      "event": { "rail": "qris", "status": "PAID", "paid": { "amount": 149000, "currency": "USD" } },
+      "expect": { "outcome": "amount_mismatch" }
+    },
+    {
+      "name": "a currency we do not support is refused",
+      "recorded": true, "order": "qrisPending", "invitation": "draft",
+      "event": { "rail": "qris", "status": "PAID", "paid": { "amount": 149000, "currency": "EUR" } },
+      "expect": { "outcome": "amount_mismatch" }
+    },
+    {
+      "name": "a Stripe order paid in rupiah is refused",
+      "recorded": true, "order": "stripePending", "invitation": "stripeDraft",
+      "event": { "rail": "stripe", "status": "PAID", "paid": { "amount": 1900, "currency": "IDR" } },
+      "expect": { "outcome": "amount_mismatch" }
+    },
+    {
+      "name": "a stored currency we no longer support reads as IDR",
+      "recorded": true, "order": "qrisPendingOddCurrency", "invitation": "draft",
+      "event": { "rail": "qris", "status": "PAID", "paid": { "amount": 149000, "currency": "IDR" } },
+      "expect": { "outcome": "paid", "activation": { "kind": "activated", "publishedAt": "2026-11-10T03:00:00.000Z", "expiresAt": "2027-11-10T03:00:00.000Z" } }
+    },
+    {
+      "name": "a deleted or purged invitation records the money and is not activated",
+      "recorded": true, "order": "qrisPending", "invitation": null,
+      "event": { "rail": "qris", "status": "PAID", "paid": { "amount": 149000, "currency": "IDR" } },
+      "expect": { "outcome": "paid", "activation": { "kind": "not_live" } }
+    },
+    {
+      "name": "an order without an invitation is paid with nothing to activate",
+      "recorded": true, "order": "qrisPendingNoInvitation", "invitation": null,
+      "event": { "rail": "qris", "status": "PAID", "paid": { "amount": 149000, "currency": "IDR" } },
+      "expect": { "outcome": "paid", "activation": { "kind": "no_invitation" } }
+    },
+    {
+      "name": "a published invitation keeps its running window",
+      "recorded": true, "order": "qrisPending", "invitation": "published",
+      "event": { "rail": "qris", "status": "PAID", "paid": { "amount": 149000, "currency": "IDR" } },
+      "expect": { "outcome": "paid", "activation": { "kind": "already_published" } }
+    },
+    {
+      "name": "a theme switched while the charge was in flight is not published for free",
+      "recorded": true, "order": "qrisPending", "invitation": "draftOtherTheme",
+      "event": { "rail": "qris", "status": "PAID", "paid": { "amount": 149000, "currency": "IDR" } },
+      "expect": { "outcome": "paid", "activation": { "kind": "theme_mismatch" } }
+    },
+    {
+      "name": "a legacy order without a theme activates whatever theme the invitation shows",
+      "recorded": true, "order": "qrisPendingLegacy", "invitation": "draftOtherTheme",
+      "event": { "rail": "qris", "status": "PAID", "paid": { "amount": 149000, "currency": "IDR" } },
+      "expect": { "outcome": "paid", "activation": { "kind": "activated", "publishedAt": "2026-11-10T03:00:00.000Z", "expiresAt": "2027-11-10T03:00:00.000Z" } }
+    },
+    {
+      "name": "an invitation without a theme activates",
+      "recorded": true, "order": "qrisPending", "invitation": "draftNoTheme",
+      "event": { "rail": "qris", "status": "PAID", "paid": { "amount": 149000, "currency": "IDR" } },
+      "expect": { "outcome": "paid", "activation": { "kind": "activated", "publishedAt": "2026-11-10T03:00:00.000Z", "expiresAt": "2027-11-10T03:00:00.000Z" } }
+    },
+    {
+      "name": "an unpublished invitation keeps the window it already had",
+      "recorded": true, "order": "qrisPending", "invitation": "unpublishedWithWindow",
+      "event": { "rail": "qris", "status": "PAID", "paid": { "amount": 149000, "currency": "IDR" } },
+      "expect": { "outcome": "paid", "activation": { "kind": "activated", "publishedAt": "2026-06-01T00:00:00.000Z", "expiresAt": "2027-06-01T00:00:00.000Z" } }
+    },
+    {
+      "name": "an unpublished invitation with a start and no end gets twelve months from its start",
+      "recorded": true, "order": "qrisPending", "invitation": "unpublishedNoExpiry",
+      "event": { "rail": "qris", "status": "PAID", "paid": { "amount": 149000, "currency": "IDR" } },
+      "expect": { "outcome": "paid", "activation": { "kind": "activated", "publishedAt": "2026-06-01T08:30:00.000Z", "expiresAt": "2027-06-01T08:30:00.000Z" } }
+    },
+    {
+      "name": "twelve months from 29 February clamp to 28 February",
+      "recorded": true, "order": "qrisPending", "invitation": "draft", "paidAt": "2028-02-29T10:15:30.000Z",
+      "event": { "rail": "qris", "status": "PAID", "paid": { "amount": 149000, "currency": "IDR" } },
+      "expect": { "outcome": "paid", "activation": { "kind": "activated", "publishedAt": "2028-02-29T10:15:30.000Z", "expiresAt": "2029-02-28T10:15:30.000Z" } }
+    },
+    {
+      "name": "the last moment of 31 January keeps its day and time",
+      "recorded": true, "order": "qrisPending", "invitation": "draft", "paidAt": "2026-01-31T23:59:59.999Z",
+      "event": { "rail": "qris", "status": "PAID", "paid": { "amount": 149000, "currency": "IDR" } },
+      "expect": { "outcome": "paid", "activation": { "kind": "activated", "publishedAt": "2026-01-31T23:59:59.999Z", "expiresAt": "2027-01-31T23:59:59.999Z" } }
+    },
+    {
+      "name": "a row carrying the unused EXPIRED status is treated as unpublished, its window kept",
+      "recorded": true, "order": "qrisPending", "invitation": "expiredStatus",
+      "event": { "rail": "qris", "status": "PAID", "paid": { "amount": 149000, "currency": "IDR" } },
+      "expect": { "outcome": "paid", "activation": { "kind": "activated", "publishedAt": "2025-01-10T00:00:00.000Z", "expiresAt": "2026-01-10T00:00:00.000Z" } }
+    },
+    {
+      "name": "a Stripe payment in cents activates its draft",
+      "recorded": true, "order": "stripePending", "invitation": "stripeDraft",
+      "event": { "rail": "stripe", "status": "PAID", "paid": { "amount": 1900, "currency": "USD" } },
+      "expect": { "outcome": "paid", "activation": { "kind": "activated", "publishedAt": "2026-11-10T03:00:00.000Z", "expiresAt": "2027-11-10T03:00:00.000Z" } }
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "update guests set opened_at = $1, opened_count = opened_count + 1 where id = $2",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Left": [
+        "Timestamp",
+        "Int4"
+      ]
+    },
+    "nullable": []
+  },
+  "hash": "bad06700586a12bd2958d549591290aef191d49aa12d834b99eccc2484a93da0"
+}

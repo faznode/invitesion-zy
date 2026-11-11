@@ -1,0 +1,28 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "select slug from guests where invitation_id = $1",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "slug",
+        "type_info": "Varchar",
+        "origin": {
+          "Table": {
+            "table": "guests",
+            "name": "slug"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Left": [
+        "Int4"
+      ]
+    },
+    "nullable": [
+      false
+    ]
+  },
+  "hash": "9a1287c5c71b361537c45ef35dffbd5d3cd79dd9e42deb64927be2961d19d5c0"
+}

@@ -1,0 +1,3039 @@
+{
+ "description": "R-03: the whole RSVP write decision as data. `read` pins the lenient read of the sections RSVP uses (rsvp, events with durable ids, registrationForm; zod 3.24.4 semantics: JavaScript trim, UTF-16 lengths, WHATWG URLs, the datetime pattern), projected to what the rules need. `guest` runs lib/invitation/rsvp-decision.ts decideGuestRsvp on the stored config after the lenient read (a write without `rsvpAnswers` / `rsvpEventAnswers` leaves that column untouched; null clears it). `host` runs decideHostRsvp. Expected values were derived by hand from the rules and confirmed against the TypeScript at 87e14dc + R-03; tests/rsvp-decisions.test.ts and services/api/tests/rsvp_vectors.rs run this file.",
+ "defaults": {
+  "now": "2026-11-06T10:00:00Z",
+  "flags": {
+   "maybe": true,
+   "perEvent": true,
+   "inviteOnlyEvents": true,
+   "questions": true
+  },
+  "guest": {
+   "guestCount": 4,
+   "invitedEventIds": null,
+   "rsvpEventAnswers": null
+  },
+  "hostGuest": {
+   "invitedEventIds": null,
+   "rsvpEventAnswers": null,
+   "rsvpStatus": "PENDING",
+   "attendingCount": null
+  }
+ },
+ "configs": {
+  "plain": {
+   "rsvp": {
+    "enabled": true
+   }
+  },
+  "empty": {},
+  "disabled": {
+   "rsvp": {
+    "enabled": false
+   }
+  },
+  "deadline": {
+   "rsvp": {
+    "deadline": "2026-11-06T17:00:00+07:00"
+   }
+  },
+  "deadlineShort": {
+   "rsvp": {
+    "deadline": "2026-11-06T17:00+0700"
+   }
+  },
+  "deadlineFraction": {
+   "rsvp": {
+    "deadline": "2026-11-06T10:00:00.9999Z"
+   }
+  },
+  "deadlineBadOffset": {
+   "rsvp": {
+    "enabled": true,
+    "deadline": "2026-11-06T09:00:00+24:00"
+   }
+  },
+  "disabledBadDeadline": {
+   "rsvp": {
+    "enabled": false,
+    "deadline": "6 November 2026"
+   }
+  },
+  "twoEvents": {
+   "rsvp": {
+    "perEvent": true
+   },
+   "events": [
+    {
+     "id": "akad",
+     "title": "Akad"
+    },
+    {
+     "id": "resepsi",
+     "title": "Resepsi"
+    }
+   ]
+  },
+  "twoEventsNoSwitch": {
+   "events": [
+    {
+     "id": "akad",
+     "title": "Akad"
+    },
+    {
+     "id": "resepsi",
+     "title": "Resepsi"
+    }
+   ]
+  },
+  "legacyEvents": {
+   "rsvp": {
+    "perEvent": true
+   },
+   "events": [
+    {
+     "title": "Akad"
+    },
+    {
+     "title": "Resepsi"
+    }
+   ]
+  },
+  "badMapUrl": {
+   "rsvp": {
+    "perEvent": true
+   },
+   "events": [
+    {
+     "id": "akad",
+     "title": "Akad",
+     "mapUrl": "maps akad"
+    },
+    {
+     "id": "resepsi",
+     "title": "Resepsi"
+    }
+   ]
+  },
+  "inviteOnly": {
+   "rsvp": {
+    "perEvent": true
+   },
+   "events": [
+    {
+     "id": "akad",
+     "title": "Akad"
+    },
+    {
+     "id": "resepsi",
+     "title": "Resepsi",
+     "inviteOnly": true
+    },
+    {
+     "id": "after",
+     "title": "After party",
+     "inviteOnly": true
+    }
+   ]
+  },
+  "questions": {
+   "registrationForm": {
+    "enabled": true,
+    "customQuestions": [
+     {
+      "id": "diet",
+      "label": "Pilihan menu",
+      "type": "select",
+      "options": [
+       "Biasa",
+       "Vegetarian"
+      ],
+      "required": true
+     },
+     {
+      "id": "allergy",
+      "label": "Alergi",
+      "type": "text",
+      "required": true,
+      "conditional": {
+       "questionId": "diet",
+       "equals": "Vegetarian"
+      }
+     },
+     {
+      "id": "songs",
+      "label": "Lagu",
+      "type": "multiselect",
+      "options": [
+       "A",
+       "B",
+       "C"
+      ]
+     },
+     {
+      "id": "kids",
+      "label": "Anak",
+      "type": "number"
+     },
+     {
+      "id": "note",
+      "label": "Catatan",
+      "type": "textarea"
+     }
+    ]
+   }
+  },
+  "questionsBroken": {
+   "registrationForm": {
+    "enabled": true,
+    "customQuestions": [
+     {
+      "id": "menu",
+      "label": "Menu",
+      "type": "radio",
+      "options": [
+       "A",
+       "B"
+      ],
+      "required": true
+     },
+     {
+      "id": "menu",
+      "label": "Duplikat",
+      "type": "text"
+     },
+     {
+      "id": "extra",
+      "label": "X",
+      "type": "text",
+      "hint": "an unknown key makes this question unreadable"
+     },
+     {
+      "id": "ghost",
+      "label": "Ghost",
+      "type": "text",
+      "required": true,
+      "conditional": {
+       "questionId": "missing",
+       "equals": "y"
+      }
+     },
+     {
+      "id": " spaced ",
+      "label": " Spasi ",
+      "type": "text"
+     }
+    ]
+   }
+  },
+  "questionsUnknownKey": {
+   "registrationForm": {
+    "enabled": true,
+    "theme": "x",
+    "customQuestions": [
+     {
+      "id": "diet",
+      "label": "Menu",
+      "type": "text",
+      "required": true
+     }
+    ]
+   }
+  },
+  "eventsAndQuestions": {
+   "rsvp": {
+    "perEvent": true
+   },
+   "events": [
+    {
+     "id": "akad",
+     "title": "Akad"
+    },
+    {
+     "id": "resepsi",
+     "title": "Resepsi"
+    }
+   ],
+   "registrationForm": {
+    "enabled": true,
+    "customQuestions": [
+     {
+      "id": "plus",
+      "label": "Nama pendamping",
+      "type": "text",
+      "required": true
+     }
+    ]
+   }
+  },
+  "questionsOff": {
+   "registrationForm": {
+    "enabled": false,
+    "customQuestions": [
+     {
+      "id": "diet",
+      "label": "Pilihan menu",
+      "type": "select",
+      "options": [
+       "Biasa",
+       "Vegetarian"
+      ],
+      "required": true
+     },
+     {
+      "id": "allergy",
+      "label": "Alergi",
+      "type": "text",
+      "required": true,
+      "conditional": {
+       "questionId": "diet",
+       "equals": "Vegetarian"
+      }
+     },
+     {
+      "id": "songs",
+      "label": "Lagu",
+      "type": "multiselect",
+      "options": [
+       "A",
+       "B",
+       "C"
+      ]
+     },
+     {
+      "id": "kids",
+      "label": "Anak",
+      "type": "number"
+     },
+     {
+      "id": "note",
+      "label": "Catatan",
+      "type": "textarea"
+     }
+    ]
+   }
+  }
+ },
+ "read": [
+  {
+   "name": "null is no config",
+   "config": null,
+   "expect": {
+    "rsvp": null,
+    "events": null,
+    "form": null
+   }
+  },
+  {
+   "name": "an array is no config",
+   "config": [],
+   "expect": {
+    "rsvp": null,
+    "events": null,
+    "form": null
+   }
+  },
+  {
+   "name": "an empty config",
+   "config": {},
+   "expect": {
+    "rsvp": null,
+    "events": null,
+    "form": null
+   }
+  },
+  {
+   "name": "rsvp: a non-boolean switch drops the section",
+   "config": {
+    "rsvp": {
+     "enabled": "yes"
+    }
+   },
+   "expect": {
+    "rsvp": null,
+    "events": null,
+    "form": null
+   }
+  },
+  {
+   "name": "rsvp: unknown keys are stripped; a short deadline is valid",
+   "config": {
+    "rsvp": {
+     "deadline": "2026-11-06T17:00+0700",
+     "extra": 1
+    }
+   },
+   "expect": {
+    "rsvp": {
+     "enabled": true,
+     "deadline": "2026-11-06T17:00+0700",
+     "perEvent": null
+    },
+    "events": null,
+    "form": null
+   }
+  },
+  {
+   "name": "rsvp: maxGuestsPerRsvp below 1 drops the section",
+   "config": {
+    "rsvp": {
+     "maxGuestsPerRsvp": 0
+    }
+   },
+   "expect": {
+    "rsvp": null,
+    "events": null,
+    "form": null
+   }
+  },
+  {
+   "name": "rsvp: a fractional maxGuestsPerRsvp drops the section",
+   "config": {
+    "rsvp": {
+     "maxGuestsPerRsvp": 5.5,
+     "perEvent": false
+    }
+   },
+   "expect": {
+    "rsvp": null,
+    "events": null,
+    "form": null
+   }
+  },
+  {
+   "name": "rsvp: an integral float (7.0 as stored by jsonb) is an integer",
+   "config": {
+    "rsvp": {
+     "maxGuestsPerRsvp": 7.0,
+     "perEvent": false
+    }
+   },
+   "expect": {
+    "rsvp": {
+     "enabled": true,
+     "deadline": null,
+     "perEvent": false
+    },
+    "events": null,
+    "form": null
+   }
+  },
+  {
+   "name": "rsvp: null drops the section",
+   "config": {
+    "rsvp": null
+   },
+   "expect": {
+    "rsvp": null,
+    "events": null,
+    "form": null
+   }
+  },
+  {
+   "name": "rsvp: a deadline needs an offset",
+   "config": {
+    "rsvp": {
+     "deadline": "2026-11-06T18:00:00"
+    }
+   },
+   "expect": {
+    "rsvp": null,
+    "events": null,
+    "form": null
+   }
+  },
+  {
+   "name": "rsvp: 29 February only in leap years (2026)",
+   "config": {
+    "rsvp": {
+     "deadline": "2026-02-29T10:00:00Z"
+    }
+   },
+   "expect": {
+    "rsvp": null,
+    "events": null,
+    "form": null
+   }
+  },
+  {
+   "name": "rsvp: 29 February only in leap years (2024)",
+   "config": {
+    "rsvp": {
+     "deadline": "2024-02-29T10:00:00Z"
+    }
+   },
+   "expect": {
+    "rsvp": {
+     "enabled": true,
+     "deadline": "2024-02-29T10:00:00Z",
+     "perEvent": null
+    },
+    "events": null,
+    "form": null
+   }
+  },
+  {
+   "name": "rsvp: hour 24 is not a time",
+   "config": {
+    "rsvp": {
+     "deadline": "2026-11-06T24:00:00Z"
+    }
+   },
+   "expect": {
+    "rsvp": null,
+    "events": null,
+    "form": null
+   }
+  },
+  {
+   "name": "rsvp: the T is upper case",
+   "config": {
+    "rsvp": {
+     "deadline": "2026-11-06t10:00:00Z"
+    }
+   },
+   "expect": {
+    "rsvp": null,
+    "events": null,
+    "form": null
+   }
+  },
+  {
+   "name": "events: a minted id skips one an event already holds",
+   "config": {
+    "events": [
+     {
+      "title": "A"
+     },
+     {
+      "id": "ev-1",
+      "title": "B"
+     }
+    ]
+   },
+   "expect": {
+    "rsvp": null,
+    "events": [
+     {
+      "id": "ev-1-2",
+      "inviteOnly": null
+     },
+     {
+      "id": "ev-1",
+      "inviteOnly": null
+     }
+    ],
+    "form": null
+   }
+  },
+  {
+   "name": "events: repeated, padded and non-string ids are minted",
+   "config": {
+    "events": [
+     {
+      "id": "x",
+      "title": "A"
+     },
+     {
+      "id": "x",
+      "title": "B"
+     },
+     {
+      "id": " y ",
+      "title": "C",
+      "inviteOnly": true
+     },
+     {
+      "id": 5,
+      "title": "D"
+     }
+    ]
+   },
+   "expect": {
+    "rsvp": null,
+    "events": [
+     {
+      "id": "x",
+      "inviteOnly": null
+     },
+     {
+      "id": "ev-2",
+      "inviteOnly": null
+     },
+     {
+      "id": "ev-3",
+      "inviteOnly": true
+     },
+     {
+      "id": "ev-4",
+      "inviteOnly": null
+     }
+    ],
+    "form": null
+   }
+  },
+  {
+   "name": "events: a taken position id gets the next free suffix",
+   "config": {
+    "events": [
+     {
+      "id": "ev-2",
+      "title": "A"
+     },
+     {
+      "title": "B"
+     },
+     {
+      "title": "C"
+     }
+    ]
+   },
+   "expect": {
+    "rsvp": null,
+    "events": [
+     {
+      "id": "ev-2",
+      "inviteOnly": null
+     },
+     {
+      "id": "ev-2-2",
+      "inviteOnly": null
+     },
+     {
+      "id": "ev-3",
+      "inviteOnly": null
+     }
+    ],
+    "form": null
+   }
+  },
+  {
+   "name": "events: an invalid map link drops every event",
+   "config": {
+    "events": [
+     {
+      "title": "A",
+      "mapUrl": "not a url"
+     }
+    ]
+   },
+   "expect": {
+    "rsvp": null,
+    "events": null,
+    "form": null
+   }
+  },
+  {
+   "name": "events: URL parsing strips surrounding spaces",
+   "config": {
+    "events": [
+     {
+      "title": "A",
+      "mapUrl": " https://maps.example/x "
+     }
+    ]
+   },
+   "expect": {
+    "rsvp": null,
+    "events": [
+     {
+      "id": "ev-1",
+      "inviteOnly": null
+     }
+    ],
+    "form": null
+   }
+  },
+  {
+   "name": "events: any scheme new URL() accepts passes",
+   "config": {
+    "events": [
+     {
+      "title": "A",
+      "mapUrl": "mailto:host@example.invalid"
+     }
+    ]
+   },
+   "expect": {
+    "rsvp": null,
+    "events": [
+     {
+      "id": "ev-1",
+      "inviteOnly": null
+     }
+    ],
+    "form": null
+   }
+  },
+  {
+   "name": "events: a title is required",
+   "config": {
+    "events": [
+     {}
+    ]
+   },
+   "expect": {
+    "rsvp": null,
+    "events": null,
+    "form": null
+   }
+  },
+  {
+   "name": "events: a blank title trims to empty and is kept",
+   "config": {
+    "events": [
+     {
+      "title": "   "
+     }
+    ]
+   },
+   "expect": {
+    "rsvp": null,
+    "events": [
+     {
+      "id": "ev-1",
+      "inviteOnly": null
+     }
+    ],
+    "form": null
+   }
+  },
+  {
+   "name": "events: at most 20",
+   "config": {
+    "events": [
+     {
+      "title": "x"
+     },
+     {
+      "title": "x"
+     },
+     {
+      "title": "x"
+     },
+     {
+      "title": "x"
+     },
+     {
+      "title": "x"
+     },
+     {
+      "title": "x"
+     },
+     {
+      "title": "x"
+     },
+     {
+      "title": "x"
+     },
+     {
+      "title": "x"
+     },
+     {
+      "title": "x"
+     },
+     {
+      "title": "x"
+     },
+     {
+      "title": "x"
+     },
+     {
+      "title": "x"
+     },
+     {
+      "title": "x"
+     },
+     {
+      "title": "x"
+     },
+     {
+      "title": "x"
+     },
+     {
+      "title": "x"
+     },
+     {
+      "title": "x"
+     },
+     {
+      "title": "x"
+     },
+     {
+      "title": "x"
+     },
+     {
+      "title": "x"
+     }
+    ]
+   },
+   "expect": {
+    "rsvp": null,
+    "events": null,
+    "form": null
+   }
+  },
+  {
+   "name": "events: 60 emoji are 120 UTF-16 units",
+   "config": {
+    "events": [
+     {
+      "title": "😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀"
+     }
+    ]
+   },
+   "expect": {
+    "rsvp": null,
+    "events": [
+     {
+      "id": "ev-1",
+      "inviteOnly": null
+     }
+    ],
+    "form": null
+   }
+  },
+  {
+   "name": "events: 61 emoji are 122 UTF-16 units",
+   "config": {
+    "events": [
+     {
+      "title": "😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀"
+     }
+    ]
+   },
+   "expect": {
+    "rsvp": null,
+    "events": null,
+    "form": null
+   }
+  },
+  {
+   "name": "events: trim removes a BOM before counting",
+   "config": {
+    "events": [
+     {
+      "title": "﻿aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+     }
+    ]
+   },
+   "expect": {
+    "rsvp": null,
+    "events": [
+     {
+      "id": "ev-1",
+      "inviteOnly": null
+     }
+    ],
+    "form": null
+   }
+  },
+  {
+   "name": "events: trim keeps U+0085, so 121 units",
+   "config": {
+    "events": [
+     {
+      "title": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+     }
+    ]
+   },
+   "expect": {
+    "rsvp": null,
+    "events": null,
+    "form": null
+   }
+  },
+  {
+   "name": "events: inviteOnly must be a boolean",
+   "config": {
+    "events": [
+     {
+      "title": "A",
+      "inviteOnly": "yes"
+     }
+    ]
+   },
+   "expect": {
+    "rsvp": null,
+    "events": null,
+    "form": null
+   }
+  },
+  {
+   "name": "events: a start needs an offset",
+   "config": {
+    "events": [
+     {
+      "title": "A",
+      "startAt": "2026-11-06T18:00"
+     }
+    ]
+   },
+   "expect": {
+    "rsvp": null,
+    "events": null,
+    "form": null
+   }
+  },
+  {
+   "name": "events: an object is not a list",
+   "config": {
+    "events": {
+     "0": {
+      "title": "A"
+     }
+    }
+   },
+   "expect": {
+    "rsvp": null,
+    "events": null,
+    "form": null
+   }
+  },
+  {
+   "name": "events: a non-object element",
+   "config": {
+    "events": [
+     1
+    ]
+   },
+   "expect": {
+    "rsvp": null,
+    "events": null,
+    "form": null
+   }
+  },
+  {
+   "name": "events: null is not an optional text",
+   "config": {
+    "events": [
+     {
+      "title": "A",
+      "venueName": null
+     }
+    ]
+   },
+   "expect": {
+    "rsvp": null,
+    "events": null,
+    "form": null
+   }
+  },
+  {
+   "name": "form: a strict form",
+   "config": {
+    "registrationForm": {
+     "enabled": true,
+     "customQuestions": [
+      {
+       "id": "a",
+       "label": "Q a",
+       "type": "text"
+      }
+     ]
+    }
+   },
+   "expect": {
+    "rsvp": null,
+    "events": null,
+    "form": {
+     "enabled": true,
+     "questions": [
+      {
+       "id": "a",
+       "type": "text",
+       "required": false,
+       "options": null,
+       "conditional": null
+      }
+     ]
+    }
+   }
+  },
+  {
+   "name": "form: enabled defaults to false",
+   "config": {
+    "registrationForm": {
+     "customQuestions": []
+    }
+   },
+   "expect": {
+    "rsvp": null,
+    "events": null,
+    "form": {
+     "enabled": false,
+     "questions": []
+    }
+   }
+  },
+  {
+   "name": "form: a self-condition is kept by the read rules",
+   "config": {
+    "registrationForm": {
+     "enabled": true,
+     "customQuestions": [
+      {
+       "id": "a",
+       "label": "A",
+       "type": "text",
+       "conditional": {
+        "questionId": "a",
+        "equals": "x"
+       }
+      }
+     ]
+    }
+   },
+   "expect": {
+    "rsvp": null,
+    "events": null,
+    "form": {
+     "enabled": true,
+     "questions": [
+      {
+       "id": "a",
+       "type": "text",
+       "required": false,
+       "options": null,
+       "conditional": {
+        "questionId": "a",
+        "equals": "x",
+        "in": null
+       }
+      }
+     ]
+    }
+   }
+  },
+  {
+   "name": "form: an unknown key is not read",
+   "config": {
+    "registrationForm": {
+     "enabled": true,
+     "foo": 1,
+     "customQuestions": []
+    }
+   },
+   "expect": {
+    "rsvp": null,
+    "events": null,
+    "form": null
+   }
+  },
+  {
+   "name": "form: a non-boolean switch without questions is not read",
+   "config": {
+    "registrationForm": {
+     "enabled": "yes"
+    }
+   },
+   "expect": {
+    "rsvp": null,
+    "events": null,
+    "form": null
+   }
+  },
+  {
+   "name": "form: no questions is a form",
+   "config": {
+    "registrationForm": {
+     "enabled": true
+    }
+   },
+   "expect": {
+    "rsvp": null,
+    "events": null,
+    "form": {
+     "enabled": true,
+     "questions": []
+    }
+   }
+  },
+  {
+   "name": "form: options are trimmed",
+   "config": {
+    "registrationForm": {
+     "enabled": true,
+     "customQuestions": [
+      {
+       "id": "s",
+       "label": "S",
+       "type": "select",
+       "options": [
+        " A ",
+        "B"
+       ]
+      }
+     ]
+    }
+   },
+   "expect": {
+    "rsvp": null,
+    "events": null,
+    "form": {
+     "enabled": true,
+     "questions": [
+      {
+       "id": "s",
+       "type": "select",
+       "required": false,
+       "options": [
+        "A",
+        "B"
+       ],
+       "conditional": null
+      }
+     ]
+    }
+   }
+  },
+  {
+   "name": "form: each unreadable question costs only itself",
+   "config": {
+    "registrationForm": {
+     "enabled": true,
+     "customQuestions": [
+      {
+       "id": "t",
+       "label": "T",
+       "type": "text",
+       "options": [
+        "A"
+       ]
+      },
+      {
+       "id": "s",
+       "label": "S",
+       "type": "select"
+      },
+      {
+       "id": "c",
+       "label": "C",
+       "type": "text",
+       "conditional": {
+        "questionId": "ok"
+       }
+      },
+      {
+       "id": "i",
+       "label": "I",
+       "type": "text",
+       "conditional": {
+        "questionId": "ok",
+        "in": []
+       }
+      },
+      {
+       "id": "a b",
+       "label": "AB",
+       "type": "text"
+      },
+      {
+       "id": "l",
+       "label": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+       "type": "text"
+      },
+      {
+       "id": "r",
+       "label": "R",
+       "type": "text",
+       "required": "yes"
+      },
+      {
+       "id": "ok",
+       "label": "OK",
+       "type": "radio",
+       "options": [
+        "Ya"
+       ],
+       "required": true
+      }
+     ]
+    }
+   },
+   "expect": {
+    "rsvp": null,
+    "events": null,
+    "form": {
+     "enabled": true,
+     "questions": [
+      {
+       "id": "ok",
+       "type": "radio",
+       "required": true,
+       "options": [
+        "Ya"
+       ],
+       "conditional": null
+      }
+     ]
+    }
+   }
+  },
+  {
+   "name": "form: at most 50 questions, even when each is readable",
+   "config": {
+    "registrationForm": {
+     "enabled": true,
+     "customQuestions": [
+      {
+       "id": "q0",
+       "label": "Q q0",
+       "type": "text"
+      },
+      {
+       "id": "q1",
+       "label": "Q q1",
+       "type": "text"
+      },
+      {
+       "id": "q2",
+       "label": "Q q2",
+       "type": "text"
+      },
+      {
+       "id": "q3",
+       "label": "Q q3",
+       "type": "text"
+      },
+      {
+       "id": "q4",
+       "label": "Q q4",
+       "type": "text"
+      },
+      {
+       "id": "q5",
+       "label": "Q q5",
+       "type": "text"
+      },
+      {
+       "id": "q6",
+       "label": "Q q6",
+       "type": "text"
+      },
+      {
+       "id": "q7",
+       "label": "Q q7",
+       "type": "text"
+      },
+      {
+       "id": "q8",
+       "label": "Q q8",
+       "type": "text"
+      },
+      {
+       "id": "q9",
+       "label": "Q q9",
+       "type": "text"
+      },
+      {
+       "id": "q10",
+       "label": "Q q10",
+       "type": "text"
+      },
+      {
+       "id": "q11",
+       "label": "Q q11",
+       "type": "text"
+      },
+      {
+       "id": "q12",
+       "label": "Q q12",
+       "type": "text"
+      },
+      {
+       "id": "q13",
+       "label": "Q q13",
+       "type": "text"
+      },
+      {
+       "id": "q14",
+       "label": "Q q14",
+       "type": "text"
+      },
+      {
+       "id": "q15",
+       "label": "Q q15",
+       "type": "text"
+      },
+      {
+       "id": "q16",
+       "label": "Q q16",
+       "type": "text"
+      },
+      {
+       "id": "q17",
+       "label": "Q q17",
+       "type": "text"
+      },
+      {
+       "id": "q18",
+       "label": "Q q18",
+       "type": "text"
+      },
+      {
+       "id": "q19",
+       "label": "Q q19",
+       "type": "text"
+      },
+      {
+       "id": "q20",
+       "label": "Q q20",
+       "type": "text"
+      },
+      {
+       "id": "q21",
+       "label": "Q q21",
+       "type": "text"
+      },
+      {
+       "id": "q22",
+       "label": "Q q22",
+       "type": "text"
+      },
+      {
+       "id": "q23",
+       "label": "Q q23",
+       "type": "text"
+      },
+      {
+       "id": "q24",
+       "label": "Q q24",
+       "type": "text"
+      },
+      {
+       "id": "q25",
+       "label": "Q q25",
+       "type": "text"
+      },
+      {
+       "id": "q26",
+       "label": "Q q26",
+       "type": "text"
+      },
+      {
+       "id": "q27",
+       "label": "Q q27",
+       "type": "text"
+      },
+      {
+       "id": "q28",
+       "label": "Q q28",
+       "type": "text"
+      },
+      {
+       "id": "q29",
+       "label": "Q q29",
+       "type": "text"
+      },
+      {
+       "id": "q30",
+       "label": "Q q30",
+       "type": "text"
+      },
+      {
+       "id": "q31",
+       "label": "Q q31",
+       "type": "text"
+      },
+      {
+       "id": "q32",
+       "label": "Q q32",
+       "type": "text"
+      },
+      {
+       "id": "q33",
+       "label": "Q q33",
+       "type": "text"
+      },
+      {
+       "id": "q34",
+       "label": "Q q34",
+       "type": "text"
+      },
+      {
+       "id": "q35",
+       "label": "Q q35",
+       "type": "text"
+      },
+      {
+       "id": "q36",
+       "label": "Q q36",
+       "type": "text"
+      },
+      {
+       "id": "q37",
+       "label": "Q q37",
+       "type": "text"
+      },
+      {
+       "id": "q38",
+       "label": "Q q38",
+       "type": "text"
+      },
+      {
+       "id": "q39",
+       "label": "Q q39",
+       "type": "text"
+      },
+      {
+       "id": "q40",
+       "label": "Q q40",
+       "type": "text"
+      },
+      {
+       "id": "q41",
+       "label": "Q q41",
+       "type": "text"
+      },
+      {
+       "id": "q42",
+       "label": "Q q42",
+       "type": "text"
+      },
+      {
+       "id": "q43",
+       "label": "Q q43",
+       "type": "text"
+      },
+      {
+       "id": "q44",
+       "label": "Q q44",
+       "type": "text"
+      },
+      {
+       "id": "q45",
+       "label": "Q q45",
+       "type": "text"
+      },
+      {
+       "id": "q46",
+       "label": "Q q46",
+       "type": "text"
+      },
+      {
+       "id": "q47",
+       "label": "Q q47",
+       "type": "text"
+      },
+      {
+       "id": "q48",
+       "label": "Q q48",
+       "type": "text"
+      },
+      {
+       "id": "q49",
+       "label": "Q q49",
+       "type": "text"
+      },
+      {
+       "id": "q50",
+       "label": "Q q50",
+       "type": "text"
+      }
+     ]
+    }
+   },
+   "expect": {
+    "rsvp": null,
+    "events": null,
+    "form": null
+   }
+  },
+  {
+   "name": "form: an invalid form deadline is not read",
+   "config": {
+    "registrationForm": {
+     "enabled": true,
+     "deadline": "tomorrow",
+     "customQuestions": [
+      {
+       "id": "a",
+       "label": "Q a",
+       "type": "text"
+      },
+      {
+       "id": "a",
+       "label": "dup",
+       "type": "text"
+      }
+     ]
+    }
+   },
+   "expect": {
+    "rsvp": null,
+    "events": null,
+    "form": null
+   }
+  },
+  {
+   "name": "form: capacity below 1 is not read",
+   "config": {
+    "registrationForm": {
+     "enabled": true,
+     "capacity": 0
+    }
+   },
+   "expect": {
+    "rsvp": null,
+    "events": null,
+    "form": null
+   }
+  },
+  {
+   "name": "an unknown top-level key costs only itself",
+   "config": {
+    "theme": {
+     "familyId": "retired"
+    },
+    "foo": 1,
+    "rsvp": {
+     "enabled": false
+    }
+   },
+   "expect": {
+    "rsvp": {
+     "enabled": false,
+     "deadline": null,
+     "perEvent": null
+    },
+    "events": null,
+    "form": null
+   }
+  },
+  {
+   "name": "ids, conditions and choices are trimmed",
+   "config": {
+    "registrationForm": {
+     "enabled": true,
+     "customQuestions": [
+      {
+       "id": " q1 ",
+       "label": "Q1",
+       "type": "radio",
+       "options": [
+        "Ya",
+        "a"
+       ]
+      },
+      {
+       "id": "q2",
+       "label": "Q2",
+       "type": "text",
+       "conditional": {
+        "questionId": " q1 ",
+        "equals": " Ya ",
+        "in": [
+         " a ",
+         "b"
+        ]
+       }
+      }
+     ]
+    }
+   },
+   "expect": {
+    "rsvp": null,
+    "events": null,
+    "form": {
+     "enabled": true,
+     "questions": [
+      {
+       "id": "q1",
+       "type": "radio",
+       "required": false,
+       "options": [
+        "Ya",
+        "a"
+       ],
+       "conditional": null
+      },
+      {
+       "id": "q2",
+       "type": "text",
+       "required": false,
+       "options": null,
+       "conditional": {
+        "questionId": "q1",
+        "equals": "Ya",
+        "in": [
+         "a",
+         "b"
+        ]
+       }
+      }
+     ]
+    }
+   }
+  }
+ ],
+ "guest": [
+  {
+   "name": "single answer: hadir for 3 of 4; per-event on without events clears per-event answers",
+   "config": "plain",
+   "submission": {
+    "status": "CONFIRMED",
+    "guestCount": "3",
+    "events": {},
+    "answers": {}
+   },
+   "expect": {
+    "kind": "write",
+    "status": "CONFIRMED",
+    "attendingCount": 3,
+    "rsvpEventAnswers": null
+   }
+  },
+  {
+   "name": "per-event flag off leaves the per-event column alone",
+   "config": "plain",
+   "flags": {
+    "perEvent": false
+   },
+   "submission": {
+    "status": "CONFIRMED",
+    "guestCount": "3",
+    "events": {},
+    "answers": {}
+   },
+   "expect": {
+    "kind": "write",
+    "status": "CONFIRMED",
+    "attendingCount": 3
+   }
+  },
+  {
+   "name": "a decline brings nobody",
+   "config": "plain",
+   "submission": {
+    "status": "DECLINED",
+    "guestCount": "3",
+    "events": {},
+    "answers": {}
+   },
+   "expect": {
+    "kind": "write",
+    "status": "DECLINED",
+    "attendingCount": 0,
+    "rsvpEventAnswers": null
+   }
+  },
+  {
+   "name": "mungkin stores no headcount",
+   "config": "plain",
+   "submission": {
+    "status": "MAYBE",
+    "guestCount": "2",
+    "events": {},
+    "answers": {}
+   },
+   "expect": {
+    "kind": "write",
+    "status": "MAYBE",
+    "attendingCount": null,
+    "rsvpEventAnswers": null
+   }
+  },
+  {
+   "name": "mungkin is refused while its flag is off",
+   "config": "plain",
+   "flags": {
+    "maybe": false
+   },
+   "submission": {
+    "status": "MAYBE",
+    "guestCount": null,
+    "events": {},
+    "answers": {}
+   },
+   "expect": {
+    "kind": "invalid"
+   }
+  },
+  {
+   "name": "no status is refused",
+   "config": "plain",
+   "submission": {
+    "status": "",
+    "guestCount": null,
+    "events": {},
+    "answers": {}
+   },
+   "expect": {
+    "kind": "invalid"
+   }
+  },
+  {
+   "name": "statuses are case-sensitive",
+   "config": "plain",
+   "submission": {
+    "status": "confirmed",
+    "guestCount": "2",
+    "events": {},
+    "answers": {}
+   },
+   "expect": {
+    "kind": "invalid"
+   }
+  },
+  {
+   "name": "the allowance caps the headcount",
+   "config": "plain",
+   "submission": {
+    "status": "CONFIRMED",
+    "guestCount": "9",
+    "events": {},
+    "answers": {}
+   },
+   "expect": {
+    "kind": "write",
+    "status": "CONFIRMED",
+    "attendingCount": 4,
+    "rsvpEventAnswers": null
+   }
+  },
+  {
+   "name": "a missing count means one person",
+   "config": "plain",
+   "submission": {
+    "status": "CONFIRMED",
+    "guestCount": null,
+    "events": {},
+    "answers": {}
+   },
+   "expect": {
+    "kind": "write",
+    "status": "CONFIRMED",
+    "attendingCount": 1,
+    "rsvpEventAnswers": null
+   }
+  },
+  {
+   "name": "an allowance of 0 still admits the guest",
+   "config": "plain",
+   "guest": {
+    "guestCount": 0
+   },
+   "submission": {
+    "status": "CONFIRMED",
+    "guestCount": "3",
+    "events": {},
+    "answers": {}
+   },
+   "expect": {
+    "kind": "write",
+    "status": "CONFIRMED",
+    "attendingCount": 1,
+    "rsvpEventAnswers": null
+   }
+  },
+  {
+   "name": "Number(): a hex count reads as its value",
+   "config": "plain",
+   "submission": {
+    "status": "CONFIRMED",
+    "guestCount": "0x3",
+    "events": {},
+    "answers": {}
+   },
+   "expect": {
+    "kind": "write",
+    "status": "CONFIRMED",
+    "attendingCount": 3,
+    "rsvpEventAnswers": null
+   }
+  },
+  {
+   "name": "Number(): whitespace only reads as 0, clamped to 1",
+   "config": "plain",
+   "submission": {
+    "status": "CONFIRMED",
+    "guestCount": "  ",
+    "events": {},
+    "answers": {}
+   },
+   "expect": {
+    "kind": "write",
+    "status": "CONFIRMED",
+    "attendingCount": 1,
+    "rsvpEventAnswers": null
+   }
+  },
+  {
+   "name": "no rsvp section: open",
+   "config": "empty",
+   "submission": {
+    "status": "CONFIRMED",
+    "guestCount": "2",
+    "events": {},
+    "answers": {}
+   },
+   "expect": {
+    "kind": "write",
+    "status": "CONFIRMED",
+    "attendingCount": 2,
+    "rsvpEventAnswers": null
+   }
+  },
+  {
+   "name": "switched off",
+   "config": "disabled",
+   "submission": {
+    "status": "CONFIRMED",
+    "guestCount": "2",
+    "events": {},
+    "answers": {}
+   },
+   "expect": {
+    "kind": "closed",
+    "reason": "disabled"
+   }
+  },
+  {
+   "name": "one millisecond before the deadline",
+   "config": "deadline",
+   "now": "2026-11-06T09:59:59.999Z",
+   "submission": {
+    "status": "CONFIRMED",
+    "guestCount": "1",
+    "events": {},
+    "answers": {}
+   },
+   "expect": {
+    "kind": "write",
+    "status": "CONFIRMED",
+    "attendingCount": 1,
+    "rsvpEventAnswers": null
+   }
+  },
+  {
+   "name": "at the deadline instant",
+   "config": "deadline",
+   "submission": {
+    "status": "CONFIRMED",
+    "guestCount": "1",
+    "events": {},
+    "answers": {}
+   },
+   "expect": {
+    "kind": "closed",
+    "reason": "deadline"
+   }
+  },
+  {
+   "name": "a deadline without seconds and with a colon-less offset",
+   "config": "deadlineShort",
+   "submission": {
+    "status": "CONFIRMED",
+    "guestCount": "1",
+    "events": {},
+    "answers": {}
+   },
+   "expect": {
+    "kind": "closed",
+    "reason": "deadline"
+   }
+  },
+  {
+   "name": "fractional seconds truncate to milliseconds: open at .998",
+   "config": "deadlineFraction",
+   "now": "2026-11-06T10:00:00.998Z",
+   "submission": {
+    "status": "CONFIRMED",
+    "guestCount": "1",
+    "events": {},
+    "answers": {}
+   },
+   "expect": {
+    "kind": "write",
+    "status": "CONFIRMED",
+    "attendingCount": 1,
+    "rsvpEventAnswers": null
+   }
+  },
+  {
+   "name": "fractional seconds truncate to milliseconds: closed at .999",
+   "config": "deadlineFraction",
+   "now": "2026-11-06T10:00:00.999Z",
+   "submission": {
+    "status": "CONFIRMED",
+    "guestCount": "1",
+    "events": {},
+    "answers": {}
+   },
+   "expect": {
+    "kind": "closed",
+    "reason": "deadline"
+   }
+  },
+  {
+   "name": "an offset past 23 hours is unparseable and never closes",
+   "config": "deadlineBadOffset",
+   "submission": {
+    "status": "CONFIRMED",
+    "guestCount": "1",
+    "events": {},
+    "answers": {}
+   },
+   "expect": {
+    "kind": "write",
+    "status": "CONFIRMED",
+    "attendingCount": 1,
+    "rsvpEventAnswers": null
+   }
+  },
+  {
+   "name": "an unreadable deadline drops the whole rsvp section, its switch included",
+   "config": "disabledBadDeadline",
+   "submission": {
+    "status": "CONFIRMED",
+    "guestCount": "1",
+    "events": {},
+    "answers": {}
+   },
+   "expect": {
+    "kind": "write",
+    "status": "CONFIRMED",
+    "attendingCount": 1,
+    "rsvpEventAnswers": null
+   }
+  },
+  {
+   "name": "an answer per event",
+   "config": "twoEvents",
+   "submission": {
+    "status": "",
+    "guestCount": null,
+    "events": {
+     "akad": {
+      "status": "CONFIRMED",
+      "guestCount": "2"
+     },
+     "resepsi": {
+      "status": "DECLINED",
+      "guestCount": null
+     }
+    },
+    "answers": {}
+   },
+   "expect": {
+    "kind": "write",
+    "status": "CONFIRMED",
+    "attendingCount": 2,
+    "rsvpEventAnswers": {
+     "akad": {
+      "status": "CONFIRMED",
+      "attending": 2
+     },
+     "resepsi": {
+      "status": "DECLINED",
+      "attending": 0
+     }
+    }
+   }
+  },
+  {
+   "name": "an unanswered event is named",
+   "config": "twoEvents",
+   "submission": {
+    "status": "",
+    "guestCount": null,
+    "events": {
+     "akad": {
+      "status": "CONFIRMED",
+      "guestCount": "2"
+     }
+    },
+    "answers": {}
+   },
+   "expect": {
+    "kind": "events",
+    "eventId": "resepsi"
+   }
+  },
+  {
+   "name": "the first unanswered event in the host order",
+   "config": "twoEvents",
+   "submission": {
+    "status": "CONFIRMED",
+    "guestCount": "2",
+    "events": {},
+    "answers": {}
+   },
+   "expect": {
+    "kind": "events",
+    "eventId": "akad"
+   }
+  },
+  {
+   "name": "stored answers: events no longer listed are kept, unreadable entries are not",
+   "config": "twoEvents",
+   "guest": {
+    "rsvpEventAnswers": {
+     "old": {
+      "status": "CONFIRMED",
+      "attending": 3
+     },
+     "akad": {
+      "status": "CONFIRMED",
+      "attending": 1
+     },
+     "bad id!": {
+      "status": "DECLINED",
+      "attending": 0
+     },
+     "resepsi": {
+      "status": "MAYBE"
+     }
+    }
+   },
+   "submission": {
+    "status": "",
+    "guestCount": null,
+    "events": {
+     "akad": {
+      "status": "MAYBE",
+      "guestCount": null
+     },
+     "resepsi": {
+      "status": "DECLINED",
+      "guestCount": null
+     }
+    },
+    "answers": {}
+   },
+   "expect": {
+    "kind": "write",
+    "status": "MAYBE",
+    "attendingCount": null,
+    "rsvpEventAnswers": {
+     "old": {
+      "status": "CONFIRMED",
+      "attending": 3
+     },
+     "akad": {
+      "status": "MAYBE",
+      "attending": null
+     },
+     "resepsi": {
+      "status": "DECLINED",
+      "attending": 0
+     }
+    }
+   }
+  },
+  {
+   "name": "per-event flag off: the single form, the column untouched",
+   "config": "twoEvents",
+   "flags": {
+    "perEvent": false
+   },
+   "submission": {
+    "status": "CONFIRMED",
+    "guestCount": "3",
+    "events": {},
+    "answers": {}
+   },
+   "expect": {
+    "kind": "write",
+    "status": "CONFIRMED",
+    "attendingCount": 3
+   }
+  },
+  {
+   "name": "events without the host switch: the single form clears per-event answers",
+   "config": "twoEventsNoSwitch",
+   "guest": {
+    "rsvpEventAnswers": {
+     "akad": {
+      "status": "DECLINED",
+      "attending": 0
+     }
+    }
+   },
+   "submission": {
+    "status": "CONFIRMED",
+    "guestCount": "3",
+    "events": {},
+    "answers": {}
+   },
+   "expect": {
+    "kind": "write",
+    "status": "CONFIRMED",
+    "attendingCount": 3,
+    "rsvpEventAnswers": null
+   }
+  },
+  {
+   "name": "legacy events answer under ids minted from their position",
+   "config": "legacyEvents",
+   "submission": {
+    "status": "",
+    "guestCount": null,
+    "events": {
+     "ev-1": {
+      "status": "CONFIRMED",
+      "guestCount": "5"
+     },
+     "ev-2": {
+      "status": "CONFIRMED",
+      "guestCount": "abc"
+     }
+    },
+    "answers": {}
+   },
+   "expect": {
+    "kind": "write",
+    "status": "CONFIRMED",
+    "attendingCount": 4,
+    "rsvpEventAnswers": {
+     "ev-1": {
+      "status": "CONFIRMED",
+      "attending": 4
+     },
+     "ev-2": {
+      "status": "CONFIRMED",
+      "attending": 1
+     }
+    }
+   }
+  },
+  {
+   "name": "an invalid map link drops every event: the single form",
+   "config": "badMapUrl",
+   "submission": {
+    "status": "CONFIRMED",
+    "guestCount": "2",
+    "events": {},
+    "answers": {}
+   },
+   "expect": {
+    "kind": "write",
+    "status": "CONFIRMED",
+    "attendingCount": 2,
+    "rsvpEventAnswers": null
+   }
+  },
+  {
+   "name": "invite-only: the open event and the one the guest is invited to",
+   "config": "inviteOnly",
+   "guest": {
+    "invitedEventIds": [
+     "resepsi"
+    ]
+   },
+   "submission": {
+    "status": "",
+    "guestCount": null,
+    "events": {
+     "akad": {
+      "status": "DECLINED",
+      "guestCount": null
+     },
+     "resepsi": {
+      "status": "CONFIRMED",
+      "guestCount": "2"
+     },
+     "after": {
+      "status": "CONFIRMED",
+      "guestCount": "4"
+     }
+    },
+    "answers": {}
+   },
+   "expect": {
+    "kind": "write",
+    "status": "CONFIRMED",
+    "attendingCount": 2,
+    "rsvpEventAnswers": {
+     "akad": {
+      "status": "DECLINED",
+      "attending": 0
+     },
+     "resepsi": {
+      "status": "CONFIRMED",
+      "attending": 2
+     }
+    }
+   }
+  },
+  {
+   "name": "invite-only: one visible event takes the single answer as its own",
+   "config": "inviteOnly",
+   "guest": {
+    "invitedEventIds": [],
+    "rsvpEventAnswers": {
+     "after": {
+      "status": "CONFIRMED",
+      "attending": 2
+     }
+    }
+   },
+   "submission": {
+    "status": "CONFIRMED",
+    "guestCount": "3",
+    "events": {},
+    "answers": {}
+   },
+   "expect": {
+    "kind": "write",
+    "status": "CONFIRMED",
+    "attendingCount": 3,
+    "rsvpEventAnswers": {
+     "after": {
+      "status": "CONFIRMED",
+      "attending": 2
+     },
+     "akad": {
+      "status": "CONFIRMED",
+      "attending": 3
+     }
+    }
+   }
+  },
+  {
+   "name": "invite-only switch off: every event is asked",
+   "config": "inviteOnly",
+   "flags": {
+    "inviteOnlyEvents": false
+   },
+   "submission": {
+    "status": "",
+    "guestCount": null,
+    "events": {
+     "akad": {
+      "status": "CONFIRMED",
+      "guestCount": null
+     },
+     "resepsi": {
+      "status": "CONFIRMED",
+      "guestCount": null
+     }
+    },
+    "answers": {}
+   },
+   "expect": {
+    "kind": "events",
+    "eventId": "after"
+   }
+  },
+  {
+   "name": "unusable invited ids cost only themselves",
+   "config": "inviteOnly",
+   "guest": {
+    "invitedEventIds": [
+     "after",
+     "bad id!",
+     7
+    ]
+   },
+   "submission": {
+    "status": "",
+    "guestCount": null,
+    "events": {
+     "akad": {
+      "status": "MAYBE",
+      "guestCount": null
+     },
+     "after": {
+      "status": "MAYBE",
+      "guestCount": null
+     }
+    },
+    "answers": {}
+   },
+   "expect": {
+    "kind": "write",
+    "status": "MAYBE",
+    "attendingCount": null,
+    "rsvpEventAnswers": {
+     "akad": {
+      "status": "MAYBE",
+      "attending": null
+     },
+     "after": {
+      "status": "MAYBE",
+      "attending": null
+     }
+    }
+   }
+  },
+  {
+   "name": "mungkin off refuses a per-event mungkin, naming the event",
+   "config": "inviteOnly",
+   "flags": {
+    "maybe": false
+   },
+   "guest": {
+    "invitedEventIds": [
+     "resepsi"
+    ]
+   },
+   "submission": {
+    "status": "",
+    "guestCount": null,
+    "events": {
+     "akad": {
+      "status": "MAYBE",
+      "guestCount": null
+     },
+     "resepsi": {
+      "status": "CONFIRMED",
+      "guestCount": null
+     }
+    },
+    "answers": {}
+   },
+   "expect": {
+    "kind": "events",
+    "eventId": "akad"
+   }
+  },
+  {
+   "name": "questions: every kind of answer",
+   "config": "questions",
+   "submission": {
+    "status": "CONFIRMED",
+    "guestCount": "2",
+    "events": {},
+    "answers": {
+     "diet": [
+      "Vegetarian"
+     ],
+     "allergy": [
+      " kacang "
+     ],
+     "songs": [
+      "A",
+      "B",
+      "A"
+     ],
+     "kids": [
+      "007"
+     ],
+     "note": [
+      "baris satu\r\nbaris dua"
+     ]
+    }
+   },
+   "expect": {
+    "kind": "write",
+    "status": "CONFIRMED",
+    "attendingCount": 2,
+    "rsvpAnswers": {
+     "diet": "Vegetarian",
+     "allergy": "kacang",
+     "songs": [
+      "A",
+      "B"
+     ],
+     "kids": 7,
+     "note": "baris satu\nbaris dua"
+    },
+    "rsvpEventAnswers": null
+   }
+  },
+  {
+   "name": "an answer whose condition does not hold is dropped",
+   "config": "questions",
+   "submission": {
+    "status": "CONFIRMED",
+    "guestCount": null,
+    "events": {},
+    "answers": {
+     "diet": [
+      "Biasa"
+     ],
+     "allergy": [
+      "x"
+     ]
+    }
+   },
+   "expect": {
+    "kind": "write",
+    "status": "CONFIRMED",
+    "attendingCount": 1,
+    "rsvpAnswers": {
+     "diet": "Biasa"
+    },
+    "rsvpEventAnswers": null
+   }
+  },
+  {
+   "name": "required holds for hadir",
+   "config": "questions",
+   "submission": {
+    "status": "CONFIRMED",
+    "guestCount": null,
+    "events": {},
+    "answers": {}
+   },
+   "expect": {
+    "kind": "answers",
+    "questionId": "diet"
+   }
+  },
+  {
+   "name": "required does not hold for mungkin; no answers store null",
+   "config": "questions",
+   "submission": {
+    "status": "MAYBE",
+    "guestCount": null,
+    "events": {},
+    "answers": {}
+   },
+   "expect": {
+    "kind": "write",
+    "status": "MAYBE",
+    "attendingCount": null,
+    "rsvpAnswers": null,
+    "rsvpEventAnswers": null
+   }
+  },
+  {
+   "name": "a decline clears answers without reading them",
+   "config": "questions",
+   "submission": {
+    "status": "DECLINED",
+    "guestCount": null,
+    "events": {},
+    "answers": {
+     "diet": [
+      "Lainnya"
+     ],
+     "kids": [
+      "x"
+     ]
+    }
+   },
+   "expect": {
+    "kind": "write",
+    "status": "DECLINED",
+    "attendingCount": 0,
+    "rsvpAnswers": null,
+    "rsvpEventAnswers": null
+   }
+  },
+  {
+   "name": "a required answer behind a condition that holds",
+   "config": "questions",
+   "submission": {
+    "status": "CONFIRMED",
+    "guestCount": null,
+    "events": {},
+    "answers": {
+     "diet": [
+      "Vegetarian"
+     ]
+    }
+   },
+   "expect": {
+    "kind": "answers",
+    "questionId": "allergy"
+   }
+  },
+  {
+   "name": "a choice outside the options",
+   "config": "questions",
+   "submission": {
+    "status": "CONFIRMED",
+    "guestCount": null,
+    "events": {},
+    "answers": {
+     "diet": [
+      "Lainnya"
+     ]
+    }
+   },
+   "expect": {
+    "kind": "answers",
+    "questionId": "diet"
+   }
+  },
+  {
+   "name": "numbers are one to six plain digits",
+   "config": "questions",
+   "submission": {
+    "status": "CONFIRMED",
+    "guestCount": null,
+    "events": {},
+    "answers": {
+     "diet": [
+      "Biasa"
+     ],
+     "kids": [
+      "1e3"
+     ]
+    }
+   },
+   "expect": {
+    "kind": "answers",
+    "questionId": "kids"
+   }
+  },
+  {
+   "name": "an unknown multiple choice",
+   "config": "questions",
+   "submission": {
+    "status": "CONFIRMED",
+    "guestCount": null,
+    "events": {},
+    "answers": {
+     "diet": [
+      "Biasa"
+     ],
+     "songs": [
+      "D"
+     ]
+    }
+   },
+   "expect": {
+    "kind": "answers",
+    "questionId": "songs"
+   }
+  },
+  {
+   "name": "two values for a single choice",
+   "config": "questions",
+   "submission": {
+    "status": "CONFIRMED",
+    "guestCount": null,
+    "events": {},
+    "answers": {
+     "diet": [
+      "Biasa",
+      "Vegetarian"
+     ]
+    }
+   },
+   "expect": {
+    "kind": "answers",
+    "questionId": "diet"
+   }
+  },
+  {
+   "name": "questions flag off: nothing asked, the column untouched",
+   "config": "questions",
+   "flags": {
+    "questions": false
+   },
+   "submission": {
+    "status": "CONFIRMED",
+    "guestCount": null,
+    "events": {},
+    "answers": {}
+   },
+   "expect": {
+    "kind": "write",
+    "status": "CONFIRMED",
+    "attendingCount": 1,
+    "rsvpEventAnswers": null
+   }
+  },
+  {
+   "name": "form switched off: nothing asked",
+   "config": "questionsOff",
+   "submission": {
+    "status": "CONFIRMED",
+    "guestCount": null,
+    "events": {},
+    "answers": {}
+   },
+   "expect": {
+    "kind": "write",
+    "status": "CONFIRMED",
+    "attendingCount": 1,
+    "rsvpEventAnswers": null
+   }
+  },
+  {
+   "name": "the read path keeps every readable question (D-035)",
+   "config": "questionsBroken",
+   "submission": {
+    "status": "CONFIRMED",
+    "guestCount": null,
+    "events": {},
+    "answers": {
+     "menu": [
+      "B"
+     ],
+     "ghost": [
+      "zzz"
+     ],
+     "spaced": [
+      " hai "
+     ],
+     "extra": [
+      "x"
+     ]
+    }
+   },
+   "expect": {
+    "kind": "write",
+    "status": "CONFIRMED",
+    "attendingCount": 1,
+    "rsvpAnswers": {
+     "menu": "B",
+     "spaced": "hai"
+    },
+    "rsvpEventAnswers": null
+   }
+  },
+  {
+   "name": "a form with an unknown key is not read at all",
+   "config": "questionsUnknownKey",
+   "submission": {
+    "status": "CONFIRMED",
+    "guestCount": null,
+    "events": {},
+    "answers": {}
+   },
+   "expect": {
+    "kind": "write",
+    "status": "CONFIRMED",
+    "attendingCount": 1,
+    "rsvpEventAnswers": null
+   }
+  },
+  {
+   "name": "events are answered before questions",
+   "config": "eventsAndQuestions",
+   "submission": {
+    "status": "",
+    "guestCount": null,
+    "events": {
+     "akad": {
+      "status": "CONFIRMED",
+      "guestCount": "2"
+     },
+     "resepsi": {
+      "status": "CONFIRMED",
+      "guestCount": "1"
+     }
+    },
+    "answers": {}
+   },
+   "expect": {
+    "kind": "answers",
+    "questionId": "plus"
+   }
+  },
+  {
+   "name": "a per-event decline clears answers",
+   "config": "eventsAndQuestions",
+   "submission": {
+    "status": "",
+    "guestCount": null,
+    "events": {
+     "akad": {
+      "status": "DECLINED",
+      "guestCount": null
+     },
+     "resepsi": {
+      "status": "DECLINED",
+      "guestCount": null
+     }
+    },
+    "answers": {
+     "plus": [
+      ""
+     ]
+    }
+   },
+   "expect": {
+    "kind": "write",
+    "status": "DECLINED",
+    "attendingCount": 0,
+    "rsvpAnswers": null,
+    "rsvpEventAnswers": {
+     "akad": {
+      "status": "DECLINED",
+      "attending": 0
+     },
+     "resepsi": {
+      "status": "DECLINED",
+      "attending": 0
+     }
+    }
+   }
+  },
+  {
+   "name": "text limit counts UTF-16 units: 250 emoji fit",
+   "config": "questions",
+   "submission": {
+    "status": "CONFIRMED",
+    "guestCount": null,
+    "events": {},
+    "answers": {
+     "diet": [
+      "Vegetarian"
+     ],
+     "allergy": [
+      "😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀"
+     ]
+    }
+   },
+   "expect": {
+    "kind": "write",
+    "status": "CONFIRMED",
+    "attendingCount": 1,
+    "rsvpAnswers": {
+     "diet": "Vegetarian",
+     "allergy": "😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀"
+    },
+    "rsvpEventAnswers": null
+   }
+  },
+  {
+   "name": "text limit counts UTF-16 units: 501 is refused",
+   "config": "questions",
+   "submission": {
+    "status": "CONFIRMED",
+    "guestCount": null,
+    "events": {},
+    "answers": {
+     "diet": [
+      "Vegetarian"
+     ],
+     "allergy": [
+      "😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀😀a"
+     ]
+    }
+   },
+   "expect": {
+    "kind": "answers",
+    "questionId": "allergy"
+   }
+  },
+  {
+   "name": "JavaScript trim: no-break space and BOM are trimmed",
+   "config": "questions",
+   "submission": {
+    "status": "CONFIRMED",
+    "guestCount": null,
+    "events": {},
+    "answers": {
+     "diet": [
+      "Vegetarian"
+     ],
+     "allergy": [
+      " kacang﻿"
+     ]
+    }
+   },
+   "expect": {
+    "kind": "write",
+    "status": "CONFIRMED",
+    "attendingCount": 1,
+    "rsvpAnswers": {
+     "diet": "Vegetarian",
+     "allergy": "kacang"
+    },
+    "rsvpEventAnswers": null
+   }
+  },
+  {
+   "name": "JavaScript trim: next-line (U+0085) is kept",
+   "config": "questions",
+   "submission": {
+    "status": "CONFIRMED",
+    "guestCount": null,
+    "events": {},
+    "answers": {
+     "diet": [
+      "Vegetarian"
+     ],
+     "allergy": [
+      "kacang"
+     ]
+    }
+   },
+   "expect": {
+    "kind": "write",
+    "status": "CONFIRMED",
+    "attendingCount": 1,
+    "rsvpAnswers": {
+     "diet": "Vegetarian",
+     "allergy": "kacang"
+    },
+    "rsvpEventAnswers": null
+   }
+  }
+ ],
+ "host": [
+  {
+   "name": "hadir with no earlier count: unknown",
+   "config": "plain",
+   "status": "CONFIRMED",
+   "expect": {
+    "rsvpStatus": "CONFIRMED",
+    "attendingCount": null,
+    "rsvpEventAnswers": null
+   }
+  },
+  {
+   "name": "hadir keeps the count of an earlier hadir",
+   "config": "plain",
+   "guest": {
+    "rsvpStatus": "CONFIRMED",
+    "attendingCount": 3
+   },
+   "status": "CONFIRMED",
+   "expect": {
+    "rsvpStatus": "CONFIRMED",
+    "attendingCount": 3,
+    "rsvpEventAnswers": null
+   }
+  },
+  {
+   "name": "hadir after a decline: unknown, never 0",
+   "config": "plain",
+   "guest": {
+    "rsvpStatus": "DECLINED",
+    "attendingCount": 0
+   },
+   "status": "CONFIRMED",
+   "expect": {
+    "rsvpStatus": "CONFIRMED",
+    "attendingCount": null,
+    "rsvpEventAnswers": null
+   }
+  },
+  {
+   "name": "a decline brings nobody",
+   "config": "plain",
+   "guest": {
+    "rsvpStatus": "CONFIRMED",
+    "attendingCount": 3
+   },
+   "status": "DECLINED",
+   "expect": {
+    "rsvpStatus": "DECLINED",
+    "attendingCount": 0,
+    "rsvpEventAnswers": null
+   }
+  },
+  {
+   "name": "mungkin",
+   "config": "plain",
+   "status": "MAYBE",
+   "expect": {
+    "rsvpStatus": "MAYBE",
+    "attendingCount": null,
+    "rsvpEventAnswers": null
+   }
+  },
+  {
+   "name": "per-event flag off: no per-event column",
+   "config": "plain",
+   "flags": {
+    "perEvent": false
+   },
+   "status": "PENDING",
+   "expect": {
+    "rsvpStatus": "PENDING",
+    "attendingCount": null
+   }
+  },
+  {
+   "name": "an event answer without per-event RSVP is refused",
+   "config": "plain",
+   "status": "CONFIRMED",
+   "eventId": "ev-1",
+   "expect": null
+  },
+  {
+   "name": "an unknown status is refused",
+   "config": "plain",
+   "status": "UNKNOWN",
+   "expect": null
+  },
+  {
+   "name": "decline every event",
+   "config": "twoEvents",
+   "status": "DECLINED",
+   "expect": {
+    "rsvpStatus": "DECLINED",
+    "attendingCount": 0,
+    "rsvpEventAnswers": {
+     "akad": {
+      "status": "DECLINED",
+      "attending": 0
+     },
+     "resepsi": {
+      "status": "DECLINED",
+      "attending": 0
+     }
+    }
+   }
+  },
+  {
+   "name": "hadir everywhere keeps the guest counts it has; one unknown makes the total unknown",
+   "config": "twoEvents",
+   "guest": {
+    "rsvpEventAnswers": {
+     "akad": {
+      "status": "CONFIRMED",
+      "attending": 2
+     }
+    }
+   },
+   "status": "CONFIRMED",
+   "expect": {
+    "rsvpStatus": "CONFIRMED",
+    "attendingCount": null,
+    "rsvpEventAnswers": {
+     "akad": {
+      "status": "CONFIRMED",
+      "attending": 2
+     },
+     "resepsi": {
+      "status": "CONFIRMED",
+      "attending": null
+     }
+    }
+   }
+  },
+  {
+   "name": "hadir everywhere with every count known: the largest",
+   "config": "twoEvents",
+   "guest": {
+    "rsvpEventAnswers": {
+     "akad": {
+      "status": "CONFIRMED",
+      "attending": 2
+     },
+     "resepsi": {
+      "status": "CONFIRMED",
+      "attending": 3
+     }
+    }
+   },
+   "status": "CONFIRMED",
+   "expect": {
+    "rsvpStatus": "CONFIRMED",
+    "attendingCount": 3,
+    "rsvpEventAnswers": {
+     "akad": {
+      "status": "CONFIRMED",
+      "attending": 2
+     },
+     "resepsi": {
+      "status": "CONFIRMED",
+      "attending": 3
+     }
+    }
+   }
+  },
+  {
+   "name": "one event declined, the other unanswered: still pending",
+   "config": "twoEvents",
+   "status": "DECLINED",
+   "eventId": "akad",
+   "expect": {
+    "rsvpStatus": "PENDING",
+    "attendingCount": null,
+    "rsvpEventAnswers": {
+     "akad": {
+      "status": "DECLINED",
+      "attending": 0
+     }
+    }
+   }
+  },
+  {
+   "name": "belum menjawab removes one event answer",
+   "config": "twoEvents",
+   "guest": {
+    "rsvpEventAnswers": {
+     "akad": {
+      "status": "CONFIRMED",
+      "attending": 2
+     },
+     "resepsi": {
+      "status": "MAYBE",
+      "attending": null
+     }
+    }
+   },
+   "status": "PENDING",
+   "eventId": "akad",
+   "expect": {
+    "rsvpStatus": "MAYBE",
+    "attendingCount": null,
+    "rsvpEventAnswers": {
+     "resepsi": {
+      "status": "MAYBE",
+      "attending": null
+     }
+    }
+   }
+  },
+  {
+   "name": "invite-only: one asked event is set per event",
+   "config": "inviteOnly",
+   "guest": {
+    "invitedEventIds": []
+   },
+   "status": "CONFIRMED",
+   "expect": {
+    "rsvpStatus": "CONFIRMED",
+    "attendingCount": null,
+    "rsvpEventAnswers": {
+     "akad": {
+      "status": "CONFIRMED",
+      "attending": null
+     }
+    }
+   }
+  },
+  {
+   "name": "invite-only: an event the guest is not invited to is refused",
+   "config": "inviteOnly",
+   "guest": {
+    "invitedEventIds": []
+   },
+   "status": "CONFIRMED",
+   "eventId": "resepsi",
+   "expect": null
+  },
+  {
+   "name": "an empty event id is refused",
+   "config": "twoEvents",
+   "status": "CONFIRMED",
+   "eventId": "",
+   "expect": null
+  },
+  {
+   "name": "answers to deleted events stay",
+   "config": "twoEvents",
+   "guest": {
+    "rsvpEventAnswers": {
+     "old": {
+      "status": "DECLINED",
+      "attending": 0
+     }
+    }
+   },
+   "status": "MAYBE",
+   "expect": {
+    "rsvpStatus": "MAYBE",
+    "attendingCount": null,
+    "rsvpEventAnswers": {
+     "old": {
+      "status": "DECLINED",
+      "attending": 0
+     },
+     "akad": {
+      "status": "MAYBE",
+      "attending": null
+     },
+     "resepsi": {
+      "status": "MAYBE",
+      "attending": null
+     }
+    }
+   }
+  }
+ ]
+}

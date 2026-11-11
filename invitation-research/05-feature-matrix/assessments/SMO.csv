@@ -1,0 +1,60 @@
+feature_id,status,basis,evidence,note
+FM-001,Full,CLAIMED,S-SMO-006,Unlimited custom guest names
+FM-002,Full,OBSERVED,S-SMO-004,Guest-name slot in the salutation (structure only)
+FM-003,Full,OBSERVED,S-SMO-004,"""Open Invitation"" cover"
+FM-004,Full,CLAIMED,S-SMO-006,
+FM-006,Full,CLAIMED,S-SMO-006;S-SMO-001,"Hundreds of tracks (""600+ musik"")"
+FM-007,Full,CLAIMED,S-SMO-006,Custom songs via SoundCloud
+FM-008,Full,OBSERVED,S-SMO-004;S-SMO-006,
+FM-010,Full,OBSERVED,S-SMO-004,Qur'an verse blocks on the previews checked
+FM-011,Full,OBSERVED,S-SMO-004,Parents blocks
+FM-012,Full,OBSERVED,S-SMO-004,Instagram blocks
+FM-014,Full,CLAIMED,S-SMO-006,No upload limit
+FM-016,Full,CLAIMED,S-SMO-006,Photo and video gallery
+FM-017,Full,OBSERVED,S-SMO-004,Akad and reception schedule
+FM-019,Full,OBSERVED,S-SMO-004,Maps link
+FM-020,Unknown,CLAIMED,S-SMO-006,"""Google Maps integration"" does not say whether it is embedded"
+FM-021,Full,CLAIMED,S-SMO-006,Google Calendar reminder with the countdown
+FM-022,Full,CLAIMED,S-SMO-006,
+FM-026,Full,CLAIMED,S-SMO-006,Customizable RSVP form
+FM-030,Full,CLAIMED,S-SMO-006,
+FM-032,Full,CLAIMED,S-SMO-006,Digital envelope and gifts page
+FM-042,Full,CLAIMED,S-SMO-006,Committee scans each guest's QR
+FM-054,Partial,OBSERVED,S-SMO-004,A 3D theme variant exists; fallback [UNKNOWN]
+FM-063,Full,CLAIMED,S-SMO-006,Page-based composition with no page limit
+FM-070,Full,CLAIMED,S-SMO-006,Unlimited guests
+FM-079,Full,CLAIMED,S-SMO-006,Check In System
+FM-081,Full,CLAIMED,S-SMO-006,"""Layar Sapa"" shows the guest's name on scan"
+FM-082,Full,CLAIMED,S-SMO-006,Counter of guests inside
+FM-088,Full,OBSERVED,S-SMO-005,Data editable during the active period (FAQ)
+FM-090,Partial,OBSERVED,S-SMO-005,"Basic self-edit; Premium 2x minor revisions; Prioritas unlimited reasonable revisions"
+FM-091,None,OBSERVED,S-SMO-005,Basic (Rp 79k) is active 7 days from purchase
+FM-093,Full,OBSERVED,S-SMO-005,Custom-domain product; bonus domains on upper tiers
+FM-095,Partial,OBSERVED,S-SMO-005,No watermark only on Custom Desain and Corporate
+FM-100,Full,CLAIMED,S-SMO-006,Add and remove pages
+FM-101,Full,CLAIMED,S-SMO-006,Drag-and-drop page reordering
+FM-102,Partial,CLAIMED,S-SMO-006,"Font size in the editor; family ""with developer tools"""
+FM-103,Full,CLAIMED,S-SMO-006,
+FM-105,Full,OBSERVED,S-SMO-005,Admin builds it from Premium (Rp 129k)
+FM-116,None,OBSERVED,S-SMO-004,Public previews render personal data
+FM-117,Full,OBSERVED,S-SMO-005,Chat widget; WhatsApp support in working hours
+FM-118,Partial,OBSERVED,S-SMO-001,Free registration and a 12-hour trial (2026-10-29)
+FM-119,Full,OBSERVED,S-SMO-005,Rp 79k-850k
+FM-121,Full,OBSERVED,S-SMO-005,Six consumer tiers
+FM-122,Partial,OBSERVED,S-SMO-005,"FAQ calls the Rp 129k tier ""Paket Plus"", the card says ""Premium"""
+FM-133,Full,OBSERVED,S-SMO-005;S-SMO-001,Affiliate programme (30 % claimed 2026-10-29)
+FM-135,Full,OBSERVED,S-SMO-006,Lite / Pro / Enterprise
+FM-136,Full,OBSERVED,S-SMO-006,Custom branding and landing page
+FM-137,Full,OBSERVED,S-SMO-006,100-600 starting credits; 10-20 credits per invitation
+FM-140,Full,OBSERVED,S-SMO-005,Custom Desain Rp 599k
+FM-141,Full,OBSERVED,S-SMO-005,Corporate Rp 850k
+FM-146,Full,OBSERVED,S-SMO-005,3D video invitations
+FM-147,Full,OBSERVED,S-SMO-005,3D greeting videos
+FM-148,Full,OBSERVED,S-SMO-005,Printed invitations
+FM-152,Partial,OBSERVED,S-SMO-005;S-SMO-006,Price- and keyword-led pages and a blog; no large generated set observed
+FM-153,Full,OBSERVED,S-SMO-003,Filters by event and style; cursor pagination
+FM-154,Partial,OBSERVED,S-SMO-003,Five event groups on the first catalog page
+FM-155,Partial,OBSERVED,S-SMO-003,"Style filters Adat and Syari"
+FM-172,None,OBSERVED,S-SMO-004,Public previews show real people's data
+FM-174,None,INFERRED,LONGLIST:SMO;S-SMO-005,No app linked or found in the Play searches
+FM-176,Full,OBSERVED,S-SMO-005,Blog and tutorials

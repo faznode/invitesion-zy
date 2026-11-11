@@ -1,0 +1,308 @@
+{
+ "verifiedAt": "2026-11-04T16:08:23.040Z",
+ "tool": "verify-profiles.mjs",
+ "page": "local 127.0.0.1 probe page",
+ "ok": true,
+ "results": [
+  {
+   "profile": "v1-412",
+   "cdp": {
+    "probe": {
+     "android": true,
+     "screenWidth": 412,
+     "screenHeight": 915,
+     "width": 412,
+     "dpr": 2.625,
+     "coarsePointer": false,
+     "reducedMotion": false
+    },
+    "ok": true,
+    "mismatches": []
+   },
+   "cdpAfterRea": {
+    "reaExit": 0,
+    "before": {
+     "android": true,
+     "screenWidth": 800,
+     "screenHeight": 600,
+     "width": 500,
+     "dpr": 1,
+     "coarsePointer": false,
+     "reducedMotion": false
+    },
+    "beforeMismatches": [
+     "screen.width 800 != 412",
+     "screen.height 600 != 915",
+     "devicePixelRatio 1 != 2.625"
+    ],
+    "probe": {
+     "android": true,
+     "screenWidth": 800,
+     "screenHeight": 600,
+     "width": 412,
+     "dpr": 1,
+     "coarsePointer": false,
+     "reducedMotion": false
+    },
+    "ok": false,
+    "mismatches": [
+     "screen.width 800 != 412",
+     "screen.height 600 != 915",
+     "devicePixelRatio 1 != 2.625"
+    ],
+    "gating": false
+   },
+   "lighthouse": {
+    "exit": 0,
+    "beacons": 2,
+    "probe": {
+     "screenWidth": 412,
+     "screenHeight": 915,
+     "dpr": 2.625,
+     "width": 412,
+     "reducedMotion": false,
+     "android": true
+    },
+    "ok": true,
+    "mismatches": []
+   }
+  },
+  {
+   "profile": "v2-412",
+   "cdp": {
+    "probe": {
+     "android": true,
+     "screenWidth": 412,
+     "screenHeight": 915,
+     "width": 412,
+     "dpr": 2.625,
+     "coarsePointer": false,
+     "reducedMotion": false
+    },
+    "ok": true,
+    "mismatches": []
+   },
+   "cdpAfterRea": {
+    "reaExit": 0,
+    "before": {
+     "android": true,
+     "screenWidth": 800,
+     "screenHeight": 600,
+     "width": 500,
+     "dpr": 1,
+     "coarsePointer": false,
+     "reducedMotion": false
+    },
+    "beforeMismatches": [
+     "screen.width 800 != 412",
+     "screen.height 600 != 915",
+     "devicePixelRatio 1 != 2.625"
+    ],
+    "probe": {
+     "android": true,
+     "screenWidth": 412,
+     "screenHeight": 915,
+     "width": 412,
+     "dpr": 2.625,
+     "coarsePointer": false,
+     "reducedMotion": false
+    },
+    "ok": true,
+    "mismatches": [],
+    "gating": true
+   },
+   "lighthouse": {
+    "exit": 0,
+    "beacons": 2,
+    "probe": {
+     "screenWidth": 412,
+     "screenHeight": 915,
+     "dpr": 2.625,
+     "width": 412,
+     "reducedMotion": false,
+     "android": true
+    },
+    "ok": true,
+    "mismatches": []
+   }
+  },
+  {
+   "profile": "v2-360",
+   "cdp": {
+    "probe": {
+     "android": true,
+     "screenWidth": 360,
+     "screenHeight": 800,
+     "width": 360,
+     "dpr": 3,
+     "coarsePointer": false,
+     "reducedMotion": false
+    },
+    "ok": true,
+    "mismatches": []
+   },
+   "cdpAfterRea": {
+    "reaExit": 0,
+    "before": {
+     "android": true,
+     "screenWidth": 800,
+     "screenHeight": 600,
+     "width": 500,
+     "dpr": 1,
+     "coarsePointer": false,
+     "reducedMotion": false
+    },
+    "beforeMismatches": [
+     "screen.width 800 != 360",
+     "screen.height 600 != 800",
+     "devicePixelRatio 1 != 3"
+    ],
+    "probe": {
+     "android": true,
+     "screenWidth": 360,
+     "screenHeight": 800,
+     "width": 360,
+     "dpr": 3,
+     "coarsePointer": false,
+     "reducedMotion": false
+    },
+    "ok": true,
+    "mismatches": [],
+    "gating": true
+   },
+   "lighthouse": {
+    "exit": 0,
+    "beacons": 2,
+    "probe": {
+     "screenWidth": 360,
+     "screenHeight": 800,
+     "dpr": 3,
+     "width": 360,
+     "reducedMotion": false,
+     "android": true
+    },
+    "ok": true,
+    "mismatches": []
+   }
+  },
+  {
+   "profile": "v2-390",
+   "cdp": {
+    "probe": {
+     "android": true,
+     "screenWidth": 390,
+     "screenHeight": 844,
+     "width": 390,
+     "dpr": 3,
+     "coarsePointer": false,
+     "reducedMotion": false
+    },
+    "ok": true,
+    "mismatches": []
+   },
+   "cdpAfterRea": {
+    "reaExit": 0,
+    "before": {
+     "android": true,
+     "screenWidth": 800,
+     "screenHeight": 600,
+     "width": 500,
+     "dpr": 1,
+     "coarsePointer": false,
+     "reducedMotion": false
+    },
+    "beforeMismatches": [
+     "screen.width 800 != 390",
+     "screen.height 600 != 844",
+     "devicePixelRatio 1 != 3"
+    ],
+    "probe": {
+     "android": true,
+     "screenWidth": 390,
+     "screenHeight": 844,
+     "width": 390,
+     "dpr": 3,
+     "coarsePointer": false,
+     "reducedMotion": false
+    },
+    "ok": true,
+    "mismatches": [],
+    "gating": true
+   },
+   "lighthouse": {
+    "exit": 0,
+    "beacons": 2,
+    "probe": {
+     "screenWidth": 390,
+     "screenHeight": 844,
+     "dpr": 3,
+     "width": 390,
+     "reducedMotion": false,
+     "android": true
+    },
+    "ok": true,
+    "mismatches": []
+   }
+  },
+  {
+   "profile": "v2-412-rm",
+   "cdp": {
+    "probe": {
+     "android": true,
+     "screenWidth": 412,
+     "screenHeight": 915,
+     "width": 412,
+     "dpr": 2.625,
+     "coarsePointer": false,
+     "reducedMotion": true
+    },
+    "ok": true,
+    "mismatches": []
+   },
+   "cdpAfterRea": {
+    "reaExit": 0,
+    "before": {
+     "android": true,
+     "screenWidth": 800,
+     "screenHeight": 600,
+     "width": 500,
+     "dpr": 1,
+     "coarsePointer": false,
+     "reducedMotion": false
+    },
+    "beforeMismatches": [
+     "screen.width 800 != 412",
+     "screen.height 600 != 915",
+     "devicePixelRatio 1 != 2.625",
+     "prefers-reduced-motion no-preference != reduce"
+    ],
+    "probe": {
+     "android": true,
+     "screenWidth": 412,
+     "screenHeight": 915,
+     "width": 412,
+     "dpr": 2.625,
+     "coarsePointer": false,
+     "reducedMotion": true
+    },
+    "ok": true,
+    "mismatches": [],
+    "gating": true
+   },
+   "lighthouse": {
+    "exit": 0,
+    "beacons": 2,
+    "probe": {
+     "screenWidth": 412,
+     "screenHeight": 915,
+     "dpr": 2.625,
+     "width": 412,
+     "reducedMotion": true,
+     "android": true
+    },
+    "ok": true,
+    "mismatches": []
+   }
+  }
+ ]
+}

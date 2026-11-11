@@ -1,0 +1,631 @@
+{
+ "id": "C-VID-103",
+ "competitor": "viding",
+ "kind": "demo",
+ "url": "https://viding.co/theme/preview/72",
+ "capturedAt": "2026-10-30T04:49:56.283+07:00",
+ "robots": {
+  "allowed": true,
+  "note": "Allow: /"
+ },
+ "method": "REA capture-browser-scenario (connect mode) drives navigation, settle and keyboard scroll; optional cover click by CDP inside REA's settle window; CDP mobile emulation 412x915 @2.625 + Android Chrome UA, cold cache (no throttling); REA 6.8.0 inspect-web-page/analyze-web-bundle; custom structure pass (text features + animation libraries: no REA coverage); Lighthouse 12 mobile simulate (Slow 4G, 4x CPU) when present",
+ "driver": "rea",
+ "rea": {
+  "version": "6.8.0",
+  "scenario": {
+   "ok": true,
+   "exit": 0,
+   "ms": 26899,
+   "evidenceId": "ev_6b9d5be650a0604c4ab12be8c33c066164cb8a65f648a2ec22898be4963b91bb",
+   "status": "incomplete",
+   "stepsCompleted": 32,
+   "stepsTotal": 32,
+   "failed": [],
+   "events": 868,
+   "error": null,
+   "sha256": "9a03413a54302bf5b96498c384e519f53e1269884f6668e74bcb9f92d80a7f20",
+   "file": "_private/rea/C-VID-103/rea-scenario.json"
+  },
+  "emulation": {
+   "duringScenario": {
+    "android": true,
+    "width": 412,
+    "dpr": 2.625,
+    "coarsePointer": false,
+    "reducedMotion": false
+   },
+   "afterScenario": {
+    "android": true,
+    "width": 500,
+    "dpr": 1,
+    "coarsePointer": false,
+    "reducedMotion": false
+   }
+  },
+  "inspectEvidenceId": "ev_30112127505847d7473bcd263a522aa102c83fc50cdfc0d1983db4f060a7620d",
+  "bundleEvidenceId": "ev_807d1aef008df59a526a5875bda436aeff41403bbf9d38030e6739ad2737e7b2",
+  "inspectError": null,
+  "bundleError": null,
+  "domNodes": 2415,
+  "scripts": 10,
+  "resources": 0,
+  "completeness": "policy_filtered",
+  "bundleChunks": 7,
+  "bundleEndpoints": [],
+  "bundleInferences": []
+ },
+ "network": {
+  "loadEventMs": 7577,
+  "requests": 84,
+  "bytes": 4154326,
+  "byType": {
+   "Document": {
+    "requests": 5,
+    "bytes": 31563
+   },
+   "Other": {
+    "requests": 1,
+    "bytes": 940
+   },
+   "Stylesheet": {
+    "requests": 7,
+    "bytes": 477372
+   },
+   "Image": {
+    "requests": 44,
+    "bytes": 2687494
+   },
+   "Script": {
+    "requests": 14,
+    "bytes": 530154
+   },
+   "Font": {
+    "requests": 9,
+    "bytes": 423908
+   },
+   "Media": {
+    "requests": 2,
+    "bytes": 0
+   },
+   "XHR": {
+    "requests": 2,
+    "bytes": 2895
+   }
+  },
+  "protocols": [
+   "h3",
+   "h2",
+   "data"
+  ],
+  "scriptHosts": [
+   "cdnjs.cloudflare.com",
+   "static.cloudflareinsights.com",
+   "cdn.jsdelivr.net",
+   "themes.viding.co",
+   "www.youtube.com"
+  ],
+  "scriptFiles": [
+   "ScrollTrigger.min.js",
+   "vce701823e78c4301a35b7e07294d87301792088814092",
+   "gsap.min.js",
+   "clipboard.min.js",
+   "splide-extension-grid.min.js",
+   "gift_registry_script.js",
+   "add_robot_field.js",
+   "vendor.js",
+   "colorpicker.min.js",
+   "app.js",
+   "Flip.min.js",
+   "ScrollTrigger.min.js",
+   "iframe_api",
+   "www-widgetapi.js"
+  ],
+  "fontFiles": [
+   {
+    "host": "fonts.gstatic.com",
+    "file": "1Ptvg83HX_SGhgqk3wot.woff2",
+    "bytes": 27457
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "pxiEyp8kv8JHgFVrJJfecg.woff2",
+    "bytes": 7911
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "AYCEpXzofN0NOp8LlQ.woff2",
+    "bytes": 20513
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "pxiByp8kv8JHgFVrLEj6Z1xlFQ.woff2",
+    "bytes": 8027
+   },
+   {
+    "host": "cdnjs.cloudflare.com",
+    "file": "fa-brands-400.woff2",
+    "bytes": 106144
+   },
+   {
+    "host": "cdnjs.cloudflare.com",
+    "file": "fa-solid-900.woff2",
+    "bytes": 154301
+   },
+   {
+    "host": "themes.viding.co",
+    "file": "Mulish.ttf",
+    "bytes": 49451
+   },
+   {
+    "host": "themes.viding.co",
+    "file": "icofont.woff2",
+    "bytes": 1632
+   },
+   {
+    "host": "themes.viding.co",
+    "file": "TimesNRCyrMT.woff",
+    "bytes": 48472
+   }
+  ],
+  "thirdPartyHosts": [
+   "cdnjs.cloudflare.com",
+   "cdn.viding.co",
+   "themes.viding.co",
+   "media.viding.co",
+   "static.cloudflareinsights.com",
+   "",
+   "cdn.jsdelivr.net",
+   "fonts.gstatic.com",
+   "petra.viding.co",
+   "www.youtube.com",
+   "www.google.com"
+  ]
+ },
+ "structure": {
+  "coverClicked": "Open the Invitation",
+  "beforeOpen": {
+   "sectionCount": 14,
+   "features": {
+    "coverGate": true,
+    "toGuest": false,
+    "countdown": true,
+    "rsvp": true,
+    "wishes": true,
+    "gift": true,
+    "copyButton": false,
+    "maps": false,
+    "calendar": true,
+    "livestream": true,
+    "qr": false,
+    "loveStory": true,
+    "gallery": false,
+    "dressCode": true,
+    "quranVerse": false,
+    "protocol": true,
+    "timezoneLabel": [],
+    "watermark": false,
+    "instagramFilter": false,
+    "musicControl": true
+   },
+   "buttons": [
+    "Color Variation",
+    "Primary Color",
+    "Apply",
+    "Secondary Color",
+    "Button Color",
+    "Reset",
+    "Save Color",
+    "Open the Invitation",
+    "Save the Date",
+    "Location"
+   ]
+  },
+  "afterOpen": {
+   "title": "Welcome to the Wedding of Wanita & Pria - 05 May 2025",
+   "lang": "en",
+   "generator": null,
+   "viewport": "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no",
+   "og": {
+    "image": true,
+    "title": true,
+    "description": true
+   },
+   "reducedMotionCss": true,
+   "libs": {
+    "gsap": true,
+    "scrollTrigger": true,
+    "aos": true,
+    "animateCss": false,
+    "wow": false,
+    "swiper": false,
+    "slick": false,
+    "owl": false,
+    "lottie": false,
+    "three": false,
+    "pixi": false,
+    "anime": false,
+    "motionOne": false,
+    "howler": false,
+    "jquery": true,
+    "bootstrap": false,
+    "tailwind": false,
+    "alpine": false,
+    "vue": false,
+    "nuxt": false,
+    "next": false,
+    "react": false,
+    "svelte": false,
+    "flutterWeb": false,
+    "wordpress": false,
+    "elementor": false,
+    "livewire": false,
+    "inertia": false
+   },
+   "sections": [
+    {
+     "tag": "section",
+     "id": "",
+     "cls": "header-section envelope-wrap",
+     "heading": "Vidi & Hening",
+     "h": 910
+    },
+    {
+     "tag": "div",
+     "id": "",
+     "cls": "moveable_section_wrapper",
+     "heading": "Vidi & Hening",
+     "h": 10125
+    },
+    {
+     "tag": "section",
+     "id": "",
+     "cls": "header-section",
+     "heading": "Vidi & Hening",
+     "h": 866
+    },
+    {
+     "tag": "section",
+     "id": "",
+     "cls": "couple-section moveable-section",
+     "heading": "Bride & Groom",
+     "h": 1793
+    },
+    {
+     "tag": "section",
+     "id": "",
+     "cls": "story-section moveable-section",
+     "heading": "Our Story",
+     "h": 625
+    },
+    {
+     "tag": "section",
+     "id": "",
+     "cls": "gallery-section moveable-section",
+     "heading": "",
+     "h": 572
+    },
+    {
+     "tag": "div",
+     "id": "",
+     "cls": "moveable-section",
+     "heading": "Lokasi",
+     "h": 3132
+    },
+    {
+     "tag": "section",
+     "id": "",
+     "cls": "venue-section",
+     "heading": "Lokasi",
+     "h": 2571
+    },
+    {
+     "tag": "section",
+     "id": "",
+     "cls": "rsvp-section",
+     "heading": "RSVP",
+     "h": 561
+    },
+    {
+     "tag": "section",
+     "id": "",
+     "cls": "wishes-section moveable-section",
+     "heading": "Wedding Wishes",
+     "h": 655
+    },
+    {
+     "tag": "section",
+     "id": "",
+     "cls": "egift-section moveable-section",
+     "heading": "E-Angpao",
+     "h": 823
+    },
+    {
+     "tag": "section",
+     "id": "",
+     "cls": "apology-section moveable-section",
+     "heading": "Apology",
+     "h": 368
+    },
+    {
+     "tag": "section",
+     "id": "",
+     "cls": "stream-section moveable-section",
+     "heading": "Live Streaming",
+     "h": 716
+    },
+    {
+     "tag": "section",
+     "id": "",
+     "cls": "thank-section parallax-wrapper moveable-section",
+     "heading": "Thank You",
+     "h": 576
+    }
+   ],
+   "sectionCount": 14,
+   "buttons": [
+    "Color Variation",
+    "Primary Color",
+    "Apply",
+    "Secondary Color",
+    "Button Color",
+    "Reset",
+    "Save Color",
+    "Open the Invitation",
+    "Save the Date",
+    "Location",
+    "Send",
+    "E-Angpao",
+    "Gift Registry",
+    "Send Gift",
+    "Give as a Gift",
+    "➝",
+    "×",
+    "Continue",
+    "Confirm",
+    "Join Youtube"
+   ],
+   "media": {
+    "audio": [
+     {
+      "autoplay": false,
+      "loop": true,
+      "type": ""
+     },
+     {
+      "autoplay": false,
+      "loop": false,
+      "type": "mp3"
+     }
+    ],
+    "video": 0,
+    "iframes": [
+     "www.youtube.com",
+     "viding.co",
+     "viding.co",
+     "www.youtube.com"
+    ],
+    "canvases": 0,
+    "svgs": 19,
+    "images": 63,
+    "lazyImages": 0
+   },
+   "forms": [
+    {
+     "fields": [
+      "text",
+      "text",
+      "email",
+      "tel",
+      "number",
+      "select-one",
+      "hidden",
+      "hidden",
+      "submit"
+     ],
+     "hasRadio": false,
+     "hasSelect": true
+    },
+    {
+     "fields": [
+      "hidden",
+      "hidden",
+      "text",
+      "text",
+      "text",
+      "text",
+      "hidden",
+      "number",
+      "textarea",
+      "text",
+      "submit"
+     ],
+     "hasRadio": false,
+     "hasSelect": false
+    },
+    {
+     "fields": [
+      "hidden",
+      "hidden",
+      "hidden",
+      "text",
+      "text",
+      "email",
+      "tel",
+      "text",
+      "text",
+      "number",
+      "checkbox",
+      "submit"
+     ],
+     "hasRadio": false,
+     "hasSelect": false
+    },
+    {
+     "fields": [
+      "hidden",
+      "hidden",
+      "hidden",
+      "text",
+      "email",
+      "button",
+      "textarea",
+      "textarea",
+      "textarea",
+      "button",
+      "text",
+      "text"
+     ],
+     "hasRadio": false,
+     "hasSelect": false
+    }
+   ],
+   "fontsUsed": [
+    "Poppins",
+    "Mulish",
+    "times new roman",
+    "Font Awesome 6 Brands",
+    "Font Awesome 6 Free",
+    "IcoFont",
+    "Unna"
+   ],
+   "features": {
+    "coverGate": true,
+    "toGuest": false,
+    "countdown": true,
+    "rsvp": true,
+    "wishes": true,
+    "gift": true,
+    "copyButton": false,
+    "maps": false,
+    "calendar": true,
+    "livestream": true,
+    "qr": false,
+    "loveStory": true,
+    "gallery": false,
+    "dressCode": true,
+    "quranVerse": false,
+    "protocol": true,
+    "timezoneLabel": [],
+    "watermark": false,
+    "instagramFilter": false,
+    "musicControl": true
+   },
+   "domNodes": 904,
+   "docHeight": 10279
+  }
+ },
+ "lighthouse": {
+  "ok": true,
+  "lighthouseVersion": "12.8.2",
+  "finalUrl": "https://viding.co/theme/preview/72",
+  "throttling": {
+   "rttMs": 150,
+   "throughputKbps": 1638.4,
+   "requestLatencyMs": 562.5,
+   "downloadThroughputKbps": 1474.5600000000002,
+   "uploadThroughputKbps": 675,
+   "cpuSlowdownMultiplier": 4
+  },
+  "screen": {
+   "mobile": true,
+   "width": 412,
+   "height": 915,
+   "deviceScaleFactor": 2.625,
+   "disabled": false
+  },
+  "scores": {
+   "performance": 54,
+   "accessibility": 74,
+   "best-practices": 82,
+   "seo": 100
+  },
+  "metrics": {
+   "fcpMs": 4268.9575,
+   "lcpMs": 10469.701500000001,
+   "tbtMs": 257,
+   "cls": 0.02042812148576826,
+   "siMs": 7885.982026825102,
+   "ttiMs": 13612.7369
+  },
+  "byType": {
+   "total": {
+    "requests": 71,
+    "bytes": 3364191
+   },
+   "image": {
+    "requests": 36,
+    "bytes": 1961751
+   },
+   "script": {
+    "requests": 12,
+    "bytes": 512021
+   },
+   "stylesheet": {
+    "requests": 7,
+    "bytes": 478390
+   },
+   "font": {
+    "requests": 8,
+    "bytes": 375515
+   },
+   "document": {
+    "requests": 1,
+    "bytes": 31584
+   },
+   "other": {
+    "requests": 6,
+    "bytes": 3833
+   },
+   "media": {
+    "requests": 1,
+    "bytes": 1097
+   },
+   "third-party": {
+    "requests": 14,
+    "bytes": 426802
+   }
+  },
+  "totalBytes": 3364191,
+  "requests": 71,
+  "thirdParties": [
+   {
+    "entity": "Cloudflare CDN",
+    "bytes": 320610,
+    "blockingMs": 52.1105838803832
+   },
+   {
+    "entity": "JSDelivr CDN",
+    "bytes": 31806,
+    "blockingMs": 0.10718313693312276
+   },
+   {
+    "entity": "Google Fonts",
+    "bytes": 63908,
+    "blockingMs": 0
+   },
+   {
+    "entity": "Cloudflare",
+    "bytes": 10478,
+    "blockingMs": 0
+   }
+  ],
+  "fontDisplayIssues": 2,
+  "unusedJsBytes": 248907,
+  "a11yFailures": [
+   "button-name",
+   "color-contrast",
+   "frame-title",
+   "heading-order",
+   "link-name",
+   "meta-viewport",
+   "select-name"
+  ]
+ },
+ "files": {
+  "rea-inspect.json": "9650f7169777d61b4a149a6f80418538a9c9ae8fcd89a2f2094303f3bf47c994",
+  "rea-bundle.json": "6b190b1b2c684ba3abafdc5814fec01a2da9f9ed0ab854c6bfbb9b9281c7366c",
+  "_private/rea/C-VID-103/rea-scenario.json": "9a03413a54302bf5b96498c384e519f53e1269884f6668e74bcb9f92d80a7f20",
+  "_private/lh/C-VID-103.json": "92c0793c752a24564fae74a63c24edf9f77e8567f903e71096e2f43eb61ed302"
+ },
+ "screenshot": "_private/thumbs (competitor, not committed)"
+}

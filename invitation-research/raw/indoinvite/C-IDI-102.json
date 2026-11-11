@@ -1,0 +1,587 @@
+{
+ "id": "C-IDI-102",
+ "competitor": "indoinvite",
+ "kind": "demo",
+ "url": "https://indoinvite.com/preview/contoh-undangan-online-khitanan",
+ "capturedAt": "2026-10-30T04:40:52.483+07:00",
+ "robots": {
+  "allowed": true,
+  "note": "no matching rule"
+ },
+ "method": "CDP drives navigation/click/scroll (driver rea+cdp-fallback); CDP mobile emulation 412x915 @2.625 + Android Chrome UA, cold cache (no throttling); REA 6.8.0 inspect-web-page/analyze-web-bundle; custom structure pass (text features + animation libraries: no REA coverage); Lighthouse 12 mobile simulate (Slow 4G, 4x CPU) when present",
+ "driver": "rea+cdp-fallback",
+ "rea": {
+  "version": "6.8.0",
+  "scenario": {
+   "ok": true,
+   "exit": 0,
+   "ms": 21132,
+   "evidenceId": "ev_d3c1181100fcd79b5b09b21c77906f049400b2245c522f720f8dd6f8709c6e28",
+   "status": "incomplete",
+   "stepsCompleted": 2,
+   "stepsTotal": 34,
+   "failed": [
+    "open-cover",
+    "after-cover",
+    "scroll-1",
+    "pause-1",
+    "scroll-2",
+    "pause-2",
+    "scroll-3",
+    "pause-3",
+    "scroll-4",
+    "pause-4"
+   ],
+   "events": 216,
+   "error": null,
+   "sha256": "3edaae736edf106c6252400fdb90e831680dd70c8bb09b84fff8a89a5d9a9aff",
+   "file": "_private/rea/C-IDI-102/rea-scenario.json"
+  },
+  "emulation": {
+   "duringScenario": {
+    "android": true,
+    "width": 412,
+    "dpr": 2.625,
+    "coarsePointer": false,
+    "reducedMotion": false
+   },
+   "afterScenario": {
+    "android": true,
+    "width": 500,
+    "dpr": 1,
+    "coarsePointer": false,
+    "reducedMotion": false
+   }
+  },
+  "inspectEvidenceId": "ev_2f3b45056f057ff3737540c2e1ac77076e05664f87bea467f761db53202b6efe",
+  "bundleEvidenceId": "ev_4f646ce3f7f9e7e957c61e3cf339cbe03b32bc3c5512a5160c4e1866e0f6c4e5",
+  "inspectError": null,
+  "bundleError": null,
+  "domNodes": 36194,
+  "scripts": 10,
+  "resources": 7,
+  "completeness": "policy_filtered",
+  "bundleChunks": 10,
+  "bundleEndpoints": [],
+  "bundleInferences": [
+   {
+    "kind": "endpoint_candidate",
+    "value": "utm_campaign",
+    "confidence": "low",
+    "basis": [
+     {
+      "script_key": "scr_ac81e3a21d4fec9e9adfd74119ba58987587122d06465d289a4b95c133f3627f",
+      "artifact_sha256": "d5df9198e27c6e3f2ec53e77ca226bc3ce827d0e29186433f4065a05d2be6d2a",
+      "line": 72,
+      "column": 20,
+      "detector": "call:searchParams.get:unverified-network-receiver"
+     }
+    ]
+   },
+   {
+    "kind": "endpoint_candidate",
+    "value": "open",
+    "confidence": "low",
+    "basis": [
+     {
+      "script_key": "scr_ac81e3a21d4fec9e9adfd74119ba58987587122d06465d289a4b95c133f3627f",
+      "artifact_sha256": "d5df9198e27c6e3f2ec53e77ca226bc3ce827d0e29186433f4065a05d2be6d2a",
+      "line": 78,
+      "column": 12,
+      "detector": "call:searchParams.get:unverified-network-receiver"
+     }
+    ]
+   },
+   {
+    "kind": "endpoint_candidate",
+    "value": "open",
+    "confidence": "low",
+    "basis": [
+     {
+      "script_key": "scr_ac81e3a21d4fec9e9adfd74119ba58987587122d06465d289a4b95c133f3627f",
+      "artifact_sha256": "d5df9198e27c6e3f2ec53e77ca226bc3ce827d0e29186433f4065a05d2be6d2a",
+      "line": 81,
+      "column": 16,
+      "detector": "call:searchParams.delete:unverified-network-receiver"
+     }
+    ]
+   },
+   {
+    "kind": "endpoint_candidate",
+    "value": "ads",
+    "confidence": "low",
+    "basis": [
+     {
+      "script_key": "scr_c5c60f3895ff22b57cf5aff7bf372e93df089b81be889433aba4925863fd7bbc",
+      "artifact_sha256": "0b9677f370c6056865012d81697451c14d51ff1a41f4f96c07ae78d4fe7fa56c",
+      "line": 97,
+      "column": 25,
+      "detector": "call:urlParams.get:unverified-network-receiver"
+     }
+    ]
+   }
+  ]
+ },
+ "network": {
+  "loadEventMs": 7684,
+  "requests": 123,
+  "bytes": 4832141,
+  "byType": {
+   "Document": {
+    "requests": 2,
+    "bytes": 95631
+   },
+   "Image": {
+    "requests": 59,
+    "bytes": 3251119
+   },
+   "Stylesheet": {
+    "requests": 4,
+    "bytes": 233600
+   },
+   "Script": {
+    "requests": 16,
+    "bytes": 1190780
+   },
+   "Manifest": {
+    "requests": 1,
+    "bytes": 640
+   },
+   "Font": {
+    "requests": 5,
+    "bytes": 39215
+   },
+   "Fetch": {
+    "requests": 8,
+    "bytes": 872
+   },
+   "Ping": {
+    "requests": 20,
+    "bytes": 16669
+   },
+   "XHR": {
+    "requests": 7,
+    "bytes": 1946
+   },
+   "Other": {
+    "requests": 1,
+    "bytes": 1669
+   }
+  },
+  "protocols": [
+   "http/1.1",
+   "h2",
+   "h3",
+   "data"
+  ],
+  "scriptHosts": [
+   "cdnjs.cloudflare.com",
+   "indoinvite.com",
+   "bzrcdn.openai.com",
+   "www.googletagmanager.com",
+   "connect.facebook.net",
+   "www.clarity.ms",
+   "analytics.tiktok.com",
+   "googleads.g.doubleclick.net",
+   "scripts.clarity.ms"
+  ],
+  "scriptFiles": [
+   "jquery.min.js",
+   "bootstrap.bundle.min.js",
+   "splide.min.js",
+   "main.js",
+   "oaiq.min.js",
+   "gtm.js",
+   "js",
+   "fbevents.js",
+   "js",
+   "mv6xtgbfa8",
+   "events.js",
+   "",
+   "485086054639593",
+   "clarity.js",
+   "main.MTJjYzk1MmQ1OQ.js",
+   "identify_9fbdaf50.js"
+  ],
+  "fontFiles": [
+   {
+    "host": "fonts.gstatic.com",
+    "file": "pxiByp8kv8JHgFVrLEj6Z1xlFd2JQEk.woff2",
+    "bytes": 8019
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "pxiEyp8kv8JHgFVrJJfecnFHGPc.woff2",
+    "bytes": 7927
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "pxiByp8kv8JHgFVrLBT5Z1xlFd2JQEk.woff2",
+    "bytes": 7627
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "pxiByp8kv8JHgFVrLCz7Z1xlFd2JQEk.woff2",
+    "bytes": 7875
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "pxiByp8kv8JHgFVrLGT9Z1xlFd2JQEk.woff2",
+    "bytes": 7767
+   }
+  ],
+  "thirdPartyHosts": [
+   "www.gstatic.com",
+   "cdnjs.cloudflare.com",
+   "fonts.googleapis.com",
+   "",
+   "fonts.gstatic.com",
+   "bzrcdn.openai.com",
+   "www.googletagmanager.com",
+   "media.indoinvite.com",
+   "ad.doubleclick.net",
+   "www.google.com",
+   "connect.facebook.net",
+   "www.clarity.ms",
+   "analytics.tiktok.com",
+   "sin1.contabostorage.com",
+   "googleads.g.doubleclick.net",
+   "stats.g.doubleclick.net",
+   "analytics.google.com",
+   "www.facebook.com",
+   "mpc-prod-24-s6uit34pua-uw.a.run.app",
+   "scripts.clarity.ms",
+   "bzr.openai.com",
+   "analytics-ipv6.tiktokw.us",
+   "t.clarity.ms",
+   "c.clarity.ms"
+  ]
+ },
+ "structure": {
+  "coverClicked": false,
+  "beforeOpen": {
+   "sectionCount": 2,
+   "features": {
+    "coverGate": false,
+    "toGuest": false,
+    "countdown": false,
+    "rsvp": true,
+    "wishes": true,
+    "gift": true,
+    "copyButton": true,
+    "maps": false,
+    "calendar": false,
+    "livestream": false,
+    "qr": false,
+    "loveStory": false,
+    "gallery": true,
+    "dressCode": false,
+    "quranVerse": false,
+    "protocol": false,
+    "timezoneLabel": [],
+    "watermark": false,
+    "instagramFilter": false,
+    "musicControl": false
+   },
+   "buttons": [
+    "Masuk Dan Buat",
+    "Buat Undangan",
+    "Mulai Gratis",
+    "Contoh",
+    "Tools",
+    "Template",
+    "Baca Selengkapnya",
+    "Preview",
+    "Gunakan Tema",
+    "Copy"
+   ]
+  },
+  "afterOpen": {
+   "title": "Contoh Undangan Digital Khitanan",
+   "lang": "id",
+   "generator": null,
+   "viewport": "width=device-width, initial-scale=1, shrink-to-fit=no",
+   "og": {
+    "image": true,
+    "title": true,
+    "description": true
+   },
+   "reducedMotionCss": true,
+   "libs": {
+    "gsap": false,
+    "scrollTrigger": false,
+    "aos": false,
+    "animateCss": false,
+    "wow": false,
+    "swiper": false,
+    "slick": false,
+    "owl": false,
+    "lottie": false,
+    "three": false,
+    "pixi": false,
+    "anime": false,
+    "motionOne": false,
+    "howler": false,
+    "jquery": true,
+    "bootstrap": true,
+    "tailwind": false,
+    "alpine": false,
+    "vue": false,
+    "nuxt": false,
+    "next": false,
+    "react": false,
+    "svelte": false,
+    "flutterWeb": false,
+    "wordpress": false,
+    "elementor": false,
+    "livewire": false,
+    "inertia": false
+   },
+   "sections": [
+    {
+     "tag": "div",
+     "id": "blog",
+     "cls": "latest-news-area section",
+     "heading": "Contoh Undangan Digital Khitanan",
+     "h": 95788
+    },
+    {
+     "tag": "div",
+     "id": "",
+     "cls": "section-title-five",
+     "heading": "Contoh Undangan Digital Khitanan",
+     "h": 1053
+    }
+   ],
+   "sectionCount": 2,
+   "buttons": [
+    "Masuk Dan Buat",
+    "Buat Undangan",
+    "Mulai Gratis",
+    "Contoh",
+    "Tools",
+    "Template",
+    "Baca Selengkapnya",
+    "Preview",
+    "Gunakan Tema",
+    "Copy",
+    "Sebar Dengan Tema Ini",
+    "×",
+    "Home",
+    "Harga",
+    "Login"
+   ],
+   "media": {
+    "audio": [],
+    "video": 0,
+    "iframes": [],
+    "canvases": 0,
+    "svgs": 1505,
+    "images": 569,
+    "lazyImages": 566
+   },
+   "forms": [
+    {
+     "fields": [
+      "hidden",
+      "email",
+      "password",
+      "submit"
+     ],
+     "hasRadio": false,
+     "hasSelect": false
+    },
+    {
+     "fields": [
+      "hidden",
+      "hidden",
+      "select-one",
+      "number",
+      "date",
+      "submit"
+     ],
+     "hasRadio": false,
+     "hasSelect": true
+    }
+   ],
+   "fontsUsed": [
+    "Poppins"
+   ],
+   "features": {
+    "coverGate": false,
+    "toGuest": false,
+    "countdown": false,
+    "rsvp": true,
+    "wishes": true,
+    "gift": true,
+    "copyButton": true,
+    "maps": false,
+    "calendar": false,
+    "livestream": false,
+    "qr": false,
+    "loveStory": false,
+    "gallery": true,
+    "dressCode": false,
+    "quranVerse": false,
+    "protocol": false,
+    "timezoneLabel": [],
+    "watermark": false,
+    "instagramFilter": false,
+    "musicControl": false
+   },
+   "domNodes": 13022,
+   "docHeight": 97057
+  }
+ },
+ "lighthouse": {
+  "ok": true,
+  "lighthouseVersion": "12.8.2",
+  "finalUrl": "https://indoinvite.com/preview/contoh-undangan-online-khitanan",
+  "throttling": {
+   "rttMs": 150,
+   "throughputKbps": 1638.4,
+   "requestLatencyMs": 562.5,
+   "downloadThroughputKbps": 1474.5600000000002,
+   "uploadThroughputKbps": 675,
+   "cpuSlowdownMultiplier": 4
+  },
+  "screen": {
+   "mobile": true,
+   "width": 412,
+   "height": 915,
+   "deviceScaleFactor": 2.625,
+   "disabled": false
+  },
+  "scores": {
+   "performance": 16,
+   "accessibility": 86,
+   "best-practices": 79,
+   "seo": 92
+  },
+  "metrics": {
+   "fcpMs": 3646.0840000000007,
+   "lcpMs": 8578.789999999999,
+   "tbtMs": 5065.3195,
+   "cls": 0.3704276938710784,
+   "siMs": 5283.611319447908,
+   "ttiMs": 18003.73375
+  },
+  "byType": {
+   "total": {
+    "requests": 77,
+    "bytes": 2289276
+   },
+   "script": {
+    "requests": 16,
+    "bytes": 1190904
+   },
+   "image": {
+    "requests": 19,
+    "bytes": 708620
+   },
+   "stylesheet": {
+    "requests": 4,
+    "bytes": 233600
+   },
+   "document": {
+    "requests": 2,
+    "bytes": 95650
+   },
+   "font": {
+    "requests": 5,
+    "bytes": 39215
+   },
+   "other": {
+    "requests": 31,
+    "bytes": 21287
+   },
+   "media": {
+    "requests": 0,
+    "bytes": 0
+   },
+   "third-party": {
+    "requests": 63,
+    "bytes": 1616591
+   }
+  },
+  "totalBytes": 2289276,
+  "requests": 77,
+  "thirdParties": [
+   {
+    "entity": "Google Tag Manager",
+    "bytes": 527176,
+    "blockingMs": 2066.0000000000127
+   },
+   {
+    "entity": "Facebook",
+    "bytes": 265217,
+    "blockingMs": 1116.000000000001
+   },
+   {
+    "entity": "TikTok",
+    "bytes": 184749,
+    "blockingMs": 655.0000000000008
+   },
+   {
+    "entity": "Clarity",
+    "bytes": 29109,
+    "blockingMs": 584.9017455228418
+   },
+   {
+    "entity": "Cloudflare CDN",
+    "bytes": 28119,
+    "blockingMs": 90.84945997281186
+   },
+   {
+    "entity": "openai.com",
+    "bytes": 37178,
+    "blockingMs": 51.00000000000001
+   },
+   {
+    "entity": "contabostorage.com",
+    "bytes": 496675,
+    "blockingMs": 0
+   },
+   {
+    "entity": "Google Fonts",
+    "bytes": 40649,
+    "blockingMs": 0
+   },
+   {
+    "entity": "Google/Doubleclick Ads",
+    "bytes": 3705,
+    "blockingMs": 0
+   },
+   {
+    "entity": "Google CDN",
+    "bytes": 1475,
+    "blockingMs": 0
+   },
+   {
+    "entity": "tiktokw.us",
+    "bytes": 823,
+    "blockingMs": 0
+   },
+   {
+    "entity": "Bing Ads",
+    "bytes": 766,
+    "blockingMs": 0
+   }
+  ],
+  "fontDisplayIssues": 0,
+  "unusedJsBytes": 450885,
+  "a11yFailures": [
+   "color-contrast",
+   "heading-order",
+   "list",
+   "listitem"
+  ]
+ },
+ "files": {
+  "rea-inspect.json": "1eba540bc881f561b1c36adc15c34116f53ec15ff1d5c330e9687260b140f53b",
+  "rea-bundle.json": "38396dcabfd66ff505b28e950bd5a8a0a552a0c15a8a6aa34673b8924501b9e6",
+  "_private/rea/C-IDI-102/rea-scenario.json": "3edaae736edf106c6252400fdb90e831680dd70c8bb09b84fff8a89a5d9a9aff",
+  "_private/lh/C-IDI-102.json": "8287bb9935ef5ec48cdad7ae368e77742cc73fb3ed41fb90c3bca0cb11db07ac"
+ },
+ "screenshot": "_private/thumbs (competitor, not committed)"
+}

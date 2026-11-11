@@ -1,0 +1,346 @@
+{
+ "code": "INV",
+ "competitor": "invi",
+ "observedAt": "2026-10-29T05:57:53.581+07:00",
+ "homepage": {
+  "url": "https://invi.id/",
+  "finalUrl": "https://invi.id/",
+  "skipped": null,
+  "links": 36
+ },
+ "catalogCandidates": [
+  "https://invi.id/katalog/",
+  "https://invi.id/pernikahan/",
+  "https://invi.id/ulang-tahun/",
+  "https://invi.id/khitan/",
+  "https://invi.id/aqiqah/"
+ ],
+ "catalog": {
+  "url": "https://invi.id/katalog/",
+  "finalUrl": "https://invi.id/katalog/",
+  "skipped": null,
+  "links": 448
+ },
+ "demos": [
+  {
+   "href": "https://invi.id/tema/white-lily/?to=Nama+Tamu",
+   "label": "LIHAT TEMA"
+  },
+  {
+   "href": "https://invi.id/tema/adat-jawa/?to=Nama+Tamu",
+   "label": "LIHAT TEMA"
+  },
+  {
+   "href": "https://invi.id/tema/adat-art-jawa/?to=Nama+Tamu",
+   "label": "LIHAT TEMA"
+  },
+  {
+   "href": "https://invi.id/tema/minimalis-02/?to=Nama+Tamu",
+   "label": "LIHAT TEMA"
+  },
+  {
+   "href": "https://invi.id/tema/floral-02/?to=Nama+Tamu",
+   "label": "LIHAT TEMA"
+  },
+  {
+   "href": "https://invi.id/tema/minimalis-01/?to=Nama+Tamu",
+   "label": "LIHAT TEMA"
+  },
+  {
+   "href": "https://invi.id/tema/brown-rustic/?to=Nama+Tamu",
+   "label": "LIHAT TEMA"
+  },
+  {
+   "href": "https://invi.id/tema/elegant-01/?to=Nama+Tamu",
+   "label": "LIHAT TEMA"
+  },
+  {
+   "href": "https://invi.id/tema/floral-01/?to=Nama+Tamu",
+   "label": "LIHAT TEMA"
+  },
+  {
+   "href": "https://invi.id/tema/bugis-heritage/?to=Nama+Tamu",
+   "label": "LIHAT TEMA"
+  },
+  {
+   "href": "https://invi.id/tema/monochrome-06/",
+   "label": "LIHAT TEMA"
+  },
+  {
+   "href": "https://invi.id/tema/minimalis-04/?to=Nama+Tamu",
+   "label": "LIHAT TEMA"
+  },
+  {
+   "href": "https://invi.id/tema/art-blue-java/?to=Nama+Tamu",
+   "label": "LIHAT TEMA"
+  },
+  {
+   "href": "https://invi.id/tema/minimalis-08/?to=Nama+Tamu",
+   "label": "LIHAT TEMA"
+  },
+  {
+   "href": "https://invi.id/tema/minimalis-05/?to=Nama+Tamu",
+   "label": "LIHAT TEMA"
+  },
+  {
+   "href": "https://demo.invi.id/wp-content/uploads/2023/10/Garden-07.webp",
+   "label": ""
+  },
+  {
+   "href": "https://invi.id/tema/garden-07/?to=Nama+Tamu",
+   "label": "LIHAT TEMA"
+  },
+  {
+   "href": "https://invi.id/tema/minimalis-03/?to=Nama+Tamu",
+   "label": "LIHAT TEMA"
+  },
+  {
+   "href": "https://invi.id/tema/envelope-burgundy/",
+   "label": "LIHAT TEMA"
+  },
+  {
+   "href": "https://invi.id/tema/glasshouse-garden/",
+   "label": "LIHAT TEMA"
+  },
+  {
+   "href": "https://invi.id/tema/minimalis-07/?to=Nama+Tamu",
+   "label": "LIHAT TEMA"
+  },
+  {
+   "href": "https://invi.id/tema/minang-heritage-tanpa-foto/?to=Nama+Tamu",
+   "label": "Tanpa Foto"
+  },
+  {
+   "href": "https://invi.id/tema/minang-heritage/?to=Nama+Tamu",
+   "label": "Dengan Foto"
+  },
+  {
+   "href": "https://invi.id/tema/midnight-at-garden/?to=Nama+Tamu",
+   "label": "LIHAT TEMA"
+  },
+  {
+   "href": "https://invi.id/tema/art-royal-garden/?to=Nama+Tamu",
+   "label": "LIHAT TEMA"
+  },
+  {
+   "href": "https://invi.id/tema/betawi-heritage/?to=Nama+Tamu",
+   "label": "LIHAT TEMA"
+  },
+  {
+   "href": "https://invi.id/tema/monochrome-02/",
+   "label": "LIHAT TEMA"
+  },
+  {
+   "href": "https://invi.id/tema/art-pink-castle/?to=Nama+Tamu",
+   "label": "LIHAT TEMA"
+  },
+  {
+   "href": "https://invi.id/tema/harbor-garden/?to=Nama+Tamu",
+   "label": "LIHAT TEMA"
+  },
+  {
+   "href": "https://invi.id/tema/celestial-temple/?to=Nama+Tamu",
+   "label": "LIHAT TEMA"
+  },
+  {
+   "href": "https://invi.id/tema/monochrome-01/",
+   "label": "LIHAT TEMA"
+  },
+  {
+   "href": "https://invi.id/tema/moonlight-pavilion/?to=Nama+Tamu",
+   "label": "LIHAT TEMA"
+  },
+  {
+   "href": "https://invi.id/tema/floral-03/?to=Nama+Tamu",
+   "label": "LIHAT TEMA"
+  },
+  {
+   "href": "https://invi.id/tema/adat-art-minang/?to=Nama+Tamu",
+   "label": "LIHAT TEMA"
+  },
+  {
+   "href": "https://invi.id/tema/batak-heritage/?to=Nama+Tamu",
+   "label": "LIHAT TEMA"
+  },
+  {
+   "href": "https://invi.id/tema/purple-lavender/?to=Nama+Tamu",
+   "label": "LIHAT TEMA"
+  },
+  {
+   "href": "https://invi.id/tema/art-01/?to=Nama+Tamu",
+   "label": "LIHAT TEMA"
+  },
+  {
+   "href": "https://invi.id/tema/monochrome-05/",
+   "label": "LIHAT TEMA"
+  },
+  {
+   "href": "https://invi.id/tema/monochrome-04/",
+   "label": "LIHAT TEMA"
+  },
+  {
+   "href": "https://invi.id/tema/harmony-garden/?to=Nama+Tamu",
+   "label": "LIHAT TEMA"
+  },
+  {
+   "href": "https://invi.id/tema/hanami-sakura/?to=Nama+Tamu",
+   "label": "LIHAT TEMA"
+  },
+  {
+   "href": "https://invi.id/tema/adat-art-bali/?to=Nama+Tamu",
+   "label": "LIHAT TEMA"
+  },
+  {
+   "href": "https://invi.id/tema/adat-art-lampung/?to=Nama+Tamu",
+   "label": "LIHAT TEMA"
+  },
+  {
+   "href": "https://invi.id/tema/garden-01/?to=Nama+Tamu",
+   "label": "LIHAT TEMA"
+  },
+  {
+   "href": "https://invi.id/tema/art-minang/?to=Nama+Tamu",
+   "label": "LIHAT TEMA"
+  },
+  {
+   "href": "https://invi.id/tema/floral-08/?to=Nama+Tamu",
+   "label": "LIHAT TEMA"
+  },
+  {
+   "href": "https://invi.id/tema/fountain-garden/?to=Nama+Tamu",
+   "label": "LIHAT TEMA"
+  },
+  {
+   "href": "https://invi.id/tema/palembang-heritage/?to=Nama+Tamu",
+   "label": "LIHAT TEMA"
+  },
+  {
+   "href": "https://invi.id/tema/minimalis-06/?to=Nama+Tamu",
+   "label": "LIHAT TEMA"
+  },
+  {
+   "href": "https://invi.id/tema/syari-02/?to=Nama+Tamu",
+   "label": "LIHAT TEMA"
+  },
+  {
+   "href": "https://invi.id/tema/floral-05/?to=Nama+Tamu",
+   "label": "LIHAT TEMA"
+  },
+  {
+   "href": "https://invi.id/tema/floral-14/?to=Nama+Tamu",
+   "label": "LIHAT TEMA"
+  },
+  {
+   "href": "https://invi.id/tema/envelope-navy/",
+   "label": "LIHAT TEMA"
+  },
+  {
+   "href": "https://invi.id/tema/floral-13/?to=Nama+Tamu",
+   "label": "LIHAT TEMA"
+  },
+  {
+   "href": "https://invi.id/tema/melayu-heritage/?to=Nama+Tamu",
+   "label": "LIHAT TEMA"
+  },
+  {
+   "href": "https://invi.id/tema/adat-batak/?to=Nama+Tamu",
+   "label": "LIHAT TEMA"
+  },
+  {
+   "href": "https://invi.id/tema/aqiqah-09/?to=Nama+Tamu",
+   "label": "LIHAT TEMA"
+  },
+  {
+   "href": "https://invi.id/tema/floral-18/?to=Nama+Tamu",
+   "label": "LIHAT TEMA"
+  },
+  {
+   "href": "https://invi.id/tema/garden-02/?to=Nama+Tamu",
+   "label": "LIHAT TEMA"
+  },
+  {
+   "href": "https://invi.id/tema/adat-minang/?to=Nama+Tamu",
+   "label": "LIHAT TEMA"
+  },
+  {
+   "href": "https://invi.id/tema/envelope-mocha/",
+   "label": "LIHAT TEMA"
+  },
+  {
+   "href": "https://invi.id/tema/syari-01/?to=Nama+Tamu",
+   "label": "LIHAT TEMA"
+  },
+  {
+   "href": "https://invi.id/tema/syari-03/?to=Nama+Tamu",
+   "label": "LIHAT TEMA"
+  },
+  {
+   "href": "https://invi.id/tema/art-02/?to=Nama+Tamu",
+   "label": "LIHAT TEMA"
+  },
+  {
+   "href": "https://invi.id/tema/floral-12/?to=Nama+Tamu",
+   "label": "LIHAT TEMA"
+  },
+  {
+   "href": "https://invi.id/tema/monochrome-03/",
+   "label": "LIHAT TEMA"
+  },
+  {
+   "href": "https://invi.id/tema/art-04/?to=Nama+Tamu",
+   "label": "LIHAT TEMA"
+  },
+  {
+   "href": "https://invi.id/tema/castle-garden/?to=Nama+Tamu",
+   "label": "LIHAT TEMA"
+  },
+  {
+   "href": "https://invi.id/tema/pavilion-garden/?to=Nama+Tamu",
+   "label": "LIHAT TEMA"
+  },
+  {
+   "href": "https://invi.id/tema/khitanan-02/?to=Nama+Tamu",
+   "label": "LIHAT TEMA"
+  },
+  {
+   "href": "https://invi.id/tema/adat-aceh/?to=Nama+Tamu",
+   "label": "LIHAT TEMA"
+  },
+  {
+   "href": "https://invi.id/tema/floral-06/?to=Nama+Tamu",
+   "label": "LIHAT TEMA"
+  },
+  {
+   "href": "https://invi.id/tema/floral-20/?to=Nama+Tamu",
+   "label": "LIHAT TEMA"
+  },
+  {
+   "href": "https://demo.invi.id/wp-content/uploads/2023/05/Khitan-01.jpg",
+   "label": ""
+  },
+  {
+   "href": "https://invi.id/tema/khitan-01/?to=Nama+Tamu",
+   "label": "LIHAT TEMA"
+  },
+  {
+   "href": "https://demo.invi.id/wp-content/uploads/2023/04/Khitan-02.jpg",
+   "label": ""
+  },
+  {
+   "href": "https://invi.id/tema/khitan-02/?to=Nama+Tamu",
+   "label": "LIHAT TEMA"
+  },
+  {
+   "href": "https://demo.invi.id/wp-content/uploads/2023/05/Khitan-07.jpg",
+   "label": ""
+  },
+  {
+   "href": "https://invi.id/tema/khitan-07/?to=Nama+Tamu",
+   "label": "LIHAT TEMA"
+  },
+  {
+   "href": "https://invi.id/tema/mansion-garden/?to=Nama+Tamu",
+   "label": "LIHAT TEMA"
+  }
+ ]
+}

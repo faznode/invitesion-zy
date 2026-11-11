@@ -1,0 +1,28 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "select o.id from orders o left join templates t on t.id = o.template_id where o.invitation_id = $1 and o.status = 'PAID' and (o.tier = 'premium' or t.is_premium = true) limit 1",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "id",
+        "type_info": "Int4",
+        "origin": {
+          "Table": {
+            "table": "orders",
+            "name": "id"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Left": [
+        "Int4"
+      ]
+    },
+    "nullable": [
+      false
+    ]
+  },
+  "hash": "d4e9dc536f2453bfb69e88e1b0ec8d1c397c55ae1c1f643fb356ee28463d202b"
+}

@@ -1,0 +1,53 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "select name, phone, guest_count from guest_registrations where id = $1 and invitation_id = $2",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "name",
+        "type_info": "Varchar",
+        "origin": {
+          "Table": {
+            "table": "guest_registrations",
+            "name": "name"
+          }
+        }
+      },
+      {
+        "ordinal": 1,
+        "name": "phone",
+        "type_info": "Varchar",
+        "origin": {
+          "Table": {
+            "table": "guest_registrations",
+            "name": "phone"
+          }
+        }
+      },
+      {
+        "ordinal": 2,
+        "name": "guest_count",
+        "type_info": "Int4",
+        "origin": {
+          "Table": {
+            "table": "guest_registrations",
+            "name": "guest_count"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Left": [
+        "Int4",
+        "Int4"
+      ]
+    },
+    "nullable": [
+      false,
+      true,
+      false
+    ]
+  },
+  "hash": "150e22e6e37444893bceace7febf9d4fd8a69a526264dcf10971da6dd56feca0"
+}

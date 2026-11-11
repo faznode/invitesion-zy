@@ -1,0 +1,625 @@
+{
+ "id": "C-INV-209",
+ "competitor": "invi",
+ "kind": "demo",
+ "url": "https://demo.invi.id/pernikahan/adat-jawa/?to=Nama%20Tamu",
+ "capturedAt": "2026-11-04T22:06:17.545+07:00",
+ "robots": {
+  "allowed": true,
+  "note": "no matching rule"
+ },
+ "method": "REA capture-browser-scenario (connect mode) drives navigation, settle and keyboard scroll; optional cover click (trusted CDP mouse click on the settled control: coverClickMethod, coverClickLanding) and scroll through the opened page by CDP after REA's scenario; CDP mobile emulation 412x915 @2.625 + prefers-reduced-motion no-preference, re-applied (clear + set) after REA's scenario + Android Chrome UA, cold cache (no throttling); REA inspect/bundle skipped (lean); custom structure pass (text features + animation libraries: no REA coverage) + layout and motion probes; Lighthouse 12 mobile simulate (Slow 4G, 4x CPU) when present",
+ "measurement": {
+  "protocol": "v2",
+  "profile": "v2-412",
+  "viewport": {
+   "width": 412,
+   "height": 915,
+   "device_scale_factor": 2.625
+  },
+  "reduced_motion": "no-preference",
+  "method": "protocol v2 (lean): REA scenario + CDP structure / layout / motion probes + Lighthouse; no REA inspect or bundle analysis",
+  "lighthouse_screen": {
+   "width": 412,
+   "height": 915,
+   "deviceScaleFactor": 2.625,
+   "mobile": true
+  },
+  "lighthouse_motion": "no-preference (default)",
+  "cdp_reapply": "clear + set",
+  "emulation_verified": true,
+  "emulation_mismatches": [],
+  "emulation_final": {
+   "android": true,
+   "screenWidth": 412,
+   "screenHeight": 915,
+   "width": 412,
+   "dpr": 2.625,
+   "coarsePointer": false,
+   "reducedMotion": false
+  },
+  "emulation_during_scenario": {
+   "ok": false,
+   "mismatches": [
+    "screen.width 800 != 412",
+    "screen.height 600 != 915"
+   ]
+  }
+ },
+ "driver": "rea",
+ "rea": {
+  "version": "6.8.0",
+  "scenario": {
+   "ok": true,
+   "exit": 0,
+   "ms": 21753,
+   "evidenceId": "ev_1842923b564b8dcafbdadf660d2b393401380066e51f528efc3b961c1ecb84b0",
+   "status": "incomplete",
+   "stepsCompleted": 32,
+   "stepsTotal": 32,
+   "failed": [],
+   "events": 445,
+   "error": null,
+   "sha256": "9b5f7614e088f6df174ed79e94b66664f57f04b4bf5349a9f70e95f56ca70114",
+   "file": "_private/rea/C-INV-209/rea-scenario.json"
+  },
+  "emulation": {
+   "duringScenario": {
+    "android": true,
+    "screenWidth": 800,
+    "screenHeight": 600,
+    "width": 412,
+    "dpr": 2.625,
+    "coarsePointer": false,
+    "reducedMotion": false
+   },
+   "afterScenario": {
+    "android": true,
+    "screenWidth": 800,
+    "screenHeight": 600,
+    "width": 500,
+    "dpr": 1,
+    "coarsePointer": false,
+    "reducedMotion": false
+   }
+  },
+  "inspectEvidenceId": null,
+  "bundleEvidenceId": null,
+  "inspectError": "skipped: lean profile v2-412",
+  "bundleError": "skipped: lean profile v2-412",
+  "domNodes": null,
+  "scripts": null,
+  "resources": null,
+  "completeness": null,
+  "bundleChunks": null,
+  "bundleEndpoints": [],
+  "bundleInferences": []
+ },
+ "network": {
+  "loadEventMs": 5041,
+  "requests": 186,
+  "bytes": 11299142,
+  "byType": {
+   "Document": {
+    "requests": 4,
+    "bytes": 40255
+   },
+   "Stylesheet": {
+    "requests": 50,
+    "bytes": 166923
+   },
+   "Image": {
+    "requests": 61,
+    "bytes": 9660950
+   },
+   "Script": {
+    "requests": 46,
+    "bytes": 787757
+   },
+   "Font": {
+    "requests": 15,
+    "bytes": 641627
+   },
+   "Media": {
+    "requests": 7,
+    "bytes": 0
+   },
+   "Fetch": {
+    "requests": 2,
+    "bytes": 0
+   },
+   "Other": {
+    "requests": 1,
+    "bytes": 1630
+   }
+  },
+  "protocols": [
+   "h3",
+   "h2"
+  ],
+  "scriptHosts": [
+   "demo.invi.id",
+   "unpkg.com",
+   "www.googletagmanager.com",
+   "cdnjs.cloudflare.com",
+   "www.youtube.com"
+  ],
+  "scriptFiles": [
+   "jquery-migrate.min.js",
+   "jquery.min.js",
+   "invi.js",
+   "saic_lib.js",
+   "wds-rsvp.js",
+   "qr-code.js",
+   "exad-scripts.min.js",
+   "jquery.placeholder.min.js",
+   "jquery.textareaCounter.js",
+   "jquery.jPages.min.js",
+   "main.js",
+   "cui_script.js",
+   "wdp-swiper.min.js",
+   "swiper.min.js",
+   "qr-code-styling.js",
+   "jquery.sticky.min.js",
+   "i18n.min.js",
+   "e-gallery.min.js",
+   "hooks.min.js",
+   "autosize.min.js",
+   "webpack-pro.runtime.min.js",
+   "webpack.runtime.min.js",
+   "frontend-modules.min.js",
+   "core.min.js",
+   "frontend.min.js",
+   "frontend.min.js",
+   "wdp.min.js",
+   "guest-form.js",
+   "jet-elements.min.js",
+   "elements-handlers.min.js",
+   "bdt-uikit.js",
+   "js",
+   "xlsx.full.min.js",
+   "641.41d6784859f93ced2969.js",
+   "lightbox.f3fa607b705962362647.bundle.min.js",
+   "dialog.min.js",
+   "text-editor.c084ef86600b6f11690d.bundle.min.js",
+   "image-carousel.6167d20b95b33386757b.bundle.min.js",
+   "gallery.1628df47530ab42dafba.bundle.min.js",
+   "video.4343afefd25b5ede51a4.bundle.min.js"
+  ],
+  "fontFiles": [
+   {
+    "host": "fonts.gstatic.com",
+    "file": "BngMUXZGTXPUvIoyV6yN5-fN5qWr4xCC.woff2",
+    "bytes": 21393
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "PbytFmztEwbIoce9zqYzQ1OW.woff2",
+    "bytes": 33372
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "2sDcZGJYnIjSi6H75xkzaGW5Kb8VZA.woff2",
+    "bytes": 22085
+   },
+   {
+    "host": "demo.invi.id",
+    "file": "ivymode-regular.woff",
+    "bytes": 53871
+   },
+   {
+    "host": "demo.invi.id",
+    "file": "fa-brands-400.woff2",
+    "bytes": 82173
+   },
+   {
+    "host": "demo.invi.id",
+    "file": "Iskry-Regular.woff",
+    "bytes": 117420
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS-mu0SC55I.woff2",
+    "bytes": 42996
+   },
+   {
+    "host": "demo.invi.id",
+    "file": "fa-regular-400.woff2",
+    "bytes": 13830
+   },
+   {
+    "host": "demo.invi.id",
+    "file": "fa-solid-900.woff2",
+    "bytes": 78754
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "0QIvMX1D_JOuMwr7I_FMl_E.woff2",
+    "bytes": 37824
+   },
+   {
+    "host": "demo.invi.id",
+    "file": "sloopscript.woff",
+    "bytes": 32502
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "pxiByp8kv8JHgFVrLEj6Z1xlFd2JQEk.woff2",
+    "bytes": 8019
+   },
+   {
+    "host": "demo.invi.id",
+    "file": "NewYork.ttf",
+    "bytes": 23356
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "JTUSjIg1_i6t8kCHKm459WlhyyTh89Y.woff2",
+    "bytes": 35540
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "nuFiD-vYSZviVYUb_rj3ij__anPXDTzYgEM86xQ.woff2",
+    "bytes": 38492
+   }
+  ],
+  "thirdPartyHosts": [
+   "fonts.googleapis.com",
+   "i0.wp.com",
+   "fonts.gstatic.com",
+   "unpkg.com",
+   "www.googletagmanager.com",
+   "cdnjs.cloudflare.com",
+   "www.youtube.com",
+   "www.google-analytics.com",
+   "www.google.com"
+  ]
+ },
+ "structure": {
+  "coverClicked": "Buka Undangan",
+  "coverClickMethod": "trusted",
+  "coverClickLanding": "inside",
+  "beforeOpen": {
+   "sectionCount": 1,
+   "features": {
+    "coverGate": true,
+    "toGuest": true,
+    "countdown": true,
+    "rsvp": false,
+    "wishes": true,
+    "gift": true,
+    "copyButton": true,
+    "maps": true,
+    "calendar": false,
+    "livestream": false,
+    "qr": false,
+    "loveStory": true,
+    "gallery": true,
+    "dressCode": false,
+    "quranVerse": true,
+    "protocol": false,
+    "timezoneLabel": [],
+    "watermark": false,
+    "instagramFilter": false,
+    "musicControl": true
+   },
+   "buttons": [
+    "Petunjuk Arah",
+    "Gabung Live via Zoom",
+    "Gabung Live via Instagram",
+    "Jl. Raden Wijaya, Porong, Sidoarjo. Salin",
+    "Salin",
+    "# Salin",
+    "Buka Undangan"
+   ],
+   "motion": {
+    "reducedMotionMatches": false,
+    "animations": 3,
+    "running": 3,
+    "runningCssAnimations": 2,
+    "runningCssTransitions": 1,
+    "runningWebAnimations": 0,
+    "runningInfinite": 2,
+    "gsapActiveTweens": null,
+    "playingVideos": 0
+   }
+  },
+  "afterOpen": {
+   "title": "Adat Jawa - Tema Invi",
+   "lang": "id",
+   "generator": "WordPress 7.1.4",
+   "viewport": "width=device-width, initial-scale=1.0, viewport-fit=cover",
+   "og": {
+    "image": true,
+    "title": true,
+    "description": true
+   },
+   "reducedMotionCss": true,
+   "libs": {
+    "gsap": false,
+    "scrollTrigger": false,
+    "aos": false,
+    "animateCss": false,
+    "wow": false,
+    "swiper": true,
+    "slick": false,
+    "owl": false,
+    "lottie": false,
+    "three": false,
+    "pixi": false,
+    "anime": false,
+    "motionOne": false,
+    "howler": false,
+    "jquery": true,
+    "bootstrap": false,
+    "tailwind": false,
+    "alpine": false,
+    "vue": false,
+    "nuxt": false,
+    "next": false,
+    "react": false,
+    "svelte": false,
+    "flutterWeb": false,
+    "wordpress": true,
+    "elementor": true,
+    "livewire": false,
+    "inertia": false
+   },
+   "sections": [
+    {
+     "tag": "section",
+     "id": "",
+     "cls": "elementor-section elementor-top-section elementor-element elementor-element-79c5",
+     "heading": "Our Wedding Invitation",
+     "h": 11307
+    }
+   ],
+   "sectionCount": 1,
+   "buttons": [
+    "Petunjuk Arah",
+    "Gabung Live via Zoom",
+    "Gabung Live via Instagram",
+    "Jl. Raden Wijaya, Porong, Sidoarjo. Salin",
+    "Salin",
+    "# Salin",
+    "Buka Undangan"
+   ],
+   "media": {
+    "audio": [
+     {
+      "autoplay": false,
+      "loop": false,
+      "type": ""
+     },
+     {
+      "autoplay": false,
+      "loop": false,
+      "type": "mp3"
+     },
+     {
+      "autoplay": false,
+      "loop": false,
+      "type": ""
+     },
+     {
+      "autoplay": false,
+      "loop": false,
+      "type": "mp3"
+     }
+    ],
+    "video": 0,
+    "iframes": [
+     "maps.google.com",
+     "maps.google.com",
+     "www.youtube.com"
+    ],
+    "canvases": 0,
+    "svgs": 10,
+    "images": 31,
+    "lazyImages": 12
+   },
+   "forms": [],
+   "fontsUsed": [
+    "iskry-regular",
+    "NewYork",
+    "ivymode-regular",
+    "sloopscript",
+    "Alata",
+    "Assistant",
+    "Lobster Two",
+    "Lora",
+    "Open Sans",
+    "Poppins",
+    "Font Awesome 5 Brands",
+    "Font Awesome 5 Free"
+   ],
+   "features": {
+    "coverGate": true,
+    "toGuest": true,
+    "countdown": true,
+    "rsvp": false,
+    "wishes": true,
+    "gift": true,
+    "copyButton": true,
+    "maps": true,
+    "calendar": false,
+    "livestream": true,
+    "qr": false,
+    "loveStory": true,
+    "gallery": true,
+    "dressCode": false,
+    "quranVerse": true,
+    "protocol": false,
+    "timezoneLabel": [
+     "WIB"
+    ],
+    "watermark": false,
+    "instagramFilter": false,
+    "musicControl": true
+   },
+   "domNodes": 1053,
+   "docHeight": 11307,
+   "layout": {
+    "innerWidth": 412,
+    "scrollWidth": 412,
+    "horizontalOverflowPx": 0,
+    "overflowingElements": 0,
+    "smallTextElements": 4,
+    "interactiveTargets": 18,
+    "smallTargets": 2,
+    "viewportMeta": "width=device-width, initial-scale=1.0, viewport-fit=cover",
+    "zoomBlocked": false
+   },
+   "motion": {
+    "reducedMotionMatches": false,
+    "animations": 3,
+    "running": 3,
+    "runningCssAnimations": 2,
+    "runningCssTransitions": 1,
+    "runningWebAnimations": 0,
+    "runningInfinite": 2,
+    "gsapActiveTweens": null,
+    "playingVideos": 0
+   }
+  }
+ },
+ "lighthouse": {
+  "ok": true,
+  "lighthouseVersion": "12.8.2",
+  "finalUrl": "https://demo.invi.id/pernikahan/adat-jawa/?to=Nama%20Tamu",
+  "throttling": {
+   "rttMs": 150,
+   "throughputKbps": 1638.4,
+   "requestLatencyMs": 562.5,
+   "downloadThroughputKbps": 1474.5600000000002,
+   "uploadThroughputKbps": 675,
+   "cpuSlowdownMultiplier": 4
+  },
+  "screen": {
+   "mobile": true,
+   "width": 412,
+   "height": 915,
+   "deviceScaleFactor": 2.625,
+   "disabled": false
+  },
+  "scores": {
+   "performance": 38,
+   "accessibility": 88,
+   "best-practices": 93,
+   "seo": 66
+  },
+  "metrics": {
+   "fcpMs": 3765.629500000001,
+   "lcpMs": 21699.655499999997,
+   "tbtMs": 1182.5,
+   "cls": 0.00007397009364326846,
+   "siMs": 6730.1255896187795,
+   "ttiMs": 21865.49355
+  },
+  "byType": {
+   "total": {
+    "requests": 181,
+    "bytes": 6178914
+   },
+   "image": {
+    "requests": 23,
+    "bytes": 3077194
+   },
+   "script": {
+    "requests": 75,
+    "bytes": 2146155
+   },
+   "font": {
+    "requests": 14,
+    "bytes": 601970
+   },
+   "stylesheet": {
+    "requests": 51,
+    "bytes": 228304
+   },
+   "document": {
+    "requests": 4,
+    "bytes": 118638
+   },
+   "other": {
+    "requests": 13,
+    "bytes": 6118
+   },
+   "media": {
+    "requests": 1,
+    "bytes": 535
+   },
+   "third-party": {
+    "requests": 75,
+    "bytes": 2213398
+   }
+  },
+  "totalBytes": 6178914,
+  "requests": 181,
+  "thirdParties": [
+   {
+    "entity": "Google Tag Manager",
+    "bytes": 181468,
+    "blockingMs": 653.9999999999977
+   },
+   {
+    "entity": "Cloudflare CDN",
+    "bytes": 216311,
+    "blockingMs": 448.21495312111404
+   },
+   {
+    "entity": "Unpkg",
+    "bytes": 16264,
+    "blockingMs": 24.30733370742881
+   },
+   {
+    "entity": "Other Google APIs/SDKs",
+    "bytes": 27497,
+    "blockingMs": 0.39904177719576
+   },
+   {
+    "entity": "YouTube",
+    "bytes": 1039087,
+    "blockingMs": 0
+   },
+   {
+    "entity": "Google Maps",
+    "bytes": 484886,
+    "blockingMs": 0
+   },
+   {
+    "entity": "Google Fonts",
+    "bytes": 210094,
+    "blockingMs": 0
+   },
+   {
+    "entity": "WordPress",
+    "bytes": 36582,
+    "blockingMs": 0
+   },
+   {
+    "entity": "Google/Doubleclick Ads",
+    "bytes": 663,
+    "blockingMs": 0
+   },
+   {
+    "entity": "Google Analytics",
+    "bytes": 546,
+    "blockingMs": 0
+   }
+  ],
+  "fontDisplayIssues": 4,
+  "unusedJsBytes": 302020,
+  "a11yFailures": [
+   "color-contrast",
+   "heading-order",
+   "link-name",
+   "skip-link"
+  ]
+ },
+ "files": {
+  "_private/rea/C-INV-209/rea-scenario.json": "9b5f7614e088f6df174ed79e94b66664f57f04b4bf5349a9f70e95f56ca70114",
+  "_private/lh/C-INV-209.json": "9c9e95706a54b4c869a9281da22d0af8f92d8a506507f9bd57388b365cbcc6e9"
+ },
+ "screenshot": "_private/thumbs (competitor, not committed)"
+}

@@ -1,0 +1,515 @@
+{
+ "id": "C-ENV-120",
+ "competitor": "enviory",
+ "kind": "demo",
+ "url": "https://enviory.com/rdct-6687484a60?tpl=velora-linear",
+ "capturedAt": "2026-10-30T05:15:50.041+07:00",
+ "robots": {
+  "allowed": true,
+  "note": "Allow: /"
+ },
+ "method": "REA capture-browser-scenario (connect mode) drives navigation, settle and keyboard scroll; optional cover click by CDP inside REA's settle window (trusted mouse click when hit-testable, else el.click(): coverClickMethod); CDP mobile emulation 412x915 @2.625 + Android Chrome UA, cold cache (no throttling); REA 6.8.0 inspect-web-page/analyze-web-bundle; custom structure pass (text features + animation libraries: no REA coverage); Lighthouse 12 mobile simulate (Slow 4G, 4x CPU) when present",
+ "driver": "rea",
+ "rea": {
+  "version": "6.8.0",
+  "scenario": {
+   "ok": true,
+   "exit": 0,
+   "ms": 32194,
+   "evidenceId": "ev_6fc9a71ab65ab7c5094bff44942107111bb9bf87ef2f5aed72a558d3b0d33d54",
+   "status": "incomplete",
+   "stepsCompleted": 32,
+   "stepsTotal": 32,
+   "failed": [],
+   "events": 158,
+   "error": null,
+   "sha256": "d399cde5f026f1b44a7306a02c179b05e0bbbba6a080a718e3b814834113664d",
+   "file": "_private/rea/C-ENV-120/rea-scenario.json"
+  },
+  "emulation": {
+   "duringScenario": {
+    "android": true,
+    "width": 412,
+    "dpr": 2.625,
+    "coarsePointer": false,
+    "reducedMotion": false
+   },
+   "afterScenario": {
+    "android": true,
+    "width": 500,
+    "dpr": 1,
+    "coarsePointer": false,
+    "reducedMotion": false
+   }
+  },
+  "inspectEvidenceId": "ev_43a9e24640d9b8eefb48454b136e571f84b3761247886d400a8d06b384ea8595",
+  "bundleEvidenceId": "ev_ede2c6118038fe9b3b8e46b90d6624053937cd6e51c76bce84b1971f06bd0ede",
+  "inspectError": null,
+  "bundleError": null,
+  "domNodes": 177,
+  "scripts": 19,
+  "resources": 11,
+  "completeness": "policy_filtered",
+  "bundleChunks": 19,
+  "bundleEndpoints": [],
+  "bundleInferences": [
+   {
+    "kind": "endpoint_candidate",
+    "value": "u",
+    "confidence": "low",
+    "basis": [
+     {
+      "script_key": "scr_0d35f026d6dfbd0f6393cd3e6a5ce3d3986c4fb07f2b1a74f6071cc7dbb1513d",
+      "artifact_sha256": "b3dcf40de3f3d5d66a250e93f6ab98941f75d9ebb11d019fe1754ce31bd1db9c",
+      "line": 3,
+      "column": 35230,
+      "detector": "call:n.get:unverified-network-receiver"
+     }
+    ]
+   },
+   {
+    "kind": "endpoint_candidate",
+    "value": "name",
+    "confidence": "low",
+    "basis": [
+     {
+      "script_key": "scr_0d35f026d6dfbd0f6393cd3e6a5ce3d3986c4fb07f2b1a74f6071cc7dbb1513d",
+      "artifact_sha256": "b3dcf40de3f3d5d66a250e93f6ab98941f75d9ebb11d019fe1754ce31bd1db9c",
+      "line": 3,
+      "column": 35369,
+      "detector": "call:o.get:unverified-network-receiver"
+     }
+    ]
+   },
+   {
+    "kind": "vendor_fingerprint",
+    "value": "Next.js",
+    "confidence": "high",
+    "basis": [
+     {
+      "script_key": "scr_1052792c548d166445f36ad9e9a159ce2ef893ccbde970a0645b61be1e98db96",
+      "artifact_sha256": "59114f6c66168ad7bd52e9710a4dbc732394746edc864469f4d053c6c0a1b76b",
+      "line": null,
+      "column": null,
+      "detector": "next-runtime"
+     }
+    ]
+   },
+   {
+    "kind": "endpoint_candidate",
+    "value": "dpl",
+    "confidence": "low",
+    "basis": [
+     {
+      "script_key": "scr_1052792c548d166445f36ad9e9a159ce2ef893ccbde970a0645b61be1e98db96",
+      "artifact_sha256": "59114f6c66168ad7bd52e9710a4dbc732394746edc864469f4d053c6c0a1b76b",
+      "line": 1,
+      "column": 9524,
+      "detector": "call:r.get:unverified-network-receiver"
+     }
+    ]
+   },
+   {
+    "kind": "endpoint_candidate",
+    "value": "dpl",
+    "confidence": "low",
+    "basis": [
+     {
+      "script_key": "scr_1052792c548d166445f36ad9e9a159ce2ef893ccbde970a0645b61be1e98db96",
+      "artifact_sha256": "59114f6c66168ad7bd52e9710a4dbc732394746edc864469f4d053c6c0a1b76b",
+      "line": 1,
+      "column": 9547,
+      "detector": "call:r.delete:unverified-network-receiver"
+     }
+    ]
+   },
+   {
+    "kind": "endpoint_candidate",
+    "value": "dpl",
+    "confidence": "low",
+    "basis": [
+     {
+      "script_key": "scr_1052792c548d166445f36ad9e9a159ce2ef893ccbde970a0645b61be1e98db96",
+      "artifact_sha256": "59114f6c66168ad7bd52e9710a4dbc732394746edc864469f4d053c6c0a1b76b",
+      "line": 3,
+      "column": 2368,
+      "detector": "call:l.get:unverified-network-receiver"
+     }
+    ]
+   },
+   {
+    "kind": "vendor_fingerprint",
+    "value": "Next.js",
+    "confidence": "high",
+    "basis": [
+     {
+      "script_key": "scr_13d11a858cb64a92c80bc1ed1797612dd2cdff002b6b0398df8f779f6acdd1cb",
+      "artifact_sha256": "06c6915261c2cc7e4c12d4eabffb39a4c813f91ab4caf0ae4dddc248c9007eca",
+      "line": null,
+      "column": null,
+      "detector": "next-runtime"
+     }
+    ]
+   },
+   {
+    "kind": "vendor_fingerprint",
+    "value": "Next.js",
+    "confidence": "high",
+    "basis": [
+     {
+      "script_key": "scr_772daeb7bc28182cbbd169a3f756e225f6b42bf85be526439cc9d301e6c21d20",
+      "artifact_sha256": "408d427d447b85c488dec0e56b34aba7d61c13eaefb81615fb218c4782cacef7",
+      "line": null,
+      "column": null,
+      "detector": "next-runtime"
+     }
+    ]
+   },
+   {
+    "kind": "vendor_fingerprint",
+    "value": "Next.js",
+    "confidence": "high",
+    "basis": [
+     {
+      "script_key": "scr_a8a4f44cd766a503e054f9fd4c497134f9ba485e7b798fa9d35e333dd565cfda",
+      "artifact_sha256": "189be9dc92acfe3bdb3d14cded9df522ee679a6c9c94c4a13c821d7b55480bb7",
+      "line": null,
+      "column": null,
+      "detector": "next-runtime"
+     }
+    ]
+   },
+   {
+    "kind": "vendor_fingerprint",
+    "value": "React",
+    "confidence": "medium",
+    "basis": [
+     {
+      "script_key": "scr_e247b608b126d130fb7978d58f9e3b1eb04400335111c1ebd4709ee42012289a",
+      "artifact_sha256": "8f68f227b1f45ad9dde59e6d35dd7491c315d9bb9a2092e600fb53a72698f8aa",
+      "line": null,
+      "column": null,
+      "detector": "react-runtime"
+     }
+    ]
+   }
+  ]
+ },
+ "network": {
+  "loadEventMs": 5373,
+  "requests": 42,
+  "bytes": 1313281,
+  "byType": {
+   "Document": {
+    "requests": 1,
+    "bytes": 6466
+   },
+   "Other": {
+    "requests": 2,
+    "bytes": 2682
+   },
+   "Script": {
+    "requests": 15,
+    "bytes": 295314
+   },
+   "Stylesheet": {
+    "requests": 8,
+    "bytes": 27093
+   },
+   "XHR": {
+    "requests": 1,
+    "bytes": 558
+   },
+   "Image": {
+    "requests": 10,
+    "bytes": 885683
+   },
+   "Font": {
+    "requests": 4,
+    "bytes": 95485
+   },
+   "Media": {
+    "requests": 1,
+    "bytes": 0
+   }
+  },
+  "protocols": [
+   "h3"
+  ],
+  "scriptHosts": [
+   "enviory.com"
+  ],
+  "scriptFiles": [
+   "37izdbtglmhkm.js",
+   "36yaqkidkk98p.js",
+   "3zktz-1ygh6sy.js",
+   "1omje1ehw_sx_.js",
+   "turbopack-2vykj9ofcp5cd.js",
+   "main.js",
+   "1q4itoff--b7w.js",
+   "2g4do3umo1kha.js",
+   "2tk6_dlthosge.js",
+   "1al9ix1ezx7ws.js",
+   "0z8ubfm8j8j_7.js",
+   "3h1p07bgafmvs.js",
+   "3oo74yffkypsg.js",
+   "3dhiri9lsfnla.js",
+   "37wszccyjscxh.js"
+  ],
+  "fontFiles": [
+   {
+    "host": "fonts.gstatic.com",
+    "file": "u-4-0qaujRI2Pbsn2NhnsS5mew.woff2",
+    "bytes": 10779
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "u-490qaujRI2PbsvB_xynAxrUQRBXw.woff2",
+    "bytes": 10835
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "nuFiD-vYSZviVYUb_rj3ij__anPXDTzYgEM86xQ.woff2",
+    "bytes": 38492
+   },
+   {
+    "host": "enviory.com",
+    "file": "normal.woff2",
+    "bytes": 35379
+   }
+  ],
+  "thirdPartyHosts": [
+   "fonts.googleapis.com",
+   "fonts.gstatic.com"
+  ]
+ },
+ "structure": {
+  "coverClicked": false,
+  "coverClickMethod": null,
+  "beforeOpen": {
+   "sectionCount": 1,
+   "features": {
+    "coverGate": true,
+    "toGuest": false,
+    "countdown": false,
+    "rsvp": false,
+    "wishes": false,
+    "gift": false,
+    "copyButton": false,
+    "maps": false,
+    "calendar": false,
+    "livestream": false,
+    "qr": false,
+    "loveStory": false,
+    "gallery": false,
+    "dressCode": false,
+    "quranVerse": false,
+    "protocol": false,
+    "timezoneLabel": [],
+    "watermark": false,
+    "instagramFilter": false,
+    "musicControl": false
+   },
+   "buttons": [
+    "OPEN",
+    "Putar musik",
+    "✎Ganti Data"
+   ]
+  },
+  "afterOpen": {
+   "title": "[name] [name] [name] & [name] [name] [name] — Undangan Pe…",
+   "lang": "id",
+   "generator": null,
+   "viewport": "width=device-width, initial-scale=1, maximum-scale=5",
+   "og": {
+    "image": true,
+    "title": true,
+    "description": true
+   },
+   "reducedMotionCss": true,
+   "libs": {
+    "gsap": false,
+    "scrollTrigger": false,
+    "aos": false,
+    "animateCss": false,
+    "wow": false,
+    "swiper": false,
+    "slick": false,
+    "owl": false,
+    "lottie": false,
+    "three": false,
+    "pixi": false,
+    "anime": false,
+    "motionOne": false,
+    "howler": false,
+    "jquery": false,
+    "bootstrap": false,
+    "tailwind": false,
+    "alpine": false,
+    "vue": false,
+    "nuxt": false,
+    "next": true,
+    "react": false,
+    "svelte": false,
+    "flutterWeb": false,
+    "wordpress": false,
+    "elementor": false,
+    "livewire": false,
+    "inertia": false
+   },
+   "sections": [
+    {
+     "tag": "section",
+     "id": "",
+     "cls": "Gate-module__jeB2hW__scene",
+     "heading": "we're getting married",
+     "h": 915
+    }
+   ],
+   "sectionCount": 1,
+   "buttons": [
+    "OPEN",
+    "Putar musik",
+    "✎Ganti Data"
+   ],
+   "media": {
+    "audio": [
+     {
+      "autoplay": false,
+      "loop": true,
+      "type": "mp3"
+     }
+    ],
+    "video": 0,
+    "iframes": [
+     "enviory.com"
+    ],
+    "canvases": 0,
+    "svgs": 3,
+    "images": 10,
+    "lazyImages": 0
+   },
+   "forms": [],
+   "fontsUsed": [
+    "Halant",
+    "Playfair Display",
+    "Ballet"
+   ],
+   "features": {
+    "coverGate": true,
+    "toGuest": true,
+    "countdown": false,
+    "rsvp": false,
+    "wishes": false,
+    "gift": false,
+    "copyButton": false,
+    "maps": false,
+    "calendar": false,
+    "livestream": false,
+    "qr": false,
+    "loveStory": false,
+    "gallery": false,
+    "dressCode": false,
+    "quranVerse": false,
+    "protocol": false,
+    "timezoneLabel": [],
+    "watermark": false,
+    "instagramFilter": false,
+    "musicControl": false
+   },
+   "domNodes": 150,
+   "docHeight": 915
+  }
+ },
+ "lighthouse": {
+  "ok": true,
+  "lighthouseVersion": "12.8.2",
+  "finalUrl": "https://enviory.com/rdct-6687484a60?tpl=velora-linear",
+  "throttling": {
+   "rttMs": 150,
+   "throughputKbps": 1638.4,
+   "requestLatencyMs": 562.5,
+   "downloadThroughputKbps": 1474.5600000000002,
+   "uploadThroughputKbps": 675,
+   "cpuSlowdownMultiplier": 4
+  },
+  "screen": {
+   "mobile": true,
+   "width": 412,
+   "height": 915,
+   "deviceScaleFactor": 2.625,
+   "disabled": false
+  },
+  "scores": {
+   "performance": 61,
+   "accessibility": 100,
+   "best-practices": 79,
+   "seo": 58
+  },
+  "metrics": {
+   "fcpMs": 2016.1875,
+   "lcpMs": 4226.991999999999,
+   "tbtMs": 759.4910000000003,
+   "cls": 0.01899170249932814,
+   "siMs": 5650.545590838774,
+   "ttiMs": 6574.740100000001
+  },
+  "byType": {
+   "total": {
+    "requests": 43,
+    "bytes": 2070321
+   },
+   "image": {
+    "requests": 10,
+    "bytes": 885684
+   },
+   "media": {
+    "requests": 1,
+    "bytes": 761210
+   },
+   "script": {
+    "requests": 15,
+    "bytes": 295331
+   },
+   "font": {
+    "requests": 4,
+    "bytes": 95480
+   },
+   "stylesheet": {
+    "requests": 8,
+    "bytes": 22368
+   },
+   "document": {
+    "requests": 1,
+    "bytes": 6547
+   },
+   "other": {
+    "requests": 4,
+    "bytes": 3701
+   },
+   "third-party": {
+    "requests": 4,
+    "bytes": 61610
+   }
+  },
+  "totalBytes": 2076778,
+  "requests": 43,
+  "thirdParties": [
+   {
+    "entity": "Google Fonts",
+    "bytes": 61610,
+    "blockingMs": 0
+   }
+  ],
+  "fontDisplayIssues": 0,
+  "unusedJsBytes": 77701,
+  "a11yFailures": []
+ },
+ "files": {
+  "rea-inspect.json": "e837c92b91be36696095c3ac2a682cb2d7349dad8d88d5cbea6499fb93674851",
+  "rea-bundle.json": "e1212b607085a643838d0039889b6b4724635231d9be11dc0e2c5d88c5a020fa",
+  "_private/rea/C-ENV-120/rea-scenario.json": "d399cde5f026f1b44a7306a02c179b05e0bbbba6a080a718e3b814834113664d",
+  "_private/lh/C-ENV-120.json": "1a544b11e4cb8fa6a651bc1e566960a4e779682df01216cbac38221ba1f71d07"
+ },
+ "screenshot": "_private/thumbs (competitor, not committed)"
+}

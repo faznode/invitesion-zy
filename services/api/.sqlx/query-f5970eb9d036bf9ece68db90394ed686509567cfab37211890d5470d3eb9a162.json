@@ -1,0 +1,30 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "update guests set invited_event_ids = (case when jsonb_typeof(coalesce(invited_event_ids, '[]'::jsonb)) = 'array' then coalesce(invited_event_ids, '[]'::jsonb) else '[]'::jsonb end) || jsonb_build_array($2::text) where invitation_id = $1 and (case when $3::text = '' then (category is null or category = '') else category = $3::text end) and not (coalesce(invited_event_ids, '[]'::jsonb) ? $2::text) returning id",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "id",
+        "type_info": "Int4",
+        "origin": {
+          "Table": {
+            "table": "guests",
+            "name": "id"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Left": [
+        "Int4",
+        "Text",
+        "Text"
+      ]
+    },
+    "nullable": [
+      false
+    ]
+  },
+  "hash": "f5970eb9d036bf9ece68db90394ed686509567cfab37211890d5470d3eb9a162"
+}

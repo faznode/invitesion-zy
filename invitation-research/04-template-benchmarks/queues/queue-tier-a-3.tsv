@@ -1,0 +1,11 @@
+# queue-tier-a-3.tsv — DERIVED from the ENV rows of queue-tier-a.tsv (session 04).
+# Why: /tema/<slug>/pratinjau is a vendor preview WRAPPER (~127 DOM nodes + same-origin iframe), so C-ENV-101…106
+# measured wrapper+iframe. The guest-facing page is the vendor's official "Full Preview" link (D-ENV: /<demo-slug>?tpl=<theme>).
+# tpl values are [INFERRED] from the pratinjau slugs; verify each capture title. Run AFTER batch A and queue B; never two batches at once.
+# columns: id<TAB>competitor<TAB>kind<TAB>url — consumed by _tools/capture/run-batch.sh
+C-ENV-111	enviory	demo	https://enviory.com/rdct-6687484a60?tpl=hydrangea
+C-ENV-112	enviory	demo	https://enviory.com/rdct-6687484a60?tpl=rocaille
+C-ENV-113	enviory	demo	https://enviory.com/rdct-6687484a60?tpl=velora-linear
+C-ENV-114	enviory	demo	https://enviory.com/rdct-6687484a60?tpl=velora
+C-ENV-115	enviory	demo	https://enviory.com/rdct-6687484a60?tpl=aurelia
+C-ENV-116	enviory	demo	https://enviory.com/rdct-6687484a60?tpl=noctivelle

@@ -1,0 +1,7 @@
+# queue-v2-s14-espresso.tsv — session 14 (2026-11-04): re-capture of the pilot theme (Wevitation `espresso`, official demo) with new IDs, because
+# the pilot C-WEV-201…204 ran before the D-032 re-apply fix (CDP emulation unverified: structure, layout and motion excluded). The pilot keeps its IDs and
+# files. Columns: id, competitor, kind, url, profile. Run after queue-v2-s13.tsv, sequentially (run-batch.sh).
+C-WEV-225	wevitation	demo	https://www.wevitation.com/demo/espresso	v2-412
+C-WEV-226	wevitation	demo	https://www.wevitation.com/demo/espresso	v2-360
+C-WEV-227	wevitation	demo	https://www.wevitation.com/demo/espresso	v2-390
+C-WEV-228	wevitation	demo	https://www.wevitation.com/demo/espresso	v2-412-rm

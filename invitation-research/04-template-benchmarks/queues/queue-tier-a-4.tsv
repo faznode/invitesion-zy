@@ -1,0 +1,11 @@
+# queue-tier-a-4.tsv — DERIVED from the INV rows of queue-tier-a.tsv (session 04).
+# Why: invi.id/tema/<slug>/?to= is a vendor preview WRAPPER (23 DOM nodes + cross-origin iframe on demo.invi.id),
+# so C-INV-101 measured nothing (Lighthouse NO_FCP). Targets = the wrapper's own iframe src, read by one plain fetch per page
+# on 2026-10-29 ~11:25 WIB (robots-allowed on both hosts). Dummy guest "Nama Tamu" is the vendor's own default.
+# columns: id<TAB>competitor<TAB>kind<TAB>url — consumed by _tools/capture/run-batch.sh
+C-INV-111	invi	demo	https://demo.invi.id/pernikahan/adat-jawa/?to=Nama%20Tamu
+C-INV-112	invi	demo	https://demo.invi.id/pernikahan/syari-02/?to=Nama%20Tamu
+C-INV-113	invi	demo	https://demo.invi.id/aqiqah/09/?to=Nama%20Tamu
+C-INV-114	invi	demo	https://demo.invi.id/premium/art-royal-garden/?to=Nama%20Tamu
+C-INV-115	invi	demo	https://demo.invi.id/pernikahan/white-lily/?to=Nama%20Tamu
+C-INV-116	invi	demo	https://demo.invi.id/pernikahan/adat-art-bali/?to=Nama%20Tamu

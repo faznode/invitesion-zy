@@ -1,0 +1,694 @@
+{
+ "id": "C-ENV-123",
+ "competitor": "enviory",
+ "kind": "demo",
+ "url": "https://enviory.com/rdct-6687484a60?tpl=velora-linear",
+ "capturedAt": "2026-10-30T05:24:00.117+07:00",
+ "robots": {
+  "allowed": true,
+  "note": "Allow: /"
+ },
+ "method": "REA capture-browser-scenario (connect mode) drives navigation, settle and keyboard scroll; optional cover click (trusted CDP mouse click on the settled control: coverClickMethod, coverClickLanding) and scroll through the opened page by CDP after REA's scenario; CDP mobile emulation 412x915 @2.625 + Android Chrome UA, cold cache (no throttling); REA 6.8.0 inspect-web-page/analyze-web-bundle; custom structure pass (text features + animation libraries: no REA coverage); Lighthouse 12 mobile simulate (Slow 4G, 4x CPU) when present",
+ "driver": "rea",
+ "rea": {
+  "version": "6.8.0",
+  "scenario": {
+   "ok": true,
+   "exit": 0,
+   "ms": 22200,
+   "evidenceId": "ev_ec43a1529cf8b9953d19f9ddf912246e7c1cdb2ed8320f6bfa15d923971541ba",
+   "status": "incomplete",
+   "stepsCompleted": 32,
+   "stepsTotal": 32,
+   "failed": [],
+   "events": 148,
+   "error": null,
+   "sha256": "b5a7ecec5e39c8ef31d17003a04bf544cffd15eddcb4b6fc14c8b52ceb14eb3f",
+   "file": "_private/rea/C-ENV-123/rea-scenario.json"
+  },
+  "emulation": {
+   "duringScenario": {
+    "android": true,
+    "width": 412,
+    "dpr": 2.625,
+    "coarsePointer": false,
+    "reducedMotion": false
+   },
+   "afterScenario": {
+    "android": true,
+    "width": 500,
+    "dpr": 1,
+    "coarsePointer": false,
+    "reducedMotion": false
+   }
+  },
+  "inspectEvidenceId": "ev_9bf75121146f679a8960dcd2a66709ab0eabda0e348f4ae4e805cbaba766b38c",
+  "bundleEvidenceId": "ev_99f68e4af07747b08be8e3d4a8beb809665fbe8774dc6b92a34907d7a230f03a",
+  "inspectError": null,
+  "bundleError": null,
+  "domNodes": 808,
+  "scripts": 18,
+  "resources": 25,
+  "completeness": "policy_filtered",
+  "bundleChunks": 15,
+  "bundleEndpoints": [],
+  "bundleInferences": [
+   {
+    "kind": "endpoint_candidate",
+    "value": "u",
+    "confidence": "low",
+    "basis": [
+     {
+      "script_key": "scr_0d35f026d6dfbd0f6393cd3e6a5ce3d3986c4fb07f2b1a74f6071cc7dbb1513d",
+      "artifact_sha256": "b3dcf40de3f3d5d66a250e93f6ab98941f75d9ebb11d019fe1754ce31bd1db9c",
+      "line": 3,
+      "column": 35230,
+      "detector": "call:n.get:unverified-network-receiver"
+     }
+    ]
+   },
+   {
+    "kind": "endpoint_candidate",
+    "value": "name",
+    "confidence": "low",
+    "basis": [
+     {
+      "script_key": "scr_0d35f026d6dfbd0f6393cd3e6a5ce3d3986c4fb07f2b1a74f6071cc7dbb1513d",
+      "artifact_sha256": "b3dcf40de3f3d5d66a250e93f6ab98941f75d9ebb11d019fe1754ce31bd1db9c",
+      "line": 3,
+      "column": 35369,
+      "detector": "call:o.get:unverified-network-receiver"
+     }
+    ]
+   },
+   {
+    "kind": "vendor_fingerprint",
+    "value": "Next.js",
+    "confidence": "high",
+    "basis": [
+     {
+      "script_key": "scr_1052792c548d166445f36ad9e9a159ce2ef893ccbde970a0645b61be1e98db96",
+      "artifact_sha256": "59114f6c66168ad7bd52e9710a4dbc732394746edc864469f4d053c6c0a1b76b",
+      "line": null,
+      "column": null,
+      "detector": "next-runtime"
+     }
+    ]
+   },
+   {
+    "kind": "endpoint_candidate",
+    "value": "dpl",
+    "confidence": "low",
+    "basis": [
+     {
+      "script_key": "scr_1052792c548d166445f36ad9e9a159ce2ef893ccbde970a0645b61be1e98db96",
+      "artifact_sha256": "59114f6c66168ad7bd52e9710a4dbc732394746edc864469f4d053c6c0a1b76b",
+      "line": 1,
+      "column": 9524,
+      "detector": "call:r.get:unverified-network-receiver"
+     }
+    ]
+   },
+   {
+    "kind": "endpoint_candidate",
+    "value": "dpl",
+    "confidence": "low",
+    "basis": [
+     {
+      "script_key": "scr_1052792c548d166445f36ad9e9a159ce2ef893ccbde970a0645b61be1e98db96",
+      "artifact_sha256": "59114f6c66168ad7bd52e9710a4dbc732394746edc864469f4d053c6c0a1b76b",
+      "line": 1,
+      "column": 9547,
+      "detector": "call:r.delete:unverified-network-receiver"
+     }
+    ]
+   },
+   {
+    "kind": "endpoint_candidate",
+    "value": "dpl",
+    "confidence": "low",
+    "basis": [
+     {
+      "script_key": "scr_1052792c548d166445f36ad9e9a159ce2ef893ccbde970a0645b61be1e98db96",
+      "artifact_sha256": "59114f6c66168ad7bd52e9710a4dbc732394746edc864469f4d053c6c0a1b76b",
+      "line": 3,
+      "column": 2368,
+      "detector": "call:l.get:unverified-network-receiver"
+     }
+    ]
+   },
+   {
+    "kind": "vendor_fingerprint",
+    "value": "Next.js",
+    "confidence": "high",
+    "basis": [
+     {
+      "script_key": "scr_13d11a858cb64a92c80bc1ed1797612dd2cdff002b6b0398df8f779f6acdd1cb",
+      "artifact_sha256": "06c6915261c2cc7e4c12d4eabffb39a4c813f91ab4caf0ae4dddc248c9007eca",
+      "line": null,
+      "column": null,
+      "detector": "next-runtime"
+     }
+    ]
+   },
+   {
+    "kind": "vendor_fingerprint",
+    "value": "Next.js",
+    "confidence": "high",
+    "basis": [
+     {
+      "script_key": "scr_a8a4f44cd766a503e054f9fd4c497134f9ba485e7b798fa9d35e333dd565cfda",
+      "artifact_sha256": "189be9dc92acfe3bdb3d14cded9df522ee679a6c9c94c4a13c821d7b55480bb7",
+      "line": null,
+      "column": null,
+      "detector": "next-runtime"
+     }
+    ]
+   },
+   {
+    "kind": "vendor_fingerprint",
+    "value": "React",
+    "confidence": "medium",
+    "basis": [
+     {
+      "script_key": "scr_e247b608b126d130fb7978d58f9e3b1eb04400335111c1ebd4709ee42012289a",
+      "artifact_sha256": "8f68f227b1f45ad9dde59e6d35dd7491c315d9bb9a2092e600fb53a72698f8aa",
+      "line": null,
+      "column": null,
+      "detector": "react-runtime"
+     }
+    ]
+   }
+  ]
+ },
+ "network": {
+  "loadEventMs": 5367,
+  "requests": 64,
+  "bytes": 2541116,
+  "byType": {
+   "Document": {
+    "requests": 1,
+    "bytes": 5999
+   },
+   "Other": {
+    "requests": 3,
+    "bytes": 8315
+   },
+   "Script": {
+    "requests": 15,
+    "bytes": 288751
+   },
+   "Stylesheet": {
+    "requests": 8,
+    "bytes": 27138
+   },
+   "Image": {
+    "requests": 31,
+    "bytes": 2115438
+   },
+   "Media": {
+    "requests": 2,
+    "bytes": 0
+   },
+   "Font": {
+    "requests": 4,
+    "bytes": 95475
+   }
+  },
+  "protocols": [
+   "h3"
+  ],
+  "scriptHosts": [
+   "enviory.com"
+  ],
+  "scriptFiles": [
+   "37izdbtglmhkm.js",
+   "2g4do3umo1kha.js",
+   "36yaqkidkk98p.js",
+   "1omje1ehw_sx_.js",
+   "3zktz-1ygh6sy.js",
+   "2tk6_dlthosge.js",
+   "turbopack-2vykj9ofcp5cd.js",
+   "1q4itoff--b7w.js",
+   "37wszccyjscxh.js",
+   "0z8ubfm8j8j_7.js",
+   "3oo74yffkypsg.js",
+   "3dhiri9lsfnla.js",
+   "1al9ix1ezx7ws.js",
+   "3h1p07bgafmvs.js",
+   "31hyi7bcq9r1y.js"
+  ],
+  "fontFiles": [
+   {
+    "host": "enviory.com",
+    "file": "normal.woff2",
+    "bytes": 35369
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "u-4-0qaujRI2Pbsn2NhnsS5mew.woff2",
+    "bytes": 10779
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "u-490qaujRI2PbsvB_xynAxrUQRBXw.woff2",
+    "bytes": 10835
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "nuFiD-vYSZviVYUb_rj3ij__anPXDTzYgEM86xQ.woff2",
+    "bytes": 38492
+   }
+  ],
+  "thirdPartyHosts": [
+   "fonts.googleapis.com",
+   "fonts.gstatic.com"
+  ]
+ },
+ "structure": {
+  "coverClicked": "[aria] OPEN",
+  "coverClickMethod": "trusted",
+  "coverClickLanding": "inside",
+  "beforeOpen": {
+   "sectionCount": 1,
+   "features": {
+    "coverGate": true,
+    "toGuest": false,
+    "countdown": false,
+    "rsvp": false,
+    "wishes": false,
+    "gift": false,
+    "copyButton": false,
+    "maps": false,
+    "calendar": false,
+    "livestream": false,
+    "qr": false,
+    "loveStory": false,
+    "gallery": false,
+    "dressCode": false,
+    "quranVerse": false,
+    "protocol": false,
+    "timezoneLabel": [],
+    "watermark": false,
+    "instagramFilter": false,
+    "musicControl": false
+   },
+   "buttons": [
+    "OPEN",
+    "Putar musik",
+    "✎Ganti Data"
+   ]
+  },
+  "afterOpen": {
+   "title": "[name] [name] [name] & [name] [name] [name] — Undangan Pe…",
+   "lang": "id",
+   "generator": null,
+   "viewport": "width=device-width, initial-scale=1, maximum-scale=5",
+   "og": {
+    "image": true,
+    "title": true,
+    "description": true
+   },
+   "reducedMotionCss": true,
+   "libs": {
+    "gsap": false,
+    "scrollTrigger": false,
+    "aos": false,
+    "animateCss": false,
+    "wow": false,
+    "swiper": false,
+    "slick": false,
+    "owl": false,
+    "lottie": false,
+    "three": false,
+    "pixi": false,
+    "anime": false,
+    "motionOne": false,
+    "howler": false,
+    "jquery": false,
+    "bootstrap": false,
+    "tailwind": false,
+    "alpine": false,
+    "vue": false,
+    "nuxt": false,
+    "next": true,
+    "react": false,
+    "svelte": false,
+    "flutterWeb": false,
+    "wordpress": false,
+    "elementor": false,
+    "livewire": false,
+    "inertia": false
+   },
+   "sections": [
+    {
+     "tag": "div",
+     "id": "",
+     "cls": "LinearStage-module__uKCa8G__section",
+     "heading": "we're getting married",
+     "h": 915
+    },
+    {
+     "tag": "section",
+     "id": "",
+     "cls": "Hero-module__4BWmaW__scene",
+     "heading": "we're getting married",
+     "h": 915
+    },
+    {
+     "tag": "div",
+     "id": "",
+     "cls": "LinearStage-module__uKCa8G__section",
+     "heading": "",
+     "h": 422
+    },
+    {
+     "tag": "section",
+     "id": "",
+     "cls": "chrome-module__48quXG__scene chrome-module__48quXG__sceneShort",
+     "heading": "",
+     "h": 422
+    },
+    {
+     "tag": "div",
+     "id": "",
+     "cls": "LinearStage-module__uKCa8G__section",
+     "heading": "the Couple",
+     "h": 915
+    },
+    {
+     "tag": "section",
+     "id": "",
+     "cls": "chrome-module__48quXG__scene",
+     "heading": "the Couple",
+     "h": 915
+    },
+    {
+     "tag": "div",
+     "id": "",
+     "cls": "LinearStage-module__uKCa8G__section",
+     "heading": "Save the Date",
+     "h": 915
+    },
+    {
+     "tag": "section",
+     "id": "",
+     "cls": "chrome-module__48quXG__scene",
+     "heading": "Save the Date",
+     "h": 915
+    },
+    {
+     "tag": "div",
+     "id": "",
+     "cls": "LinearStage-module__uKCa8G__section",
+     "heading": "Events",
+     "h": 915
+    },
+    {
+     "tag": "section",
+     "id": "",
+     "cls": "chrome-module__48quXG__scene",
+     "heading": "Events",
+     "h": 915
+    },
+    {
+     "tag": "div",
+     "id": "",
+     "cls": "LinearStage-module__uKCa8G__section",
+     "heading": "Love Story",
+     "h": 915
+    },
+    {
+     "tag": "section",
+     "id": "",
+     "cls": "chrome-module__48quXG__scene",
+     "heading": "Love Story",
+     "h": 915
+    },
+    {
+     "tag": "div",
+     "id": "",
+     "cls": "LinearStage-module__uKCa8G__section",
+     "heading": "Gallery",
+     "h": 915
+    },
+    {
+     "tag": "section",
+     "id": "",
+     "cls": "chrome-module__48quXG__scene",
+     "heading": "Gallery",
+     "h": 915
+    },
+    {
+     "tag": "div",
+     "id": "",
+     "cls": "LinearStage-module__uKCa8G__section",
+     "heading": "Rundown",
+     "h": 915
+    },
+    {
+     "tag": "section",
+     "id": "",
+     "cls": "chrome-module__48quXG__scene",
+     "heading": "Rundown",
+     "h": 915
+    },
+    {
+     "tag": "div",
+     "id": "",
+     "cls": "LinearStage-module__uKCa8G__section",
+     "heading": "Dresscode",
+     "h": 915
+    },
+    {
+     "tag": "section",
+     "id": "",
+     "cls": "chrome-module__48quXG__scene",
+     "heading": "Dresscode",
+     "h": 915
+    },
+    {
+     "tag": "div",
+     "id": "",
+     "cls": "LinearStage-module__uKCa8G__section",
+     "heading": "Gifts",
+     "h": 915
+    },
+    {
+     "tag": "section",
+     "id": "",
+     "cls": "chrome-module__48quXG__scene Gift-module__UlA6ka__scene",
+     "heading": "Gifts",
+     "h": 915
+    },
+    {
+     "tag": "div",
+     "id": "",
+     "cls": "LinearStage-module__uKCa8G__section",
+     "heading": "RSVP",
+     "h": 999
+    },
+    {
+     "tag": "section",
+     "id": "",
+     "cls": "chrome-module__48quXG__scene",
+     "heading": "RSVP",
+     "h": 999
+    },
+    {
+     "tag": "div",
+     "id": "",
+     "cls": "LinearStage-module__uKCa8G__section",
+     "heading": "Thank you",
+     "h": 915
+    },
+    {
+     "tag": "section",
+     "id": "",
+     "cls": "chrome-module__48quXG__scene Closing-module__8UUIqq__scene",
+     "heading": "Thank you",
+     "h": 915
+    }
+   ],
+   "sectionCount": 24,
+   "buttons": [
+    "Transfer Bank",
+    "QRIS & Kado",
+    "SALIN",
+    "HADIR",
+    "TIDAK PASTI",
+    "BERHALANGAN",
+    "−",
+    "+",
+    "Kirim konfirmasi & Ucapan",
+    "Pembuka",
+    "Kutipan",
+    "Mempelai",
+    "Tanggal",
+    "Acara",
+    "Kisah",
+    "Galeri",
+    "Rundown",
+    "Busana",
+    "Amplop",
+    "RSVP",
+    "Penutup",
+    "Jeda musik",
+    "✎Ganti Data"
+   ],
+   "media": {
+    "audio": [
+     {
+      "autoplay": false,
+      "loop": true,
+      "type": "mp3"
+     }
+    ],
+    "video": 0,
+    "iframes": [],
+    "canvases": 0,
+    "svgs": 16,
+    "images": 55,
+    "lazyImages": 11
+   },
+   "forms": [
+    {
+     "fields": [
+      "text",
+      "text",
+      "button",
+      "button",
+      "button",
+      "button",
+      "output",
+      "button",
+      "textarea",
+      "submit"
+     ],
+     "hasRadio": false,
+     "hasSelect": false
+    }
+   ],
+   "fontsUsed": [
+    "Halant",
+    "Playfair Display",
+    "Ballet"
+   ],
+   "features": {
+    "coverGate": false,
+    "toGuest": false,
+    "countdown": false,
+    "rsvp": true,
+    "wishes": false,
+    "gift": false,
+    "copyButton": true,
+    "maps": false,
+    "calendar": false,
+    "livestream": false,
+    "qr": false,
+    "loveStory": false,
+    "gallery": true,
+    "dressCode": false,
+    "quranVerse": false,
+    "protocol": false,
+    "timezoneLabel": [],
+    "watermark": true,
+    "instagramFilter": false,
+    "musicControl": false
+   },
+   "domNodes": 605,
+   "docHeight": 10770
+  }
+ },
+ "lighthouse": {
+  "ok": true,
+  "lighthouseVersion": "12.8.2",
+  "finalUrl": "https://enviory.com/rdct-6687484a60?tpl=velora-linear",
+  "throttling": {
+   "rttMs": 150,
+   "throughputKbps": 1638.4,
+   "requestLatencyMs": 562.5,
+   "downloadThroughputKbps": 1474.5600000000002,
+   "uploadThroughputKbps": 675,
+   "cpuSlowdownMultiplier": 4
+  },
+  "screen": {
+   "mobile": true,
+   "width": 412,
+   "height": 915,
+   "deviceScaleFactor": 2.625,
+   "disabled": false
+  },
+  "scores": {
+   "performance": 57,
+   "accessibility": 100,
+   "best-practices": 79,
+   "seo": 58
+  },
+  "metrics": {
+   "fcpMs": 2065.4435,
+   "lcpMs": 4174.908,
+   "tbtMs": 965.2665,
+   "cls": 0.01899170249932814,
+   "siMs": 6068.504394858677,
+   "ttiMs": 7119.4050000000025
+  },
+  "byType": {
+   "total": {
+    "requests": 43,
+    "bytes": 1368294
+   },
+   "image": {
+    "requests": 10,
+    "bytes": 885718
+   },
+   "script": {
+    "requests": 15,
+    "bytes": 296824
+   },
+   "font": {
+    "requests": 4,
+    "bytes": 95482
+   },
+   "media": {
+    "requests": 1,
+    "bytes": 57740
+   },
+   "stylesheet": {
+    "requests": 8,
+    "bytes": 22361
+   },
+   "document": {
+    "requests": 1,
+    "bytes": 6466
+   },
+   "other": {
+    "requests": 4,
+    "bytes": 3703
+   },
+   "third-party": {
+    "requests": 4,
+    "bytes": 61610
+   }
+  },
+  "totalBytes": 1374752,
+  "requests": 43,
+  "thirdParties": [
+   {
+    "entity": "Google Fonts",
+    "bytes": 61610,
+    "blockingMs": 0
+   }
+  ],
+  "fontDisplayIssues": 0,
+  "unusedJsBytes": 77698,
+  "a11yFailures": []
+ },
+ "files": {
+  "rea-inspect.json": "613a3dd56892fd908db96fc1d9344dc4f67143df9fdb3768b6048c254ca4d07b",
+  "rea-bundle.json": "f0546fe2b0cf095a69cb86e5bd4341c808206ae7a77ab419d067af6edf032d93",
+  "_private/rea/C-ENV-123/rea-scenario.json": "b5a7ecec5e39c8ef31d17003a04bf544cffd15eddcb4b6fc14c8b52ceb14eb3f",
+  "_private/lh/C-ENV-123.json": "44adbafa1be450805c59df213750d9d5091dfd97feaf31881efeee569b45d106"
+ },
+ "screenshot": "_private/thumbs (competitor, not committed)"
+}

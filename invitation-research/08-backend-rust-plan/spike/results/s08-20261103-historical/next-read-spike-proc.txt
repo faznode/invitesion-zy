@@ -1,0 +1,4 @@
+server: cpu mean 99.0 % p95 121.4 % max 124.8 % | rss mean 685.4 MB max 743.3 MB
+postgres: cpu mean 11.2 % p95 15.0 % max 16.0 % | rss mean 295.4 MB max 296.3 MB
+platform-dev: cpu mean 2.9 % p95 20.0 % max 30.0 % | rss mean 1848.1 MB max 1893.0 MB
+k6: cpu mean -0.1 % p95 9.0 % max 11.0 % | rss mean 62.3 MB max 77.3 MB

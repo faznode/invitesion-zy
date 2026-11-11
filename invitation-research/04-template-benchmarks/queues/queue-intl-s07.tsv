@@ -1,0 +1,12 @@
+# queue-intl-s07.tsv — session 07 (2026-11-01): first direct captures of an international Tier-A competitor.
+# Barunson Mcard (BRN) official sample pattern found as a visitor (S-BRN-002): every product page links a
+# "모바일초대장 미리보기" (mobile invitation preview) at /preview/<productId>. The preview renders the template with the
+# vendor's default sample content from embedded JSON (S-BRN-003: fictional sample fields, no customer data), so these
+# are vendor placeholders, verified per page by the product page that links them (D-008). robots: the host has no
+# robots.txt (redirects to a soft-404 page), i.e. no rules.
+# Picks across tier and event type: free standard wedding (most-liked), paid licensed wedding (9,900 KRW), birthday.
+# Run ONLY after queue-tier-a-s07.tsv has finished; never two batches at once.
+# columns: id<TAB>competitor<TAB>kind<TAB>url — consumed by _tools/capture/run-batch.sh
+C-BRN-101	barunson	demo	https://mcard.barunsoncard.com/preview/1260
+C-BRN-102	barunson	demo	https://mcard.barunsoncard.com/preview/1205
+C-BRN-103	barunson	demo	https://mcard.barunsoncard.com/preview/1096

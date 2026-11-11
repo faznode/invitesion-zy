@@ -1,0 +1,22 @@
+# queue-env-recapture.tsv — session 06: C-ENV-112/113 re-captured under NEW ids (evidence is never overwritten).
+# Why: C-ENV-112 (rocaille) and C-ENV-113 (velora-linear) never opened the cover (1 section, ~140 DOM nodes vs ~460).
+# Probe 22:03Z: rocaille's gate is a photo-frame <button aria-label="Buka undangan"> with no visible text, which the
+# text-only cover heuristic missed; a click on it opens 25 sections. capture.mjs now also matches aria-label (D-016).
+# C-ENV-112/113 stay valid as cold-load Lighthouse evidence (Lighthouse never clicks the cover).
+# columns: id<TAB>competitor<TAB>kind<TAB>url — consumed by _tools/capture/run-batch.sh; never two batches at once.
+# 22:08Z: C-ENV-117 found the control but the gate ignored the synthetic el.click() (still 1 section) → the cover click
+# is now a trusted CDP mouse click (D-016); C-ENV-117 stays as evidence and rocaille is re-captured as C-ENV-119.
+# 22:14Z: C-ENV-118 velora-linear's control is labelled just "OPEN" (not matched); C-ENV-119 clicked rocaille while its
+# 10+ s zoom-in intro was still running (opacity 0, ancestor on top). The click now waits for a settled control
+# (hit-testable, opaque, stable size; ≤ 9 s) inside a 10 s REA cover window, and a bare "OPEN" label counts → 120/121.
+C-ENV-117	enviory	demo	https://enviory.com/rdct-6687484a60?tpl=rocaille
+C-ENV-118	enviory	demo	https://enviory.com/rdct-6687484a60?tpl=velora-linear
+C-ENV-119	enviory	demo	https://enviory.com/rdct-6687484a60?tpl=rocaille
+C-ENV-120	enviory	demo	https://enviory.com/rdct-6687484a60?tpl=velora-linear
+C-ENV-121	enviory	demo	https://enviory.com/rdct-6687484a60?tpl=rocaille
+# 22:20Z: C-ENV-120's wax-seal control is a text-less <button aria-label="OPEN"> (aria matched only specific phrases);
+# C-ENV-121 clicked rocaille's SETTLED control (method trusted) during REA's scenario and it still stayed closed, while
+# the identical click opens it without REA (probe 22:13Z). The cover click + scroll now run after REA's scenario, with a
+# pointerdown landing check (coverClickLanding); aria-label "OPEN" counts → 122/123.
+C-ENV-122	enviory	demo	https://enviory.com/rdct-6687484a60?tpl=rocaille
+C-ENV-123	enviory	demo	https://enviory.com/rdct-6687484a60?tpl=velora-linear

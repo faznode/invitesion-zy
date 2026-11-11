@@ -1,0 +1,8 @@
+# Session 12 (2026-11-04), read under D-030 after the robots applicability audit. Follow mode (homepage + <= 2 linked
+# pricing / features / catalog pages). STM: Tier-A dossier (RQ-COMP-02). HRK, SNT, WMG: Tier-B first reads (RQ-COMP-04),
+# previously excluded by D-026 only. WNK: Tier-B re-read (homepage had no followable links in s10; at most 2 more pages).
+STM	Sitemu	https://sitemu.id/
+HRK	Harikita	https://harikita.id/
+SNT	Sonett	https://sonett.kr/
+WMG	WedMeGood e-invites	https://www.wedmegood.com/
+WNK	WebNikah (s12 re-read)	https://webnikah.com/

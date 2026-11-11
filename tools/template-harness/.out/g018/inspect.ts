@@ -1,0 +1,16 @@
+import { fixtureGuest, fixtureInvitation, renderGuestPage, withFamily } from '../../../../tests/support/render-guest-page';
+import { familyReviewInvitations } from '../../../../invitation-research/_tools/setup/seed-family-review';
+import { catalogDefaultConfig } from '../../../../lib/invitation/template-defaults';
+import { templateEventTypes } from '../../../../lib/invitation/template-event-types';
+import { invitationTemplates } from '../../../../lib/invitation/templates';
+import { EMPTY_TRIAL_INPUT, initialDraftConfig } from '../../../../lib/invitation/trial';
+const full = familyReviewInvitations({}).find((r: any) => r.slug === 'review-gapura-full')!.config;
+const en = renderGuestPage({ config: { ...withFamily(full, 'gapura'), settings: { ...full.settings, language: 'en' } }, guest: fixtureGuest() });
+for (const m of en.matchAll(/.{0,160}nomor.{0,80}/g)) console.log('NOMOR:', m[0]);
+const t = invitationTemplates.find((c: any) => c.slug === 'doa-khusyuk')!;
+const mem = initialDraftConfig(catalogDefaultConfig(t), templateEventTypes[t.category], { input: { ...EMPTY_TRIAL_INPUT, first: 'Alm. Bapak Contoh', date: '2026-12-03', time: '19:30' }, key: '0f0e0d0c-0b0a-4908-8706-050403020100' }, {}).config;
+console.log('memorial settings', JSON.stringify(mem.settings), 'family', mem.theme?.familyId, 'profile', JSON.stringify(mem.ceremonyProfile));
+const idPage = renderGuestPage({ config: mem, invitation: fixtureInvitation({ eventType: 'tasyakuran' }), guest: fixtureGuest() });
+console.log('ID has Dalam Kenangan:', idPage.includes('Dalam Kenangan'));
+const text = idPage.replace(/<[^>]+>/g, '\n').split('\n').map((s) => s.trim()).filter(Boolean);
+console.log('ID texts:', JSON.stringify(text.slice(0, 40)));

@@ -1,0 +1,638 @@
+{
+ "id": "C-INV-216",
+ "competitor": "invi",
+ "kind": "demo",
+ "url": "https://demo.invi.id/pernikahan/syari-02/?to=Nama%20Tamu",
+ "capturedAt": "2026-11-04T22:27:25.474+07:00",
+ "robots": {
+  "allowed": true,
+  "note": "no matching rule"
+ },
+ "method": "REA capture-browser-scenario (connect mode) drives navigation, settle and keyboard scroll; optional cover click (trusted CDP mouse click on the settled control: coverClickMethod, coverClickLanding) and scroll through the opened page by CDP after REA's scenario; CDP mobile emulation 412x915 @2.625 + prefers-reduced-motion reduce, re-applied (clear + set) after REA's scenario + Android Chrome UA, cold cache (no throttling); REA inspect/bundle skipped (lean); custom structure pass (text features + animation libraries: no REA coverage) + layout and motion probes; Lighthouse 12 mobile simulate (Slow 4G, 4x CPU) when present",
+ "measurement": {
+  "protocol": "v2",
+  "profile": "v2-412-rm",
+  "viewport": {
+   "width": 412,
+   "height": 915,
+   "device_scale_factor": 2.625
+  },
+  "reduced_motion": "reduce",
+  "method": "protocol v2 (lean): REA scenario + CDP structure / layout / motion probes + Lighthouse; no REA inspect or bundle analysis",
+  "lighthouse_screen": {
+   "width": 412,
+   "height": 915,
+   "deviceScaleFactor": 2.625,
+   "mobile": true
+  },
+  "lighthouse_motion": "chrome --force-prefers-reduced-motion",
+  "cdp_reapply": "clear + set",
+  "emulation_verified": true,
+  "emulation_mismatches": [],
+  "emulation_final": {
+   "android": true,
+   "screenWidth": 412,
+   "screenHeight": 915,
+   "width": 412,
+   "dpr": 2.625,
+   "coarsePointer": false,
+   "reducedMotion": true
+  },
+  "emulation_during_scenario": {
+   "ok": false,
+   "mismatches": [
+    "screen.width 800 != 412",
+    "screen.height 600 != 915"
+   ]
+  }
+ },
+ "driver": "rea",
+ "rea": {
+  "version": "6.8.0",
+  "scenario": {
+   "ok": true,
+   "exit": 0,
+   "ms": 20800,
+   "evidenceId": "ev_ff70b1bb491a904d89800c8825b5eeefc772570539aeff53d7e74abe90a92a15",
+   "status": "incomplete",
+   "stepsCompleted": 32,
+   "stepsTotal": 32,
+   "failed": [],
+   "events": 389,
+   "error": null,
+   "sha256": "443fe7567535882cf0bf6044c75ecaa903a67029788f601b0117bc4b754590dd",
+   "file": "_private/rea/C-INV-216/rea-scenario.json"
+  },
+  "emulation": {
+   "duringScenario": {
+    "android": true,
+    "screenWidth": 800,
+    "screenHeight": 600,
+    "width": 412,
+    "dpr": 2.625,
+    "coarsePointer": false,
+    "reducedMotion": true
+   },
+   "afterScenario": {
+    "android": true,
+    "screenWidth": 800,
+    "screenHeight": 600,
+    "width": 500,
+    "dpr": 1,
+    "coarsePointer": false,
+    "reducedMotion": false
+   }
+  },
+  "inspectEvidenceId": null,
+  "bundleEvidenceId": null,
+  "inspectError": "skipped: lean profile v2-412-rm",
+  "bundleError": "skipped: lean profile v2-412-rm",
+  "domNodes": null,
+  "scripts": null,
+  "resources": null,
+  "completeness": null,
+  "bundleChunks": null,
+  "bundleEndpoints": [],
+  "bundleInferences": []
+ },
+ "network": {
+  "loadEventMs": 4487,
+  "requests": 127,
+  "bytes": 5072652,
+  "byType": {
+   "Document": {
+    "requests": 3,
+    "bytes": 33395
+   },
+   "Stylesheet": {
+    "requests": 39,
+    "bytes": 145247
+   },
+   "Image": {
+    "requests": 10,
+    "bytes": 1683821
+   },
+   "Script": {
+    "requests": 40,
+    "bytes": 780388
+   },
+   "Font": {
+    "requests": 16,
+    "bytes": 531815
+   },
+   "Media": {
+    "requests": 2,
+    "bytes": 1772609
+   },
+   "Fetch": {
+    "requests": 2,
+    "bytes": 0
+   },
+   "XHR": {
+    "requests": 14,
+    "bytes": 123747
+   },
+   "Other": {
+    "requests": 1,
+    "bytes": 1630
+   }
+  },
+  "protocols": [
+   "h3",
+   "data",
+   "h2"
+  ],
+  "scriptHosts": [
+   "demo.invi.id",
+   "unpkg.com",
+   "www.googletagmanager.com",
+   "cdnjs.cloudflare.com"
+  ],
+  "scriptFiles": [
+   "jquery-migrate.min.js",
+   "invi.js",
+   "jquery.min.js",
+   "saic_lib.js",
+   "wds-rsvp.js",
+   "qr-code.js",
+   "exad-scripts.min.js",
+   "jquery.placeholder.min.js",
+   "cui_script.js",
+   "jquery.textareaCounter.js",
+   "jquery.jPages.min.js",
+   "wdp-swiper.min.js",
+   "webpack-pro.runtime.min.js",
+   "webpack.runtime.min.js",
+   "i18n.min.js",
+   "elements-handlers.min.js",
+   "frontend-modules.min.js",
+   "core.min.js",
+   "qr-code-styling.js",
+   "hooks.min.js",
+   "autosize.min.js",
+   "lottie.min.js",
+   "jquery-numerator.min.js",
+   "frontend.min.js",
+   "wdp.min.js",
+   "guest-form.js",
+   "comment-reply.min.js",
+   "bdt-uikit.js",
+   "jet-elements.min.js",
+   "main.js",
+   "frontend.min.js",
+   "js",
+   "xlsx.full.min.js",
+   "641.41d6784859f93ced2969.js",
+   "text-editor.c084ef86600b6f11690d.bundle.min.js",
+   "lottie.e74a53bfa4c0bd939250.bundle.min.js",
+   "counter.12335f45aaa79d244f24.bundle.min.js",
+   "318.1cd39a22ca4e96328011.js",
+   "328.9e358dc63741a0f66a7b.js",
+   "783.ab7283116f3102720a7b.js"
+  ],
+  "fontFiles": [
+   {
+    "host": "fonts.gstatic.com",
+    "file": "5DCPAKrpzy_H98IV2ISnZBbGrVNfOuPknNhGNw.woff2",
+    "bytes": 23773
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "nuFkD-vYSZviVYUb_rj3ij__anPXDTnogkk7yRZrPA.woff2",
+    "bytes": 38920
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "0QIvMX1D_JOuMwr7I_FMl_E.woff2",
+    "bytes": 37824
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "pe0TMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp7t1R-tQ",
+    "bytes": 30977
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "nuFiD-vYSZviVYUb_rj3ij__anPXDTzYgEM86xQ.woff2",
+    "bytes": 38492
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "0QIhMX1D_JOuMw_LIftLtfOm8w.woff2",
+    "bytes": 40680
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "qkBbXvYC6trAT7RVLtyU5rZP.woff2",
+    "bytes": 32225
+   },
+   {
+    "host": "demo.invi.id",
+    "file": "fa-brands-400.woff2",
+    "bytes": 82169
+   },
+   {
+    "host": "demo.invi.id",
+    "file": "fa-regular-400.woff2",
+    "bytes": 13823
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "2sDcZGJYnIjSi6H75xkzaGW5Kb8VZA.woff2",
+    "bytes": 22085
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "fC1lPYxPY3rXxEndZJAzN3Srdy3vrFCl.woff2",
+    "bytes": 15787
+   },
+   {
+    "host": "demo.invi.id",
+    "file": "fa-solid-900.woff2",
+    "bytes": 78756
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "aFTH7PxzY382XsXX63LUYL6GYFcan6NJrKp-VPj1KOxQVAS1Eg.woff2",
+    "bytes": 25833
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "VuJudM3I2Y35poFONtLdafkUCHw1y1MhpyDrWdTYR-zR.woff2",
+    "bytes": 23065
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "VuJrdM3I2Y35poFONtLdafkUCHw1y1vShDXGe9ny.woff2",
+    "bytes": 23033
+   },
+   {
+    "host": "demo.invi.id",
+    "file": "cuifont.ttf",
+    "bytes": 4373
+   }
+  ],
+  "thirdPartyHosts": [
+   "fonts.googleapis.com",
+   "fonts.gstatic.com",
+   "unpkg.com",
+   "",
+   "www.googletagmanager.com",
+   "cdnjs.cloudflare.com",
+   "www.google.com",
+   "file.invi.id",
+   "www.google-analytics.com",
+   "i0.wp.com"
+  ]
+ },
+ "structure": {
+  "coverClicked": "Buka Undangan",
+  "coverClickMethod": "trusted",
+  "coverClickLanding": "inside",
+  "beforeOpen": {
+   "sectionCount": 1,
+   "features": {
+    "coverGate": true,
+    "toGuest": true,
+    "countdown": true,
+    "rsvp": true,
+    "wishes": true,
+    "gift": true,
+    "copyButton": true,
+    "maps": true,
+    "calendar": true,
+    "livestream": true,
+    "qr": false,
+    "loveStory": false,
+    "gallery": false,
+    "dressCode": false,
+    "quranVerse": true,
+    "protocol": false,
+    "timezoneLabel": [
+     "WIB"
+    ],
+    "watermark": false,
+    "instagramFilter": false,
+    "musicControl": true
+   },
+   "buttons": [
+    "Buka Undangan",
+    "Simpan di Kalender",
+    "Kunjungi Lokasi",
+    "Gabung Live Via Youtube",
+    "Jl. Raden Wijaya, Kedung Solo, Kec. Porong, Kab. Sidoarjo Sa",
+    "Salin Alamat",
+    "# Salin Rekening",
+    "Salin Rekening",
+    "Konfirmasi Hadiah"
+   ],
+   "motion": {
+    "reducedMotionMatches": true,
+    "animations": 1,
+    "running": 1,
+    "runningCssAnimations": 1,
+    "runningCssTransitions": 0,
+    "runningWebAnimations": 0,
+    "runningInfinite": 1,
+    "gsapActiveTweens": null,
+    "playingVideos": 0
+   }
+  },
+  "afterOpen": {
+   "title": "Syar'i 02 - Tema Invi",
+   "lang": "id",
+   "generator": "WordPress 7.1.4",
+   "viewport": "width=device-width, initial-scale=1.0, viewport-fit=cover",
+   "og": {
+    "image": true,
+    "title": true,
+    "description": true
+   },
+   "reducedMotionCss": true,
+   "libs": {
+    "gsap": false,
+    "scrollTrigger": false,
+    "aos": false,
+    "animateCss": false,
+    "wow": false,
+    "swiper": true,
+    "slick": false,
+    "owl": false,
+    "lottie": true,
+    "three": false,
+    "pixi": false,
+    "anime": false,
+    "motionOne": false,
+    "howler": false,
+    "jquery": true,
+    "bootstrap": false,
+    "tailwind": false,
+    "alpine": false,
+    "vue": false,
+    "nuxt": false,
+    "next": false,
+    "react": false,
+    "svelte": false,
+    "flutterWeb": false,
+    "wordpress": true,
+    "elementor": true,
+    "livewire": false,
+    "inertia": false
+   },
+   "sections": [
+    {
+     "tag": "div",
+     "id": "section-cover",
+     "cls": "elementor-element elementor-element-1f14e196 e-flex e-con-boxed",
+     "heading": "The Wedding Of",
+     "h": 915
+    }
+   ],
+   "sectionCount": 1,
+   "buttons": [
+    "Buka Undangan",
+    "Simpan di Kalender",
+    "Kunjungi Lokasi",
+    "Gabung Live Via Youtube",
+    "Jl. Raden Wijaya, Kedung Solo, Kec. Porong, Kab. Sidoarjo Sa",
+    "Salin Alamat",
+    "# Salin Rekening",
+    "Salin Rekening",
+    "Konfirmasi Hadiah"
+   ],
+   "media": {
+    "audio": [
+     {
+      "autoplay": false,
+      "loop": true,
+      "type": ""
+     },
+     {
+      "autoplay": false,
+      "loop": false,
+      "type": "mp3"
+     }
+    ],
+    "video": 0,
+    "iframes": [
+     "maps.google.com",
+     "maps.google.com"
+    ],
+    "canvases": 0,
+    "svgs": 20,
+    "images": 7,
+    "lazyImages": 3
+   },
+   "forms": [
+    {
+     "fields": [
+      "text",
+      "textarea",
+      "select-one",
+      "text",
+      "text",
+      "text",
+      "button",
+      "submit",
+      "hidden",
+      "hidden",
+      "hidden"
+     ],
+     "hasRadio": false,
+     "hasSelect": true
+    }
+   ],
+   "fontsUsed": [
+    "Assistant",
+    "Bodoni Moda",
+    "Cormorant Upright",
+    "Imperial Script",
+    "Inria Serif",
+    "Karla",
+    "Lora",
+    "Nunito Sans",
+    "Playfair Display",
+    "Font Awesome 5 Free",
+    "Font Awesome 5 Brands"
+   ],
+   "features": {
+    "coverGate": false,
+    "toGuest": true,
+    "countdown": true,
+    "rsvp": true,
+    "wishes": true,
+    "gift": true,
+    "copyButton": true,
+    "maps": true,
+    "calendar": true,
+    "livestream": true,
+    "qr": false,
+    "loveStory": false,
+    "gallery": false,
+    "dressCode": false,
+    "quranVerse": true,
+    "protocol": false,
+    "timezoneLabel": [
+     "WIB"
+    ],
+    "watermark": false,
+    "instagramFilter": false,
+    "musicControl": true
+   },
+   "domNodes": 1135,
+   "docHeight": 7713,
+   "layout": {
+    "innerWidth": 412,
+    "scrollWidth": 412,
+    "horizontalOverflowPx": 0,
+    "overflowingElements": 0,
+    "smallTextElements": 5,
+    "interactiveTargets": 14,
+    "smallTargets": 2,
+    "viewportMeta": "width=device-width, initial-scale=1.0, viewport-fit=cover",
+    "zoomBlocked": false
+   },
+   "motion": {
+    "reducedMotionMatches": true,
+    "animations": 1,
+    "running": 1,
+    "runningCssAnimations": 1,
+    "runningCssTransitions": 0,
+    "runningWebAnimations": 0,
+    "runningInfinite": 1,
+    "gsapActiveTweens": null,
+    "playingVideos": 0
+   }
+  }
+ },
+ "lighthouse": {
+  "ok": true,
+  "lighthouseVersion": "12.8.2",
+  "finalUrl": "https://demo.invi.id/pernikahan/syari-02/?to=Nama%20Tamu",
+  "throttling": {
+   "rttMs": 150,
+   "throughputKbps": 1638.4,
+   "requestLatencyMs": 562.5,
+   "downloadThroughputKbps": 1474.5600000000002,
+   "uploadThroughputKbps": 675,
+   "cpuSlowdownMultiplier": 4
+  },
+  "screen": {
+   "mobile": true,
+   "width": 412,
+   "height": 915,
+   "deviceScaleFactor": 2.625,
+   "disabled": false
+  },
+  "scores": {
+   "performance": 43,
+   "accessibility": 86,
+   "best-practices": 100,
+   "seo": 66
+  },
+  "metrics": {
+   "fcpMs": 3565.3359999999993,
+   "lcpMs": 5349.141,
+   "tbtMs": 1203,
+   "cls": 0.02392919266056642,
+   "siMs": 7039.156804197628,
+   "ttiMs": 14918.542599999999
+  },
+  "byType": {
+   "total": {
+    "requests": 146,
+    "bytes": 2325997
+   },
+   "script": {
+    "requests": 63,
+    "bytes": 1225482
+   },
+   "font": {
+    "requests": 16,
+    "bytes": 531813
+   },
+   "image": {
+    "requests": 5,
+    "bytes": 367220
+   },
+   "stylesheet": {
+    "requests": 38,
+    "bytes": 144242
+   },
+   "document": {
+    "requests": 3,
+    "bytes": 36262
+   },
+   "other": {
+    "requests": 20,
+    "bytes": 20522
+   },
+   "media": {
+    "requests": 1,
+    "bytes": 456
+   },
+   "third-party": {
+    "requests": 52,
+    "bytes": 1258931
+   }
+  },
+  "totalBytes": 2325997,
+  "requests": 146,
+  "thirdParties": [
+   {
+    "entity": "Google Tag Manager",
+    "bytes": 181495,
+    "blockingMs": 763.9999999999999
+   },
+   {
+    "entity": "Cloudflare CDN",
+    "bytes": 216321,
+    "blockingMs": 367.21227963632793
+   },
+   {
+    "entity": "Unpkg",
+    "bytes": 16279,
+    "blockingMs": 19.01611526241226
+   },
+   {
+    "entity": "Other Google APIs/SDKs",
+    "bytes": 2831,
+    "blockingMs": 0.2833839808285488
+   },
+   {
+    "entity": "Google Maps",
+    "bytes": 478328,
+    "blockingMs": 0
+   },
+   {
+    "entity": "Google Fonts",
+    "bytes": 361500,
+    "blockingMs": 0
+   },
+   {
+    "entity": "WordPress",
+    "bytes": 1631,
+    "blockingMs": 0
+   },
+   {
+    "entity": "Google Analytics",
+    "bytes": 546,
+    "blockingMs": 0
+   }
+  ],
+  "fontDisplayIssues": 1,
+  "unusedJsBytes": 318941,
+  "a11yFailures": [
+   "color-contrast",
+   "heading-order",
+   "list",
+   "select-name",
+   "skip-link"
+  ]
+ },
+ "files": {
+  "_private/rea/C-INV-216/rea-scenario.json": "443fe7567535882cf0bf6044c75ecaa903a67029788f601b0117bc4b754590dd",
+  "_private/lh/C-INV-216.json": "2ec3661d8f4d80fc9a62f59d9058e8b406bc58e3fbde72e8070f22b3c83850e2"
+ },
+ "screenshot": "_private/thumbs (competitor, not committed)"
+}

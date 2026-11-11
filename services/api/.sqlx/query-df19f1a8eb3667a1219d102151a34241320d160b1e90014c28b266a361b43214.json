@@ -1,0 +1,23 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "select deleted_at is not null as \"deleted!\" from invitations where id = $1 for share",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "deleted!",
+        "type_info": "Bool",
+        "origin": "Expression"
+      }
+    ],
+    "parameters": {
+      "Left": [
+        "Int4"
+      ]
+    },
+    "nullable": [
+      null
+    ]
+  },
+  "hash": "df19f1a8eb3667a1219d102151a34241320d160b1e90014c28b266a361b43214"
+}

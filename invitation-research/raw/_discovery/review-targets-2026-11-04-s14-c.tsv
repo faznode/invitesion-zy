@@ -1,0 +1,6 @@
+# Session 14, RQ-COMP-05 pass C, --no-follow: public Trustpilot review pages for the international Tier-A vendors whose homepages expose no store
+# listing (JOY, PPO), whose homepage refused us (RSV, 403 in pass A) and Partiful as a cross-check of its Play listing. Reviewer names are never recorded.
+JOY	Joy (Trustpilot)	https://www.trustpilot.com/review/withjoy.com
+PPO	Paperless Post (Trustpilot)	https://www.trustpilot.com/review/paperlesspost.com
+RSV	RSVPify (Trustpilot)	https://www.trustpilot.com/review/rsvpify.com
+PTF	Partiful (Trustpilot)	https://www.trustpilot.com/review/partiful.com

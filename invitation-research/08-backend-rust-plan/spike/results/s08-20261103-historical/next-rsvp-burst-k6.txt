@@ -1,0 +1,22 @@
+
+     ✓ status 303
+     ✓ redirect says saved
+
+   ✓ checks.........................: 100.00% 19634 out of 19634
+     data_received..................: 6.3 MB  158 kB/s
+     data_sent......................: 6.9 MB  172 kB/s
+     http_req_blocked...............: avg=9.96µs   min=1.72µs  med=5.23µs  p(90)=8.34µs   p(95)=9.7µs    p(99)=30.57µs  max=8.64ms  
+     http_req_connecting............: avg=1.42µs   min=0s      med=0s      p(90)=0s       p(95)=0s       p(99)=0s       max=8.51ms  
+     http_req_duration..............: avg=70.87ms  min=4.27ms  med=72.8ms  p(90)=96.98ms  p(95)=105.39ms p(99)=124.54ms max=242.08ms
+       { expected_response:true }...: avg=70.87ms  min=4.27ms  med=72.8ms  p(90)=96.98ms  p(95)=105.39ms p(99)=124.54ms max=242.08ms
+     http_req_failed................: 0.00%   0 out of 9818
+     http_req_receiving.............: avg=144.94µs min=26.53µs med=93.4µs  p(90)=168.41µs p(95)=272.25µs p(99)=1.24ms   max=60.08ms 
+     http_req_sending...............: avg=46.88µs  min=6.53µs  med=19.93µs p(90)=37.2µs   p(95)=55.78µs  p(99)=605.46µs max=10.28ms 
+     http_req_tls_handshaking.......: avg=0s       min=0s      med=0s      p(90)=0s       p(95)=0s       p(99)=0s       max=0s      
+     http_req_waiting...............: avg=70.67ms  min=4.16ms  med=72.6ms  p(90)=96.72ms  p(95)=105.08ms p(99)=124.35ms max=242.03ms
+     http_reqs......................: 9818    244.957541/s
+     iteration_duration.............: avg=71.31ms  min=4.5ms   med=73.23ms p(90)=97.46ms  p(95)=106.02ms p(99)=125.01ms max=242.29ms
+     iterations.....................: 9817    244.932591/s
+     vus............................: 1       min=1              max=20
+     vus_max........................: 20      min=20             max=20
+

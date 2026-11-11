@@ -1,0 +1,57 @@
+{
+  "description": "R-03 step 1: the RSVP rules every writer must apply, as data. Run against the TypeScript rules by tests/rsvp-vectors.test.ts; the Rust RSVP module must pass the same file before BACKEND_RSVP may select it. Expected values follow lib/invitation/rsvp-rules.ts (B-007, B-027) and lib/invitation/event-eligibility.ts (D-037).",
+  "status": [
+    { "value": "CONFIRMED", "maybe": false, "accepted": true },
+    { "value": "DECLINED", "maybe": false, "accepted": true },
+    { "value": "MAYBE", "maybe": false, "accepted": false },
+    { "value": "MAYBE", "maybe": true, "accepted": true },
+    { "value": "confirmed", "maybe": true, "accepted": false },
+    { "value": "PENDING", "maybe": true, "accepted": false },
+    { "value": "", "maybe": true, "accepted": false }
+  ],
+  "attendance": [
+    { "status": "DECLINED", "requestedField": "3", "allowance": 4, "attending": 0 },
+    { "status": "MAYBE", "requestedField": "3", "allowance": 4, "attending": null },
+    { "status": "CONFIRMED", "requestedField": "3", "allowance": 4, "attending": 3 },
+    { "status": "CONFIRMED", "requestedField": "9", "allowance": 4, "attending": 4 },
+    { "status": "CONFIRMED", "requestedField": "0", "allowance": 4, "attending": 1 },
+    { "status": "CONFIRMED", "requestedField": "-2", "allowance": 4, "attending": 1 },
+    { "status": "CONFIRMED", "requestedField": "2.9", "allowance": 4, "attending": 2 },
+    { "status": "CONFIRMED", "requestedField": " 3 ", "allowance": 4, "attending": 3 },
+    { "status": "CONFIRMED", "requestedField": "1e1", "allowance": 4, "attending": 4 },
+    { "status": "CONFIRMED", "requestedField": "0x10", "allowance": 4, "attending": 4 },
+    { "status": "CONFIRMED", "requestedField": "abc", "allowance": 4, "attending": 1 },
+    { "status": "CONFIRMED", "requestedField": "", "allowance": 4, "attending": 1 },
+    { "status": "CONFIRMED", "requestedField": null, "allowance": 4, "attending": 1 },
+    { "status": "CONFIRMED", "requestedField": "3", "allowance": 0, "attending": 1 },
+    { "status": "CONFIRMED", "requestedField": "3", "allowance": 1, "attending": 1 }
+  ],
+  "closed": [
+    { "rsvp": null, "now": "2026-11-06T10:00:00Z", "reason": null },
+    { "rsvp": {}, "now": "2026-11-06T10:00:00Z", "reason": null },
+    { "rsvp": { "enabled": false }, "now": "2026-11-06T10:00:00Z", "reason": "disabled" },
+    { "rsvp": { "enabled": false, "deadline": "2026-01-01T00:00:00+07:00" }, "now": "2026-11-06T10:00:00Z", "reason": "disabled" },
+    { "rsvp": { "enabled": true, "deadline": "2026-11-06T18:00:00+08:00" }, "now": "2026-11-06T09:59:59Z", "reason": null },
+    { "rsvp": { "enabled": true, "deadline": "2026-11-06T18:00:00+08:00" }, "now": "2026-11-06T10:00:00Z", "reason": "deadline" },
+    { "rsvp": { "deadline": "2026-11-06T17:00:00+07:00" }, "now": "2026-11-06T10:00:01Z", "reason": "deadline" },
+    { "rsvp": { "deadline": "not a date" }, "now": "2026-11-06T10:00:00Z", "reason": null },
+    { "rsvp": { "deadline": "" }, "now": "2026-11-06T10:00:00Z", "reason": null }
+  ],
+  "eligibility": {
+    "events": [
+      { "id": "akad" },
+      { "id": "resepsi", "inviteOnly": true },
+      { "id": "after-party", "inviteOnly": true },
+      { "inviteOnly": true },
+      { "id": "tamu", "inviteOnly": "yes" }
+    ],
+    "cases": [
+      { "guest": { "invitedEventIds": ["resepsi"] }, "enabled": true, "visible": [0, 1, 4] },
+      { "guest": { "invitedEventIds": ["resepsi", "bad id!", 7] }, "enabled": true, "visible": [0, 1, 4] },
+      { "guest": { "invitedEventIds": "resepsi" }, "enabled": true, "visible": [0, 4] },
+      { "guest": { "invitedEventIds": ["after-party", "resepsi"] }, "enabled": true, "visible": [0, 1, 2, 4] },
+      { "guest": { "invitedEventIds": [] }, "enabled": false, "visible": [0, 1, 2, 3, 4] },
+      { "guest": null, "enabled": true, "visible": [0, 4] }
+    ]
+  }
+}

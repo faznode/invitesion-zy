@@ -1,0 +1,501 @@
+{
+ "id": "C-INV-005",
+ "competitor": "invitesion",
+ "kind": "demo",
+ "url": "http://127.0.0.1:3100/i/budi-sari/budi-hartono",
+ "capturedAt": "2026-10-30T04:03:49.429+07:00",
+ "robots": {
+  "allowed": true,
+  "note": "own instance"
+ },
+ "method": "REA capture-browser-scenario (connect mode) drives navigation, cover click and keyboard scroll; CDP mobile emulation 412x915 @2.625 + Android Chrome UA, cold cache (no throttling); REA 6.8.0 inspect-web-page/analyze-web-bundle; custom structure pass (text features + animation libraries: no REA coverage); Lighthouse 12 mobile simulate (Slow 4G, 4x CPU) when present",
+ "driver": "rea",
+ "rea": {
+  "version": "6.8.0",
+  "scenario": {
+   "ok": true,
+   "exit": 0,
+   "ms": 18736,
+   "evidenceId": "ev_f18a26d8b9cad4ca9711ea8b34e5314dd1d4b16516728aabbb78da2b115141d8",
+   "status": "incomplete",
+   "stepsCompleted": 32,
+   "stepsTotal": 32,
+   "failed": [],
+   "events": 82,
+   "error": null,
+   "sha256": "e3b14a9b70093572a4b2e98b30133def12b5a19b074b276815d95c0297b055a3",
+   "file": "_private/rea/C-INV-005/rea-scenario.json"
+  },
+  "emulationAfterScenario": {
+   "android": true,
+   "width": 500,
+   "dpr": 1,
+   "coarsePointer": false,
+   "reducedMotion": false
+  },
+  "inspectEvidenceId": "ev_b030ff1672ca45e90120e5723bed8d790ee28eacca43ba38dc5653eb0aa5fc47",
+  "bundleEvidenceId": "ev_c78f51e321daf759849c486f6cb38d5c4a160e7ca52e99893e6ea13c9bee5980",
+  "inspectError": null,
+  "bundleError": null,
+  "domNodes": 294,
+  "scripts": 39,
+  "resources": 17,
+  "completeness": "policy_filtered",
+  "bundleChunks": 39,
+  "bundleEndpoints": [],
+  "bundleInferences": [
+   {
+    "kind": "vendor_fingerprint",
+    "value": "Next.js",
+    "confidence": "high",
+    "basis": [
+     {
+      "script_key": "scr_0bae73f3373966fdd98c6298769f1ef8bc928d0fc3b7103d5f259f48e7abcb5c",
+      "artifact_sha256": "a89a50c41ba1f7eb72461e057bd026773c5f56326447899c31c5e87ee4719eb9",
+      "line": null,
+      "column": null,
+      "detector": "next-runtime"
+     }
+    ]
+   },
+   {
+    "kind": "vendor_fingerprint",
+    "value": "React",
+    "confidence": "medium",
+    "basis": [
+     {
+      "script_key": "scr_32dc1f700daffc65188870d14b75fdc54b9f5372603a1e6401208d1f033dd27e",
+      "artifact_sha256": "a3715cb46ac685097a4d292d08155e00342874c2922b87f1181f2ce437a9b01a",
+      "line": null,
+      "column": null,
+      "detector": "react-runtime"
+     }
+    ]
+   },
+   {
+    "kind": "vendor_fingerprint",
+    "value": "Next.js",
+    "confidence": "high",
+    "basis": [
+     {
+      "script_key": "scr_33728e3a8126ffe0f950daf5ac1e8f426f845b596e11f3a7af2b7c5a79110e83",
+      "artifact_sha256": "7882eaf5eea8921361ecd66e77dec9e795677c97076b68cafc4cd1016b687baf",
+      "line": null,
+      "column": null,
+      "detector": "next-runtime"
+     }
+    ]
+   },
+   {
+    "kind": "vendor_fingerprint",
+    "value": "Next.js",
+    "confidence": "high",
+    "basis": [
+     {
+      "script_key": "scr_68e1da8487ebf77bfe8dd427bedee1d00b2e69a5377f7b58401d8e85945746dd",
+      "artifact_sha256": "dfea2fb4bfb945a0cddc8fa5e3741557bc11f4010187eaab0f9ba6ff93c83c96",
+      "line": null,
+      "column": null,
+      "detector": "next-runtime"
+     }
+    ]
+   },
+   {
+    "kind": "vendor_fingerprint",
+    "value": "Next.js",
+    "confidence": "high",
+    "basis": [
+     {
+      "script_key": "scr_a513333d7fe95af17c372f5761ce4eca7077c8e4b755c9f4fe61b8c0bfa13d60",
+      "artifact_sha256": "642e8b55af83acff8b71384d0695ba58700da09f93243ea10f271b26d7eb3315",
+      "line": null,
+      "column": null,
+      "detector": "next-runtime"
+     }
+    ]
+   },
+   {
+    "kind": "vendor_fingerprint",
+    "value": "Next.js",
+    "confidence": "high",
+    "basis": [
+     {
+      "script_key": "scr_b64dcaeb74912b8dc0075f2efb51429fa2eec29b208fcd8c86b9af46475317b3",
+      "artifact_sha256": "c3f12e83f6eca6dcd4ebafbbf9f10a8203098d9b004c84a4676f5eb1c1e193a1",
+      "line": null,
+      "column": null,
+      "detector": "next-runtime"
+     }
+    ]
+   },
+   {
+    "kind": "vendor_fingerprint",
+    "value": "Next.js",
+    "confidence": "high",
+    "basis": [
+     {
+      "script_key": "scr_c16d983a389eac6ec9ba4fe05a1cabc0d16e3d30e60ed9184efd5c12a34093df",
+      "artifact_sha256": "f9d7d9b76b724cdca7b774396c10ed7e636fce714e6ba8d5939b73077ccffa15",
+      "line": null,
+      "column": null,
+      "detector": "next-runtime"
+     }
+    ]
+   }
+  ]
+ },
+ "network": {
+  "loadEventMs": 2723,
+  "requests": 18,
+  "bytes": 303043,
+  "byType": {
+   "Document": {
+    "requests": 1,
+    "bytes": 29374
+   },
+   "Stylesheet": {
+    "requests": 1,
+    "bytes": 17135
+   },
+   "Font": {
+    "requests": 3,
+    "bytes": 56810
+   },
+   "Script": {
+    "requests": 13,
+    "bytes": 199724
+   }
+  },
+  "protocols": [
+   "http/1.1"
+  ],
+  "scriptHosts": [
+   "127.0.0.1"
+  ],
+  "scriptFiles": [
+   "c86dc58b78f42f03.js",
+   "f297cde83752b30f.js",
+   "8a5d9839d57eb86c.js",
+   "ba288541a2d772bc.js",
+   "5a4e913764f6a112.js",
+   "3c530c24ce279779.js",
+   "turbopack-61584598cce0c850.js",
+   "db39f146a91ae90f.js",
+   "e75d08fa83341e9f.js",
+   "3631f6f3fd5c1047.js",
+   "3fcbd60a2308aaca.js",
+   "833b791a5ea1a311.js",
+   "b401745f06ed2788.js"
+  ],
+  "fontFiles": [
+   {
+    "host": "127.0.0.1",
+    "file": "7ebf22b5a21034f8-s.p.d8bad3ab.woff2",
+    "bytes": 16234
+   },
+   {
+    "host": "127.0.0.1",
+    "file": "a343f882a40d2cc9-s.p.07ce798a.woff2",
+    "bytes": 24986
+   },
+   {
+    "host": "127.0.0.1",
+    "file": "e41d5df559864f9e-s.p.380d09ea.woff2",
+    "bytes": 15590
+   }
+  ],
+  "thirdPartyHosts": []
+ },
+ "structure": {
+  "coverClicked": null,
+  "beforeOpen": {
+   "sectionCount": 7,
+   "features": {
+    "coverGate": false,
+    "toGuest": true,
+    "countdown": false,
+    "rsvp": true,
+    "wishes": true,
+    "gift": true,
+    "copyButton": false,
+    "maps": true,
+    "calendar": false,
+    "livestream": false,
+    "qr": false,
+    "loveStory": true,
+    "gallery": false,
+    "dressCode": false,
+    "quranVerse": true,
+    "protocol": false,
+    "timezoneLabel": [
+     "WIB"
+    ],
+    "watermark": true,
+    "instagramFilter": false,
+    "musicControl": false
+   },
+   "buttons": [
+    "Ya, saya hadir",
+    "Maaf, belum bisa",
+    "Kirim ucapan"
+   ]
+  },
+  "afterOpen": {
+   "title": "Undangan Digital",
+   "lang": "id",
+   "generator": null,
+   "viewport": "width=device-width, initial-scale=1",
+   "og": {
+    "image": false,
+    "title": true,
+    "description": true
+   },
+   "reducedMotionCss": false,
+   "libs": {
+    "gsap": false,
+    "scrollTrigger": false,
+    "aos": false,
+    "animateCss": false,
+    "wow": false,
+    "swiper": false,
+    "slick": false,
+    "owl": false,
+    "lottie": false,
+    "three": false,
+    "pixi": false,
+    "anime": false,
+    "motionOne": false,
+    "howler": false,
+    "jquery": false,
+    "bootstrap": false,
+    "tailwind": false,
+    "alpine": false,
+    "vue": false,
+    "nuxt": false,
+    "next": true,
+    "react": false,
+    "svelte": false,
+    "flutterWeb": false,
+    "wordpress": false,
+    "elementor": false,
+    "livewire": false,
+    "inertia": false
+   },
+   "sections": [
+    {
+     "tag": "section",
+     "id": "",
+     "cls": "mx-auto w-full max-w-xl px-6",
+     "heading": "",
+     "h": 168
+    },
+    {
+     "tag": "section",
+     "id": "",
+     "cls": "mx-auto w-full max-w-xl px-6",
+     "heading": "",
+     "h": 228
+    },
+    {
+     "tag": "section",
+     "id": "",
+     "cls": "mx-auto w-full max-w-xl px-6",
+     "heading": "Rangkaian Acara",
+     "h": 616
+    },
+    {
+     "tag": "section",
+     "id": "",
+     "cls": "mx-auto w-full max-w-xl px-6",
+     "heading": "Cerita Kami",
+     "h": 296
+    },
+    {
+     "tag": "section",
+     "id": "",
+     "cls": "mx-auto w-full max-w-xl px-6",
+     "heading": "Hadiah",
+     "h": 296
+    },
+    {
+     "tag": "section",
+     "id": "",
+     "cls": "mx-auto w-full max-w-xl px-6",
+     "heading": "Konfirmasi Kehadiran",
+     "h": 528
+    },
+    {
+     "tag": "section",
+     "id": "",
+     "cls": "mx-auto w-full max-w-xl px-6",
+     "heading": "Ucapan & Doa",
+     "h": 704
+    }
+   ],
+   "sectionCount": 7,
+   "buttons": [
+    "Ya, saya hadir",
+    "Maaf, belum bisa",
+    "Kirim ucapan"
+   ],
+   "media": {
+    "audio": [],
+    "video": 0,
+    "iframes": [],
+    "canvases": 0,
+    "svgs": 8,
+    "images": 0,
+    "lazyImages": 0
+   },
+   "forms": [
+    {
+     "fields": [
+      "hidden",
+      "hidden",
+      "hidden",
+      "text",
+      "number",
+      "submit",
+      "submit"
+     ],
+     "hasRadio": false,
+     "hasSelect": false
+    },
+    {
+     "fields": [
+      "hidden",
+      "hidden",
+      "hidden",
+      "textarea",
+      "submit"
+     ],
+     "hasRadio": false,
+     "hasSelect": false
+    }
+   ],
+   "fontsUsed": [
+    "Manrope",
+    "Instrument Serif"
+   ],
+   "features": {
+    "coverGate": false,
+    "toGuest": true,
+    "countdown": false,
+    "rsvp": true,
+    "wishes": true,
+    "gift": true,
+    "copyButton": false,
+    "maps": true,
+    "calendar": false,
+    "livestream": false,
+    "qr": false,
+    "loveStory": true,
+    "gallery": false,
+    "dressCode": false,
+    "quranVerse": true,
+    "protocol": false,
+    "timezoneLabel": [
+     "WIB"
+    ],
+    "watermark": true,
+    "instagramFilter": false,
+    "musicControl": false
+   },
+   "domNodes": 203,
+   "docHeight": 3648
+  }
+ },
+ "lighthouse": {
+  "ok": true,
+  "lighthouseVersion": "12.8.2",
+  "finalUrl": "http://127.0.0.1:3100/i/budi-sari/budi-hartono",
+  "throttling": {
+   "rttMs": 150,
+   "throughputKbps": 1638.4,
+   "requestLatencyMs": 562.5,
+   "downloadThroughputKbps": 1474.5600000000002,
+   "uploadThroughputKbps": 675,
+   "cpuSlowdownMultiplier": 4
+  },
+  "screen": {
+   "mobile": true,
+   "width": 412,
+   "height": 915,
+   "deviceScaleFactor": 2.625,
+   "disabled": false
+  },
+  "scores": {
+   "performance": 93,
+   "accessibility": 96,
+   "best-practices": 96,
+   "seo": 60
+  },
+  "metrics": {
+   "fcpMs": 1544.002,
+   "lcpMs": 2620.0099999999998,
+   "tbtMs": 209,
+   "cls": 0,
+   "siMs": 1544.002,
+   "ttiMs": 3643.108
+  },
+  "byType": {
+   "total": {
+    "requests": 26,
+    "bytes": 328819
+   },
+   "script": {
+    "requests": 20,
+    "bytes": 199724
+   },
+   "font": {
+    "requests": 3,
+    "bytes": 56810
+   },
+   "document": {
+    "requests": 1,
+    "bytes": 28638
+   },
+   "other": {
+    "requests": 1,
+    "bytes": 26512
+   },
+   "stylesheet": {
+    "requests": 1,
+    "bytes": 17135
+   },
+   "image": {
+    "requests": 0,
+    "bytes": 0
+   },
+   "media": {
+    "requests": 0,
+    "bytes": 0
+   },
+   "third-party": {
+    "requests": 7,
+    "bytes": 0
+   }
+  },
+  "totalBytes": 328819,
+  "requests": 26,
+  "thirdParties": [
+   {
+    "entity": "invitesion.invalid",
+    "bytes": 0,
+    "blockingMs": 0
+   }
+  ],
+  "fontDisplayIssues": 0,
+  "unusedJsBytes": 52652,
+  "a11yFailures": [
+   "color-contrast"
+  ]
+ },
+ "files": {
+  "rea-inspect.json": "8489afcb8dcb6e191b10bd62fb9919438953a21927b8ec1baf87892995aee4ac",
+  "rea-bundle.json": "2c7b82c6d850dc4b7a530ebed08fa021b933de39f275081d91411122db75811e",
+  "_private/rea/C-INV-005/rea-scenario.json": "e3b14a9b70093572a4b2e98b30133def12b5a19b074b276815d95c0297b055a3",
+  "lighthouse.json": "bd481ec3b905320616eedeaa2c01bf0cf22013bfd2207737c48eada1d4a9c8ac"
+ },
+ "screenshot": "viewport-412.webp (public, own product)"
+}

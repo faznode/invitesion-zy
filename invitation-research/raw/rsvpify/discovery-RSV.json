@@ -1,0 +1,27 @@
+{
+ "code": "RSV",
+ "competitor": "rsvpify",
+ "observedAt": "2026-10-29T10:32:36.982+07:00",
+ "homepage": {
+  "url": "https://rsvpify.com/",
+  "finalUrl": "https://rsvpify.com/",
+  "skipped": null,
+  "links": 115
+ },
+ "catalogCandidates": [
+  "https://rsvpify.com/online-invitations/gender-reveal-invitations/",
+  "https://rsvpify.com/online-invitations/"
+ ],
+ "catalog": {
+  "url": "https://rsvpify.com/online-invitations/gender-reveal-invitations/",
+  "finalUrl": "https://rsvpify.com/online-invitations/gender-reveal-invitations/",
+  "skipped": null,
+  "links": 296
+ },
+ "demos": [
+  {
+   "href": "https://rsvpify.com/book-a-demo/",
+   "label": "Book a Demo"
+  }
+ ]
+}

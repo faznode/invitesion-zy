@@ -1,0 +1,21 @@
+feature_id,status,basis,evidence,note
+FM-022,Full,CLAIMED,S-RSV-001,Registration / RSVP forms
+FM-026,Full,CLAIMED,S-RSV-001,Custom questions
+FM-058,Full,CLAIMED,S-RSV-001,"Ticketing and donations (1.95 % + $0.90 per ticket)"
+FM-068,Full,CLAIMED,S-RSV-001,Exports
+FM-074,Full,CLAIMED,S-RSV-001,E-mail invitations
+FM-075,Full,CLAIMED,S-RSV-001,SMS
+FM-077,Full,CLAIMED,S-RSV-001,Dashboards
+FM-079,Full,CLAIMED,S-RSV-001,QR check-in app with badge printing
+FM-086,Full,CLAIMED,S-RSV-001,Dashboards
+FM-109,Full,CLAIMED,S-RSV-001,Team access and SAML SSO
+FM-111,Full,CLAIMED,S-RSV-001,Seating charts
+FM-112,Full,CLAIMED,S-RSV-001,Check-in app
+FM-118,Full,CLAIMED,S-RSV-001,Free up to 100 invitees or registrations
+FM-120,Full,CLAIMED,S-RSV-001,"Starter / Plus / Professional / Enterprise plans (prices [UNKNOWN], page behind bot protection)"
+FM-121,Full,CLAIMED,S-RSV-001,
+FM-126,Full,CLAIMED,S-RSV-001,Stripe
+FM-141,Full,CLAIMED,S-RSV-001,Enterprise plan; Fortune 500 claim
+FM-150,Full,CLAIMED,S-RSV-001,MCP server for AI assistants
+FM-154,Full,CLAIMED,S-RSV-001,Event operations for any event type
+FM-171,Full,CLAIMED,S-RSV-001,"GDPR / CCPA, SOC 2 Type II; no sale of guest data"

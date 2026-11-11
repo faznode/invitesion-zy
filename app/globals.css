@@ -1,0 +1,282 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+/*
+ * Dark mode is class-based, not media-based.
+ *
+ * The panel shells and the shadcn primitives carry 65 `dark:` variants, but no
+ * dark theme was ever defined — no `prefers-color-scheme` block, no dark token
+ * set, no toggle. With Tailwind's default media strategy those variants fired
+ * for every visitor whose OS is in dark mode, producing a broken hybrid: a dark
+ * sidebar and dark inputs sitting on a light page, with the active navigation
+ * item rendering near-black instead of brand rose.
+ *
+ * Scoping the variant to a `.dark` ancestor makes that existing work inert
+ * until a real dark theme exists, rather than throwing it away. To build one:
+ * define dark values for the tokens in `:root` under `.dark`, then put the
+ * class on <html>. The public invitation renderer is deliberately paper-light
+ * and must stay opted out.
+ */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  /*
+   * Brand scale — the single source of truth for Invitesion rose.
+   *
+   * Use `brand-*` in markup. Do not write the hex values inline: 53 hardcoded
+   * `#e80053` / `#be0045` literals were previously spread across components,
+   * which is how a "change the brand colour" task becomes an archaeology
+   * project.
+   */
+  --color-brand-50: #fff0f5;
+  --color-brand-100: #ffe0ea;
+  --color-brand-200: #ffc1d5;
+  --color-brand-300: #ff94ba;
+  --color-brand-400: #fb5c91;
+  --color-brand-500: #f22d70;
+  --color-brand-600: #e80053;
+  --color-brand-700: #be0045;
+  --color-brand-800: #9a0038;
+  --color-brand-900: #74002a;
+  /* Dark-mode surface tint for active navigation. */
+  --color-brand-950: #4a001b;
+
+  /*
+   * DEPRECATED alias, kept so nothing breaks mid-migration.
+   *
+   * Tailwind's `orange-*` was redefined to these rose values, which meant a
+   * class literally named `orange-600` rendered pink. Every reader of the admin
+   * panel was misled, and a genuine orange was impossible to express. Prefer
+   * `brand-*`; this block should be deleted once no `orange-*` remains.
+   */
+  --color-orange-50: var(--color-brand-50);
+  --color-orange-100: var(--color-brand-100);
+  --color-orange-200: var(--color-brand-200);
+  --color-orange-300: var(--color-brand-300);
+  --color-orange-400: var(--color-brand-400);
+  --color-orange-500: var(--color-brand-500);
+  --color-orange-600: var(--color-brand-600);
+  --color-orange-700: var(--color-brand-700);
+}
+
+:root {
+  /* Keep native controls, scrollbars and form widgets light too, so a
+     dark-preference OS does not repaint half the chrome on its own. */
+  color-scheme: light;
+  --background: #ffffff;
+  --foreground: #18121d;
+  --card: #ffffff;
+  --card-foreground: #18121d;
+  --popover: #ffffff;
+  --popover-foreground: #18121d;
+  --primary: #e80053;
+  --primary-foreground: #ffffff;
+  --secondary: #f4efff;
+  --secondary-foreground: #241334;
+  --muted: #f4efff;
+  --muted-foreground: #695d72;
+  --accent: #fff0f5;
+  --accent-foreground: #241334;
+  --destructive: #dc2626;
+  --destructive-foreground: #ffffff;
+  --border: #eadfeb;
+  --input: #eadfeb;
+  --ring: #e80053;
+  --radius: 0.6rem;
+}
+
+@layer base {
+  *, ::after, ::before, ::backdrop, ::file-selector-button {
+    border-color: var(--border);
+  }
+  html, body { overflow-x: clip; }
+  body {
+    margin: 0;
+    font-family: "Manrope", Arial, Helvetica, sans-serif;
+    background-color: var(--background);
+    color: var(--foreground);
+  }
+  /* s43 R9: `VariantImage` wraps an image in `<picture class="contents">`, so the picture's children are laid out by its
+   * parent. A <source> must never take a grid cell or a flex slot of its own (it pushed Lontar's cover photo under the
+   * date band at 1280 px); the browser still reads it to choose the file. */
+  picture > source { display: none; }
+  /* G-041: the `sans` font pairing sets a family page's headings in its text face (Manrope); no other font file. */
+  [data-font-pairing='sans'] { --font-serif: var(--font-sans); }
+  }
+
+/* App-shell utility compatibility; invitation renderer remains opt-out. */
+[data-app-shell] :is(.bg-white, .bg-white\/95):not([data-invitation-renderer], [data-invitation-renderer] *) { background-color: #fff; }
+[data-app-shell] :is(.bg-slate-50, .bg-slate-50\/70):not([data-invitation-renderer], [data-invitation-renderer] *) { background-color: #f8fafc; }
+[data-app-shell] :is(.text-slate-900, .text-slate-800, .text-slate-700):not([data-invitation-renderer], [data-invitation-renderer] *) { color: #0f172a; }
+[data-app-shell] :is(.text-slate-600, .text-slate-500, .text-slate-400):not([data-invitation-renderer], [data-invitation-renderer] *) { color: #475569; }
+[data-app-shell] :is(.border-slate-100, .border-slate-200):not([data-invitation-renderer], [data-invitation-renderer] *) { border-color: #e2e8f0; }
+
+button, a { -webkit-tap-highlight-color: transparent; }
+/* S18-E1: no unlayered `img` rule. Tailwind's preflight (`@layer base`) already caps images at 100% wide, and an
+ * unlayered rule outranks every layered utility, which silently disabled `max-w-*` on every <img>. */
+
+/*
+ * Entrance motion of the design families with motion level 1 (B-030, `lib/invitation/families.ts`): ornaments, the
+ * date and the guest block rise in once on load. Names never carry the class, so the largest text paints without
+ * waiting, and prefers-reduced-motion switches the entrance off entirely.
+ */
+@keyframes inv-rise {
+  from {
+    opacity: 0;
+    transform: translateY(0.75rem);
+  }
+}
+
+.inv-rise {
+  animation: inv-rise 0.6s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .inv-rise {
+    animation: none;
+  }
+}
+
+/*
+ * G-036 (I-05): elder-friendly reading on a design-family page, chosen by the guest on their own device (the cover's
+ * switch sets `data-reading="large"` on the layout's <main>; the guest routes render it from the device's cookie).
+ * Every text utility reads Tailwind's size variables, so one step up the scale enlarges the whole page in proportion,
+ * small print most (12 -> 15 px, 14 -> 17 px). Muted text takes the palette's own ink (B-016: no new colour, and ink
+ * clears 4.6:1 on every surface of every palette); motion stops whatever the system setting says.
+ */
+main[data-reading='large'] {
+  font-size: 1.1875rem;
+  --text-xs: 0.9375rem;
+  --text-sm: 1.0625rem;
+  --text-base: 1.1875rem;
+  --text-lg: 1.3125rem;
+  --text-xl: 1.5rem;
+  --text-2xl: 1.75rem;
+  --text-3xl: 2.125rem;
+  --text-4xl: 2.5rem;
+  --text-5xl: 3.25rem;
+}
+
+main[data-reading='large'] .text-\(--inv-muted\) {
+  color: var(--inv-ink);
+}
+
+main[data-reading='large'],
+main[data-reading='large'] *,
+main[data-reading='large'] *::before,
+main[data-reading='large'] *::after {
+  animation: none !important;
+  transition: none !important;
+}
+
+/*
+ * E-046 (s22): the guest page's decorative icons as CSS masks painted in `currentColor` (`components/invitation/icons.tsx`).
+ * Laid out like Tailwind's preflight lays out an inline <svg> (a block box, 24 px unless a utility sizes it); in the
+ * `components` layer so the layouts' size, margin and colour utilities win. Printed like an inline SVG would be, and
+ * visible in forced-colours mode, where backgrounds are otherwise replaced.
+ * Icon paths: Lucide 0.511.0 (`lucide-react`), ISC License. Copyright (c) for portions of Lucide are held by Cole Bemis
+ * 2013-2022 as part of Feather (MIT). All other copyright (c) for Lucide are held by Lucide Contributors 2022.
+ * Permission to use, copy, modify, and/or distribute this software for any purpose with or without fee is hereby granted,
+ * provided that the above copyright notice and this permission notice appear in all copies. THE SOFTWARE IS PROVIDED
+ * "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+ * MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL
+ * DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT,
+ * NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+ */
+@layer components {
+  .inv-icon {
+    display: block;
+    vertical-align: middle;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: currentColor;
+    -webkit-mask: var(--inv-icon) center / 100% 100% no-repeat;
+    mask: var(--inv-icon) center / 100% 100% no-repeat;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  @media (forced-colors: active) {
+    .inv-icon {
+      forced-color-adjust: none;
+      background-color: CanvasText;
+    }
+  }
+  .inv-icon-calendar-days {
+    --inv-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M8 2v4'/%3E%3Cpath d='M16 2v4'/%3E%3Crect width='18' height='18' x='3' y='4' rx='2'/%3E%3Cpath d='M3 10h18'/%3E%3Cpath d='M8 14h.01'/%3E%3Cpath d='M12 14h.01'/%3E%3Cpath d='M16 14h.01'/%3E%3Cpath d='M8 18h.01'/%3E%3Cpath d='M12 18h.01'/%3E%3Cpath d='M16 18h.01'/%3E%3C/svg%3E");
+  }
+  .inv-icon-calendar-plus {
+    --inv-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M16 19h6'/%3E%3Cpath d='M16 2v4'/%3E%3Cpath d='M19 16v6'/%3E%3Cpath d='M21 12.598V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h8.5'/%3E%3Cpath d='M3 10h18'/%3E%3Cpath d='M8 2v4'/%3E%3C/svg%3E");
+  }
+  .inv-icon-clock {
+    --inv-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Cpolyline points='12 6 12 12 16.5 12'/%3E%3C/svg%3E");
+  }
+  .inv-icon-gift {
+    --inv-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='8' width='18' height='4' rx='1'/%3E%3Cpath d='M12 8v13'/%3E%3Cpath d='M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7'/%3E%3Cpath d='M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5'/%3E%3C/svg%3E");
+  }
+  .inv-icon-map-pin {
+    --inv-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0'/%3E%3Ccircle cx='12' cy='10' r='3'/%3E%3C/svg%3E");
+  }
+  .inv-icon-quote {
+    --inv-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z'/%3E%3Cpath d='M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z'/%3E%3C/svg%3E");
+  }
+  .inv-icon-radio {
+    --inv-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4.9 19.1C1 15.2 1 8.8 4.9 4.9'/%3E%3Cpath d='M7.8 16.2c-2.3-2.3-2.3-6.1 0-8.5'/%3E%3Ccircle cx='12' cy='12' r='2'/%3E%3Cpath d='M16.2 7.8c2.3 2.3 2.3 6.1 0 8.5'/%3E%3Cpath d='M19.1 4.9C23 8.8 23 15.1 19.1 19'/%3E%3C/svg%3E");
+  }
+  .inv-icon-volume-2 {
+    --inv-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z'/%3E%3Cpath d='M16 9a5 5 0 0 1 0 6'/%3E%3Cpath d='M19.364 18.364a9 9 0 0 0 0-12.728'/%3E%3C/svg%3E");
+  }
+  .inv-icon-volume-x {
+    --inv-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z'/%3E%3Cline x1='22' x2='16' y1='9' y2='15'/%3E%3Cline x1='16' x2='22' y1='9' y2='15'/%3E%3C/svg%3E");
+  }
+  /* B-025: the gallery lightbox's close and step controls and the video facade's poster. */
+  .inv-icon-x {
+    --inv-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M18 6 6 18'/%3E%3Cpath d='m6 6 12 12'/%3E%3C/svg%3E");
+  }
+  .inv-icon-chevron-left {
+    --inv-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m15 18-6-6 6-6'/%3E%3C/svg%3E");
+  }
+  .inv-icon-chevron-right {
+    --inv-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m9 18 6-6-6-6'/%3E%3C/svg%3E");
+  }
+  .inv-icon-play {
+    --inv-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolygon points='6 3 20 12 6 21 6 3'/%3E%3C/svg%3E");
+  }
+}
+
+/*
+ * B-009 (D-045): the cover gate of an invitation with music. Its links point at the gate itself (#sampul), so before any
+ * script runs a tap makes it :target and it disappears: the invitation opens without JavaScript. The client island
+ * (`components/invitation/cover-audio.tsx`) does the same with the `hidden` attribute and starts the music on that tap.
+ * While the gate is shown the page behind it does not scroll. Unlayered on purpose: these rules must beat the gate's
+ * own `flex` utility.
+ */
+.inv-cover-gate:target {
+  display: none;
+}
+
+html:has(.inv-cover-gate:not([hidden]):not(:target)) {
+  overflow: hidden;
+}

@@ -1,0 +1,21 @@
+{
+ "code": "PTF",
+ "competitor": "partiful",
+ "observedAt": "2026-10-29T10:33:19.829+07:00",
+ "homepage": {
+  "url": "https://partiful.com/",
+  "finalUrl": "https://partiful.com/",
+  "skipped": null,
+  "links": 49
+ },
+ "catalogCandidates": [
+  "https://help.partiful.com/en-us/collections/19666491-getting-started"
+ ],
+ "catalog": {
+  "url": "https://help.partiful.com/en-us/collections/19666491-getting-started",
+  "finalUrl": "https://help.partiful.com/en-us/collections/19666491-getting-started",
+  "skipped": null,
+  "links": 15
+ },
+ "demos": []
+}

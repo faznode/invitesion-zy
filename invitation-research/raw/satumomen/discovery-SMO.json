@@ -1,0 +1,19 @@
+{
+ "code": "SMO",
+ "competitor": "satumomen",
+ "observedAt": "2026-10-29T10:34:58.020+07:00",
+ "homepage": {
+  "url": "https://satumomen.com/",
+  "finalUrl": "https://satumomen.com/",
+  "skipped": null,
+  "links": 2
+ },
+ "catalogCandidates": [],
+ "catalog": {
+  "url": "https://satumomen.com/tema",
+  "finalUrl": "https://satumomen.com/tema",
+  "skipped": null,
+  "links": 2
+ },
+ "demos": []
+}

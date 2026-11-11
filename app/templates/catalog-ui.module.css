@@ -1,0 +1,177 @@
+/*
+ * UI tambahan katalog: bar filter minimalis, strip “cara kerja”,
+ * dan lapisan foto pada cover kartu. Melengkapi templates.module.css
+ * tanpa mengubahnya.
+ */
+
+/* —— Strip arahan alur —— */
+.steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin: 30px 0 36px;
+}
+
+.step {
+  border-top: 1px solid #e7e5e4;
+  padding-top: 12px;
+}
+
+.stepN {
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  color: #e80053;
+  font-weight: 600;
+}
+
+.stepT {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 7px 0 4px;
+  color: #1c1917;
+}
+
+.stepB {
+  font-size: 12.5px;
+  line-height: 1.55;
+  color: #57534e;
+}
+
+/* —— Bar filter minimalis —— */
+.bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 0;
+  border-top: 1px solid #e7e5e4;
+  border-bottom: 1px solid #e7e5e4;
+  margin-bottom: 12px;
+}
+
+.field {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #78716c;
+}
+
+.select {
+  border: 1px solid #d6d3d1;
+  background: #fff;
+  border-radius: 8px;
+  padding: 7px 12px;
+  font-size: 13.5px;
+  color: #1c1917;
+  cursor: pointer;
+  max-width: 190px;
+}
+
+.select:focus-visible {
+  outline: 2px solid #e80053;
+  outline-offset: 1px;
+}
+
+.count {
+  margin-left: auto;
+  font-size: 12.5px;
+  color: #78716c;
+  font-variant-numeric: tabular-nums;
+}
+
+.reset {
+  font-size: 12.5px;
+  color: #e80053;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.curatedNote {
+  font-size: 12.5px;
+  color: #78716c;
+  margin: 0 0 24px;
+}
+
+/* —— Tombol jelajahi semua —— */
+.moreWrap {
+  display: flex;
+  justify-content: center;
+  margin: 36px 0 8px;
+}
+
+.moreBtn {
+  border: 1px solid #1c1917;
+  background: #fff;
+  color: #1c1917;
+  border-radius: 999px;
+  padding: 11px 24px;
+  font-size: 13.5px;
+  cursor: pointer;
+  transition: background 0.18s ease, color 0.18s ease;
+}
+
+.moreBtn:hover {
+  background: #1c1917;
+  color: #fff;
+}
+
+/* —— Lapisan foto pada cover kartu —— */
+.art {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*
+ * A soft plate in the palette's own surface sits behind the centred text, over the vertical wash, so the names stay
+ * legible on busy art while the edges keep the picture (G-016: every one of the 64 cards measured at >= 4.5:1 at the
+ * 5th percentile in session 44; the wash alone left 110 of 192 texts below).
+ */
+.tint {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background:
+    radial-gradient(
+      ellipse 72% 50% at 50% 50%,
+      color-mix(in srgb, var(--bg) 90%, transparent) 0%,
+      color-mix(in srgb, var(--bg) 80%, transparent) 60%,
+      transparent 100%
+    ),
+    linear-gradient(
+      180deg,
+      color-mix(in srgb, var(--bg) 55%, transparent) 0%,
+      color-mix(in srgb, var(--bg) 74%, transparent) 60%,
+      color-mix(in srgb, var(--bg) 88%, transparent) 100%
+    );
+}
+
+/* Konten cover harus tetap di atas lapisan foto. */
+.lift {
+  position: relative;
+  z-index: 3;
+}
+
+.raise {
+  z-index: 3;
+}
+
+@media (max-width: 720px) {
+  .steps {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .count {
+    margin-left: 0;
+    width: 100%;
+  }
+}

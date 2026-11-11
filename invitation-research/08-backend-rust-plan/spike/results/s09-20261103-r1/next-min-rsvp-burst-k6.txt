@@ -1,0 +1,30 @@
+
+     ✓ status 303
+     ✓ redirect says saved
+
+     checks.........................: 100.00% 28746 out of 28746
+     ✓ { op:rsvp }..................: 100.00% 28746 out of 28746
+     data_received..................: 7.7 MB  192 kB/s
+     ✓ { op:rsvp }..................: 0 B     0 B/s
+     data_sent......................: 3.1 MB  77 kB/s
+     http_req_blocked...............: avg=6.19µs   min=1.49µs  med=3.75µs  p(90)=6.24µs   p(95)=7.34µs   p(99)=17.35µs  max=3.84ms  
+     http_req_connecting............: avg=285ns    min=0s      med=0s      p(90)=0s       p(95)=0s       p(99)=0s       max=788.42µs
+     http_req_duration..............: avg=48.41ms  min=3.1ms   med=48.95ms p(90)=65.98ms  p(95)=71.84ms  p(99)=85.19ms  max=224.67ms
+       { expected_response:true }...: avg=48.41ms  min=3.1ms   med=48.95ms p(90)=65.98ms  p(95)=71.84ms  p(99)=85.19ms  max=224.67ms
+     ✓ { op:rsvp }..................: avg=48.41ms  min=3.1ms   med=48.95ms p(90)=65.98ms  p(95)=71.84ms  p(99)=85.19ms  max=224.67ms
+     http_req_failed................: 0.00%   0 out of 14373
+     ✓ { op:rsvp }..................: 0.00%   0 out of 14373
+     http_req_receiving.............: avg=111.81µs min=23.54µs med=70.26µs p(90)=136.99µs p(95)=274.67µs p(99)=1.16ms   max=8.94ms  
+     ✓ { op:rsvp }..................: avg=111.81µs min=23.54µs med=70.26µs p(90)=136.99µs p(95)=274.67µs p(99)=1.16ms   max=8.94ms  
+     http_req_sending...............: avg=28.24µs  min=6.12µs  med=14.89µs p(90)=26.68µs  p(95)=35.64µs  p(99)=281.82µs max=4.33ms  
+     http_req_tls_handshaking.......: avg=0s       min=0s      med=0s      p(90)=0s       p(95)=0s       p(99)=0s       max=0s      
+     http_req_waiting...............: avg=48.27ms  min=3.02ms  med=48.81ms p(90)=65.8ms   p(95)=71.68ms  p(99)=84.93ms  max=224.58ms
+     ✓ { op:rsvp }..................: avg=48.27ms  min=3.02ms  med=48.81ms p(90)=65.8ms   p(95)=71.68ms  p(99)=84.93ms  max=224.58ms
+     http_reqs......................: 14373   359.283792/s
+     ✓ { op:rsvp }..................: 14373   359.283792/s
+     iteration_duration.............: avg=48.69ms  min=3.27ms  med=49.24ms p(90)=66.26ms  p(95)=72.16ms  p(99)=85.46ms  max=224.84ms
+     iterations.....................: 14373   359.283792/s
+     rsvp_saved.....................: 14373   359.283792/s
+     vus............................: 1       min=1              max=20
+     vus_max........................: 20      min=20             max=20
+

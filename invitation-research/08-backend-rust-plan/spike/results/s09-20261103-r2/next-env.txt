@@ -1,0 +1,12 @@
+captured=2026-11-03T18:39:05Z
+host_cores=2 mem_total_kb=4387300 kernel=6.18.56
+k6=k6 v0.54.0 (commit/baba871c8a, go1.23.1, linux/amd64)
+postgres=16.15 max_connections=100
+node=v24.16.0
+next=15.6.0-canary.59 build_id=VweChFRZD6klUMX7RZ1XL
+next_min_routes=present
+next_db_pool=10 (lib/db/drizzle.ts default)
+rustc=error: rustup could not choose a version of rustc to run, because one wasn't specified explicitly, and no default is configured.
+help: run 'rustup default stable' to download the latest stable release of Rust and set it as your default toolchain. binary_sha256_16=89a53385141fd4ca
+rust_server_log=invitesion-spike listening on http://127.0.0.1:3200 (pool 10)
+platform_next_dev_procs=1

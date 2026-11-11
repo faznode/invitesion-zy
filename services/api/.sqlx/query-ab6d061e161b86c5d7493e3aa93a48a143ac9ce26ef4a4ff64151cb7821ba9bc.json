@@ -1,0 +1,52 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "select category, is_premium, default_config from templates where id = $1",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "category",
+        "type_info": "Varchar",
+        "origin": {
+          "Table": {
+            "table": "templates",
+            "name": "category"
+          }
+        }
+      },
+      {
+        "ordinal": 1,
+        "name": "is_premium",
+        "type_info": "Bool",
+        "origin": {
+          "Table": {
+            "table": "templates",
+            "name": "is_premium"
+          }
+        }
+      },
+      {
+        "ordinal": 2,
+        "name": "default_config",
+        "type_info": "Jsonb",
+        "origin": {
+          "Table": {
+            "table": "templates",
+            "name": "default_config"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Left": [
+        "Int4"
+      ]
+    },
+    "nullable": [
+      false,
+      false,
+      true
+    ]
+  },
+  "hash": "ab6d061e161b86c5d7493e3aa93a48a143ac9ce26ef4a4ff64151cb7821ba9bc"
+}

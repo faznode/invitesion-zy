@@ -1,0 +1,28 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "select number from receipts where order_id = $1",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "number",
+        "type_info": "Int4",
+        "origin": {
+          "Table": {
+            "table": "receipts",
+            "name": "number"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Left": [
+        "Int4"
+      ]
+    },
+    "nullable": [
+      false
+    ]
+  },
+  "hash": "163355768ab5349a2946d9438baee5c3104ff4ef7951ca4554f058b73a5d32b9"
+}

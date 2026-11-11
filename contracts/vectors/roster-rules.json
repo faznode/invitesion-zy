@@ -1,0 +1,266 @@
+{
+  "$comment": "B-033 roster rules, run by tests/b033-roster-rules.test.ts (lib/invitation/roster-rules.ts) and services/api/tests/roster_vectors.rs (src/roster/rules.rs). A text may be { prefix?, repeat, times, suffix? }. padExisting adds N guests 'Isi <i>' (no phone, slug isi-<i>) after the listed ones; padRows adds N rows 'Baris <i>'; padPending adds N pending registrations 'Isi <i>' (no phone).",
+  "limits": {
+    "maxGuests": 3000,
+    "maxImportRows": 1000,
+    "maxPendingRegistrations": 300,
+    "maxSeats": 50,
+    "maxRegistrationSeats": 5,
+    "maxName": 150,
+    "maxCategory": 50,
+    "maxPhone": 30,
+    "maxBaseSlug": 140
+  },
+  "phones": [
+    { "name": "national with dashes", "input": "0812-3456-7890", "expect": { "ok": true, "digits": "6281234567890" } },
+    { "name": "plus country code with spaces", "input": "+62 812 3456 7890", "expect": { "ok": true, "digits": "6281234567890" } },
+    { "name": "country code without plus", "input": "62812345678", "expect": { "ok": true, "digits": "62812345678" } },
+    { "name": "bare 8", "input": "812345678", "expect": { "ok": true, "digits": "62812345678" } },
+    { "name": "00 prefix", "input": "0062812345678", "expect": { "ok": true, "digits": "62812345678" } },
+    { "name": "plus 62 with (0)", "input": "+62 (0)812-3456-789", "expect": { "ok": true, "digits": "628123456789" } },
+    { "name": "dots", "input": "0812.3456.7890", "expect": { "ok": true, "digits": "6281234567890" } },
+    { "name": "landline", "input": "021-5551234", "expect": { "ok": false, "reason": "invalid" } },
+    { "name": "another country", "input": "+1 415 555 2671", "expect": { "ok": true, "digits": "14155552671" } },
+    { "name": "too short", "input": "08123", "expect": { "ok": false, "reason": "invalid" } },
+    { "name": "too long", "input": "081234567890123", "expect": { "ok": false, "reason": "invalid" } },
+    { "name": "9 national digits, the shortest", "input": "0812345678", "expect": { "ok": true, "digits": "62812345678" } },
+    { "name": "8 national digits", "input": "081234567", "expect": { "ok": false, "reason": "invalid" } },
+    { "name": "12 national digits, the longest", "input": "0812345678901", "expect": { "ok": true, "digits": "62812345678901" } },
+    { "name": "13 national digits", "input": "08123456789012", "expect": { "ok": false, "reason": "invalid" } },
+    { "name": "another country, 15 digits", "input": "+123456789012345", "expect": { "ok": true, "digits": "123456789012345" } },
+    { "name": "another country, 16 digits", "input": "+1234567890123456", "expect": { "ok": false, "reason": "invalid" } },
+    { "name": "letters", "input": "0812abc", "expect": { "ok": false, "reason": "invalid" } },
+    { "name": "two plus signs", "input": "++6281234567890", "expect": { "ok": false, "reason": "invalid" } },
+    { "name": "empty", "input": "", "expect": { "ok": false, "reason": "missing" } }
+  ],
+  "rows": [
+    {
+      "name": "everything, spacing collapsed",
+      "input": { "name": "  Budi   Santoso ", "phone": "0812-3456-7890", "category": " Keluarga ", "guestCount": "2" },
+      "expect": { "ok": true, "row": { "name": "Budi Santoso", "phone": "0812-3456-7890", "category": "Keluarga", "guestCount": 2, "digits": "6281234567890" } }
+    },
+    { "name": "name only", "input": { "name": "Sari" }, "expect": { "ok": true, "row": { "name": "Sari", "phone": null, "category": null, "guestCount": 1, "digits": null } } },
+    { "name": "blank name", "input": { "name": "   " }, "expect": { "ok": false, "reason": "name" } },
+    { "name": "name of 151", "input": { "name": { "repeat": "a", "times": 151 } }, "expect": { "ok": false, "reason": "name" } },
+    {
+      "name": "name of 150",
+      "input": { "name": { "repeat": "a", "times": 150 } },
+      "expect": { "ok": true, "row": { "name": { "repeat": "a", "times": 150 }, "phone": null, "category": null, "guestCount": 1, "digits": null } }
+    },
+    {
+      "name": "150 code points of astral characters",
+      "input": { "name": { "repeat": "😀", "times": 150 } },
+      "expect": { "ok": true, "row": { "name": { "repeat": "😀", "times": 150 }, "phone": null, "category": null, "guestCount": 1, "digits": null } }
+    },
+    { "name": "NUL in the name", "input": { "name": "Bu\u0000di" }, "expect": { "ok": false, "reason": "name" } },
+    {
+      "name": "tab and newline collapse",
+      "input": { "name": "Budi\tSantoso\nJr" },
+      "expect": { "ok": true, "row": { "name": "Budi Santoso Jr", "phone": null, "category": null, "guestCount": 1, "digits": null } }
+    },
+    {
+      "name": "no-break space and BOM are spaces",
+      "input": { "name": "\u00a0Rina\u00a0Kartika\ufeff" },
+      "expect": { "ok": true, "row": { "name": "Rina Kartika", "phone": null, "category": null, "guestCount": 1, "digits": null } }
+    },
+    { "name": "landline refused", "input": { "name": "Budi", "phone": "021-5551234" }, "expect": { "ok": false, "reason": "phone" } },
+    { "name": "blank phone is none", "input": { "name": "Budi", "phone": "   " }, "expect": { "ok": true, "row": { "name": "Budi", "phone": null, "category": null, "guestCount": 1, "digits": null } } },
+    {
+      "name": "valid number longer than the column",
+      "input": { "name": "Budi", "phone": "( 0 ) - 8 - 1 - 2 - 3 - 4 - 5 - 6 - 7 - 8 - 9" },
+      "expect": { "ok": false, "reason": "phone" }
+    },
+    { "name": "zero seats", "input": { "name": "Budi", "guestCount": "0" }, "expect": { "ok": false, "reason": "seats" } },
+    { "name": "51 seats", "input": { "name": "Budi", "guestCount": "51" }, "expect": { "ok": false, "reason": "seats" } },
+    { "name": "seats with a word", "input": { "name": "Budi", "guestCount": "2 orang" }, "expect": { "ok": false, "reason": "seats" } },
+    { "name": "seats padded", "input": { "name": "Budi", "guestCount": " 3 " }, "expect": { "ok": true, "row": { "name": "Budi", "phone": null, "category": null, "guestCount": 3, "digits": null } } },
+    { "name": "seats as a number", "input": { "name": "Budi", "guestCount": 4 }, "expect": { "ok": true, "row": { "name": "Budi", "phone": null, "category": null, "guestCount": 4, "digits": null } } },
+    { "name": "seats with leading zeros", "input": { "name": "Budi", "guestCount": "007" }, "expect": { "ok": true, "row": { "name": "Budi", "phone": null, "category": null, "guestCount": 7, "digits": null } } },
+    { "name": "fractional seats", "input": { "name": "Budi", "guestCount": "1.5" }, "expect": { "ok": false, "reason": "seats" } },
+    { "name": "category of 51", "input": { "name": "Budi", "category": { "repeat": "x", "times": 51 } }, "expect": { "ok": false, "reason": "category" } },
+    { "name": "blank category is none", "input": { "name": "Ali", "category": "  " }, "expect": { "ok": true, "row": { "name": "Ali", "phone": null, "category": null, "guestCount": 1, "digits": null } } },
+    { "name": "phone judged before seats", "input": { "name": "Budi", "phone": "abc", "guestCount": "0" }, "expect": { "ok": false, "reason": "phone" } },
+    { "name": "name judged first", "input": { "name": "", "phone": "abc" }, "expect": { "ok": false, "reason": "name" } },
+    { "name": "registration ceiling", "input": { "name": "Budi", "guestCount": "6" }, "maxSeats": 5, "expect": { "ok": false, "reason": "seats" } },
+    { "name": "registration at the ceiling", "input": { "name": "Budi", "guestCount": "5" }, "maxSeats": 5, "expect": { "ok": true, "row": { "name": "Budi", "phone": null, "category": null, "guestCount": 5, "digits": null } } }
+  ],
+  "slugs": [
+    { "name": "free", "input": "Budi Santoso", "taken": [], "expect": "budi-santoso" },
+    { "name": "second", "input": "Budi Santoso", "taken": ["budi-santoso"], "expect": "budi-santoso-2" },
+    { "name": "fourth", "input": "Budi Santoso", "taken": ["budi-santoso", "budi-santoso-2", "budi-santoso-3"], "expect": "budi-santoso-4" },
+    { "name": "smallest free suffix", "input": "Budi Santoso", "taken": ["budi-santoso", "budi-santoso-3"], "expect": "budi-santoso-2" },
+    { "name": "accents fall away", "input": "Élodie Ñúñez", "taken": [], "expect": "lodie-ez" },
+    { "name": "nothing left", "input": "!!!", "taken": [], "expect": "tamu" },
+    { "name": "nothing left, taken", "input": "!!!", "taken": ["tamu"], "expect": "tamu-2" },
+    { "name": "cut to 140", "input": { "repeat": "a", "times": 150 }, "taken": [], "expect": { "repeat": "a", "times": 140 } },
+    { "name": "cut, then a suffix", "input": { "repeat": "a", "times": 150 }, "taken": [{ "repeat": "a", "times": 140 }], "expect": { "repeat": "a", "times": 140, "suffix": "-2" } },
+    { "name": "cut at a dash", "input": { "repeat": "a", "times": 139, "suffix": " b" }, "taken": [], "expect": { "repeat": "a", "times": 139 } },
+    { "name": "Kelvin sign lowercases to k", "input": "Kelvin \u212a", "taken": [], "expect": "kelvin-k" },
+    { "name": "digits kept", "input": "2 Budi", "taken": [], "expect": "2-budi" }
+  ],
+  "imports": [
+    {
+      "name": "a mixed file",
+      "existing": [
+        { "name": "Budi Santoso", "phone": "0812-3456-7890", "slug": "budi-santoso" },
+        { "name": "Sari", "phone": null, "slug": "sari" }
+      ],
+      "rows": [
+        { "name": "Rina Kartika", "phone": "0813-1111-2222", "category": "Teman", "guestCount": "2" },
+        { "name": "Budi S.", "phone": "+62 812 3456 7890" },
+        { "name": "sari" },
+        { "name": "Joko", "phone": "021-5551234" },
+        { "name": "Rina  Kartika", "phone": "0813 1111 2222" },
+        { "name": "Budi Santoso", "phone": "0857-9999-0000" },
+        { "name": "Wati", "guestCount": "0" },
+        { "name": "RINA KARTIKA" }
+      ],
+      "expect": {
+        "verdicts": [
+          { "status": "ok", "slug": "rina-kartika" },
+          { "status": "duplicate", "of": "roster" },
+          { "status": "duplicate", "of": "roster" },
+          { "status": "invalid", "reason": "phone" },
+          { "status": "duplicate", "of": "file" },
+          { "status": "ok", "slug": "budi-santoso-2" },
+          { "status": "invalid", "reason": "seats" },
+          { "status": "duplicate", "of": "file" }
+        ],
+        "ok": 2,
+        "invalid": 2,
+        "duplicate": 4,
+        "refusal": null
+      }
+    },
+    {
+      "name": "one name, two numbers, an existing phoneless twin",
+      "existing": [{ "name": "Andi", "phone": null, "slug": "andi" }],
+      "rows": [
+        { "name": "Andi", "phone": "0811-0000-0001" },
+        { "name": "Andi", "phone": "0811-0000-0002" }
+      ],
+      "expect": {
+        "verdicts": [{ "status": "ok", "slug": "andi-2" }, { "status": "ok", "slug": "andi-3" }],
+        "ok": 2,
+        "invalid": 0,
+        "duplicate": 0,
+        "refusal": null
+      }
+    },
+    {
+      "name": "nothing to import",
+      "existing": [],
+      "rows": [{ "name": "" }],
+      "expect": { "verdicts": [{ "status": "invalid", "reason": "name" }], "ok": 0, "invalid": 1, "duplicate": 0, "refusal": "nothing_to_import" }
+    },
+    {
+      "name": "fills the roster exactly",
+      "existing": [],
+      "padExisting": 2998,
+      "rows": [{ "name": "A1" }, { "name": "A2" }],
+      "expect": { "verdicts": [{ "status": "ok", "slug": "a1" }, { "status": "ok", "slug": "a2" }], "ok": 2, "invalid": 0, "duplicate": 0, "refusal": null }
+    },
+    {
+      "name": "one over the roster ceiling",
+      "existing": [],
+      "padExisting": 2999,
+      "rows": [{ "name": "A1" }, { "name": "A2" }],
+      "expect": { "verdicts": [{ "status": "ok", "slug": "a1" }, { "status": "ok", "slug": "a2" }], "ok": 2, "invalid": 0, "duplicate": 0, "refusal": "roster_full" }
+    },
+    {
+      "name": "too many rows",
+      "existing": [],
+      "rows": [],
+      "padRows": 1001,
+      "expect": { "verdicts": [], "ok": 0, "invalid": 0, "duplicate": 0, "refusal": "too_many_rows" }
+    },
+    {
+      "name": "exactly the row ceiling",
+      "existing": [],
+      "rows": [],
+      "padRows": 1000,
+      "expectCounts": { "ok": 1000, "invalid": 0, "duplicate": 0, "refusal": null }
+    }
+  ],
+  "registrations": [
+    {
+      "name": "accepted",
+      "input": { "name": "Dewi", "phone": "0812-0000-1111", "guestCount": "2" },
+      "guests": [],
+      "pending": [],
+      "expect": { "status": "ok", "row": { "name": "Dewi", "phone": "0812-0000-1111", "category": null, "guestCount": 2, "digits": "6281200001111" } }
+    },
+    { "name": "above the registration seats", "input": { "name": "Dewi", "guestCount": "6" }, "guests": [], "pending": [], "expect": { "status": "invalid", "reason": "seats" } },
+    {
+      "name": "number already a guest",
+      "input": { "name": "Dewi", "phone": "+62 812 0000 1111" },
+      "guests": [{ "name": "Dewi Lestari", "phone": "0812-0000-1111" }],
+      "pending": [],
+      "expect": { "status": "duplicate" }
+    },
+    { "name": "name already waiting", "input": { "name": "dewi" }, "guests": [], "pending": [{ "name": "Dewi", "phone": null }], "expect": { "status": "duplicate" } },
+    { "name": "queue full", "input": { "name": "Eka" }, "guests": [], "pending": [], "padPending": 300, "expect": { "status": "full" } },
+    {
+      "name": "one place left",
+      "input": { "name": "Eka" },
+      "guests": [],
+      "pending": [],
+      "padPending": 299,
+      "expect": { "status": "ok", "row": { "name": "Eka", "phone": null, "category": null, "guestCount": 1, "digits": null } }
+    },
+    { "name": "duplicate judged before a full queue", "input": { "name": "Isi 5" }, "guests": [], "pending": [], "padPending": 300, "expect": { "status": "duplicate" } },
+    {
+      "name": "a registration has no category",
+      "input": { "name": "Fajar", "category": "VIP" },
+      "guests": [],
+      "pending": [],
+      "expect": { "status": "ok", "row": { "name": "Fajar", "phone": null, "category": null, "guestCount": 1, "digits": null } }
+    }
+  ],
+  "rateLimit": {
+    "$comment": "B-013 / D-043: the limiter's identities, run by tests/b033-roster-rules.test.ts (lib/rate-limit-keys.ts) and services/api/tests/roster_vectors.rs (src/limits.rs), so a self-registration counts against the same windows whichever writer is live. addresses: null = not an IP literal (the per-address limit is skipped). buckets: expectations computed independently with Python's hmac. limitStrings: RATE_LIMIT_* values, null = the default applies. Documentation addresses only (RFC 5737, RFC 3849).",
+    "addresses": [
+      { "input": " 203.0.113.7 ", "expect": "203.0.113.7" },
+      { "input": "::ffff:203.0.113.7", "expect": "203.0.113.7" },
+      { "input": "::FFFF:198.51.100.20", "expect": "198.51.100.20" },
+      { "input": "2001:db8:aa:bb::1", "expect": "2001:db8:aa:bb::/64" },
+      { "input": "2001:0DB8:00aa:00bb:ffff:1:2:3", "expect": "2001:db8:aa:bb::/64" },
+      { "input": "2001:db8:aa:bc::1", "expect": "2001:db8:aa:bc::/64" },
+      { "input": "2001:db8::", "expect": "2001:db8:0:0::/64" },
+      { "input": "::", "expect": "0:0:0:0::/64" },
+      { "input": "::203.0.113.7", "expect": "0:0:0:0::/64" },
+      { "input": "", "expect": null },
+      { "input": "localhost", "expect": null },
+      { "input": "203.0.113.7:443", "expect": null },
+      { "input": "[2001:db8::1]", "expect": null },
+      { "input": "fe80::1%eth0", "expect": null },
+      { "input": "203.0.113.256", "expect": null },
+      { "input": "01.2.3.4", "expect": null },
+      { "input": "1.2.3", "expect": null },
+      { "input": "2001:db8::1::2", "expect": null }
+    ],
+    "buckets": [
+      { "secret": "roster-vector-secret-0123456789abcdef", "scope": "registration", "address": "203.0.113.7", "expect": "registration:ip:e6c7e0a8cde1703c7d5aa53fa2b7ec3a" },
+      { "secret": "roster-vector-secret-0123456789abcdef", "scope": "registration", "address": " 203.0.113.7 ", "expect": "registration:ip:e6c7e0a8cde1703c7d5aa53fa2b7ec3a" },
+      { "secret": "roster-vector-secret-fedcba9876543210", "scope": "registration", "address": "203.0.113.7", "expect": "registration:ip:f5f1dac0ce70975af3ee85471e4acdad" },
+      { "secret": "roster-vector-secret-0123456789abcdef", "scope": "registration", "address": "2001:db8:aa:bb::/64", "expect": "registration:ip:28782d7ea00d3c1065d6d0f4e84ac26e" },
+      { "secret": "roster-vector-secret-0123456789abcdef", "scope": "rsvp", "address": "198.51.100.20", "expect": "rsvp:ip:cd03211cfd0488fd6d026f7d0921a81e" }
+    ],
+    "limitStrings": [
+      { "input": "20/600", "expect": { "max": 20, "windowSeconds": 600 } },
+      { "input": " 3 / 60 ", "expect": { "max": 3, "windowSeconds": 60 } },
+      { "input": "+5/+600", "expect": { "max": 5, "windowSeconds": 600 } },
+      { "input": "2147483647/1", "expect": { "max": 2147483647, "windowSeconds": 1 } },
+      { "input": "2147483648/1", "expect": null },
+      { "input": "", "expect": null },
+      { "input": "10", "expect": null },
+      { "input": "0/60", "expect": null },
+      { "input": "10/0", "expect": null },
+      { "input": "-1/60", "expect": null },
+      { "input": "a/60", "expect": null },
+      { "input": "10/b", "expect": null },
+      { "input": "5/600/1", "expect": null },
+      { "input": "1.5/60", "expect": null }
+    ]
+  }
+}

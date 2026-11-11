@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "id": "basic-wedding-melati",
+  "name": "Melati",
+  "version": "1.0.0",
+  "niche": "wedding",
+  "tier": "basic",
+  "locales": ["id", "en"],
+  "defaultLocale": "id",
+  "sections": [
+    { "id": "cover", "required": true, "slots": [{ "key": "couple.first", "kind": "text", "maxLength": 40 }, { "key": "couple.second", "kind": "text", "maxLength": 40 }, { "key": "guest.name", "kind": "text", "maxLength": 150 }] },
+    { "id": "events", "required": true, "slots": [{ "key": "event.title", "kind": "text", "maxLength": 60 }, { "key": "event.date", "kind": "datetime" }, { "key": "event.time", "kind": "datetime" }, { "key": "event.venue", "kind": "text", "maxLength": 160 }] },
+    { "id": "rsvp", "required": true, "slots": [] },
+    { "id": "closing", "required": false, "slots": [] }
+  ],
+  "tokens": {
+    "colors": { "background": "#f7f3ec", "surface": "#fffdf9", "text": "#2f2a24", "mutedText": "#5c544a", "accent": "#55704f", "onAccent": "#ffffff" },
+    "typography": { "display": "cormorant-garamond", "body": "jost" },
+    "radius": "14px",
+    "spacingScale": [4, 8, 16, 24, 40]
+  },
+  "motion": { "level": 1, "durationsMs": [600], "easing": "cubic-bezier(0.22, 1, 0.36, 1)", "reducedMotion": "none" },
+  "assets": [
+    { "id": "cormorant-garamond", "path": "assets/fonts/cormorant-garamond-500.woff2", "kind": "font", "bytes": 23312, "license": "OFL-1.1", "source": "Cormorant Garamond 500, latin subset, Google Fonts (fonts.gstatic.com); OFL text from github.com/google/fonts ofl/cormorantgaramond", "author": "The Cormorant Project Authors (Christian Thalmann)", "provenance": "licensed", "deferred": false },
+    { "id": "jost", "path": "assets/fonts/jost-400.woff2", "kind": "font", "bytes": 9404, "license": "OFL-1.1", "source": "Jost 400, latin subset, Google Fonts (fonts.gstatic.com); OFL text from github.com/google/fonts ofl/jost", "author": "The Jost Project Authors (indestructible type*)", "provenance": "licensed", "deferred": false },
+    { "id": "melati-sprig", "path": "assets/img/melati-sprig.webp", "kind": "image", "bytes": 9750, "width": 560, "height": 560, "license": "own-work", "source": "Generated for this repository (v0 image tool, 2026-11-03; watercolour jasmine and eucalyptus sprig; no input image), resized to WebP with sharp", "author": "Invitesion", "provenance": "generated", "deferred": false },
+    { "id": "og", "path": "assets/og.jpg", "kind": "og", "bytes": 12633, "width": 1200, "height": 630, "license": "own-work", "source": "Headless-Chrome capture of this template's cover with fake sample data (harness preview), JPEG via sharp", "author": "Invitesion", "provenance": "own-work", "deferred": false }
+  ],
+  "personalization": { "guestName": { "slot": "guest.name", "maxLength": 150, "dir": "auto" }, "allowedSources": ["guests-table"] },
+  "accessibility": { "minContrast": { "body": 4.5, "large": 3 }, "lang": "id", "focusVisible": true },
+  "strings": {
+    "eyebrow": { "id": "Pernikahan", "en": "The wedding of" },
+    "invite": { "id": "Kepada Yth.", "en": "Dear" },
+    "opening": { "id": "Dengan sukacita kami mengundang Bapak/Ibu/Saudara/i untuk hadir dan berbagi kebahagiaan di hari pernikahan kami.", "en": "With joy, we invite you to join us and share the happiness of our wedding day." },
+    "events": { "id": "Rangkaian Acara", "en": "Schedule" },
+    "rsvp": { "id": "Konfirmasi Kehadiran", "en": "RSVP" },
+    "rsvpHint": { "id": "Mohon kabari kami apakah Anda dapat hadir.", "en": "Please let us know whether you can attend." },
+    "rsvpButton": { "id": "Isi RSVP", "en": "Reply" },
+    "closing": { "id": "Terima kasih atas doa dan kehadiran Anda.", "en": "Thank you for your presence and kind wishes." }
+  },
+  "originality": { "statement": "Original layout and copy written for this repository: a single-column ivory card with a generated watercolour jasmine sprig, two OFL type families and one fade on first paint. No competitor page, asset, wording or layout was used as a reference.", "references": [] },
+  "og": { "asset": "og" },
+  "externalScripts": []
+}

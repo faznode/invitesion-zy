@@ -1,0 +1,58 @@
+feature_id,status,basis,evidence,note
+FM-001,Full,OBSERVED,S-KAT-004,Personalized invitation (Rp 10k add-on)
+FM-002,Full,OBSERVED,S-KAT-001,Cover with a guest greeting
+FM-003,Full,OBSERVED,C-KAT-101;C-KAT-102,"""Open Invitation"" on 6/6; opening unverified (pre-D-016 click)"
+FM-004,Full,OBSERVED,C-KAT-101;C-KAT-102,Music through the Video.js / YouTube stack; no audio element
+FM-005,Full,OBSERVED,C-KAT-101;C-KAT-102,6/6
+FM-007,Full,OBSERVED,S-KAT-004,Custom song and song crop
+FM-008,Full,OBSERVED,C-KAT-101;C-KAT-102,6/6
+FM-010,Full,OBSERVED,S-KAT-001;C-KAT-101,Quote section; verse marker on 2/6
+FM-011,Full,OBSERVED,S-KAT-001,Couple with parents
+FM-012,Full,OBSERVED,S-KAT-001,Social handles
+FM-013,Full,OBSERVED,S-KAT-001;C-KAT-101,Story in three chapters
+FM-014,Full,OBSERVED,C-KAT-101;S-KAT-004,"25 / 35 / unlimited photos by tier"
+FM-016,Full,OBSERVED,S-KAT-001;S-KAT-004,Video footage and video gallery
+FM-017,Full,OBSERVED,S-KAT-001;S-KAT-004,Holy matrimony + reception; event sessions
+FM-021,Full,OBSERVED,C-KAT-101;C-KAT-102,6/6
+FM-022,Full,OBSERVED,C-KAT-101,4/6
+FM-024,Full,CLAIMED,S-KAT-003;S-KAT-004,Pax limit per invitation
+FM-028,Full,CLAIMED,S-KAT-004,Event sessions and guest lock
+FM-030,Full,OBSERVED,C-KAT-102,2/6
+FM-032,Full,OBSERVED,S-KAT-001;C-KAT-101,Bank accounts with transfer-proof upload
+FM-035,Full,OBSERVED,S-KAT-004,Gift sending
+FM-039,Full,OBSERVED,C-KAT-101;C-KAT-102,6/6
+FM-040,Full,OBSERVED,C-KAT-101;C-KAT-102,Video.js / YouTube players
+FM-041,Full,OBSERVED,C-KAT-101;C-KAT-102,6/6
+FM-044,Full,OBSERVED,C-KAT-101,Instagram filter on 4/6
+FM-047,Full,OBSERVED,C-KAT-101;C-KAT-102,"og:image, og:title, og:description"
+FM-052,Full,OBSERVED,C-KAT-101;C-KAT-102,AOS on 6/6; GSAP + ScrollTrigger on 2/6
+FM-055,None,OBSERVED,C-KAT-101;C-KAT-102,No prefers-reduced-motion CSS on any demo
+FM-069,Full,CLAIMED,S-KAT-003,Guest groups
+FM-070,Full,OBSERVED,S-KAT-004,Unlimited guests
+FM-072,Full,OBSERVED,S-KAT-004,Custom WhatsApp text (Rp 500k tier or add-on)
+FM-073,Full,OBSERVED,S-KAT-004,Smart WhatsApp at Rp 1.000 per message
+FM-076,Full,OBSERVED,S-KAT-004,WhatsApp Reminder at Rp 1.000 per message
+FM-077,Full,CLAIMED,S-KAT-003,Real-time RSVP tracking
+FM-079,Full,CLAIMED,S-KAT-003,Buku Tamu Digital QR check-in
+FM-083,Full,CLAIMED,S-KAT-003,Selfie check-in
+FM-084,Full,OBSERVED,S-KAT-004,Souvenir management
+FM-088,Full,CLAIMED,S-KAT-004,
+FM-090,Full,OBSERVED,S-KAT-004,Unlimited edits on every tier
+FM-091,Unknown,OBSERVED,S-KAT-004,"Rp 300k: 1 year; Rp 500k+: forever; Lite (Rp 100k, the cheapest) period [UNKNOWN]"
+FM-101,Full,OBSERVED,S-KAT-004,"""Atur Section"" (top tier or add-on)"
+FM-102,Full,OBSERVED,S-KAT-004,Colour & font change (Rp 500k tier or Rp 80k add-on)
+FM-103,Full,OBSERVED,S-KAT-004,
+FM-105,Full,CLAIMED,S-KAT-004,Full Service at the same price as Self Service
+FM-110,Full,CLAIMED,S-KAT-003,"Wedding Planner: budget, to-do, savings, vendors"
+FM-111,Full,OBSERVED,S-KAT-004,Table management
+FM-113,Full,CLAIMED,S-KAT-003,Auto thank-you message (Buku Tamu Digital)
+FM-116,Full,OBSERVED,S-KAT-001;S-KAT-002,Vendor placeholders
+FM-119,Full,OBSERVED,S-KAT-004,"Rp 300k / 500k / 700k; Lite Rp 100k"
+FM-121,Full,OBSERVED,S-KAT-004,Three tiers plus Lite plus 24 add-ons
+FM-122,Partial,OBSERVED,S-KAT-003;S-KAT-004,"Homepage promises colour and font changes ""tanpa batasan"" while the price page gates them"
+FM-133,Full,OBSERVED,S-KAT-003,Mitra 15 % up to Rp 600k per transaction
+FM-152,Partial,OBSERVED,S-KAT-003;S-KAT-004,Keyword landing page per product
+FM-153,Full,OBSERVED,S-KAT-004,"Filters: Populer, Adat, Floral, Fairytale, Minimalis, Nature, Vintage"
+FM-154,Partial,OBSERVED,S-KAT-003,Weddings first; an /events registration product
+FM-155,Partial,OBSERVED,S-KAT-004,"""Adat"" filter"
+FM-172,Full,OBSERVED,S-KAT-001;S-KAT-002,Vendor placeholders (D-015 pseudonymized)

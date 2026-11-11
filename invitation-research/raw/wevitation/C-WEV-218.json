@@ -1,0 +1,584 @@
+{
+ "id": "C-WEV-218",
+ "competitor": "wevitation",
+ "kind": "demo",
+ "url": "https://www.wevitation.com/demo/visual-journey",
+ "capturedAt": "2026-11-04T23:09:47.406+07:00",
+ "robots": {
+  "allowed": true,
+  "note": "Allow: /"
+ },
+ "method": "REA capture-browser-scenario (connect mode) drives navigation, settle and keyboard scroll; optional cover click (trusted CDP mouse click on the settled control: coverClickMethod, coverClickLanding) and scroll through the opened page by CDP after REA's scenario; CDP mobile emulation 360x800 @3 + prefers-reduced-motion no-preference, re-applied (clear + set) after REA's scenario + Android Chrome UA, cold cache (no throttling); REA inspect/bundle skipped (lean); custom structure pass (text features + animation libraries: no REA coverage) + layout and motion probes; Lighthouse 12 mobile simulate (Slow 4G, 4x CPU) when present",
+ "measurement": {
+  "protocol": "v2",
+  "profile": "v2-360",
+  "viewport": {
+   "width": 360,
+   "height": 800,
+   "device_scale_factor": 3
+  },
+  "reduced_motion": "no-preference",
+  "method": "protocol v2 (lean): REA scenario + CDP structure / layout / motion probes + Lighthouse; no REA inspect or bundle analysis",
+  "lighthouse_screen": {
+   "width": 360,
+   "height": 800,
+   "deviceScaleFactor": 3,
+   "mobile": true
+  },
+  "lighthouse_motion": "no-preference (default)",
+  "cdp_reapply": "clear + set",
+  "emulation_verified": true,
+  "emulation_mismatches": [],
+  "emulation_final": {
+   "android": true,
+   "screenWidth": 360,
+   "screenHeight": 800,
+   "width": 360,
+   "dpr": 3,
+   "coarsePointer": false,
+   "reducedMotion": false
+  },
+  "emulation_during_scenario": {
+   "ok": false,
+   "mismatches": [
+    "screen.width 800 != 360",
+    "screen.height 600 != 800"
+   ]
+  }
+ },
+ "driver": "rea",
+ "rea": {
+  "version": "6.8.0",
+  "scenario": {
+   "ok": true,
+   "exit": 0,
+   "ms": 21202,
+   "evidenceId": "ev_c55415e904f571ddfc803724447d69b7fdd91e4eed8ae4bfb59e1a2f700d68d5",
+   "status": "incomplete",
+   "stepsCompleted": 32,
+   "stepsTotal": 32,
+   "failed": [],
+   "events": 225,
+   "error": null,
+   "sha256": "4b8fc399cb422af370f1d1058e564762f0aa35e838cc2d2b104fc19cb0514a65",
+   "file": "_private/rea/C-WEV-218/rea-scenario.json"
+  },
+  "emulation": {
+   "duringScenario": {
+    "android": true,
+    "screenWidth": 800,
+    "screenHeight": 600,
+    "width": 360,
+    "dpr": 3,
+    "coarsePointer": false,
+    "reducedMotion": false
+   },
+   "afterScenario": {
+    "android": true,
+    "screenWidth": 800,
+    "screenHeight": 600,
+    "width": 500,
+    "dpr": 1,
+    "coarsePointer": false,
+    "reducedMotion": false
+   }
+  },
+  "inspectEvidenceId": null,
+  "bundleEvidenceId": null,
+  "inspectError": "skipped: lean profile v2-360",
+  "bundleError": "skipped: lean profile v2-360",
+  "domNodes": null,
+  "scripts": null,
+  "resources": null,
+  "completeness": null,
+  "bundleChunks": null,
+  "bundleEndpoints": [],
+  "bundleInferences": []
+ },
+ "network": {
+  "loadEventMs": 4360,
+  "requests": 66,
+  "bytes": 2773481,
+  "byType": {
+   "Document": {
+    "requests": 1,
+    "bytes": 25797
+   },
+   "Other": {
+    "requests": 3,
+    "bytes": 2467
+   },
+   "Stylesheet": {
+    "requests": 17,
+    "bytes": 254655
+   },
+   "Image": {
+    "requests": 16,
+    "bytes": 824300
+   },
+   "Script": {
+    "requests": 20,
+    "bytes": 1378779
+   },
+   "Media": {
+    "requests": 2,
+    "bytes": 0
+   },
+   "Font": {
+    "requests": 4,
+    "bytes": 286465
+   },
+   "Fetch": {
+    "requests": 1,
+    "bytes": 0
+   },
+   "Ping": {
+    "requests": 1,
+    "bytes": 551
+   },
+   "XHR": {
+    "requests": 1,
+    "bytes": 467
+   }
+  },
+  "protocols": [
+   "h3",
+   "h2"
+  ],
+  "scriptHosts": [
+   "www.wevitation.com",
+   "static.cloudflareinsights.com",
+   "cdnjs.cloudflare.com",
+   "unpkg.com",
+   "www.youtube.com",
+   "www.googletagmanager.com"
+  ],
+  "scriptFiles": [
+   "rocket-loader.min.js",
+   "vce701823e78c4301a35b7e07294d87301792088814092",
+   "html2canvas.min.js",
+   "widgets.js",
+   "chat.js",
+   "upgrade-plan.js",
+   "aos.js",
+   "lozad.min.js",
+   "jquery.flipper-responsive.js",
+   "create-app.js",
+   "lightgallery-all.min.js",
+   "splide.min.js",
+   "scripts.bundle.js",
+   "livewire.js",
+   "iframe_api",
+   "fullcalendar.bundle.js",
+   "jquery.countdown.min.js",
+   "js",
+   "plugins.bundle.js",
+   "www-widgetapi.js"
+  ],
+  "fontFiles": [
+   {
+    "host": "www.wevitation.com",
+    "file": "normal.woff2",
+    "bytes": 38427
+   },
+   {
+    "host": "www.wevitation.com",
+    "file": "fa-solid-900.woff2",
+    "bytes": 78803
+   },
+   {
+    "host": "www.wevitation.com",
+    "file": "normal.woff2",
+    "bytes": 34438
+   },
+   {
+    "host": "cdn.jsdelivr.net",
+    "file": "bootstrap-icons.woff2",
+    "bytes": 134797
+   }
+  ],
+  "thirdPartyHosts": [
+   "cdnjs.cloudflare.com",
+   "unpkg.com",
+   "cdn.jsdelivr.net",
+   "static.cloudflareinsights.com",
+   "cdn.wevitation.com",
+   "app.wevitation.com",
+   "www.youtube.com",
+   "www.googletagmanager.com",
+   "analytics.google.com",
+   "stats.g.doubleclick.net"
+  ]
+ },
+ "structure": {
+  "coverClicked": "Buka Undangan",
+  "coverClickMethod": "trusted (unsettled)",
+  "coverClickLanding": "inside",
+  "beforeOpen": {
+   "sectionCount": 5,
+   "features": {
+    "coverGate": true,
+    "toGuest": false,
+    "countdown": true,
+    "rsvp": true,
+    "wishes": true,
+    "gift": true,
+    "copyButton": false,
+    "maps": false,
+    "calendar": true,
+    "livestream": true,
+    "qr": true,
+    "loveStory": true,
+    "gallery": true,
+    "dressCode": false,
+    "quranVerse": false,
+    "protocol": false,
+    "timezoneLabel": [
+     "WIB"
+    ],
+    "watermark": true,
+    "instagramFilter": false,
+    "musicControl": false
+   },
+   "buttons": [
+    "Buka Undangan",
+    "wevitation",
+    "Simpan Tanggal",
+    "Live Streaming",
+    "Konfirmasi Kehadiran",
+    "Lihat Daftar Kado",
+    "Kirim Ucapan",
+    "Download Template IG Story",
+    "Close",
+    "Tampilkan QR Checkin"
+   ],
+   "motion": {
+    "reducedMotionMatches": false,
+    "animations": 1,
+    "running": 1,
+    "runningCssAnimations": 1,
+    "runningCssTransitions": 0,
+    "runningWebAnimations": 0,
+    "runningInfinite": 1,
+    "gsapActiveTweens": null,
+    "playingVideos": 0
+   }
+  },
+  "afterOpen": {
+   "title": "[name] & [name] | Undangan Berbasis Web | Wevitation.com",
+   "lang": "en",
+   "generator": null,
+   "viewport": "width=device-width, initial-scale=1",
+   "og": {
+    "image": true,
+    "title": false,
+    "description": false
+   },
+   "reducedMotionCss": true,
+   "libs": {
+    "gsap": false,
+    "scrollTrigger": false,
+    "aos": true,
+    "animateCss": false,
+    "wow": false,
+    "swiper": false,
+    "slick": false,
+    "owl": false,
+    "lottie": false,
+    "three": false,
+    "pixi": false,
+    "anime": false,
+    "motionOne": false,
+    "howler": false,
+    "jquery": true,
+    "bootstrap": true,
+    "tailwind": false,
+    "alpine": false,
+    "vue": false,
+    "nuxt": false,
+    "next": false,
+    "react": false,
+    "svelte": false,
+    "flutterWeb": false,
+    "wordpress": false,
+    "elementor": false,
+    "livewire": true,
+    "inertia": false
+   },
+   "sections": [
+    {
+     "tag": "div",
+     "id": "cover-section",
+     "cls": "card-body p-0 background-cover",
+     "heading": "",
+     "h": 760
+    },
+    {
+     "tag": "div",
+     "id": "detail-section",
+     "cls": "d-flex flex-column text-center",
+     "heading": "",
+     "h": 1440
+    },
+    {
+     "tag": "div",
+     "id": "gallery-section",
+     "cls": "card-body px-0 bg-custom",
+     "heading": "",
+     "h": 569
+    },
+    {
+     "tag": "div",
+     "id": "gift-section",
+     "cls": "bg-custom border-radius-0 d-flex flex-column",
+     "heading": "",
+     "h": 1099
+    },
+    {
+     "tag": "div",
+     "id": "wish-section",
+     "cls": "px-10 py-20",
+     "heading": "",
+     "h": 733
+    }
+   ],
+   "sectionCount": 5,
+   "buttons": [
+    "Buka Undangan",
+    "wevitation",
+    "Simpan Tanggal",
+    "Live Streaming",
+    "Konfirmasi Kehadiran",
+    "Lihat Daftar Kado",
+    "Kirim Ucapan",
+    "Download Template IG Story",
+    "Close",
+    "Tampilkan QR Checkin",
+    "Informasi Tempat Duduk Anda",
+    "Hadir",
+    "Tidak Hadir",
+    "Tutup",
+    "QR CODE"
+   ],
+   "media": {
+    "audio": [
+     {
+      "autoplay": false,
+      "loop": false,
+      "type": "mp3#t"
+     }
+    ],
+    "video": 0,
+    "iframes": [],
+    "canvases": 0,
+    "svgs": 6,
+    "images": 12,
+    "lazyImages": 0
+   },
+   "forms": [
+    {
+     "fields": [
+      "text",
+      "textarea",
+      "submit"
+     ],
+     "hasRadio": false,
+     "hasSelect": false
+    },
+    {
+     "fields": [
+      "number",
+      "hidden",
+      "submit",
+      "submit",
+      "button"
+     ],
+     "hasRadio": false,
+     "hasSelect": false
+    }
+   ],
+   "fontsUsed": [
+    "Meow Script",
+    "Montserrat",
+    "Font Awesome 5 Free",
+    "bootstrap-icons"
+   ],
+   "features": {
+    "coverGate": false,
+    "toGuest": false,
+    "countdown": true,
+    "rsvp": true,
+    "wishes": true,
+    "gift": true,
+    "copyButton": false,
+    "maps": false,
+    "calendar": true,
+    "livestream": true,
+    "qr": true,
+    "loveStory": true,
+    "gallery": true,
+    "dressCode": false,
+    "quranVerse": false,
+    "protocol": false,
+    "timezoneLabel": [
+     "WIB"
+    ],
+    "watermark": true,
+    "instagramFilter": false,
+    "musicControl": false
+   },
+   "domNodes": 663,
+   "docHeight": 9878,
+   "layout": {
+    "innerWidth": 360,
+    "scrollWidth": 360,
+    "horizontalOverflowPx": 0,
+    "overflowingElements": 0,
+    "smallTextElements": 5,
+    "interactiveTargets": 21,
+    "smallTargets": 4,
+    "viewportMeta": "width=device-width, initial-scale=1",
+    "zoomBlocked": false
+   },
+   "motion": {
+    "reducedMotionMatches": false,
+    "animations": 1,
+    "running": 1,
+    "runningCssAnimations": 1,
+    "runningCssTransitions": 0,
+    "runningWebAnimations": 0,
+    "runningInfinite": 0,
+    "gsapActiveTweens": null,
+    "playingVideos": 0
+   }
+  }
+ },
+ "lighthouse": {
+  "ok": true,
+  "lighthouseVersion": "12.8.2",
+  "finalUrl": "https://www.wevitation.com/demo/visual-journey",
+  "throttling": {
+   "rttMs": 150,
+   "throughputKbps": 1638.4,
+   "requestLatencyMs": 562.5,
+   "downloadThroughputKbps": 1474.5600000000002,
+   "uploadThroughputKbps": 675,
+   "cpuSlowdownMultiplier": 4
+  },
+  "screen": {
+   "mobile": true,
+   "width": 360,
+   "height": 800,
+   "deviceScaleFactor": 3,
+   "disabled": false
+  },
+  "scores": {
+   "performance": 35,
+   "accessibility": 87,
+   "best-practices": 100,
+   "seo": 100
+  },
+  "metrics": {
+   "fcpMs": 3386.653,
+   "lcpMs": 18966.1675,
+   "tbtMs": 1614.9999999999982,
+   "cls": 0.0030242201063368055,
+   "siMs": 7867.452507586374,
+   "ttiMs": 19101.3029
+  },
+  "byType": {
+   "total": {
+    "requests": 75,
+    "bytes": 2779878
+   },
+   "script": {
+    "requests": 20,
+    "bytes": 1378867
+   },
+   "image": {
+    "requests": 16,
+    "bytes": 824352
+   },
+   "font": {
+    "requests": 4,
+    "bytes": 286480
+   },
+   "stylesheet": {
+    "requests": 17,
+    "bytes": 254701
+   },
+   "document": {
+    "requests": 1,
+    "bytes": 25703
+   },
+   "other": {
+    "requests": 16,
+    "bytes": 9087
+   },
+   "media": {
+    "requests": 1,
+    "bytes": 688
+   },
+   "third-party": {
+    "requests": 12,
+    "bytes": 426837
+   }
+  },
+  "totalBytes": 2779878,
+  "requests": 75,
+  "thirdParties": [
+   {
+    "entity": "Google Tag Manager",
+    "bytes": 192291,
+    "blockingMs": 206.99999999999974
+   },
+   {
+    "entity": "Cloudflare CDN",
+    "bytes": 43123,
+    "blockingMs": 30.316153747560254
+   },
+   {
+    "entity": "YouTube",
+    "bytes": 23021,
+    "blockingMs": 20.029542793309748
+   },
+   {
+    "entity": "JSDelivr CDN",
+    "bytes": 149166,
+    "blockingMs": 0
+   },
+   {
+    "entity": "Cloudflare",
+    "bytes": 10478,
+    "blockingMs": 0
+   },
+   {
+    "entity": "Unpkg",
+    "bytes": 7656,
+    "blockingMs": 0
+   },
+   {
+    "entity": "Google Analytics",
+    "bytes": 551,
+    "blockingMs": 0
+   },
+   {
+    "entity": "Google/Doubleclick Ads",
+    "bytes": 551,
+    "blockingMs": 0
+   }
+  ],
+  "fontDisplayIssues": 0,
+  "unusedJsBytes": 861876,
+  "a11yFailures": [
+   "aria-dialog-name",
+   "button-name",
+   "link-name"
+  ]
+ },
+ "files": {
+  "_private/rea/C-WEV-218/rea-scenario.json": "4b8fc399cb422af370f1d1058e564762f0aa35e838cc2d2b104fc19cb0514a65",
+  "_private/lh/C-WEV-218.json": "0bb8e25d64336a4fcaf5b42861d53b92b255671b764a31dbd3e73eec58a7481e"
+ },
+ "screenshot": "_private/thumbs (competitor, not committed)"
+}

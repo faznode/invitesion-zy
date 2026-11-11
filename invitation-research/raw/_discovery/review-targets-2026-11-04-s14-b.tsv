@@ -1,0 +1,6 @@
+# Session 14, RQ-COMP-05 pass B, --no-follow: public Google Play listings (rating summary and the reviews shown in the static page).
+# IDI and PLO re-read S-IDI-007 / S-PLO-004 (page text lost with the s12 sandbox before any theme was written); PTF from its own homepage store link (s14 pass A).
+# Store listing pages only; reviewer names are never recorded.
+IDI	Indoinvite (Play listing, re-read)	https://play.google.com/store/apps/details?id=com.indoinvite.apps&hl=id&gl=ID
+PLO	PALEO (Play listing, re-read)	https://play.google.com/store/apps/details?id=id.paleo.undangandigital&hl=id&gl=ID
+PTF	Partiful (Play listing)	https://play.google.com/store/apps/details?id=com.partiful.partiful&hl=en&gl=US

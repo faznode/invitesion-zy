@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "id": "premium-islamic-zamrud",
+  "name": "Zamrud",
+  "version": "1.0.0",
+  "niche": "islamic-wedding",
+  "tier": "premium",
+  "locales": ["id", "en"],
+  "defaultLocale": "id",
+  "sections": [
+    { "id": "cover", "required": true, "slots": [{ "key": "couple.first", "kind": "text", "maxLength": 40 }, { "key": "couple.second", "kind": "text", "maxLength": 40 }, { "key": "guest.name", "kind": "text", "maxLength": 150 }] },
+    { "id": "countdown", "required": false, "slots": [{ "key": "events.firstStartAt", "kind": "datetime" }] },
+    { "id": "events", "required": true, "slots": [{ "key": "event.title", "kind": "text", "maxLength": 60 }, { "key": "event.date", "kind": "datetime" }, { "key": "event.time", "kind": "datetime" }, { "key": "event.venue", "kind": "text", "maxLength": 160 }] },
+    { "id": "rsvp", "required": true, "slots": [] },
+    { "id": "closing", "required": false, "slots": [] }
+  ],
+  "tokens": {
+    "colors": { "background": "#0e3a2d", "surface": "#134a3a", "text": "#f6efdc", "mutedText": "#dccfae", "accent": "#d9b96c", "onAccent": "#0e3a2d" },
+    "typography": { "display": "marcellus", "body": "plus-jakarta-sans" },
+    "radius": "18px",
+    "spacingScale": [4, 8, 16, 24, 48]
+  },
+  "motion": { "level": 2, "durationsMs": [520, 700], "easing": "cubic-bezier(0.2, 0.8, 0.2, 1)", "reducedMotion": "fade-only" },
+  "audio": { "asset": "chime", "preload": "none", "startsOn": "open-gesture", "control": true },
+  "assets": [
+    { "id": "marcellus", "path": "assets/fonts/marcellus-400.woff2", "kind": "font", "bytes": 14552, "license": "OFL-1.1", "source": "Marcellus 400, latin subset, Google Fonts (fonts.gstatic.com); OFL text from github.com/google/fonts ofl/marcellus", "author": "Brian J. Bonislawsky (Astigmatic)", "provenance": "licensed", "deferred": false },
+    { "id": "plus-jakarta-sans", "path": "assets/fonts/plus-jakarta-sans-400.woff2", "kind": "font", "bytes": 11816, "license": "OFL-1.1", "source": "Plus Jakarta Sans 400, latin subset, Google Fonts (fonts.gstatic.com); OFL text from github.com/google/fonts ofl/plusjakartasans", "author": "The Plus Jakarta Sans Project Authors (Tokotype)", "provenance": "licensed", "deferred": false },
+    { "id": "zamrud-tile", "path": "assets/img/zamrud-tile.webp", "kind": "image", "bytes": 46350, "width": 480, "height": 480, "license": "own-work", "source": "Generated for this repository (v0 image tool, 2026-11-03; original eight-point geometric tile, no calligraphy or text; no input image), resized to WebP with sharp", "author": "Invitesion", "provenance": "generated", "deferred": false },
+    { "id": "chime", "path": "assets/audio/chime.wav", "kind": "audio", "bytes": 448044, "license": "own-work", "source": "Synthesised by assets/audio/make-chime.py in this folder (14 s pentatonic chime pad, 16 kHz mono PCM); no samples or recordings used", "author": "Invitesion", "provenance": "own-work", "deferred": true },
+    { "id": "og", "path": "assets/og.jpg", "kind": "og", "bytes": 104435, "width": 1200, "height": 630, "license": "own-work", "source": "Headless-Chrome capture of this template's cover with fake sample data (harness preview), JPEG via sharp", "author": "Invitesion", "provenance": "own-work", "deferred": false }
+  ],
+  "personalization": { "guestName": { "slot": "guest.name", "maxLength": 150, "dir": "auto" }, "allowedSources": ["guests-table"] },
+  "accessibility": { "minContrast": { "body": 4.5, "large": 3 }, "lang": "id", "focusVisible": true },
+  "strings": {
+    "eyebrow": { "id": "Undangan Pernikahan", "en": "Wedding invitation" },
+    "invite": { "id": "Kepada Yth.", "en": "Dear" },
+    "open": { "id": "Buka Undangan", "en": "Open invitation" },
+    "opening": { "id": "Dengan penuh sukacita, kami mengundang Bapak/Ibu/Saudara/i untuk hadir pada hari pernikahan kami.", "en": "With great joy, we invite you to attend our wedding day." },
+    "countdown": { "id": "Menuju Hari Bahagia", "en": "Counting down" },
+    "days": { "id": "Hari", "en": "Days" },
+    "hours": { "id": "Jam", "en": "Hours" },
+    "minutes": { "id": "Menit", "en": "Minutes" },
+    "seconds": { "id": "Detik", "en": "Seconds" },
+    "events": { "id": "Rangkaian Acara", "en": "Schedule" },
+    "rsvp": { "id": "Konfirmasi Kehadiran", "en": "RSVP" },
+    "rsvpHint": { "id": "Mohon kabari kami apakah Anda dapat hadir.", "en": "Please let us know whether you can attend." },
+    "rsvpButton": { "id": "Isi RSVP", "en": "Reply" },
+    "closing": { "id": "Merupakan kehormatan bagi kami atas kehadiran Bapak/Ibu/Saudara/i.", "en": "Your presence would be an honour for us." },
+    "musicPlay": { "id": "Putar musik", "en": "Play music" },
+    "musicPause": { "id": "Jeda musik", "en": "Pause music" }
+  },
+  "originality": { "statement": "Original design for this repository: a generated eight-point geometric tile in emerald and gold behind a framed cover, an open gesture that starts a synthesised chime, and staggered reveals. No scripture, prayer or calligraphy is included (no owner-approved corpus entry exists, ADR-O04). No competitor page, asset, wording or layout was used as a reference.", "references": [] },
+  "og": { "asset": "og" },
+  "externalScripts": []
+}

@@ -1,0 +1,27 @@
+feature_id,status,basis,evidence,note
+FM-001,Full,CLAIMED,S-PLO-003,WhatsApp share per guest name and address
+FM-003,Full,CLAIMED,S-PLO-003,
+FM-004,Full,CLAIMED,S-PLO-003,Autoplay backsound
+FM-006,Full,CLAIMED,S-PLO-001;S-PLO-003,Ready-made backsound songs
+FM-010,Full,CLAIMED,S-PLO-003,The builder starts by picking a quote
+FM-011,Full,CLAIMED,S-PLO-003,Bride and groom with both parents
+FM-013,Full,CLAIMED,S-PLO-003,
+FM-014,Full,CLAIMED,S-PLO-003,Prewedding gallery
+FM-016,Full,OBSERVED,S-PLO-003,"""Add a prewedding video"" in 1.7.1"
+FM-017,Full,CLAIMED,S-PLO-003,Add or remove events
+FM-030,Full,CLAIMED,S-PLO-003,Guest book
+FM-063,Full,CLAIMED,S-PLO-003,Single Page and Multi Page theme types
+FM-071,Full,CLAIMED,S-PLO-003,
+FM-072,Full,OBSERVED,S-PLO-003,"""Edit the sharing message"" in 1.7.1"
+FM-087,Partial,OBSERVED,S-PLO-003,The guest book can be hidden as a whole
+FM-099,Full,CLAIMED,S-PLO-001;S-PLO-003,In-app crop and rotate
+FM-100,Full,CLAIMED,S-PLO-003,Add or remove features per invitation
+FM-104,Full,CLAIMED,S-PLO-003,"Five-step builder, ""under 5 minutes"""
+FM-112,Full,OBSERVED,S-PLO-003,Android app id.paleo.undangandigital
+FM-122,None,OBSERVED,S-PLO-003;S-PLO-002,No price on the homepage or the store listing
+FM-152,None,OBSERVED,S-PLO-002,Minimal web footprint
+FM-153,None,OBSERVED,S-PLO-002;D-PLO,No web catalog
+FM-170,Full,OBSERVED,S-PLO-003,Data deletion offered in the listing
+FM-171,Full,OBSERVED,S-PLO-003,Privacy policy linked from the listing
+FM-174,Full,OBSERVED,S-PLO-003,500K+ installs
+FM-176,Full,OBSERVED,S-PLO-003,Help centre

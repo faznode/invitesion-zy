@@ -1,0 +1,18 @@
+# queue-tier-a-s07.tsv — session 07 (2026-11-01): selective resume of batch A, DERIVED from queue-tier-a-rr.tsv (same ids, urls).
+# Why a new file: queue-tier-a-rr.tsv is left untouched (never edit a queue a batch may read). Recomputed from raw/ on 2026-11-01:
+#   absent in raw/ (never captured): C-IVT-104, C-VID-104…106, C-WEV-104…106, C-IDI-105, C-IDI-106 (9 rows, = brief §6.3);
+#   C-IDI-104 exists WITHOUT Lighthouse (CDP timeout during the 2026-10-29 21:57Z restart). run-batch.sh would re-run and
+#   overwrite it, so its URL is re-captured under the NEW id C-IDI-107 and C-IDI-104 stays as failure evidence.
+# Every other queue-tier-a-rr.tsv row has lighthouse.ok = true (checked 2026-11-01) and would be skipped anyway.
+# Order: round-robin, so an interrupted run still leaves every competitor with new data. Cover click = D-016 (capture.mjs).
+# columns: id<TAB>competitor<TAB>kind<TAB>url — consumed by _tools/capture/run-batch.sh; never two batches at once.
+C-IVT-104	invitato	demo	https://invitato.net/template-rdct-def02db760/?code=DUMMY-P0001
+C-VID-104	viding	demo	https://studio.viding.co/theme/preview/194
+C-WEV-104	wevitation	demo	https://www.wevitation.com/demo/espresso
+C-IDI-105	indoinvite	demo	https://indoinvite.com/preview/contoh-undangan-online-aqiqah
+C-VID-105	viding	demo	https://studio.viding.co/theme/preview/192
+C-WEV-105	wevitation	demo	https://www.wevitation.com/demo/photovit
+C-IDI-106	indoinvite	demo	https://indoinvite.com/preview/contoh-undangan-online-peresmian-kantor
+C-VID-106	viding	demo	https://studio.viding.co/theme/preview/191
+C-WEV-106	wevitation	demo	https://www.wevitation.com/demo/wayang
+C-IDI-107	indoinvite	demo	https://indoinvite.com/preview/contoh-undangan-online-tahlilan

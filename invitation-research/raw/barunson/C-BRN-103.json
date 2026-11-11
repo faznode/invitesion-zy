@@ -1,0 +1,424 @@
+{
+ "id": "C-BRN-103",
+ "competitor": "barunson",
+ "kind": "demo",
+ "url": "https://mcard.barunsoncard.com/preview/1096",
+ "capturedAt": "2026-11-02T00:32:08.899+07:00",
+ "robots": {
+  "allowed": true,
+  "note": "no matching rule"
+ },
+ "method": "REA capture-browser-scenario (connect mode) drives navigation, settle and keyboard scroll; optional cover click (trusted CDP mouse click on the settled control: coverClickMethod, coverClickLanding) and scroll through the opened page by CDP after REA's scenario; CDP mobile emulation 412x915 @2.625 + Android Chrome UA, cold cache (no throttling); REA 6.8.0 inspect-web-page/analyze-web-bundle; custom structure pass (text features + animation libraries: no REA coverage); Lighthouse 12 mobile simulate (Slow 4G, 4x CPU) when present",
+ "driver": "rea",
+ "rea": {
+  "version": "6.8.0",
+  "scenario": {
+   "ok": true,
+   "exit": 0,
+   "ms": 21001,
+   "evidenceId": "ev_478aee75b4c0b2b1def65cc48f1f77eb2ac69b192a0bd97af2efd502acaedbd1",
+   "status": "incomplete",
+   "stepsCompleted": 32,
+   "stepsTotal": 32,
+   "failed": [],
+   "events": 210,
+   "error": null,
+   "sha256": "79e5b364c4f6c37bf94ecae84d1cee80ea267aabbf7a756128f5fc0f233aca9a",
+   "file": "_private/rea/C-BRN-103/rea-scenario.json"
+  },
+  "emulation": {
+   "duringScenario": {
+    "android": true,
+    "width": 412,
+    "dpr": 2.625,
+    "coarsePointer": false,
+    "reducedMotion": false
+   },
+   "afterScenario": {
+    "android": true,
+    "width": 500,
+    "dpr": 1,
+    "coarsePointer": false,
+    "reducedMotion": false
+   }
+  },
+  "inspectEvidenceId": "ev_988bb18d2aebcf1c1cdc350a0fc6ff31f76bcf7beafaaf5ae1abbfe0eb303120",
+  "bundleEvidenceId": "ev_eecac6a23a855cdfd691716db80889fa738569d9813a7b6306672c8d48d9d209",
+  "inspectError": null,
+  "bundleError": null,
+  "domNodes": 457,
+  "scripts": 6,
+  "resources": 6,
+  "completeness": "policy_filtered",
+  "bundleChunks": 6,
+  "bundleEndpoints": [],
+  "bundleInferences": []
+ },
+ "network": {
+  "loadEventMs": 4679,
+  "requests": 69,
+  "bytes": 5982764,
+  "byType": {
+   "Document": {
+    "requests": 1,
+    "bytes": 36024
+   },
+   "Script": {
+    "requests": 8,
+    "bytes": 344290
+   },
+   "Stylesheet": {
+    "requests": 23,
+    "bytes": 323971
+   },
+   "Font": {
+    "requests": 15,
+    "bytes": 2868172
+   },
+   "Image": {
+    "requests": 22,
+    "bytes": 2410307
+   }
+  },
+  "protocols": [
+   "http/1.1",
+   "h2",
+   "h3"
+  ],
+  "scriptHosts": [
+   "code.jquery.com",
+   "t1.kakaocdn.net",
+   "mcard.barunsoncard.com"
+  ],
+  "scriptFiles": [
+   "jquery-1.12.4.min.js",
+   "kakao.min.js",
+   "photoswipe-ui-default.min.js",
+   "sns.js",
+   "preview.js",
+   "photoswipe-gallery.js",
+   "photoswipe.js",
+   "swiper-bundle.min.js"
+  ],
+  "fontFiles": [
+   {
+    "host": "hangeul.pstatic.net",
+    "file": "NanumMyeongjo.woff",
+    "bytes": 935844
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "PN_3Rfi-oW3hYwmKDpxS7F_D-dje5Hkr3w.woff2",
+    "bytes": 10315
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "PN_3Rfi-oW3hYwmKDpxS7F_z-9LZxnthzY0SO7Jj27F-wOe3JI_cmfgf-Q.118.woff2",
+    "bytes": 9283
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "PN_3Rfi-oW3hYwmKDpxS7F_z-9LZxnthzY0SO7Jj27F-wOe3JI_cmfgf-Q.117.woff2",
+    "bytes": 9771
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "PN_3Rfi-oW3hYwmKDpxS7F_z-9LZxnthzY0SO7Jj27F-wOe3JI_cmfgf-Q.115.woff2",
+    "bytes": 10643
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "PN_3Rfi-oW3hYwmKDpxS7F_z-9LZxnthzY0SO7Jj27F-wOe3JI_cmfgf-Q.116.woff2",
+    "bytes": 10655
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "PN_3Rfi-oW3hYwmKDpxS7F_z-9LZxnthzY0SO7Jj27F-wOe3JI_cmfgf-Q.119.woff2",
+    "bytes": 7179
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "PN_3Rfi-oW3hYwmKDpxS7F_z-9LZxnthzY0SO7Jj27F-wOe3JI_cmfgf-Q.107.woff2",
+    "bytes": 10931
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "PN_3Rfi-oW3hYwmKDpxS7F_z-9LZxnthzY0SO7Jj27F-wOe3JI_cmfgf-Q.111.woff2",
+    "bytes": 11195
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "PN_3Rfi-oW3hYwmKDpxS7F_z-9LZxnthzY0SO7Jj27F-wOe3JI_cmfgf-Q.113.woff2",
+    "bytes": 10879
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "PN_3Rfi-oW3hYwmKDpxS7F_z-9LZxnthzY0SO7Jj27F-wOe3JI_cmfgf-Q.114.woff2",
+    "bytes": 11103
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "PN_3Rfi-oW3hYwmKDpxS7F_z-9LZxnthzY0SO7Jj27F-wOe3JI_cmfgf-Q.109.woff2",
+    "bytes": 11159
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "PN_3Rfi-oW3hYwmKDpxS7F_z-9LZxnthzY0SO7Jj27F-wOe3JI_cmfgf-Q.112.woff2",
+    "bytes": 10463
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "PN_3Rfi-oW3hYwmKDpxS7F_z-9LZxnthzY0SO7Jj27F-wOe3JI_cmfgf-Q.110.woff2",
+    "bytes": 11604
+   },
+   {
+    "host": "cdn.jsdelivr.net",
+    "file": "Cafe24SsurroundAir.woff",
+    "bytes": 1797148
+   }
+  ],
+  "thirdPartyHosts": [
+   "code.jquery.com",
+   "hangeul.pstatic.net",
+   "fonts.googleapis.com",
+   "t1.kakaocdn.net",
+   "static.barunsoncard.com",
+   "mcard-resources.barunsoncard.com",
+   "fonts.gstatic.com",
+   "cdn.jsdelivr.net"
+  ]
+ },
+ "structure": {
+  "coverClicked": false,
+  "coverClickMethod": null,
+  "coverClickLanding": null,
+  "beforeOpen": {
+   "sectionCount": 0,
+   "features": {
+    "coverGate": false,
+    "toGuest": false,
+    "countdown": false,
+    "rsvp": false,
+    "wishes": false,
+    "gift": false,
+    "copyButton": false,
+    "maps": false,
+    "calendar": false,
+    "livestream": false,
+    "qr": false,
+    "loveStory": false,
+    "gallery": false,
+    "dressCode": false,
+    "quranVerse": false,
+    "protocol": false,
+    "timezoneLabel": [],
+    "watermark": false,
+    "instagramFilter": false,
+    "musicControl": false
+   },
+   "buttons": []
+  },
+  "afterOpen": {
+   "title": "바른손카드 모바일초대장",
+   "lang": "ko",
+   "generator": null,
+   "viewport": "width=device-width, initial-scale=1, user-scalable=yes",
+   "og": {
+    "image": false,
+    "title": false,
+    "description": false
+   },
+   "reducedMotionCss": false,
+   "libs": {
+    "gsap": false,
+    "scrollTrigger": false,
+    "aos": false,
+    "animateCss": false,
+    "wow": false,
+    "swiper": true,
+    "slick": false,
+    "owl": false,
+    "lottie": false,
+    "three": false,
+    "pixi": false,
+    "anime": false,
+    "motionOne": false,
+    "howler": false,
+    "jquery": true,
+    "bootstrap": false,
+    "tailwind": false,
+    "alpine": false,
+    "vue": false,
+    "nuxt": false,
+    "next": false,
+    "react": false,
+    "svelte": false,
+    "flutterWeb": false,
+    "wordpress": false,
+    "elementor": false,
+    "livewire": false,
+    "inertia": false
+   },
+   "sections": [],
+   "sectionCount": 0,
+   "buttons": [],
+   "media": {
+    "audio": [],
+    "video": 0,
+    "iframes": [],
+    "canvases": 0,
+    "svgs": 0,
+    "images": 24,
+    "lazyImages": 0
+   },
+   "forms": [],
+   "fontsUsed": [
+    "Nanum Gothic",
+    "Nanum Myeongjo",
+    "Cafe24SsurroundAir"
+   ],
+   "features": {
+    "coverGate": false,
+    "toGuest": false,
+    "countdown": false,
+    "rsvp": false,
+    "wishes": false,
+    "gift": false,
+    "copyButton": false,
+    "maps": false,
+    "calendar": false,
+    "livestream": false,
+    "qr": false,
+    "loveStory": false,
+    "gallery": false,
+    "dressCode": false,
+    "quranVerse": false,
+    "protocol": false,
+    "timezoneLabel": [],
+    "watermark": false,
+    "instagramFilter": false,
+    "musicControl": false
+   },
+   "domNodes": 218,
+   "docHeight": 4933
+  }
+ },
+ "lighthouse": {
+  "ok": true,
+  "lighthouseVersion": "12.8.2",
+  "finalUrl": "https://mcard.barunsoncard.com/preview/1096",
+  "throttling": {
+   "rttMs": 150,
+   "throughputKbps": 1638.4,
+   "requestLatencyMs": 562.5,
+   "downloadThroughputKbps": 1474.5600000000002,
+   "uploadThroughputKbps": 675,
+   "cpuSlowdownMultiplier": 4
+  },
+  "screen": {
+   "mobile": true,
+   "width": 412,
+   "height": 915,
+   "deviceScaleFactor": 2.625,
+   "disabled": false
+  },
+  "scores": {
+   "performance": 55,
+   "accessibility": 83,
+   "best-practices": 93,
+   "seo": 42
+  },
+  "metrics": {
+   "fcpMs": 12714.194999999998,
+   "lcpMs": 15792.331499999997,
+   "tbtMs": 0,
+   "cls": 0.008865448356176656,
+   "siMs": 12714.194999999998,
+   "ttiMs": 16100.145149999997
+  },
+  "byType": {
+   "total": {
+    "requests": 70,
+    "bytes": 5984848
+   },
+   "font": {
+    "requests": 15,
+    "bytes": 2868178
+   },
+   "image": {
+    "requests": 22,
+    "bytes": 2410330
+   },
+   "script": {
+    "requests": 8,
+    "bytes": 344542
+   },
+   "stylesheet": {
+    "requests": 23,
+    "bytes": 325314
+   },
+   "document": {
+    "requests": 1,
+    "bytes": 36213
+   },
+   "other": {
+    "requests": 1,
+    "bytes": 271
+   },
+   "media": {
+    "requests": 0,
+    "bytes": 0
+   },
+   "third-party": {
+    "requests": 35,
+    "bytes": 3168508
+   }
+  },
+  "totalBytes": 6017245,
+  "requests": 70,
+  "thirdParties": [
+   {
+    "entity": "jQuery CDN",
+    "bytes": 34114,
+    "blockingMs": 69.33013550785562
+   },
+   {
+    "entity": "kakao.com",
+    "bytes": 271,
+    "blockingMs": 4.999999999999999
+   },
+   {
+    "entity": "JSDelivr CDN",
+    "bytes": 1797153,
+    "blockingMs": 0
+   },
+   {
+    "entity": "pstatic.net",
+    "bytes": 937913,
+    "blockingMs": 0
+   },
+   {
+    "entity": "Google Fonts",
+    "bytes": 369706,
+    "blockingMs": 0
+   },
+   {
+    "entity": "kakaocdn.net",
+    "bytes": 29351,
+    "blockingMs": 0
+   }
+  ],
+  "fontDisplayIssues": 2,
+  "unusedJsBytes": 235670,
+  "a11yFailures": [
+   "image-alt"
+  ]
+ },
+ "files": {
+  "rea-inspect.json": "96206d4d8f15bc973158c47f25e893bc5ae53976b41e9d5181636a33642899b6",
+  "rea-bundle.json": "2bab1678bb7b684e1e489d5ae23c95b62e247fa68c4c40b7528a1b6f33b94e79",
+  "_private/rea/C-BRN-103/rea-scenario.json": "79e5b364c4f6c37bf94ecae84d1cee80ea267aabbf7a756128f5fc0f233aca9a",
+  "_private/lh/C-BRN-103.json": "3909c3536a42f5a906d624cf020344e3b9cf535f91498c270f635f298319e9e9"
+ },
+ "screenshot": "_private/thumbs (competitor, not committed)"
+}

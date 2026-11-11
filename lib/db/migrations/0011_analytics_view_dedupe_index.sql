@@ -1,0 +1,1 @@
+CREATE INDEX "analytics_events_view_dedupe_idx" ON "analytics_events" USING btree ("invitation_id","guest_id","event_type","created_at");

@@ -1,0 +1,3 @@
+# Session 12, --no-follow --accept-encoding "gzip, deflate": the one planned re-request of EQX's homepage with explicit
+# content negotiation (its s10 body arrived compressed without being requested). Not repeated if it fails again.
+EQX	Eqxiu 易企秀 (s12 re-request)	https://www.eqxiu.com/

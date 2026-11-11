@@ -1,0 +1,19 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "update guests set rsvp_status = $1, attending_count = $2, rsvp_event_answers = case when $3 then $4 else rsvp_event_answers end where id = $5 and invitation_id = $6",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Left": [
+        "Varchar",
+        "Int4",
+        "Bool",
+        "Jsonb",
+        "Int4",
+        "Int4"
+      ]
+    },
+    "nullable": []
+  },
+  "hash": "4b4d00bcc8f3ac1e3f964c11b00f465df49e269e64778a3e65d01b8d64f3e9d1"
+}

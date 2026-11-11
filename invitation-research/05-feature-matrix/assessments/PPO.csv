@@ -1,0 +1,17 @@
+feature_id,status,basis,evidence,note
+FM-014,Full,CLAIMED,S-PPO-001,Galleries in the Plus unlock
+FM-026,Full,CLAIMED,S-PPO-001;S-PPO-002,Surveys and guest-info collection
+FM-074,Full,CLAIMED,S-PPO-002,E-mail sending
+FM-075,Full,CLAIMED,S-PPO-002,Text sending
+FM-076,Full,CLAIMED,S-PPO-002,Automated reminders on each guest's chosen channel; scheduled sends
+FM-077,Full,CLAIMED,S-PPO-002,RSVP tracking
+FM-086,Full,CLAIMED,S-PPO-002,RSVP analytics
+FM-094,Full,CLAIMED,S-PPO-001,Password protection in the Plus unlock
+FM-101,Full,CLAIMED,S-PPO-002,Event page assembled from blocks
+FM-109,Full,CLAIMED,S-PPO-002,Co-hosts
+FM-120,Full,OBSERVED,S-PPO-001,Paperless Pro annual subscription priced by guest count
+FM-121,Full,OBSERVED,S-PPO-001,Coins plus a 200-coin Plus unlock
+FM-122,Full,OBSERVED,S-PPO-001,Published in coins (3 coins = $1.44 example)
+FM-148,Full,CLAIMED,S-PPO-002,Printed invitations via Paper Source
+FM-152,Full,OBSERVED,D-PPO,Category pages with hundreds of cards per occasion
+FM-153,Partial,OBSERVED,D-PPO,Category catalog; filter controls not recorded

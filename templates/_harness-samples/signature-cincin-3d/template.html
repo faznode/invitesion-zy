@@ -1,0 +1,43 @@
+<main class="page">
+  <header class="cover">
+    <p class="eyebrow">{{t.eyebrow}}</p>
+    <h1 class="names"><span>{{couple.first}}</span><span class="amp" aria-hidden="true">&amp;</span><span>{{couple.second}}</span></h1>
+    <figure class="stage" data-stage>
+      <img src="{{asset.rings-fallback}}" alt="{{t.ringsAlt}}" width="720" height="720" fetchpriority="high">
+    </figure>
+    <button class="button ghost" type="button" data-load-3d data-loading="{{t.loading3d}}" data-failed="{{t.failed3d}}" data-ready="{{t.ready3d}}" data-label="{{t.canvasLabel}}">{{t.view3d}}</button>
+    <div class="guest-card">
+      <p class="guest-label">{{t.invite}}</p>
+      <p class="guest-name"><bdi>{{guest.name}}</bdi></p>
+    </div>
+  </header>
+
+  <section class="opening" data-scroll>
+    <p>{{t.opening}}</p>
+  </section>
+
+  <section class="events" aria-labelledby="events-title">
+    <h2 id="events-title" data-scroll>{{t.events}}</h2>
+    <ol class="event-list">
+      {{#events}}
+      <li class="event" data-scroll>
+        <h3>{{event.title}}</h3>
+        <p><time datetime="{{event.startAt}}">{{event.date}}</time></p>
+        <p class="event-time">{{event.time}}</p>
+        <p class="event-venue">{{event.venue}}</p>
+      </li>
+      {{/events}}
+    </ol>
+  </section>
+
+  <section class="rsvp" aria-labelledby="rsvp-title" data-scroll>
+    <h2 id="rsvp-title">{{t.rsvp}}</h2>
+    <p>{{t.rsvpHint}}</p>
+    <a class="button" href="#rsvp-title">{{t.rsvpButton}}</a>
+  </section>
+
+  <footer class="closing">
+    <p>{{t.closing}}</p>
+    <p class="signature">{{couple.first}} &amp; {{couple.second}}</p>
+  </footer>
+</main>

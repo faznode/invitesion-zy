@@ -1,0 +1,607 @@
+{
+ "id": "C-ENV-114",
+ "competitor": "enviory",
+ "kind": "demo",
+ "url": "https://enviory.com/rdct-6687484a60?tpl=velora",
+ "capturedAt": "2026-10-29T11:47:00.316+07:00",
+ "robots": {
+  "allowed": true,
+  "note": "Allow: /"
+ },
+ "method": "CDP mobile emulation 412x915 @2.625, Android Chrome UA, cold cache (no throttling) + REA 6.8.0 inspect-web-page/analyze-web-bundle; Lighthouse 12 mobile simulate (Slow 4G, 4x CPU) when present",
+ "rea": {
+  "inspectEvidenceId": "ev_d1382de1b19026f6033bb8482a7c24f8f37a1cfe486ecb03d2fb17cf973a0b5b",
+  "bundleEvidenceId": "ev_33f3c6d9397a5cc92b66afdf33a5eba9d9955a85d373be1a6454a02ab1d8cd54",
+  "inspectError": null,
+  "bundleError": null,
+  "domNodes": 634,
+  "scripts": 18,
+  "resources": 55,
+  "completeness": "policy_filtered",
+  "bundleChunks": 18,
+  "bundleEndpoints": [],
+  "bundleInferences": [
+   {
+    "kind": "endpoint_candidate",
+    "value": "u",
+    "confidence": "low",
+    "basis": [
+     {
+      "script_key": "scr_0d35f026d6dfbd0f6393cd3e6a5ce3d3986c4fb07f2b1a74f6071cc7dbb1513d",
+      "artifact_sha256": "b3dcf40de3f3d5d66a250e93f6ab98941f75d9ebb11d019fe1754ce31bd1db9c",
+      "line": 3,
+      "column": 35230,
+      "detector": "call:n.get:unverified-network-receiver"
+     }
+    ]
+   },
+   {
+    "kind": "endpoint_candidate",
+    "value": "name",
+    "confidence": "low",
+    "basis": [
+     {
+      "script_key": "scr_0d35f026d6dfbd0f6393cd3e6a5ce3d3986c4fb07f2b1a74f6071cc7dbb1513d",
+      "artifact_sha256": "b3dcf40de3f3d5d66a250e93f6ab98941f75d9ebb11d019fe1754ce31bd1db9c",
+      "line": 3,
+      "column": 35369,
+      "detector": "call:o.get:unverified-network-receiver"
+     }
+    ]
+   },
+   {
+    "kind": "vendor_fingerprint",
+    "value": "Next.js",
+    "confidence": "high",
+    "basis": [
+     {
+      "script_key": "scr_1052792c548d166445f36ad9e9a159ce2ef893ccbde970a0645b61be1e98db96",
+      "artifact_sha256": "59114f6c66168ad7bd52e9710a4dbc732394746edc864469f4d053c6c0a1b76b",
+      "line": null,
+      "column": null,
+      "detector": "next-runtime"
+     }
+    ]
+   },
+   {
+    "kind": "endpoint_candidate",
+    "value": "dpl",
+    "confidence": "low",
+    "basis": [
+     {
+      "script_key": "scr_1052792c548d166445f36ad9e9a159ce2ef893ccbde970a0645b61be1e98db96",
+      "artifact_sha256": "59114f6c66168ad7bd52e9710a4dbc732394746edc864469f4d053c6c0a1b76b",
+      "line": 1,
+      "column": 9524,
+      "detector": "call:r.get:unverified-network-receiver"
+     }
+    ]
+   },
+   {
+    "kind": "endpoint_candidate",
+    "value": "dpl",
+    "confidence": "low",
+    "basis": [
+     {
+      "script_key": "scr_1052792c548d166445f36ad9e9a159ce2ef893ccbde970a0645b61be1e98db96",
+      "artifact_sha256": "59114f6c66168ad7bd52e9710a4dbc732394746edc864469f4d053c6c0a1b76b",
+      "line": 1,
+      "column": 9547,
+      "detector": "call:r.delete:unverified-network-receiver"
+     }
+    ]
+   },
+   {
+    "kind": "endpoint_candidate",
+    "value": "dpl",
+    "confidence": "low",
+    "basis": [
+     {
+      "script_key": "scr_1052792c548d166445f36ad9e9a159ce2ef893ccbde970a0645b61be1e98db96",
+      "artifact_sha256": "59114f6c66168ad7bd52e9710a4dbc732394746edc864469f4d053c6c0a1b76b",
+      "line": 3,
+      "column": 2368,
+      "detector": "call:l.get:unverified-network-receiver"
+     }
+    ]
+   },
+   {
+    "kind": "vendor_fingerprint",
+    "value": "Next.js",
+    "confidence": "high",
+    "basis": [
+     {
+      "script_key": "scr_13d11a858cb64a92c80bc1ed1797612dd2cdff002b6b0398df8f779f6acdd1cb",
+      "artifact_sha256": "06c6915261c2cc7e4c12d4eabffb39a4c813f91ab4caf0ae4dddc248c9007eca",
+      "line": null,
+      "column": null,
+      "detector": "next-runtime"
+     }
+    ]
+   },
+   {
+    "kind": "vendor_fingerprint",
+    "value": "Next.js",
+    "confidence": "high",
+    "basis": [
+     {
+      "script_key": "scr_a8a4f44cd766a503e054f9fd4c497134f9ba485e7b798fa9d35e333dd565cfda",
+      "artifact_sha256": "189be9dc92acfe3bdb3d14cded9df522ee679a6c9c94c4a13c821d7b55480bb7",
+      "line": null,
+      "column": null,
+      "detector": "next-runtime"
+     }
+    ]
+   },
+   {
+    "kind": "vendor_fingerprint",
+    "value": "React",
+    "confidence": "medium",
+    "basis": [
+     {
+      "script_key": "scr_e247b608b126d130fb7978d58f9e3b1eb04400335111c1ebd4709ee42012289a",
+      "artifact_sha256": "8f68f227b1f45ad9dde59e6d35dd7491c315d9bb9a2092e600fb53a72698f8aa",
+      "line": null,
+      "column": null,
+      "detector": "react-runtime"
+     }
+    ]
+   },
+   {
+    "kind": "vendor_fingerprint",
+    "value": "Next.js",
+    "confidence": "high",
+    "basis": [
+     {
+      "script_key": "scr_fdc4ade501b49561b9ee1ed72bfe50e2137994c96e045daac68f4d8bfcbe3a95",
+      "artifact_sha256": "ddf91d65eb27cda13ce99edc8ecd997ebb460a2a61a43c6fddce37e7371d7e0f",
+      "line": null,
+      "column": null,
+      "detector": "next-runtime"
+     }
+    ]
+   }
+  ]
+ },
+ "network": {
+  "loadEventMs": 1362,
+  "requests": 64,
+  "bytes": 1928404,
+  "byType": {
+   "Document": {
+    "requests": 1,
+    "bytes": 5767
+   },
+   "Other": {
+    "requests": 2,
+    "bytes": 2671
+   },
+   "Stylesheet": {
+    "requests": 8,
+    "bytes": 30283
+   },
+   "Script": {
+    "requests": 15,
+    "bytes": 291323
+   },
+   "Image": {
+    "requests": 32,
+    "bytes": 1440211
+   },
+   "Font": {
+    "requests": 5,
+    "bytes": 158149
+   },
+   "Media": {
+    "requests": 1,
+    "bytes": 0
+   }
+  },
+  "protocols": [
+   "h3"
+  ],
+  "scriptHosts": [
+   "enviory.com"
+  ],
+  "scriptFiles": [
+   "37izdbtglmhkm.js",
+   "36yaqkidkk98p.js",
+   "turbopack-2vykj9ofcp5cd.js",
+   "2g4do3umo1kha.js",
+   "2tk6_dlthosge.js",
+   "3zktz-1ygh6sy.js",
+   "1omje1ehw_sx_.js",
+   "1q4itoff--b7w.js",
+   "18kjpnrsi2gfo.js",
+   "37wszccyjscxh.js",
+   "3dhiri9lsfnla.js",
+   "01b4jnmw5hrqi.js",
+   "3oo74yffkypsg.js",
+   "1al9ix1ezx7ws.js",
+   "31hyi7bcq9r1y.js"
+  ],
+  "fontFiles": [
+   {
+    "host": "fonts.gstatic.com",
+    "file": "TuGOUUFxWphYQ6YI6q9Xp61FQzxDRKmzr1lWfxlPCz4c.woff2",
+    "bytes": 16151
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "JTUSjIg1_i6t8kCHKm459WlhyyTh89Y.woff2",
+    "bytes": 35540
+   },
+   {
+    "host": "enviory.com",
+    "file": "normal.woff2",
+    "bytes": 35378
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "JTUSjIg1_i6t8kCHKm459WlhyyTh89Y.woff2",
+    "bytes": 35540
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "JTUSjIg1_i6t8kCHKm459WlhyyTh89Y.woff2",
+    "bytes": 35540
+   }
+  ],
+  "thirdPartyHosts": [
+   "fonts.googleapis.com",
+   "fonts.gstatic.com"
+  ]
+ },
+ "structure": {
+  "coverClicked": "Buka Undangan",
+  "beforeOpen": {
+   "sectionCount": 0,
+   "features": {
+    "coverGate": true,
+    "toGuest": true,
+    "countdown": false,
+    "rsvp": false,
+    "wishes": false,
+    "gift": false,
+    "copyButton": false,
+    "maps": false,
+    "calendar": false,
+    "livestream": false,
+    "qr": false,
+    "loveStory": false,
+    "gallery": false,
+    "dressCode": false,
+    "quranVerse": false,
+    "protocol": false,
+    "timezoneLabel": [],
+    "watermark": false,
+    "instagramFilter": false,
+    "musicControl": false
+   },
+   "buttons": [
+    "Buka Undangan",
+    "✎Ganti Data"
+   ]
+  },
+  "afterOpen": {
+   "title": "[name] [name] [name] & [name] [name] [name] — Undangan Pe…",
+   "lang": "id",
+   "generator": null,
+   "viewport": "width=device-width, initial-scale=1, maximum-scale=5",
+   "og": {
+    "image": true,
+    "title": true,
+    "description": true
+   },
+   "reducedMotionCss": true,
+   "libs": {
+    "gsap": false,
+    "scrollTrigger": false,
+    "aos": false,
+    "animateCss": false,
+    "wow": false,
+    "swiper": false,
+    "slick": false,
+    "owl": false,
+    "lottie": false,
+    "three": false,
+    "pixi": false,
+    "anime": false,
+    "motionOne": false,
+    "howler": false,
+    "jquery": false,
+    "bootstrap": false,
+    "tailwind": false,
+    "alpine": false,
+    "vue": false,
+    "nuxt": false,
+    "next": true,
+    "react": false,
+    "svelte": false,
+    "flutterWeb": false,
+    "wordpress": false,
+    "elementor": false,
+    "livewire": false,
+    "inertia": false
+   },
+   "sections": [
+    {
+     "tag": "section",
+     "id": "",
+     "cls": "VeloraParallaxStage-module__yTX_BW__section",
+     "heading": "[name]&[name]",
+     "h": 915
+    },
+    {
+     "tag": "section",
+     "id": "",
+     "cls": "VeloraParallaxStage-module__yTX_BW__section",
+     "heading": "",
+     "h": 915
+    },
+    {
+     "tag": "section",
+     "id": "",
+     "cls": "VeloraParallaxStage-module__yTX_BW__section",
+     "heading": "[name] [name] [name]",
+     "h": 915
+    },
+    {
+     "tag": "section",
+     "id": "",
+     "cls": "VeloraParallaxStage-module__yTX_BW__section",
+     "heading": "[name]",
+     "h": 915
+    },
+    {
+     "tag": "section",
+     "id": "",
+     "cls": "VeloraParallaxStage-module__yTX_BW__section",
+     "heading": "Save the Date",
+     "h": 915
+    },
+    {
+     "tag": "section",
+     "id": "",
+     "cls": "VeloraParallaxStage-module__yTX_BW__section",
+     "heading": "Akad Nikah",
+     "h": 915
+    },
+    {
+     "tag": "section",
+     "id": "",
+     "cls": "VeloraParallaxStage-module__yTX_BW__section",
+     "heading": "Lokasi Acara",
+     "h": 915
+    },
+    {
+     "tag": "section",
+     "id": "",
+     "cls": "VeloraParallaxStage-module__yTX_BW__section",
+     "heading": "Our Love Story",
+     "h": 915
+    },
+    {
+     "tag": "section",
+     "id": "",
+     "cls": "VeloraParallaxStage-module__yTX_BW__section",
+     "heading": "Galeri",
+     "h": 915
+    },
+    {
+     "tag": "section",
+     "id": "",
+     "cls": "VeloraParallaxStage-module__yTX_BW__section",
+     "heading": "Rangkaian Acara",
+     "h": 915
+    },
+    {
+     "tag": "section",
+     "id": "",
+     "cls": "VeloraParallaxStage-module__yTX_BW__section",
+     "heading": "Dress Code",
+     "h": 915
+    },
+    {
+     "tag": "section",
+     "id": "",
+     "cls": "VeloraParallaxStage-module__yTX_BW__section",
+     "heading": "Tanda Kasih",
+     "h": 915
+    },
+    {
+     "tag": "section",
+     "id": "",
+     "cls": "VeloraParallaxStage-module__yTX_BW__section",
+     "heading": "Konfirmasi Kehadiran",
+     "h": 915
+    },
+    {
+     "tag": "section",
+     "id": "",
+     "cls": "VeloraParallaxStage-module__yTX_BW__section",
+     "heading": "Terima Kasih",
+     "h": 915
+    }
+   ],
+   "sectionCount": 14,
+   "buttons": [
+    "Simpan ke Kalender",
+    "Lihat Lokasi",
+    "Ketuk untuk memuat peta",
+    "Petunjuk Arah",
+    "‹",
+    "›",
+    "▶",
+    "Transfer",
+    "Kado",
+    "QRIS",
+    "Bank Central Asia",
+    "Bank Mandiri",
+    "Salin Nomor",
+    "Konfirmasi",
+    "Ucapan",
+    "Hadir",
+    "Tidak Pasti",
+    "Berhalangan",
+    "Kirim Konfirmasi",
+    "Pembuka",
+    "Kutipan",
+    "Mempelai",
+    "Profil",
+    "Tanggal",
+    "Acara"
+   ],
+   "media": {
+    "audio": [
+     {
+      "autoplay": false,
+      "loop": true,
+      "type": "mp3"
+     }
+    ],
+    "video": 0,
+    "iframes": [],
+    "canvases": 0,
+    "svgs": 17,
+    "images": 41,
+    "lazyImages": 8
+   },
+   "forms": [
+    {
+     "fields": [
+      "text",
+      "text",
+      "button",
+      "button",
+      "button",
+      "number",
+      "textarea",
+      "submit"
+     ],
+     "hasRadio": false,
+     "hasSelect": false
+    }
+   ],
+   "fontsUsed": [
+    "Libre Caslon Display",
+    "Montserrat",
+    "Ballet"
+   ],
+   "features": {
+    "coverGate": false,
+    "toGuest": false,
+    "countdown": true,
+    "rsvp": true,
+    "wishes": true,
+    "gift": true,
+    "copyButton": true,
+    "maps": true,
+    "calendar": true,
+    "livestream": false,
+    "qr": false,
+    "loveStory": true,
+    "gallery": true,
+    "dressCode": true,
+    "quranVerse": true,
+    "protocol": false,
+    "timezoneLabel": [],
+    "watermark": true,
+    "instagramFilter": false,
+    "musicControl": false
+   },
+   "domNodes": 487,
+   "docHeight": 13009
+  }
+ },
+ "lighthouse": {
+  "ok": true,
+  "lighthouseVersion": "12.8.2",
+  "finalUrl": "https://enviory.com/rdct-6687484a60?tpl=velora",
+  "throttling": {
+   "rttMs": 150,
+   "throughputKbps": 1638.4,
+   "requestLatencyMs": 562.5,
+   "downloadThroughputKbps": 1474.5600000000002,
+   "uploadThroughputKbps": 675,
+   "cpuSlowdownMultiplier": 4
+  },
+  "screen": {
+   "mobile": true,
+   "width": 412,
+   "height": 915,
+   "deviceScaleFactor": 2.625,
+   "disabled": false
+  },
+  "scores": {
+   "performance": 45,
+   "accessibility": 100,
+   "best-practices": 79,
+   "seo": 54
+  },
+  "metrics": {
+   "fcpMs": 4124.815500000001,
+   "lcpMs": 16032.123000000007,
+   "tbtMs": 562.4999999999989,
+   "cls": 0,
+   "siMs": 8774.81728384019,
+   "ttiMs": 16112.144000000008
+  },
+  "byType": {
+   "total": {
+    "requests": 42,
+    "bytes": 2695793
+   },
+   "media": {
+    "requests": 1,
+    "bytes": 1845955
+   },
+   "image": {
+    "requests": 10,
+    "bytes": 428303
+   },
+   "script": {
+    "requests": 15,
+    "bytes": 298794
+   },
+   "font": {
+    "requests": 3,
+    "bytes": 87065
+   },
+   "stylesheet": {
+    "requests": 8,
+    "bytes": 25574
+   },
+   "document": {
+    "requests": 1,
+    "bytes": 6334
+   },
+   "other": {
+    "requests": 4,
+    "bytes": 3768
+   },
+   "third-party": {
+    "requests": 3,
+    "bytes": 53189
+   }
+  },
+  "totalBytes": 2702250,
+  "requests": 42,
+  "thirdParties": [
+   {
+    "entity": "Google Fonts",
+    "bytes": 53189,
+    "blockingMs": 0
+   }
+  ],
+  "fontDisplayIssues": 0,
+  "unusedJsBytes": 77723,
+  "a11yFailures": []
+ },
+ "files": {
+  "rea-inspect.json": "1ca4fb420132d9061eb368ed3ba9d5cbeb6a03b530ac824d2148e02c21648beb",
+  "rea-bundle.json": "654284fe20b2d6b98528ee4c20f35b3c8bca5c5a501443e39bfd7200f0d0b466",
+  "_private/lh/C-ENV-114.json": "0c09db73b85dffde8bb8d2510211d7a79c69f6d5ae719f2a4e50d5dfb5678912"
+ },
+ "screenshot": "_private/thumbs (competitor, not committed)"
+}

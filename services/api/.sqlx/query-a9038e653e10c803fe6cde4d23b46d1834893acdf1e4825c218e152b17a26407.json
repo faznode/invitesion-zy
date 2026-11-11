@@ -1,0 +1,53 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "select guest_count, invited_event_ids, rsvp_event_answers from guests where id = $1 and invitation_id = $2 for update",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "guest_count",
+        "type_info": "Int4",
+        "origin": {
+          "Table": {
+            "table": "guests",
+            "name": "guest_count"
+          }
+        }
+      },
+      {
+        "ordinal": 1,
+        "name": "invited_event_ids",
+        "type_info": "Jsonb",
+        "origin": {
+          "Table": {
+            "table": "guests",
+            "name": "invited_event_ids"
+          }
+        }
+      },
+      {
+        "ordinal": 2,
+        "name": "rsvp_event_answers",
+        "type_info": "Jsonb",
+        "origin": {
+          "Table": {
+            "table": "guests",
+            "name": "rsvp_event_answers"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Left": [
+        "Int4",
+        "Int4"
+      ]
+    },
+    "nullable": [
+      false,
+      true,
+      true
+    ]
+  },
+  "hash": "a9038e653e10c803fe6cde4d23b46d1834893acdf1e4825c218e152b17a26407"
+}

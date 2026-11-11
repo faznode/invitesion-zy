@@ -1,0 +1,60 @@
+feature_id,status,basis,evidence,note
+FM-001,Full,CLAIMED,S-WEV-001,Per-guest names and unique QR codes for real invitations (demos carry no guest parameter)
+FM-002,Full,CLAIMED,S-WEV-001,
+FM-003,Full,OBSERVED,C-WEV-101;C-WEV-104;C-WEV-105;C-WEV-106,"All six demos opened (coverGate true -> false); the dialog has no accessible name"
+FM-004,Full,OBSERVED,C-WEV-104;C-WEV-105,MP3 audio element with a start offset; playback not measured
+FM-006,Full,CLAIMED,S-WEV-004,Reviewers report few songs
+FM-007,Full,CLAIMED,S-WEV-004,Songs imported from YouTube (reported not to play inside Instagram's in-app browser)
+FM-008,Full,OBSERVED,C-WEV-101;C-WEV-104,6/6 demos
+FM-013,Full,OBSERVED,C-WEV-104,5/6 demos
+FM-014,Full,OBSERVED,C-WEV-104,6/6 demos
+FM-015,Full,OBSERVED,C-WEV-104;C-WEV-105,Swiper slide controls
+FM-016,Full,OBSERVED,C-WEV-101,YouTube iframe on C-WEV-101
+FM-018,Partial,OBSERVED,C-WEV-104,WIB labels on 4/6; correctness for WITA/WIT not verifiable
+FM-019,Full,OBSERVED,C-WEV-104,Map navigation control
+FM-021,Full,OBSERVED,C-WEV-104,"""Simpan Tanggal"" on 6/6"
+FM-022,Full,OBSERVED,C-WEV-104,
+FM-023,Unknown,OBSERVED,C-WEV-104,No maybe state seen (two submit buttons read as attend/decline)
+FM-024,Full,OBSERVED,C-WEV-104,Guest-count field
+FM-030,Full,OBSERVED,C-WEV-104,
+FM-032,Full,OBSERVED,C-WEV-104,Gift sending on 5/6
+FM-036,Full,OBSERVED,S-WEV-005;C-WEV-104,"Wegiftry registry with reservation (""Lihat Daftar Kado"")"
+FM-039,Full,OBSERVED,C-WEV-104,5/6 demos
+FM-040,Full,OBSERVED,C-WEV-101,Embedded YouTube player
+FM-042,Full,OBSERVED,C-WEV-104;C-WEV-105;C-WEV-106,"""Tampilkan QR Checkin"" personal pass on 6/6"
+FM-043,Partial,OBSERVED,C-WEV-104,Downloadable IG-story template rather than a share button
+FM-044,Full,OBSERVED,C-WEV-104,IG-story template on 4/6
+FM-047,Full,OBSERVED,C-WEV-104,og:image present; no og:title / og:description
+FM-052,Full,OBSERVED,C-WEV-104,AOS
+FM-071,Full,CLAIMED,S-WEV-001,WhatsApp sending from the dashboard
+FM-077,Full,CLAIMED,S-WEV-001,Monitor RSVP and gifts
+FM-079,Full,CLAIMED,S-WEV-004,QR scanner in the Android app
+FM-080,Full,OBSERVED,S-WEV-003,QR and manual check-in in the Guest Reception service
+FM-081,Full,OBSERVED,S-WEV-003,Reception screen (paid service)
+FM-082,Partial,OBSERVED,S-WEV-003,Attendance report in the reception packages; liveness [UNKNOWN]
+FM-091,Full,OBSERVED,S-WEV-002,"Rp 69k ""aktif selamanya"""
+FM-095,Partial,OBSERVED,S-WEV-002;S-WEV-004,Credit removable only in Mitra partner tiers
+FM-106,Full,CLAIMED,S-WEV-001,Switch theme at any time without a new invitation
+FM-107,Full,CLAIMED,S-WEV-001,
+FM-110,Full,CLAIMED,S-WEV-001,"Budget, to-do, vendors, timeline"
+FM-111,Full,OBSERVED,S-WEV-003,Seating management in the reception packages
+FM-112,Full,OBSERVED,S-WEV-004,Android (Google Play and Huawei AppGallery) plus a PWA
+FM-116,Full,INFERRED,D-WEV;C-WEV-104,Official vendor demos linked from the catalogue (names redacted under D-021)
+FM-117,Full,OBSERVED,S-WEV-001,WhatsApp customer service
+FM-118,Partial,OBSERVED,S-WEV-002,Free plan is a 14-day trial
+FM-119,Full,OBSERVED,S-WEV-002,Rp 69k one-time
+FM-120,Full,OBSERVED,S-WEV-002,Packs of 2 / 5 / 11 / 23 invitations
+FM-121,Full,OBSERVED,S-WEV-002,
+FM-122,Partial,OBSERVED,S-WEV-001;S-WEV-002,"Business shows ""50.5 % OFF"" on the homepage and ""50 % OFF"" on /paket-harga"
+FM-135,Full,OBSERVED,S-WEV-002,Paket Kemitraan (Enterprise / Mitra Silver / Mitra Gold)
+FM-136,Full,OBSERVED,S-WEV-002,Text branding from Silver; logo branding at Gold
+FM-144,Full,CLAIMED,S-WEV-001,AI assistant and generator; AI wishes analysis
+FM-145,Full,CLAIMED,S-WEV-001,AI photo-studio prompts
+FM-152,Partial,OBSERVED,S-WEV-001;C-WEV-001,Planning blog and feature articles; no large generated set observed
+FM-153,Partial,OBSERVED,S-WEV-001;D-WEV,16 demo themes on the homepage; filters not observed
+FM-154,Partial,CLAIMED,S-WEV-001,"FAQ: birthdays, reunions, corporate events"
+FM-155,Partial,OBSERVED,S-WEV-001,Nusantara themes (Wayang / Javanese)
+FM-172,Full,INFERRED,D-WEV,Official vendor demos
+FM-174,Full,OBSERVED,S-WEV-004,50k+ downloads
+FM-175,None,OBSERVED,S-WEV-001,iPhone users are sent to the browser
+FM-176,Partial,OBSERVED,S-WEV-001,Planning blog

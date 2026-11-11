@@ -1,0 +1,468 @@
+{
+ "id": "C-WEV-001",
+ "competitor": "wevitation",
+ "kind": "marketing",
+ "url": "https://wevitation.com/",
+ "capturedAt": "2026-10-29T05:21:23.649+07:00",
+ "robots": {
+  "allowed": true,
+  "note": "Allow: /"
+ },
+ "method": "CDP mobile emulation 412x915 @2.625, Android Chrome UA, cold cache (no throttling) + REA 6.8.0 inspect-web-page/analyze-web-bundle; Lighthouse 12 mobile simulate (Slow 4G, 4x CPU) when present",
+ "rea": {
+  "inspectEvidenceId": "ev_1fffa33c4069974337d455d0b3becf76db4c3df0339470527f0601ac94460fad",
+  "bundleEvidenceId": "ev_d61bd988a31d1fd2719ef63ecac61b6261b9e338f3aaffc1322fbc99c8cbc1a7",
+  "inspectError": null,
+  "bundleError": null,
+  "domNodes": 2922,
+  "scripts": 8,
+  "resources": 48,
+  "completeness": "policy_filtered",
+  "bundleChunks": 6,
+  "bundleEndpoints": [],
+  "bundleInferences": []
+ },
+ "network": {
+  "loadEventMs": 652,
+  "requests": 60,
+  "bytes": 903129,
+  "byType": {
+   "Document": {
+    "requests": 1,
+    "bytes": 27170
+   },
+   "Other": {
+    "requests": 3,
+    "bytes": 4331
+   },
+   "Script": {
+    "requests": 8,
+    "bytes": 277483
+   },
+   "Stylesheet": {
+    "requests": 7,
+    "bytes": 26184
+   },
+   "Image": {
+    "requests": 35,
+    "bytes": 476535
+   },
+   "Font": {
+    "requests": 2,
+    "bytes": 89683
+   },
+   "Fetch": {
+    "requests": 1,
+    "bytes": 0
+   },
+   "Ping": {
+    "requests": 1,
+    "bytes": 551
+   },
+   "XHR": {
+    "requests": 1,
+    "bytes": 474
+   },
+   "Manifest": {
+    "requests": 1,
+    "bytes": 718
+   }
+  },
+  "protocols": [
+   "h3",
+   "h2",
+   "data"
+  ],
+  "scriptHosts": [
+   "www.wevitation.com",
+   "static.cloudflareinsights.com",
+   "www.googletagmanager.com"
+  ],
+  "scriptFiles": [
+   "rocket-loader.min.js",
+   "vce701823e78c4301a35b7e07294d87301792088814092",
+   "email-decode.min.js",
+   "js",
+   "jquery.min.js",
+   "bootstrap.bundle.min.js",
+   "main.js",
+   "owl.carousel.min.js"
+  ],
+  "fontFiles": [
+   {
+    "host": "www.wevitation.com",
+    "file": "normal.woff2",
+    "bytes": 38887
+   },
+   {
+    "host": "www.wevitation.com",
+    "file": "normal.woff2",
+    "bytes": 50796
+   }
+  ],
+  "thirdPartyHosts": [
+   "www.wevitation.com",
+   "static.cloudflareinsights.com",
+   "fonts.googleapis.com",
+   "",
+   "www.googletagmanager.com",
+   "analytics.google.com",
+   "stats.g.doubleclick.net"
+  ]
+ },
+ "structure": {
+  "coverClicked": null,
+  "beforeOpen": {
+   "sectionCount": 13,
+   "features": {
+    "coverGate": false,
+    "toGuest": false,
+    "countdown": false,
+    "rsvp": true,
+    "wishes": true,
+    "gift": true,
+    "copyButton": false,
+    "maps": false,
+    "calendar": false,
+    "livestream": true,
+    "qr": true,
+    "loveStory": false,
+    "gallery": true,
+    "dressCode": false,
+    "quranVerse": false,
+    "protocol": false,
+    "timezoneLabel": [],
+    "watermark": false,
+    "instagramFilter": false,
+    "musicControl": true
+   },
+   "buttons": [
+    "Login",
+    "Buat Undangan Gratis",
+    "Lihat Demo",
+    "Buat Undangan Anda",
+    "Bagaimana kami menghitung dampak ini?",
+    "Tutup",
+    "Kenali Guest Reception",
+    "Lihat Semua Tema →",
+    "Lihat Wegiftry →",
+    "Daftar Gratis"
+   ]
+  },
+  "afterOpen": {
+   "title": "Wevitation – Undangan Digital Modern & Elegan",
+   "lang": "en",
+   "generator": null,
+   "viewport": "width=device-width, initial-scale=1.0",
+   "og": {
+    "image": true,
+    "title": true,
+    "description": true
+   },
+   "reducedMotionCss": true,
+   "libs": {
+    "gsap": false,
+    "scrollTrigger": false,
+    "aos": false,
+    "animateCss": false,
+    "wow": false,
+    "swiper": false,
+    "slick": false,
+    "owl": true,
+    "lottie": false,
+    "three": false,
+    "pixi": false,
+    "anime": false,
+    "motionOne": false,
+    "howler": false,
+    "jquery": true,
+    "bootstrap": true,
+    "tailwind": false,
+    "alpine": false,
+    "vue": false,
+    "nuxt": false,
+    "next": false,
+    "react": false,
+    "svelte": false,
+    "flutterWeb": false,
+    "wordpress": false,
+    "elementor": false,
+    "livewire": false,
+    "inertia": false
+   },
+   "sections": [
+    {
+     "tag": "section",
+     "id": "hero",
+     "cls": "py-5 py-lg-6 bg-light-pink",
+     "heading": "Undangan Digital Modern & Elegan, Siap Dibagikan Dalam Hitun",
+     "h": 1025
+    },
+    {
+     "tag": "section",
+     "id": "why",
+     "cls": "py-5 bg-white",
+     "heading": "Kenapa Ratusan Ribu PasanganMemilih Wevitation?",
+     "h": 1652
+    },
+    {
+     "tag": "section",
+     "id": "",
+     "cls": "pt-5",
+     "heading": "Dampak Kami Hingga Saat Ini",
+     "h": 610
+    },
+    {
+     "tag": "section",
+     "id": "",
+     "cls": "py-5 bg-white more-than-invitation",
+     "heading": "Lebih dari Sekedar Undangan Digital",
+     "h": 2470
+    },
+    {
+     "tag": "section",
+     "id": "",
+     "cls": "guest-reception-cta py-5",
+     "heading": "Sambut Setiap Tamu dengan Lebih Rapi",
+     "h": 454
+    },
+    {
+     "tag": "section",
+     "id": "themes",
+     "cls": "py-5 bg-light-pink",
+     "heading": "Pilihan Tema Undangan yangSiap Dipakai",
+     "h": 663
+    },
+    {
+     "tag": "section",
+     "id": "",
+     "cls": "py-5 bg-white",
+     "heading": "Cara Baru Menerima Kado denganLebih Mudah",
+     "h": 1521
+    },
+    {
+     "tag": "section",
+     "id": "",
+     "cls": "py-5 bg-light-pink",
+     "heading": "Cara Kerja Wevitation dalam5 Langkah Mudah",
+     "h": 910
+    },
+    {
+     "tag": "section",
+     "id": "features",
+     "cls": "py-5 bg-white",
+     "heading": "Fitur Lengkap untuk SemuaKebutuhan Undangan",
+     "h": 1292
+    },
+    {
+     "tag": "section",
+     "id": "pricing",
+     "cls": "py-5 bg-light-pink",
+     "heading": "Harga",
+     "h": 2340
+    },
+    {
+     "tag": "section",
+     "id": "downloadApp",
+     "cls": "py-5 py-lg-6",
+     "heading": "Wevitation Kini Tersedia dalamAplikasi Mobile",
+     "h": 892
+    },
+    {
+     "tag": "section",
+     "id": "blog",
+     "cls": "py-5 bg-white",
+     "heading": "Artikel Terbaru Kami",
+     "h": 3778
+    },
+    {
+     "tag": "section",
+     "id": "faq",
+     "cls": "py-5 bg-light-pink",
+     "heading": "FAQ - Pertanyaan yang Sering Diajukan",
+     "h": 1052
+    }
+   ],
+   "sectionCount": 13,
+   "buttons": [
+    "Login",
+    "Buat Undangan Gratis",
+    "Lihat Demo",
+    "Buat Undangan Anda",
+    "Bagaimana kami menghitung dampak ini?",
+    "Tutup",
+    "Kenali Guest Reception",
+    "‹",
+    "›",
+    "Lihat Semua Tema →",
+    "Lihat Wegiftry →",
+    "Daftar Gratis",
+    "Pilih Paket Premium",
+    "Upgrade ke Business",
+    "Lihat Paket Harga Lengkap",
+    "Baca Selengkapnya →",
+    "Lihat Semua Artikel",
+    "Apakah Wevitation gratis digunakan?",
+    "Apakah ada fitur perencanaan acara di Wevitation?",
+    "Bagaimana cara upgrade ke paket Premium?",
+    "Apakah bisa mengganti desain undangan setelah dibuat?",
+    "Apakah Wevitation menyediakan dukungan pelanggan?",
+    "Bagaimana cara membuat undangan di Wevitation?",
+    "Apakah Wevitation mendukung acara selain pernikahan?",
+    "Lihat Semua Pertanyaan"
+   ],
+   "media": {
+    "audio": [],
+    "video": 0,
+    "iframes": [],
+    "canvases": 0,
+    "svgs": 18,
+    "images": 67,
+    "lazyImages": 63
+   },
+   "forms": [],
+   "fontsUsed": [
+    "Playfair Display",
+    "Work Sans"
+   ],
+   "features": {
+    "coverGate": false,
+    "toGuest": false,
+    "countdown": false,
+    "rsvp": true,
+    "wishes": true,
+    "gift": true,
+    "copyButton": false,
+    "maps": false,
+    "calendar": false,
+    "livestream": true,
+    "qr": true,
+    "loveStory": false,
+    "gallery": true,
+    "dressCode": false,
+    "quranVerse": false,
+    "protocol": false,
+    "timezoneLabel": [],
+    "watermark": false,
+    "instagramFilter": false,
+    "musicControl": true
+   },
+   "domNodes": 1063,
+   "docHeight": 19713
+  }
+ },
+ "lighthouse": {
+  "ok": true,
+  "lighthouseVersion": "12.8.2",
+  "finalUrl": "https://www.wevitation.com/",
+  "throttling": {
+   "rttMs": 150,
+   "throughputKbps": 1638.4,
+   "requestLatencyMs": 562.5,
+   "downloadThroughputKbps": 1474.5600000000002,
+   "uploadThroughputKbps": 675,
+   "cpuSlowdownMultiplier": 4
+  },
+  "screen": {
+   "mobile": true,
+   "width": 412,
+   "height": 915,
+   "deviceScaleFactor": 2.625,
+   "disabled": false
+  },
+  "scores": {
+   "performance": 80,
+   "accessibility": 84,
+   "best-practices": 96,
+   "seo": 100
+  },
+  "metrics": {
+   "fcpMs": 3118.925999999999,
+   "lcpMs": 3445.663999999999,
+   "tbtMs": 210,
+   "cls": 0.08643430360737202,
+   "siMs": 3118.925999999999,
+   "ttiMs": 6662.4664
+  },
+  "byType": {
+   "total": {
+    "requests": 42,
+    "bytes": 742320
+   },
+   "image": {
+    "requests": 16,
+    "bytes": 315036
+   },
+   "script": {
+    "requests": 8,
+    "bytes": 277112
+   },
+   "font": {
+    "requests": 2,
+    "bytes": 89686
+   },
+   "document": {
+    "requests": 1,
+    "bytes": 27165
+   },
+   "stylesheet": {
+    "requests": 7,
+    "bytes": 26211
+   },
+   "other": {
+    "requests": 8,
+    "bytes": 7110
+   },
+   "media": {
+    "requests": 0,
+    "bytes": 0
+   },
+   "third-party": {
+    "requests": 5,
+    "bytes": 204851
+   }
+  },
+  "totalBytes": 742320,
+  "requests": 42,
+  "thirdParties": [
+   {
+    "entity": "Google Tag Manager",
+    "bytes": 192278,
+    "blockingMs": 412.00000000000136
+   },
+   {
+    "entity": "Cloudflare",
+    "bytes": 10478,
+    "blockingMs": 0
+   },
+   {
+    "entity": "Google Fonts",
+    "bytes": 993,
+    "blockingMs": 0
+   },
+   {
+    "entity": "Google Analytics",
+    "bytes": 551,
+    "blockingMs": 0
+   },
+   {
+    "entity": "Google/Doubleclick Ads",
+    "bytes": 551,
+    "blockingMs": 0
+   }
+  ],
+  "fontDisplayIssues": 0,
+  "unusedJsBytes": 99785,
+  "a11yFailures": [
+   "aria-valid-attr-value",
+   "color-contrast",
+   "target-size"
+  ]
+ },
+ "files": {
+  "rea-inspect.json": "591edae597e77d051545f3a84c19ca7aa8aaf67b3b57d93ec0d034a909afe6b3",
+  "rea-bundle.json": "722bd12a0947fad03e359619290d86abcd438ac207a91318ebc547e2dd8681f5",
+  "_private/lh/C-WEV-001.json": "468ecb097cd51916746143269e391802b22811f5c834780736b796f3de631599"
+ },
+ "screenshot": "_private/thumbs (competitor, not committed)"
+}

@@ -1,0 +1,33 @@
+idea_id,title,demand,evidence,impact,uniqueness,feasibility,effort,risk,related_gaps,note
+I-01,"One guest pass: QR on the personal page, phone scanner, greeting screen",observed,S-SMO-006;C-WEV-104;S-VID-004;S-IVT-005;S-KAT-003,5,2,4,2,3,G-027;G-005,Parity feature; value is one data model for all three
+I-02,"""Ringan"" promise: published per-template weight and speed budget",proposed,C-WEV-104;C-KAT-101;C-IVT-101;C-INV-005,4,5,4,4,4,G-065,Problem measured (competitor medians 2.4-7.2 MB); no vendor publishes a budget
+I-03,"Host QRIS gift block: host's own static QRIS + copy buttons, no custody",observed,C-ENV-111;C-INV-111,4,2,5,5,4,G-030,Avoids holding money (ADR-O03)
+I-04,Per-side gift attribution (bride's / groom's family),observed,S-BRN-004,3,4,4,4,4,G-030,Observed abroad only (Korea); proposed for Indonesia
+I-05,"Elder-friendly reading mode: large text, high contrast, no motion, one tap on the cover",proposed,C-INV-005,3,5,5,5,5,G-036;G-066,Brief seed; no Tier-A vendor shows it
+I-06,"WhatsApp follow-up without an API: unopened / unanswered list with one-tap personal reminders",observed,S-IVT-003;S-KAT-004;S-PPO-002,5,4,5,4,4,G-038;G-039,Uses existing open tracking (F-059) and wa.me links; avoids gateway ban risk
+I-07,Free theme switching within the paid tier,observed,S-IDI-006;S-WEV-001;S-ENV-001,4,1,5,5,4,G-042,
+I-08,Try-with-your-names instant preview from the catalog,observed,S-ENV-001;C-ENV-122,4,2,4,3,4,G-043,
+I-09,Reverse trial: publish first for a few days,observed,S-ENV-001,4,2,4,4,2,G-051,Abuse risk until rate limits exist
+I-10,Wizard into the module editor with live preview and autosave,observed,S-PLO-003;S-ENV-001,5,1,4,2,3,G-040;G-043,
+I-11,"Verified religious-text blocks with visible provenance (source, translation, verifier)",proposed,S-SMO-004;C-ENV-111;C-IVT-101,4,5,4,4,3,G-004,Competitors show verse blocks; none shows provenance; needs an owner corpus
+I-12,Community-verified adat playbooks (Javanese first),proposed,S-WEV-001;S-IVT-004;S-KAT-004,3,4,3,2,3,G-033,Structures must come from reviewers (no invented requirements)
+I-13,Sober memorial (tahlilan) mode with dignified defaults,proposed,D-IDI,3,4,5,5,4,G-060,IDI publishes mourning pages; tone unknown
+I-14,Lightweight 3D cover island with automatic low-end fallback,proposed,C-ENV-111;C-KAT-101,3,5,3,2,3,G-034,No three.js seen in any Tier-A capture
+I-15,"Cinematic but accessible motion: intro <= 1.5 s, tappable from first paint, reduced motion honoured",observed,C-ENV-122;B-ENV-001,4,4,4,3,4,G-034,Problem observed: 10+ s intros and text-less cover controls (ENV)
+I-16,Generated share card and WhatsApp Status / IG Story image per invitation,observed,C-WEV-104;C-VID-101,4,2,4,4,5,G-011;G-035,
+I-17,Short generated invitation video for Status / Reels,observed,S-IDI-004;S-SMO-005;S-INV-002,3,2,2,1,3,G-057,
+I-18,"Visible privacy controls: personal-link-only details, wishes visibility, deletion after the event",observed,S-IDI-003;S-SMO-004;S-WEV-004,4,4,4,4,4,G-021;G-032;G-059,Problem observed: real customers' data exposed by vendors
+I-19,Audience variants (formal family / friends) on one invitation,observed,S-ENV-001;S-VID-002,3,2,3,3,3,G-063,
+I-20,Guest self-registration link feeding the guest list,observed,S-JOY-001,3,3,4,4,3,G-037,
+I-21,Post-event memory page: thank-you message and guest photos on the same link,observed,S-KAT-003;S-INV-002,3,4,4,3,4,G-046,
+I-22,Wishes book PDF keepsake,observed,S-INV-002,3,3,5,4,5,G-039,
+I-23,AI-assisted Indonesian copy with cultural safeguards (never scripture),observed,S-IDI-004;S-WEV-001,3,3,3,3,2,G-056,
+I-24,AI wishes digest for the couple after the event,observed,S-WEV-001,2,2,3,3,3,G-056,
+I-25,Reseller workspace with published credit prices and a resale floor,observed,S-SMO-006;S-ENV-001;S-INV-003,4,2,2,1,3,G-052,
+I-26,Designer marketplace gated by the harness with revenue share,proposed,S-IVT-004,3,4,2,1,2,G-034,No Tier-A marketplace observed
+I-27,Offline-ready guest pass for venues with weak signal,proposed,S-ENV-001,3,5,3,3,4,G-027,ENV check-in needs internet (S-ENV-001)
+I-28,Low-data mode honouring Save-Data and slow connections,proposed,C-WEV-104;C-IVT-101,3,5,4,4,5,G-065,No vendor adapts to Save-Data in the captures
+I-29,Daily RSVP digest the host can forward on WhatsApp (no API),proposed,S-IVT-003,3,3,5,4,5,G-039,
+I-30,Paper / e-card export with a QR to the live page,observed,S-BRN-004;S-SMO-005,3,3,4,3,4,G-055,
+I-31,Bilingual ID / EN invitation,observed,C-IVT-101,3,2,4,3,4,G-018,
+I-32,Planner tasks linked to invitation sections (host co-pilot checklist),proposed,S-WEV-001;S-KAT-003,2,3,4,3,5,G-043,

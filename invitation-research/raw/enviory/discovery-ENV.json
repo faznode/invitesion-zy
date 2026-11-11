@@ -1,0 +1,44 @@
+{
+ "code": "ENV",
+ "competitor": "enviory",
+ "observedAt": "2026-10-29T05:56:14.828+07:00",
+ "homepage": {
+  "url": "https://enviory.com/",
+  "finalUrl": "https://enviory.com/",
+  "skipped": null,
+  "links": 61
+ },
+ "catalogCandidates": [
+  "https://enviory.com/tema/hydrangea/pratinjau",
+  "https://enviory.com/tema",
+  "https://enviory.com/tema/rocaille/pratinjau",
+  "https://enviory.com/tema/rocaille",
+  "https://enviory.com/tema/velora-linear/pratinjau",
+  "https://enviory.com/tema/velora-linear",
+  "https://enviory.com/tema/hydrangea",
+  "https://enviory.com/tema/velora/pratinjau",
+  "https://enviory.com/tema/velora",
+  "https://enviory.com/tema/aurelia/pratinjau",
+  "https://enviory.com/tema/aurelia",
+  "https://enviory.com/tema/noctivelle/pratinjau",
+  "https://enviory.com/tema/noctivelle",
+  "https://enviory.com/tema/cartouche/pratinjau",
+  "https://enviory.com/tema/cartouche"
+ ],
+ "catalog": {
+  "url": "https://enviory.com/tema/hydrangea/pratinjau",
+  "finalUrl": "https://enviory.com/tema/hydrangea/pratinjau",
+  "skipped": null,
+  "links": 6
+ },
+ "demos": [
+  {
+   "href": "https://enviory.com/showcase",
+   "label": "Showcase & Partner"
+  },
+  {
+   "href": "https://enviory.com/rdct-6687484a60?tpl=hydrangea",
+   "label": "Full Preview"
+  }
+ ]
+}

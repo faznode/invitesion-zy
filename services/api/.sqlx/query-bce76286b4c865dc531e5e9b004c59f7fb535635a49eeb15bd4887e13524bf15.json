@@ -1,0 +1,28 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "insert into receipt_counters (scope, last_number) values ($1, 1)\n           on conflict (scope) do update set last_number = receipt_counters.last_number + 1\n           returning last_number",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "last_number",
+        "type_info": "Int4",
+        "origin": {
+          "Table": {
+            "table": "receipt_counters",
+            "name": "last_number"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Left": [
+        "Varchar"
+      ]
+    },
+    "nullable": [
+      false
+    ]
+  },
+  "hash": "bce76286b4c865dc531e5e9b004c59f7fb535635a49eeb15bd4887e13524bf15"
+}

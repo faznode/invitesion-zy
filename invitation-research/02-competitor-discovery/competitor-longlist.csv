@@ -1,0 +1,53 @@
+code,name,url,country,segment,play_installs,tranco_rank,homepage_signals,stack_hints,source_and_date,tier
+IDI,Indoinvite,https://indoinvite.com/,ID,DIY mass-market web + Android app; all life events incl. Mepandes,500K+ (4.9★; com.indoinvite.apps; upd 2026-10-14),195168,"[CLAIMED] 1,4 juta undangan; 4,5 juta tamu; 300–400 tema; Rp39k–Rp119k",jquery bootstrap cloudflare gtm,"Play listing + homepage probe 2026-10-29; Tranco 2026-10-27",A
+PLO,PALEO Undangan Web Digital,https://paleo.id/,ID,DIY web invitations + Android app,500K+ (4.5★; id.paleo.undangandigital; upd 2025-10-29),not in top 1M,"[CLAIMED] ""Nomor 1 di Indonesia""; 100 tema",next,"Play listing + probe 2026-10-29",A
+SMO,Satu Momen,https://satumomen.com/,ID,DIY + custom design tiers,—,475635,"[CLAIMED via search] Rp79k–Rp599k; Signature 180-day active",blocked to non-browser clients (403),"WebSearch + Tranco 2026-10-29",A
+WEV,Wevitation,https://wevitation.com/,ID,DIY web + Android app,50K+ (4.4★; com.wevitation.mobile; upd 2025-10-09),844898,"[OBSERVED C-WEV-001] marketing stack jQuery/Bootstrap/Owl, Rocket Loader",jquery bootstrap cloudflare gtm,"Play listing + C-WEV-001 2026-10-29",A
+VID,Viding,https://viding.co/,ID,Wedding website + invitation + guest management,—,306504,"[OBSERVED] title ""Website Undangan Pernikahan Digital Online Terbaik""",next cloudflare gtm,"probe + Tranco 2026-10-29",A
+ENV,Enviory,https://enviory.com/,ID,Premium motion-led invitations + wedding websites,—,not in top 1M,"[CLAIMED] 8,8 juta pengguna; Rp75k–Rp1.3M",next cloudflare midtrans,"probe 2026-10-29",A
+IVT,Invitato,https://invitato.net/,ID,Premium web invitation + QR code check-in,—,not in top 1M,"[CLAIMED] ""First Web Invitation & QRCode in Town""",cloudflare (SPA shell),"probe 2026-10-29",A
+INV,INVI.ID,https://invi.id/,ID,Website-as-a-service + reseller packs,—,not in top 1M,"[CLAIMED] ""#1 Website Undangan Digital Terlengkap""; Rp198k/Rp298k; 50 tema",wordpress elementor lottie swiper,"probe 2026-10-29",A
+KAT,Katsudoto,https://katsudoto.id/,ID,Premium animated invitations,—,798240,"[CLAIMED via search] Rp300k–Rp700k; active forever",jquery gsap aos swiper cloudflare,"probe + Tranco 2026-10-29",A
+STM,Sitemu,https://sitemu.id/,ID,DIY elegant invitations (""jadi 5 menit""),—,not in top 1M,"[CLAIMED] 120 tema; Rp50k–Rp300k; coba gratis",wordpress next cloudflare,"probe 2026-10-29",A
+HRK,Harikita,https://harikita.id/,ID,All-events invitations + business packs,—,not in top 1M,"[OBSERVED] prices Rp155k … Rp9.999M (bulk/business tiers)",next cloudflare,"probe 2026-10-29",B
+UVR,Undangan Virtual,https://undanganvirtual.com/,ID,Syar'i + modern invitations,—,not in top 1M,"[CLAIMED] 37–54 tema; Rp79k–Rp149k",nuxt gtm,"probe 2026-10-29",B
+JNV,Janiva,https://janiva.id/,ID,Cinematic opening themes,—,not in top 1M,"[CLAIMED] Rp79k–Rp249k; ""Sinematik"" Rp249k (search)",next cloudflare,"probe + WebSearch 2026-10-29",B
+SAN,Sannubari,https://sannubari.com/,ID,Premium done-for-you service,—,not in top 1M,"[CLAIMED] Rp50k–Rp300k; recommended as best overall in a 2026 listicle",wordpress elementor lottie,"probe + WebSearch 2026-10-29",B
+SMP,sangmempelai.id,https://sangmempelai.id/,ID,Reseller / partner program,—,not in top 1M,"[OBSERVED] Rp25k–Rp450k; ""Partner Undangan""",jquery bootstrap,"probe 2026-10-29",B
+PAC,PunyaAcara,https://punyaacara.id/,ID,"Wedding, aqiqah, khitanan",—,not in top 1M,"[OBSERVED] Rp25k–Rp279k",laravel midtrans,"probe 2026-10-29",B
+JOU,joujou,https://joujou.id/,ID,Wedding planner + invitation,—,not in top 1M,"[OBSERVED] Rp25k–Rp249k",next,"probe 2026-10-29",B
+WDW,Wedew,https://wedew.id/,ID,Wedding platform + QR guest app,—,not in top 1M,"[OBSERVED] title ""Platform Pernikahan Digital""",next meta-pixel,"probe + WebSearch 2026-10-29",B
+WNK,WebNikah,https://webnikah.com/,ID,Free wedding website builder,—,not in top 1M,"[CLAIMED] gratis; 100 tema",jquery bootstrap,"probe 2026-10-29",B
+SBU,SebarUndangan,https://sebarundangan.id/,ID,Free online invitations,—,not in top 1M,"[CLAIMED] gratis",next cloudflare,"probe 2026-10-29",B
+SPL,Simplora,https://simplora.id/,ID,Digital invitations platform,—,not in top 1M,—,laravel aos,"probe 2026-10-29",B
+GOI,Goinvite,https://goinvite.id/,ID,Invitations + RSVP + QR,—,not in top 1M,—,—,"probe + WebSearch 2026-10-29",B
+ULK,UndanganLink,https://www.undanganlink.com/,ID,Invitations + RSVP + QR,—,not in top 1M,—,—,"probe 2026-10-29",B
+MMO,MEMO Wedding,https://memowedding.com/,ID,Android invitation maker,100K+ (4.6★; upd 2025-10-29),not in top 1M,"site ""Coming Soon""",—,"Play listing + probe 2026-10-29",B
+LVG,Levigo,https://levigo.id/,ID,Android + web invitations,10K+ (4.4★),not in top 1M,site returned 502,—,"Play listing + probe 2026-10-29",B
+KPI,Undangan Digital Web Online (Karyapintar),https://play.google.com/store/apps/details?id=com.karyapintar.undangandigital,ID,Android invitation app,10K+ (4.8★; upd 2026-10-25),—,—,—,"Play listing 2026-10-29",B
+BRS,Bridestory,https://www.bridestory.com/,ID,Wedding vendor marketplace (bundled Weddingsite/RSVP),—,129711,"[OBSERVED] title ""Find Wedding Vendors in Indonesia""",nuxt vue,"probe + Tranco 2026-10-29",B
+WKU,Weddingku,https://www.weddingku.com/,ID,Wedding community/portal,—,502424,—,jquery cloudflare,"probe + Tranco 2026-10-29",B
+MNY,Minyma,https://minyma.com/,ID,WhatsApp blast + QR check-in (brief seed),—,not in top 1M,empty title,—,"probe 2026-10-29",B
+EVA,Eventia (Ideatic),https://play.google.com/store/apps/details?id=net.ideatic.eventia,ID,Event invitations app,1K+,—,—,—,"Play listing 2026-10-29",B
+BKT,Buku Tamu Digital – QR CheckIn (einvite),https://play.google.com/store/apps/details?id=com.einvite.bukutamu,ID,Day-of QR guestbook app,1K+ (4.3★),—,—,—,"Play listing 2026-10-29",B
+TMK,Tamukita,https://play.google.com/store/apps/details?id=com.semakode.tamukita,ID,Digital guest book app,1K+ (4.7★),—,—,—,"Play listing 2026-10-29",B
+RSV,RSVPify,https://rsvpify.com/,US,Event operations: invitations; registration; ticketing; check-in,—,56208,"brief seed; blocked to non-browser clients (403)",—,"Tranco 2026-10-27",A
+PPO,Paperless Post,https://www.paperlesspost.com/,US,Designer digital stationery (coin pricing),—,24449,[OBSERVED] title,wordpress next,"probe + Tranco 2026-10-29",A
+JOY,Joy,https://withjoy.com/,US,Free wedding website + registry + RSVP,—,28738,[OBSERVED] title,lottie,"probe + Tranco 2026-10-29",A
+PTF,Partiful,https://partiful.com/,US,Casual mobile-first invitations (viral),—,27562,[OBSERVED] title,gtm,"probe + Tranco 2026-10-29",A
+BRN,Barunson Mcard,https://mcard.barunsoncard.com/,KR,Korean mobile wedding invitation (모바일 청첩장),—,638848,[OBSERVED] title,aos swiper cloudflare,"probe + Tranco 2026-10-29",A
+ZOL,Zola,https://www.zola.com/,US,Wedding suite: website; registry; invitations,—,10799,[OBSERVED] title,next react,"probe + Tranco 2026-10-29",B
+TKN,The Knot,https://www.theknot.com/,US,Wedding marketplace + websites + invitations,—,4800,403 to non-browser client,—,"Tranco 2026-10-27",B
+EVT,Evite,https://www.evite.com/,US,Online invitations (all occasions),—,14375,[OBSERVED] 20 templates claim on home,gsap cloudflare,"probe + Tranco 2026-10-29",B
+GRV,Greenvelope,https://www.greenvelope.com/,US,Formal digital stationery (flat fee),—,84972,403 to non-browser client,—,"Tranco 2026-10-27",B
+PBW,Punchbowl,https://www.punchbowl.com/,US,Online invitations with RSVP,—,32107,[OBSERVED] title,laravel tailwind,"probe + Tranco 2026-10-29",B
+MTD,Minted,https://www.minted.com/,US,Designer marketplace (independent artists; revenue share),—,22228,403 to non-browser client,—,"Tranco 2026-10-27",B
+CNV,Canva invitations,https://www.canva.com/create/invitations/,AU,Self-serve design tool (templates used by local resellers),—,276,403 to non-browser client,—,"Tranco 2026-10-27",B
+SNT,Sonett,https://sonett.kr/,KR,Mobile wedding invitation,—,not in top 1M,[OBSERVED] title,cloudflare,"probe 2026-10-29",B
+EQX,Eqxiu 易企秀,https://www.eqxiu.com/,CN,WeChat H5 invitations / marketing pages,—,22064,[OBSERVED] reachable,—,"probe + Tranco 2026-10-29",B
+MAK,MAKA,https://www.maka.im/,CN,H5 design platform (invitations),—,149362,[OBSERVED] title,next,"probe + Tranco 2026-10-29",B
+BHP,Biihappy,https://biihappy.com/,VN,Wedding invitation + community,—,not in top 1M,[OBSERVED] title,laravel,"probe 2026-10-29",B
+INE,Invitee,https://invitee.my/,MY,Malaysian digital wedding invitation (DuitNow QR; Akad Nikah),—,not in top 1M,"[CLAIMED] 350 themes",tiktok-pixel,"probe + WebSearch 2026-10-29",B
+WMG,WedMeGood e-invites,https://www.wedmegood.com/,IN,Wedding marketplace + e-invites,—,79702,403 to non-browser client,—,"Tranco 2026-10-27",B
+PRY,PIARY,https://www.piary.jp/,JP,Wedding items e-commerce incl. web invitations,—,610118,[OBSERVED] title,laravel swiper,"probe + Tranco 2026-10-29",B
+ITD,Invitated,https://www.invitated.com/,INTL,Digital wedding invitations (open-explore-RSVP),—,not in top 1M,[OBSERVED] title,meta-pixel,"probe 2026-10-29",B

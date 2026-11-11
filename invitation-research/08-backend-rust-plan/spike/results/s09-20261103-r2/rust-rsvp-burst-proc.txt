@@ -1,0 +1,7 @@
+server: cpu mean 32.4 % p95 35.8 % max 38.8 % | rss mean 6.4 MB max 6.4 MB | pids 1
+postgres: cpu mean 113.4 % p95 124.7 % max 128.8 % | rss mean 446.4 MB max 449.5 MB | pids 17
+platform-dev: cpu mean 2.5 % p95 13.9 % max 20.9 % | rss mean 827.4 MB max 829.3 MB | pids 14
+k6: cpu mean 38.2 % p95 42.6 % max 42.7 % | rss mean 53.0 MB max 62.9 MB | pids 1
+idle-next: cpu mean 0.0 % p95 0.0 % max 0.0 % | rss mean 374.6 MB max 374.6 MB | pids 2
+host: busy mean 188.9 % p95 199.0 % max 200.0 % of 200 % | steal mean 0.2 % max 1.0 %
+samples 41 over 41.3 s (stopped by k6 end: True)

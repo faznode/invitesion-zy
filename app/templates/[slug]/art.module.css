@@ -1,0 +1,78 @@
+/*
+ * Lapisan seni foto untuk preview undangan.
+ * Foto selalu berada di z-index 0 (di bawah kelopak z-1, bingkai z-2,
+ * dan konten z-3) lalu ditutup .artTint agar warna mengikuti palet tema
+ * dan teks tetap terbaca — efek duotone ala undangan premium.
+ */
+
+.artBg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: artZoom 22s ease-in-out infinite alternate;
+}
+
+/*
+ * A soft plate in the palette's surface behind the centred text, over the vertical wash: the edges keep the picture
+ * while the gate's texts measure >= 6.2:1 at the 5th percentile on every pool (G-016, session 44; the wash alone left
+ * 29 of 114 below 4.5:1).
+ */
+.artTint {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background:
+    radial-gradient(
+      ellipse 80% 60% at 50% 50%,
+      color-mix(in srgb, var(--bg) 90%, transparent) 0%,
+      color-mix(in srgb, var(--bg) 80%, transparent) 60%,
+      transparent 100%
+    ),
+    linear-gradient(
+      180deg,
+      color-mix(in srgb, var(--bg) 58%, transparent) 0%,
+      color-mix(in srgb, var(--bg) 74%, transparent) 55%,
+      color-mix(in srgb, var(--bg) 92%, transparent) 100%
+    );
+}
+
+/* Ubin galeri: klip foto mengikuti radius ubin. */
+.phClip {
+  position: relative;
+  overflow: hidden;
+}
+
+.phImg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.phClip:hover .phImg {
+  transform: scale(1.06);
+}
+
+@keyframes artZoom {
+  from {
+    transform: scale(1.02);
+  }
+  to {
+    transform: scale(1.12);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .artBg {
+    animation: none;
+  }
+  .phClip:hover .phImg {
+    transform: none;
+  }
+}

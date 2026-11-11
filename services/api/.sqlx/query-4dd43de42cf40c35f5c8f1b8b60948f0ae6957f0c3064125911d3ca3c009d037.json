@@ -1,0 +1,78 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "with due as (\n             select id from jobs\n             where done_at is null and run_at <= $1 and attempts < max_attempts\n               and (locked_until is null or locked_until <= $1)\n             order by run_at, id\n             limit $2\n             for update skip locked\n           )\n           update jobs set attempts = jobs.attempts + 1, locked_until = $3\n           from due where jobs.id = due.id\n           returning jobs.id, jobs.kind, jobs.payload, jobs.attempts, jobs.max_attempts",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "id",
+        "type_info": "Int8",
+        "origin": {
+          "Table": {
+            "table": "jobs",
+            "name": "id"
+          }
+        }
+      },
+      {
+        "ordinal": 1,
+        "name": "kind",
+        "type_info": "Varchar",
+        "origin": {
+          "Table": {
+            "table": "jobs",
+            "name": "kind"
+          }
+        }
+      },
+      {
+        "ordinal": 2,
+        "name": "payload",
+        "type_info": "Jsonb",
+        "origin": {
+          "Table": {
+            "table": "jobs",
+            "name": "payload"
+          }
+        }
+      },
+      {
+        "ordinal": 3,
+        "name": "attempts",
+        "type_info": "Int4",
+        "origin": {
+          "Table": {
+            "table": "jobs",
+            "name": "attempts"
+          }
+        }
+      },
+      {
+        "ordinal": 4,
+        "name": "max_attempts",
+        "type_info": "Int4",
+        "origin": {
+          "Table": {
+            "table": "jobs",
+            "name": "max_attempts"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Left": [
+        "Timestamp",
+        "Int8",
+        "Timestamp"
+      ]
+    },
+    "nullable": [
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  "hash": "4dd43de42cf40c35f5c8f1b8b60948f0ae6957f0c3064125911d3ca3c009d037"
+}

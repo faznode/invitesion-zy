@@ -1,0 +1,80 @@
+{
+ "label": "har-own",
+ "url": "http://127.0.0.1:3100/i/budi-sari/budi-hartono",
+ "own": true,
+ "observedAt": "2026-10-29T21:26:29.746Z",
+ "reaVersion": "6.8.0",
+ "node": "v24.22.2",
+ "recorder": {
+  "tool": "playwright-core 1.58.2 (bundled with rea-agents)",
+  "browserMode": "launch",
+  "emulation": "412x915 @2.625, isMobile, hasTouch, Android Chrome UA, id-ID, Asia/Jakarta"
+ },
+ "har": {
+  "recordedEntries": 26,
+  "admittedEntries": 19,
+  "mainStatus": 200,
+  "visitMs": 6562,
+  "content": "omit (no bodies)",
+  "strippedHeadersOrCookies": 0,
+  "droppedNeverCompleted": [
+   {
+    "request": "clerk.invitesion.invalid/npm/@clerk/clerk-js@6/dist/clerk.browser.js",
+    "attempts": 6
+   },
+   {
+    "request": "clerk.invitesion.invalid/npm/@clerk/ui@1/dist/ui.browser.js",
+    "attempts": 1
+   }
+  ],
+  "sha256": "9ae4be6e6001e4f4a46ce139938ce9164cd2f5663890a4bfc53e1f248d96b0c3"
+ },
+ "privateEvidenceDir": "$INVITESION_PRIVATE_DIR/rea-smoke/har-own/",
+ "steps": [
+  {
+   "command": "rea inspect-web-network-capture $INVITESION_PRIVATE_DIR/rea-smoke/har-own/session.har har --json",
+   "exit": 0,
+   "ms": 2683,
+   "parsed": true,
+   "evidence_id": "ev_a8865f5a5ff255a78beb9b5c0210dba08d2a111d24661e4a7ab37bf4a0b2a7c4",
+   "resultKeys": [
+    "decoder",
+    "container",
+    "total_records",
+    "records",
+    "artifact",
+    "runtime_attribution",
+    "limitations",
+    "format"
+   ],
+   "arrayCounts": {
+    "records": 19,
+    "limitations": 4
+   },
+   "limitations": 4
+  },
+  {
+   "command": "rea inspect-web-network-capture $INVITESION_PRIVATE_DIR/rea-smoke/har-own/session.har har --record 0 --json",
+   "exit": 0,
+   "ms": 2738,
+   "parsed": true,
+   "evidence_id": "ev_450d43af7c7d22befa9ee644d40afc6e8e1774aa0da29240003f649d983281c6",
+   "resultKeys": [
+    "protobuf_coverage",
+    "decoder",
+    "container",
+    "total_records",
+    "records",
+    "artifact",
+    "runtime_attribution",
+    "limitations",
+    "format"
+   ],
+   "arrayCounts": {
+    "records": 1,
+    "limitations": 6
+   },
+   "limitations": 6
+  }
+ ]
+}

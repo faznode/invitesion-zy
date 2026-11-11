@@ -1,0 +1,31 @@
+feature_id,status,basis,evidence,note
+FM-003,None,OBSERVED,C-BRN-101;C-BRN-102;C-BRN-103,No cover gate on the three vendor samples
+FM-004,None,OBSERVED,C-BRN-101;C-BRN-102;C-BRN-103,No audio element on the three samples
+FM-011,Full,OBSERVED,S-BRN-005,Groom/bride and parents' contact areas (template labels)
+FM-014,Full,OBSERVED,S-BRN-005,Gallery area
+FM-015,Full,OBSERVED,S-BRN-005,PhotoSwipe lightbox
+FM-016,Full,OBSERVED,S-BRN-005,Video area
+FM-019,Full,OBSERVED,S-BRN-005,Directions area
+FM-022,Unknown,OBSERVED,S-BRN-005,No RSVP area among the static labels; may be client-rendered
+FM-030,Full,OBSERVED,S-BRN-005,Guestbook area
+FM-032,Full,OBSERVED,S-BRN-005;S-BRN-004,Gift-money transfer area
+FM-036,Full,CLAIMED,S-BRN-004,Flower-wreath gift feature (cannot be switched off on free invitations)
+FM-043,Full,OBSERVED,S-BRN-005,Kakao SDK share area
+FM-057,Full,OBSERVED,S-BRN-005,First-birthday baby-info areas
+FM-088,Full,CLAIMED,S-BRN-004,Edits until 90 days after the wedding
+FM-090,Full,CLAIMED,S-BRN-004,Unlimited edits
+FM-091,None,OBSERVED,S-BRN-002,Online until 90 days after the event
+FM-096,Full,CLAIMED,S-BRN-001,Live preview while typing
+FM-100,Full,CLAIMED,S-BRN-001,ON/OFF feature toggles
+FM-102,Full,OBSERVED,S-BRN-005,Five Nanum font choices shipped in the page
+FM-116,Full,OBSERVED,S-BRN-003,Vendor sample previews with fictional fields
+FM-118,Full,OBSERVED,S-BRN-002,Standard designs free for members
+FM-119,Full,OBSERVED,S-BRN-002,"Licensed designs KRW 9,900"
+FM-121,Full,OBSERVED,S-BRN-002,Free standard vs paid licensed designs
+FM-122,Full,OBSERVED,S-BRN-002,Prices on product pages
+FM-148,Full,CLAIMED,S-BRN-001;S-BRN-004,Paper + mobile sets; printed QR opens the live page
+FM-151,Full,CLAIMED,S-BRN-004,Wreath gifts and card gift money
+FM-154,Partial,CLAIMED,S-BRN-001,"First birthdays, birthdays, housewarmings, baby and party cards"
+FM-165,None,OBSERVED,S-BRN-005,Korean only
+FM-172,Full,OBSERVED,S-BRN-003,
+FM-180,Full,CLAIMED,S-BRN-004,Card gift money held as points per side; automatic payout within 14 days

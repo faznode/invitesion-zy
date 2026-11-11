@@ -1,0 +1,1 @@
+ALTER TABLE "templates" ALTER COLUMN "category" SET DATA TYPE varchar(30);

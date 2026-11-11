@@ -1,0 +1,505 @@
+{
+ "id": "C-KAT-103",
+ "competitor": "katsudoto",
+ "kind": "demo",
+ "url": "https://rdct-4d52ff3a45.katsudoto.id/187469",
+ "capturedAt": "2026-10-29T11:34:35.020+07:00",
+ "robots": {
+  "allowed": true,
+  "note": "no matching rule"
+ },
+ "method": "CDP mobile emulation 412x915 @2.625, Android Chrome UA, cold cache (no throttling) + REA 6.8.0 inspect-web-page/analyze-web-bundle; Lighthouse 12 mobile simulate (Slow 4G, 4x CPU) when present",
+ "rea": {
+  "inspectEvidenceId": "ev_99f89c730dc3e84b36c04409b0cde2ea8cc9f59d85bac654bc567811ce0cf5b7",
+  "bundleEvidenceId": "ev_af4e2d2759bdc42b76ed2f9777c073a7379d41395af264b58a64d1af382bd9d7",
+  "inspectError": null,
+  "bundleError": null,
+  "domNodes": 3612,
+  "scripts": 17,
+  "resources": 27,
+  "completeness": "policy_filtered",
+  "bundleChunks": 14,
+  "bundleEndpoints": [
+   "https://www.google.com/generate_204"
+  ],
+  "bundleInferences": []
+ },
+ "network": {
+  "loadEventMs": 4527,
+  "requests": 143,
+  "bytes": 12288358,
+  "byType": {
+   "Document": {
+    "requests": 2,
+    "bytes": 27543
+   },
+   "Other": {
+    "requests": 2,
+    "bytes": 59042
+   },
+   "Stylesheet": {
+    "requests": 26,
+    "bytes": 180687
+   },
+   "Image": {
+    "requests": 74,
+    "bytes": 10667993
+   },
+   "Script": {
+    "requests": 20,
+    "bytes": 787742
+   },
+   "Font": {
+    "requests": 10,
+    "bytes": 556733
+   },
+   "Media": {
+    "requests": 1,
+    "bytes": 0
+   },
+   "XHR": {
+    "requests": 4,
+    "bytes": 8618
+   },
+   "Fetch": {
+    "requests": 4,
+    "bytes": 0
+   }
+  },
+  "protocols": [
+   "h3",
+   "h2",
+   "data"
+  ],
+  "scriptHosts": [
+   "rdct-4d52ff3a45.katsudoto.id",
+   "cdn.jsdelivr.net",
+   "vjs.zencdn.net",
+   "unpkg.com",
+   "www.youtube.com",
+   "www.googletagmanager.com"
+  ],
+  "scriptFiles": [
+   "jquery.js",
+   "tsparticles.bundle.min.js",
+   "video.min.js",
+   "index.js",
+   "Youtube.min.js",
+   "selectize.min.js",
+   "fc357c40.js",
+   "lightgallery.min.js",
+   "307ce208.js",
+   "aos.js",
+   "7148ae03.js",
+   "universal.1793083831.js",
+   "slick.min.js",
+   "jquery-modal-video.min.js",
+   "scroll-lock.1793083831.js",
+   "html2canvas-1.4.1.1793083831.js",
+   "iframe_api",
+   "www-widgetapi.js",
+   "gtm.js",
+   "js"
+  ],
+  "fontFiles": [
+   {
+    "host": "fonts.gstatic.com",
+    "file": "E21-_dn5gvrawDdPFVl-N0Ajb_qoUverqJnp.woff2",
+    "bytes": 22093
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "kJExBuYY6AAuhiXUxG1N-Po3huR_DQ.woff2",
+    "bytes": 10971
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "JTUSjIg1_i6t8kCHKm459WlhyyTh89Y.woff2",
+    "bytes": 35540
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBHMdazQ.woff2",
+    "bytes": 37552
+   },
+   {
+    "host": "cdnjs.cloudflare.com",
+    "file": "fa-solid-900.woff2",
+    "bytes": 76114
+   },
+   {
+    "host": "cdnjs.cloudflare.com",
+    "file": "fa-brands-400.woff2",
+    "bytes": 75148
+   },
+   {
+    "host": "cdn.jsdelivr.net",
+    "file": "Phosphor-Fill.woff2",
+    "bytes": 132458
+   },
+   {
+    "host": "cdn.jsdelivr.net",
+    "file": "Phosphor.woff2",
+    "bytes": 148140
+   },
+   {
+    "host": "",
+    "file": "hQfqxa6XWZHMXFl56RS4TvPXSaDeoy0zUUZB109KstDK8lHo5q6Qi1hcOnqkImubPS6aqRq7mlnaEWab",
+    "bytes": 5356
+   },
+   {
+    "host": "katsudoto.id",
+    "file": "montserrat-500.woff2",
+    "bytes": 13361
+   }
+  ],
+  "thirdPartyHosts": [
+   "vjs.zencdn.net",
+   "cdnjs.cloudflare.com",
+   "fonts.googleapis.com",
+   "katsudoto.id",
+   "cdn.jsdelivr.net",
+   "i3.ytimg.com",
+   "fonts.gstatic.com",
+   "img.katsudoto.id",
+   "unpkg.com",
+   "media.katsudoto.id",
+   "www.youtube.com",
+   "",
+   "img.youtube.com",
+   "www.googletagmanager.com",
+   "ad.doubleclick.net",
+   "www.google.com",
+   "www.google-analytics.com"
+  ]
+ },
+ "structure": {
+  "coverClicked": "Open Invitation",
+  "beforeOpen": {
+   "sectionCount": 1,
+   "features": {
+    "coverGate": true,
+    "toGuest": false,
+    "countdown": true,
+    "rsvp": false,
+    "wishes": false,
+    "gift": true,
+    "copyButton": false,
+    "maps": false,
+    "calendar": true,
+    "livestream": true,
+    "qr": false,
+    "loveStory": true,
+    "gallery": true,
+    "dressCode": true,
+    "quranVerse": false,
+    "protocol": false,
+    "timezoneLabel": [],
+    "watermark": true,
+    "instagramFilter": true,
+    "musicControl": true
+   },
+   "buttons": [
+    "Change",
+    "Play Video",
+    "Play",
+    "Skip Backward",
+    "Skip Forward",
+    "Unmute",
+    "Seek to live, currently behind liveLIVE",
+    "1xPlayback Rate",
+    "Playback Rate",
+    "ChaptersChapters"
+   ]
+  },
+  "afterOpen": {
+   "title": "[name] & [name] | Katsudoto",
+   "lang": "en",
+   "generator": null,
+   "viewport": "width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no",
+   "og": {
+    "image": true,
+    "title": true,
+    "description": true
+   },
+   "reducedMotionCss": false,
+   "libs": {
+    "gsap": false,
+    "scrollTrigger": false,
+    "aos": true,
+    "animateCss": false,
+    "wow": false,
+    "swiper": false,
+    "slick": true,
+    "owl": false,
+    "lottie": false,
+    "three": false,
+    "pixi": false,
+    "anime": false,
+    "motionOne": false,
+    "howler": false,
+    "jquery": true,
+    "bootstrap": false,
+    "tailwind": false,
+    "alpine": false,
+    "vue": false,
+    "nuxt": false,
+    "next": false,
+    "react": false,
+    "svelte": false,
+    "flutterWeb": false,
+    "wordpress": false,
+    "elementor": false,
+    "livewire": false,
+    "inertia": false
+   },
+   "sections": [
+    {
+     "tag": "section",
+     "id": "",
+     "cls": "kat-page__side-to-side",
+     "heading": "[name] & [name]",
+     "h": 915
+    }
+   ],
+   "sectionCount": 1,
+   "buttons": [
+    "Change",
+    "Play Video",
+    "Play",
+    "Skip Backward",
+    "Skip Forward",
+    "Unmute",
+    "Seek to live, currently behind liveLIVE",
+    "1xPlayback Rate",
+    "Playback Rate",
+    "ChaptersChapters",
+    "Chapters",
+    "Descriptionsdescriptions off, selected",
+    "Descriptions",
+    "Captionscaptions settings, opens captions settings dialogcap",
+    "Captions",
+    "Audio Track",
+    "Picture-in-Picture",
+    "Fullscreen",
+    "Reset",
+    "Done",
+    "Close Modal Dialog",
+    "Next",
+    "Confirm",
+    "Gift Details",
+    "Load more"
+   ],
+   "media": {
+    "audio": [],
+    "video": 0,
+    "iframes": [
+     "www.youtube.com"
+    ],
+    "canvases": 0,
+    "svgs": 7,
+    "images": 175,
+    "lazyImages": 1
+   },
+   "forms": [
+    {
+     "fields": [
+      "button",
+      "button",
+      "text",
+      "text",
+      "textarea",
+      "text",
+      "file",
+      "hidden",
+      "hidden",
+      "button",
+      "button",
+      "select-one"
+     ],
+     "hasRadio": false,
+     "hasSelect": true
+    },
+    {
+     "fields": [
+      "hidden",
+      "hidden",
+      "hidden",
+      "text",
+      "textarea",
+      "submit"
+     ],
+     "hasRadio": false,
+     "hasSelect": false
+    }
+   ],
+   "fontsUsed": [
+    "Font Awesome 5 Brands",
+    "Font Awesome 5 Free",
+    "VideoJS",
+    "Roboto",
+    "Montserrat",
+    "Bellefair",
+    "Miss Fajardose",
+    "Phosphor",
+    "Phosphor-Fill"
+   ],
+   "features": {
+    "coverGate": false,
+    "toGuest": false,
+    "countdown": true,
+    "rsvp": false,
+    "wishes": false,
+    "gift": true,
+    "copyButton": false,
+    "maps": false,
+    "calendar": true,
+    "livestream": true,
+    "qr": false,
+    "loveStory": true,
+    "gallery": true,
+    "dressCode": true,
+    "quranVerse": false,
+    "protocol": false,
+    "timezoneLabel": [],
+    "watermark": true,
+    "instagramFilter": true,
+    "musicControl": true
+   },
+   "domNodes": 1435,
+   "docHeight": 915
+  }
+ },
+ "lighthouse": {
+  "ok": true,
+  "lighthouseVersion": "12.8.2",
+  "finalUrl": "https://rdct-4d52ff3a45.katsudoto.id/187469",
+  "throttling": {
+   "rttMs": 150,
+   "throughputKbps": 1638.4,
+   "requestLatencyMs": 562.5,
+   "downloadThroughputKbps": 1474.5600000000002,
+   "uploadThroughputKbps": 675,
+   "cpuSlowdownMultiplier": 4
+  },
+  "screen": {
+   "mobile": true,
+   "width": 412,
+   "height": 915,
+   "deviceScaleFactor": 2.625,
+   "disabled": false
+  },
+  "scores": {
+   "performance": 27,
+   "accessibility": 74,
+   "best-practices": 79,
+   "seo": 92
+  },
+  "metrics": {
+   "fcpMs": 4393.923000000001,
+   "lcpMs": 47310.7615,
+   "tbtMs": 10779.999999999993,
+   "cls": 0.00005584670498964012,
+   "siMs": 17686.934503933757,
+   "ttiMs": 48870.7615
+  },
+  "byType": {
+   "total": {
+    "requests": 157,
+    "bytes": 12890253
+   },
+   "image": {
+    "requests": 77,
+    "bytes": 10573420
+   },
+   "script": {
+    "requests": 24,
+    "bytes": 1374193
+   },
+   "font": {
+    "requests": 10,
+    "bytes": 586006
+   },
+   "stylesheet": {
+    "requests": 28,
+    "bytes": 242527
+   },
+   "document": {
+    "requests": 2,
+    "bytes": 98903
+   },
+   "other": {
+    "requests": 15,
+    "bytes": 14534
+   },
+   "media": {
+    "requests": 1,
+    "bytes": 670
+   },
+   "third-party": {
+    "requests": 49,
+    "bytes": 2698439
+   }
+  },
+  "totalBytes": 12948744,
+  "requests": 157,
+  "thirdParties": [
+   {
+    "entity": "Brightcove",
+    "bytes": 207859,
+    "blockingMs": 834.9414998061764
+   },
+   {
+    "entity": "JSDelivr CDN",
+    "bytes": 418304,
+    "blockingMs": 256.33105527320924
+   },
+   {
+    "entity": "YouTube",
+    "bytes": 1732210,
+    "blockingMs": 156.62371864997326
+   },
+   {
+    "entity": "Cloudflare CDN",
+    "bytes": 161858,
+    "blockingMs": 0
+   },
+   {
+    "entity": "Google Fonts",
+    "bytes": 147058,
+    "blockingMs": 0
+   },
+   {
+    "entity": "Other Google APIs/SDKs",
+    "bytes": 25004,
+    "blockingMs": 0
+   },
+   {
+    "entity": "Unpkg",
+    "bytes": 5482,
+    "blockingMs": 0
+   },
+   {
+    "entity": "Google/Doubleclick Ads",
+    "bytes": 664,
+    "blockingMs": 0
+   }
+  ],
+  "fontDisplayIssues": 2,
+  "unusedJsBytes": 349520,
+  "a11yFailures": [
+   "button-name",
+   "heading-order",
+   "image-alt",
+   "label",
+   "link-name",
+   "meta-viewport"
+  ]
+ },
+ "files": {
+  "rea-inspect.json": "7e7beec715a97e9c29b240b7a3396bd6fac40b550f63d22ab2ac5672b65341a7",
+  "rea-bundle.json": "07f81e1d4fa1ebfd798372564040db9f55bac4b36067be80c625449f3812d09d",
+  "_private/lh/C-KAT-103.json": "2bccd815fdcc029672447a0a4da20e671f23738ef34bccda7aa76f8ef4c8968b"
+ },
+ "screenshot": "_private/thumbs (competitor, not committed)"
+}

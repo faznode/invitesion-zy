@@ -1,0 +1,78 @@
+{
+ "code": "VID",
+ "competitor": "viding",
+ "observedAt": "2026-10-29T05:55:26.818+07:00",
+ "homepage": {
+  "url": "https://viding.co/",
+  "finalUrl": "https://viding.co/",
+  "skipped": null,
+  "links": 28
+ },
+ "catalogCandidates": [
+  "https://viding.co/template-design",
+  "https://viding.co/theme/preview/167",
+  "https://viding.co/theme/preview/166",
+  "https://viding.co/theme/preview/165",
+  "https://viding.co/theme/preview/164"
+ ],
+ "catalog": {
+  "url": "https://viding.co/template-design",
+  "finalUrl": "https://viding.co/template-design",
+  "skipped": null,
+  "links": 50
+ },
+ "demos": [
+  {
+   "href": "https://viding.co/theme/preview/167",
+   "label": "See Template"
+  },
+  {
+   "href": "https://viding.co/theme/preview/166",
+   "label": "See Template"
+  },
+  {
+   "href": "https://viding.co/theme/preview/165",
+   "label": "See Template"
+  },
+  {
+   "href": "https://viding.co/theme/preview/164",
+   "label": "See Template"
+  },
+  {
+   "href": "https://viding.co/theme/preview/72",
+   "label": "View template detail"
+  },
+  {
+   "href": "https://studio.viding.co/theme/preview/195",
+   "label": "See Template"
+  },
+  {
+   "href": "https://studio.viding.co/theme/preview/194",
+   "label": "See Template"
+  },
+  {
+   "href": "https://studio.viding.co/theme/preview/193",
+   "label": "See Template"
+  },
+  {
+   "href": "https://studio.viding.co/theme/preview/192",
+   "label": "See Template"
+  },
+  {
+   "href": "https://viding.co/theme/preview/163",
+   "label": "See Template"
+  },
+  {
+   "href": "https://studio.viding.co/theme/preview/191",
+   "label": "See Template"
+  },
+  {
+   "href": "https://viding.co/theme/preview/162",
+   "label": "See Template"
+  },
+  {
+   "href": "https://studio.viding.co/theme/preview/190",
+   "label": "See Template"
+  }
+ ]
+}

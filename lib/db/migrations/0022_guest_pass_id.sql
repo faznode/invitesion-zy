@@ -1,0 +1,2 @@
+ALTER TABLE "guests" ADD COLUMN "pass_id" varchar(32) DEFAULT replace(gen_random_uuid()::text, '-', '') NOT NULL;--> statement-breakpoint
+CREATE UNIQUE INDEX "guests_pass_id_unique" ON "guests" USING btree ("pass_id");

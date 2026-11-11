@@ -1,0 +1,15 @@
+{
+  "contract": "recordInvitationView (B-017a, R-02): run by both writers, lib/invitation/view-tracking.ts (scripts/verify-view-dedupe.ts) and services/api/src/views.rs (tests/views_db.rs). Product copy of the s26 experiment's vectors, which stay frozen with the experiment. One fresh guest; opens at minute offsets from t0; recorded = a VIEW row was written. The window is 30 minutes with an inclusive lower bound (created_at >= now - 30 min), so an open exactly 30 minutes after the last written row is still a repeat.",
+  "windowMinutes": 30,
+  "opens": [
+    { "atMinute": 0, "recorded": true },
+    { "atMinute": 1, "recorded": false },
+    { "atMinute": 29, "recorded": false },
+    { "atMinute": 30, "recorded": false },
+    { "atMinute": 31, "recorded": true },
+    { "atMinute": 60, "recorded": false },
+    { "atMinute": 61, "recorded": false },
+    { "atMinute": 62, "recorded": true }
+  ],
+  "finalOpenedCount": 3
+}

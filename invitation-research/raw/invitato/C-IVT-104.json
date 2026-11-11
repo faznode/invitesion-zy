@@ -1,0 +1,555 @@
+{
+ "id": "C-IVT-104",
+ "competitor": "invitato",
+ "kind": "demo",
+ "url": "https://invitato.net/template-rdct-def02db760/?code=DUMMY-P0001",
+ "capturedAt": "2026-11-01T23:53:45.455+07:00",
+ "robots": {
+  "allowed": true,
+  "note": "robots.txt 404"
+ },
+ "method": "REA capture-browser-scenario (connect mode) drives navigation, settle and keyboard scroll; optional cover click (trusted CDP mouse click on the settled control: coverClickMethod, coverClickLanding) and scroll through the opened page by CDP after REA's scenario; CDP mobile emulation 412x915 @2.625 + Android Chrome UA, cold cache (no throttling); REA 6.8.0 inspect-web-page/analyze-web-bundle; custom structure pass (text features + animation libraries: no REA coverage); Lighthouse 12 mobile simulate (Slow 4G, 4x CPU) when present",
+ "driver": "rea",
+ "rea": {
+  "version": "6.8.0",
+  "scenario": {
+   "ok": true,
+   "exit": 0,
+   "ms": 19397,
+   "evidenceId": "ev_05b238e81c7b324976c8bc2866bd82afef8d84a8484e5018b4572e6772ba3181",
+   "status": "incomplete",
+   "stepsCompleted": 32,
+   "stepsTotal": 32,
+   "failed": [],
+   "events": 161,
+   "error": null,
+   "sha256": "8da9b96669a5d68a1ae69d7076d1487eaa6abe48211fcfa0ab49985daf765080",
+   "file": "_private/rea/C-IVT-104/rea-scenario.json"
+  },
+  "emulation": {
+   "duringScenario": {
+    "android": true,
+    "width": 412,
+    "dpr": 2.625,
+    "coarsePointer": false,
+    "reducedMotion": false
+   },
+   "afterScenario": {
+    "android": true,
+    "width": 500,
+    "dpr": 1,
+    "coarsePointer": false,
+    "reducedMotion": false
+   }
+  },
+  "inspectEvidenceId": "ev_fc638d639736c212396e7e7515e23d6491d43d8d6d2b9b4a7568412f11f9680b",
+  "bundleEvidenceId": "ev_58f84e7ee77a6cf1dadf5ae69ae27bd1b897dc009bcb9a3c4e58308154f110ab",
+  "inspectError": null,
+  "bundleError": null,
+  "domNodes": 1126,
+  "scripts": 22,
+  "resources": 31,
+  "completeness": "policy_filtered",
+  "bundleChunks": 22,
+  "bundleEndpoints": [],
+  "bundleInferences": [
+   {
+    "kind": "endpoint_candidate",
+    "value": "latestInfo",
+    "confidence": "low",
+    "basis": [
+     {
+      "script_key": "scr_9079e5e1d5a8bd1f0465b9dd8428139f9bfad5d54de6f53026af931e3d015b53",
+      "artifact_sha256": "354a573e91897012a0912c0eeeace58fb751279b6aa38d75cbd9680e8f8eedc8",
+      "line": 2,
+      "column": 85053,
+      "detector": "call:get:unverified-network-receiver"
+     }
+    ]
+   },
+   {
+    "kind": "endpoint_candidate",
+    "value": "hide_live_simulation",
+    "confidence": "low",
+    "basis": [
+     {
+      "script_key": "scr_9079e5e1d5a8bd1f0465b9dd8428139f9bfad5d54de6f53026af931e3d015b53",
+      "artifact_sha256": "354a573e91897012a0912c0eeeace58fb751279b6aa38d75cbd9680e8f8eedc8",
+      "line": 2,
+      "column": 482369,
+      "detector": "call:t.get:unverified-network-receiver"
+     }
+    ]
+   },
+   {
+    "kind": "endpoint_candidate",
+    "value": "lang",
+    "confidence": "low",
+    "basis": [
+     {
+      "script_key": "scr_d3cd0ebcb71a83822ea5c5651e292d0fee1f73beeb65b0e5fba6f7cad3494e5f",
+      "artifact_sha256": "16dca069e95e356a317ccea7c20f0baac973c9f8127e0d0c6f126b3d6d855113",
+      "line": 2,
+      "column": 92947,
+      "detector": "call:a.get:unverified-network-receiver"
+     }
+    ]
+   }
+  ]
+ },
+ "network": {
+  "loadEventMs": 2841,
+  "requests": 98,
+  "bytes": 50301870,
+  "byType": {
+   "Document": {
+    "requests": 1,
+    "bytes": 15094
+   },
+   "Other": {
+    "requests": 3,
+    "bytes": 23968
+   },
+   "Script": {
+    "requests": 19,
+    "bytes": 434616
+   },
+   "Stylesheet": {
+    "requests": 3,
+    "bytes": 13254
+   },
+   "Font": {
+    "requests": 15,
+    "bytes": 356146
+   },
+   "Image": {
+    "requests": 45,
+    "bytes": 22441946
+   },
+   "XHR": {
+    "requests": 3,
+    "bytes": 2166
+   },
+   "Media": {
+    "requests": 3,
+    "bytes": 26995163
+   },
+   "Fetch": {
+    "requests": 6,
+    "bytes": 19517
+   }
+  },
+  "protocols": [
+   "h3",
+   "h2"
+  ],
+  "scriptHosts": [
+   "static.cloudflareinsights.com",
+   "invitato.net"
+  ],
+  "scriptFiles": [
+   "vce701823e78c4301a35b7e07294d87301792088814092",
+   "webpack-runtime-58894db1a18447c9fb3f.js",
+   "framework-8766a7080be9eeeb3236.js",
+   "app-199c31fee509bea59e20.js",
+   "cb355538-9c8b86d77124d4e229c6.js",
+   "fea29d9f-703e1ce1bdbf55eaabcc.js",
+   "257e8032-c1b9e702c684ecfbbb17.js",
+   "2e3a845b-13e5e53e17424f467825.js",
+   "3a17f596-2b73b0938fc73e41047f.js",
+   "commons-c442f3bf1236745d9ec3.js",
+   "component---src-pages-index-jsx-95c5bcb60544cb61cc65.js",
+   "invitato-modal-darkmode-fa1c7eaaee8b4f9112aa.js",
+   "invitato-floating-music-d6da73ca7ad88a54c0ad.js",
+   "invitato-simulation-drawer-385c2d2a6cafc7ef63f0.js",
+   "invitato-sticky-assets-ccf1d5145447e6cb4c0b.js",
+   "invitato-welcome-video-78338005074f7c240ada.js",
+   "invitato-section-livestreaming-41d1b356c2f7801e4625.js",
+   "invitato-section-rsvp-766e43b3d23b4dd43301.js",
+   "4577d2ec-7bfab94919fa4968d834.js"
+  ],
+  "fontFiles": [
+   {
+    "host": "fonts.gstatic.com",
+    "file": "RWmMoKWR9v4ksMfaWd_JN9XFiaQoDmlr.woff2",
+    "bytes": 29625
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "VuJrdM3I2Y35poFONtLdafkUCHw1y1vShDXGe9ny.woff2",
+    "bytes": 23029
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "VuJudM3I2Y35poFONtLdafkUCHw1y1MNoCDrWdTYR-zR.woff2",
+    "bytes": 23029
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "pxiEyp8kv8JHgFVrJJfecnFHGPc.woff2",
+    "bytes": 7927
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "pxiByp8kv8JHgFVrLEj6Z1xlFd2JQEk.woff2",
+    "bytes": 8019
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "pxiByp8kv8JHgFVrLGT9Z1xlFd2JQEk.woff2",
+    "bytes": 7767
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "pxiGyp8kv8JHgFVrJJLucHtAOvWDSA.woff2",
+    "bytes": 8703
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "VuJudM3I2Y35poFONtLdafkUCHw1y1NpoSDrWdTYR-zR.woff2",
+    "bytes": 22865
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "VuJudM3I2Y35poFONtLdafkUCHw1y1N5piDrWdTYR-zR.woff2",
+    "bytes": 22805
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "VuJudM3I2Y35poFONtLdafkUCHw1y1MhpyDrWdTYR-zR.woff2",
+    "bytes": 23065
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "JTUQjIg1_i6t8kCHKm459WxRyS7m0dR9pA.woff2",
+    "bytes": 37152
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "JTUSjIg1_i6t8kCHKm459WlhyyTh89Y.woff2",
+    "bytes": 35540
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "JTUSjIg1_i6t8kCHKm459WlhyyTh89Y.woff2",
+    "bytes": 35540
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "JTUSjIg1_i6t8kCHKm459WlhyyTh89Y.woff2",
+    "bytes": 35540
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "JTUSjIg1_i6t8kCHKm459WlhyyTh89Y.woff2",
+    "bytes": 35540
+   }
+  ],
+  "thirdPartyHosts": [
+   "static.cloudflareinsights.com",
+   "fonts.googleapis.com",
+   "fonts.gstatic.com",
+   "api.invitato.net",
+   "invitato.id",
+   "raw.githubusercontent.com"
+  ]
+ },
+ "structure": {
+  "coverClicked": "Buka Undangan",
+  "coverClickMethod": "trusted (unsettled)",
+  "coverClickLanding": "inside",
+  "beforeOpen": {
+   "sectionCount": 0,
+   "features": {
+    "coverGate": true,
+    "toGuest": false,
+    "countdown": false,
+    "rsvp": false,
+    "wishes": false,
+    "gift": false,
+    "copyButton": false,
+    "maps": false,
+    "calendar": false,
+    "livestream": false,
+    "qr": false,
+    "loveStory": false,
+    "gallery": true,
+    "dressCode": false,
+    "quranVerse": false,
+    "protocol": false,
+    "timezoneLabel": [],
+    "watermark": false,
+    "instagramFilter": false,
+    "musicControl": false
+   },
+   "buttons": [
+    "ID",
+    "Bahasa Indonesia",
+    "English",
+    "Buka Undangan",
+    "Imagination Room",
+    "Reset Foto",
+    "Panduan Foto",
+    "Foto Bride",
+    "Foto Groom",
+    "Foto QR Card"
+   ]
+  },
+  "afterOpen": {
+   "title": "The Wedding of [name] & [name] by Invitato",
+   "lang": "id",
+   "generator": "Gatsby 5.13.3",
+   "viewport": "width=device-width, initial-scale=1, shrink-to-fit=no",
+   "og": {
+    "image": true,
+    "title": true,
+    "description": true
+   },
+   "reducedMotionCss": false,
+   "libs": {
+    "gsap": false,
+    "scrollTrigger": false,
+    "aos": false,
+    "animateCss": false,
+    "wow": false,
+    "swiper": false,
+    "slick": false,
+    "owl": false,
+    "lottie": false,
+    "three": false,
+    "pixi": false,
+    "anime": false,
+    "motionOne": false,
+    "howler": false,
+    "jquery": false,
+    "bootstrap": false,
+    "tailwind": false,
+    "alpine": false,
+    "vue": false,
+    "nuxt": false,
+    "next": false,
+    "react": false,
+    "svelte": false,
+    "flutterWeb": false,
+    "wordpress": false,
+    "elementor": false,
+    "livewire": false,
+    "inertia": false
+   },
+   "sections": [
+    {
+     "tag": "div",
+     "id": "id_rsvp_section-idk",
+     "cls": "css-13wrthx",
+     "heading": "Reservasi",
+     "h": 1534
+    }
+   ],
+   "sectionCount": 1,
+   "buttons": [
+    "ID",
+    "Bahasa Indonesia",
+    "English",
+    "Buka Undangan",
+    "@[handle]",
+    "@[handle]",
+    "Kisah Cinta Kami",
+    "Ingatkan Acara",
+    "Lihat Lokasi",
+    "Hadir",
+    "Tidak Hadir",
+    "Kirim Konfirmasi",
+    "Unduh Kartu Akses",
+    "Lihat Potret Kami",
+    "Buka via YouTube",
+    "Kirim Hadiah",
+    "Kirim",
+    "Imagination Room",
+    "Reset Foto",
+    "Panduan Foto",
+    "Foto Bride",
+    "Foto Groom",
+    "Foto QR Card",
+    "Foto Cover Galeri Luar 1",
+    "Foto Cover Galeri Luar 2"
+   ],
+   "media": {
+    "audio": [
+     {
+      "autoplay": false,
+      "loop": true,
+      "type": ""
+     },
+     {
+      "autoplay": false,
+      "loop": false,
+      "type": "mp3"
+     }
+    ],
+    "video": 1,
+    "iframes": [
+     "www.youtube.com",
+     "www.youtube.com"
+    ],
+    "canvases": 1,
+    "svgs": 17,
+    "images": 68,
+    "lazyImages": 0
+   },
+   "forms": [
+    {
+     "fields": [
+      "text",
+      "text",
+      "select-one",
+      "number",
+      "text",
+      "text",
+      "button",
+      "button",
+      "submit"
+     ],
+     "hasRadio": false,
+     "hasSelect": true
+    }
+   ],
+   "fontsUsed": [
+    "Cormorant Upright",
+    "Great Vibes",
+    "Montserrat",
+    "Poppins"
+   ],
+   "features": {
+    "coverGate": false,
+    "toGuest": false,
+    "countdown": true,
+    "rsvp": true,
+    "wishes": true,
+    "gift": true,
+    "copyButton": false,
+    "maps": true,
+    "calendar": true,
+    "livestream": true,
+    "qr": true,
+    "loveStory": true,
+    "gallery": true,
+    "dressCode": false,
+    "quranVerse": true,
+    "protocol": false,
+    "timezoneLabel": [
+     "WIB"
+    ],
+    "watermark": false,
+    "instagramFilter": false,
+    "musicControl": false
+   },
+   "domNodes": 864,
+   "docHeight": 915
+  }
+ },
+ "lighthouse": {
+  "ok": true,
+  "lighthouseVersion": "12.8.2",
+  "finalUrl": "https://invitato.net/template-rdct-def02db760/?code=DUMMY-P0001",
+  "throttling": {
+   "rttMs": 150,
+   "throughputKbps": 1638.4,
+   "requestLatencyMs": 562.5,
+   "downloadThroughputKbps": 1474.5600000000002,
+   "uploadThroughputKbps": 675,
+   "cpuSlowdownMultiplier": 4
+  },
+  "screen": {
+   "mobile": true,
+   "width": 412,
+   "height": 915,
+   "deviceScaleFactor": 2.625,
+   "disabled": false
+  },
+  "scores": {
+   "performance": 40,
+   "accessibility": 83,
+   "best-practices": 93,
+   "seo": 82
+  },
+  "metrics": {
+   "fcpMs": 2798.6495,
+   "lcpMs": 47781.96699999997,
+   "tbtMs": 910,
+   "cls": 0.00008179761678012227,
+   "siMs": 14920.633951127113,
+   "ttiMs": 48646.47724999997
+  },
+  "byType": {
+   "total": {
+    "requests": 51,
+    "bytes": 11001014
+   },
+   "image": {
+    "requests": 18,
+    "bytes": 10432168
+   },
+   "script": {
+    "requests": 14,
+    "bytes": 401091
+   },
+   "font": {
+    "requests": 7,
+    "bytes": 108099
+   },
+   "other": {
+    "requests": 8,
+    "bytes": 31238
+   },
+   "document": {
+    "requests": 1,
+    "bytes": 15089
+   },
+   "stylesheet": {
+    "requests": 2,
+    "bytes": 12515
+   },
+   "media": {
+    "requests": 1,
+    "bytes": 814
+   },
+   "third-party": {
+    "requests": 12,
+    "bytes": 146940
+   }
+  },
+  "totalBytes": 11001014,
+  "requests": 51,
+  "thirdParties": [
+   {
+    "entity": "Google Fonts",
+    "bytes": 120614,
+    "blockingMs": 8
+   },
+   {
+    "entity": "invitato.id",
+    "bytes": 15848,
+    "blockingMs": 0
+   },
+   {
+    "entity": "Cloudflare",
+    "bytes": 10478,
+    "blockingMs": 0
+   }
+  ],
+  "fontDisplayIssues": 0,
+  "unusedJsBytes": 187467,
+  "a11yFailures": [
+   "button-name",
+   "color-contrast",
+   "image-alt"
+  ]
+ },
+ "files": {
+  "rea-inspect.json": "631a3746b8f2286659f3a2260f1e927014146295d6cd751bb342ab2d6b4ccb84",
+  "rea-bundle.json": "bbc9fe2bd3336625df594cc02529132f65c910586e5dbd0d85f7cccdaa188964",
+  "_private/rea/C-IVT-104/rea-scenario.json": "8da9b96669a5d68a1ae69d7076d1487eaa6abe48211fcfa0ab49985daf765080",
+  "_private/lh/C-IVT-104.json": "582d8711fcb3f6f2ea6d43dc81a22b9c377705366f5aafb3694a87d805783c09"
+ },
+ "screenshot": "_private/thumbs (competitor, not committed)"
+}

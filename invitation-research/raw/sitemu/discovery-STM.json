@@ -1,0 +1,21 @@
+{
+ "code": "STM",
+ "competitor": "sitemu",
+ "observedAt": "2026-10-29T10:31:40.601+07:00",
+ "homepage": {
+  "url": "https://sitemu.id/",
+  "finalUrl": "https://sitemu.id/",
+  "skipped": null,
+  "links": 36
+ },
+ "catalogCandidates": [
+  "https://sitemu.id/product"
+ ],
+ "catalog": {
+  "url": "https://sitemu.id/product",
+  "finalUrl": "https://sitemu.id/product",
+  "skipped": null,
+  "links": 36
+ },
+ "demos": []
+}

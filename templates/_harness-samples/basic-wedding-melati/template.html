@@ -1,0 +1,44 @@
+<main class="page">
+  <header class="cover" data-enter>
+    <img class="sprig" src="{{asset.melati-sprig}}" alt="" width="280" height="280" decoding="async">
+    <p class="eyebrow">{{t.eyebrow}}</p>
+    <h1 class="names">
+      <span>{{couple.first}}</span>
+      <span class="amp" aria-hidden="true">&amp;</span>
+      <span>{{couple.second}}</span>
+    </h1>
+    <div class="guest-card">
+      <p class="guest-label">{{t.invite}}</p>
+      <p class="guest-name"><bdi>{{guest.name}}</bdi></p>
+    </div>
+  </header>
+
+  <section class="opening" data-enter>
+    <p>{{t.opening}}</p>
+  </section>
+
+  <section class="events" aria-labelledby="events-title" data-enter>
+    <h2 id="events-title">{{t.events}}</h2>
+    <ol class="event-list">
+      {{#events}}
+      <li class="event">
+        <h3>{{event.title}}</h3>
+        <p><time datetime="{{event.startAt}}">{{event.date}}</time></p>
+        <p class="event-time">{{event.time}}</p>
+        <p class="event-venue">{{event.venue}}</p>
+      </li>
+      {{/events}}
+    </ol>
+  </section>
+
+  <section class="rsvp" aria-labelledby="rsvp-title" data-enter>
+    <h2 id="rsvp-title">{{t.rsvp}}</h2>
+    <p>{{t.rsvpHint}}</p>
+    <a class="button" href="#rsvp-title">{{t.rsvpButton}}</a>
+  </section>
+
+  <footer class="closing">
+    <p>{{t.closing}}</p>
+    <p class="signature">{{couple.first}} &amp; {{couple.second}}</p>
+  </footer>
+</main>

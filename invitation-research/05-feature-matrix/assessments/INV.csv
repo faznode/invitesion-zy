@@ -1,0 +1,54 @@
+feature_id,status,basis,evidence,note
+FM-001,Full,OBSERVED,S-INV-001;S-INV-002,Guest name from ?to= / slug
+FM-002,Full,OBSERVED,C-INV-111;C-INV-112;C-INV-114,Guest name on the cover on 6/6
+FM-003,Full,OBSERVED,C-INV-111;C-INV-112;C-INV-114,"""Buka Undangan"" on 6/6 (pre-D-016 synthetic click)"
+FM-004,Full,OBSERVED,C-INV-111;C-INV-114,Real MP3 audio element; playback after a real tap unverified
+FM-005,Full,OBSERVED,C-INV-111;C-INV-114,6/6
+FM-006,Full,CLAIMED,S-INV-002,Music from a list
+FM-007,Full,CLAIMED,S-INV-002,Custom upload
+FM-008,Full,OBSERVED,C-INV-111;C-INV-114,6/6
+FM-010,Full,OBSERVED,C-INV-111;C-INV-114,Verse block on 6/6
+FM-013,Full,OBSERVED,C-INV-111,4/6
+FM-014,Partial,CLAIMED,S-INV-002;C-INV-111,Gallery capped at 10 (Plus) / 20 (Premium)
+FM-018,Full,OBSERVED,C-INV-111;C-INV-114,WIB labels on 6/6
+FM-019,Full,OBSERVED,C-INV-111;C-INV-114,6/6
+FM-021,Full,OBSERVED,C-INV-111,3/6
+FM-022,Full,OBSERVED,C-INV-111;C-INV-114,5/6 (one 11-field form)
+FM-030,Full,OBSERVED,C-INV-111;C-INV-114,6/6
+FM-032,Full,OBSERVED,C-INV-111;C-INV-114,6/6
+FM-033,Full,OBSERVED,C-INV-111;C-INV-114,Copy button on 6/6
+FM-035,Full,CLAIMED,S-INV-002,Gift sending
+FM-039,Full,OBSERVED,C-INV-111;C-INV-114,5/6
+FM-041,Full,CLAIMED,S-INV-003,Dress code on premium themes
+FM-047,Full,OBSERVED,C-INV-111;C-INV-114,"og:image, og:title, og:description"
+FM-052,Full,OBSERVED,C-INV-111;C-INV-114,Elementor entrance animations + Swiper + Lottie
+FM-055,Full,OBSERVED,C-INV-111;C-INV-114,prefers-reduced-motion CSS on 6/6
+FM-068,Full,CLAIMED,S-INV-002,"Wishes / RSVP export as PDF, Excel, CSV, print"
+FM-070,Full,OBSERVED,S-INV-002,Unlimited guests and wishes (trial included)
+FM-088,Full,CLAIMED,S-INV-002,Edits while the membership is active
+FM-090,Full,CLAIMED,S-INV-002,"""Revisi sepuasnya"""
+FM-091,Partial,CLAIMED,S-INV-002,Plus / Premium list 1 year; 3- and 6-month periods exist; membership expires separately from the link
+FM-093,Full,OBSERVED,S-INV-003,Reseller subdomain or own domain
+FM-095,Full,INFERRED,C-INV-111;C-INV-114;S-INV-003,No vendor credit detected on 6/6; resellers add their own branding
+FM-116,Full,INFERRED,D-INV;S-INV-001,66 official demos with a placeholder guest parameter
+FM-117,Full,OBSERVED,S-INV-002,"WhatsApp, Instagram, e-mail"
+FM-118,Partial,OBSERVED,S-INV-002,Trial Rp 0 for 2 days
+FM-119,Full,OBSERVED,S-INV-002,Plus Rp 198k / Premium Rp 298k list
+FM-121,Full,OBSERVED,S-INV-002,
+FM-122,Partial,OBSERVED,S-INV-002,Permanent public 50 % coupon turns list prices into anchors; theme counts conflict
+FM-124,Full,CLAIMED,S-INV-002,Virtual account
+FM-129,Full,CLAIMED,S-INV-002,Automatic confirmation of VA payments
+FM-132,Full,OBSERVED,S-INV-002,"Coupon ""INVI"" = 50 %"
+FM-133,Full,CLAIMED,S-INV-002,Commission up to 40 %
+FM-135,Full,OBSERVED,S-INV-003,Packs of 12 / 30 / 55 basic or 10 / 20 premium invitations
+FM-136,Full,CLAIMED,S-INV-003,"Reseller logo, copyright and link; client accounts; own domains"
+FM-137,Full,OBSERVED,S-INV-003,Quota never expires
+FM-146,Full,OBSERVED,S-INV-002,"Video invitations (story / reels, Lebaran greetings)"
+FM-152,Partial,OBSERVED,S-INV-002,Category landing pages plus free utility tools for search traffic
+FM-153,Partial,OBSERVED,S-INV-002,Category pages; filter controls not recorded
+FM-154,Partial,OBSERVED,S-INV-002,"Birthday, khitan, aqiqah/tasmiyah, walimatussafar"
+FM-155,Partial,OBSERVED,S-INV-002,Islamic life events (khitan / aqiqah / walimatussafar)
+FM-165,None,OBSERVED,S-INV-002,Indonesian only
+FM-172,Full,INFERRED,D-INV,Official demos
+FM-176,Full,OBSERVED,S-INV-002,Blog and tutorials
+FM-187,None,OBSERVED,S-INV-001,Guest name in clear text in the ?to= parameter

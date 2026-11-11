@@ -1,0 +1,31 @@
+{
+ "code": "JOY",
+ "competitor": "joy",
+ "observedAt": "2026-10-29T11:19:59.011+07:00",
+ "homepage": {
+  "url": "https://withjoy.com/",
+  "finalUrl": "https://withjoy.com/",
+  "skipped": null,
+  "links": 74
+ },
+ "catalogCandidates": [
+  "https://withjoy.com/cards/wedding/save-the-date",
+  "https://withjoy.com/wedding-website/",
+  "https://withjoy.com/cards/wedding/save-the-date/",
+  "https://withjoy.com/wedding-invitations/",
+  "https://withjoy.com/shop/baby/catalog/baby-cash-funds",
+  "https://withjoy.com/designs/"
+ ],
+ "catalog": {
+  "url": "https://withjoy.com/cards/wedding/save-the-date",
+  "finalUrl": "https://withjoy.com/cards/wedding/save-the-date/",
+  "skipped": null,
+  "links": 651
+ },
+ "demos": [
+  {
+   "href": "https://withjoy.com/event/edit/cards/sample-pack",
+   "label": "Free Sample Pack"
+  }
+ ]
+}

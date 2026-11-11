@@ -1,0 +1,684 @@
+{
+ "id": "C-INV-116",
+ "competitor": "invi",
+ "kind": "demo",
+ "url": "https://demo.invi.id/pernikahan/adat-art-bali/?to=Nama%20Tamu",
+ "capturedAt": "2026-10-30T01:21:49.898+07:00",
+ "robots": {
+  "allowed": true,
+  "note": "no matching rule"
+ },
+ "method": "CDP mobile emulation 412x915 @2.625, Android Chrome UA, cold cache (no throttling) + REA 6.8.0 inspect-web-page/analyze-web-bundle; Lighthouse 12 mobile simulate (Slow 4G, 4x CPU) when present",
+ "rea": {
+  "inspectEvidenceId": "ev_d4e3ddd273f40c12d596250441d1a35bc2751e097f7a0902235ca557deecfe63",
+  "bundleEvidenceId": "ev_9e01000091eaa12aba3b45dc2341d6bb318ce0aaee437e83b29064d09e10ffee",
+  "inspectError": null,
+  "bundleError": null,
+  "domNodes": 1462,
+  "scripts": 47,
+  "resources": 109,
+  "completeness": "policy_filtered",
+  "bundleChunks": 42,
+  "bundleEndpoints": [],
+  "bundleInferences": [
+   {
+    "kind": "endpoint_candidate",
+    "value": "name",
+    "confidence": "low",
+    "basis": [
+     {
+      "script_key": "scr_38619f05ef4730d7a86255069642a6497c5a41e063e67794522da3428854c8bd",
+      "artifact_sha256": "6f7b29d71370d557c6735320304d96ca4b70e4bc7a3ebcbe8fb6ea2340f1c9a1",
+      "line": 2,
+      "column": 11573,
+      "detector": "call:t.model.get:unverified-network-receiver"
+     }
+    ]
+   },
+   {
+    "kind": "endpoint_candidate",
+    "value": "id",
+    "confidence": "low",
+    "basis": [
+     {
+      "script_key": "scr_38619f05ef4730d7a86255069642a6497c5a41e063e67794522da3428854c8bd",
+      "artifact_sha256": "6f7b29d71370d557c6735320304d96ca4b70e4bc7a3ebcbe8fb6ea2340f1c9a1",
+      "line": 2,
+      "column": 35264,
+      "detector": "call:t.model.get:unverified-network-receiver"
+     }
+    ]
+   },
+   {
+    "kind": "endpoint_candidate",
+    "value": "document",
+    "confidence": "low",
+    "basis": [
+     {
+      "script_key": "scr_96b80d0feb18007fe3e0652b028759802dc9d8ea4a5141e0468ef5a0bb59bf38",
+      "artifact_sha256": "41c31d2086bcf01ebfce2d206cab615bbfbeada4e36c4736c5cf2c68eaa6811c",
+      "line": 2,
+      "column": 13723,
+      "detector": "call:window.top.$e.components.get:unverified-network-receiver"
+     }
+    ]
+   },
+   {
+    "kind": "endpoint_candidate",
+    "value": "pageViews",
+    "confidence": "low",
+    "basis": [
+     {
+      "script_key": "scr_96b80d0feb18007fe3e0652b028759802dc9d8ea4a5141e0468ef5a0bb59bf38",
+      "artifact_sha256": "41c31d2086bcf01ebfce2d206cab615bbfbeada4e36c4736c5cf2c68eaa6811c",
+      "line": 2,
+      "column": 26031,
+      "detector": "call:elementorFrontend.storage.get:unverified-network-receiver"
+     }
+    ]
+   },
+   {
+    "kind": "endpoint_candidate",
+    "value": "activeSession",
+    "confidence": "low",
+    "basis": [
+     {
+      "script_key": "scr_96b80d0feb18007fe3e0652b028759802dc9d8ea4a5141e0468ef5a0bb59bf38",
+      "artifact_sha256": "41c31d2086bcf01ebfce2d206cab615bbfbeada4e36c4736c5cf2c68eaa6811c",
+      "line": 2,
+      "column": 26128,
+      "detector": "call:elementorFrontend.storage.get:unverified-network-receiver"
+     }
+    ]
+   },
+   {
+    "kind": "endpoint_candidate",
+    "value": "sessions",
+    "confidence": "low",
+    "basis": [
+     {
+      "script_key": "scr_96b80d0feb18007fe3e0652b028759802dc9d8ea4a5141e0468ef5a0bb59bf38",
+      "artifact_sha256": "41c31d2086bcf01ebfce2d206cab615bbfbeada4e36c4736c5cf2c68eaa6811c",
+      "line": 2,
+      "column": 26260,
+      "detector": "call:elementorFrontend.storage.get:unverified-network-receiver"
+     }
+    ]
+   },
+   {
+    "kind": "endpoint_candidate",
+    "value": "times",
+    "confidence": "low",
+    "basis": [
+     {
+      "script_key": "scr_96b80d0feb18007fe3e0652b028759802dc9d8ea4a5141e0468ef5a0bb59bf38",
+      "artifact_sha256": "41c31d2086bcf01ebfce2d206cab615bbfbeada4e36c4736c5cf2c68eaa6811c",
+      "line": 2,
+      "column": 32207,
+      "detector": "call:storage.get:unverified-network-receiver"
+     }
+    ]
+   },
+   {
+    "kind": "bundle_runtime",
+    "value": "webpack",
+    "confidence": "high",
+    "basis": [
+     {
+      "script_key": "scr_c839308d066ed8d3680b4b1d2a80bfb84345e77e862c662d6fd812e7ede3637d",
+      "artifact_sha256": "ac4c254fda1f489c8a150a0cac9b909a5527b5517e0e312cef2be51b96dc10f7",
+      "line": null,
+      "column": null,
+      "detector": "webpack-runtime"
+     }
+    ]
+   },
+   {
+    "kind": "bundle_runtime",
+    "value": "webpack",
+    "confidence": "high",
+    "basis": [
+     {
+      "script_key": "scr_e9b8b10f207cf2fd1d5c230c7976406d81a39817a847e6595d0d408558e5f7c9",
+      "artifact_sha256": "397da22cd73304f6d82be9884f2aca868cd994f19c8a9d98b666a8a4d34b29cc",
+      "line": null,
+      "column": null,
+      "detector": "webpack-runtime"
+     }
+    ]
+   }
+  ]
+ },
+ "network": {
+  "loadEventMs": 2697,
+  "requests": 139,
+  "bytes": 2636709,
+  "byType": {
+   "Document": {
+    "requests": 4,
+    "bytes": 38274
+   },
+   "Stylesheet": {
+    "requests": 46,
+    "bytes": 151960
+   },
+   "Image": {
+    "requests": 26,
+    "bytes": 1146564
+   },
+   "Script": {
+    "requests": 40,
+    "bytes": 794359
+   },
+   "Font": {
+    "requests": 18,
+    "bytes": 502529
+   },
+   "Media": {
+    "requests": 1,
+    "bytes": 0
+   },
+   "XHR": {
+    "requests": 2,
+    "bytes": 3023
+   },
+   "Fetch": {
+    "requests": 2,
+    "bytes": 0
+   }
+  },
+  "protocols": [
+   "h3",
+   "h2"
+  ],
+  "scriptHosts": [
+   "demo.invi.id",
+   "unpkg.com",
+   "cdnjs.cloudflare.com",
+   "www.googletagmanager.com",
+   "www.youtube.com"
+  ],
+  "scriptFiles": [
+   "jquery-migrate.min.js",
+   "invi.js",
+   "jquery.min.js",
+   "wds-rsvp.js",
+   "saic_lib.js",
+   "exad-scripts.min.js",
+   "webpack.runtime.min.js",
+   "main.js",
+   "e-gallery.min.js",
+   "bdt-uikit.js",
+   "wdp-swiper.min.js",
+   "qr-code.js",
+   "qr-code-styling.js",
+   "xlsx.full.min.js",
+   "js",
+   "cui_script.js",
+   "jquery.placeholder.min.js",
+   "jquery.sticky.min.js",
+   "autosize.min.js",
+   "jquery.jPages.min.js",
+   "wdp.min.js",
+   "elements-handlers.min.js",
+   "i18n.min.js",
+   "core.min.js",
+   "webpack-pro.runtime.min.js",
+   "hooks.min.js",
+   "guest-form.js",
+   "frontend.min.js",
+   "lottie.min.js",
+   "frontend.min.js",
+   "jquery.textareaCounter.js",
+   "comment-reply.min.js",
+   "frontend-modules.min.js",
+   "jet-elements.min.js",
+   "641.41d6784859f93ced2969.js",
+   "gallery.1628df47530ab42dafba.bundle.min.js",
+   "lottie.e74a53bfa4c0bd939250.bundle.min.js",
+   "video.4343afefd25b5ede51a4.bundle.min.js",
+   "iframe_api",
+   "www-widgetapi.js"
+  ],
+  "fontFiles": [
+   {
+    "host": "fonts.gstatic.com",
+    "file": "u-490qaujRI2PbsvK_tynAxrUQRBXw.woff2",
+    "bytes": 10743
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "92zatBhPNqw73oTd4jQmfxI.woff2",
+    "bytes": 26617
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "pxiByp8kv8JHgFVrLEj6Z1xlFd2JQEk.woff2",
+    "bytes": 8019
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "pxiEyp8kv8JHgFVrJJfecnFHGPc.woff2",
+    "bytes": 7927
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "pe0TMImSLYBIv1o4X1M8ce2xCx3yop4tQpF_MeTm0lfGWVpNn64CL7U8upHZIbMV51Q42ptCp7t1R-tQ",
+    "bytes": 30977
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "pxiByp8kv8JHgFVrLGT9Z1xlFd2JQEk.woff2",
+    "bytes": 7767
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "PbytFmztEwbIoce9zqYzQ1OW.woff2",
+    "bytes": 33372
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "0QIvMX1D_JOuMwr7I_FMl_E.woff2",
+    "bytes": 37824
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "0QIhMX1D_JOuMw_LIftLtfOm8w.woff2",
+    "bytes": 40680
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "VuJudM3I2Y35poFONtLdafkUCHw1y1N5piDrWdTYR-zR.woff2",
+    "bytes": 22805
+   },
+   {
+    "host": "demo.invi.id",
+    "file": "fa-solid-900.woff2",
+    "bytes": 78748
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "S6uyw4BMUTPHjx4wXiWtFCc.woff2",
+    "bytes": 14007
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "VuJrdM3I2Y35poFONtLdafkUCHw1y1vShDXGe9ny.woff2",
+    "bytes": 23035
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "2sDcZGJYnIjSi6H75xkzaGW5Kb8VZA.woff2",
+    "bytes": 22089
+   },
+   {
+    "host": "demo.invi.id",
+    "file": "fa-regular-400.woff2",
+    "bytes": 13822
+   },
+   {
+    "host": "demo.invi.id",
+    "file": "fa-brands-400.woff2",
+    "bytes": 82168
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "KFO7CnqEu92Fr1ME7kSn66aGLdTylUAMa3yUBHMdazQ.woff2",
+    "bytes": 37560
+   },
+   {
+    "host": "demo.invi.id",
+    "file": "cuifont.ttf",
+    "bytes": 4369
+   }
+  ],
+  "thirdPartyHosts": [
+   "fonts.googleapis.com",
+   "fonts.gstatic.com",
+   "unpkg.com",
+   "cdnjs.cloudflare.com",
+   "www.googletagmanager.com",
+   "file.invi.id",
+   "www.youtube.com",
+   "assets10.lottiefiles.com",
+   "www.google-analytics.com",
+   "www.google.com",
+   "i0.wp.com"
+  ]
+ },
+ "structure": {
+  "coverClicked": "Buka Undangan",
+  "beforeOpen": {
+   "sectionCount": 2,
+   "features": {
+    "coverGate": true,
+    "toGuest": true,
+    "countdown": true,
+    "rsvp": true,
+    "wishes": true,
+    "gift": true,
+    "copyButton": true,
+    "maps": true,
+    "calendar": false,
+    "livestream": true,
+    "qr": false,
+    "loveStory": false,
+    "gallery": true,
+    "dressCode": false,
+    "quranVerse": true,
+    "protocol": false,
+    "timezoneLabel": [],
+    "watermark": false,
+    "instagramFilter": false,
+    "musicControl": true
+   },
+   "buttons": [
+    "Buka Undangan",
+    "Simpan di Kalender",
+    "Google maps",
+    "Live via Youtube",
+    "Jl. Raden Wijaya, Kedung Solo, Kec. Porong, Kab. Sidoarjo Sa",
+    "Salin",
+    "123456 Copy No. Rekening",
+    "Copy No. Rekening",
+    "Konfirmasi Hadiah"
+   ]
+  },
+  "afterOpen": {
+   "title": "Adat Art Bali - Tema Invi",
+   "lang": "id",
+   "generator": "WordPress 7.1.4",
+   "viewport": "width=device-width, initial-scale=1.0, viewport-fit=cover",
+   "og": {
+    "image": true,
+    "title": true,
+    "description": true
+   },
+   "reducedMotionCss": true,
+   "libs": {
+    "gsap": false,
+    "scrollTrigger": false,
+    "aos": false,
+    "animateCss": false,
+    "wow": false,
+    "swiper": true,
+    "slick": false,
+    "owl": false,
+    "lottie": true,
+    "three": false,
+    "pixi": false,
+    "anime": false,
+    "motionOne": false,
+    "howler": false,
+    "jquery": true,
+    "bootstrap": false,
+    "tailwind": false,
+    "alpine": false,
+    "vue": false,
+    "nuxt": false,
+    "next": false,
+    "react": false,
+    "svelte": false,
+    "flutterWeb": false,
+    "wordpress": true,
+    "elementor": true,
+    "livewire": false,
+    "inertia": false
+   },
+   "sections": [
+    {
+     "tag": "section",
+     "id": "header",
+     "cls": "elementor-section elementor-top-section elementor-element elementor-element-13b8",
+     "heading": "The Wedding of",
+     "h": 915
+    },
+    {
+     "tag": "section",
+     "id": "cover",
+     "cls": "elementor-section elementor-top-section elementor-element elementor-element-1d20",
+     "heading": "Our Wedding Invitation",
+     "h": 11036
+    }
+   ],
+   "sectionCount": 2,
+   "buttons": [
+    "Buka Undangan",
+    "Simpan di Kalender",
+    "Google maps",
+    "Live via Youtube",
+    "Jl. Raden Wijaya, Kedung Solo, Kec. Porong, Kab. Sidoarjo Sa",
+    "Salin",
+    "123456 Copy No. Rekening",
+    "Copy No. Rekening",
+    "Konfirmasi Hadiah"
+   ],
+   "media": {
+    "audio": [
+     {
+      "autoplay": false,
+      "loop": false,
+      "type": ""
+     },
+     {
+      "autoplay": false,
+      "loop": false,
+      "type": "mp3"
+     }
+    ],
+    "video": 0,
+    "iframes": [
+     "maps.google.com",
+     "maps.google.com",
+     "www.youtube.com"
+    ],
+    "canvases": 0,
+    "svgs": 3,
+    "images": 16,
+    "lazyImages": 10
+   },
+   "forms": [
+    {
+     "fields": [
+      "text",
+      "textarea",
+      "select-one",
+      "text",
+      "text",
+      "text",
+      "button",
+      "submit",
+      "hidden",
+      "hidden",
+      "hidden"
+     ],
+     "hasRadio": false,
+     "hasSelect": true
+    }
+   ],
+   "fontsUsed": [
+    "cuifont",
+    "Alata",
+    "Assistant",
+    "Cormorant Upright",
+    "Halant",
+    "Jost",
+    "Lato",
+    "Lora",
+    "Nunito Sans",
+    "Poppins",
+    "Roboto",
+    "Font Awesome 5 Free",
+    "Font Awesome 5 Brands"
+   ],
+   "features": {
+    "coverGate": true,
+    "toGuest": true,
+    "countdown": true,
+    "rsvp": true,
+    "wishes": true,
+    "gift": true,
+    "copyButton": true,
+    "maps": true,
+    "calendar": false,
+    "livestream": true,
+    "qr": false,
+    "loveStory": true,
+    "gallery": true,
+    "dressCode": false,
+    "quranVerse": true,
+    "protocol": false,
+    "timezoneLabel": [
+     "WIB"
+    ],
+    "watermark": false,
+    "instagramFilter": false,
+    "musicControl": true
+   },
+   "domNodes": 1084,
+   "docHeight": 11951
+  }
+ },
+ "lighthouse": {
+  "ok": true,
+  "lighthouseVersion": "12.8.2",
+  "finalUrl": "https://demo.invi.id/pernikahan/adat-art-bali/?to=Nama%20Tamu",
+  "throttling": {
+   "rttMs": 150,
+   "throughputKbps": 1638.4,
+   "requestLatencyMs": 562.5,
+   "downloadThroughputKbps": 1474.5600000000002,
+   "uploadThroughputKbps": 675,
+   "cpuSlowdownMultiplier": 4
+  },
+  "screen": {
+   "mobile": true,
+   "width": 412,
+   "height": 915,
+   "deviceScaleFactor": 2.625,
+   "disabled": false
+  },
+  "scores": {
+   "performance": 32,
+   "accessibility": 82,
+   "best-practices": 93,
+   "seo": 66
+  },
+  "metrics": {
+   "fcpMs": 3647.5829999999983,
+   "lcpMs": 21031.32349999999,
+   "tbtMs": 2366,
+   "cls": 0.006144107020215592,
+   "siMs": 7410.351060224997,
+   "ttiMs": 21131.098649999993
+  },
+  "byType": {
+   "total": {
+    "requests": 146,
+    "bytes": 3370140
+   },
+   "script": {
+    "requests": 46,
+    "bytes": 1703430
+   },
+   "image": {
+    "requests": 19,
+    "bytes": 798013
+   },
+   "font": {
+    "requests": 19,
+    "bytes": 537241
+   },
+   "stylesheet": {
+    "requests": 48,
+    "bytes": 212626
+   },
+   "document": {
+    "requests": 2,
+    "bytes": 108597
+   },
+   "other": {
+    "requests": 11,
+    "bytes": 9750
+   },
+   "media": {
+    "requests": 1,
+    "bytes": 483
+   },
+   "third-party": {
+    "requests": 41,
+    "bytes": 1838671
+   }
+  },
+  "totalBytes": 3370140,
+  "requests": 146,
+  "thirdParties": [
+   {
+    "entity": "Google Tag Manager",
+    "bytes": 181767,
+    "blockingMs": 767.0000000000006
+   },
+   {
+    "entity": "Cloudflare CDN",
+    "bytes": 216316,
+    "blockingMs": 689.2465432438698
+   },
+   {
+    "entity": "Unpkg",
+    "bytes": 16351,
+    "blockingMs": 12.319203206607419
+   },
+   {
+    "entity": "YouTube",
+    "bytes": 1027480,
+    "blockingMs": 0
+   },
+   {
+    "entity": "Google Fonts",
+    "bytes": 366734,
+    "blockingMs": 0
+   },
+   {
+    "entity": "Other Google APIs/SDKs",
+    "bytes": 24830,
+    "blockingMs": 0
+   },
+   {
+    "entity": "lottiefiles.com",
+    "bytes": 2352,
+    "blockingMs": 0
+   },
+   {
+    "entity": "WordPress",
+    "bytes": 1631,
+    "blockingMs": 0
+   },
+   {
+    "entity": "Google/Doubleclick Ads",
+    "bytes": 664,
+    "blockingMs": 0
+   },
+   {
+    "entity": "Google Analytics",
+    "bytes": 546,
+    "blockingMs": 0
+   }
+  ],
+  "fontDisplayIssues": 1,
+  "unusedJsBytes": 315921,
+  "a11yFailures": [
+   "color-contrast",
+   "heading-order",
+   "link-name",
+   "list",
+   "select-name",
+   "skip-link"
+  ]
+ },
+ "files": {
+  "rea-inspect.json": "375f82e87e667c12fea8ee26353741c26010910058bf4765497d22e378a293c1",
+  "rea-bundle.json": "65a7fbf1941298a366769a3c9bd72d88e3a3c5e7a6587b6fe3513b97d51aeef8",
+  "_private/lh/C-INV-116.json": "04c75cdd59a8167ae37369b0e1eb9df6c8cbc672fc31dce8be03f25e86341144"
+ },
+ "screenshot": "_private/thumbs (competitor, not committed)"
+}

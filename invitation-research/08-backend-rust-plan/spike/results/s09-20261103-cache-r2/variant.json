@@ -1,0 +1,6 @@
+{
+  "note": "snapshot-only build (BUILD_ID dNnaqKFz2LVNu852ivEIc) identical to the r1/r2 build except lib/invitation/public.ts, where loadPublicInvitation is wrapped in React cache() so generateMetadata and the page share ONE loader call per request; product files unchanged. Round 2 of 2 (same server process as round 1, no platform contention).",
+  "labels": {
+    "next": "Next.js product page, loader in cache() (1 loader call + React SSR)"
+  }
+}

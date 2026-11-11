@@ -1,0 +1,14 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "delete from api_idempotency_keys where (scope, key) in (select scope, key from api_idempotency_keys where created_at < $1 order by created_at limit 100)",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Left": [
+        "Timestamp"
+      ]
+    },
+    "nullable": []
+  },
+  "hash": "02398b30471ae20b7570919fe2cd371e036ef5e20d52a00e6e8ea38dbfc654df"
+}

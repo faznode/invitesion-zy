@@ -1,0 +1,498 @@
+{
+ "id": "C-ENV-101",
+ "competitor": "enviory",
+ "kind": "demo",
+ "url": "https://enviory.com/tema/hydrangea/pratinjau",
+ "capturedAt": "2026-10-29T10:37:49.020+07:00",
+ "robots": {
+  "allowed": true,
+  "note": "Allow: /"
+ },
+ "method": "CDP mobile emulation 412x915 @2.625, Android Chrome UA, cold cache (no throttling) + REA 6.8.0 inspect-web-page/analyze-web-bundle; Lighthouse 12 mobile simulate (Slow 4G, 4x CPU) when present",
+ "rea": {
+  "inspectEvidenceId": "ev_6a597a6d76efaef3ed44be4a5f52ea6c0c97d910abb78bbbede9af782405d1e9",
+  "bundleEvidenceId": "ev_ff298ad88b2cf2d1ea923a9d0da3d19682fbea92714c56577332903289f9af80",
+  "inspectError": null,
+  "bundleError": null,
+  "domNodes": 311,
+  "scripts": 36,
+  "resources": 48,
+  "completeness": "policy_filtered",
+  "bundleChunks": 29,
+  "bundleEndpoints": [],
+  "bundleInferences": [
+   {
+    "kind": "endpoint_candidate",
+    "value": "u",
+    "confidence": "low",
+    "basis": [
+     {
+      "script_key": "scr_0d35f026d6dfbd0f6393cd3e6a5ce3d3986c4fb07f2b1a74f6071cc7dbb1513d",
+      "artifact_sha256": "b3dcf40de3f3d5d66a250e93f6ab98941f75d9ebb11d019fe1754ce31bd1db9c",
+      "line": 3,
+      "column": 35230,
+      "detector": "call:n.get:unverified-network-receiver"
+     }
+    ]
+   },
+   {
+    "kind": "endpoint_candidate",
+    "value": "name",
+    "confidence": "low",
+    "basis": [
+     {
+      "script_key": "scr_0d35f026d6dfbd0f6393cd3e6a5ce3d3986c4fb07f2b1a74f6071cc7dbb1513d",
+      "artifact_sha256": "b3dcf40de3f3d5d66a250e93f6ab98941f75d9ebb11d019fe1754ce31bd1db9c",
+      "line": 3,
+      "column": 35369,
+      "detector": "call:o.get:unverified-network-receiver"
+     }
+    ]
+   },
+   {
+    "kind": "vendor_fingerprint",
+    "value": "Next.js",
+    "confidence": "high",
+    "basis": [
+     {
+      "script_key": "scr_1052792c548d166445f36ad9e9a159ce2ef893ccbde970a0645b61be1e98db96",
+      "artifact_sha256": "59114f6c66168ad7bd52e9710a4dbc732394746edc864469f4d053c6c0a1b76b",
+      "line": null,
+      "column": null,
+      "detector": "next-runtime"
+     }
+    ]
+   },
+   {
+    "kind": "endpoint_candidate",
+    "value": "dpl",
+    "confidence": "low",
+    "basis": [
+     {
+      "script_key": "scr_1052792c548d166445f36ad9e9a159ce2ef893ccbde970a0645b61be1e98db96",
+      "artifact_sha256": "59114f6c66168ad7bd52e9710a4dbc732394746edc864469f4d053c6c0a1b76b",
+      "line": 1,
+      "column": 9524,
+      "detector": "call:r.get:unverified-network-receiver"
+     }
+    ]
+   },
+   {
+    "kind": "endpoint_candidate",
+    "value": "dpl",
+    "confidence": "low",
+    "basis": [
+     {
+      "script_key": "scr_1052792c548d166445f36ad9e9a159ce2ef893ccbde970a0645b61be1e98db96",
+      "artifact_sha256": "59114f6c66168ad7bd52e9710a4dbc732394746edc864469f4d053c6c0a1b76b",
+      "line": 1,
+      "column": 9547,
+      "detector": "call:r.delete:unverified-network-receiver"
+     }
+    ]
+   },
+   {
+    "kind": "endpoint_candidate",
+    "value": "dpl",
+    "confidence": "low",
+    "basis": [
+     {
+      "script_key": "scr_1052792c548d166445f36ad9e9a159ce2ef893ccbde970a0645b61be1e98db96",
+      "artifact_sha256": "59114f6c66168ad7bd52e9710a4dbc732394746edc864469f4d053c6c0a1b76b",
+      "line": 3,
+      "column": 2368,
+      "detector": "call:l.get:unverified-network-receiver"
+     }
+    ]
+   },
+   {
+    "kind": "vendor_fingerprint",
+    "value": "Next.js",
+    "confidence": "high",
+    "basis": [
+     {
+      "script_key": "scr_13d11a858cb64a92c80bc1ed1797612dd2cdff002b6b0398df8f779f6acdd1cb",
+      "artifact_sha256": "06c6915261c2cc7e4c12d4eabffb39a4c813f91ab4caf0ae4dddc248c9007eca",
+      "line": null,
+      "column": null,
+      "detector": "next-runtime"
+     }
+    ]
+   },
+   {
+    "kind": "vendor_fingerprint",
+    "value": "Next.js",
+    "confidence": "high",
+    "basis": [
+     {
+      "script_key": "scr_45edbb9f9e6dc2cc2c00a74cbdae9eb4e46d2e2bfa706ab0ece7649dbc856d31",
+      "artifact_sha256": "e27842eceddcfae5d13f8748db924ffe24d4b2106163efdfa1388519ed2a8ce2",
+      "line": null,
+      "column": null,
+      "detector": "next-runtime"
+     }
+    ]
+   },
+   {
+    "kind": "vendor_fingerprint",
+    "value": "React",
+    "confidence": "medium",
+    "basis": [
+     {
+      "script_key": "scr_83eda7c75b29d83eb1359bdff1d7d015be84b8f573219613bfea813cdb5f4819",
+      "artifact_sha256": "08b2491f6812baa42bf0fd85d085f844db6bafd0d08aa2bffc5163d3b4146036",
+      "line": null,
+      "column": null,
+      "detector": "react-runtime"
+     }
+    ]
+   },
+   {
+    "kind": "vendor_fingerprint",
+    "value": "Next.js",
+    "confidence": "high",
+    "basis": [
+     {
+      "script_key": "scr_a4dacab279096c47d62ded9050601115860db152d4f0c2f7201081cf8f6a677a",
+      "artifact_sha256": "e2418046884cb8f8158b95a0bf6f927a430ac278530c92022de86e67d57b390d",
+      "line": null,
+      "column": null,
+      "detector": "next-runtime"
+     }
+    ]
+   }
+  ]
+ },
+ "network": {
+  "loadEventMs": 2365,
+  "requests": 75,
+  "bytes": 1907205,
+  "byType": {
+   "Document": {
+    "requests": 2,
+    "bytes": 15703
+   },
+   "Other": {
+    "requests": 4,
+    "bytes": 11200
+   },
+   "Stylesheet": {
+    "requests": 9,
+    "bytes": 54589
+   },
+   "Font": {
+    "requests": 5,
+    "bytes": 162221
+   },
+   "Script": {
+    "requests": 30,
+    "bytes": 679168
+   },
+   "XHR": {
+    "requests": 1,
+    "bytes": 646
+   },
+   "Fetch": {
+    "requests": 15,
+    "bytes": 37700
+   },
+   "Manifest": {
+    "requests": 1,
+    "bytes": 1484
+   },
+   "Image": {
+    "requests": 7,
+    "bytes": 944494
+   },
+   "Media": {
+    "requests": 1,
+    "bytes": 0
+   }
+  },
+  "protocols": [
+   "h3",
+   "h2"
+  ],
+  "scriptHosts": [
+   "enviory.com",
+   "www.googletagmanager.com"
+  ],
+  "scriptFiles": [
+   "330hj6fi06ut7.js",
+   "2dttp_mqsm81q.js",
+   "2qmjuniccc8_g.js",
+   "3w_3345ehdgmm.js",
+   "08vzei1j0cs-1.js",
+   "1_ihyzh-q5nde.js",
+   "3ttca9_jq516x.js",
+   "turbopack-1srl2m292ghjj.js",
+   "main.js",
+   "17gvsbua5-54l.js",
+   "3hkqtyb7tyu8w.js",
+   "3ck3fc-ua3zsu.js",
+   "3tznzd1ea70nl.js",
+   "js",
+   "3q5a4dek-2obv.js",
+   "1bz3adxruxume.js",
+   "37izdbtglmhkm.js",
+   "1omje1ehw_sx_.js",
+   "36yaqkidkk98p.js",
+   "2tk6_dlthosge.js",
+   "2g4do3umo1kha.js",
+   "3zktz-1ygh6sy.js",
+   "turbopack-2vykj9ofcp5cd.js",
+   "1q4itoff--b7w.js",
+   "18kjpnrsi2gfo.js",
+   "37wszccyjscxh.js",
+   "1al9ix1ezx7ws.js",
+   "3dhiri9lsfnla.js",
+   "3l5z_6d4y0eop.js",
+   "2n9lsec04-oll.js"
+  ],
+  "fontFiles": [
+   {
+    "host": "enviory.com",
+    "file": "2a65768255d6b625-s.p.3u4lli0-axodc.woff2",
+    "bytes": 39475
+   },
+   {
+    "host": "enviory.com",
+    "file": "c47649aa31f9e140-s.p.3lxpqujs87tck.woff2",
+    "bytes": 35682
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "JTUSjIg1_i6t8kCHKm459WlhyyTh89Y.woff2",
+    "bytes": 35540
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "TuGOUUFxWphYQ6YI6q9Xp61FQzxDRKmzr1lWfxlPCz4c.woff2",
+    "bytes": 16151
+   },
+   {
+    "host": "enviory.com",
+    "file": "normal.woff2",
+    "bytes": 35373
+   }
+  ],
+  "thirdPartyHosts": [
+   "www.googletagmanager.com",
+   "fonts.googleapis.com",
+   "fonts.gstatic.com"
+  ]
+ },
+ "structure": {
+  "coverClicked": false,
+  "beforeOpen": {
+   "sectionCount": 0,
+   "features": {
+    "coverGate": false,
+    "toGuest": false,
+    "countdown": false,
+    "rsvp": true,
+    "wishes": false,
+    "gift": false,
+    "copyButton": false,
+    "maps": false,
+    "calendar": false,
+    "livestream": false,
+    "qr": false,
+    "loveStory": false,
+    "gallery": false,
+    "dressCode": false,
+    "quranVerse": false,
+    "protocol": false,
+    "timezoneLabel": [],
+    "watermark": false,
+    "instagramFilter": false,
+    "musicControl": false
+   },
+   "buttons": [
+    "Ganti tema"
+   ]
+  },
+  "afterOpen": {
+   "title": "Pratinjau Tema Hydrangea — Undangan Digital | Enviory",
+   "lang": "id",
+   "generator": null,
+   "viewport": "width=device-width, initial-scale=1, maximum-scale=5",
+   "og": {
+    "image": true,
+    "title": true,
+    "description": true
+   },
+   "reducedMotionCss": true,
+   "libs": {
+    "gsap": false,
+    "scrollTrigger": false,
+    "aos": false,
+    "animateCss": false,
+    "wow": false,
+    "swiper": false,
+    "slick": false,
+    "owl": false,
+    "lottie": false,
+    "three": false,
+    "pixi": false,
+    "anime": false,
+    "motionOne": false,
+    "howler": false,
+    "jquery": false,
+    "bootstrap": false,
+    "tailwind": true,
+    "alpine": false,
+    "vue": false,
+    "nuxt": false,
+    "next": true,
+    "react": false,
+    "svelte": false,
+    "flutterWeb": false,
+    "wordpress": false,
+    "elementor": false,
+    "livewire": false,
+    "inertia": false
+   },
+   "sections": [],
+   "sectionCount": 0,
+   "buttons": [
+    "Ganti tema"
+   ],
+   "media": {
+    "audio": [],
+    "video": 0,
+    "iframes": [
+     "enviory.com",
+     "enviory.com"
+    ],
+    "canvases": 0,
+    "svgs": 4,
+    "images": 0,
+    "lazyImages": 0
+   },
+   "forms": [],
+   "fontsUsed": [
+    "Playfair Display"
+   ],
+   "features": {
+    "coverGate": false,
+    "toGuest": false,
+    "countdown": false,
+    "rsvp": true,
+    "wishes": false,
+    "gift": false,
+    "copyButton": false,
+    "maps": false,
+    "calendar": false,
+    "livestream": false,
+    "qr": false,
+    "loveStory": false,
+    "gallery": false,
+    "dressCode": false,
+    "quranVerse": false,
+    "protocol": false,
+    "timezoneLabel": [],
+    "watermark": false,
+    "instagramFilter": false,
+    "musicControl": false
+   },
+   "domNodes": 128,
+   "docHeight": 915
+  }
+ },
+ "lighthouse": {
+  "ok": true,
+  "lighthouseVersion": "12.8.2",
+  "finalUrl": "https://enviory.com/tema/hydrangea/pratinjau",
+  "throttling": {
+   "rttMs": 150,
+   "throughputKbps": 1638.4,
+   "requestLatencyMs": 562.5,
+   "downloadThroughputKbps": 1474.5600000000002,
+   "uploadThroughputKbps": 675,
+   "cpuSlowdownMultiplier": 4
+  },
+  "screen": {
+   "mobile": true,
+   "width": 412,
+   "height": 915,
+   "deviceScaleFactor": 2.625,
+   "disabled": false
+  },
+  "scores": {
+   "performance": 61,
+   "accessibility": 100,
+   "best-practices": 79,
+   "seo": 92
+  },
+  "metrics": {
+   "fcpMs": 1429.27,
+   "lcpMs": 2922.093,
+   "tbtMs": 3926.9845000000014,
+   "cls": 0.05783534345758222,
+   "siMs": 5032.039191152359,
+   "ttiMs": 10145.72105
+  },
+  "byType": {
+   "total": {
+    "requests": 43,
+    "bytes": 1802297
+   },
+   "other": {
+    "requests": 18,
+    "bytes": 883201
+   },
+   "script": {
+    "requests": 16,
+    "bytes": 600299
+   },
+   "document": {
+    "requests": 3,
+    "bytes": 213371
+   },
+   "font": {
+    "requests": 2,
+    "bytes": 75156
+   },
+   "stylesheet": {
+    "requests": 2,
+    "bytes": 27567
+   },
+   "image": {
+    "requests": 2,
+    "bytes": 2703
+   },
+   "media": {
+    "requests": 0,
+    "bytes": 0
+   },
+   "third-party": {
+    "requests": 8,
+    "bytes": 1167620
+   }
+  },
+  "totalBytes": 1808755,
+  "requests": 43,
+  "thirdParties": [
+   {
+    "entity": "Google Tag Manager",
+    "bytes": 181432,
+    "blockingMs": 2756.3811782512776
+   },
+   {
+    "entity": "cloudflare.com",
+    "bytes": 986188,
+    "blockingMs": 0
+   }
+  ],
+  "fontDisplayIssues": 0,
+  "unusedJsBytes": 176024,
+  "a11yFailures": []
+ },
+ "files": {
+  "rea-inspect.json": "37617cab32775fd5939bb6cfaea2ed912545c73a8309837e3737b4ecad8ef147",
+  "rea-bundle.json": "75ad128557db8cfb9facf8367719f855cfd0b9d25493b7778cfb40ebe714c535",
+  "_private/lh/C-ENV-101.json": "aae0b93a32f21c04d38cbfd105698f9570a41b9d87170899cdcd9ef128fef5c8"
+ },
+ "screenshot": "_private/thumbs (competitor, not committed)"
+}

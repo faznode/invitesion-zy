@@ -1,0 +1,479 @@
+{
+ "id": "C-INV-009",
+ "competitor": "invitesion",
+ "kind": "demo",
+ "url": "http://127.0.0.1:3100/i/budi-sari/budi-hartono",
+ "capturedAt": "2026-11-04T20:35:58.559+07:00",
+ "robots": {
+  "allowed": true,
+  "note": "own instance"
+ },
+ "method": "REA capture-browser-scenario (connect mode) drives navigation, settle and keyboard scroll; optional cover click (trusted CDP mouse click on the settled control: coverClickMethod, coverClickLanding) and scroll through the opened page by CDP after REA's scenario; CDP mobile emulation 360x800 @3 + prefers-reduced-motion no-preference, re-applied (clear + set) after REA's scenario + Android Chrome UA, cold cache (no throttling); REA inspect/bundle skipped (lean); custom structure pass (text features + animation libraries: no REA coverage) + layout and motion probes; Lighthouse 12 mobile simulate (Slow 4G, 4x CPU) when present",
+ "measurement": {
+  "protocol": "v2",
+  "profile": "v2-360",
+  "viewport": {
+   "width": 360,
+   "height": 800,
+   "device_scale_factor": 3
+  },
+  "reduced_motion": "no-preference",
+  "method": "protocol v2 (lean): REA scenario + CDP structure / layout / motion probes + Lighthouse; no REA inspect or bundle analysis",
+  "lighthouse_screen": {
+   "width": 360,
+   "height": 800,
+   "deviceScaleFactor": 3,
+   "mobile": true
+  },
+  "lighthouse_motion": "no-preference (default)",
+  "cdp_reapply": "clear + set",
+  "emulation_verified": true,
+  "emulation_mismatches": [],
+  "emulation_final": {
+   "android": true,
+   "screenWidth": 360,
+   "screenHeight": 800,
+   "width": 360,
+   "dpr": 3,
+   "coarsePointer": false,
+   "reducedMotion": false
+  },
+  "emulation_during_scenario": {
+   "ok": false,
+   "mismatches": [
+    "screen.width 800 != 360",
+    "screen.height 600 != 800"
+   ]
+  }
+ },
+ "driver": "rea",
+ "rea": {
+  "version": "6.8.0",
+  "scenario": {
+   "ok": true,
+   "exit": 0,
+   "ms": 20016,
+   "evidenceId": "ev_ed8ccd3ffac55ff65a0fd19b28134cc42955b3591486fdc54ce58c0a473736e2",
+   "status": "incomplete",
+   "stepsCompleted": 32,
+   "stepsTotal": 32,
+   "failed": [],
+   "events": 86,
+   "error": null,
+   "sha256": "9bad73e1b06e5a72ec635f47f78433670adef03e3f6f380244dd6de512a52a9d",
+   "file": "_private/rea/C-INV-009/rea-scenario.json"
+  },
+  "emulation": {
+   "duringScenario": {
+    "android": true,
+    "screenWidth": 800,
+    "screenHeight": 600,
+    "width": 360,
+    "dpr": 3,
+    "coarsePointer": false,
+    "reducedMotion": false
+   },
+   "afterScenario": {
+    "android": true,
+    "screenWidth": 800,
+    "screenHeight": 600,
+    "width": 500,
+    "dpr": 1,
+    "coarsePointer": false,
+    "reducedMotion": false
+   }
+  },
+  "inspectEvidenceId": null,
+  "bundleEvidenceId": null,
+  "inspectError": "skipped: lean profile v2-360",
+  "bundleError": "skipped: lean profile v2-360",
+  "domNodes": null,
+  "scripts": null,
+  "resources": null,
+  "completeness": null,
+  "bundleChunks": null,
+  "bundleEndpoints": [],
+  "bundleInferences": []
+ },
+ "network": {
+  "loadEventMs": 3870,
+  "requests": 19,
+  "bytes": 303908,
+  "byType": {
+   "Document": {
+    "requests": 1,
+    "bytes": 28904
+   },
+   "Font": {
+    "requests": 3,
+    "bytes": 56810
+   },
+   "Stylesheet": {
+    "requests": 1,
+    "bytes": 17230
+   },
+   "Script": {
+    "requests": 14,
+    "bytes": 200964
+   }
+  },
+  "protocols": [
+   "http/1.1"
+  ],
+  "scriptHosts": [
+   "127.0.0.1"
+  ],
+  "scriptFiles": [
+   "94b264acefa627a8.js",
+   "636a68c55a1ab35f.js",
+   "c86dc58b78f42f03.js",
+   "3c530c24ce279779.js",
+   "5a4e913764f6a112.js",
+   "turbopack-0aefcb99206477ac.js",
+   "ba288541a2d772bc.js",
+   "e75d08fa83341e9f.js",
+   "2a9a0a27b99be573.js",
+   "3631f6f3fd5c1047.js",
+   "3fcbd60a2308aaca.js",
+   "2030e2a47a61921e.js",
+   "833b791a5ea1a311.js",
+   "b401745f06ed2788.js"
+  ],
+  "fontFiles": [
+   {
+    "host": "127.0.0.1",
+    "file": "e41d5df559864f9e-s.p.380d09ea.woff2",
+    "bytes": 15590
+   },
+   {
+    "host": "127.0.0.1",
+    "file": "7ebf22b5a21034f8-s.p.d8bad3ab.woff2",
+    "bytes": 16234
+   },
+   {
+    "host": "127.0.0.1",
+    "file": "a343f882a40d2cc9-s.p.07ce798a.woff2",
+    "bytes": 24986
+   }
+  ],
+  "thirdPartyHosts": []
+ },
+ "structure": {
+  "coverClicked": false,
+  "coverClickMethod": null,
+  "coverClickLanding": null,
+  "beforeOpen": {
+   "sectionCount": 6,
+   "features": {
+    "coverGate": false,
+    "toGuest": true,
+    "countdown": true,
+    "rsvp": true,
+    "wishes": true,
+    "gift": true,
+    "copyButton": false,
+    "maps": true,
+    "calendar": true,
+    "livestream": false,
+    "qr": false,
+    "loveStory": true,
+    "gallery": false,
+    "dressCode": false,
+    "quranVerse": false,
+    "protocol": false,
+    "timezoneLabel": [
+     "WIB"
+    ],
+    "watermark": true,
+    "instagramFilter": false,
+    "musicControl": false
+   },
+   "buttons": [
+    "Ya, saya hadir",
+    "Maaf, belum bisa",
+    "Kirim ucapan"
+   ],
+   "motion": {
+    "reducedMotionMatches": false,
+    "animations": 0,
+    "running": 0,
+    "runningCssAnimations": 0,
+    "runningCssTransitions": 0,
+    "runningWebAnimations": 0,
+    "runningInfinite": 0,
+    "gsapActiveTweens": null,
+    "playingVideos": 0
+   }
+  },
+  "afterOpen": {
+   "title": "Undangan Digital",
+   "lang": "id",
+   "generator": null,
+   "viewport": "width=device-width, initial-scale=1",
+   "og": {
+    "image": true,
+    "title": true,
+    "description": true
+   },
+   "reducedMotionCss": false,
+   "libs": {
+    "gsap": false,
+    "scrollTrigger": false,
+    "aos": false,
+    "animateCss": false,
+    "wow": false,
+    "swiper": false,
+    "slick": false,
+    "owl": false,
+    "lottie": false,
+    "three": false,
+    "pixi": false,
+    "anime": false,
+    "motionOne": false,
+    "howler": false,
+    "jquery": false,
+    "bootstrap": false,
+    "tailwind": false,
+    "alpine": false,
+    "vue": false,
+    "nuxt": false,
+    "next": true,
+    "react": false,
+    "svelte": false,
+    "flutterWeb": false,
+    "wordpress": false,
+    "elementor": false,
+    "livewire": false,
+    "inertia": false
+   },
+   "sections": [
+    {
+     "tag": "section",
+     "id": "",
+     "cls": "mx-auto w-full max-w-xl px-6",
+     "heading": "",
+     "h": 196
+    },
+    {
+     "tag": "section",
+     "id": "",
+     "cls": "mx-auto w-full max-w-xl px-6",
+     "heading": "Rangkaian Acara",
+     "h": 864
+    },
+    {
+     "tag": "section",
+     "id": "",
+     "cls": "mx-auto w-full max-w-xl px-6",
+     "heading": "Cerita Kami",
+     "h": 324
+    },
+    {
+     "tag": "section",
+     "id": "",
+     "cls": "mx-auto w-full max-w-xl px-6",
+     "heading": "Hadiah",
+     "h": 296
+    },
+    {
+     "tag": "section",
+     "id": "",
+     "cls": "mx-auto w-full max-w-xl px-6",
+     "heading": "Konfirmasi Kehadiran",
+     "h": 528
+    },
+    {
+     "tag": "section",
+     "id": "",
+     "cls": "mx-auto w-full max-w-xl px-6",
+     "heading": "Ucapan & Doa",
+     "h": 704
+    }
+   ],
+   "sectionCount": 6,
+   "buttons": [
+    "Ya, saya hadir",
+    "Maaf, belum bisa",
+    "Kirim ucapan"
+   ],
+   "media": {
+    "audio": [],
+    "video": 0,
+    "iframes": [],
+    "canvases": 0,
+    "svgs": 9,
+    "images": 0,
+    "lazyImages": 0
+   },
+   "forms": [
+    {
+     "fields": [
+      "hidden",
+      "hidden",
+      "hidden",
+      "text",
+      "number",
+      "submit",
+      "submit"
+     ],
+     "hasRadio": false,
+     "hasSelect": false
+    },
+    {
+     "fields": [
+      "hidden",
+      "hidden",
+      "hidden",
+      "textarea",
+      "submit"
+     ],
+     "hasRadio": false,
+     "hasSelect": false
+    }
+   ],
+   "fontsUsed": [
+    "Manrope",
+    "Instrument Serif"
+   ],
+   "features": {
+    "coverGate": false,
+    "toGuest": true,
+    "countdown": true,
+    "rsvp": true,
+    "wishes": true,
+    "gift": true,
+    "copyButton": false,
+    "maps": true,
+    "calendar": true,
+    "livestream": false,
+    "qr": false,
+    "loveStory": true,
+    "gallery": false,
+    "dressCode": false,
+    "quranVerse": false,
+    "protocol": false,
+    "timezoneLabel": [
+     "WIB"
+    ],
+    "watermark": true,
+    "instagramFilter": false,
+    "musicControl": false
+   },
+   "domNodes": 227,
+   "docHeight": 3632,
+   "layout": {
+    "innerWidth": 360,
+    "scrollWidth": 360,
+    "horizontalOverflowPx": 0,
+    "overflowingElements": 0,
+    "smallTextElements": 0,
+    "interactiveTargets": 9,
+    "smallTargets": 0,
+    "viewportMeta": "width=device-width, initial-scale=1",
+    "zoomBlocked": false
+   },
+   "motion": {
+    "reducedMotionMatches": false,
+    "animations": 0,
+    "running": 0,
+    "runningCssAnimations": 0,
+    "runningCssTransitions": 0,
+    "runningWebAnimations": 0,
+    "runningInfinite": 0,
+    "gsapActiveTweens": null,
+    "playingVideos": 0
+   }
+  }
+ },
+ "lighthouse": {
+  "ok": true,
+  "lighthouseVersion": "12.8.2",
+  "finalUrl": "http://127.0.0.1:3100/i/budi-sari/budi-hartono",
+  "throttling": {
+   "rttMs": 150,
+   "throughputKbps": 1638.4,
+   "requestLatencyMs": 562.5,
+   "downloadThroughputKbps": 1474.5600000000002,
+   "uploadThroughputKbps": 675,
+   "cpuSlowdownMultiplier": 4
+  },
+  "screen": {
+   "mobile": true,
+   "width": 360,
+   "height": 800,
+   "deviceScaleFactor": 3,
+   "disabled": false
+  },
+  "scores": {
+   "performance": 87,
+   "accessibility": 96,
+   "best-practices": 96,
+   "seo": 60
+  },
+  "metrics": {
+   "fcpMs": 1734.5304999999998,
+   "lcpMs": 2761.5915,
+   "tbtMs": 353,
+   "cls": 0,
+   "siMs": 1734.5304999999998,
+   "ttiMs": 3814.6219999999994
+  },
+  "byType": {
+   "total": {
+    "requests": 26,
+    "bytes": 330419
+   },
+   "script": {
+    "requests": 20,
+    "bytes": 200964
+   },
+   "font": {
+    "requests": 3,
+    "bytes": 56810
+   },
+   "document": {
+    "requests": 1,
+    "bytes": 28903
+   },
+   "other": {
+    "requests": 1,
+    "bytes": 26512
+   },
+   "stylesheet": {
+    "requests": 1,
+    "bytes": 17230
+   },
+   "image": {
+    "requests": 0,
+    "bytes": 0
+   },
+   "media": {
+    "requests": 0,
+    "bytes": 0
+   },
+   "third-party": {
+    "requests": 6,
+    "bytes": 0
+   }
+  },
+  "totalBytes": 330419,
+  "requests": 26,
+  "thirdParties": [
+   {
+    "entity": "invitesion.invalid",
+    "bytes": 0,
+    "blockingMs": 0
+   }
+  ],
+  "fontDisplayIssues": 0,
+  "unusedJsBytes": 51439,
+  "a11yFailures": [
+   "color-contrast"
+  ]
+ },
+ "files": {
+  "_private/rea/C-INV-009/rea-scenario.json": "9bad73e1b06e5a72ec635f47f78433670adef03e3f6f380244dd6de512a52a9d",
+  "lighthouse.json": "451b1a8a9a9c7728dc72bc48367244a96d3f0aa363346b4fe6ccbc131ee27d94"
+ },
+ "screenshot": "viewport-v2-360.webp (public, own product)"
+}

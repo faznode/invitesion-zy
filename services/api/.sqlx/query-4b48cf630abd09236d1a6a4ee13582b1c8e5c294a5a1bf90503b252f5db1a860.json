@@ -1,0 +1,45 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "insert into invitations (user_id, template_id, slug, event_type, config, status, creation_key) values ($1, $2, $3, $4, $5, 'DRAFT', $6) on conflict do nothing returning id, slug",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "id",
+        "type_info": "Int4",
+        "origin": {
+          "Table": {
+            "table": "invitations",
+            "name": "id"
+          }
+        }
+      },
+      {
+        "ordinal": 1,
+        "name": "slug",
+        "type_info": "Varchar",
+        "origin": {
+          "Table": {
+            "table": "invitations",
+            "name": "slug"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Left": [
+        "Int4",
+        "Int4",
+        "Varchar",
+        "Varchar",
+        "Jsonb",
+        "Varchar"
+      ]
+    },
+    "nullable": [
+      false,
+      false
+    ]
+  },
+  "hash": "4b48cf630abd09236d1a6a4ee13582b1c8e5c294a5a1bf90503b252f5db1a860"
+}

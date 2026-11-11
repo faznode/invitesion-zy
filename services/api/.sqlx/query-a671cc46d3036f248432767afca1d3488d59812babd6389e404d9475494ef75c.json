@@ -1,0 +1,15 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "insert into analytics_events (invitation_id, guest_id, event_type) values ($1, $2, 'GUESTBOOK')",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Left": [
+        "Int4",
+        "Int4"
+      ]
+    },
+    "nullable": []
+  },
+  "hash": "a671cc46d3036f248432767afca1d3488d59812babd6389e404d9475494ef75c"
+}

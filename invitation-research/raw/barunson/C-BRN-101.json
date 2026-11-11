@@ -1,0 +1,353 @@
+{
+ "id": "C-BRN-101",
+ "competitor": "barunson",
+ "kind": "demo",
+ "url": "https://mcard.barunsoncard.com/preview/1260",
+ "capturedAt": "2026-11-02T00:30:08.800+07:00",
+ "robots": {
+  "allowed": true,
+  "note": "no matching rule"
+ },
+ "method": "REA capture-browser-scenario (connect mode) drives navigation, settle and keyboard scroll; optional cover click (trusted CDP mouse click on the settled control: coverClickMethod, coverClickLanding) and scroll through the opened page by CDP after REA's scenario; CDP mobile emulation 412x915 @2.625 + Android Chrome UA, cold cache (no throttling); REA 6.8.0 inspect-web-page/analyze-web-bundle; custom structure pass (text features + animation libraries: no REA coverage); Lighthouse 12 mobile simulate (Slow 4G, 4x CPU) when present",
+ "driver": "rea",
+ "rea": {
+  "version": "6.8.0",
+  "scenario": {
+   "ok": true,
+   "exit": 0,
+   "ms": 21093,
+   "evidenceId": "ev_9dfdae82bf06ce4bac1f6350ecddfcc9cefd979dda15863845623b82ba3969cf",
+   "status": "incomplete",
+   "stepsCompleted": 32,
+   "stepsTotal": 32,
+   "failed": [],
+   "events": 165,
+   "error": null,
+   "sha256": "73ae95e3ecaba9a21120806fa68e5f8d69628f0356814b44a342dfd6bb21a8c6",
+   "file": "_private/rea/C-BRN-101/rea-scenario.json"
+  },
+  "emulation": {
+   "duringScenario": {
+    "android": true,
+    "width": 412,
+    "dpr": 2.625,
+    "coarsePointer": false,
+    "reducedMotion": false
+   },
+   "afterScenario": {
+    "android": true,
+    "width": 500,
+    "dpr": 1,
+    "coarsePointer": false,
+    "reducedMotion": false
+   }
+  },
+  "inspectEvidenceId": "ev_ed22f385164cb6f1d3270d150c656f16e1d596d77571996cec0cf91026d7b87d",
+  "bundleEvidenceId": "ev_fb3d51417bbe2f281e000a89efabf455731478e5bfb773f0b69be92b5017e6db",
+  "inspectError": null,
+  "bundleError": null,
+  "domNodes": 422,
+  "scripts": 6,
+  "resources": 6,
+  "completeness": "policy_filtered",
+  "bundleChunks": 6,
+  "bundleEndpoints": [],
+  "bundleInferences": []
+ },
+ "network": {
+  "loadEventMs": 4824,
+  "requests": 55,
+  "bytes": 4553114,
+  "byType": {
+   "Document": {
+    "requests": 1,
+    "bytes": 29608
+   },
+   "Stylesheet": {
+    "requests": 23,
+    "bytes": 325214
+   },
+   "Script": {
+    "requests": 8,
+    "bytes": 344542
+   },
+   "Font": {
+    "requests": 2,
+    "bytes": 2490258
+   },
+   "Image": {
+    "requests": 20,
+    "bytes": 1331095
+   },
+   "Other": {
+    "requests": 1,
+    "bytes": 32397
+   }
+  },
+  "protocols": [
+   "http/1.1",
+   "h2"
+  ],
+  "scriptHosts": [
+   "code.jquery.com",
+   "mcard.barunsoncard.com",
+   "t1.kakaocdn.net"
+  ],
+  "scriptFiles": [
+   "jquery-1.12.4.min.js",
+   "photoswipe-ui-default.min.js",
+   "sns.js",
+   "photoswipe.js",
+   "photoswipe-gallery.js",
+   "preview.js",
+   "swiper-bundle.min.js",
+   "kakao.min.js"
+  ],
+  "fontFiles": [
+   {
+    "host": "hangeul.pstatic.net",
+    "file": "NanumMyeongjo.woff",
+    "bytes": 935862
+   },
+   {
+    "host": "hangeul.pstatic.net",
+    "file": "NanumMyeongjoBold.woff",
+    "bytes": 1554396
+   }
+  ],
+  "thirdPartyHosts": [
+   "fonts.googleapis.com",
+   "code.jquery.com",
+   "hangeul.pstatic.net",
+   "t1.kakaocdn.net",
+   "static.barunsoncard.com",
+   "mcard-resources.barunsoncard.com"
+  ]
+ },
+ "structure": {
+  "coverClicked": false,
+  "coverClickMethod": null,
+  "coverClickLanding": null,
+  "beforeOpen": {
+   "sectionCount": 0,
+   "features": {
+    "coverGate": false,
+    "toGuest": false,
+    "countdown": false,
+    "rsvp": false,
+    "wishes": false,
+    "gift": false,
+    "copyButton": false,
+    "maps": false,
+    "calendar": false,
+    "livestream": false,
+    "qr": false,
+    "loveStory": false,
+    "gallery": false,
+    "dressCode": false,
+    "quranVerse": false,
+    "protocol": false,
+    "timezoneLabel": [],
+    "watermark": false,
+    "instagramFilter": false,
+    "musicControl": false
+   },
+   "buttons": []
+  },
+  "afterOpen": {
+   "title": "바른손카드 모바일초대장",
+   "lang": "ko",
+   "generator": null,
+   "viewport": "width=device-width, initial-scale=1, user-scalable=yes",
+   "og": {
+    "image": false,
+    "title": false,
+    "description": false
+   },
+   "reducedMotionCss": false,
+   "libs": {
+    "gsap": false,
+    "scrollTrigger": false,
+    "aos": false,
+    "animateCss": false,
+    "wow": false,
+    "swiper": true,
+    "slick": false,
+    "owl": false,
+    "lottie": false,
+    "three": false,
+    "pixi": false,
+    "anime": false,
+    "motionOne": false,
+    "howler": false,
+    "jquery": true,
+    "bootstrap": false,
+    "tailwind": false,
+    "alpine": false,
+    "vue": false,
+    "nuxt": false,
+    "next": false,
+    "react": false,
+    "svelte": false,
+    "flutterWeb": false,
+    "wordpress": false,
+    "elementor": false,
+    "livewire": false,
+    "inertia": false
+   },
+   "sections": [],
+   "sectionCount": 0,
+   "buttons": [],
+   "media": {
+    "audio": [],
+    "video": 0,
+    "iframes": [],
+    "canvases": 0,
+    "svgs": 0,
+    "images": 20,
+    "lazyImages": 0
+   },
+   "forms": [],
+   "fontsUsed": [
+    "Nanum Myeongjo"
+   ],
+   "features": {
+    "coverGate": false,
+    "toGuest": false,
+    "countdown": false,
+    "rsvp": false,
+    "wishes": false,
+    "gift": false,
+    "copyButton": false,
+    "maps": false,
+    "calendar": false,
+    "livestream": false,
+    "qr": false,
+    "loveStory": false,
+    "gallery": false,
+    "dressCode": false,
+    "quranVerse": false,
+    "protocol": false,
+    "timezoneLabel": [],
+    "watermark": false,
+    "instagramFilter": false,
+    "musicControl": false
+   },
+   "domNodes": 191,
+   "docHeight": 5325
+  }
+ },
+ "lighthouse": {
+  "ok": true,
+  "lighthouseVersion": "12.8.2",
+  "finalUrl": "https://mcard.barunsoncard.com/preview/1260",
+  "throttling": {
+   "rttMs": 150,
+   "throughputKbps": 1638.4,
+   "requestLatencyMs": 562.5,
+   "downloadThroughputKbps": 1474.5600000000002,
+   "uploadThroughputKbps": 675,
+   "cpuSlowdownMultiplier": 4
+  },
+  "screen": {
+   "mobile": true,
+   "width": 412,
+   "height": 915,
+   "deviceScaleFactor": 2.625,
+   "disabled": false
+  },
+  "scores": {
+   "performance": 55,
+   "accessibility": 83,
+   "best-practices": 96,
+   "seo": 42
+  },
+  "metrics": {
+   "fcpMs": 19524.217279999997,
+   "lcpMs": 23178.866239999996,
+   "tbtMs": 0,
+   "cls": 0,
+   "siMs": 19524.217279999997,
+   "ttiMs": 23544.331136
+  },
+  "byType": {
+   "total": {
+    "requests": 55,
+    "bytes": 4521082
+   },
+   "font": {
+    "requests": 2,
+    "bytes": 2490258
+   },
+   "image": {
+    "requests": 20,
+    "bytes": 1331092
+   },
+   "script": {
+    "requests": 8,
+    "bytes": 344543
+   },
+   "stylesheet": {
+    "requests": 23,
+    "bytes": 325302
+   },
+   "document": {
+    "requests": 1,
+    "bytes": 29616
+   },
+   "other": {
+    "requests": 1,
+    "bytes": 271
+   },
+   "media": {
+    "requests": 0,
+    "bytes": 0
+   },
+   "third-party": {
+    "requests": 22,
+    "bytes": 2790577
+   }
+  },
+  "totalBytes": 4553479,
+  "requests": 55,
+  "thirdParties": [
+   {
+    "entity": "jQuery CDN",
+    "bytes": 34115,
+    "blockingMs": 99.91833053175323
+   },
+   {
+    "entity": "kakao.com",
+    "bytes": 271,
+    "blockingMs": 17.999999999999996
+   },
+   {
+    "entity": "pstatic.net",
+    "bytes": 2492327,
+    "blockingMs": 0
+   },
+   {
+    "entity": "Google Fonts",
+    "bytes": 234513,
+    "blockingMs": 0
+   },
+   {
+    "entity": "kakaocdn.net",
+    "bytes": 29351,
+    "blockingMs": 0
+   }
+  ],
+  "fontDisplayIssues": 2,
+  "unusedJsBytes": 235670,
+  "a11yFailures": [
+   "image-alt"
+  ]
+ },
+ "files": {
+  "rea-inspect.json": "b6f8a106c4b175095c6f2ad3c73bc2441d5dfd8463da8b3758029211f72e2e18",
+  "rea-bundle.json": "78dd68a60a4144ef8b8438dbff339ad83b5be2d2faba146716ce054d6018832a",
+  "_private/rea/C-BRN-101/rea-scenario.json": "73ae95e3ecaba9a21120806fa68e5f8d69628f0356814b44a342dfd6bb21a8c6",
+  "_private/lh/C-BRN-101.json": "26ddd69f98cc2408f4e901ea477cb7decb69ca28c59361c88f93fdcdad163883"
+ },
+ "screenshot": "_private/thumbs (competitor, not committed)"
+}

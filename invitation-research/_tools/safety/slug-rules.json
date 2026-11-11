@@ -1,0 +1,23 @@
+{
+ "about": "Identifying URL slugs that must never reach committed files (new instructions Step 2, Q-O07). Each pattern's FULL match is the slug; lookarounds give context. Read by pseudonymize.mjs (discovery, capture) and pseudonymize-slugs.py (bulk apply/check). Matching is case-insensitive in both.",
+ "tokenPrefix": "rdct-",
+ "tokenHexLength": 10,
+ "exactLabelMinLength": 8,
+ "rules": [
+  {
+   "id": "kat-couple-subdomain",
+   "why": "Katsudoto demo pages live on per-couple subdomains (<names>.katsudoto.id); the label may name real people",
+   "pattern": "(?<![A-Za-z0-9.-])(?!(?:www|cdn|api|app|admin|assets|static|img|images|media|files|dashboard|my|blog|help|mail|rdct-[0-9a-f]{10})\\.)[a-z0-9][a-z0-9-]*(?=\\.katsudoto\\.id)"
+  },
+  {
+   "id": "env-full-preview",
+   "why": "Enviory full-preview pages use a couple slug (enviory.com/<slug>?tpl=<theme>)",
+   "pattern": "(?<=enviory\\.com/)(?!rdct-[0-9a-f]{10}(?![A-Za-z0-9-]))[A-Za-z0-9-]+(?=\\?tpl=)"
+  },
+  {
+   "id": "ivt-template-couple",
+   "why": "Invitato live previews are portfolio designs named after couples (invitato.net/template-<couple>/) and the vendor ties at least one to a real wedding, so they are not synthetic placeholders (D-019, session 07)",
+   "pattern": "(?:(?<=invitato\\.net/template-)|(?<=invitato\\.id/template-))(?!rdct-[0-9a-f]{10}(?![A-Za-z0-9-]))[A-Za-z0-9-]+"
+  }
+ ]
+}

@@ -1,0 +1,433 @@
+{
+ "id": "C-IDI-104",
+ "competitor": "indoinvite",
+ "kind": "demo",
+ "url": "https://indoinvite.com/preview/contoh-undangan-online-tahlilan",
+ "capturedAt": "2026-10-30T04:54:45.814+07:00",
+ "robots": {
+  "allowed": true,
+  "note": "no matching rule"
+ },
+ "method": "REA capture-browser-scenario (connect mode) drives navigation, settle and keyboard scroll; optional cover click by CDP inside REA's settle window; CDP mobile emulation 412x915 @2.625 + Android Chrome UA, cold cache (no throttling); REA 6.8.0 inspect-web-page/analyze-web-bundle; custom structure pass (text features + animation libraries: no REA coverage); Lighthouse 12 mobile simulate (Slow 4G, 4x CPU) when present",
+ "driver": "rea",
+ "rea": {
+  "version": "6.8.0",
+  "scenario": {
+   "ok": true,
+   "exit": 0,
+   "ms": 25187,
+   "evidenceId": "ev_6a621bfbc6c6585822b4f8193908c2ef9a6661cb62f2917220dbc829d8b07949",
+   "status": "incomplete",
+   "stepsCompleted": 32,
+   "stepsTotal": 32,
+   "failed": [],
+   "events": 399,
+   "error": null,
+   "sha256": "8454a7d3fd878b29a185152f1a4e5c4760d6ca1596b998aaaaa7d3e3415d4071",
+   "file": "_private/rea/C-IDI-104/rea-scenario.json"
+  },
+  "emulation": {
+   "duringScenario": {
+    "android": true,
+    "width": 412,
+    "dpr": 2.625,
+    "coarsePointer": false,
+    "reducedMotion": false
+   },
+   "afterScenario": {
+    "android": true,
+    "width": 500,
+    "dpr": 1,
+    "coarsePointer": false,
+    "reducedMotion": false
+   }
+  },
+  "inspectEvidenceId": "ev_08919d8951b129169172d4d6fd5b4782edf4d63947a135cf4b5a497cfa9ba87f",
+  "bundleEvidenceId": "ev_8220572afb07a2070f24fe00e77799dab599b64604d6d57d4f4626b72fb944d4",
+  "inspectError": null,
+  "bundleError": null,
+  "domNodes": 36221,
+  "scripts": 10,
+  "resources": 7,
+  "completeness": "policy_filtered",
+  "bundleChunks": 8,
+  "bundleEndpoints": [],
+  "bundleInferences": [
+   {
+    "kind": "endpoint_candidate",
+    "value": "utm_campaign",
+    "confidence": "low",
+    "basis": [
+     {
+      "script_key": "scr_0cdc43a58cde291861d9080872717518927298094f7f469531af97669c154213",
+      "artifact_sha256": "d5df9198e27c6e3f2ec53e77ca226bc3ce827d0e29186433f4065a05d2be6d2a",
+      "line": 72,
+      "column": 20,
+      "detector": "call:searchParams.get:unverified-network-receiver"
+     }
+    ]
+   },
+   {
+    "kind": "endpoint_candidate",
+    "value": "open",
+    "confidence": "low",
+    "basis": [
+     {
+      "script_key": "scr_0cdc43a58cde291861d9080872717518927298094f7f469531af97669c154213",
+      "artifact_sha256": "d5df9198e27c6e3f2ec53e77ca226bc3ce827d0e29186433f4065a05d2be6d2a",
+      "line": 78,
+      "column": 12,
+      "detector": "call:searchParams.get:unverified-network-receiver"
+     }
+    ]
+   },
+   {
+    "kind": "endpoint_candidate",
+    "value": "open",
+    "confidence": "low",
+    "basis": [
+     {
+      "script_key": "scr_0cdc43a58cde291861d9080872717518927298094f7f469531af97669c154213",
+      "artifact_sha256": "d5df9198e27c6e3f2ec53e77ca226bc3ce827d0e29186433f4065a05d2be6d2a",
+      "line": 81,
+      "column": 16,
+      "detector": "call:searchParams.delete:unverified-network-receiver"
+     }
+    ]
+   },
+   {
+    "kind": "endpoint_candidate",
+    "value": "ads",
+    "confidence": "low",
+    "basis": [
+     {
+      "script_key": "scr_a222848fbbb0d691cdb027ef7350744b1f8e611aa7878ca3942e43cf0dc76d9c",
+      "artifact_sha256": "0b9677f370c6056865012d81697451c14d51ff1a41f4f96c07ae78d4fe7fa56c",
+      "line": 97,
+      "column": 25,
+      "detector": "call:urlParams.get:unverified-network-receiver"
+     }
+    ]
+   }
+  ]
+ },
+ "network": {
+  "loadEventMs": 5680,
+  "requests": 133,
+  "bytes": 7260581,
+  "byType": {
+   "Document": {
+    "requests": 2,
+    "bytes": 95950
+   },
+   "Image": {
+    "requests": 73,
+    "bytes": 5683453
+   },
+   "Stylesheet": {
+    "requests": 4,
+    "bytes": 233156
+   },
+   "Font": {
+    "requests": 5,
+    "bytes": 39215
+   },
+   "Script": {
+    "requests": 16,
+    "bytes": 1189816
+   },
+   "Manifest": {
+    "requests": 1,
+    "bytes": 640
+   },
+   "Fetch": {
+    "requests": 8,
+    "bytes": 873
+   },
+   "Ping": {
+    "requests": 19,
+    "bytes": 16088
+   },
+   "XHR": {
+    "requests": 5,
+    "bytes": 1390
+   }
+  },
+  "protocols": [
+   "http/1.1",
+   "h3",
+   "data",
+   "h2"
+  ],
+  "scriptHosts": [
+   "cdnjs.cloudflare.com",
+   "bzrcdn.openai.com",
+   "www.googletagmanager.com",
+   "indoinvite.com",
+   "connect.facebook.net",
+   "analytics.tiktok.com",
+   "www.clarity.ms",
+   "googleads.g.doubleclick.net",
+   "scripts.clarity.ms"
+  ],
+  "scriptFiles": [
+   "jquery.min.js",
+   "oaiq.min.js",
+   "gtm.js",
+   "main.js",
+   "splide.min.js",
+   "bootstrap.bundle.min.js",
+   "js",
+   "fbevents.js",
+   "events.js",
+   "js",
+   "mv6xtgbfa8",
+   "",
+   "485086054639593",
+   "main.MTJjYzk1MmQ1OQ.js",
+   "clarity.js",
+   "identify_9fbdaf50.js"
+  ],
+  "fontFiles": [
+   {
+    "host": "fonts.gstatic.com",
+    "file": "pxiByp8kv8JHgFVrLEj6Z1xlFd2JQEk.woff2",
+    "bytes": 8019
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "pxiEyp8kv8JHgFVrJJfecnFHGPc.woff2",
+    "bytes": 7927
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "pxiByp8kv8JHgFVrLCz7Z1xlFd2JQEk.woff2",
+    "bytes": 7875
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "pxiByp8kv8JHgFVrLBT5Z1xlFd2JQEk.woff2",
+    "bytes": 7627
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "pxiByp8kv8JHgFVrLGT9Z1xlFd2JQEk.woff2",
+    "bytes": 7767
+   }
+  ],
+  "thirdPartyHosts": [
+   "www.gstatic.com",
+   "fonts.googleapis.com",
+   "media.indoinvite.com",
+   "",
+   "fonts.gstatic.com",
+   "cdnjs.cloudflare.com",
+   "bzrcdn.openai.com",
+   "www.googletagmanager.com",
+   "ad.doubleclick.net",
+   "www.google.com",
+   "connect.facebook.net",
+   "analytics.tiktok.com",
+   "www.clarity.ms",
+   "googleads.g.doubleclick.net",
+   "analytics.google.com",
+   "scripts.clarity.ms",
+   "www.facebook.com",
+   "mpc-prod-24-s6uit34pua-uw.a.run.app",
+   "analytics-ipv6.tiktokw.us",
+   "bzr.openai.com",
+   "t.clarity.ms",
+   "sin1.contabostorage.com"
+  ]
+ },
+ "structure": {
+  "coverClicked": false,
+  "beforeOpen": {
+   "sectionCount": 2,
+   "features": {
+    "coverGate": false,
+    "toGuest": false,
+    "countdown": false,
+    "rsvp": true,
+    "wishes": true,
+    "gift": true,
+    "copyButton": true,
+    "maps": false,
+    "calendar": false,
+    "livestream": false,
+    "qr": false,
+    "loveStory": false,
+    "gallery": true,
+    "dressCode": false,
+    "quranVerse": false,
+    "protocol": false,
+    "timezoneLabel": [
+     "WIB"
+    ],
+    "watermark": false,
+    "instagramFilter": false,
+    "musicControl": false
+   },
+   "buttons": [
+    "Masuk Dan Buat",
+    "Buat Undangan",
+    "Mulai Gratis",
+    "Contoh",
+    "Tools",
+    "Template",
+    "Baca Selengkapnya",
+    "Preview",
+    "Gunakan Tema",
+    "Copy"
+   ]
+  },
+  "afterOpen": {
+   "title": "Contoh Undangan Digital Tahlilan",
+   "lang": "id",
+   "generator": null,
+   "viewport": "width=device-width, initial-scale=1, shrink-to-fit=no",
+   "og": {
+    "image": true,
+    "title": true,
+    "description": true
+   },
+   "reducedMotionCss": true,
+   "libs": {
+    "gsap": false,
+    "scrollTrigger": false,
+    "aos": false,
+    "animateCss": false,
+    "wow": false,
+    "swiper": false,
+    "slick": false,
+    "owl": false,
+    "lottie": false,
+    "three": false,
+    "pixi": false,
+    "anime": false,
+    "motionOne": false,
+    "howler": false,
+    "jquery": true,
+    "bootstrap": true,
+    "tailwind": false,
+    "alpine": false,
+    "vue": false,
+    "nuxt": false,
+    "next": false,
+    "react": false,
+    "svelte": false,
+    "flutterWeb": false,
+    "wordpress": false,
+    "elementor": false,
+    "livewire": false,
+    "inertia": false
+   },
+   "sections": [
+    {
+     "tag": "div",
+     "id": "blog",
+     "cls": "latest-news-area section",
+     "heading": "Contoh Undangan Digital Tahlilan",
+     "h": 95667
+    },
+    {
+     "tag": "div",
+     "id": "",
+     "cls": "section-title-five",
+     "heading": "Contoh Undangan Digital Tahlilan",
+     "h": 933
+    }
+   ],
+   "sectionCount": 2,
+   "buttons": [
+    "Masuk Dan Buat",
+    "Buat Undangan",
+    "Mulai Gratis",
+    "Contoh",
+    "Tools",
+    "Template",
+    "Baca Selengkapnya",
+    "Preview",
+    "Gunakan Tema",
+    "Copy",
+    "Sebar Dengan Tema Ini",
+    "×",
+    "Home",
+    "Harga",
+    "Login"
+   ],
+   "media": {
+    "audio": [],
+    "video": 0,
+    "iframes": [],
+    "canvases": 0,
+    "svgs": 1505,
+    "images": 569,
+    "lazyImages": 566
+   },
+   "forms": [
+    {
+     "fields": [
+      "hidden",
+      "email",
+      "password",
+      "submit"
+     ],
+     "hasRadio": false,
+     "hasSelect": false
+    },
+    {
+     "fields": [
+      "hidden",
+      "hidden",
+      "select-one",
+      "number",
+      "date",
+      "submit"
+     ],
+     "hasRadio": false,
+     "hasSelect": true
+    }
+   ],
+   "fontsUsed": [
+    "Poppins"
+   ],
+   "features": {
+    "coverGate": false,
+    "toGuest": false,
+    "countdown": false,
+    "rsvp": true,
+    "wishes": true,
+    "gift": true,
+    "copyButton": true,
+    "maps": false,
+    "calendar": false,
+    "livestream": false,
+    "qr": false,
+    "loveStory": false,
+    "gallery": true,
+    "dressCode": false,
+    "quranVerse": false,
+    "protocol": false,
+    "timezoneLabel": [
+     "WIB"
+    ],
+    "watermark": false,
+    "instagramFilter": false,
+    "musicControl": false
+   },
+   "domNodes": 13044,
+   "docHeight": 96936
+  }
+ },
+ "lighthouse": {
+  "ok": false,
+  "error": "https://indoinvite.com/base-nikah/assets/js/bootstrap.bundle.min.js.map mapping for last column out of bounds: 6:78466\nRuntime error encountered: Waiting for DevTools protocol response has exceeded the allotted time. (Method: Page.captureScreenshot)\n"
+ },
+ "files": {
+  "rea-inspect.json": "cf9851d44b097d4bf079e6834443e524a0e73aadbf9b67aa1f2bdb11dd8e9ea4",
+  "rea-bundle.json": "de1a5bf71463d8aed384dc6af9336f656e2377d7fafc5a06e8bab095cb696434",
+  "_private/rea/C-IDI-104/rea-scenario.json": "8454a7d3fd878b29a185152f1a4e5c4760d6ca1596b998aaaaa7d3e3415d4071"
+ },
+ "screenshot": "_private/thumbs (competitor, not committed)"
+}

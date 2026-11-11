@@ -1,0 +1,24 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "select key as \"key!\" from (\n             select (regexp_matches(i.config::text, $2, 'g'))[1] as key from invitations i\n              where i.id <> $1 and i.purged_at is null and i.config::text ~ $2\n             union all\n             select (regexp_matches(v.config::text, $2, 'g'))[1] from invitation_versions v\n              join invitations i on i.id = v.invitation_id\n              where v.invitation_id <> $1 and i.purged_at is null and v.config::text ~ $2\n             union all\n             select (regexp_matches(m.url, $2, 'g'))[1] from media_assets m where m.invitation_id <> $1 and m.url ~ $2\n             union all\n             select (regexp_matches(t.default_config::text, $2, 'g'))[1] from templates t\n              where t.default_config::text ~ $2\n           ) refs where key is not null",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "key!",
+        "type_info": "Text",
+        "origin": "Expression"
+      }
+    ],
+    "parameters": {
+      "Left": [
+        "Int4",
+        "Text"
+      ]
+    },
+    "nullable": [
+      null
+    ]
+  },
+  "hash": "752042117505759e9e1915cc62f31c1d166e1d5f352593fb4415d106b89604ba"
+}

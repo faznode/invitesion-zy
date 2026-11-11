@@ -1,0 +1,79 @@
+{
+ "code": "WEV",
+ "competitor": "wevitation",
+ "observedAt": "2026-10-29T05:54:36.272+07:00",
+ "homepage": {
+  "url": "https://www.wevitation.com/",
+  "finalUrl": "https://www.wevitation.com/",
+  "skipped": null,
+  "links": 49
+ },
+ "catalogCandidates": [],
+ "catalog": null,
+ "demos": [
+  {
+   "href": "https://www.wevitation.com/demo/timeless-snapshot",
+   "label": "Lihat Demo"
+  },
+  {
+   "href": "https://www.wevitation.com/demo/serein",
+   "label": "Lihat Demo"
+  },
+  {
+   "href": "https://www.wevitation.com/demo/mildness",
+   "label": "Lihat Demo"
+  },
+  {
+   "href": "https://www.wevitation.com/demo/snap-photo",
+   "label": "Lihat Demo"
+  },
+  {
+   "href": "https://www.wevitation.com/demo/visual-journey",
+   "label": "Lihat Demo"
+  },
+  {
+   "href": "https://www.wevitation.com/demo/elegant-light",
+   "label": "Lihat Demo"
+  },
+  {
+   "href": "https://www.wevitation.com/demo/espresso",
+   "label": "Lihat Demo"
+  },
+  {
+   "href": "https://www.wevitation.com/demo/peppy",
+   "label": "Lihat Demo"
+  },
+  {
+   "href": "https://www.wevitation.com/demo/photovit",
+   "label": "Lihat Demo"
+  },
+  {
+   "href": "https://www.wevitation.com/demo/bloom-blue",
+   "label": "Lihat Demo"
+  },
+  {
+   "href": "https://www.wevitation.com/demo/wayang",
+   "label": "Lihat Demo"
+  },
+  {
+   "href": "https://www.wevitation.com/demo/photovit-green",
+   "label": "Lihat Demo"
+  },
+  {
+   "href": "https://www.wevitation.com/demo/midnight-elegance",
+   "label": "Lihat Demo"
+  },
+  {
+   "href": "https://www.wevitation.com/demo/simple-rustic-3",
+   "label": "Lihat Demo"
+  },
+  {
+   "href": "https://www.wevitation.com/demo/culture-javanese",
+   "label": "Lihat Demo"
+  },
+  {
+   "href": "https://www.wevitation.com/demo/simple-rustic-4",
+   "label": "Lihat Demo"
+  }
+ ]
+}

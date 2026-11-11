@@ -1,0 +1,21 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "insert into guests (invitation_id, name, phone, category, guest_count, slug, link_token, import_batch_id) select $1, t.name, t.phone, t.category, t.guest_count, t.slug, t.link_token, $8 from unnest($2::text[], $3::text[], $4::text[], $5::int4[], $6::text[], $7::text[]) as t(name, phone, category, guest_count, slug, link_token)",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Left": [
+        "Int4",
+        "TextArray",
+        "TextArray",
+        "TextArray",
+        "Int4Array",
+        "TextArray",
+        "TextArray",
+        "Varchar"
+      ]
+    },
+    "nullable": []
+  },
+  "hash": "f77eff8ca8974a3b7a0021f4d3c728cc2d572ab1314d85c553aadcf6d0eea357"
+}

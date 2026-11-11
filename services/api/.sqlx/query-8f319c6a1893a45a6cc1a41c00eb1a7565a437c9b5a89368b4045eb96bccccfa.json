@@ -1,0 +1,65 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "select invited_event_ids, rsvp_event_answers, rsvp_status, attending_count from guests where id = $1 and invitation_id = $2 for update",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "invited_event_ids",
+        "type_info": "Jsonb",
+        "origin": {
+          "Table": {
+            "table": "guests",
+            "name": "invited_event_ids"
+          }
+        }
+      },
+      {
+        "ordinal": 1,
+        "name": "rsvp_event_answers",
+        "type_info": "Jsonb",
+        "origin": {
+          "Table": {
+            "table": "guests",
+            "name": "rsvp_event_answers"
+          }
+        }
+      },
+      {
+        "ordinal": 2,
+        "name": "rsvp_status",
+        "type_info": "Varchar",
+        "origin": {
+          "Table": {
+            "table": "guests",
+            "name": "rsvp_status"
+          }
+        }
+      },
+      {
+        "ordinal": 3,
+        "name": "attending_count",
+        "type_info": "Int4",
+        "origin": {
+          "Table": {
+            "table": "guests",
+            "name": "attending_count"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Left": [
+        "Int4",
+        "Int4"
+      ]
+    },
+    "nullable": [
+      true,
+      true,
+      false,
+      true
+    ]
+  },
+  "hash": "8f319c6a1893a45a6cc1a41c00eb1a7565a437c9b5a89368b4045eb96bccccfa"
+}

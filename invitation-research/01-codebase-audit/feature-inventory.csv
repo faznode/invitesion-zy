@@ -1,0 +1,103 @@
+id,area,feature,status,module_ids,path_refs,notes
+F-001,guest,Personalized guest URL /i/:slug/:guest,full,M-012;M-014,app/i/[slug]/[guestSlug]/page.tsx,Slug derived from name = guessable (QA-003)
+F-002,guest,"""Kepada Yth."" guest name on cover",full,M-013,components/invitation/public-renderer.tsx,React-escaped; long names wrap well (C-INV-002)
+F-003,guest,"Cover gate (""Buka Undangan"")",missing,M-013;M-005,app/templates/[slug]/preview-client.tsx,Exists only in marketing preview mock
+F-004,guest,Background music + autoplay unlock + mute,config-only,M-009;M-013,lib/invitation/detail-config.ts,config.music never rendered
+F-005,guest,Countdown timer,missing,M-013,,
+F-006,guest,"Couple profiles (full names, parents, child order, photos, IG)",partial,M-013;M-018,editor.tsx;public-renderer.tsx,Captured in editor; only nicknames rendered
+F-007,guest,Love story timeline,full,M-013,public-renderer.tsx,Plain card list
+F-008,guest,Photo gallery,partial,M-013;M-027,public-renderer.tsx,Grid only; layout setting ignored; no lightbox; originals
+F-009,guest,Video in gallery,missing,M-013;M-027,app/api/invitations/[id]/media,API accepts type video; not rendered
+F-010,guest,Multi-event schedule (akad/resepsi/ngunduh mantu),partial,M-013,public-renderer.tsx,Times wrong on UTC servers (QA-002)
+F-011,guest,Maps,partial,M-013,public-renderer.tsx,External link only; no embed/preview
+F-012,guest,Add to calendar (ICS/Google),missing,M-013,,
+F-013,guest,RSVP attend/decline,full,M-014,app/i/[slug]/actions.ts,Personal link only
+F-014,guest,"RSVP ""maybe"" (ragu-ragu)",missing,M-014;M-035,,
+F-015,guest,RSVP pax count,partial,M-014,app/i/[slug]/actions.ts,Allowance overwritten (QA-005)
+F-016,guest,RSVP deadline,config-only,M-009;M-014,,Not enforced
+F-017,guest,RSVP custom questions,config-only,M-009;M-021,detail-config.ts registrationForm,No guest UI
+F-018,guest,Meal preferences / allergies,config-only,M-009;M-021,,No guest UI
+F-019,guest,Wishes / doa wall,full,M-013;M-014,public-renderer.tsx,Latest 50 + count; personal link to post
+F-020,guest,Wishes moderation,config-only,M-009,,is_hidden never set
+F-021,guest,Digital gift (bank / e-wallet),partial,M-013,public-renderer.tsx,No copy button; visible without guest link
+F-022,guest,QRIS gift,missing,M-013;M-025,,
+F-023,guest,"Gift registry / ""titip kado"" (address + shipping)",partial,M-009;M-013,detail-config.ts giftAccountSchema kind=address,Shown as text only
+F-024,guest,Livestream link,full,M-013,public-renderer.tsx,Link out
+F-025,guest,Dress code,config-only,M-009,corporateProfile.dressCode,Not rendered
+F-026,guest,QR pass for check-in,missing,M-013;M-035,guests.qr_code,Column unused
+F-027,guest,Share from guest page (WhatsApp / IG Story),missing,M-013,,
+F-028,guest,Instagram story filter / hashtag,config-only,M-009,instagramStory,"Not rendered (s11); s17 E-026: weddings render the hashtag and an http(s) filter link once switched on"
+F-029,guest,Quote / verse block,full,M-013;M-006,,Presets contain unverified religious text (QA-015)
+F-030,guest,Opening greeting / prayer,full,M-013,,
+F-031,guest,Expired read-only mode,full,M-012;M-013,lib/invitation/public.ts,
+F-032,guest,Per-invitation OG share card,partial,M-012,app/i/[slug]/[guestSlug]/page.tsx,Title only; no image (QA-009)
+F-033,guest,Timezone labels WIB/WITA/WIT,broken,M-013,public-renderer.tsx formatTime,Hard-coded WIB + server TZ
+F-034,guest,Guest UI language (id/en),missing,M-013;M-034,,settings.language ignored
+F-035,guest,Large-text / elder-friendly mode,missing,M-013,,
+F-036,guest,Per-template layout / ornament / art,missing,M-013,,Palette is the only variable
+F-037,guest,Motion / scroll reveal / cinematic cover,missing,M-013,,
+F-038,guest,3D cover with fallback,missing,M-013,,
+F-039,guest,Corporate agenda / speakers,config-only,M-009,corporateProfile.agenda,Not rendered
+F-040,guest,Ceremony profile (aqiqah baby details / khitanan / syukuran),config-only,M-009,ceremonyProfile,"Only name rendered (s11); s17 E-026: each ceremony type renders the fields its editor tab offers; the photo stays stored-only"
+F-041,guest,Ticketing (free / paid / donation),config-only,M-009;M-021,ticketing,No guest UI
+F-042,guest,Seating assignment display,config-only,M-009;M-021,seatingPlan,
+F-043,guest,Per-event guest eligibility,config-only,M-009,secondaryEvents.eligibleGuestIds,
+F-044,guest,Privacy notice for guests,missing,M-013,,Tracking undisclosed (QA-023)
+F-045,host,Add guest (single),full,M-019,app/(customer)/dashboard/guests/actions.ts,
+F-046,host,Bulk guest import (CSV / Excel / contacts),missing,M-019,,
+F-047,host,Guest export CSV,full,M-020,analytics/route.ts,Formula injection risk (QA-012)
+F-048,host,Guest grouping / tags,partial,M-019,guests.category,Free text
+F-049,host,Personalized link generator,full,M-019,lib/invitation/public-url.ts,
+F-050,host,WhatsApp share per guest (wa.me + template),partial,M-019,dashboard/guests/page.tsx,Manual; one variant lacks 62-normalisation (QA-013)
+F-051,host,WhatsApp blast (official API or gateway),missing,M-040,wa_log table,Fonnte planned
+F-052,host,Reminders,config-only,M-009,communications.reminderAt,No scheduler
+F-053,host,RSVP dashboard / counts,partial,M-019,dashboard/guests/page.tsx,Per-guest list; minimal aggregates
+F-054,host,Host RSVP override,full,M-019,invitations/[id]/guests,
+F-055,host,QR check-in scanner,missing,M-019,,
+F-056,host,Manual check-in,full,M-019,invitations/[id]/guests/actions.ts,
+F-057,host,Digital guestbook on-site (kiosk),missing,,,
+F-058,host,Souvenir claim tracking,missing,,,
+F-059,host,Open/view analytics per guest,partial,M-012;M-020,analytics_events; guests.opened_count,Collected; visible only via CSV
+F-060,host,Wish moderation UI,missing,M-019,,
+F-061,host,Edit after publish,full,M-010;M-018,,
+F-062,host,Version history / rollback,partial,M-010,invitation_versions,Stored; no UI; never pruned
+F-063,host,Revision limit (max 3),config-only,M-035,invitations.revision_count,Never enforced
+F-064,host,Active period / expiry (12 months),full,M-011,publish-rules.ts,
+F-065,host,Custom slug,config-only,M-009,settings.linkSlug,Unused
+F-066,host,Custom subdomain / domain,missing,,,
+F-067,host,Password-protected invitation,missing,,,
+F-068,host,Watermark removal,missing,M-013,public-renderer.tsx footer,Credit always shown
+F-069,host,Live preview while editing,missing,M-018,,
+F-070,host,Autosave,missing,M-018,,
+F-071,host,Image upload (<=5 MB),full,M-027;M-028,app/api/invitations/[id]/upload,No resizing
+F-072,host,Music upload / library,missing,M-027,,
+F-073,host,Event planner checklist (internal),full,M-022,dashboard/planner,
+F-074,host,Switch template after creation,partial,M-018;M-025,,Re-pay per theme; theme tab unreachable
+F-075,host,Publish gate (completeness + paid),full,M-011,publish.ts,
+F-076,host,Multi-user access (co-host / usher),missing,M-030,,Single owner
+F-077,business,Template marketplace (third-party designers),missing,,,
+F-078,business,Designer revenue share,missing,,,
+F-079,business,Reseller / white-label workspace,missing,M-035,,No tenant model
+F-080,business,Coupons / affiliate / referral,missing,,,
+F-081,business,QRIS checkout,partial,M-024;M-025,lib/payment/qris-*,Acquirer not chosen; manual confirm
+F-082,business,VA / e-wallet / local cards,missing,M-025,,
+F-083,business,Stripe international checkout,partial,M-024;M-025,lib/payment/stripe-*,Untested vs real account
+F-084,business,Invoices / receipts,missing,M-025,,
+F-085,business,One-off pricing per invitation (Rp149k / Rp299k),full,M-003,lib/pricing.ts,Conflicts with marketing copy (Q-O02)
+F-086,business,Admin manual order confirmation,full,M-031,admin orders/actions.ts,
+F-087,business,Admin template CMS,partial,M-031,admin templates/page.tsx,Stub
+F-088,business,AI assist (copy / translation / photo),missing,M-040,,Tables only
+F-089,business,Video invitation / intro video,missing,,,
+F-090,business,Print / e-card / keepsake export,missing,,,
+F-091,business,Partner API / webhooks,missing,,,
+F-092,platform,Programmatic SEO pages (event types / features / resources),full,M-002,app/marketing-registry.ts,~90 pages; some over-claim (QA-024)
+F-093,platform,Template catalog with category/style/tier filters,full,M-004,app/templates/catalog-client.tsx,27 categories
+F-094,platform,Security headers + CSP nonce (report-only),partial,M-032;M-033,middleware.ts; next.config.ts,
+F-095,platform,Rate limiting / anti-spam,missing,M-032,,
+F-096,platform,i18n id/en (marketing + dashboard),partial,M-034,lib/i18n.ts,
+F-097,platform,Accessibility baseline,partial,M-013;M-036,,Contrast failures (QA-008)
+F-098,platform,Observability / uptime / error tracking,missing,M-033,,
+F-099,platform,Data retention / deletion,missing,M-035,,
+F-100,platform,Support via WhatsApp CS,partial,M-001,app/page.tsx,Placeholder number
+F-101,platform,Automated tests,partial,M-037,tests/,49 cases; no renderer/actions coverage
+F-102,platform,CI pipeline,missing,,,

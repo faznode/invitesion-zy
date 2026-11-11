@@ -1,0 +1,15 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "delete from jobs where kind = $1 and dedupe_key like $2",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Left": [
+        "Text",
+        "Text"
+      ]
+    },
+    "nullable": []
+  },
+  "hash": "9dccc8780d74cca773a6c088b56afb7d6940d33f58176765e7a0191b6fc305c7"
+}

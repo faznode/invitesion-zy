@@ -1,0 +1,24 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "select key as \"key!\" from (\n             select (regexp_matches(coalesce(config::text, ''), $2, 'g'))[1] as key from invitations where id = $1\n             union all\n             select (regexp_matches(config::text, $2, 'g'))[1] from invitation_versions where invitation_id = $1\n             union all\n             select (regexp_matches(url, $2, 'g'))[1] from media_assets where invitation_id = $1\n             union all\n             select source_key from media_variants where invitation_id = $1\n             union all\n             select variant_key from media_variants where invitation_id = $1\n           ) refs where key is not null",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "key!",
+        "type_info": "Text",
+        "origin": "Expression"
+      }
+    ],
+    "parameters": {
+      "Left": [
+        "Int4",
+        "Text"
+      ]
+    },
+    "nullable": [
+      null
+    ]
+  },
+  "hash": "26f232dac82cb0252e7f4d563354a68127c0c3d722b9e35a25800a717805fc1a"
+}

@@ -1,0 +1,60 @@
+IDI	Indoinvite	https://indoinvite.com/
+WEV	Wevitation	https://wevitation.com/
+IVT	Invitato	https://invitato.net/
+VID	Viding	https://viding.co/
+SMO	Satu Momen	https://satumomen.com/
+KAT	Katsudoto	https://katsudoto.id/
+SAN	Sannubari	https://sannubari.com/
+SAN2	Sannubari	https://sannubari.id/
+VIP	VIP Invitation	https://vipinvitation.id/
+BKU	BikinUndangan	https://bikinundangan.com/
+WDW	Wedew	https://wedew.id/
+GOI	Goinvite	https://goinvite.id/
+ULK	UndanganLink	https://undanganlink.com/
+WTX	Wootix	https://wootix.com/
+WDB	WediWeb	https://wediweb.com/
+JOU	joujou	https://joujou.id/
+STM	Sitemu	https://sitemu.id/
+JNV	Janiva	https://janiva.id/
+PAC	PunyaAcara	https://punyaacara.com/
+ULM	Uleman	https://uleman.id/
+SPL	Simplora	https://simplora.id/
+UVR	Undangan Virtual	https://undanganvirtual.com/
+HRK	Harikita	https://harikita.id/
+INV	INVI.ID	https://invi.id/
+MNC	Menica	https://menica.id/
+ENV	Enviory	https://enviory.com/
+ENV2	Enviory	https://enviory.id/
+SBU	sebarundangan.id	https://sebarundangan.id/
+MNY	Minyma	https://minyma.id/
+ITD	Invitated	https://invitated.com/
+ZHN	Zehan Invitation	https://zehaninvitation.com/
+BRS	Bridestory	https://www.bridestory.com/
+WKU	Weddingku	https://www.weddingku.com/
+WNK	WebNikah	https://webnikah.com/
+PLO	PALEO Undangan	https://paleo.id/
+MMO	MEMO Wedding	https://memowedding.id/
+LVG	Levigo	https://levigo.id/
+SMP	Sangmempelai	https://sangmempelai.id/
+KDG	Kondangan	https://kondangan.id/
+UDK	Undanganku	https://undanganku.id/
+RSV	RSVPify	https://rsvpify.com/
+JOY	Joy	https://withjoy.com/
+ZOL	Zola	https://www.zola.com/
+PPO	Paperless Post	https://www.paperlesspost.com/
+GRV	Greenvelope	https://www.greenvelope.com/
+EVT	Evite	https://www.evite.com/
+PTF	Partiful	https://partiful.com/
+PBW	Punchbowl	https://www.punchbowl.com/
+TKN	The Knot	https://www.theknot.com/
+CNV	Canva invitations	https://www.canva.com/create/invitations/
+MTD	Minted	https://www.minted.com/
+SNT	Sonett (KR)	https://sonett.kr/
+SNP	Snap Post (KR)	https://snappost.kr/
+BRN	Barunson Mcard (KR)	https://www.barunsonmcard.com/
+EQX	Eqxiu (CN)	https://www.eqxiu.com/
+MAK	MAKA (CN)	https://www.maka.im/
+BHP	Biihappy (VN)	https://biihappy.com/
+INE	Invitee (MY)	https://invitee.my/
+WMG	WedMeGood e-invites (IN)	https://www.wedmegood.com/
+PRY	Piary web invitation (JP)	https://www.piary.jp/

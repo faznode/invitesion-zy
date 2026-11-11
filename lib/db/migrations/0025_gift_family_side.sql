@@ -1,0 +1,2 @@
+ALTER TABLE "gift_logs" ADD COLUMN "family_side" varchar(8);--> statement-breakpoint
+ALTER TABLE "gift_logs" ADD CONSTRAINT "gift_logs_family_side_check" CHECK ("gift_logs"."family_side" is null or "gift_logs"."family_side" in ('bride', 'groom'));

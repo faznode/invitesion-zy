@@ -1,0 +1,52 @@
+{
+  "contract": "B-019 image variants. `sources` is run by both languages: lib/media/variants.ts (tests/b019-image-variants.test.ts: the URL the upload route enqueues) and services/api/src/media.rs (tests/media_variants.rs: the key the job accepts). A source is exactly a public invitation key `invitationMediaKey` writes, with an invitation id that fits the serial column (int4); never a protected key, an avatar, an absolute URL or anything else; invitationId null = not a source. `plans` is run by the Rust planner: the variants planned for a source of width × height after its EXIF orientation, per tier, as [width, height]: every ladder width below 90 % of the source's capped width, then the capped width itself; never an upscale. Ladders: standard 320, 480, 640, 960, 1280, 1920; lite (Save-Data, I-28) 320, 480, 640. Expected values derived by hand from that rule.",
+  "sources": [
+    { "url": "/media/12/0123456789abcdef01234567.jpg", "key": "12/0123456789abcdef01234567.jpg", "invitationId": 12 },
+    { "url": "/media/0/0123456789abcdef01234567.png", "key": "0/0123456789abcdef01234567.png", "invitationId": 0 },
+    { "url": "/media/7/abcdefabcdefabcdefabcdef.webp", "key": "7/abcdefabcdefabcdefabcdef.webp", "invitationId": 7 },
+    { "url": "/media/7/abcdefabcdefabcdefabcdef.gif", "key": "7/abcdefabcdefabcdefabcdef.gif", "invitationId": 7 },
+    { "url": "/media/protected/12/0123456789abcdef01234567.jpg", "key": "protected/12/0123456789abcdef01234567.jpg", "invitationId": null },
+    { "url": "/media/avatars/12/0123456789abcdef01234567.jpg", "key": "avatars/12/0123456789abcdef01234567.jpg", "invitationId": null },
+    { "url": "/media/2147483647/0123456789abcdef01234567.jpg", "key": "2147483647/0123456789abcdef01234567.jpg", "invitationId": 2147483647 },
+    { "url": "/media/2147483648/0123456789abcdef01234567.jpg", "key": "2147483648/0123456789abcdef01234567.jpg", "invitationId": null },
+    { "url": "/media/012/0123456789abcdef01234567.jpg", "key": "012/0123456789abcdef01234567.jpg", "invitationId": null },
+    { "url": "/media/12/0123456789ABCDEF01234567.jpg", "key": "12/0123456789ABCDEF01234567.jpg", "invitationId": null },
+    { "url": "/media/12/0123456789abcdef0123456.jpg", "key": "12/0123456789abcdef0123456.jpg", "invitationId": null },
+    { "url": "/media/12/0123456789abcdef01234567.svg", "key": "12/0123456789abcdef01234567.svg", "invitationId": null },
+    { "url": "/media/12/0123456789abcdef01234567.jpg?w=1", "key": "12/0123456789abcdef01234567.jpg?w=1", "invitationId": null },
+    { "url": "/media/variants/12/0123456789abcdef01234567/standard-320.webp", "key": "variants/12/0123456789abcdef01234567/standard-320.webp", "invitationId": null },
+    { "url": "https://example.com/12/0123456789abcdef01234567.jpg", "key": "https://example.com/12/0123456789abcdef01234567.jpg", "invitationId": null }
+  ],
+  "plans": [
+    {
+      "source": [4032, 3024],
+      "standard": [[320, 240], [480, 360], [640, 480], [960, 720], [1280, 960], [1920, 1440]],
+      "lite": [[320, 240], [480, 360], [640, 480]]
+    },
+    {
+      "source": [3024, 4032],
+      "standard": [[320, 427], [480, 640], [640, 853], [960, 1280], [1280, 1707], [1920, 2560]],
+      "lite": [[320, 427], [480, 640], [640, 853]]
+    },
+    {
+      "source": [1000, 500],
+      "standard": [[320, 160], [480, 240], [640, 320], [1000, 500]],
+      "lite": [[320, 160], [480, 240], [640, 320]]
+    },
+    {
+      "source": [700, 700],
+      "standard": [[320, 320], [480, 480], [700, 700]],
+      "lite": [[320, 320], [480, 480], [640, 640]]
+    },
+    {
+      "source": [200, 300],
+      "standard": [[200, 300]],
+      "lite": [[200, 300]]
+    },
+    {
+      "source": [1920, 1080],
+      "standard": [[320, 180], [480, 270], [640, 360], [960, 540], [1280, 720], [1920, 1080]],
+      "lite": [[320, 180], [480, 270], [640, 360]]
+    }
+  ]
+}

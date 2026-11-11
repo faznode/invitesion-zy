@@ -1,0 +1,15 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "delete from guest_messages where id = $1 and invitation_id = $2",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Left": [
+        "Int4",
+        "Int4"
+      ]
+    },
+    "nullable": []
+  },
+  "hash": "ac2bd1f2fa8ef7220382dfc6b013632ae42f50a4a6576c3d62c03ded2f6ba234"
+}

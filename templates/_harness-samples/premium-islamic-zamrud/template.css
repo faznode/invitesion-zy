@@ -1,0 +1,244 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  line-height: 1.6;
+}
+
+/* Cover: a fixed overlay over the invitation. Without JavaScript the "open" link targets #isi and :has() hides it. */
+.cover {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-3);
+  background-color: var(--color-background);
+  background-image: linear-gradient(rgba(10, 46, 36, 0.78), rgba(10, 46, 36, 0.9)), url('assets/img/zamrud-tile.webp');
+  background-size: auto, 240px 240px;
+  text-align: center;
+}
+
+body:has(#isi:target) .cover,
+body.is-open .cover {
+  display: none;
+}
+
+.cover-inner {
+  max-width: 26rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-4) var(--space-3);
+  border: 1px solid var(--color-accent);
+  border-radius: var(--radius);
+  background: rgba(14, 58, 45, 0.85);
+}
+
+.eyebrow {
+  margin: 0;
+  font-size: 0.78rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.names {
+  margin: var(--space-1) 0;
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(2.2rem, 10vw, 3.2rem);
+  line-height: 1.1;
+  overflow-wrap: anywhere;
+}
+
+.names span {
+  color: var(--color-accent);
+}
+
+.guest-label {
+  margin: var(--space-2) 0 0;
+  font-size: 0.85rem;
+  color: var(--color-muted-text);
+}
+
+.guest-name {
+  margin: 0 0 var(--space-2);
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  overflow-wrap: anywhere;
+  max-width: 100%;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 var(--space-3);
+  border: 0;
+  border-radius: 999px;
+  background: var(--color-accent);
+  color: var(--color-on-accent);
+  font: 600 1rem var(--font-body);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button:focus-visible,
+.music-toggle:focus-visible {
+  outline: 3px solid var(--color-text);
+  outline-offset: 3px;
+}
+
+.page {
+  max-width: 36rem;
+  margin: 0 auto;
+  padding: var(--space-4) var(--space-3);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  outline: none;
+}
+
+.hero,
+.countdown,
+.rsvp,
+.closing {
+  text-align: center;
+}
+
+.opening {
+  color: var(--color-muted-text);
+}
+
+h2 {
+  margin: 0 0 var(--space-2);
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 1.9rem;
+  color: var(--color-accent);
+}
+
+.hero h2.names {
+  color: var(--color-text);
+}
+
+.countdown-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-1);
+}
+
+.countdown-grid p {
+  margin: 0;
+  padding: var(--space-2) 0;
+  border-radius: var(--radius);
+  background: var(--color-surface);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-muted-text);
+}
+
+.countdown-grid span {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  letter-spacing: 0;
+  color: var(--color-text);
+  font-variant-numeric: tabular-nums;
+}
+
+.event-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.event {
+  padding: var(--space-3);
+  border: 1px solid rgba(212, 180, 106, 0.45);
+  border-radius: var(--radius);
+  background: var(--color-surface);
+  text-align: center;
+}
+
+.event h3 {
+  margin: 0 0 var(--space-1);
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 1.4rem;
+}
+
+.event p {
+  margin: 0;
+}
+
+.event-time {
+  font-weight: 600;
+  color: var(--color-accent);
+}
+
+.event-venue {
+  color: var(--color-muted-text);
+}
+
+.signature {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+}
+
+.music-toggle {
+  position: fixed;
+  right: var(--space-2);
+  bottom: var(--space-2);
+  z-index: 5;
+  min-height: 44px;
+  padding: 0 var(--space-2);
+  border: 1px solid var(--color-accent);
+  border-radius: 999px;
+  background: var(--color-surface);
+  color: var(--color-text);
+  font: 600 0.85rem var(--font-body);
+  cursor: pointer;
+}
+
+/* Motion level 2: sections rise into view (JS adds .reveal-ready only when it runs). */
+.reveal-ready [data-reveal] {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity var(--duration-0) var(--easing), transform var(--duration-1) var(--easing);
+}
+
+.reveal-ready [data-reveal].is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal-ready [data-reveal] {
+    transform: none;
+    transition: opacity var(--duration-0) linear;
+  }
+}

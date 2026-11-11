@@ -1,0 +1,139 @@
+{
+  "contract": "Internal service signature (09 §8.5; services/api/src/service_auth.rs, lib/api/signature.ts). header = 't=<unix seconds>,v1=<hex HMAC-SHA256(secret, \"<t>.<METHOD>.<path and query>.<hex SHA-256 of the UTF-8 body>\")>'; accepted when |now - t| <= 60 and the HMAC matches one accepted secret. Expected values computed by an independent Python implementation (hmac, hashlib). Secrets are fictional test values.",
+  "secret": "vector-secret-not-for-production-0123456789abcdef",
+  "previousSecret": "vector-previous-secret-not-for-production-fedcba9876",
+  "maxSkewSeconds": 60,
+  "signs": [
+    {
+      "name": "views POST with a guest",
+      "method": "POST",
+      "pathAndQuery": "/v1/views",
+      "body": "{\"invitationId\":7,\"guestId\":42}",
+      "timestamp": 1798761600,
+      "header": "t=1798761600,v1=cb094b03d475dba7d1e444b09a574a387d5134bd1a33b9a159095e9369d793e5"
+    },
+    {
+      "name": "views POST, anonymous open",
+      "method": "POST",
+      "pathAndQuery": "/v1/views",
+      "body": "{\"invitationId\":7}",
+      "timestamp": 1798761600,
+      "header": "t=1798761600,v1=0877e23f00c1ac3ec90e833a64c41c13c0009d0e721de9a9d7e80fa38f132a9f"
+    },
+    {
+      "name": "GET with an empty body",
+      "method": "GET",
+      "pathAndQuery": "/v1/health/ready",
+      "body": "",
+      "timestamp": 1798761600,
+      "header": "t=1798761600,v1=5d88734d88ee1348e17a1d3e53f510f797fb494527cb9a3ed7c79363fa844690"
+    },
+    {
+      "name": "the query string is signed",
+      "method": "GET",
+      "pathAndQuery": "/v1/me?include=role",
+      "body": "",
+      "timestamp": 1798761600,
+      "header": "t=1798761600,v1=12c2978ff74e1e461964a359dcbd3b201d9ef1a9624eec2858754909a8203724"
+    },
+    {
+      "name": "non-ASCII body bytes are hashed as UTF-8",
+      "method": "POST",
+      "pathAndQuery": "/v1/views",
+      "body": "{\"note\":\"Budi & Sari — ن\"}",
+      "timestamp": 1798761600,
+      "header": "t=1798761600,v1=58617f0a834d0bea3b5419a33f7344f377f70902195741f4c8270ad7c218c923"
+    }
+  ],
+  "rejects": [
+    {
+      "name": "61 s after signing is stale",
+      "header": "t=1798761600,v1=0877e23f00c1ac3ec90e833a64c41c13c0009d0e721de9a9d7e80fa38f132a9f",
+      "method": "POST",
+      "pathAndQuery": "/v1/views",
+      "body": "{\"invitationId\":7}",
+      "now": 1798761661,
+      "reason": "stale"
+    },
+    {
+      "name": "61 s before signing is stale",
+      "header": "t=1798761600,v1=0877e23f00c1ac3ec90e833a64c41c13c0009d0e721de9a9d7e80fa38f132a9f",
+      "method": "POST",
+      "pathAndQuery": "/v1/views",
+      "body": "{\"invitationId\":7}",
+      "now": 1798761539,
+      "reason": "stale"
+    },
+    {
+      "name": "another path",
+      "header": "t=1798761600,v1=0877e23f00c1ac3ec90e833a64c41c13c0009d0e721de9a9d7e80fa38f132a9f",
+      "method": "POST",
+      "pathAndQuery": "/v1/views?x=1",
+      "body": "{\"invitationId\":7}",
+      "now": 1798761600,
+      "reason": "mismatch"
+    },
+    {
+      "name": "another method",
+      "header": "t=1798761600,v1=0877e23f00c1ac3ec90e833a64c41c13c0009d0e721de9a9d7e80fa38f132a9f",
+      "method": "PUT",
+      "pathAndQuery": "/v1/views",
+      "body": "{\"invitationId\":7}",
+      "now": 1798761600,
+      "reason": "mismatch"
+    },
+    {
+      "name": "another body",
+      "header": "t=1798761600,v1=0877e23f00c1ac3ec90e833a64c41c13c0009d0e721de9a9d7e80fa38f132a9f",
+      "method": "POST",
+      "pathAndQuery": "/v1/views",
+      "body": "{\"invitationId\":8}",
+      "now": 1798761600,
+      "reason": "mismatch"
+    },
+    {
+      "name": "signed with an unknown secret",
+      "header": "t=1798761600,v1=63b64657fa50f21da3ed6b51720ff9a15f0d8db60661e0b5bf5b718bd123f31e",
+      "method": "POST",
+      "pathAndQuery": "/v1/views",
+      "body": "{\"invitationId\":7}",
+      "now": 1798761600,
+      "reason": "mismatch"
+    },
+    {
+      "name": "no v1 part",
+      "header": "t=1798761600",
+      "method": "POST",
+      "pathAndQuery": "/v1/views",
+      "body": "{\"invitationId\":7}",
+      "now": 1798761600,
+      "reason": "malformed"
+    },
+    {
+      "name": "duplicate t part",
+      "header": "t=1798761600,t=1798761600,v1=00",
+      "method": "POST",
+      "pathAndQuery": "/v1/views",
+      "body": "{\"invitationId\":7}",
+      "now": 1798761600,
+      "reason": "malformed"
+    },
+    {
+      "name": "unknown part",
+      "header": "t=1798761600,v1=0877e23f00c1ac3ec90e833a64c41c13c0009d0e721de9a9d7e80fa38f132a9f,v2=00",
+      "method": "POST",
+      "pathAndQuery": "/v1/views",
+      "body": "{\"invitationId\":7}",
+      "now": 1798761600,
+      "reason": "malformed"
+    }
+  ],
+  "rotation": {
+    "name": "a header signed with the previous secret verifies while both are accepted",
+    "header": "t=1798761600,v1=84db944f2f97857a5c0b0924b1d56349ceacc2c06b7368709aa69ac8904abfd9",
+    "method": "POST",
+    "pathAndQuery": "/v1/views",
+    "body": "{\"invitationId\":7}",
+    "now": 1798761659
+  }
+}

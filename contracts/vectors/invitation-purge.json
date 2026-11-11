@@ -1,0 +1,47 @@
+{
+  "description": "B-031 (D-063): the retention rules both languages apply. tests/b031-retention.test.ts runs them against lib/invitation/retention.ts and services/api/tests/invitation_purge.rs against services/api/src/retention.rs. Durations here are fixture values, not policy.",
+  "days": [
+    { "raw": "30", "min": 1, "expected": 30 },
+    { "raw": " 7 ", "min": 1, "expected": 7 },
+    { "raw": "1", "min": 1, "expected": 1 },
+    { "raw": "0", "min": 1, "expected": null },
+    { "raw": "0", "min": 0, "expected": 0 },
+    { "raw": "3650", "min": 0, "expected": 3650 },
+    { "raw": "3651", "min": 0, "expected": null },
+    { "raw": "12345", "min": 0, "expected": null },
+    { "raw": "-1", "min": 0, "expected": null },
+    { "raw": "+5", "min": 0, "expected": null },
+    { "raw": "1.5", "min": 0, "expected": null },
+    { "raw": "1e2", "min": 0, "expected": null },
+    { "raw": "", "min": 0, "expected": null },
+    { "raw": null, "min": 0, "expected": null }
+  ],
+  "jobs": [
+    {
+      "invitationId": 12,
+      "deletedAt": "2026-11-10T01:02:03.004Z",
+      "windowDays": 30,
+      "purgeAfter": "2026-12-10T01:02:03.004Z",
+      "dedupeKey": "invitation:12:1794272523004",
+      "payload": { "invitationId": 12, "deletedAt": "2026-11-10T01:02:03.004Z" }
+    },
+    {
+      "invitationId": 7,
+      "deletedAt": "2027-02-28T23:59:59.999Z",
+      "windowDays": 1,
+      "purgeAfter": "2027-03-01T23:59:59.999Z",
+      "dedupeKey": "invitation:7:1803859199999",
+      "payload": { "invitationId": 7, "deletedAt": "2027-02-28T23:59:59.999Z" }
+    }
+  ],
+  "ownership": [
+    { "invitationId": 12, "key": "12/0123456789abcdef01234567.jpg", "owned": true },
+    { "invitationId": 12, "key": "variants/12/0123456789abcdef01234567/standard-640.webp", "owned": true },
+    { "invitationId": 12, "key": "protected/12/0123456789abcdef01234567.png", "owned": true },
+    { "invitationId": 12, "key": "1/0123456789abcdef01234567.jpg", "owned": false },
+    { "invitationId": 12, "key": "123/0123456789abcdef01234567.jpg", "owned": false },
+    { "invitationId": 12, "key": "variants/123/0123456789abcdef01234567/lite-320.webp", "owned": false },
+    { "invitationId": 12, "key": "avatars/12/0123456789abcdef01234567.jpg", "owned": false },
+    { "invitationId": 12, "key": "12/../13/0123456789abcdef01234567.jpg", "owned": false }
+  ]
+}

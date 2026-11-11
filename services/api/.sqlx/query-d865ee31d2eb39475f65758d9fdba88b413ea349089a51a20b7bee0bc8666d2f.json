@@ -1,0 +1,14 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "delete from api_rate_limits where bucket in (select bucket from api_rate_limits where window_start < $1 order by window_start limit 100)",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Left": [
+        "Timestamp"
+      ]
+    },
+    "nullable": []
+  },
+  "hash": "d865ee31d2eb39475f65758d9fdba88b413ea349089a51a20b7bee0bc8666d2f"
+}

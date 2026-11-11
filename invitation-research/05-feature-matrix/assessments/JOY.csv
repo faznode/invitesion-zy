@@ -1,0 +1,10 @@
+feature_id,status,basis,evidence,note
+FM-022,Full,CLAIMED,S-JOY-001,Smart RSVP
+FM-036,Full,CLAIMED,S-JOY-001,Registry
+FM-037,Full,CLAIMED,S-JOY-001,Cash funds
+FM-061,Full,CLAIMED,S-JOY-001,Hotel blocks and travel
+FM-063,Full,INFERRED,S-JOY-001,Free wedding website (multi-page structure not observed)
+FM-112,Full,CLAIMED,S-JOY-001,Companion app
+FM-118,Full,CLAIMED,S-JOY-001,Core website free
+FM-151,Full,INFERRED,S-JOY-001,"Revenue from registry, prints and hotel blocks (medium confidence)"
+FM-181,Full,CLAIMED,S-JOY-001,"""Magic link"" address collection"

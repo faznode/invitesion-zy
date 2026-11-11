@@ -1,0 +1,821 @@
+feature_id,column,status,basis,source,evidence,note
+FM-001,invitesion,Full,CODE,curated,F-001;F-049,Guest slug derived from the name is guessable (QA-003)
+FM-001,IDI,Full,OBSERVED,curated,S-IDI-002;S-IDI-006,"Guest parameter on every preview link; ""Ubah Nama Tamu"" on every tier"
+FM-001,PLO,Full,CLAIMED,curated,S-PLO-003,WhatsApp share per guest name and address
+FM-001,SMO,Full,CLAIMED,curated,S-SMO-006,Unlimited custom guest names
+FM-001,WEV,Full,CLAIMED,curated,S-WEV-001,Per-guest names and unique QR codes for real invitations (demos carry no guest parameter)
+FM-001,VID,Full,CLAIMED,curated,S-VID-002,"""One name, one exclusive invitation"" (demos carry no guest parameter)"
+FM-001,ENV,Full,CLAIMED,curated,S-ENV-001,Personal guest links (demo URL carries no guest parameter)
+FM-001,IVT,Full,OBSERVED,curated,C-IVT-101;C-IVT-104,Opaque guest code (?code=) resolved through api.invitato.net
+FM-001,INV,Full,OBSERVED,curated,S-INV-001;S-INV-002,Guest name from ?to= / slug
+FM-001,KAT,Full,OBSERVED,curated,S-KAT-004,Personalized invitation (Rp 10k add-on)
+FM-002,invitesion,Full,CODE,curated,F-002;C-INV-002;C-INV-001;C-INV-005,React-escaped; long names wrap
+FM-002,IDI,Full,CLAIMED,curated,S-IDI-006,Guest name in the link on every tier
+FM-002,SMO,Full,OBSERVED,curated,S-SMO-004,Guest-name slot in the salutation (structure only)
+FM-002,WEV,Full,CLAIMED,curated,S-WEV-001,
+FM-002,VID,Full,CLAIMED,curated,S-VID-002,
+FM-002,ENV,Full,OBSERVED,curated,C-ENV-111;S-ENV-001,Family A cover shows a guest salutation line
+FM-002,IVT,Full,CLAIMED,curated,S-IVT-002,
+FM-002,INV,Full,OBSERVED,curated,C-INV-111;C-INV-112;C-INV-114;C-INV-113;C-INV-115;C-INV-116,Guest name on the cover on 6/6
+FM-002,KAT,Full,OBSERVED,curated,S-KAT-001,Cover with a guest greeting
+FM-003,invitesion,None,CODE,curated,F-003,Cover gate exists only in the marketing preview mock (M-005)
+FM-003,PLO,Full,CLAIMED,curated,S-PLO-003,
+FM-003,SMO,Full,OBSERVED,curated,S-SMO-004,"""Open Invitation"" cover"
+FM-003,WEV,Full,OBSERVED,curated,C-WEV-101;C-WEV-104;C-WEV-105;C-WEV-106;C-WEV-102;C-WEV-103,All six demos opened (coverGate true -> false); the dialog has no accessible name
+FM-003,VID,Full,MEASURED,derived,C-VID-103;C-VID-107;C-VID-108;C-VID-109,keyword detector: 4/6 structure-eligible theme(s)
+FM-003,ENV,Full,OBSERVED,curated,C-ENV-122;C-ENV-111,"role=dialog named ""Buka undangan""; some controls are text-less (B-ENV-001)"
+FM-003,IVT,Full,OBSERVED,curated,C-IVT-101;C-IVT-104,"""Buka Undangan"" / ""Tap to Open"""
+FM-003,INV,Full,OBSERVED,curated,C-INV-111;C-INV-112;C-INV-114;C-INV-113;C-INV-115;C-INV-116,"""Buka Undangan"" on 6/6 (pre-D-016 synthetic click)"
+FM-003,KAT,Full,OBSERVED,curated,C-KAT-101;C-KAT-102;C-KAT-103;C-KAT-104;C-KAT-105;C-KAT-106,"""Open Invitation"" on 6/6; opening unverified (pre-D-016 click)"
+FM-003,BRN,None,OBSERVED,curated,C-BRN-101;C-BRN-102;C-BRN-103,No cover gate on the three vendor samples
+FM-004,invitesion,None,CODE,curated,F-004,config.music is never rendered
+FM-004,IDI,Full,CLAIMED,curated,S-IDI-006,From Klasik (Rp 59k)
+FM-004,PLO,Full,CLAIMED,curated,S-PLO-003,Autoplay backsound
+FM-004,SMO,Full,CLAIMED,curated,S-SMO-006,
+FM-004,WEV,Full,OBSERVED,curated,C-WEV-104;C-WEV-105;C-WEV-101;C-WEV-102;C-WEV-103;C-WEV-106,MP3 audio element with a start offset; playback not measured
+FM-004,VID,Full,CLAIMED,curated,S-VID-002;C-VID-103;C-VID-101;C-VID-102;C-VID-107;C-VID-108;C-VID-109,Music on all tiers; two audio elements on the demos; playback not measured
+FM-004,ENV,Full,OBSERVED,curated,C-ENV-111;C-ENV-122,Looping MP3 without autoplay; playback not measured
+FM-004,IVT,Full,OBSERVED,curated,C-IVT-101;C-IVT-104,Looping MP3 without autoplay; playback not measured
+FM-004,INV,Full,OBSERVED,curated,C-INV-111;C-INV-114;C-INV-112;C-INV-113;C-INV-115;C-INV-116,Real MP3 audio element; playback after a real tap unverified
+FM-004,KAT,Full,OBSERVED,curated,C-KAT-101;C-KAT-102,Music through the Video.js / YouTube stack; no audio element
+FM-004,BRN,None,OBSERVED,curated,C-BRN-101;C-BRN-102;C-BRN-103,No audio element on the three samples
+FM-005,invitesion,None,CODE,curated,F-004,No player rendered
+FM-005,VID,Full,OBSERVED,curated,C-VID-101;C-VID-102;C-VID-103;C-VID-107;C-VID-108;C-VID-109,Music control on 3/3
+FM-005,ENV,Full,OBSERVED,curated,C-ENV-122,"""Pause music"" control after the open"
+FM-005,INV,Full,OBSERVED,curated,C-INV-111;C-INV-114;C-INV-112;C-INV-113;C-INV-115;C-INV-116,6/6
+FM-005,KAT,Full,OBSERVED,curated,C-KAT-101;C-KAT-102;C-KAT-103;C-KAT-104;C-KAT-105;C-KAT-106,6/6
+FM-006,invitesion,None,CODE,curated,F-072,
+FM-006,PLO,Full,CLAIMED,curated,S-PLO-001;S-PLO-003,Ready-made backsound songs
+FM-006,SMO,Full,CLAIMED,curated,S-SMO-006;S-SMO-001,"Hundreds of tracks (""600+ musik"")"
+FM-006,WEV,Full,CLAIMED,curated,S-WEV-004,Reviewers report few songs
+FM-006,ENV,Full,CLAIMED,curated,S-ENV-001,Music catalog in both plans
+FM-006,INV,Full,CLAIMED,curated,S-INV-002,Music from a list
+FM-007,invitesion,None,CODE,curated,F-072,
+FM-007,IDI,Full,CLAIMED,curated,S-IDI-006,Custom music on Premium only
+FM-007,SMO,Full,CLAIMED,curated,S-SMO-006,Custom songs via SoundCloud
+FM-007,WEV,Full,CLAIMED,curated,S-WEV-004,Songs imported from YouTube (reported not to play inside Instagram's in-app browser)
+FM-007,ENV,Full,CLAIMED,curated,S-ENV-001,MP3 upload in both plans
+FM-007,INV,Full,CLAIMED,curated,S-INV-002,Custom upload
+FM-007,KAT,Full,OBSERVED,curated,S-KAT-004,Custom song and song crop
+FM-008,invitesion,Full,CODE,curated,F-005;E-008;REPO@2a6015f,s26: live countdown to the primary event on every layout (components/invitation/countdown.tsx). baseline None
+FM-008,IDI,Full,CLAIMED,curated,S-IDI-006,Every tier
+FM-008,SMO,Full,OBSERVED,curated,S-SMO-004;S-SMO-006,
+FM-008,WEV,Full,OBSERVED,curated,C-WEV-101;C-WEV-104;C-WEV-102;C-WEV-103;C-WEV-105;C-WEV-106,6/6 demos
+FM-008,VID,Full,OBSERVED,curated,C-VID-101;C-VID-102;C-VID-103;C-VID-107;C-VID-108;C-VID-109,
+FM-008,ENV,Full,OBSERVED,curated,C-ENV-111,
+FM-008,IVT,Full,OBSERVED,curated,C-IVT-101;C-IVT-104,
+FM-008,INV,Full,OBSERVED,curated,C-INV-111;C-INV-114;C-INV-112;C-INV-113;C-INV-115;C-INV-116,6/6
+FM-008,KAT,Full,OBSERVED,curated,C-KAT-101;C-KAT-102;C-KAT-103;C-KAT-104;C-KAT-105;C-KAT-106,6/6
+FM-009,invitesion,Full,CODE,curated,F-030,
+FM-010,invitesion,Full,CODE,curated,F-029;C-INV-001;C-INV-002;C-INV-005,Three presets carry Qur'an translations of unknown provenance (QA-015; ADR-O04)
+FM-010,PLO,Full,CLAIMED,curated,S-PLO-003,The builder starts by picking a quote
+FM-010,SMO,Full,OBSERVED,curated,S-SMO-004,Qur'an verse blocks on the previews checked
+FM-010,ENV,Full,OBSERVED,curated,C-ENV-111,"Quote block with a Qur'an citation marker (""QS. ..."")"
+FM-010,IVT,Full,OBSERVED,curated,C-IVT-101;C-IVT-104,Quote block with a Qur'an citation marker
+FM-010,INV,Full,OBSERVED,curated,C-INV-111;C-INV-114;C-INV-112;C-INV-113;C-INV-115;C-INV-116,Verse block on 6/6
+FM-010,KAT,Full,OBSERVED,curated,S-KAT-001;C-KAT-101;C-KAT-105;C-KAT-106,Quote section; verse marker on 2/6
+FM-011,invitesion,Partial,CODE,curated,F-006,Captured in the editor; only nicknames rendered
+FM-011,PLO,Full,CLAIMED,curated,S-PLO-003,Bride and groom with both parents
+FM-011,SMO,Full,OBSERVED,curated,S-SMO-004,Parents blocks
+FM-011,KAT,Full,OBSERVED,curated,S-KAT-001,Couple with parents
+FM-011,BRN,Full,OBSERVED,curated,S-BRN-005,Groom/bride and parents' contact areas (template labels)
+FM-012,invitesion,Partial,CODE,curated,F-006;E-039;REPO@2a6015f,s26: adults' photos render once uploaded; children's need the host's switch and a personal link (D-038 / D-040); Instagram handles stay stored-only (content contract). baseline None (Captured in the editor; not rendered)
+FM-012,SMO,Full,OBSERVED,curated,S-SMO-004,Instagram blocks
+FM-012,IVT,Full,OBSERVED,curated,C-IVT-101;C-IVT-104,Couple's social-media buttons
+FM-012,KAT,Full,OBSERVED,curated,S-KAT-001,Social handles
+FM-013,invitesion,Full,CODE,curated,F-007;C-INV-001;C-INV-005,Plain card list
+FM-013,IDI,Full,CLAIMED,curated,S-IDI-006,Premium only
+FM-013,PLO,Full,CLAIMED,curated,S-PLO-003,
+FM-013,WEV,Full,OBSERVED,curated,C-WEV-104;C-WEV-101;C-WEV-102;C-WEV-103;C-WEV-105;C-WEV-106,5/6 demos
+FM-013,VID,Full,OBSERVED,curated,C-VID-103;C-VID-107;C-VID-108;C-VID-109,"""Our story"" section"
+FM-013,ENV,Full,OBSERVED,curated,C-ENV-111;C-ENV-122,
+FM-013,IVT,Full,OBSERVED,curated,C-IVT-101;C-IVT-104,
+FM-013,INV,Full,OBSERVED,curated,C-INV-111;C-INV-114;C-INV-115;C-INV-116,4/6
+FM-013,KAT,Full,OBSERVED,curated,S-KAT-001;C-KAT-101;C-KAT-102;C-KAT-103;C-KAT-104;C-KAT-105;C-KAT-106,Story in three chapters
+FM-014,invitesion,Partial,CODE,curated,F-008,Grid only; layout setting ignored; originals served
+FM-014,IDI,Full,CLAIMED,curated,S-IDI-006,10 / 15 / 20 photos on Pro / Super / Premium; none below Pro
+FM-014,PLO,Full,CLAIMED,curated,S-PLO-003,Prewedding gallery
+FM-014,SMO,Full,CLAIMED,curated,S-SMO-006,No upload limit
+FM-014,WEV,Full,OBSERVED,curated,C-WEV-104;C-WEV-101;C-WEV-102;C-WEV-103;C-WEV-105;C-WEV-106,6/6 demos
+FM-014,VID,Full,OBSERVED,curated,C-VID-103,
+FM-014,ENV,Partial,OBSERVED,curated,C-ENV-111;S-ENV-001,Gallery capped at 10 photos
+FM-014,IVT,Full,CLAIMED,curated,S-IVT-003;C-IVT-101;C-IVT-104,Unlimited gallery
+FM-014,INV,Partial,CLAIMED,curated,S-INV-002;C-INV-111;C-INV-113;C-INV-114;C-INV-116,Gallery capped at 10 (Plus) / 20 (Premium)
+FM-014,KAT,Full,OBSERVED,curated,C-KAT-101;S-KAT-004;C-KAT-102;C-KAT-103;C-KAT-104;C-KAT-105;C-KAT-106,25 / 35 / unlimited photos by tier
+FM-014,BRN,Full,OBSERVED,curated,S-BRN-005,Gallery area
+FM-014,PPO,Full,CLAIMED,curated,S-PPO-001,Galleries in the Plus unlock
+FM-015,invitesion,None,CODE,curated,F-008,
+FM-015,WEV,Full,OBSERVED,curated,C-WEV-104;C-WEV-105,Swiper slide controls
+FM-015,ENV,Full,OBSERVED,curated,C-ENV-111,Carousel with previous / next / play
+FM-015,BRN,Full,OBSERVED,curated,S-BRN-005,PhotoSwipe lightbox
+FM-016,invitesion,None,CODE,curated,F-009,Media API accepts video; renderer ignores it
+FM-016,IDI,Full,CLAIMED,curated,S-IDI-006,Video/streaming on Premium
+FM-016,PLO,Full,OBSERVED,curated,S-PLO-003,"""Add a prewedding video"" in 1.7.1"
+FM-016,SMO,Full,CLAIMED,curated,S-SMO-006,Photo and video gallery
+FM-016,WEV,Full,OBSERVED,curated,C-WEV-101,YouTube iframe on C-WEV-101
+FM-016,IVT,Full,OBSERVED,curated,C-IVT-101;C-IVT-104,Video elements and video backgrounds
+FM-016,KAT,Full,OBSERVED,curated,S-KAT-001;S-KAT-004,Video footage and video gallery
+FM-016,BRN,Full,OBSERVED,curated,S-BRN-005,Video area
+FM-017,invitesion,Full,CODE,curated,F-010;QA-002;E-004;E-034;REPO@2a6015f,"s26: several events with date, time and place; times in the event's own zone (E-004); durable event ids (E-034). baseline Partial (Times wrong on UTC servers (QA-002))"
+FM-017,PLO,Full,CLAIMED,curated,S-PLO-003,Add or remove events
+FM-017,SMO,Full,OBSERVED,curated,S-SMO-004,Akad and reception schedule
+FM-017,ENV,Full,OBSERVED,curated,C-ENV-111;C-ENV-122,Ceremony and events sections plus a rundown
+FM-017,IVT,Full,OBSERVED,curated,C-IVT-104;S-IVT-003,Separate events; event select in RSVP
+FM-017,KAT,Full,OBSERVED,curated,S-KAT-001;S-KAT-004,Holy matrimony + reception; event sessions
+FM-018,invitesion,Full,CODE,curated,F-033;QA-002;E-004;REPO@2a6015f;C-INV-001;C-INV-002;C-INV-005,"s26: times carry the event's own zone label (WIB / WITA / WIT, other offsets as UTC±hh:mm) via lib/invitation/event-time.ts (E-004). baseline Partial (Hard-coded WIB plus server time zone (QA-002); C-INV-002 shows a WITA event labelled with both zones)"
+FM-018,WEV,Partial,OBSERVED,curated,C-WEV-104;C-WEV-101;C-WEV-103;C-WEV-105,WIB labels on 4/6; correctness for WITA/WIT not verifiable
+FM-018,IVT,Full,OBSERVED,curated,C-IVT-101;C-IVT-104,WIB labels on the opened Indonesian designs
+FM-018,INV,Full,OBSERVED,curated,C-INV-111;C-INV-114;C-INV-112;C-INV-113;C-INV-115;C-INV-116,WIB labels on 6/6
+FM-019,invitesion,Full,CODE,curated,F-011;C-INV-001;C-INV-005,External link only
+FM-019,IDI,Full,CLAIMED,curated,S-IDI-006,Every tier
+FM-019,SMO,Full,OBSERVED,curated,S-SMO-004,Maps link
+FM-019,WEV,Full,OBSERVED,curated,C-WEV-104,Map navigation control
+FM-019,VID,Full,OBSERVED,curated,C-VID-103,Location button
+FM-019,ENV,Full,OBSERVED,curated,C-ENV-111,Directions button
+FM-019,IVT,Full,OBSERVED,curated,C-IVT-101;C-IVT-104,Location button
+FM-019,INV,Full,OBSERVED,curated,C-INV-111;C-INV-114;C-INV-112;C-INV-113;C-INV-115;C-INV-116,6/6
+FM-019,BRN,Full,OBSERVED,curated,S-BRN-005,Directions area
+FM-020,invitesion,None,CODE,curated,F-011,
+FM-020,IDI,Full,CLAIMED,curated,S-IDI-006,Embedded Google Maps on Premium
+FM-020,ENV,Full,OBSERVED,curated,C-ENV-111,Click-to-load map (placeholder on first paint)
+FM-021,invitesion,Full,CODE,curated,F-012;E-008;REPO@2a6015f,s26: calendar button and an .ics route per invitation; flag GUEST_CALENDAR default on. baseline None
+FM-021,IDI,Full,CLAIMED,curated,S-IDI-006,Save-to-calendar on every tier
+FM-021,SMO,Full,CLAIMED,curated,S-SMO-006,Google Calendar reminder with the countdown
+FM-021,WEV,Full,OBSERVED,curated,C-WEV-104;C-WEV-101;C-WEV-102;C-WEV-103;C-WEV-105;C-WEV-106,"""Simpan Tanggal"" on 6/6"
+FM-021,VID,Full,OBSERVED,curated,C-VID-103;C-VID-107;C-VID-108;C-VID-109,"""Save the Date"" button"
+FM-021,ENV,Full,OBSERVED,curated,C-ENV-111,Add-to-calendar button
+FM-021,IVT,Full,OBSERVED,curated,C-IVT-101;C-IVT-104,Remind-me / add-to-calendar
+FM-021,INV,Full,OBSERVED,curated,C-INV-111;C-INV-112;C-INV-114;C-INV-115,3/6
+FM-021,KAT,Full,OBSERVED,curated,C-KAT-101;C-KAT-102;C-KAT-103;C-KAT-104;C-KAT-105;C-KAT-106,6/6
+FM-022,invitesion,Full,CODE,curated,F-013;C-INV-001;C-INV-002;C-INV-005,Personal link only
+FM-022,IDI,Full,OBSERVED,curated,S-IDI-003;S-IDI-006,
+FM-022,SMO,Full,CLAIMED,curated,S-SMO-006,
+FM-022,WEV,Full,OBSERVED,curated,C-WEV-104;C-WEV-101;C-WEV-102;C-WEV-103;C-WEV-105;C-WEV-106,
+FM-022,VID,Full,OBSERVED,curated,C-VID-103;C-VID-107;C-VID-108;C-VID-109,
+FM-022,ENV,Full,OBSERVED,curated,C-ENV-111;C-ENV-122,
+FM-022,IVT,Full,OBSERVED,curated,C-IVT-101;C-IVT-104,
+FM-022,INV,Full,OBSERVED,curated,C-INV-111;C-INV-114;C-INV-112;C-INV-113;C-INV-115;C-INV-116,5/6 (one 11-field form)
+FM-022,KAT,Full,OBSERVED,curated,C-KAT-101;C-KAT-102;C-KAT-104;C-KAT-105;C-KAT-106,4/6
+FM-022,RSV,Full,CLAIMED,curated,S-RSV-001,Registration / RSVP forms
+FM-022,JOY,Full,CLAIMED,curated,S-JOY-001,Smart RSVP
+FM-022,PTF,Full,CLAIMED,curated,S-PTF-001,RSVP in the browser without an app
+FM-023,invitesion,Full,CODE,curated,F-014;E-025;REPO@2a6015f,"s26: ""maybe"" answer; flag RSVP_MAYBE default on. baseline None"
+FM-023,ENV,Full,OBSERVED,curated,C-ENV-111,Three states: attending / unsure / unable
+FM-023,IVT,None,OBSERVED,curated,C-IVT-101;C-IVT-104,Two attendance buttons only on both opened designs
+FM-024,invitesion,Full,CODE,curated,F-015;QA-005;E-007;REPO@2a6015f,"s26: the answer goes to attending_count within the host's allowance, which is never overwritten (E-007). baseline Partial (The answer overwrites the allowance (QA-005))"
+FM-024,IDI,Full,OBSERVED,curated,S-IDI-003,Accepts 1-10 guests (one real-event page)
+FM-024,WEV,Full,OBSERVED,curated,C-WEV-104,Guest-count field
+FM-024,VID,Full,OBSERVED,curated,C-VID-103,Guest-count field
+FM-024,ENV,Full,OBSERVED,curated,C-ENV-111;C-ENV-122,Number field (family A) and stepper (family B)
+FM-024,IVT,Full,OBSERVED,curated,C-IVT-104;S-IVT-005,Guest-count field; per-guest quota claimed
+FM-024,KAT,Full,CLAIMED,curated,S-KAT-003;S-KAT-004,Pax limit per invitation
+FM-025,invitesion,Full,CODE,curated,F-016;E-020;REPO@2a6015f,s26: host-set deadline enforced on the server with a refusal the guest can see (E-020). baseline None (Config only; not enforced)
+FM-026,invitesion,Full,CODE,curated,F-017;E-029;E-030;E-031;REPO@2a6015f,s26: host question editor; answers in guests.rsvp_answers (D-034 / D-035); flag RSVP_QUESTIONS default on. baseline None (Config only; no guest UI)
+FM-026,SMO,Full,CLAIMED,curated,S-SMO-006,Customizable RSVP form
+FM-026,PPO,Full,CLAIMED,curated,S-PPO-001;S-PPO-002,Surveys and guest-info collection
+FM-026,RSV,Full,CLAIMED,curated,S-RSV-001,Custom questions
+FM-026,PTF,Full,CLAIMED,curated,S-PTF-001,Guest questions
+FM-027,invitesion,None,CODE,curated,F-018,Config only; no guest UI
+FM-028,invitesion,Full,CODE,curated,F-043;E-034;E-035;E-038;REPO@2a6015f,s26: an answer per event (D-036) and invite-only events with a host override (D-037); flags default on. baseline None (Config only)
+FM-028,IVT,Full,CLAIMED,curated,S-IVT-002;S-IVT-005,Per-event access per guest
+FM-028,KAT,Full,CLAIMED,curated,S-KAT-004,Event sessions and guest lock
+FM-029,invitesion,None,CODE,curated,F-015,Count only; no companion names
+FM-030,invitesion,Full,CODE,curated,F-019;C-INV-001;C-INV-002;C-INV-005,Latest 50 plus count
+FM-030,IDI,Full,CLAIMED,curated,S-IDI-006,Every tier
+FM-030,PLO,Full,CLAIMED,curated,S-PLO-003,Guest book
+FM-030,SMO,Full,CLAIMED,curated,S-SMO-006,
+FM-030,WEV,Full,OBSERVED,curated,C-WEV-104;C-WEV-101;C-WEV-102;C-WEV-103;C-WEV-105;C-WEV-106,
+FM-030,VID,Full,OBSERVED,curated,C-VID-103;C-VID-107;C-VID-108;C-VID-109,300-character limit
+FM-030,ENV,Full,OBSERVED,curated,C-ENV-111;C-ENV-122,
+FM-030,IVT,Full,OBSERVED,curated,C-IVT-101;C-IVT-104,
+FM-030,INV,Full,OBSERVED,curated,C-INV-111;C-INV-114;C-INV-112;C-INV-113;C-INV-115;C-INV-116,6/6
+FM-030,KAT,Full,OBSERVED,curated,C-KAT-102;C-KAT-101,2/6
+FM-030,BRN,Full,OBSERVED,curated,S-BRN-005,Guestbook area
+FM-031,invitesion,None,CODE,curated,M-019,No reply action
+FM-031,IDI,Full,CLAIMED,curated,S-IDI-006,Reply to wishes on Premium
+FM-032,invitesion,Full,CODE,curated,F-021;C-INV-001;C-INV-005,Visible without a guest link
+FM-032,IDI,Full,CLAIMED,curated,S-IDI-006,Bank account for gifts from Pro
+FM-032,SMO,Full,CLAIMED,curated,S-SMO-006,Digital envelope and gifts page
+FM-032,WEV,Full,OBSERVED,curated,C-WEV-104;C-WEV-102;C-WEV-103;C-WEV-105;C-WEV-106,Gift sending on 5/6
+FM-032,VID,Full,OBSERVED,curated,C-VID-103;C-VID-107;C-VID-108;C-VID-109,E-Angpao digital envelope
+FM-032,ENV,Full,OBSERVED,curated,C-ENV-111;S-ENV-001,Two bank accounts (cap of 2)
+FM-032,IVT,Full,OBSERVED,curated,C-IVT-101;C-IVT-104,Bank transfer
+FM-032,INV,Full,OBSERVED,curated,C-INV-111;C-INV-114;C-INV-112;C-INV-113;C-INV-115;C-INV-116,6/6
+FM-032,KAT,Full,OBSERVED,curated,S-KAT-001;C-KAT-101;C-KAT-102;C-KAT-103;C-KAT-104;C-KAT-105;C-KAT-106,Bank accounts with transfer-proof upload
+FM-032,BRN,Full,OBSERVED,curated,S-BRN-005;S-BRN-004,Gift-money transfer area
+FM-033,invitesion,None,CODE,curated,F-021,No copy button
+FM-033,ENV,Full,OBSERVED,curated,C-ENV-111,Copy-number buttons
+FM-033,INV,Full,OBSERVED,curated,C-INV-111;C-INV-114;C-INV-112;C-INV-113;C-INV-115;C-INV-116,Copy button on 6/6
+FM-033,KAT,Full,MEASURED,derived,C-KAT-101;C-KAT-102,keyword detector: 2/6 structure-eligible theme(s)
+FM-034,invitesion,None,CODE,curated,F-022,
+FM-034,ENV,Full,OBSERVED,curated,C-ENV-111;S-ENV-001,QRIS tab in the gift block
+FM-035,invitesion,Partial,CODE,curated,F-023,Address shown as plain text
+FM-035,IDI,Full,OBSERVED,curated,S-IDI-003;S-IDI-006,"Physical gift drop-off on every tier; ""JASTIO"" drop-off service"
+FM-035,ENV,Full,INFERRED,curated,C-ENV-111;C-ENV-122,"""Kado"" tab next to bank transfer and QRIS (content not recorded)"
+FM-035,IVT,Full,OBSERVED,curated,C-IVT-101;C-IVT-104,Physical gift
+FM-035,INV,Full,CLAIMED,curated,S-INV-002,Gift sending
+FM-035,KAT,Full,OBSERVED,curated,S-KAT-004,Gift sending
+FM-036,invitesion,None,CODE,curated,F-023,
+FM-036,IDI,Full,OBSERVED,curated,S-IDI-003,23 vendor-fulfilled gift items with shipping discount (one page)
+FM-036,WEV,Full,OBSERVED,curated,S-WEV-005;C-WEV-104,"Wegiftry registry with reservation (""Lihat Daftar Kado"")"
+FM-036,VID,Full,OBSERVED,curated,C-VID-103,"Gift Registry (""Send Gift"", ""Give as a Gift"")"
+FM-036,BRN,Full,CLAIMED,curated,S-BRN-004,Flower-wreath gift feature (cannot be switched off on free invitations)
+FM-036,JOY,Full,CLAIMED,curated,S-JOY-001,Registry
+FM-037,invitesion,None,CODE,curated,F-023,
+FM-037,JOY,Full,CLAIMED,curated,S-JOY-001,Cash funds
+FM-038,invitesion,None,CODE,curated,M-013,
+FM-038,IDI,Full,OBSERVED,curated,S-IDI-003,Paid stickers Rp 37.5k-58.5k bought by guests
+FM-039,invitesion,Full,CODE,curated,F-024,
+FM-039,IDI,Full,CLAIMED,curated,S-IDI-006,Streaming and video link from Super
+FM-039,WEV,Full,OBSERVED,curated,C-WEV-104;C-WEV-101;C-WEV-102;C-WEV-103;C-WEV-105;C-WEV-106,5/6 demos
+FM-039,VID,Full,OBSERVED,curated,C-VID-103;C-VID-101;C-VID-107;C-VID-108;C-VID-109,"""Join YouTube"""
+FM-039,IVT,Full,OBSERVED,curated,C-IVT-101;C-IVT-104,
+FM-039,INV,Full,OBSERVED,curated,C-INV-111;C-INV-114;C-INV-112;C-INV-115;C-INV-116,5/6
+FM-039,KAT,Full,OBSERVED,curated,C-KAT-101;C-KAT-102;C-KAT-103;C-KAT-104;C-KAT-105;C-KAT-106,6/6
+FM-040,invitesion,None,CODE,curated,F-009,
+FM-040,IDI,Full,CLAIMED,curated,S-IDI-006,Video/streaming on Premium
+FM-040,WEV,Full,OBSERVED,curated,C-WEV-101,Embedded YouTube player
+FM-040,VID,Full,OBSERVED,curated,C-VID-103,YouTube iframe
+FM-040,IVT,Full,OBSERVED,curated,C-IVT-101;C-IVT-104,Two embedded YouTube players
+FM-040,KAT,Full,OBSERVED,curated,C-KAT-101;C-KAT-102,Video.js / YouTube players
+FM-041,invitesion,Full,CODE,curated,F-025;E-014;E-017;REPO@2a6015f,s26: dress-code block rendered (content contract E-014). baseline None (Config only (corporateProfile.dressCode))
+FM-041,VID,Full,OBSERVED,curated,C-VID-103;C-VID-107;C-VID-108;C-VID-109,
+FM-041,ENV,Full,OBSERVED,curated,C-ENV-111;C-ENV-122,
+FM-041,INV,Full,CLAIMED,curated,S-INV-003,Dress code on premium themes
+FM-041,KAT,Full,OBSERVED,curated,C-KAT-101;C-KAT-102;C-KAT-103;C-KAT-104;C-KAT-105;C-KAT-106,6/6
+FM-042,invitesion,None,CODE,curated,F-026,guests.qr_code column unused
+FM-042,IDI,Full,CLAIMED,curated,S-IDI-006,QR check-in for guests from Super (pass implied)
+FM-042,SMO,Full,CLAIMED,curated,S-SMO-006,Committee scans each guest's QR
+FM-042,WEV,Full,OBSERVED,curated,C-WEV-104;C-WEV-105;C-WEV-106,"""Tampilkan QR Checkin"" personal pass on 6/6"
+FM-042,VID,Full,CLAIMED,curated,S-VID-004,RSVP returns an entry QR (E-Guest Book tier)
+FM-042,ENV,Full,CLAIMED,curated,S-ENV-001,Check-in QR in both plans; not seen on the demo guest pages
+FM-042,IVT,Full,OBSERVED,curated,C-IVT-101;C-IVT-104,"""Download access card"" = personal one-time QR pass"
+FM-043,invitesion,None,CODE,curated,F-027,
+FM-043,WEV,Partial,OBSERVED,curated,C-WEV-104,Downloadable IG-story template rather than a share button
+FM-043,BRN,Full,OBSERVED,curated,S-BRN-005,Kakao SDK share area
+FM-044,invitesion,Full,CODE,curated,F-028;E-026;REPO@2a6015f,s26: Instagram-story block with hashtag and filter link; wedding hashtag (E-026). baseline None (Config only)
+FM-044,WEV,Full,OBSERVED,curated,C-WEV-104,IG-story template on 4/6
+FM-044,KAT,Full,OBSERVED,curated,C-KAT-101;C-KAT-102;C-KAT-103;C-KAT-104;C-KAT-105,Instagram filter on 4/6
+FM-045,invitesion,None,CODE,curated,M-013,
+FM-046,invitesion,Full,CODE,curated,F-031,
+FM-047,invitesion,Full,CODE,curated,F-032;QA-009;E-010;REPO@2a6015f;C-INV-001;C-INV-002;C-INV-005,s26: one og:image per invitation behind a content-hashed URL; names outside the bundled Latin font stay out of the image by design (E-010). baseline Partial (Title only; no og:image (QA-009))
+FM-047,WEV,Full,OBSERVED,curated,C-WEV-104;C-WEV-101;C-WEV-102;C-WEV-103;C-WEV-105;C-WEV-106,og:image present; no og:title / og:description
+FM-047,VID,Full,OBSERVED,curated,C-VID-101;C-VID-102;C-VID-103;C-VID-107;C-VID-108;C-VID-109,"og:image, og:title and og:description"
+FM-047,ENV,Full,OBSERVED,curated,C-ENV-111,"og:image, og:title, og:description"
+FM-047,IVT,Full,OBSERVED,curated,C-IVT-101;C-IVT-104,"og:image, og:title, og:description"
+FM-047,INV,Full,OBSERVED,curated,C-INV-111;C-INV-114;C-INV-112;C-INV-113;C-INV-115;C-INV-116,"og:image, og:title, og:description"
+FM-047,KAT,Full,OBSERVED,curated,C-KAT-101;C-KAT-102;C-KAT-103;C-KAT-104;C-KAT-105;C-KAT-106,"og:image, og:title, og:description"
+FM-047,BRN,None,MEASURED,derived,C-BRN-101;C-BRN-102;C-BRN-103,"og:image on 0/3 theme(s), og:title on 0/3"
+FM-048,invitesion,None,CODE,curated,F-034,settings.language ignored
+FM-048,IVT,Full,OBSERVED,curated,C-IVT-101;C-IVT-102;C-IVT-103;C-IVT-104,ID/EN switch on every design
+FM-049,invitesion,None,CODE,curated,F-035,
+FM-050,invitesion,None,CODE,curated,M-013,
+FM-050,IDI,Full,CLAIMED,curated,S-IDI-006,Auto scroll from Super
+FM-051,invitesion,Partial,CODE,curated,F-036;E-016;E-018;E-027;REPO@2a6015f,"s26: five layouts (legacy, Gapura, Kartu, Riang, Lontar) differ in layout and ornament; the 64 catalog templates map onto them, so many still differ by palette only (B-030 partial). baseline None (One layout for all 64 templates; palette is the only variable)"
+FM-051,ENV,Full,OBSERVED,curated,C-ENV-111;C-ENV-122;S-ENV-001,Two layout families with per-theme art; 18 art-directed themes
+FM-051,IVT,Full,OBSERVED,curated,S-IVT-004,34 in-house designs with distinct art concepts
+FM-052,invitesion,None,CODE,curated,F-037,
+FM-052,IDI,Full,OBSERVED,curated,S-IDI-003,AOS and GSAP ScrollTrigger on the one page seen; other themes [UNKNOWN]
+FM-052,WEV,Full,OBSERVED,curated,C-WEV-104;C-WEV-101;C-WEV-102;C-WEV-103;C-WEV-105;C-WEV-106,AOS
+FM-052,VID,Full,OBSERVED,curated,C-VID-101;C-VID-102;C-VID-103;C-VID-107;C-VID-108;C-VID-109,GSAP + ScrollTrigger
+FM-052,INV,Full,OBSERVED,curated,C-INV-111;C-INV-114,Elementor entrance animations + Swiper + Lottie
+FM-052,KAT,Full,OBSERVED,curated,C-KAT-101;C-KAT-102;C-KAT-103;C-KAT-104;C-KAT-105;C-KAT-106,AOS on 6/6; GSAP + ScrollTrigger on 2/6
+FM-053,invitesion,None,CODE,curated,F-037,
+FM-053,ENV,Full,OBSERVED,curated,C-ENV-122;B-ENV-001,Zoom-in cover intro of 10+ s on rocaille; cinematic theme group
+FM-054,invitesion,None,CODE,curated,F-038,
+FM-054,SMO,Partial,OBSERVED,curated,S-SMO-004,A 3D theme variant exists; fallback [UNKNOWN]
+FM-055,invitesion,None,CODE,curated,C-INV-005;C-INV-001;C-INV-002,No motion on guest pages and no reduced-motion CSS there (reducedMotionCss=false); the marketing site and template preview honour it
+FM-055,WEV,Full,MEASURED,derived,C-WEV-101;C-WEV-102;C-WEV-103;C-WEV-104;C-WEV-105;C-WEV-106,prefers-reduced-motion CSS on 6/6 theme(s) (CSS rules only; JS checks not detected)
+FM-055,VID,Full,MEASURED,derived,C-VID-101;C-VID-102;C-VID-103;C-VID-107;C-VID-108;C-VID-109,prefers-reduced-motion CSS on 6/6 theme(s) (CSS rules only; JS checks not detected)
+FM-055,IVT,None,MEASURED,derived,C-IVT-101;C-IVT-104,prefers-reduced-motion CSS on 0/2 theme(s) (CSS rules only; JS checks not detected)
+FM-055,INV,Full,OBSERVED,curated,C-INV-111;C-INV-114;C-INV-112;C-INV-113;C-INV-115;C-INV-116,prefers-reduced-motion CSS on 6/6
+FM-055,KAT,None,OBSERVED,curated,C-KAT-101;C-KAT-102;C-KAT-103;C-KAT-104;C-KAT-105;C-KAT-106,No prefers-reduced-motion CSS on any demo
+FM-055,BRN,None,MEASURED,derived,C-BRN-101;C-BRN-102;C-BRN-103,prefers-reduced-motion CSS on 0/3 theme(s) (CSS rules only; JS checks not detected)
+FM-056,invitesion,Full,CODE,curated,F-039;E-017;E-021;REPO@2a6015f,"s26: corporate programme rows with speakers and the organiser's mark (E-017, E-021). baseline None (Config only)"
+FM-057,invitesion,Full,CODE,curated,F-040;E-026;REPO@2a6015f,s26: ceremony profile per event type (E-026). baseline Partial (Only the name is rendered)
+FM-057,BRN,Full,OBSERVED,curated,S-BRN-005,First-birthday baby-info areas
+FM-058,invitesion,None,CODE,curated,F-041,Config only
+FM-058,RSV,Full,CLAIMED,curated,S-RSV-001,Ticketing and donations (1.95 % + $0.90 per ticket)
+FM-058,PTF,Full,CLAIMED,curated,S-PTF-001,Ticket sales (fees [UNKNOWN])
+FM-059,invitesion,None,CODE,curated,F-042,Config only
+FM-060,invitesion,None,CODE,curated,F-044,Tracking undisclosed (QA-023)
+FM-061,invitesion,None,CODE,curated,M-013,
+FM-061,JOY,Full,CLAIMED,curated,S-JOY-001,Hotel blocks and travel
+FM-062,invitesion,None,CODE,curated,M-013,
+FM-063,invitesion,None,CODE,curated,M-013,Single page
+FM-063,PLO,Full,CLAIMED,curated,S-PLO-003,Single Page and Multi Page theme types
+FM-063,SMO,Full,CLAIMED,curated,S-SMO-006,Page-based composition with no page limit
+FM-063,JOY,Full,INFERRED,curated,S-JOY-001,Free wedding website (multi-page structure not observed)
+FM-064,invitesion,None,CODE,curated,M-013,
+FM-064,PTF,Full,CLAIMED,curated,S-PTF-001,Guest list and comments
+FM-065,invitesion,Full,CODE,curated,F-045,
+FM-066,invitesion,None,CODE,curated,F-046,
+FM-067,invitesion,None,CODE,curated,F-046,
+FM-067,ENV,Full,CLAIMED,curated,S-ENV-001,Contact import
+FM-068,invitesion,Full,CODE,curated,F-047,CSV formula-injection risk (QA-012)
+FM-068,ENV,Full,CLAIMED,curated,S-ENV-001,Excel (.xlsx) export
+FM-068,IVT,Full,CLAIMED,curated,S-IVT-005,Downloadable report
+FM-068,INV,Full,CLAIMED,curated,S-INV-002,"Wishes / RSVP export as PDF, Excel, CSV, print"
+FM-068,RSV,Full,CLAIMED,curated,S-RSV-001,Exports
+FM-069,invitesion,Partial,CODE,curated,F-048,Free-text category
+FM-069,VID,Full,CLAIMED,curated,S-VID-002,Split invitation per guest category
+FM-069,KAT,Full,CLAIMED,curated,S-KAT-003,Guest groups
+FM-070,invitesion,Full,CODE,curated,F-045,No guest cap in code (only maxGuestsPerRsvp <= 50 per answer)
+FM-070,IDI,Full,CLAIMED,curated,S-IDI-006,Unlimited recipients on every tier
+FM-070,SMO,Full,CLAIMED,curated,S-SMO-006,Unlimited guests
+FM-070,ENV,Full,OBSERVED,curated,S-ENV-001,Unlimited guests in both plans
+FM-070,IVT,Full,OBSERVED,curated,S-IVT-003,Unlimited links (sent manually)
+FM-070,INV,Full,OBSERVED,curated,S-INV-002,Unlimited guests and wishes (trial included)
+FM-070,KAT,Full,OBSERVED,curated,S-KAT-004,Unlimited guests
+FM-071,invitesion,Partial,CODE,curated,F-050,Manual; one wa.me variant skips 08->62 normalisation (QA-013)
+FM-071,PLO,Full,CLAIMED,curated,S-PLO-003,
+FM-071,WEV,Full,CLAIMED,curated,S-WEV-001,WhatsApp sending from the dashboard
+FM-071,ENV,Full,CLAIMED,curated,S-ENV-001,1-click WhatsApp / Instagram share
+FM-072,invitesion,Partial,CODE,curated,F-050,Editor has a whatsappTemplate field; the operational guest list's wa.me link sends no text
+FM-072,PLO,Full,OBSERVED,curated,S-PLO-003,"""Edit the sharing message"" in 1.7.1"
+FM-072,ENV,Full,CLAIMED,curated,S-ENV-001,Three message styles
+FM-072,IVT,Full,OBSERVED,curated,S-IVT-003,Custom WhatsApp text
+FM-072,KAT,Full,OBSERVED,curated,S-KAT-004,Custom WhatsApp text (Rp 500k tier or add-on)
+FM-073,invitesion,None,CODE,curated,F-051,wa_log table only (M-040)
+FM-073,VID,Full,CLAIMED,curated,S-VID-002,WA AutoBlast quota 50 / 100 / 300
+FM-073,ENV,None,INFERRED,curated,S-ENV-001,No WhatsApp blast in either plan's feature list
+FM-073,IVT,Full,OBSERVED,curated,S-IVT-003,Official (Meta-verified) WhatsApp broadcast in the service tiers
+FM-073,KAT,Full,OBSERVED,curated,S-KAT-004,Smart WhatsApp at Rp 1.000 per message
+FM-074,invitesion,None,CODE,curated,M-019,No invitation e-mail sender
+FM-074,PPO,Full,CLAIMED,curated,S-PPO-002,E-mail sending
+FM-074,RSV,Full,CLAIMED,curated,S-RSV-001,E-mail invitations
+FM-075,invitesion,None,CODE,curated,M-019,
+FM-075,PPO,Full,CLAIMED,curated,S-PPO-002,Text sending
+FM-075,RSV,Full,CLAIMED,curated,S-RSV-001,SMS
+FM-075,PTF,Full,CLAIMED,curated,S-PTF-001,Text blasts
+FM-076,invitesion,None,CODE,curated,F-052,Config only; no scheduler
+FM-076,IVT,Full,OBSERVED,curated,S-IVT-003,Staged follow-ups and a final reminder (RSVP Assistance)
+FM-076,KAT,Full,OBSERVED,curated,S-KAT-004,WhatsApp Reminder at Rp 1.000 per message
+FM-076,PPO,Full,CLAIMED,curated,S-PPO-002,Automated reminders on each guest's chosen channel; scheduled sends
+FM-076,PTF,Full,CLAIMED,curated,S-PTF-001,Reminders
+FM-077,invitesion,Full,CODE,curated,F-053;E-033;E-036;REPO@2a6015f,"s26: totals incl. maybe and per-event answers on the host dashboards (E-033, E-036). baseline Partial (Per-guest list plus four totals)"
+FM-077,WEV,Full,CLAIMED,curated,S-WEV-001,Monitor RSVP and gifts
+FM-077,ENV,Full,CLAIMED,curated,S-ENV-001,RSVP recap and guest management
+FM-077,IVT,Full,OBSERVED,curated,S-IVT-003,Real-time RSVP dashboard
+FM-077,KAT,Full,CLAIMED,curated,S-KAT-003,Real-time RSVP tracking
+FM-077,PPO,Full,CLAIMED,curated,S-PPO-002,RSVP tracking
+FM-077,RSV,Full,CLAIMED,curated,S-RSV-001,Dashboards
+FM-078,invitesion,Full,CODE,curated,F-054,
+FM-079,invitesion,None,CODE,curated,F-055,
+FM-079,IDI,Full,CLAIMED,curated,S-IDI-006;S-IDI-001,From Super; robots.txt disallows /pernikahan-qr/ [INFERRED route]
+FM-079,SMO,Full,CLAIMED,curated,S-SMO-006,Check In System
+FM-079,WEV,Full,CLAIMED,curated,S-WEV-004,QR scanner in the Android app
+FM-079,VID,Full,CLAIMED,curated,S-VID-004,Tablets and crew scan QR codes (staffed service)
+FM-079,ENV,Full,CLAIMED,curated,S-ENV-001,Web check-in at /checkin with a dashboard code
+FM-079,IVT,Full,CLAIMED,curated,S-IVT-005,Usher scans the one-time QR on vendor tablets
+FM-079,KAT,Full,CLAIMED,curated,S-KAT-003,Buku Tamu Digital QR check-in
+FM-079,RSV,Full,CLAIMED,curated,S-RSV-001,QR check-in app with badge printing
+FM-080,invitesion,Full,CODE,curated,F-056,
+FM-080,WEV,Full,OBSERVED,curated,S-WEV-003,QR and manual check-in in the Guest Reception service
+FM-080,ENV,Full,CLAIMED,curated,S-ENV-001,Manual fallback
+FM-080,IVT,Full,CLAIMED,curated,S-IVT-005,Search by name or manual entry
+FM-081,invitesion,None,CODE,curated,M-019,
+FM-081,SMO,Full,CLAIMED,curated,S-SMO-006,"""Layar Sapa"" shows the guest's name on scan"
+FM-081,WEV,Full,OBSERVED,curated,S-WEV-003,Reception screen (paid service)
+FM-081,VID,Full,CLAIMED,curated,S-VID-004,Greeting screen
+FM-081,IVT,Full,CLAIMED,curated,S-IVT-005,Greeting screen
+FM-082,invitesion,Partial,CODE,curated,F-056,Check-in total on the guest-operations page; not live
+FM-082,SMO,Full,CLAIMED,curated,S-SMO-006,Counter of guests inside
+FM-082,WEV,Partial,OBSERVED,curated,S-WEV-003,Attendance report in the reception packages; liveness [UNKNOWN]
+FM-083,invitesion,None,CODE,curated,F-057,
+FM-083,IVT,Full,CLAIMED,curated,S-IVT-005,Tablet guestbook with optional selfie
+FM-083,KAT,Full,CLAIMED,curated,S-KAT-003,Selfie check-in
+FM-084,invitesion,None,CODE,curated,F-058,
+FM-084,IVT,Full,CLAIMED,curated,S-IVT-005,Souvenir coupon labels printed at registration
+FM-084,KAT,Full,OBSERVED,curated,S-KAT-004,Souvenir management
+FM-085,invitesion,Partial,CODE,curated,F-059,Collected; visible in the CSV and as one total
+FM-086,invitesion,Partial,CODE,curated,F-059;E-012;E-033;REPO@2a6015f,s26: atomic open counts per guest (E-012) and RSVP totals on the dashboard; no time series. baseline None
+FM-086,ENV,Full,CLAIMED,curated,S-ENV-001,Visit analytics in both plans
+FM-086,PPO,Full,CLAIMED,curated,S-PPO-002,RSVP analytics
+FM-086,RSV,Full,CLAIMED,curated,S-RSV-001,Dashboards
+FM-087,invitesion,None,CODE,curated,F-060;F-020,is_hidden never set
+FM-087,PLO,Partial,OBSERVED,curated,S-PLO-003,The guest book can be hidden as a whole
+FM-088,invitesion,Full,CODE,curated,F-061,
+FM-088,SMO,Full,OBSERVED,curated,S-SMO-005,Data editable during the active period (FAQ)
+FM-088,INV,Full,CLAIMED,curated,S-INV-002,Edits while the membership is active
+FM-088,KAT,Full,CLAIMED,curated,S-KAT-004,
+FM-088,BRN,Full,CLAIMED,curated,S-BRN-004,Edits until 90 days after the wedding
+FM-089,invitesion,Partial,CODE,curated,F-062,Stored; no UI; never pruned
+FM-090,invitesion,Full,CODE,curated,F-063;F-061,Revision cap exists in the schema but is never enforced
+FM-090,IDI,Partial,OBSERVED,curated,S-IDI-006,"Revisions: Free limited, Basic 2x, Klasik 3x, unlimited from Pro"
+FM-090,SMO,Partial,OBSERVED,curated,S-SMO-005,Basic self-edit; Premium 2x minor revisions; Prioritas unlimited reasonable revisions
+FM-090,VID,Full,CLAIMED,curated,S-VID-002,Unlimited revisions on every invitation tier
+FM-090,IVT,Partial,OBSERVED,curated,S-IVT-003,Minor and major revisions by the vendor; no self-serve editor
+FM-090,INV,Full,CLAIMED,curated,S-INV-002,"""Revisi sepuasnya"""
+FM-090,KAT,Full,OBSERVED,curated,S-KAT-004,Unlimited edits on every tier
+FM-090,BRN,Full,CLAIMED,curated,S-BRN-004,Unlimited edits
+FM-091,invitesion,Full,CODE,curated,F-064,12 months on both paid tiers
+FM-091,IDI,Full,OBSERVED,curated,S-IDI-006,No expiry on every tier
+FM-091,SMO,None,OBSERVED,curated,S-SMO-005,Basic (Rp 79k) is active 7 days from purchase
+FM-091,WEV,Full,OBSERVED,curated,S-WEV-002,"Rp 69k ""aktif selamanya"""
+FM-091,ENV,Full,OBSERVED,curated,S-ENV-001,Silver (Rp 75k) active 1 year after the event
+FM-091,IVT,Full,OBSERVED,curated,S-IVT-003,Active forever
+FM-091,INV,Partial,CLAIMED,curated,S-INV-002,Plus / Premium list 1 year; 3- and 6-month periods exist; membership expires separately from the link
+FM-091,BRN,None,OBSERVED,curated,S-BRN-002,Online until 90 days after the event
+FM-092,invitesion,None,CODE,curated,F-065,Config only
+FM-093,invitesion,None,CODE,curated,F-066,
+FM-093,IDI,Full,OBSERVED,curated,S-IDI-006,Custom domain on the subscription
+FM-093,SMO,Full,OBSERVED,curated,S-SMO-005,Custom-domain product; bonus domains on upper tiers
+FM-093,ENV,Full,OBSERVED,curated,S-ENV-001,Custom domain as an add-on (contact sales)
+FM-093,INV,Full,OBSERVED,curated,S-INV-003,Reseller subdomain or own domain
+FM-094,invitesion,None,CODE,curated,F-067,
+FM-094,VID,Full,CLAIMED,curated,S-VID-002,Password protection from Intimate
+FM-094,PPO,Full,CLAIMED,curated,S-PPO-001,Password protection in the Plus unlock
+FM-095,invitesion,None,CODE,curated,F-068,Credit always shown
+FM-095,SMO,Partial,OBSERVED,curated,S-SMO-005,No watermark only on Custom Desain and Corporate
+FM-095,WEV,Partial,OBSERVED,curated,S-WEV-002;S-WEV-004,Credit removable only in Mitra partner tiers
+FM-095,INV,Full,INFERRED,curated,C-INV-111;C-INV-114;S-INV-003,No vendor credit detected on 6/6; resellers add their own branding
+FM-096,invitesion,None,CODE,curated,F-069,"""Pratinjau"" links to a 404 path (M-018)"
+FM-096,ENV,Full,CLAIMED,curated,S-ENV-001,"""Every change is visible immediately"""
+FM-096,BRN,Full,CLAIMED,curated,S-BRN-001,Live preview while typing
+FM-097,invitesion,None,CODE,curated,F-070,
+FM-097,ENV,Full,CLAIMED,curated,S-ENV-001,
+FM-098,invitesion,Full,CODE,curated,F-071,<= 5 MB; no resizing
+FM-098,VID,Full,CLAIMED,curated,S-VID-002,50 uploads (Basic / Intimate) or unlimited (Royal)
+FM-099,invitesion,None,CODE,curated,M-027,
+FM-099,PLO,Full,CLAIMED,curated,S-PLO-001;S-PLO-003,In-app crop and rotate
+FM-100,invitesion,Full,CODE,curated,M-018;M-013,Per-section enabled flags in the editor and the renderer
+FM-100,PLO,Full,CLAIMED,curated,S-PLO-003,Add or remove features per invitation
+FM-100,SMO,Full,CLAIMED,curated,S-SMO-006,Add and remove pages
+FM-100,BRN,Full,CLAIMED,curated,S-BRN-001,ON/OFF feature toggles
+FM-101,invitesion,None,CODE,curated,M-018,
+FM-101,SMO,Full,CLAIMED,curated,S-SMO-006,Drag-and-drop page reordering
+FM-101,VID,Full,CLAIMED,curated,S-VID-003,Viding Studio canvas with full element control
+FM-101,KAT,Full,OBSERVED,curated,S-KAT-004,"""Atur Section"" (top tier or add-on)"
+FM-101,PPO,Full,CLAIMED,curated,S-PPO-002,Event page assembled from blocks
+FM-102,invitesion,None,CODE,curated,F-036,Font fixed per template
+FM-102,IDI,Full,CLAIMED,curated,S-IDI-006,Font style on Premium
+FM-102,SMO,Partial,CLAIMED,curated,S-SMO-006,"Font size in the editor; family ""with developer tools"""
+FM-102,VID,Full,CLAIMED,curated,S-VID-003,Studio
+FM-102,IVT,Full,CLAIMED,curated,S-IVT-002,Imagination Room: fonts
+FM-102,KAT,Full,OBSERVED,curated,S-KAT-004,Colour & font change (Rp 500k tier or Rp 80k add-on)
+FM-102,BRN,Full,OBSERVED,curated,S-BRN-005,Five Nanum font choices shipped in the page
+FM-103,invitesion,None,CODE,curated,F-036,Palette fixed per template; theme tab unreachable (M-018)
+FM-103,IDI,Full,CLAIMED,curated,S-IDI-006,Theme colour on Premium
+FM-103,SMO,Full,CLAIMED,curated,S-SMO-006,
+FM-103,VID,Full,OBSERVED,curated,C-VID-101;S-VID-003,Colour-variation picker on the demo; Studio
+FM-103,IVT,Partial,OBSERVED,curated,S-IVT-003;S-IVT-004,Colour change; some designs locked
+FM-103,KAT,Full,OBSERVED,curated,S-KAT-004,
+FM-104,invitesion,None,CODE,curated,M-018,Form-based module editor
+FM-104,PLO,Full,CLAIMED,curated,S-PLO-003,"Five-step builder, ""under 5 minutes"""
+FM-104,ENV,Full,CLAIMED,curated,S-ENV-001,"Four steps: theme, names, details, publish"
+FM-105,invitesion,None,CODE,curated,REPO@2c94140,No assisted-production flow
+FM-105,IDI,Full,OBSERVED,curated,S-IDI-006,Admin builds it on every tier (default production mode)
+FM-105,SMO,Full,OBSERVED,curated,S-SMO-005,Admin builds it from Premium (Rp 129k)
+FM-105,VID,Partial,CLAIMED,curated,S-VID-002,Human assistants help during creation
+FM-105,ENV,Full,OBSERVED,curated,S-ENV-001,Admin builds it on request (free consultation)
+FM-105,IVT,Full,OBSERVED,curated,S-IVT-002;S-IVT-003,"""Terima beres"" production by engineer and customer assistant"
+FM-105,KAT,Full,CLAIMED,curated,S-KAT-004,Full Service at the same price as Self Service
+FM-106,invitesion,Full,CODE,curated,F-074;QA-011;E-005;REPO@2a6015f,s26: the theme tab is reachable (E-005); a theme change after publishing is not checked against what was paid for (B-041 open). baseline Partial (Re-pay per theme; theme tab unreachable)
+FM-106,IDI,Full,INFERRED,curated,S-IDI-002;S-IDI-006,Content renders under any theme id; all themes on every tier
+FM-106,WEV,Full,CLAIMED,curated,S-WEV-001,Switch theme at any time without a new invitation
+FM-106,ENV,Full,CLAIMED,curated,S-ENV-001,Theme changeable at any time
+FM-107,invitesion,None,CODE,curated,F-074,
+FM-107,IDI,Full,INFERRED,curated,S-IDI-002;S-IDI-006,All themes on every tier (high confidence)
+FM-107,WEV,Full,CLAIMED,curated,S-WEV-001,
+FM-107,ENV,Full,CLAIMED,curated,S-ENV-001,Every theme in every plan
+FM-108,invitesion,Full,CODE,curated,F-075,
+FM-109,invitesion,None,CODE,curated,F-076,Single owner
+FM-109,PPO,Full,CLAIMED,curated,S-PPO-002,Co-hosts
+FM-109,RSV,Full,CLAIMED,curated,S-RSV-001,Team access and SAML SSO
+FM-110,invitesion,Full,CODE,curated,F-073,
+FM-110,WEV,Full,CLAIMED,curated,S-WEV-001,"Budget, to-do, vendors, timeline"
+FM-110,KAT,Full,CLAIMED,curated,S-KAT-003,"Wedding Planner: budget, to-do, savings, vendors"
+FM-111,invitesion,None,CODE,curated,F-042,Config only
+FM-111,WEV,Full,OBSERVED,curated,S-WEV-003,Seating management in the reception packages
+FM-111,VID,Full,CLAIMED,curated,S-VID-004,Table management in the E-Guest Book service
+FM-111,IVT,Full,OBSERVED,curated,S-IVT-003,Table / seat management
+FM-111,KAT,Full,OBSERVED,curated,S-KAT-004,Table management
+FM-111,RSV,Full,CLAIMED,curated,S-RSV-001,Seating charts
+FM-112,invitesion,None,CODE,curated,REPO@2c94140,No native app
+FM-112,IDI,Full,OBSERVED,curated,LONGLIST:IDI,Android app com.indoinvite.apps 500K+ installs
+FM-112,PLO,Full,OBSERVED,curated,S-PLO-003,Android app id.paleo.undangandigital
+FM-112,WEV,Full,OBSERVED,curated,S-WEV-004,Android (Google Play and Huawei AppGallery) plus a PWA
+FM-112,ENV,None,OBSERVED,curated,S-ENV-001;LONGLIST:ENV,No app; web check-in
+FM-112,IVT,None,OBSERVED,curated,LONGLIST:IVT;S-IVT-005,Day-of QR app runs only on vendor tablets
+FM-112,RSV,Full,CLAIMED,curated,S-RSV-001,Check-in app
+FM-112,JOY,Full,CLAIMED,curated,S-JOY-001,Companion app
+FM-112,PTF,Full,CLAIMED,curated,S-PTF-001,App with a 5.0 rating claim
+FM-113,invitesion,None,CODE,curated,M-019,
+FM-113,KAT,Full,CLAIMED,curated,S-KAT-003,Auto thank-you message (Buku Tamu Digital)
+FM-114,invitesion,None,CODE,curated,M-013,
+FM-115,invitesion,None,CODE,curated,M-017,No duplicate action in the invitation list
+FM-116,invitesion,Full,CODE,curated,M-005,Marketing preview mock with fictional data; it is not the guest renderer
+FM-116,IDI,None,OBSERVED,curated,S-IDI-003,Catalog previews open sample accounts that render real events
+FM-116,SMO,None,OBSERVED,curated,S-SMO-004,Public previews render personal data
+FM-116,WEV,Full,INFERRED,curated,D-WEV;C-WEV-104,Official vendor demos linked from the catalogue (names redacted under D-021)
+FM-116,VID,Full,OBSERVED,curated,C-VID-101;C-VID-102;C-VID-103,Vendor placeholder couple repeated across themes [INFERRED high]
+FM-116,ENV,Full,INFERRED,curated,C-ENV-111;D-ENV,Official full-preview demo; try-with-your-names entry
+FM-116,IVT,None,OBSERVED,curated,S-IVT-004;S-IVT-005,Designs named after client couples; one tied to a real wedding (D-019)
+FM-116,INV,Full,INFERRED,curated,D-INV;S-INV-001,66 official demos with a placeholder guest parameter
+FM-116,KAT,Full,OBSERVED,curated,S-KAT-001;S-KAT-002,Vendor placeholders
+FM-116,BRN,Full,OBSERVED,curated,S-BRN-003,Vendor sample previews with fictional fields
+FM-117,invitesion,Partial,CODE,curated,F-100,Placeholder WhatsApp number
+FM-117,IDI,Full,OBSERVED,curated,S-IDI-006,WhatsApp CTA
+FM-117,SMO,Full,OBSERVED,curated,S-SMO-005,Chat widget; WhatsApp support in working hours
+FM-117,WEV,Full,OBSERVED,curated,S-WEV-001,WhatsApp customer service
+FM-117,VID,Full,OBSERVED,curated,S-VID-001,WhatsApp chat CTA
+FM-117,ENV,Full,OBSERVED,curated,S-ENV-001,"WhatsApp and e-mail, Mon-Sat 10:00-21:00 WIB"
+FM-117,IVT,Full,OBSERVED,curated,S-IVT-002,Free consultation via a named chat persona
+FM-117,INV,Full,OBSERVED,curated,S-INV-002,"WhatsApp, Instagram, e-mail"
+FM-118,invitesion,Full,CODE,curated,F-075;F-085,"Drafting is free; publishing needs a paid order. Marketing advertises ""Rp0 / GRATIS"" (ADR-O02)"
+FM-118,IDI,Full,OBSERVED,curated,S-IDI-006,Free trial without time limit; sharing from Basic
+FM-118,SMO,Partial,OBSERVED,curated,S-SMO-001,Free registration and a 12-hour trial (2026-10-29)
+FM-118,WEV,Partial,OBSERVED,curated,S-WEV-002,Free plan is a 14-day trial
+FM-118,VID,Partial,OBSERVED,curated,S-VID-001,Free Trial; limits not public
+FM-118,ENV,Full,OBSERVED,curated,S-ENV-001,Publish first; 5-day full-access trial; pay to keep it live
+FM-118,IVT,None,OBSERVED,curated,S-IVT-002;S-IVT-003,No free tier or trial
+FM-118,INV,Partial,OBSERVED,curated,S-INV-002,Trial Rp 0 for 2 days
+FM-118,BRN,Full,OBSERVED,curated,S-BRN-002,Standard designs free for members
+FM-118,RSV,Full,CLAIMED,curated,S-RSV-001,Free up to 100 invitees or registrations
+FM-118,JOY,Full,CLAIMED,curated,S-JOY-001,Core website free
+FM-118,PTF,Full,CLAIMED,curated,S-PTF-001,Free event pages
+FM-119,invitesion,Full,CODE,curated,F-085,IDR 149k / 299k
+FM-119,IDI,Full,OBSERVED,curated,S-IDI-006,Rp 39k-119k one-time
+FM-119,SMO,Full,OBSERVED,curated,S-SMO-005,Rp 79k-850k
+FM-119,WEV,Full,OBSERVED,curated,S-WEV-002,Rp 69k one-time
+FM-119,VID,Full,OBSERVED,curated,S-VID-002,Rp 300k-850k one-time packages
+FM-119,ENV,Full,OBSERVED,curated,S-ENV-001,Silver Rp 75k / Gold Rp 125k one-off
+FM-119,IVT,Full,OBSERVED,curated,S-IVT-003,"From Rp 400k (website), Rp 1M+ (RSVP Assistance), Rp 2M+ (guestbook)"
+FM-119,INV,Full,OBSERVED,curated,S-INV-002,Plus Rp 198k / Premium Rp 298k list
+FM-119,KAT,Full,OBSERVED,curated,S-KAT-004,Rp 300k / 500k / 700k; Lite Rp 100k
+FM-119,BRN,Full,OBSERVED,curated,S-BRN-002,"Licensed designs KRW 9,900"
+FM-120,invitesion,None,CODE,curated,F-085,One-time by design (lib/pricing.ts)
+FM-120,IDI,Full,OBSERVED,curated,S-IDI-006,Subscription Rp 400k per month to Rp 4.6M per year
+FM-120,WEV,Full,OBSERVED,curated,S-WEV-002,Packs of 2 / 5 / 11 / 23 invitations
+FM-120,PPO,Full,OBSERVED,curated,S-PPO-001,Paperless Pro annual subscription priced by guest count
+FM-120,RSV,Full,CLAIMED,curated,S-RSV-001,"Starter / Plus / Professional / Enterprise plans (prices [UNKNOWN], page behind bot protection)"
+FM-121,invitesion,Full,CODE,curated,F-085,Standard and premium tiers
+FM-121,IDI,Full,OBSERVED,curated,S-IDI-006,Five paid tiers
+FM-121,SMO,Full,OBSERVED,curated,S-SMO-005,Six consumer tiers
+FM-121,WEV,Full,OBSERVED,curated,S-WEV-002,
+FM-121,VID,Full,OBSERVED,curated,S-VID-002,
+FM-121,ENV,Full,OBSERVED,curated,S-ENV-001,Ladder by active period and variants
+FM-121,IVT,Full,OBSERVED,curated,S-IVT-003,
+FM-121,INV,Full,OBSERVED,curated,S-INV-002,
+FM-121,KAT,Full,OBSERVED,curated,S-KAT-004,Three tiers plus Lite plus 24 add-ons
+FM-121,BRN,Full,OBSERVED,curated,S-BRN-002,Free standard vs paid licensed designs
+FM-121,PPO,Full,OBSERVED,curated,S-PPO-001,Coins plus a 200-coin Plus unlock
+FM-121,RSV,Full,CLAIMED,curated,S-RSV-001,
+FM-122,invitesion,Full,CODE,curated,F-085;E-002;REPO@2a6015f,"s26: marketing pages read lib/pricing.ts (E-002, ADR-O02). baseline Partial (lib/pricing.ts disagrees with the homepage and /pricing copy (ADR-O02))"
+FM-122,IDI,Full,OBSERVED,curated,S-IDI-006,Prices published; no strikethrough anchors
+FM-122,PLO,None,OBSERVED,curated,S-PLO-003;S-PLO-002,No price on the homepage or the store listing
+FM-122,SMO,Partial,OBSERVED,curated,S-SMO-005,"FAQ calls the Rp 129k tier ""Paket Plus"", the card says ""Premium"""
+FM-122,WEV,Partial,OBSERVED,curated,S-WEV-001;S-WEV-002,"Business shows ""50.5 % OFF"" on the homepage and ""50 % OFF"" on /paket-harga"
+FM-122,VID,Full,OBSERVED,curated,S-VID-002;S-VID-004;S-VID-005,Published with strikethrough list prices
+FM-122,ENV,Full,OBSERVED,curated,S-ENV-001,Published with strikethrough anchors
+FM-122,IVT,Partial,OBSERVED,curated,S-IVT-003,Starting prices only; final price by quote
+FM-122,INV,Partial,OBSERVED,curated,S-INV-002,Permanent public 50 % coupon turns list prices into anchors; theme counts conflict
+FM-122,KAT,Partial,OBSERVED,curated,S-KAT-003;S-KAT-004,"Homepage promises colour and font changes ""tanpa batasan"" while the price page gates them"
+FM-122,BRN,Full,OBSERVED,curated,S-BRN-002,Prices on product pages
+FM-122,PPO,Full,OBSERVED,curated,S-PPO-001,Published in coins (3 coins = $1.44 example)
+FM-123,invitesion,Partial,CODE,curated,F-081,Acquirer not chosen; manual confirmation
+FM-123,IDI,Full,OBSERVED,curated,S-IDI-006,QRIS logo at checkout
+FM-123,ENV,Full,OBSERVED,curated,S-ENV-001,Midtrans
+FM-124,invitesion,None,CODE,curated,F-082,
+FM-124,IDI,Full,OBSERVED,curated,S-IDI-006,"BCA, BNI, BRI, Mandiri, Permata"
+FM-124,ENV,Full,OBSERVED,curated,S-ENV-001,Bank transfer / VA via Midtrans
+FM-124,INV,Full,CLAIMED,curated,S-INV-002,Virtual account
+FM-125,invitesion,None,CODE,curated,F-082,
+FM-125,IDI,Full,OBSERVED,curated,S-IDI-006,"OVO, DANA, LinkAja [INFERRED logo]"
+FM-125,ENV,Full,OBSERVED,curated,S-ENV-001,"GoPay, OVO, DANA, LinkAja"
+FM-126,invitesion,Partial,CODE,curated,F-083,Stripe adapter untested against a real account
+FM-126,IDI,Full,OBSERVED,curated,S-IDI-006,"Visa, Mastercard, JCB"
+FM-126,ENV,Full,OBSERVED,curated,S-ENV-001,
+FM-126,RSV,Full,CLAIMED,curated,S-RSV-001,Stripe
+FM-127,invitesion,None,CODE,curated,M-025,
+FM-127,IDI,Full,OBSERVED,curated,S-IDI-006,"Alfamart, Alfamidi, Indomaret"
+FM-128,invitesion,None,CODE,curated,M-025,
+FM-128,IDI,Full,OBSERVED,curated,S-IDI-006,Kredivo
+FM-129,invitesion,Partial,CODE,curated,F-086,Signed idempotent webhooks (M-026); QRIS confirmed manually
+FM-129,ENV,Full,INFERRED,curated,S-ENV-001,"Midtrans rails and an ""instant, no queue"" promise"
+FM-129,INV,Full,CLAIMED,curated,S-INV-002,Automatic confirmation of VA payments
+FM-130,invitesion,None,CODE,curated,F-084,
+FM-131,invitesion,Full,CODE,curated,F-085,IDR and USD by locale
+FM-132,invitesion,None,CODE,curated,F-080,
+FM-132,INV,Full,OBSERVED,curated,S-INV-002,"Coupon ""INVI"" = 50 %"
+FM-133,invitesion,None,CODE,curated,F-080,
+FM-133,SMO,Full,OBSERVED,curated,S-SMO-005;S-SMO-001,Affiliate programme (30 % claimed 2026-10-29)
+FM-133,VID,Full,CLAIMED,curated,S-VID-006,Commission-based agents with tiered commission
+FM-133,ENV,Full,OBSERVED,curated,S-ENV-001,35 % referral commission
+FM-133,INV,Full,CLAIMED,curated,S-INV-002,Commission up to 40 %
+FM-133,KAT,Full,OBSERVED,curated,S-KAT-003,Mitra 15 % up to Rp 600k per transaction
+FM-134,invitesion,None,CODE,curated,F-080,
+FM-135,invitesion,None,CODE,curated,F-079,
+FM-135,SMO,Full,OBSERVED,curated,S-SMO-006,Lite / Pro / Enterprise
+FM-135,WEV,Full,OBSERVED,curated,S-WEV-002,Paket Kemitraan (Enterprise / Mitra Silver / Mitra Gold)
+FM-135,VID,Partial,CLAIMED,curated,S-VID-006,One partner per city on commission; white-label or quota resale not described
+FM-135,ENV,Full,OBSERVED,curated,S-ENV-001,Prepaid quota for WOs and freelancers
+FM-135,INV,Full,OBSERVED,curated,S-INV-003,Packs of 12 / 30 / 55 basic or 10 / 20 premium invitations
+FM-136,invitesion,None,CODE,curated,F-079,
+FM-136,SMO,Full,OBSERVED,curated,S-SMO-006,Custom branding and landing page
+FM-136,WEV,Full,OBSERVED,curated,S-WEV-002,Text branding from Silver; logo branding at Gold
+FM-136,INV,Full,CLAIMED,curated,S-INV-003,"Reseller logo, copyright and link; client accounts; own domains"
+FM-137,invitesion,None,CODE,curated,F-079,
+FM-137,SMO,Full,OBSERVED,curated,S-SMO-006,100-600 starting credits; 10-20 credits per invitation
+FM-137,ENV,Full,OBSERVED,curated,S-ENV-001,"10 / 25 / 50 credits at Rp 38k-26k each, never expire"
+FM-137,INV,Full,OBSERVED,curated,S-INV-003,Quota never expires
+FM-138,invitesion,None,CODE,curated,F-077,
+FM-139,invitesion,None,CODE,curated,F-078,
+FM-140,invitesion,None,CODE,curated,REPO@2c94140,
+FM-140,IDI,Full,OBSERVED,curated,S-IDI-005,Design service for 2D invitations and logos from Rp 50k
+FM-140,SMO,Full,OBSERVED,curated,S-SMO-005,Custom Desain Rp 599k
+FM-140,IVT,Full,OBSERVED,curated,S-IVT-003;S-IVT-004,Semi-customized in-house design
+FM-141,invitesion,None,CODE,curated,M-003,
+FM-141,SMO,Full,OBSERVED,curated,S-SMO-005,Corporate Rp 850k
+FM-141,RSV,Full,CLAIMED,curated,S-RSV-001,Enterprise plan; Fortune 500 claim
+FM-142,invitesion,Full,CODE,curated,F-086,
+FM-143,invitesion,Partial,CODE,curated,F-087,Stub
+FM-144,invitesion,None,CODE,curated,F-088,Tables only
+FM-144,IDI,Full,OBSERVED,curated,S-IDI-004,AI copy tool /undangan-gpt linked; behaviour [UNKNOWN]
+FM-144,WEV,Full,CLAIMED,curated,S-WEV-001,AI assistant and generator; AI wishes analysis
+FM-145,invitesion,None,CODE,curated,F-088,
+FM-145,IDI,Full,OBSERVED,curated,S-IDI-004,Image-style converter linked; behaviour [UNKNOWN]
+FM-145,WEV,Full,CLAIMED,curated,S-WEV-001,AI photo-studio prompts
+FM-146,invitesion,None,CODE,curated,F-089,
+FM-146,IDI,Full,OBSERVED,curated,S-IDI-004,117 video-invitation samples behind modals
+FM-146,SMO,Full,OBSERVED,curated,S-SMO-005,3D video invitations
+FM-146,INV,Full,OBSERVED,curated,S-INV-002,"Video invitations (story / reels, Lebaran greetings)"
+FM-147,invitesion,None,CODE,curated,F-089,
+FM-147,SMO,Full,OBSERVED,curated,S-SMO-005,3D greeting videos
+FM-148,invitesion,None,CODE,curated,F-090,
+FM-148,SMO,Full,OBSERVED,curated,S-SMO-005,Printed invitations
+FM-148,BRN,Full,CLAIMED,curated,S-BRN-001;S-BRN-004,Paper + mobile sets; printed QR opens the live page
+FM-148,PPO,Full,CLAIMED,curated,S-PPO-002,Printed invitations via Paper Source
+FM-149,invitesion,None,CODE,curated,F-090,
+FM-149,IDI,Full,OBSERVED,curated,S-IDI-006,Print export on the subscription
+FM-150,invitesion,None,CODE,curated,F-091,
+FM-150,RSV,Full,CLAIMED,curated,S-RSV-001,MCP server for AI assistants
+FM-151,invitesion,None,CODE,curated,M-013,
+FM-151,IDI,Full,OBSERVED,curated,S-IDI-003,Gifts and stickers sold to guests
+FM-151,BRN,Full,CLAIMED,curated,S-BRN-004,Wreath gifts and card gift money
+FM-151,JOY,Full,INFERRED,curated,S-JOY-001,"Revenue from registry, prints and hotel blocks (medium confidence)"
+FM-152,invitesion,Full,CODE,curated,F-092,About 90 pages; some over-claim (QA-024)
+FM-152,IDI,Full,OBSERVED,curated,D-IDI,50 event-type SEO pages
+FM-152,PLO,None,OBSERVED,curated,S-PLO-002,Minimal web footprint
+FM-152,SMO,Partial,OBSERVED,curated,S-SMO-005;S-SMO-006,Price- and keyword-led pages and a blog; no large generated set observed
+FM-152,WEV,Partial,OBSERVED,curated,S-WEV-001;C-WEV-001,Planning blog and feature articles; no large generated set observed
+FM-152,VID,Partial,OBSERVED,curated,S-VID-001,Blog and FAQ
+FM-152,ENV,Partial,OBSERVED,curated,D-ENV,Keyword-titled page per theme
+FM-152,INV,Partial,OBSERVED,curated,S-INV-002,Category landing pages plus free utility tools for search traffic
+FM-152,KAT,Partial,OBSERVED,curated,S-KAT-003;S-KAT-004,Keyword landing page per product
+FM-152,PPO,Full,OBSERVED,curated,D-PPO,Category pages with hundreds of cards per occasion
+FM-153,invitesion,Full,CODE,curated,F-093,27 categories
+FM-153,IDI,Partial,OBSERVED,curated,S-IDI-002;C-IDI-105,One unpaginated page with all 493 themes (about 36k DOM nodes); no filter controls recorded
+FM-153,PLO,None,OBSERVED,curated,S-PLO-002;D-PLO,No web catalog
+FM-153,SMO,Full,OBSERVED,curated,S-SMO-003,Filters by event and style; cursor pagination
+FM-153,WEV,Partial,OBSERVED,curated,S-WEV-001;D-WEV,16 demo themes on the homepage; filters not observed
+FM-153,VID,Partial,OBSERVED,curated,S-VID-003,Six numbered themes plus Studio twins in server HTML; filters not observed
+FM-153,ENV,Partial,OBSERVED,curated,S-ENV-001,18 themes in four mood groups on the homepage
+FM-153,IVT,Partial,OBSERVED,curated,S-IVT-004,36 entries in two categories (Royal / Minimal)
+FM-153,INV,Partial,OBSERVED,curated,S-INV-002,Category pages; filter controls not recorded
+FM-153,KAT,Full,OBSERVED,curated,S-KAT-004,"Filters: Populer, Adat, Floral, Fairytale, Minimalis, Nature, Vintage"
+FM-153,PPO,Partial,OBSERVED,curated,D-PPO,Category catalog; filter controls not recorded
+FM-154,invitesion,Full,CODE,curated,F-093,
+FM-154,IDI,Full,OBSERVED,curated,D-IDI,About 50 event types
+FM-154,SMO,Partial,OBSERVED,curated,S-SMO-003,Five event groups on the first catalog page
+FM-154,WEV,Partial,CLAIMED,curated,S-WEV-001,"FAQ: birthdays, reunions, corporate events"
+FM-154,ENV,None,OBSERVED,curated,S-ENV-001,Weddings only
+FM-154,IVT,Partial,CLAIMED,curated,S-IVT-005,50+ non-wedding guestbook events
+FM-154,INV,Partial,OBSERVED,curated,S-INV-002,"Birthday, khitan, aqiqah/tasmiyah, walimatussafar"
+FM-154,KAT,Partial,OBSERVED,curated,S-KAT-003,Weddings first; an /events registration product
+FM-154,BRN,Partial,CLAIMED,curated,S-BRN-001,"First birthdays, birthdays, housewarmings, baby and party cards"
+FM-154,RSV,Full,CLAIMED,curated,S-RSV-001,Event operations for any event type
+FM-155,invitesion,Partial,CODE,curated,F-093,See ../01-codebase-audit/niche-coverage.md
+FM-155,IDI,Full,OBSERVED,curated,D-IDI,"Islamic, Christian/Catholic, Balinese Hindu, Javanese life-cycle pages"
+FM-155,SMO,Partial,OBSERVED,curated,S-SMO-003,Style filters Adat and Syari
+FM-155,WEV,Partial,OBSERVED,curated,S-WEV-001,Nusantara themes (Wayang / Javanese)
+FM-155,ENV,None,OBSERVED,curated,S-ENV-001,No faith- or region-specific themes listed
+FM-155,IVT,Partial,OBSERVED,curated,S-IVT-004,Javanese-palace design among story-based concepts
+FM-155,INV,Partial,OBSERVED,curated,S-INV-002,Islamic life events (khitan / aqiqah / walimatussafar)
+FM-155,KAT,Partial,OBSERVED,curated,S-KAT-004,"""Adat"" filter"
+FM-156,invitesion,Full,MEASURED,derived,C-INV-001;C-INV-002;C-INV-005,"median 94 score over 2 theme(s) / 3 cold-load-eligible capture(s) · pre-P0 own build 22ed99e (v1.2 population), not the current build"
+FM-156,WEV,None,MEASURED,derived,C-WEV-101;C-WEV-102;C-WEV-103;C-WEV-104;C-WEV-105;C-WEV-106,median 40 score over 6 theme(s) / 6 cold-load-eligible capture(s)
+FM-156,VID,Partial,MEASURED,derived,C-VID-101;C-VID-102;C-VID-103;C-VID-107;C-VID-108;C-VID-109,median 53 score over 6 theme(s) / 6 cold-load-eligible capture(s)
+FM-156,IVT,None,MEASURED,derived,C-IVT-101;C-IVT-102;C-IVT-103;C-IVT-104,median 38 score over 4 theme(s) / 4 cold-load-eligible capture(s)
+FM-156,INV,None,MEASURED,derived,C-INV-111;C-INV-112;C-INV-113;C-INV-114;C-INV-115;C-INV-116,median 30 score over 6 theme(s) / 6 cold-load-eligible capture(s)
+FM-156,KAT,None,MEASURED,derived,C-KAT-101;C-KAT-102;C-KAT-103;C-KAT-104;C-KAT-105;C-KAT-106,median 28 score over 6 theme(s) / 6 cold-load-eligible capture(s)
+FM-156,BRN,Partial,MEASURED,derived,C-BRN-101;C-BRN-102;C-BRN-103,median 55 score over 3 theme(s) / 3 cold-load-eligible capture(s)
+FM-157,invitesion,Partial,MEASURED,derived,C-INV-001;C-INV-002;C-INV-005,"median 2,529 ms over 2 theme(s) / 3 cold-load-eligible capture(s) · pre-P0 own build 22ed99e (v1.2 population), not the current build"
+FM-157,WEV,None,MEASURED,derived,C-WEV-101;C-WEV-102;C-WEV-103;C-WEV-104;C-WEV-105;C-WEV-106,"median 17,408 ms over 6 theme(s) / 6 cold-load-eligible capture(s)"
+FM-157,VID,None,MEASURED,derived,C-VID-101;C-VID-102;C-VID-103;C-VID-107;C-VID-108;C-VID-109,"median 12,576 ms over 6 theme(s) / 6 cold-load-eligible capture(s)"
+FM-157,IVT,None,MEASURED,derived,C-IVT-101;C-IVT-102;C-IVT-103;C-IVT-104,"median 18,945 ms over 4 theme(s) / 4 cold-load-eligible capture(s)"
+FM-157,INV,None,MEASURED,derived,C-INV-111;C-INV-112;C-INV-113;C-INV-114;C-INV-115;C-INV-116,"median 20,449 ms over 6 theme(s) / 6 cold-load-eligible capture(s)"
+FM-157,KAT,None,MEASURED,derived,C-KAT-101;C-KAT-102;C-KAT-103;C-KAT-104;C-KAT-105;C-KAT-106,"median 15,347 ms over 6 theme(s) / 6 cold-load-eligible capture(s)"
+FM-157,BRN,None,MEASURED,derived,C-BRN-101;C-BRN-102;C-BRN-103,"median 23,146 ms over 3 theme(s) / 3 cold-load-eligible capture(s)"
+FM-158,invitesion,Full,MEASURED,derived,C-INV-001;C-INV-002;C-INV-005,"median 184 ms over 2 theme(s) / 3 cold-load-eligible capture(s) · pre-P0 own build 22ed99e (v1.2 population), not the current build"
+FM-158,WEV,None,MEASURED,derived,C-WEV-101;C-WEV-102;C-WEV-103;C-WEV-104;C-WEV-105;C-WEV-106,median 982 ms over 6 theme(s) / 6 cold-load-eligible capture(s)
+FM-158,VID,Partial,MEASURED,derived,C-VID-101;C-VID-102;C-VID-103;C-VID-107;C-VID-108;C-VID-109,median 416 ms over 6 theme(s) / 6 cold-load-eligible capture(s)
+FM-158,IVT,None,MEASURED,derived,C-IVT-101;C-IVT-102;C-IVT-103;C-IVT-104,median 918 ms over 4 theme(s) / 4 cold-load-eligible capture(s)
+FM-158,INV,None,MEASURED,derived,C-INV-111;C-INV-112;C-INV-113;C-INV-114;C-INV-115;C-INV-116,"median 3,686 ms over 6 theme(s) / 6 cold-load-eligible capture(s)"
+FM-158,KAT,None,MEASURED,derived,C-KAT-101;C-KAT-102;C-KAT-103;C-KAT-104;C-KAT-105;C-KAT-106,"median 4,192 ms over 6 theme(s) / 6 cold-load-eligible capture(s)"
+FM-158,BRN,Full,MEASURED,derived,C-BRN-101;C-BRN-102;C-BRN-103,median 0 ms over 3 theme(s) / 3 cold-load-eligible capture(s)
+FM-159,invitesion,Full,MEASURED,derived,C-INV-001;C-INV-002;C-INV-005,"median 0.000 over 2 theme(s) / 3 cold-load-eligible capture(s) · pre-P0 own build 22ed99e (v1.2 population), not the current build"
+FM-159,WEV,Full,MEASURED,derived,C-WEV-101;C-WEV-102;C-WEV-103;C-WEV-104;C-WEV-105;C-WEV-106,median 0.002 over 6 theme(s) / 6 cold-load-eligible capture(s)
+FM-159,VID,Full,MEASURED,derived,C-VID-101;C-VID-102;C-VID-103;C-VID-107;C-VID-108;C-VID-109,median 0.037 over 6 theme(s) / 6 cold-load-eligible capture(s)
+FM-159,IVT,Full,MEASURED,derived,C-IVT-101;C-IVT-102;C-IVT-103;C-IVT-104,median 0.000 over 4 theme(s) / 4 cold-load-eligible capture(s)
+FM-159,INV,Full,MEASURED,derived,C-INV-111;C-INV-112;C-INV-113;C-INV-114;C-INV-115;C-INV-116,median 0.023 over 6 theme(s) / 6 cold-load-eligible capture(s)
+FM-159,KAT,Full,MEASURED,derived,C-KAT-101;C-KAT-102;C-KAT-103;C-KAT-104;C-KAT-105;C-KAT-106,median 0.004 over 6 theme(s) / 6 cold-load-eligible capture(s)
+FM-159,BRN,Full,MEASURED,derived,C-BRN-101;C-BRN-102;C-BRN-103,median 0.000 over 3 theme(s) / 3 cold-load-eligible capture(s)
+FM-160,invitesion,Full,MEASURED,derived,C-INV-001;C-INV-002;C-INV-005,"median 311 KiB over 2 theme(s) / 3 cold-load-eligible capture(s) · pre-P0 own build 22ed99e (v1.2 population), not the current build"
+FM-160,WEV,Partial,MEASURED,derived,C-WEV-101;C-WEV-102;C-WEV-103;C-WEV-104;C-WEV-105;C-WEV-106,"median 3,448 KiB over 6 theme(s) / 6 cold-load-eligible capture(s)"
+FM-160,VID,Partial,MEASURED,derived,C-VID-101;C-VID-102;C-VID-103;C-VID-107;C-VID-108;C-VID-109,"median 3,084 KiB over 6 theme(s) / 6 cold-load-eligible capture(s)"
+FM-160,IVT,None,MEASURED,derived,C-IVT-101;C-IVT-102;C-IVT-103;C-IVT-104,"median 7,192 KiB over 4 theme(s) / 4 cold-load-eligible capture(s)"
+FM-160,INV,Partial,MEASURED,derived,C-INV-111;C-INV-112;C-INV-113;C-INV-114;C-INV-115;C-INV-116,"median 3,936 KiB over 6 theme(s) / 6 cold-load-eligible capture(s)"
+FM-160,KAT,None,MEASURED,derived,C-KAT-101;C-KAT-102;C-KAT-103;C-KAT-104;C-KAT-105;C-KAT-106,"median 5,984 KiB over 6 theme(s) / 6 cold-load-eligible capture(s)"
+FM-160,BRN,None,MEASURED,derived,C-BRN-101;C-BRN-102;C-BRN-103,"median 4,461 KiB over 3 theme(s) / 3 cold-load-eligible capture(s)"
+FM-161,invitesion,None,CODE,curated,M-027,Originals served; no next/image
+FM-162,invitesion,Full,CODE,curated,M-013,Gallery images use loading=lazy; the cover image is eager (above the fold). The captured pages had no gallery photos (lazyImages 0/0)
+FM-162,WEV,None,MEASURED,derived,C-WEV-101;C-WEV-102;C-WEV-103;C-WEV-104;C-WEV-105;C-WEV-106,lazy images on 0/6 theme(s) with images
+FM-162,VID,Partial,MEASURED,derived,C-VID-101;C-VID-102;C-VID-103;C-VID-107;C-VID-108;C-VID-109,lazy images on 1/6 theme(s) with images
+FM-162,IVT,None,MEASURED,derived,C-IVT-101;C-IVT-104,lazy images on 0/2 theme(s) with images
+FM-162,INV,Full,MEASURED,derived,C-INV-111;C-INV-112;C-INV-113;C-INV-114;C-INV-115;C-INV-116,lazy images on 6/6 theme(s) with images
+FM-162,KAT,Partial,MEASURED,derived,C-KAT-101;C-KAT-102;C-KAT-103;C-KAT-104;C-KAT-105;C-KAT-106,lazy images on 5/6 theme(s) with images
+FM-162,BRN,None,MEASURED,derived,C-BRN-101;C-BRN-102;C-BRN-103,lazy images on 0/3 theme(s) with images
+FM-163,invitesion,Full,MEASURED,derived,C-INV-001;C-INV-002;C-INV-005,"median 96 score over 2 theme(s) / 3 cold-load-eligible capture(s) · pre-P0 own build 22ed99e (v1.2 population), not the current build"
+FM-163,WEV,Partial,MEASURED,derived,C-WEV-101;C-WEV-102;C-WEV-103;C-WEV-104;C-WEV-105;C-WEV-106,median 86 score over 6 theme(s) / 6 cold-load-eligible capture(s)
+FM-163,VID,Partial,MEASURED,derived,C-VID-101;C-VID-102;C-VID-103;C-VID-107;C-VID-108;C-VID-109,median 81 score over 6 theme(s) / 6 cold-load-eligible capture(s)
+FM-163,IVT,Partial,MEASURED,derived,C-IVT-101;C-IVT-102;C-IVT-103;C-IVT-104,median 83 score over 4 theme(s) / 4 cold-load-eligible capture(s)
+FM-163,INV,Partial,MEASURED,derived,C-INV-111;C-INV-112;C-INV-113;C-INV-114;C-INV-115;C-INV-116,median 85 score over 6 theme(s) / 6 cold-load-eligible capture(s)
+FM-163,KAT,Partial,MEASURED,derived,C-KAT-101;C-KAT-102;C-KAT-103;C-KAT-104;C-KAT-105;C-KAT-106,median 77 score over 6 theme(s) / 6 cold-load-eligible capture(s)
+FM-163,BRN,Partial,MEASURED,derived,C-BRN-101;C-BRN-102;C-BRN-103,median 83 score over 3 theme(s) / 3 cold-load-eligible capture(s)
+FM-164,invitesion,Full,MEASURED,derived,C-INV-001;C-INV-002;C-INV-005,"zoom blocked on 0/2 theme(s) · pre-P0 own build 22ed99e (v1.2 population), not the current build"
+FM-164,WEV,Full,MEASURED,derived,C-WEV-101;C-WEV-102;C-WEV-103;C-WEV-104;C-WEV-105;C-WEV-106,zoom blocked on 0/6 theme(s)
+FM-164,VID,None,MEASURED,derived,C-VID-101;C-VID-102;C-VID-103;C-VID-107;C-VID-108;C-VID-109,zoom blocked on 6/6 theme(s)
+FM-164,IVT,Full,MEASURED,derived,C-IVT-101;C-IVT-104,zoom blocked on 0/2 theme(s)
+FM-164,INV,Full,MEASURED,derived,C-INV-111;C-INV-112;C-INV-113;C-INV-114;C-INV-115;C-INV-116,zoom blocked on 0/6 theme(s)
+FM-164,KAT,None,MEASURED,derived,C-KAT-101;C-KAT-102;C-KAT-103;C-KAT-104;C-KAT-105;C-KAT-106,zoom blocked on 6/6 theme(s)
+FM-164,BRN,Full,MEASURED,derived,C-BRN-101;C-BRN-102;C-BRN-103,zoom blocked on 0/3 theme(s)
+FM-165,invitesion,Partial,CODE,curated,F-096,Guest renderer is Indonesian-only
+FM-165,VID,Full,OBSERVED,curated,S-VID-001,"/id, /en, /ms routes"
+FM-165,INV,None,OBSERVED,curated,S-INV-002,Indonesian only
+FM-165,BRN,None,OBSERVED,curated,S-BRN-005,Korean only
+FM-166,invitesion,Partial,CODE,curated,F-094,CSP is report-only
+FM-167,invitesion,None,CODE,curated,F-095,
+FM-168,invitesion,None,CODE,curated,F-098,
+FM-169,invitesion,None,CODE,curated,REPO@2c94140,
+FM-170,invitesion,None,CODE,curated,F-099,
+FM-170,PLO,Full,OBSERVED,curated,S-PLO-003,Data deletion offered in the listing
+FM-171,invitesion,Partial,CODE,curated,M-002,Only the marketing page /resources/privacy-and-security; no legal policy
+FM-171,PLO,Full,OBSERVED,curated,S-PLO-003,Privacy policy linked from the listing
+FM-171,RSV,Full,CLAIMED,curated,S-RSV-001,"GDPR / CCPA, SOC 2 Type II; no sale of guest data"
+FM-172,invitesion,Full,CODE,curated,M-005,Template previews use fictional data
+FM-172,IDI,None,OBSERVED,curated,S-IDI-003,Public samples render real customers' events
+FM-172,SMO,None,OBSERVED,curated,S-SMO-004,Public previews show real people's data
+FM-172,WEV,Full,INFERRED,curated,D-WEV,Official vendor demos
+FM-172,VID,Full,OBSERVED,curated,C-VID-101;C-VID-102;C-VID-103,
+FM-172,ENV,Full,INFERRED,curated,C-ENV-111;D-ENV,Official vendor demo (slug pseudonymized)
+FM-172,IVT,None,OBSERVED,curated,S-IVT-004;S-IVT-005,Public demos tied to real client couples
+FM-172,INV,Full,INFERRED,curated,D-INV,Official demos
+FM-172,KAT,Full,OBSERVED,curated,S-KAT-001;S-KAT-002,Vendor placeholders (D-015 pseudonymized)
+FM-172,BRN,Full,OBSERVED,curated,S-BRN-003,
+FM-173,invitesion,Full,CODE,curated,C-INV-005,"robots: index false, follow false on both guest routes"
+FM-173,ENV,Full,OBSERVED,curated,C-ENV-111;S-ENV-001,noindex by design
+FM-174,invitesion,None,CODE,curated,REPO@2c94140,
+FM-174,IDI,Full,OBSERVED,curated,LONGLIST:IDI,500K+ installs
+FM-174,PLO,Full,OBSERVED,curated,S-PLO-003,500K+ installs
+FM-174,SMO,None,INFERRED,curated,LONGLIST:SMO;S-SMO-005,No app linked or found in the Play searches
+FM-174,WEV,Full,OBSERVED,curated,S-WEV-004,50k+ downloads
+FM-174,ENV,None,OBSERVED,curated,LONGLIST:ENV,No Play listing
+FM-174,IVT,None,OBSERVED,curated,LONGLIST:IVT,No Play listing
+FM-175,invitesion,None,CODE,curated,REPO@2c94140,
+FM-175,WEV,None,OBSERVED,curated,S-WEV-001,iPhone users are sent to the browser
+FM-176,invitesion,Partial,CODE,curated,F-092,Marketing resources pages only
+FM-176,PLO,Full,OBSERVED,curated,S-PLO-003,Help centre
+FM-176,SMO,Full,OBSERVED,curated,S-SMO-005,Blog and tutorials
+FM-176,WEV,Partial,OBSERVED,curated,S-WEV-001,Planning blog
+FM-176,VID,Partial,OBSERVED,curated,S-VID-001,Blog and FAQ
+FM-176,INV,Full,OBSERVED,curated,S-INV-002,Blog and tutorials
+FM-177,invitesion,Partial,CODE,curated,F-101,49 cases; no renderer or guest-action coverage
+FM-178,invitesion,None,CODE,curated,F-102,
+FM-179,invitesion,Full,MEASURED,derived,C-INV-001;C-INV-002;C-INV-005,"median 0 entities over 2 theme(s) / 3 cold-load-eligible capture(s) · pre-P0 own build 22ed99e (v1.2 population), not the current build"
+FM-179,WEV,None,MEASURED,derived,C-WEV-101;C-WEV-102;C-WEV-103;C-WEV-104;C-WEV-105;C-WEV-106,median 9 entities over 6 theme(s) / 6 cold-load-eligible capture(s)
+FM-179,VID,None,MEASURED,derived,C-VID-101;C-VID-102;C-VID-103;C-VID-107;C-VID-108;C-VID-109,median 5 entities over 6 theme(s) / 6 cold-load-eligible capture(s)
+FM-179,IVT,Partial,MEASURED,derived,C-IVT-101;C-IVT-102;C-IVT-103;C-IVT-104,median 2 entities over 4 theme(s) / 4 cold-load-eligible capture(s)
+FM-179,INV,None,MEASURED,derived,C-INV-111;C-INV-112;C-INV-113;C-INV-114;C-INV-115;C-INV-116,median 9 entities over 6 theme(s) / 6 cold-load-eligible capture(s)
+FM-179,KAT,None,MEASURED,derived,C-KAT-101;C-KAT-102;C-KAT-103;C-KAT-104;C-KAT-105;C-KAT-106,median 8 entities over 6 theme(s) / 6 cold-load-eligible capture(s)
+FM-179,BRN,None,MEASURED,derived,C-BRN-101;C-BRN-102;C-BRN-103,median 5 entities over 3 theme(s) / 3 cold-load-eligible capture(s)
+FM-180,invitesion,None,CODE,curated,F-022,
+FM-180,BRN,Full,CLAIMED,curated,S-BRN-004,Card gift money held as points per side; automatic payout within 14 days
+FM-181,invitesion,None,CODE,curated,F-046,
+FM-181,JOY,Full,CLAIMED,curated,S-JOY-001,"""Magic link"" address collection"
+FM-182,invitesion,None,CODE,curated,M-013,
+FM-182,ENV,Full,OBSERVED,curated,C-ENV-122,Sticky navigation with 12 labels (family B)
+FM-183,invitesion,None,CODE,curated,F-048,
+FM-183,VID,Full,CLAIMED,curated,S-VID-002,Split invitation per guest category at no extra cost
+FM-183,ENV,Full,CLAIMED,curated,S-ENV-001,2-3 visual variants on one base link
+FM-184,invitesion,None,CODE,curated,M-005,
+FM-184,ENV,Full,OBSERVED,curated,S-ENV-001;C-ENV-122,"""Coba tema"" with your names; ""Ganti Data"" on the demo"
+FM-185,invitesion,None,CODE,curated,F-075,Publishing requires a paid order
+FM-185,ENV,Full,OBSERVED,curated,S-ENV-001,Publish first; 5-day full-access trial; archived unless paid
+FM-186,invitesion,None,CODE,curated,F-056,
+FM-186,IVT,Full,CLAIMED,curated,S-IVT-005,Gift-envelope labels and gift logging at registration
+FM-187,invitesion,None,CODE,curated,F-001;M-015,Guest slug derived from the guest's name (QA-003)
+FM-187,IDI,None,OBSERVED,curated,S-IDI-002,Guest name in clear text in the kpd parameter
+FM-187,IVT,Full,OBSERVED,curated,C-IVT-101;C-IVT-104,Opaque ?code= guest parameter
+FM-187,INV,None,OBSERVED,curated,S-INV-001,Guest name in clear text in the ?to= parameter

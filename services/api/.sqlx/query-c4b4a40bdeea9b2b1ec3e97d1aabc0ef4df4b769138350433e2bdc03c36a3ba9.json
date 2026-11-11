@@ -1,0 +1,15 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "update jobs set done_at = $2, locked_until = null, last_error = null where id = $1",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Left": [
+        "Int8",
+        "Timestamp"
+      ]
+    },
+    "nullable": []
+  },
+  "hash": "c4b4a40bdeea9b2b1ec3e97d1aabc0ef4df4b769138350433e2bdc03c36a3ba9"
+}

@@ -1,0 +1,1 @@
+CREATE INDEX "invitation_versions_invitation_version_idx" ON "invitation_versions" USING btree ("invitation_id","version_no");

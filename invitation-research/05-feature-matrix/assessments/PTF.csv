@@ -1,0 +1,9 @@
+feature_id,status,basis,evidence,note
+FM-022,Full,CLAIMED,S-PTF-001,RSVP in the browser without an app
+FM-026,Full,CLAIMED,S-PTF-001,Guest questions
+FM-058,Full,CLAIMED,S-PTF-001,Ticket sales (fees [UNKNOWN])
+FM-064,Full,CLAIMED,S-PTF-001,Guest list and comments
+FM-075,Full,CLAIMED,S-PTF-001,Text blasts
+FM-076,Full,CLAIMED,S-PTF-001,Reminders
+FM-112,Full,CLAIMED,S-PTF-001,App with a 5.0 rating claim
+FM-118,Full,CLAIMED,S-PTF-001,Free event pages

@@ -1,0 +1,573 @@
+{
+ "id": "C-IDI-106",
+ "competitor": "indoinvite",
+ "kind": "demo",
+ "url": "https://indoinvite.com/preview/contoh-undangan-online-peresmian-kantor",
+ "capturedAt": "2026-11-02T00:06:40.656+07:00",
+ "robots": {
+  "allowed": true,
+  "note": "no matching rule"
+ },
+ "method": "REA capture-browser-scenario (connect mode) drives navigation, settle and keyboard scroll; optional cover click (trusted CDP mouse click on the settled control: coverClickMethod, coverClickLanding) and scroll through the opened page by CDP after REA's scenario; CDP mobile emulation 412x915 @2.625 + Android Chrome UA, cold cache (no throttling); REA 6.8.0 inspect-web-page/analyze-web-bundle; custom structure pass (text features + animation libraries: no REA coverage); Lighthouse 12 mobile simulate (Slow 4G, 4x CPU) when present",
+ "driver": "rea",
+ "rea": {
+  "version": "6.8.0",
+  "scenario": {
+   "ok": true,
+   "exit": 0,
+   "ms": 56779,
+   "evidenceId": "ev_6fbc2359992ceef04eb0464481bdf3ae646c0381829a8f824f8cc53305d8cc5f",
+   "status": "incomplete",
+   "stepsCompleted": 32,
+   "stepsTotal": 32,
+   "failed": [],
+   "events": 379,
+   "error": null,
+   "sha256": "2bd742663e3e9b0eec2552c274e7d9ed51a4c80bf2dce6307b01579ced6a3352",
+   "file": "_private/rea/C-IDI-106/rea-scenario.json"
+  },
+  "emulation": {
+   "duringScenario": {
+    "android": true,
+    "width": 412,
+    "dpr": 2.625,
+    "coarsePointer": false,
+    "reducedMotion": false
+   },
+   "afterScenario": {
+    "android": true,
+    "width": 500,
+    "dpr": 1,
+    "coarsePointer": false,
+    "reducedMotion": false
+   }
+  },
+  "inspectEvidenceId": "ev_66a33df358c2f05a210d368bcd1ca4083197b62ae0387ffb6589786f1378de17",
+  "bundleEvidenceId": "ev_179d2f6a32ff515145bbfd583cf408ad0279e6505948434f7ae56e01c2727573",
+  "inspectError": null,
+  "bundleError": null,
+  "domNodes": 36222,
+  "scripts": 10,
+  "resources": 7,
+  "completeness": "policy_filtered",
+  "bundleChunks": 10,
+  "bundleEndpoints": [],
+  "bundleInferences": [
+   {
+    "kind": "endpoint_candidate",
+    "value": "ads",
+    "confidence": "low",
+    "basis": [
+     {
+      "script_key": "scr_dc3a87cafcef93c0510d557d3e208902d37bbd637563f573eedff331d0498f3c",
+      "artifact_sha256": "0b9677f370c6056865012d81697451c14d51ff1a41f4f96c07ae78d4fe7fa56c",
+      "line": 97,
+      "column": 25,
+      "detector": "call:urlParams.get:unverified-network-receiver"
+     }
+    ]
+   },
+   {
+    "kind": "endpoint_candidate",
+    "value": "utm_campaign",
+    "confidence": "low",
+    "basis": [
+     {
+      "script_key": "scr_eb61f8c7e6475185ccf9ceef653d5e4277f4da48bc7bd0c9c173374572d57a56",
+      "artifact_sha256": "d5df9198e27c6e3f2ec53e77ca226bc3ce827d0e29186433f4065a05d2be6d2a",
+      "line": 72,
+      "column": 20,
+      "detector": "call:searchParams.get:unverified-network-receiver"
+     }
+    ]
+   },
+   {
+    "kind": "endpoint_candidate",
+    "value": "open",
+    "confidence": "low",
+    "basis": [
+     {
+      "script_key": "scr_eb61f8c7e6475185ccf9ceef653d5e4277f4da48bc7bd0c9c173374572d57a56",
+      "artifact_sha256": "d5df9198e27c6e3f2ec53e77ca226bc3ce827d0e29186433f4065a05d2be6d2a",
+      "line": 78,
+      "column": 12,
+      "detector": "call:searchParams.get:unverified-network-receiver"
+     }
+    ]
+   },
+   {
+    "kind": "endpoint_candidate",
+    "value": "open",
+    "confidence": "low",
+    "basis": [
+     {
+      "script_key": "scr_eb61f8c7e6475185ccf9ceef653d5e4277f4da48bc7bd0c9c173374572d57a56",
+      "artifact_sha256": "d5df9198e27c6e3f2ec53e77ca226bc3ce827d0e29186433f4065a05d2be6d2a",
+      "line": 81,
+      "column": 16,
+      "detector": "call:searchParams.delete:unverified-network-receiver"
+     }
+    ]
+   }
+  ]
+ },
+ "network": {
+  "loadEventMs": 39966,
+  "requests": 125,
+  "bytes": 7093790,
+  "byType": {
+   "Document": {
+    "requests": 2,
+    "bytes": 96007
+   },
+   "Image": {
+    "requests": 74,
+    "bytes": 5526380
+   },
+   "Stylesheet": {
+    "requests": 4,
+    "bytes": 233156
+   },
+   "Font": {
+    "requests": 5,
+    "bytes": 39215
+   },
+   "Script": {
+    "requests": 16,
+    "bytes": 1190498
+   },
+   "Manifest": {
+    "requests": 1,
+    "bytes": 640
+   },
+   "Fetch": {
+    "requests": 8,
+    "bytes": 872
+   },
+   "Ping": {
+    "requests": 7,
+    "bytes": 4798
+   },
+   "XHR": {
+    "requests": 8,
+    "bytes": 2224
+   }
+  },
+  "protocols": [
+   "http/1.1",
+   "h3",
+   "data",
+   "h2"
+  ],
+  "scriptHosts": [
+   "cdnjs.cloudflare.com",
+   "bzrcdn.openai.com",
+   "www.googletagmanager.com",
+   "indoinvite.com",
+   "connect.facebook.net",
+   "analytics.tiktok.com",
+   "www.clarity.ms",
+   "googleads.g.doubleclick.net",
+   "scripts.clarity.ms"
+  ],
+  "scriptFiles": [
+   "jquery.min.js",
+   "oaiq.min.js",
+   "gtm.js",
+   "main.js",
+   "splide.min.js",
+   "bootstrap.bundle.min.js",
+   "fbevents.js",
+   "js",
+   "events.js",
+   "js",
+   "mv6xtgbfa8",
+   "",
+   "485086054639593",
+   "main.MTJjYzk1MmQ1OQ.js",
+   "clarity.js",
+   "identify_9fbdaf50.js"
+  ],
+  "fontFiles": [
+   {
+    "host": "fonts.gstatic.com",
+    "file": "pxiByp8kv8JHgFVrLEj6Z1xlFd2JQEk.woff2",
+    "bytes": 8019
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "pxiByp8kv8JHgFVrLBT5Z1xlFd2JQEk.woff2",
+    "bytes": 7627
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "pxiByp8kv8JHgFVrLCz7Z1xlFd2JQEk.woff2",
+    "bytes": 7875
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "pxiEyp8kv8JHgFVrJJfecnFHGPc.woff2",
+    "bytes": 7927
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "pxiByp8kv8JHgFVrLGT9Z1xlFd2JQEk.woff2",
+    "bytes": 7767
+   }
+  ],
+  "thirdPartyHosts": [
+   "www.gstatic.com",
+   "fonts.googleapis.com",
+   "",
+   "fonts.gstatic.com",
+   "cdnjs.cloudflare.com",
+   "bzrcdn.openai.com",
+   "www.googletagmanager.com",
+   "connect.facebook.net",
+   "www.google.com",
+   "ad.doubleclick.net",
+   "analytics.tiktok.com",
+   "www.clarity.ms",
+   "googleads.g.doubleclick.net",
+   "analytics.google.com",
+   "scripts.clarity.ms",
+   "www.facebook.com",
+   "mpc-prod-24-s6uit34pua-uw.a.run.app",
+   "analytics-ipv6.tiktokw.us",
+   "j.clarity.ms",
+   "bzr.openai.com",
+   "sin1.contabostorage.com"
+  ]
+ },
+ "structure": {
+  "coverClicked": false,
+  "coverClickMethod": null,
+  "coverClickLanding": null,
+  "beforeOpen": {
+   "sectionCount": 2,
+   "features": {
+    "coverGate": false,
+    "toGuest": false,
+    "countdown": false,
+    "rsvp": true,
+    "wishes": false,
+    "gift": true,
+    "copyButton": true,
+    "maps": false,
+    "calendar": false,
+    "livestream": false,
+    "qr": false,
+    "loveStory": false,
+    "gallery": true,
+    "dressCode": false,
+    "quranVerse": false,
+    "protocol": false,
+    "timezoneLabel": [],
+    "watermark": false,
+    "instagramFilter": false,
+    "musicControl": false
+   },
+   "buttons": [
+    "Masuk Dan Buat",
+    "Buat Undangan",
+    "Mulai Gratis",
+    "Toggle navigation",
+    "Contoh",
+    "Tools",
+    "Template",
+    "Baca Selengkapnya",
+    "Preview",
+    "Gunakan Tema"
+   ]
+  },
+  "afterOpen": {
+   "title": "Contoh Undangan Digital Peresmian Kantor",
+   "lang": "id",
+   "generator": null,
+   "viewport": "width=device-width, initial-scale=1, shrink-to-fit=no",
+   "og": {
+    "image": true,
+    "title": true,
+    "description": true
+   },
+   "reducedMotionCss": true,
+   "libs": {
+    "gsap": false,
+    "scrollTrigger": false,
+    "aos": false,
+    "animateCss": false,
+    "wow": false,
+    "swiper": false,
+    "slick": false,
+    "owl": false,
+    "lottie": false,
+    "three": false,
+    "pixi": false,
+    "anime": false,
+    "motionOne": false,
+    "howler": false,
+    "jquery": true,
+    "bootstrap": true,
+    "tailwind": false,
+    "alpine": false,
+    "vue": false,
+    "nuxt": false,
+    "next": false,
+    "react": false,
+    "svelte": false,
+    "flutterWeb": false,
+    "wordpress": false,
+    "elementor": false,
+    "livewire": false,
+    "inertia": false
+   },
+   "sections": [
+    {
+     "tag": "div",
+     "id": "blog",
+     "cls": "latest-news-area section",
+     "heading": "Contoh Undangan Digital Peresmian Kantor",
+     "h": 95330
+    },
+    {
+     "tag": "div",
+     "id": "",
+     "cls": "section-title-five",
+     "heading": "Contoh Undangan Digital Peresmian Kantor",
+     "h": 595
+    }
+   ],
+   "sectionCount": 2,
+   "buttons": [
+    "Masuk Dan Buat",
+    "Buat Undangan",
+    "Mulai Gratis",
+    "Toggle navigation",
+    "Contoh",
+    "Tools",
+    "Template",
+    "Baca Selengkapnya",
+    "Preview",
+    "Gunakan Tema",
+    "Copy",
+    "Sebar Dengan Tema Ini",
+    "×",
+    "Chat admin",
+    "Home",
+    "Harga",
+    "Login"
+   ],
+   "media": {
+    "audio": [],
+    "video": 0,
+    "iframes": [],
+    "canvases": 0,
+    "svgs": 1505,
+    "images": 569,
+    "lazyImages": 566
+   },
+   "forms": [
+    {
+     "fields": [
+      "hidden",
+      "email",
+      "password",
+      "submit"
+     ],
+     "hasRadio": false,
+     "hasSelect": false
+    },
+    {
+     "fields": [
+      "hidden",
+      "hidden",
+      "select-one",
+      "number",
+      "date",
+      "submit"
+     ],
+     "hasRadio": false,
+     "hasSelect": true
+    }
+   ],
+   "fontsUsed": [
+    "Poppins"
+   ],
+   "features": {
+    "coverGate": false,
+    "toGuest": false,
+    "countdown": false,
+    "rsvp": true,
+    "wishes": false,
+    "gift": true,
+    "copyButton": true,
+    "maps": false,
+    "calendar": false,
+    "livestream": false,
+    "qr": false,
+    "loveStory": false,
+    "gallery": true,
+    "dressCode": false,
+    "quranVerse": false,
+    "protocol": false,
+    "timezoneLabel": [],
+    "watermark": false,
+    "instagramFilter": false,
+    "musicControl": false
+   },
+   "domNodes": 13041,
+   "docHeight": 96598
+  }
+ },
+ "lighthouse": {
+  "ok": true,
+  "lighthouseVersion": "12.8.2",
+  "finalUrl": "https://indoinvite.com/preview/contoh-undangan-online-peresmian-kantor",
+  "throttling": {
+   "rttMs": 150,
+   "throughputKbps": 1638.4,
+   "requestLatencyMs": 562.5,
+   "downloadThroughputKbps": 1474.5600000000002,
+   "uploadThroughputKbps": 675,
+   "cpuSlowdownMultiplier": 4
+  },
+  "screen": {
+   "mobile": true,
+   "width": 412,
+   "height": 915,
+   "deviceScaleFactor": 2.625,
+   "disabled": false
+  },
+  "scores": {
+   "performance": 20,
+   "accessibility": 86,
+   "best-practices": 79,
+   "seo": 92
+  },
+  "metrics": {
+   "fcpMs": 3703.9759999999997,
+   "lcpMs": 13017.975,
+   "tbtMs": 2967,
+   "cls": 0.29330328402464867,
+   "siMs": 5184.569288000107,
+   "ttiMs": 17043.62005
+  },
+  "byType": {
+   "total": {
+    "requests": 66,
+    "bytes": 2150373
+   },
+   "script": {
+    "requests": 16,
+    "bytes": 1191740
+   },
+   "image": {
+    "requests": 19,
+    "bytes": 578496
+   },
+   "stylesheet": {
+    "requests": 4,
+    "bytes": 233600
+   },
+   "document": {
+    "requests": 2,
+    "bytes": 96032
+   },
+   "font": {
+    "requests": 5,
+    "bytes": 39215
+   },
+   "other": {
+    "requests": 20,
+    "bytes": 11290
+   },
+   "media": {
+    "requests": 0,
+    "bytes": 0
+   },
+   "third-party": {
+    "requests": 52,
+    "bytes": 1560089
+   }
+  },
+  "totalBytes": 2150373,
+  "requests": 66,
+  "thirdParties": [
+   {
+    "entity": "Google Tag Manager",
+    "bytes": 527183,
+    "blockingMs": 1879.0000000000086
+   },
+   {
+    "entity": "Facebook",
+    "bytes": 265802,
+    "blockingMs": 765.0000000000003
+   },
+   {
+    "entity": "Clarity",
+    "bytes": 29112,
+    "blockingMs": 667.9613691026843
+   },
+   {
+    "entity": "TikTok",
+    "bytes": 174802,
+    "blockingMs": 381.0000000000001
+   },
+   {
+    "entity": "openai.com",
+    "bytes": 37180,
+    "blockingMs": 36.00000000000001
+   },
+   {
+    "entity": "Cloudflare CDN",
+    "bytes": 28119,
+    "blockingMs": 27.744612600757424
+   },
+   {
+    "entity": "contabostorage.com",
+    "bytes": 449335,
+    "blockingMs": 0
+   },
+   {
+    "entity": "Google Fonts",
+    "bytes": 40649,
+    "blockingMs": 0
+   },
+   {
+    "entity": "Google/Doubleclick Ads",
+    "bytes": 3738,
+    "blockingMs": 0
+   },
+   {
+    "entity": "Google CDN",
+    "bytes": 1474,
+    "blockingMs": 0
+   },
+   {
+    "entity": "tiktokw.us",
+    "bytes": 978,
+    "blockingMs": 0
+   },
+   {
+    "entity": "Bing Ads",
+    "bytes": 766,
+    "blockingMs": 0
+   }
+  ],
+  "fontDisplayIssues": 0,
+  "unusedJsBytes": 453131,
+  "a11yFailures": [
+   "color-contrast",
+   "heading-order",
+   "list",
+   "listitem"
+  ]
+ },
+ "files": {
+  "rea-inspect.json": "f8cb02e99744ec4f2eddc47939c276cb46188cf772d0d5cde5641266d14c9a9c",
+  "rea-bundle.json": "87682cd53056fed7fdefe2d6c58501d15b7180e9fb26b8c4e5b637919f697b6f",
+  "_private/rea/C-IDI-106/rea-scenario.json": "2bd742663e3e9b0eec2552c274e7d9ed51a4c80bf2dce6307b01579ced6a3352",
+  "_private/lh/C-IDI-106.json": "47dbb8f72a9276ff553cbacdf308bb43dfcc1a0aae290c91aea1108aa95b2bed"
+ },
+ "screenshot": "_private/thumbs (competitor, not committed)"
+}

@@ -1,0 +1,481 @@
+{
+ "id": "C-INV-001",
+ "competitor": "invitesion",
+ "kind": "demo",
+ "url": "http://127.0.0.1:3100/i/budi-sari/budi-hartono",
+ "capturedAt": "2026-10-29T05:33:19.438+07:00",
+ "robots": {
+  "allowed": true,
+  "note": "own instance"
+ },
+ "method": "CDP mobile emulation 412x915 @2.625, Android Chrome UA, cold cache (no throttling) + REA 6.8.0 inspect-web-page/analyze-web-bundle; Lighthouse 12 mobile simulate (Slow 4G, 4x CPU) when present",
+ "rea": {
+  "inspectEvidenceId": "ev_dd05f60c9b96cfc6a249912367e0bbc5582a1d06ee48b0f2bf548e0af4e033d7",
+  "bundleEvidenceId": "ev_1e10f653b9ef8fcf6238815d3c608b4ed7673afcdeb6d7f259782ee0a9583cb3",
+  "inspectError": null,
+  "bundleError": null,
+  "domNodes": 286,
+  "scripts": 35,
+  "resources": 17,
+  "completeness": "policy_filtered",
+  "bundleChunks": 35,
+  "bundleEndpoints": [],
+  "bundleInferences": [
+   {
+    "kind": "vendor_fingerprint",
+    "value": "Next.js",
+    "confidence": "high",
+    "basis": [
+     {
+      "script_key": "scr_28ed031fa68af9eb241e89b823429132488abd3ffbb727d34debfbca795f106a",
+      "artifact_sha256": "102b0384cd4e2b1a0f2389d8728181ace25b0c4f979a2e86cbb59166f555cbe3",
+      "line": null,
+      "column": null,
+      "detector": "next-runtime"
+     }
+    ]
+   },
+   {
+    "kind": "vendor_fingerprint",
+    "value": "React",
+    "confidence": "medium",
+    "basis": [
+     {
+      "script_key": "scr_32dc1f700daffc65188870d14b75fdc54b9f5372603a1e6401208d1f033dd27e",
+      "artifact_sha256": "a3715cb46ac685097a4d292d08155e00342874c2922b87f1181f2ce437a9b01a",
+      "line": null,
+      "column": null,
+      "detector": "react-runtime"
+     }
+    ]
+   },
+   {
+    "kind": "vendor_fingerprint",
+    "value": "Next.js",
+    "confidence": "high",
+    "basis": [
+     {
+      "script_key": "scr_33728e3a8126ffe0f950daf5ac1e8f426f845b596e11f3a7af2b7c5a79110e83",
+      "artifact_sha256": "7882eaf5eea8921361ecd66e77dec9e795677c97076b68cafc4cd1016b687baf",
+      "line": null,
+      "column": null,
+      "detector": "next-runtime"
+     }
+    ]
+   },
+   {
+    "kind": "vendor_fingerprint",
+    "value": "Next.js",
+    "confidence": "high",
+    "basis": [
+     {
+      "script_key": "scr_93360547cd3771a93fc9846b2ee49ef879b02294b3bcc32b14fddb71e29e1a03",
+      "artifact_sha256": "b6e974e365018d6380d121385647077a65a9e5b825faa952b7ce1df7975f7c50",
+      "line": null,
+      "column": null,
+      "detector": "next-runtime"
+     }
+    ]
+   },
+   {
+    "kind": "vendor_fingerprint",
+    "value": "Next.js",
+    "confidence": "high",
+    "basis": [
+     {
+      "script_key": "scr_b64dcaeb74912b8dc0075f2efb51429fa2eec29b208fcd8c86b9af46475317b3",
+      "artifact_sha256": "c3f12e83f6eca6dcd4ebafbbf9f10a8203098d9b004c84a4676f5eb1c1e193a1",
+      "line": null,
+      "column": null,
+      "detector": "next-runtime"
+     }
+    ]
+   },
+   {
+    "kind": "vendor_fingerprint",
+    "value": "Next.js",
+    "confidence": "high",
+    "basis": [
+     {
+      "script_key": "scr_c507846d716f93ac3ca1563512719ca16b2247315ebb15b33840cf7e2cb9bf72",
+      "artifact_sha256": "74de006f4421253645f0f4f4dd58f31666ab768b354ba3837150a1403c6be32d",
+      "line": null,
+      "column": null,
+      "detector": "next-runtime"
+     }
+    ]
+   },
+   {
+    "kind": "vendor_fingerprint",
+    "value": "Next.js",
+    "confidence": "high",
+    "basis": [
+     {
+      "script_key": "scr_d8604cf9cfe60034bb37ae8dcbbe924c02e4c936d8acd10f8f42ec5e17207284",
+      "artifact_sha256": "3956d90226e11b8ed54870a1f5d8f0bf54bf0f604047e2c960abbe3dfbb5c076",
+      "line": null,
+      "column": null,
+      "detector": "next-runtime"
+     }
+    ]
+   }
+  ]
+ },
+ "network": {
+  "loadEventMs": 359,
+  "requests": 19,
+  "bytes": 330427,
+  "byType": {
+   "Document": {
+    "requests": 1,
+    "bytes": 30221
+   },
+   "Font": {
+    "requests": 3,
+    "bytes": 56810
+   },
+   "Stylesheet": {
+    "requests": 1,
+    "bytes": 17165
+   },
+   "Script": {
+    "requests": 13,
+    "bytes": 199719
+   },
+   "Other": {
+    "requests": 1,
+    "bytes": 26512
+   }
+  },
+  "protocols": [
+   "http/1.1"
+  ],
+  "scriptHosts": [
+   "127.0.0.1"
+  ],
+  "scriptFiles": [
+   "c86dc58b78f42f03.js",
+   "f297cde83752b30f.js",
+   "8a5d9839d57eb86c.js",
+   "3c530c24ce279779.js",
+   "turbopack-61584598cce0c850.js",
+   "ba288541a2d772bc.js",
+   "e75d08fa83341e9f.js",
+   "5cf25e1216191bed.js",
+   "5a4e913764f6a112.js",
+   "3fcbd60a2308aaca.js",
+   "833b791a5ea1a311.js",
+   "b401745f06ed2788.js",
+   "3631f6f3fd5c1047.js"
+  ],
+  "fontFiles": [
+   {
+    "host": "127.0.0.1",
+    "file": "7ebf22b5a21034f8-s.p.d8bad3ab.woff2",
+    "bytes": 16234
+   },
+   {
+    "host": "127.0.0.1",
+    "file": "e41d5df559864f9e-s.p.380d09ea.woff2",
+    "bytes": 15590
+   },
+   {
+    "host": "127.0.0.1",
+    "file": "a343f882a40d2cc9-s.p.07ce798a.woff2",
+    "bytes": 24986
+   }
+  ],
+  "thirdPartyHosts": []
+ },
+ "structure": {
+  "coverClicked": null,
+  "beforeOpen": {
+   "sectionCount": 7,
+   "features": {
+    "coverGate": false,
+    "toGuest": true,
+    "countdown": false,
+    "rsvp": true,
+    "wishes": true,
+    "gift": true,
+    "copyButton": false,
+    "maps": true,
+    "calendar": false,
+    "livestream": false,
+    "qr": false,
+    "loveStory": true,
+    "gallery": false,
+    "dressCode": false,
+    "quranVerse": true,
+    "protocol": false,
+    "timezoneLabel": [
+     "WIB"
+    ],
+    "watermark": true,
+    "instagramFilter": false,
+    "musicControl": false
+   },
+   "buttons": [
+    "Ya, saya hadir",
+    "Maaf, belum bisa",
+    "Kirim ucapan"
+   ]
+  },
+  "afterOpen": {
+   "title": "Undangan Digital",
+   "lang": "id",
+   "generator": null,
+   "viewport": "width=device-width, initial-scale=1",
+   "og": {
+    "image": false,
+    "title": true,
+    "description": true
+   },
+   "reducedMotionCss": false,
+   "libs": {
+    "gsap": false,
+    "scrollTrigger": false,
+    "aos": false,
+    "animateCss": false,
+    "wow": false,
+    "swiper": false,
+    "slick": false,
+    "owl": false,
+    "lottie": false,
+    "three": false,
+    "pixi": false,
+    "anime": false,
+    "motionOne": false,
+    "howler": false,
+    "jquery": false,
+    "bootstrap": false,
+    "tailwind": false,
+    "alpine": false,
+    "vue": false,
+    "nuxt": false,
+    "next": true,
+    "react": false,
+    "svelte": false,
+    "flutterWeb": false,
+    "wordpress": false,
+    "elementor": false,
+    "livewire": false,
+    "inertia": false
+   },
+   "sections": [
+    {
+     "tag": "section",
+     "id": "",
+     "cls": "mx-auto w-full max-w-xl px-6",
+     "heading": "",
+     "h": 168
+    },
+    {
+     "tag": "section",
+     "id": "",
+     "cls": "mx-auto w-full max-w-xl px-6",
+     "heading": "",
+     "h": 228
+    },
+    {
+     "tag": "section",
+     "id": "",
+     "cls": "mx-auto w-full max-w-xl px-6",
+     "heading": "Rangkaian Acara",
+     "h": 616
+    },
+    {
+     "tag": "section",
+     "id": "",
+     "cls": "mx-auto w-full max-w-xl px-6",
+     "heading": "Cerita Kami",
+     "h": 296
+    },
+    {
+     "tag": "section",
+     "id": "",
+     "cls": "mx-auto w-full max-w-xl px-6",
+     "heading": "Hadiah",
+     "h": 296
+    },
+    {
+     "tag": "section",
+     "id": "",
+     "cls": "mx-auto w-full max-w-xl px-6",
+     "heading": "Konfirmasi Kehadiran",
+     "h": 528
+    },
+    {
+     "tag": "section",
+     "id": "",
+     "cls": "mx-auto w-full max-w-xl px-6",
+     "heading": "Ucapan & Doa",
+     "h": 704
+    }
+   ],
+   "sectionCount": 7,
+   "buttons": [
+    "Ya, saya hadir",
+    "Maaf, belum bisa",
+    "Kirim ucapan"
+   ],
+   "media": {
+    "audio": [],
+    "video": 0,
+    "iframes": [],
+    "canvases": 0,
+    "svgs": 8,
+    "images": 0,
+    "lazyImages": 0
+   },
+   "forms": [
+    {
+     "fields": [
+      "hidden",
+      "hidden",
+      "hidden",
+      "text",
+      "number",
+      "submit",
+      "submit"
+     ],
+     "hasRadio": false,
+     "hasSelect": false
+    },
+    {
+     "fields": [
+      "hidden",
+      "hidden",
+      "hidden",
+      "textarea",
+      "submit"
+     ],
+     "hasRadio": false,
+     "hasSelect": false
+    }
+   ],
+   "fontsUsed": [
+    "Manrope",
+    "Instrument Serif"
+   ],
+   "features": {
+    "coverGate": false,
+    "toGuest": true,
+    "countdown": false,
+    "rsvp": true,
+    "wishes": true,
+    "gift": true,
+    "copyButton": false,
+    "maps": true,
+    "calendar": false,
+    "livestream": false,
+    "qr": false,
+    "loveStory": true,
+    "gallery": false,
+    "dressCode": false,
+    "quranVerse": true,
+    "protocol": false,
+    "timezoneLabel": [
+     "WIB"
+    ],
+    "watermark": true,
+    "instagramFilter": false,
+    "musicControl": false
+   },
+   "domNodes": 199,
+   "docHeight": 3648
+  }
+ },
+ "lighthouse": {
+  "ok": true,
+  "lighthouseVersion": "12.8.2",
+  "finalUrl": "http://127.0.0.1:3100/i/budi-sari/budi-hartono",
+  "throttling": {
+   "rttMs": 150,
+   "throughputKbps": 1638.4,
+   "requestLatencyMs": 562.5,
+   "downloadThroughputKbps": 1474.5600000000002,
+   "uploadThroughputKbps": 675,
+   "cpuSlowdownMultiplier": 4
+  },
+  "screen": {
+   "mobile": true,
+   "width": 412,
+   "height": 915,
+   "deviceScaleFactor": 2.625,
+   "disabled": false
+  },
+  "scores": {
+   "performance": 94,
+   "accessibility": 96,
+   "best-practices": 93,
+   "seo": 60
+  },
+  "metrics": {
+   "fcpMs": 1540.056,
+   "lcpMs": 2600.28,
+   "tbtMs": 186,
+   "cls": 0,
+   "siMs": 1540.056,
+   "ttiMs": 3604.3240000000005
+  },
+  "byType": {
+   "total": {
+    "requests": 25,
+    "bytes": 316627
+   },
+   "script": {
+    "requests": 19,
+    "bytes": 199719
+   },
+   "font": {
+    "requests": 3,
+    "bytes": 56810
+   },
+   "other": {
+    "requests": 1,
+    "bytes": 26512
+   },
+   "stylesheet": {
+    "requests": 1,
+    "bytes": 17165
+   },
+   "document": {
+    "requests": 1,
+    "bytes": 16421
+   },
+   "image": {
+    "requests": 0,
+    "bytes": 0
+   },
+   "media": {
+    "requests": 0,
+    "bytes": 0
+   },
+   "third-party": {
+    "requests": 6,
+    "bytes": 0
+   }
+  },
+  "totalBytes": 316627,
+  "requests": 25,
+  "thirdParties": [
+   {
+    "entity": "invitesion.local",
+    "bytes": 0,
+    "blockingMs": 0
+   }
+  ],
+  "fontDisplayIssues": 0,
+  "unusedJsBytes": 52652,
+  "a11yFailures": [
+   "color-contrast"
+  ]
+ },
+ "files": {
+  "rea-inspect.json": "9f4e1bd78066ee4a41e9cd999cab19d9fe61740cd1d65c25f3fb8d012e88774d",
+  "rea-bundle.json": "da6cfd06d6cc3a21a7e529cb2b4339569993971ea36b5b8010ffeb0808aed299",
+  "lighthouse.json": "2e59e3ab4177336db88f10c6883495a6d9d66c7207183aa76656020535143d49"
+ },
+ "screenshot": "viewport-412.webp (public, own product)"
+}

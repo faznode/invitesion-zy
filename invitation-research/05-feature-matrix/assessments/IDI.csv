@@ -1,0 +1,63 @@
+feature_id,status,basis,evidence,note
+FM-001,Full,OBSERVED,S-IDI-002;S-IDI-006,"Guest parameter on every preview link; ""Ubah Nama Tamu"" on every tier"
+FM-002,Full,CLAIMED,S-IDI-006,Guest name in the link on every tier
+FM-004,Full,CLAIMED,S-IDI-006,From Klasik (Rp 59k)
+FM-007,Full,CLAIMED,S-IDI-006,Custom music on Premium only
+FM-008,Full,CLAIMED,S-IDI-006,Every tier
+FM-013,Full,CLAIMED,S-IDI-006,Premium only
+FM-014,Full,CLAIMED,S-IDI-006,"10 / 15 / 20 photos on Pro / Super / Premium; none below Pro"
+FM-016,Full,CLAIMED,S-IDI-006,Video/streaming on Premium
+FM-019,Full,CLAIMED,S-IDI-006,Every tier
+FM-020,Full,CLAIMED,S-IDI-006,Embedded Google Maps on Premium
+FM-021,Full,CLAIMED,S-IDI-006,Save-to-calendar on every tier
+FM-022,Full,OBSERVED,S-IDI-003;S-IDI-006,
+FM-024,Full,OBSERVED,S-IDI-003,Accepts 1-10 guests (one real-event page)
+FM-030,Full,CLAIMED,S-IDI-006,Every tier
+FM-031,Full,CLAIMED,S-IDI-006,Reply to wishes on Premium
+FM-032,Full,CLAIMED,S-IDI-006,Bank account for gifts from Pro
+FM-034,Unknown,OBSERVED,S-IDI-003,QRIS markers on the one page seen belong to guest gift commerce; a QRIS cash gift to the host is not evidenced
+FM-035,Full,OBSERVED,S-IDI-003;S-IDI-006,"Physical gift drop-off on every tier; ""JASTIO"" drop-off service"
+FM-036,Full,OBSERVED,S-IDI-003,23 vendor-fulfilled gift items with shipping discount (one page)
+FM-038,Full,OBSERVED,S-IDI-003,Paid stickers Rp 37.5k-58.5k bought by guests
+FM-039,Full,CLAIMED,S-IDI-006,Streaming and video link from Super
+FM-040,Full,CLAIMED,S-IDI-006,Video/streaming on Premium
+FM-042,Full,CLAIMED,S-IDI-006,QR check-in for guests from Super (pass implied)
+FM-050,Full,CLAIMED,S-IDI-006,Auto scroll from Super
+FM-052,Full,OBSERVED,S-IDI-003,AOS and GSAP ScrollTrigger on the one page seen; other themes [UNKNOWN]
+FM-070,Full,CLAIMED,S-IDI-006,Unlimited recipients on every tier
+FM-079,Full,CLAIMED,S-IDI-006;S-IDI-001,From Super; robots.txt disallows /pernikahan-qr/ [INFERRED route]
+FM-090,Partial,OBSERVED,S-IDI-006,"Revisions: Free limited, Basic 2x, Klasik 3x, unlimited from Pro"
+FM-091,Full,OBSERVED,S-IDI-006,No expiry on every tier
+FM-093,Full,OBSERVED,S-IDI-006,Custom domain on the subscription
+FM-102,Full,CLAIMED,S-IDI-006,Font style on Premium
+FM-103,Full,CLAIMED,S-IDI-006,Theme colour on Premium
+FM-105,Full,OBSERVED,S-IDI-006,Admin builds it on every tier (default production mode)
+FM-106,Full,INFERRED,S-IDI-002;S-IDI-006,Content renders under any theme id; all themes on every tier
+FM-107,Full,INFERRED,S-IDI-002;S-IDI-006,All themes on every tier (high confidence)
+FM-112,Full,OBSERVED,LONGLIST:IDI,Android app com.indoinvite.apps 500K+ installs
+FM-116,None,OBSERVED,S-IDI-003,Catalog previews open sample accounts that render real events
+FM-117,Full,OBSERVED,S-IDI-006,WhatsApp CTA
+FM-118,Full,OBSERVED,S-IDI-006,Free trial without time limit; sharing from Basic
+FM-119,Full,OBSERVED,S-IDI-006,Rp 39k-119k one-time
+FM-120,Full,OBSERVED,S-IDI-006,Subscription Rp 400k per month to Rp 4.6M per year
+FM-121,Full,OBSERVED,S-IDI-006,Five paid tiers
+FM-122,Full,OBSERVED,S-IDI-006,Prices published; no strikethrough anchors
+FM-123,Full,OBSERVED,S-IDI-006,QRIS logo at checkout
+FM-124,Full,OBSERVED,S-IDI-006,"BCA, BNI, BRI, Mandiri, Permata"
+FM-125,Full,OBSERVED,S-IDI-006,"OVO, DANA, LinkAja [INFERRED logo]"
+FM-126,Full,OBSERVED,S-IDI-006,"Visa, Mastercard, JCB"
+FM-127,Full,OBSERVED,S-IDI-006,"Alfamart, Alfamidi, Indomaret"
+FM-128,Full,OBSERVED,S-IDI-006,Kredivo
+FM-140,Full,OBSERVED,S-IDI-005,Design service for 2D invitations and logos from Rp 50k
+FM-144,Full,OBSERVED,S-IDI-004,AI copy tool /undangan-gpt linked; behaviour [UNKNOWN]
+FM-145,Full,OBSERVED,S-IDI-004,Image-style converter linked; behaviour [UNKNOWN]
+FM-146,Full,OBSERVED,S-IDI-004,117 video-invitation samples behind modals
+FM-149,Full,OBSERVED,S-IDI-006,Print export on the subscription
+FM-151,Full,OBSERVED,S-IDI-003,Gifts and stickers sold to guests
+FM-152,Full,OBSERVED,D-IDI,50 event-type SEO pages
+FM-153,Partial,OBSERVED,S-IDI-002;C-IDI-105,One unpaginated page with all 493 themes (about 36k DOM nodes); no filter controls recorded
+FM-154,Full,OBSERVED,D-IDI,About 50 event types
+FM-155,Full,OBSERVED,D-IDI,"Islamic, Christian/Catholic, Balinese Hindu, Javanese life-cycle pages"
+FM-172,None,OBSERVED,S-IDI-003,Public samples render real customers' events
+FM-174,Full,OBSERVED,LONGLIST:IDI,500K+ installs
+FM-187,None,OBSERVED,S-IDI-002,Guest name in clear text in the kpd parameter

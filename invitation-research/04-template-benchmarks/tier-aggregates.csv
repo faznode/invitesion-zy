@@ -1,0 +1,115 @@
+population,tier,metric,direction,source,n_themes,n_vendors,n_captures,median,p75,best,best_theme_capture,confidence
+competitor,basic,perf,higher is better,lighthouse,3,1,3,55.0,55.0,55.0,C-BRN-101,low
+competitor,basic,a11y,higher is better,lighthouse,3,1,3,83.0,83.0,83.0,C-BRN-101,low
+competitor,basic,best_practices,higher is better,lighthouse,3,1,3,93.0,93.0,96.0,C-BRN-101,low
+competitor,basic,seo,higher is better,lighthouse,3,1,3,42.0,42.0,42.0,C-BRN-101,low
+competitor,basic,fcp_ms,lower is better,lighthouse,3,1,3,19375.788,19450.002,12714.195,C-BRN-103,low
+competitor,basic,lcp_ms,lower is better,lighthouse,3,1,3,23146.312,23162.589,15792.331,C-BRN-103,low
+competitor,basic,tbt_ms,lower is better,lighthouse,3,1,3,0.0,0.0,0.0,C-BRN-101,low
+competitor,basic,cls,lower is better,lighthouse,3,1,3,0.0,0.004,0.0,C-BRN-101,low
+competitor,basic,si_ms,lower is better,lighthouse,3,1,3,19375.788,19450.002,12714.195,C-BRN-103,low
+competitor,basic,lh_requests,lower is better,lighthouse,3,1,3,55.0,62.5,53.0,C-BRN-102,low
+competitor,basic,lh_kib,lower is better,lighthouse,3,1,3,4461.0,5168.5,4447.0,C-BRN-101,low
+competitor,basic,lh_kib_script,lower is better,lighthouse,3,1,3,336.0,336.0,336.0,C-BRN-101,low
+competitor,basic,lh_kib_image,lower is better,lighthouse,3,1,3,1316.0,1835.0,1300.0,C-BRN-101,low
+competitor,basic,lh_kib_font,lower is better,lighthouse,3,1,3,2432.0,2616.5,2432.0,C-BRN-101,low
+competitor,basic,lh_kib_third_party,lower is better,lighthouse,3,1,3,2725.0,2909.5,2725.0,C-BRN-101,low
+competitor,basic,cdp_visit_kib,lower is better,cdp_visit,3,1,3,4446.0,5144.5,4427.0,C-BRN-102,low
+competitor,basic,cdp_visit_requests,lower is better,cdp_visit,3,1,3,55.0,62.0,52.0,C-BRN-102,low
+competitor,basic,cdp_third_party_hosts,lower is better,cdp_visit,3,1,3,6.0,7.0,6.0,C-BRN-101,low
+competitor,basic,cdp_font_files,lower is better,cdp_visit,3,1,3,2.0,8.5,2.0,C-BRN-101,low
+competitor,premium,perf,higher is better,lighthouse,20,4,20,33.5,28.0,42.0,C-WEV-104,high
+competitor,premium,a11y,higher is better,lighthouse,20,4,20,83.0,82.0,97.0,C-INV-115,high
+competitor,premium,best_practices,higher is better,lighthouse,20,4,20,96.0,89.5,100.0,C-INV-112,high
+competitor,premium,seo,higher is better,lighthouse,20,4,20,91.5,66.0,100.0,C-KAT-105,high
+competitor,premium,fcp_ms,lower is better,lighthouse,20,4,20,4031.545,4427.707,2798.649,C-IVT-104,high
+competitor,premium,lcp_ms,lower is better,lighthouse,20,4,20,18193.557,21483.218,4789.75,C-INV-114,high
+competitor,premium,tbt_ms,lower is better,lighthouse,20,4,20,1834.5,3899.328,763.5,C-IVT-103,high
+competitor,premium,cls,lower is better,lighthouse,20,4,20,0.002,0.022,0.0,C-KAT-103,high
+competitor,premium,si_ms,lower is better,lighthouse,20,4,20,8849.81,11919.291,6448.767,C-WEV-104,high
+competitor,premium,lh_requests,lower is better,lighthouse,20,4,20,90.0,146.0,46.0,C-IVT-102,high
+competitor,premium,lh_kib,lower is better,lighthouse,20,4,20,4413.0,6662.5,2265.0,C-WEV-105,high
+competitor,premium,lh_kib_script,lower is better,lighthouse,20,4,20,1338.0,1347.5,377.0,C-IVT-103,high
+competitor,premium,lh_kib_image,lower is better,lighthouse,20,4,20,2900.0,5019.25,317.0,C-INV-115,high
+competitor,premium,lh_kib_font,lower is better,lighthouse,20,4,20,340.5,520.5,54.0,C-IVT-101,high
+competitor,premium,lh_kib_third_party,lower is better,lighthouse,20,4,20,1148.0,1846.5,69.0,C-IVT-102,high
+competitor,premium,cdp_visit_kib,lower is better,cdp_visit,18,4,18,4548.5,8534.0,1940.0,C-INV-112,high
+competitor,premium,cdp_visit_requests,lower is better,cdp_visit,18,4,18,98.5,121.75,62.0,C-WEV-103,high
+competitor,premium,cdp_third_party_hosts,lower is better,cdp_visit,18,4,18,10.0,12.5,6.0,C-IVT-101,high
+competitor,premium,cdp_font_files,lower is better,cdp_visit,18,4,18,9.0,14.5,4.0,C-WEV-103,high
+competitor,signature,perf,higher is better,lighthouse,8,2,8,51.5,40.75,57.0,C-VID-107,medium
+competitor,signature,a11y,higher is better,lighthouse,8,2,8,81.0,79.25,82.0,C-KAT-101,medium
+competitor,signature,best_practices,higher is better,lighthouse,8,2,8,82.0,81.25,86.0,C-VID-102,medium
+competitor,signature,seo,higher is better,lighthouse,8,2,8,100.0,100.0,100.0,C-KAT-101,medium
+competitor,signature,fcp_ms,lower is better,lighthouse,8,2,8,2775.58,3954.708,2515.114,C-VID-101,medium
+competitor,signature,lcp_ms,lower is better,lighthouse,8,2,8,13441.159,15535.184,10469.702,C-VID-103,medium
+competitor,signature,tbt_ms,lower is better,lighthouse,8,2,8,511.801,1364.625,257.0,C-VID-103,medium
+competitor,signature,cls,lower is better,lighthouse,8,2,8,0.037,0.056,0.0,C-KAT-102,medium
+competitor,signature,si_ms,lower is better,lighthouse,8,2,8,7721.784,10818.116,6690.237,C-VID-101,medium
+competitor,signature,lh_requests,lower is better,lighthouse,8,2,8,83.0,110.5,71.0,C-VID-103,medium
+competitor,signature,lh_kib,lower is better,lighthouse,8,2,8,3407.0,4285.75,2151.0,C-VID-107,medium
+competitor,signature,lh_kib_script,lower is better,lighthouse,8,2,8,222.0,732.75,203.0,C-VID-107,medium
+competitor,signature,lh_kib_image,lower is better,lighthouse,8,2,8,2345.5,3021.25,1156.0,C-VID-107,medium
+competitor,signature,lh_kib_font,lower is better,lighthouse,8,2,8,458.0,559.5,367.0,C-VID-103,medium
+competitor,signature,lh_kib_third_party,lower is better,lighthouse,8,2,8,552.0,992.75,417.0,C-VID-103,medium
+competitor,signature,cdp_visit_kib,lower is better,cdp_visit,8,2,8,3688.5,4674.0,2440.0,C-VID-107,medium
+competitor,signature,cdp_visit_requests,lower is better,cdp_visit,8,2,8,87.5,112.5,80.0,C-VID-102,medium
+competitor,signature,cdp_third_party_hosts,lower is better,cdp_visit,8,2,8,11.0,13.25,10.0,C-VID-101,medium
+competitor,signature,cdp_font_files,lower is better,cdp_visit,8,2,8,9.5,10.25,9.0,C-KAT-101,medium
+competitor,all,perf,higher is better,lighthouse,31,6,31,37.0,29.0,57.0,C-VID-107,high
+competitor,all,a11y,higher is better,lighthouse,31,6,31,82.0,81.0,97.0,C-INV-115,high
+competitor,all,best_practices,higher is better,lighthouse,31,6,31,93.0,82.0,100.0,C-INV-112,high
+competitor,all,seo,higher is better,lighthouse,31,6,31,92.0,66.0,100.0,C-KAT-101,high
+competitor,all,fcp_ms,lower is better,lighthouse,31,6,31,4027.748,4540.526,2515.114,C-VID-101,high
+competitor,all,lcp_ms,lower is better,lighthouse,31,6,31,16894.677,21935.113,4789.75,C-INV-114,high
+competitor,all,tbt_ms,lower is better,lighthouse,31,6,31,1020.0,3595.0,0.0,C-BRN-101,high
+competitor,all,cls,lower is better,lighthouse,31,6,31,0.006,0.028,0.0,C-BRN-101,high
+competitor,all,si_ms,lower is better,lighthouse,31,6,31,8068.138,12704.013,6448.767,C-WEV-104,high
+competitor,all,lh_requests,lower is better,lighthouse,31,6,31,84.0,138.5,46.0,C-IVT-102,high
+competitor,all,lh_kib,lower is better,lighthouse,31,6,31,4246.0,6078.0,2151.0,C-VID-107,high
+competitor,all,lh_kib_script,lower is better,lighthouse,31,6,31,1196.0,1344.5,203.0,C-VID-107,high
+competitor,all,lh_kib_image,lower is better,lighthouse,31,6,31,2370.0,3747.0,317.0,C-INV-115,high
+competitor,all,lh_kib_font,lower is better,lighthouse,31,6,31,437.0,569.5,54.0,C-IVT-101,high
+competitor,all,lh_kib_third_party,lower is better,lighthouse,31,6,31,1066.0,2107.0,69.0,C-IVT-102,high
+competitor,all,cdp_visit_kib,lower is better,cdp_visit,29,6,29,4280.0,5843.0,1940.0,C-INV-112,high
+competitor,all,cdp_visit_requests,lower is better,cdp_visit,29,6,29,92.0,118.0,52.0,C-BRN-102,high
+competitor,all,cdp_third_party_hosts,lower is better,cdp_visit,29,6,29,10.0,12.0,6.0,C-BRN-101,high
+competitor,all,cdp_font_files,lower is better,cdp_visit,29,6,29,9.0,13.0,2.0,C-BRN-101,high
+own,basic,perf,higher is better,lighthouse,2,1,3,94.25,93.875,95.0,C-INV-002,"own pages, build 22ed99e (not a market sample)"
+own,basic,a11y,higher is better,lighthouse,2,1,3,96.0,96.0,96.0,C-INV-001,"own pages, build 22ed99e (not a market sample)"
+own,basic,best_practices,higher is better,lighthouse,2,1,3,93.75,93.375,94.5,C-INV-001,"own pages, build 22ed99e (not a market sample)"
+own,basic,seo,higher is better,lighthouse,2,1,3,60.0,60.0,60.0,C-INV-001,"own pages, build 22ed99e (not a market sample)"
+own,basic,fcp_ms,lower is better,lighthouse,2,1,3,1488.492,1515.26,1434.954,C-INV-002,"own pages, build 22ed99e (not a market sample)"
+own,basic,lcp_ms,lower is better,lighthouse,2,1,3,2528.98,2569.563,2447.816,C-INV-002,"own pages, build 22ed99e (not a market sample)"
+own,basic,tbt_ms,lower is better,lighthouse,2,1,3,184.5,191.0,171.5,C-INV-002,"own pages, build 22ed99e (not a market sample)"
+own,basic,cls,lower is better,lighthouse,2,1,3,0.0,0.0,0.0,C-INV-001,"own pages, build 22ed99e (not a market sample)"
+own,basic,si_ms,lower is better,lighthouse,2,1,3,1488.492,1515.26,1434.954,C-INV-002,"own pages, build 22ed99e (not a market sample)"
+own,basic,lh_requests,lower is better,lighthouse,2,1,3,25.25,25.375,25.0,C-INV-002,"own pages, build 22ed99e (not a market sample)"
+own,basic,lh_kib,lower is better,lighthouse,2,1,3,311.0,313.0,307.0,C-INV-002,"own pages, build 22ed99e (not a market sample)"
+own,basic,lh_kib_script,lower is better,lighthouse,2,1,3,195.0,195.0,195.0,C-INV-001,"own pages, build 22ed99e (not a market sample)"
+own,basic,lh_kib_image,lower is better,lighthouse,2,1,3,0.0,0.0,0.0,C-INV-001,"own pages, build 22ed99e (not a market sample)"
+own,basic,lh_kib_font,lower is better,lighthouse,2,1,3,55.0,55.0,55.0,C-INV-001,"own pages, build 22ed99e (not a market sample)"
+own,basic,lh_kib_third_party,lower is better,lighthouse,2,1,3,0.0,0.0,0.0,C-INV-001,"own pages, build 22ed99e (not a market sample)"
+own,basic,cdp_visit_kib,lower is better,cdp_visit,2,1,3,301.75,305.625,294.0,C-INV-002,"own pages, build 22ed99e (not a market sample)"
+own,basic,cdp_visit_requests,lower is better,cdp_visit,2,1,3,18.25,18.375,18.0,C-INV-002,"own pages, build 22ed99e (not a market sample)"
+own,basic,cdp_third_party_hosts,lower is better,cdp_visit,2,1,3,0.0,0.0,0.0,C-INV-001,"own pages, build 22ed99e (not a market sample)"
+own,basic,cdp_font_files,lower is better,cdp_visit,2,1,3,3.0,3.0,3.0,C-INV-001,"own pages, build 22ed99e (not a market sample)"
+own,all,perf,higher is better,lighthouse,2,1,3,94.25,93.875,95.0,C-INV-002,"own pages, build 22ed99e (not a market sample)"
+own,all,a11y,higher is better,lighthouse,2,1,3,96.0,96.0,96.0,C-INV-001,"own pages, build 22ed99e (not a market sample)"
+own,all,best_practices,higher is better,lighthouse,2,1,3,93.75,93.375,94.5,C-INV-001,"own pages, build 22ed99e (not a market sample)"
+own,all,seo,higher is better,lighthouse,2,1,3,60.0,60.0,60.0,C-INV-001,"own pages, build 22ed99e (not a market sample)"
+own,all,fcp_ms,lower is better,lighthouse,2,1,3,1488.492,1515.26,1434.954,C-INV-002,"own pages, build 22ed99e (not a market sample)"
+own,all,lcp_ms,lower is better,lighthouse,2,1,3,2528.98,2569.563,2447.816,C-INV-002,"own pages, build 22ed99e (not a market sample)"
+own,all,tbt_ms,lower is better,lighthouse,2,1,3,184.5,191.0,171.5,C-INV-002,"own pages, build 22ed99e (not a market sample)"
+own,all,cls,lower is better,lighthouse,2,1,3,0.0,0.0,0.0,C-INV-001,"own pages, build 22ed99e (not a market sample)"
+own,all,si_ms,lower is better,lighthouse,2,1,3,1488.492,1515.26,1434.954,C-INV-002,"own pages, build 22ed99e (not a market sample)"
+own,all,lh_requests,lower is better,lighthouse,2,1,3,25.25,25.375,25.0,C-INV-002,"own pages, build 22ed99e (not a market sample)"
+own,all,lh_kib,lower is better,lighthouse,2,1,3,311.0,313.0,307.0,C-INV-002,"own pages, build 22ed99e (not a market sample)"
+own,all,lh_kib_script,lower is better,lighthouse,2,1,3,195.0,195.0,195.0,C-INV-001,"own pages, build 22ed99e (not a market sample)"
+own,all,lh_kib_image,lower is better,lighthouse,2,1,3,0.0,0.0,0.0,C-INV-001,"own pages, build 22ed99e (not a market sample)"
+own,all,lh_kib_font,lower is better,lighthouse,2,1,3,55.0,55.0,55.0,C-INV-001,"own pages, build 22ed99e (not a market sample)"
+own,all,lh_kib_third_party,lower is better,lighthouse,2,1,3,0.0,0.0,0.0,C-INV-001,"own pages, build 22ed99e (not a market sample)"
+own,all,cdp_visit_kib,lower is better,cdp_visit,2,1,3,301.75,305.625,294.0,C-INV-002,"own pages, build 22ed99e (not a market sample)"
+own,all,cdp_visit_requests,lower is better,cdp_visit,2,1,3,18.25,18.375,18.0,C-INV-002,"own pages, build 22ed99e (not a market sample)"
+own,all,cdp_third_party_hosts,lower is better,cdp_visit,2,1,3,0.0,0.0,0.0,C-INV-001,"own pages, build 22ed99e (not a market sample)"
+own,all,cdp_font_files,lower is better,cdp_visit,2,1,3,3.0,3.0,3.0,C-INV-001,"own pages, build 22ed99e (not a market sample)"

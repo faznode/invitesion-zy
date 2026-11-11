@@ -1,0 +1,29 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "insert into api_rate_limits (bucket, window_start, hits) values ($1, $2, 1)\n           on conflict (bucket) do update set\n             hits = case when excluded.window_start > api_rate_limits.window_start then 1 else api_rate_limits.hits + 1 end,\n             window_start = greatest(api_rate_limits.window_start, excluded.window_start)\n           returning hits",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "hits",
+        "type_info": "Int4",
+        "origin": {
+          "Table": {
+            "table": "api_rate_limits",
+            "name": "hits"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Left": [
+        "Varchar",
+        "Timestamp"
+      ]
+    },
+    "nullable": [
+      false
+    ]
+  },
+  "hash": "3d32b7a153b7d7510b7ba9667ba4a78c623401202abc84b451910e15e532cb92"
+}

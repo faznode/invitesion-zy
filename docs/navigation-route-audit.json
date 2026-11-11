@@ -1,0 +1,15 @@
+{
+  "registry_counts": {
+    "event-types": 50,
+    "features": 28,
+    "resources": 14
+  },
+  "registry_details": 92,
+  "unique_internal_routes": 99,
+  "passed_200": 99,
+  "failed": [],
+  "negative_checks": {
+    "/features/random-never-registered": 404,
+    "/random-root-never-registered": 404
+  }
+}

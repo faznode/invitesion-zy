@@ -1,0 +1,60 @@
+feature_id,status,basis,evidence,note
+FM-001,Full,OBSERVED,C-IVT-101;C-IVT-104,Opaque guest code (?code=) resolved through api.invitato.net
+FM-002,Full,CLAIMED,S-IVT-002,
+FM-003,Full,OBSERVED,C-IVT-101;C-IVT-104,"""Buka Undangan"" / ""Tap to Open"""
+FM-004,Full,OBSERVED,C-IVT-101;C-IVT-104,Looping MP3 without autoplay; playback not measured
+FM-008,Full,OBSERVED,C-IVT-101;C-IVT-104,
+FM-010,Full,OBSERVED,C-IVT-101;C-IVT-104,Quote block with a Qur'an citation marker
+FM-012,Full,OBSERVED,C-IVT-101;C-IVT-104,Couple's social-media buttons
+FM-013,Full,OBSERVED,C-IVT-101;C-IVT-104,
+FM-014,Full,CLAIMED,S-IVT-003,Unlimited gallery
+FM-016,Full,OBSERVED,C-IVT-101;C-IVT-104,Video elements and video backgrounds
+FM-017,Full,OBSERVED,C-IVT-104;S-IVT-003,Separate events; event select in RSVP
+FM-018,Full,OBSERVED,C-IVT-101;C-IVT-104,WIB labels on the opened Indonesian designs
+FM-019,Full,OBSERVED,C-IVT-101;C-IVT-104,Location button
+FM-021,Full,OBSERVED,C-IVT-101;C-IVT-104,Remind-me / add-to-calendar
+FM-022,Full,OBSERVED,C-IVT-101;C-IVT-104,
+FM-023,None,OBSERVED,C-IVT-101;C-IVT-104,Two attendance buttons only on both opened designs
+FM-024,Full,OBSERVED,C-IVT-104;S-IVT-005,Guest-count field; per-guest quota claimed
+FM-028,Full,CLAIMED,S-IVT-002;S-IVT-005,Per-event access per guest
+FM-030,Full,OBSERVED,C-IVT-101;C-IVT-104,
+FM-032,Full,OBSERVED,C-IVT-101;C-IVT-104,Bank transfer
+FM-035,Full,OBSERVED,C-IVT-101;C-IVT-104,Physical gift
+FM-039,Full,OBSERVED,C-IVT-101;C-IVT-104,
+FM-040,Full,OBSERVED,C-IVT-101;C-IVT-104,Two embedded YouTube players
+FM-042,Full,OBSERVED,C-IVT-101;C-IVT-104,"""Download access card"" = personal one-time QR pass"
+FM-047,Full,OBSERVED,C-IVT-101;C-IVT-104,"og:image, og:title, og:description"
+FM-048,Full,OBSERVED,C-IVT-101;C-IVT-102;C-IVT-103;C-IVT-104,ID/EN switch on every design
+FM-051,Full,OBSERVED,S-IVT-004,34 in-house designs with distinct art concepts
+FM-068,Full,CLAIMED,S-IVT-005,Downloadable report
+FM-070,Full,OBSERVED,S-IVT-003,Unlimited links (sent manually)
+FM-072,Full,OBSERVED,S-IVT-003,Custom WhatsApp text
+FM-073,Full,OBSERVED,S-IVT-003,Official (Meta-verified) WhatsApp broadcast in the service tiers
+FM-076,Full,OBSERVED,S-IVT-003,Staged follow-ups and a final reminder (RSVP Assistance)
+FM-077,Full,OBSERVED,S-IVT-003,Real-time RSVP dashboard
+FM-079,Full,CLAIMED,S-IVT-005,Usher scans the one-time QR on vendor tablets
+FM-080,Full,CLAIMED,S-IVT-005,Search by name or manual entry
+FM-081,Full,CLAIMED,S-IVT-005,Greeting screen
+FM-083,Full,CLAIMED,S-IVT-005,Tablet guestbook with optional selfie
+FM-084,Full,CLAIMED,S-IVT-005,Souvenir coupon labels printed at registration
+FM-090,Partial,OBSERVED,S-IVT-003,Minor and major revisions by the vendor; no self-serve editor
+FM-091,Full,OBSERVED,S-IVT-003,Active forever
+FM-102,Full,CLAIMED,S-IVT-002,Imagination Room: fonts
+FM-103,Partial,OBSERVED,S-IVT-003;S-IVT-004,Colour change; some designs locked
+FM-105,Full,OBSERVED,S-IVT-002;S-IVT-003,"""Terima beres"" production by engineer and customer assistant"
+FM-111,Full,OBSERVED,S-IVT-003,Table / seat management
+FM-112,None,OBSERVED,LONGLIST:IVT;S-IVT-005,Day-of QR app runs only on vendor tablets
+FM-116,None,OBSERVED,S-IVT-004;S-IVT-005,Designs named after client couples; one tied to a real wedding (D-019)
+FM-117,Full,OBSERVED,S-IVT-002,Free consultation via a named chat persona
+FM-118,None,OBSERVED,S-IVT-002;S-IVT-003,No free tier or trial
+FM-119,Full,OBSERVED,S-IVT-003,"From Rp 400k (website), Rp 1M+ (RSVP Assistance), Rp 2M+ (guestbook)"
+FM-121,Full,OBSERVED,S-IVT-003,
+FM-122,Partial,OBSERVED,S-IVT-003,Starting prices only; final price by quote
+FM-140,Full,OBSERVED,S-IVT-003;S-IVT-004,Semi-customized in-house design
+FM-153,Partial,OBSERVED,S-IVT-004,36 entries in two categories (Royal / Minimal)
+FM-154,Partial,CLAIMED,S-IVT-005,50+ non-wedding guestbook events
+FM-155,Partial,OBSERVED,S-IVT-004,Javanese-palace design among story-based concepts
+FM-172,None,OBSERVED,S-IVT-004;S-IVT-005,Public demos tied to real client couples
+FM-174,None,OBSERVED,LONGLIST:IVT,No Play listing
+FM-186,Full,CLAIMED,S-IVT-005,Gift-envelope labels and gift logging at registration
+FM-187,Full,OBSERVED,C-IVT-101;C-IVT-104,Opaque ?code= guest parameter

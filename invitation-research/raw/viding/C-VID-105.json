@@ -1,0 +1,758 @@
+{
+ "id": "C-VID-105",
+ "competitor": "viding",
+ "kind": "demo",
+ "url": "https://studio.viding.co/theme/preview/192",
+ "capturedAt": "2026-11-02T00:02:35.660+07:00",
+ "robots": {
+  "allowed": true,
+  "note": "robots.txt 500"
+ },
+ "method": "REA capture-browser-scenario (connect mode) drives navigation, settle and keyboard scroll; optional cover click (trusted CDP mouse click on the settled control: coverClickMethod, coverClickLanding) and scroll through the opened page by CDP after REA's scenario; CDP mobile emulation 412x915 @2.625 + Android Chrome UA, cold cache (no throttling); REA 6.8.0 inspect-web-page/analyze-web-bundle; custom structure pass (text features + animation libraries: no REA coverage); Lighthouse 12 mobile simulate (Slow 4G, 4x CPU) when present",
+ "driver": "rea",
+ "rea": {
+  "version": "6.8.0",
+  "scenario": {
+   "ok": true,
+   "exit": 0,
+   "ms": 20799,
+   "evidenceId": "ev_6b0469e5804721cea46327421293379b690a475b32f5d419e4c51afd085109c2",
+   "status": "incomplete",
+   "stepsCompleted": 32,
+   "stepsTotal": 32,
+   "failed": [],
+   "events": 453,
+   "error": null,
+   "sha256": "f9a85ec39efc70791b8ca291335b897412e5be76f0001fc11a28c49718ac8c1f",
+   "file": "_private/rea/C-VID-105/rea-scenario.json"
+  },
+  "emulation": {
+   "duringScenario": {
+    "android": true,
+    "width": 412,
+    "dpr": 2.625,
+    "coarsePointer": false,
+    "reducedMotion": false
+   },
+   "afterScenario": {
+    "android": true,
+    "width": 500,
+    "dpr": 1,
+    "coarsePointer": false,
+    "reducedMotion": false
+   }
+  },
+  "inspectEvidenceId": "ev_230b31b12c9591dff3b372c33b88f2c403b05235e53da8c3d562b6d9f11246f5",
+  "bundleEvidenceId": "ev_0f92d6918ca55a6cf50b50fad8a8e918ce01709def89242b7b7b6c12a58eab24",
+  "inspectError": null,
+  "bundleError": null,
+  "domNodes": 3080,
+  "scripts": 202,
+  "resources": 48,
+  "completeness": "policy_filtered",
+  "bundleChunks": 39,
+  "bundleEndpoints": [
+   "",
+   "/api/ai-assistant"
+  ],
+  "bundleInferences": [
+   {
+    "kind": "vendor_fingerprint",
+    "value": "React",
+    "confidence": "medium",
+    "basis": [
+     {
+      "script_key": "scr_571a5547d44379d912dca12109eb3ff97f1f6bb4055ba181a2a0f00b078655e4",
+      "artifact_sha256": "d0d1505f34837d8709fa5ccc3627be7760cc7585a7f152a3659d760020655255",
+      "line": null,
+      "column": null,
+      "detector": "react-runtime"
+     }
+    ]
+   },
+   {
+    "kind": "vendor_fingerprint",
+    "value": "Next.js",
+    "confidence": "high",
+    "basis": [
+     {
+      "script_key": "scr_6e16f9479f567bc7573cee386841c22c60142877a8b33f2e28b3957d60f55622",
+      "artifact_sha256": "f2fb03f166d0fbe2a8e7e6354fdb7fee5ab6fa204e53564638a45c0efcd7e418",
+      "line": null,
+      "column": null,
+      "detector": "next-runtime"
+     }
+    ]
+   },
+   {
+    "kind": "vendor_fingerprint",
+    "value": "Next.js",
+    "confidence": "high",
+    "basis": [
+     {
+      "script_key": "scr_86c8786fc2b20679b12af10ee8c85d71c5bd71068a96eff05d91552dabab6653",
+      "artifact_sha256": "e14f76b8d5cfba9d5bbf7288ef0d2599a078e94f61169feff9ea93ce2908db9d",
+      "line": null,
+      "column": null,
+      "detector": "next-runtime"
+     }
+    ]
+   },
+   {
+    "kind": "vendor_fingerprint",
+    "value": "Next.js",
+    "confidence": "high",
+    "basis": [
+     {
+      "script_key": "scr_888e5da37bb107e7b6d49c7334d5e392bf0da2ee6d9e21f583945864e6c69ecf",
+      "artifact_sha256": "cf37c72061839202d79d1593287d5819c38d7ef4995c4c5b40935599ffd3ba26",
+      "line": null,
+      "column": null,
+      "detector": "next-runtime"
+     }
+    ]
+   },
+   {
+    "kind": "endpoint_candidate",
+    "value": "isAdmin",
+    "confidence": "low",
+    "basis": [
+     {
+      "script_key": "scr_897d9c6f115041d3e000b2ad444e8753ada5ab7d6d5c377051341735362a22bc",
+      "artifact_sha256": "e3a1c6cfdcce598fee3bda2069d20aa0e5a40bdea62ef83eada3a05e4ce273ad",
+      "line": 1,
+      "column": 125160,
+      "detector": "call:i.Z.get:unverified-network-receiver"
+     }
+    ]
+   },
+   {
+    "kind": "endpoint_candidate",
+    "value": "isOps",
+    "confidence": "low",
+    "basis": [
+     {
+      "script_key": "scr_897d9c6f115041d3e000b2ad444e8753ada5ab7d6d5c377051341735362a22bc",
+      "artifact_sha256": "e3a1c6cfdcce598fee3bda2069d20aa0e5a40bdea62ef83eada3a05e4ce273ad",
+      "line": 1,
+      "column": 125181,
+      "detector": "call:i.Z.get:unverified-network-receiver"
+     }
+    ]
+   },
+   {
+    "kind": "vendor_fingerprint",
+    "value": "Next.js",
+    "confidence": "high",
+    "basis": [
+     {
+      "script_key": "scr_9d709a7a0ffd26071394ef480d79aad65bf2246431a0fac2f17dc4175e16be75",
+      "artifact_sha256": "1d55b92dfc2fb71fc3a5c90e4a6505285c94aa66d015eea3e3a72c1fa7caeef8",
+      "line": null,
+      "column": null,
+      "detector": "next-runtime"
+     }
+    ]
+   },
+   {
+    "kind": "endpoint_candidate",
+    "value": "event",
+    "confidence": "low",
+    "basis": [
+     {
+      "script_key": "scr_a1ab88b5ab31aa631d261aa9fc8335f268894d755d418bf23d0b62a32e85a5c2",
+      "artifact_sha256": "088837dc6485a9b59ef126973849b591f87c85f05c491b7e16bf7d5a8481fab7",
+      "line": 1,
+      "column": 21966,
+      "detector": "call:o.get:unverified-network-receiver"
+     }
+    ]
+   },
+   {
+    "kind": "endpoint_candidate",
+    "value": "name",
+    "confidence": "low",
+    "basis": [
+     {
+      "script_key": "scr_a1ab88b5ab31aa631d261aa9fc8335f268894d755d418bf23d0b62a32e85a5c2",
+      "artifact_sha256": "088837dc6485a9b59ef126973849b591f87c85f05c491b7e16bf7d5a8481fab7",
+      "line": 1,
+      "column": 21987,
+      "detector": "call:o.get:unverified-network-receiver"
+     }
+    ]
+   },
+   {
+    "kind": "endpoint_candidate",
+    "value": "event",
+    "confidence": "low",
+    "basis": [
+     {
+      "script_key": "scr_a1ab88b5ab31aa631d261aa9fc8335f268894d755d418bf23d0b62a32e85a5c2",
+      "artifact_sha256": "088837dc6485a9b59ef126973849b591f87c85f05c491b7e16bf7d5a8481fab7",
+      "line": 1,
+      "column": 84938,
+      "detector": "call:p.get:unverified-network-receiver"
+     }
+    ]
+   }
+  ]
+ },
+ "network": {
+  "loadEventMs": 4459,
+  "requests": 171,
+  "bytes": 32977720,
+  "byType": {
+   "Document": {
+    "requests": 1,
+    "bytes": 90834
+   },
+   "Other": {
+    "requests": 1,
+    "bytes": 966
+   },
+   "Stylesheet": {
+    "requests": 17,
+    "bytes": 52526
+   },
+   "Script": {
+    "requests": 41,
+    "bytes": 770354
+   },
+   "Font": {
+    "requests": 13,
+    "bytes": 544220
+   },
+   "Image": {
+    "requests": 91,
+    "bytes": 21856125
+   },
+   "XHR": {
+    "requests": 1,
+    "bytes": 820
+   },
+   "Fetch": {
+    "requests": 3,
+    "bytes": 46718
+   },
+   "Media": {
+    "requests": 3,
+    "bytes": 9615157
+   }
+  },
+  "protocols": [
+   "h3",
+   "h2",
+   "data"
+  ],
+  "scriptHosts": [
+   "studio.viding.co",
+   "static.cloudflareinsights.com",
+   "www.youtube.com"
+  ],
+  "scriptFiles": [
+   "layout-640a4bb8397707bb.js",
+   "ee560e2c-061e17bc148b3dbf.js",
+   "main-app-5294d1645fe5526e.js",
+   "5878-ecd8b445d6009421.js",
+   "2117-f0dd58d18e18cc43.js",
+   "9761e08b-96ee47c97a2e4bab.js",
+   "5e22fd23-8952a801f23e49d6.js",
+   "2977-d4712bd2efeff820.js",
+   "0e762574-185bd7aca767728f.js",
+   "7048-2e24ba1431c71c5c.js",
+   "1880-bada1692a4c8495f.js",
+   "fd9d1056-6c175339d8385067.js",
+   "3349-d29247a0f752e677.js",
+   "page-8e19eb31c5ee4d2b.js",
+   "9759-fb17170ef261a239.js",
+   "6698-73b079bde8f31504.js",
+   "9c4e2130-76ab54abfed1abb6.js",
+   "795d4814-811718991b008535.js",
+   "7562-ccdbc8dd32dd52d0.js",
+   "webpack-f6d9eaee6cd26e9a.js",
+   "59650de3-ae92692902a428b5.js",
+   "f97e080b-85009ae641a4d0e4.js",
+   "vce701823e78c4301a35b7e07294d87301792088814092",
+   "6039-e56be7292dc0f214.js",
+   "137-52cb6bf7d1e7be55.js",
+   "c16f53c3-8ff2ad7cd85f0b25.js",
+   "479ba886-698722a001cc3981.js",
+   "94730671-be1261b748ae6159.js",
+   "3d47b92a-342b6852f703590a.js",
+   "8e1d74a4-3d588946b8fb1981.js",
+   "layout-925a1705e4b60631.js",
+   "9915-a019a00a31dd9354.js",
+   "2396-5f479913aa2a16dc.js",
+   "error-be0c61bda445b6ed.js",
+   "506-de761d59f05e8a20.js",
+   "3408-254054c30f8c773d.js",
+   "8836-5d57862289c25056.js",
+   "3254-1a8c355c3f4d9875.js",
+   "6597-1e5d04eb438def67.js",
+   "iframe_api"
+  ],
+  "fontFiles": [
+   {
+    "host": "studio.viding.co",
+    "file": "49aa0c906a54b783-s.p.ttf",
+    "bytes": 38846
+   },
+   {
+    "host": "studio.viding.co",
+    "file": "e8cf5108f9a46756-s.p.ttf",
+    "bytes": 34088
+   },
+   {
+    "host": "studio.viding.co",
+    "file": "9370745d1316cef2-s.p.ttf",
+    "bytes": 56055
+   },
+   {
+    "host": "cdn-builder.viding.org",
+    "file": "lancelot-v28-latin-regular.ttf",
+    "bytes": 40500
+   },
+   {
+    "host": "studio.viding.co",
+    "file": "slick.653a4cbb.woff",
+    "bytes": 2318
+   },
+   {
+    "host": "cdn-builder.viding.co",
+    "file": "zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz-_nina_356",
+    "bytes": 19169
+   },
+   {
+    "host": "cdn-builder.viding.co",
+    "file": "zzzzzzzz_madelyn_3470.ttf",
+    "bytes": 47425
+   },
+   {
+    "host": "cdn-builder.viding.co",
+    "file": "zz-_baskerville_static_2196.ttf",
+    "bytes": 71767
+   },
+   {
+    "host": "cdn-builder.viding.co",
+    "file": "times_toman_italic_2547.ttf",
+    "bytes": 28162
+   },
+   {
+    "host": "cdn-builder.viding.co",
+    "file": "zzzzzzzz_monotype_3665.ttf",
+    "bytes": 100058
+   },
+   {
+    "host": "cdn-builder.viding.org",
+    "file": "zeyada-v22-latin-regular.ttf",
+    "bytes": 37676
+   },
+   {
+    "host": "cdn-builder.viding.co",
+    "file": "zzzz_delp_3709.otf",
+    "bytes": 29082
+   },
+   {
+    "host": "cdn-builder.viding.co",
+    "file": "zzzzz-_amoera_3532.ttf",
+    "bytes": 39074
+   }
+  ],
+  "thirdPartyHosts": [
+   "static.cloudflareinsights.com",
+   "cdn-builder.viding.co",
+   "global.viding.co",
+   "",
+   "cdn-proxy.viding.co",
+   "cdn-builder.viding.org",
+   "www.youtube.com"
+  ]
+ },
+ "structure": {
+  "coverClicked": "Open Invitation",
+  "coverClickMethod": "trusted",
+  "coverClickLanding": "inside",
+  "beforeOpen": {
+   "sectionCount": 14,
+   "features": {
+    "coverGate": true,
+    "toGuest": false,
+    "countdown": true,
+    "rsvp": true,
+    "wishes": true,
+    "gift": true,
+    "copyButton": false,
+    "maps": false,
+    "calendar": false,
+    "livestream": false,
+    "qr": false,
+    "loveStory": false,
+    "gallery": false,
+    "dressCode": false,
+    "quranVerse": true,
+    "protocol": false,
+    "timezoneLabel": [
+     "WIB"
+    ],
+    "watermark": false,
+    "instagramFilter": false,
+    "musicControl": false
+   },
+   "buttons": [
+    "Open Invitation",
+    "Add to Calender",
+    "Maps",
+    "Previous",
+    "Next",
+    "🇮🇩 +62",
+    "Konfirmasi Kehadiran",
+    "Tombol",
+    "Send Greeting",
+    "Send Gift"
+   ]
+  },
+  "afterOpen": {
+   "title": "Viding Studio - Viding",
+   "lang": "EN",
+   "generator": null,
+   "viewport": "width=device-width, initial-scale=1",
+   "og": {
+    "image": false,
+    "title": false,
+    "description": false
+   },
+   "reducedMotionCss": true,
+   "libs": {
+    "gsap": false,
+    "scrollTrigger": false,
+    "aos": false,
+    "animateCss": false,
+    "wow": false,
+    "swiper": false,
+    "slick": false,
+    "owl": false,
+    "lottie": false,
+    "three": false,
+    "pixi": false,
+    "anime": false,
+    "motionOne": false,
+    "howler": false,
+    "jquery": false,
+    "bootstrap": false,
+    "tailwind": true,
+    "alpine": false,
+    "vue": false,
+    "nuxt": false,
+    "next": true,
+    "react": false,
+    "svelte": false,
+    "flutterWeb": false,
+    "wordpress": false,
+    "elementor": false,
+    "livewire": false,
+    "inertia": false
+   },
+   "sections": [
+    {
+     "tag": "section",
+     "id": "",
+     "cls": "z-[100] fixed overflow-hidden w-full",
+     "heading": "",
+     "h": 867
+    },
+    {
+     "tag": "section",
+     "id": "33aaddc8-26cb-4694-994f-547767621e30",
+     "cls": "relative",
+     "heading": "",
+     "h": 703
+    },
+    {
+     "tag": "section",
+     "id": "ea4f762e-e464-4486-854e-1f62077b89a5",
+     "cls": "relative",
+     "heading": "",
+     "h": 712
+    },
+    {
+     "tag": "section",
+     "id": "54244f8b-3ad3-4099-a834-d249cffbcd61",
+     "cls": "relative",
+     "heading": "",
+     "h": 674
+    },
+    {
+     "tag": "section",
+     "id": "e7c00e01-8a9e-4606-afbb-ec1d9b6ed923",
+     "cls": "relative",
+     "heading": "The Bride",
+     "h": 1941
+    },
+    {
+     "tag": "section",
+     "id": "ec36f39e-a3c9-42e3-91e1-ddae6e276262",
+     "cls": "relative",
+     "heading": "",
+     "h": 581
+    },
+    {
+     "tag": "section",
+     "id": "b94e2b5a-73cc-4e95-8717-79c4de5ed7a7",
+     "cls": "relative",
+     "heading": "",
+     "h": 877
+    },
+    {
+     "tag": "section",
+     "id": "b9f736b3-3d13-4854-a5bc-011404179af1",
+     "cls": "relative",
+     "heading": "",
+     "h": 932
+    },
+    {
+     "tag": "section",
+     "id": "5279661b-eddf-4a4e-84f3-60db62cfea8a",
+     "cls": "relative",
+     "heading": "",
+     "h": 567
+    },
+    {
+     "tag": "section",
+     "id": "0e950a36-6ca0-49ae-8062-cdd8e33ca077",
+     "cls": "relative",
+     "heading": "",
+     "h": 662
+    },
+    {
+     "tag": "section",
+     "id": "dd3852c6-d7c3-42e0-8cc8-061343302c42",
+     "cls": "relative",
+     "heading": "Rsvp",
+     "h": 497
+    },
+    {
+     "tag": "section",
+     "id": "dc9d60ef-47d0-4cfa-ac40-e8dc286d3af4",
+     "cls": "relative",
+     "heading": "Wedding Wishes",
+     "h": 879
+    },
+    {
+     "tag": "section",
+     "id": "b7bc3cc0-3002-46d7-a943-2c4e641f8343",
+     "cls": "relative",
+     "heading": "",
+     "h": 798
+    },
+    {
+     "tag": "section",
+     "id": "7d6c32a9-a34b-48fe-885d-faff9e3041e8",
+     "cls": "relative",
+     "heading": "",
+     "h": 1059
+    }
+   ],
+   "sectionCount": 14,
+   "buttons": [
+    "Open Invitation",
+    "Add to Calender",
+    "Maps",
+    "Previous",
+    "Next",
+    "🇮🇩 +62",
+    "Konfirmasi Kehadiran",
+    "Tombol",
+    "Send Greeting",
+    "Send Gift"
+   ],
+   "media": {
+    "audio": [],
+    "video": 1,
+    "iframes": [],
+    "canvases": 0,
+    "svgs": 9,
+    "images": 411,
+    "lazyImages": 408
+   },
+   "forms": [
+    {
+     "fields": [
+      "text",
+      "button",
+      "tel",
+      "number",
+      "button",
+      "submit"
+     ],
+     "hasRadio": false,
+     "hasSelect": false
+    },
+    {
+     "fields": [
+      "text",
+      "textarea",
+      "submit"
+     ],
+     "hasRadio": false,
+     "hasSelect": false
+    },
+    {
+     "fields": [
+      "text",
+      "button",
+      "tel",
+      "number",
+      "checkbox",
+      "submit"
+     ],
+     "hasRadio": false,
+     "hasSelect": false
+    }
+   ],
+   "fontsUsed": [
+    "__Akkurat_471bd2",
+    "slick",
+    "Times Toman Italic",
+    "Zzzzzzzz Monotype",
+    "Zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz- Nina",
+    "Zz-Baskerville Static",
+    "Zzzzzzzz Madelyn",
+    "Lancelot",
+    "Zeyada",
+    "Zzzz Delp",
+    "Zzzzz - Amoera"
+   ],
+   "features": {
+    "coverGate": true,
+    "toGuest": false,
+    "countdown": true,
+    "rsvp": true,
+    "wishes": true,
+    "gift": true,
+    "copyButton": false,
+    "maps": false,
+    "calendar": false,
+    "livestream": false,
+    "qr": false,
+    "loveStory": false,
+    "gallery": false,
+    "dressCode": false,
+    "quranVerse": true,
+    "protocol": false,
+    "timezoneLabel": [
+     "WIB"
+    ],
+    "watermark": false,
+    "instagramFilter": false,
+    "musicControl": false
+   },
+   "domNodes": 2403,
+   "docHeight": 915
+  }
+ },
+ "lighthouse": {
+  "ok": true,
+  "lighthouseVersion": "12.8.2",
+  "finalUrl": "https://studio.viding.co/theme/preview/192",
+  "throttling": {
+   "rttMs": 150,
+   "throughputKbps": 1638.4,
+   "requestLatencyMs": 562.5,
+   "downloadThroughputKbps": 1474.5600000000002,
+   "uploadThroughputKbps": 675,
+   "cpuSlowdownMultiplier": 4
+  },
+  "screen": {
+   "mobile": true,
+   "width": 412,
+   "height": 915,
+   "deviceScaleFactor": 2.625,
+   "disabled": false
+  },
+  "scores": {
+   "performance": 31,
+   "accessibility": 92,
+   "best-practices": 89,
+   "seo": 58
+  },
+  "metrics": {
+   "fcpMs": 3566.1479999999997,
+   "lcpMs": 36176.30674999999,
+   "tbtMs": 2236,
+   "cls": 0.016816578320746966,
+   "siMs": 9559.109207878515,
+   "ttiMs": 36580.84327499999
+  },
+  "byType": {
+   "total": {
+    "requests": 151,
+    "bytes": 24082959
+   },
+   "image": {
+    "requests": 74,
+    "bytes": 22583344
+   },
+   "script": {
+    "requests": 41,
+    "bytes": 784074
+   },
+   "font": {
+    "requests": 13,
+    "bytes": 545008
+   },
+   "document": {
+    "requests": 1,
+    "bytes": 91698
+   },
+   "stylesheet": {
+    "requests": 17,
+    "bytes": 53129
+   },
+   "other": {
+    "requests": 5,
+    "bytes": 25706
+   },
+   "media": {
+    "requests": 0,
+    "bytes": 0
+   },
+   "third-party": {
+    "requests": 5,
+    "bytes": 112291
+   }
+  },
+  "totalBytes": 24084497,
+  "requests": 151,
+  "thirdParties": [
+   {
+    "entity": "viding.org",
+    "bytes": 78820,
+    "blockingMs": 0
+   },
+   {
+    "entity": "YouTube",
+    "bytes": 22993,
+    "blockingMs": 0
+   },
+   {
+    "entity": "Cloudflare",
+    "bytes": 10478,
+    "blockingMs": 0
+   }
+  ],
+  "fontDisplayIssues": 8,
+  "unusedJsBytes": 238448,
+  "a11yFailures": [
+   "color-contrast",
+   "link-name"
+  ]
+ },
+ "files": {
+  "rea-inspect.json": "ec953b4fe80563bc4fb6ae6fe89d17aff0dc954a3ba9e43e056988c82c3bfccd",
+  "rea-bundle.json": "78f9b93582441b61ef60a14f6c7e6ec066d7009dc6f1250919c83d47d72762f9",
+  "_private/rea/C-VID-105/rea-scenario.json": "f9a85ec39efc70791b8ca291335b897412e5be76f0001fc11a28c49718ac8c1f",
+  "_private/lh/C-VID-105.json": "487c9be451af63cec0027c55f69acbd9a12751aabaf69ddb6f5eb1454d1d2929"
+ },
+ "screenshot": "_private/thumbs (competitor, not committed)"
+}

@@ -1,0 +1,315 @@
+{
+ "id": "C-INV-101",
+ "competitor": "invi",
+ "kind": "demo",
+ "url": "https://invi.id/tema/adat-jawa/?to=Nama+Tamu",
+ "capturedAt": "2026-10-29T11:23:05.479+07:00",
+ "robots": {
+  "allowed": true,
+  "note": "no matching rule"
+ },
+ "method": "CDP mobile emulation 412x915 @2.625, Android Chrome UA, cold cache (no throttling) + REA 6.8.0 inspect-web-page/analyze-web-bundle; Lighthouse 12 mobile simulate (Slow 4G, 4x CPU) when present",
+ "rea": {
+  "inspectEvidenceId": "ev_8202054db1c7fc5a9497aa4b599c391b66eb56149258994bcbeb540907bede14",
+  "bundleEvidenceId": "ev_d4dcde12c3673ac669b93eb3e516b5508daa94556e29b60a43d73f5490c44435",
+  "inspectError": null,
+  "bundleError": null,
+  "domNodes": 45,
+  "scripts": 0,
+  "resources": 0,
+  "completeness": "policy_filtered",
+  "bundleChunks": 0,
+  "bundleEndpoints": [],
+  "bundleInferences": []
+ },
+ "network": {
+  "loadEventMs": 3366,
+  "requests": 129,
+  "bytes": 4201678,
+  "byType": {
+   "Document": {
+    "requests": 3,
+    "bytes": 41655
+   },
+   "Stylesheet": {
+    "requests": 49,
+    "bytes": 165892
+   },
+   "Script": {
+    "requests": 43,
+    "bytes": 793517
+   },
+   "Image": {
+    "requests": 17,
+    "bytes": 2631404
+   },
+   "Font": {
+    "requests": 13,
+    "bytes": 567583
+   },
+   "Media": {
+    "requests": 2,
+    "bytes": 0
+   },
+   "Fetch": {
+    "requests": 1,
+    "bytes": 0
+   },
+   "Other": {
+    "requests": 1,
+    "bytes": 1627
+   }
+  },
+  "protocols": [
+   "h3",
+   "h2"
+  ],
+  "scriptHosts": [
+   "demo.invi.id",
+   "unpkg.com",
+   "cdnjs.cloudflare.com",
+   "www.googletagmanager.com",
+   "www.youtube.com"
+  ],
+  "scriptFiles": [
+   "invi.js",
+   "jquery-migrate.min.js",
+   "jquery.min.js",
+   "saic_lib.js",
+   "wds-rsvp.js",
+   "jquery.jPages.min.js",
+   "jquery.textareaCounter.js",
+   "jquery.placeholder.min.js",
+   "exad-scripts.min.js",
+   "jquery.sticky.min.js",
+   "qr-code-styling.js",
+   "hooks.min.js",
+   "main.js",
+   "frontend.min.js",
+   "webpack.runtime.min.js",
+   "elements-handlers.min.js",
+   "i18n.min.js",
+   "core.min.js",
+   "swiper.min.js",
+   "bdt-uikit.js",
+   "xlsx.full.min.js",
+   "autosize.min.js",
+   "qr-code.js",
+   "frontend-modules.min.js",
+   "wdp-swiper.min.js",
+   "jet-elements.min.js",
+   "frontend.min.js",
+   "guest-form.js",
+   "wdp.min.js",
+   "cui_script.js",
+   "e-gallery.min.js",
+   "js",
+   "webpack-pro.runtime.min.js",
+   "641.41d6784859f93ced2969.js",
+   "lightbox.f3fa607b705962362647.bundle.min.js",
+   "dialog.min.js",
+   "gallery.1628df47530ab42dafba.bundle.min.js",
+   "share-link.min.js",
+   "text-editor.c084ef86600b6f11690d.bundle.min.js",
+   "image-carousel.6167d20b95b33386757b.bundle.min.js"
+  ],
+  "fontFiles": [
+   {
+    "host": "fonts.gstatic.com",
+    "file": "BngMUXZGTXPUvIoyV6yN5-fN5qWr4xCC.woff2",
+    "bytes": 21393
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "PbytFmztEwbIoce9zqYzQ1OW.woff2",
+    "bytes": 33372
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "2sDcZGJYnIjSi6H75xkzaGW5Kb8VZA.woff2",
+    "bytes": 22085
+   },
+   {
+    "host": "demo.invi.id",
+    "file": "fa-brands-400.woff2",
+    "bytes": 82166
+   },
+   {
+    "host": "demo.invi.id",
+    "file": "sloopscript.woff",
+    "bytes": 32499
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "memvYaGs126MiZpBA-UvWbX2vVnXBbObj2OVTS-mu0SC55I.woff2",
+    "bytes": 42996
+   },
+   {
+    "host": "demo.invi.id",
+    "file": "ivymode-regular.woff",
+    "bytes": 53864
+   },
+   {
+    "host": "demo.invi.id",
+    "file": "Iskry-Regular.woff",
+    "bytes": 117424
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "0QIvMX1D_JOuMwr7I_FMl_E.woff2",
+    "bytes": 37824
+   },
+   {
+    "host": "demo.invi.id",
+    "file": "fa-solid-900.woff2",
+    "bytes": 78773
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "pxiByp8kv8JHgFVrLEj6Z1xlFd2JQEk.woff2",
+    "bytes": 8019
+   },
+   {
+    "host": "demo.invi.id",
+    "file": "NewYork.ttf",
+    "bytes": 23352
+   },
+   {
+    "host": "demo.invi.id",
+    "file": "fa-regular-400.woff2",
+    "bytes": 13816
+   }
+  ],
+  "thirdPartyHosts": [
+   "demo.invi.id",
+   "fonts.googleapis.com",
+   "i0.wp.com",
+   "fonts.gstatic.com",
+   "unpkg.com",
+   "cdnjs.cloudflare.com",
+   "www.googletagmanager.com",
+   "www.google-analytics.com",
+   "www.youtube.com"
+  ]
+ },
+ "structure": {
+  "coverClicked": false,
+  "beforeOpen": {
+   "sectionCount": 0,
+   "features": {
+    "coverGate": false,
+    "toGuest": true,
+    "countdown": false,
+    "rsvp": false,
+    "wishes": false,
+    "gift": false,
+    "copyButton": false,
+    "maps": false,
+    "calendar": false,
+    "livestream": false,
+    "qr": false,
+    "loveStory": false,
+    "gallery": false,
+    "dressCode": false,
+    "quranVerse": false,
+    "protocol": false,
+    "timezoneLabel": [],
+    "watermark": false,
+    "instagramFilter": false,
+    "musicControl": false
+   },
+   "buttons": []
+  },
+  "afterOpen": {
+   "title": "Tema Adat Jawa",
+   "lang": "id",
+   "generator": null,
+   "viewport": "width=device-width, initial-scale=1.0",
+   "og": {
+    "image": false,
+    "title": true,
+    "description": true
+   },
+   "reducedMotionCss": false,
+   "libs": {
+    "gsap": false,
+    "scrollTrigger": false,
+    "aos": false,
+    "animateCss": false,
+    "wow": false,
+    "swiper": false,
+    "slick": false,
+    "owl": false,
+    "lottie": false,
+    "three": false,
+    "pixi": false,
+    "anime": false,
+    "motionOne": false,
+    "howler": false,
+    "jquery": false,
+    "bootstrap": false,
+    "tailwind": false,
+    "alpine": false,
+    "vue": false,
+    "nuxt": false,
+    "next": false,
+    "react": false,
+    "svelte": false,
+    "flutterWeb": false,
+    "wordpress": true,
+    "elementor": false,
+    "livewire": false,
+    "inertia": false
+   },
+   "sections": [],
+   "sectionCount": 0,
+   "buttons": [],
+   "media": {
+    "audio": [],
+    "video": 0,
+    "iframes": [
+     "demo.invi.id"
+    ],
+    "canvases": 0,
+    "svgs": 0,
+    "images": 0,
+    "lazyImages": 0
+   },
+   "forms": [],
+   "fontsUsed": [],
+   "features": {
+    "coverGate": false,
+    "toGuest": true,
+    "countdown": false,
+    "rsvp": false,
+    "wishes": false,
+    "gift": false,
+    "copyButton": false,
+    "maps": false,
+    "calendar": false,
+    "livestream": false,
+    "qr": false,
+    "loveStory": false,
+    "gallery": false,
+    "dressCode": false,
+    "quranVerse": false,
+    "protocol": false,
+    "timezoneLabel": [],
+    "watermark": false,
+    "instagramFilter": false,
+    "musicControl": false
+   },
+   "domNodes": 23,
+   "docHeight": 915
+  }
+ },
+ "lighthouse": {
+  "ok": false,
+  "error": "Runtime error encountered: The page did not paint any content. Please ensure you keep the browser window in the foreground during the load and try again. (NO_FCP)\n"
+ },
+ "files": {
+  "rea-inspect.json": "f556d8dc50b18bffa52867d9a7893bdbdc6d7aea8d3281e2f00ef64c03b982d3",
+  "rea-bundle.json": "b7a784ad6ba0e535698552df44d0f4a79ad67a310ed58e1651fd63b70c4d8744"
+ },
+ "screenshot": "_private/thumbs (competitor, not committed)"
+}

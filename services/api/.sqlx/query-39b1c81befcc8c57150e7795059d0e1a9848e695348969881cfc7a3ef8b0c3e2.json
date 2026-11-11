@@ -1,0 +1,54 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "select request_hash, response_status, response_body from api_idempotency_keys where scope = $1 and key = $2 and created_at >= $3",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "request_hash",
+        "type_info": "Varchar",
+        "origin": {
+          "Table": {
+            "table": "api_idempotency_keys",
+            "name": "request_hash"
+          }
+        }
+      },
+      {
+        "ordinal": 1,
+        "name": "response_status",
+        "type_info": "Int4",
+        "origin": {
+          "Table": {
+            "table": "api_idempotency_keys",
+            "name": "response_status"
+          }
+        }
+      },
+      {
+        "ordinal": 2,
+        "name": "response_body",
+        "type_info": "Jsonb",
+        "origin": {
+          "Table": {
+            "table": "api_idempotency_keys",
+            "name": "response_body"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Left": [
+        "Text",
+        "Text",
+        "Timestamp"
+      ]
+    },
+    "nullable": [
+      false,
+      false,
+      false
+    ]
+  },
+  "hash": "39b1c81befcc8c57150e7795059d0e1a9848e695348969881cfc7a3ef8b0c3e2"
+}

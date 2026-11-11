@@ -1,0 +1,14 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "update invitation_versions set is_live = false where invitation_id = $1 and is_live",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Left": [
+        "Int4"
+      ]
+    },
+    "nullable": []
+  },
+  "hash": "2376f7be3119013022c0ef2a537505d6fc5b9ded7a25b2d8e674ccfac0380b32"
+}

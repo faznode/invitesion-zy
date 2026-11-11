@@ -1,0 +1,422 @@
+{
+ "id": "C-BRN-206",
+ "competitor": "barunson",
+ "kind": "demo",
+ "url": "https://mcard.barunsoncard.com/preview/1205",
+ "capturedAt": "2026-11-04T21:54:18.021+07:00",
+ "robots": {
+  "allowed": true,
+  "note": "no matching rule"
+ },
+ "method": "REA capture-browser-scenario (connect mode) drives navigation, settle and keyboard scroll; optional cover click (trusted CDP mouse click on the settled control: coverClickMethod, coverClickLanding) and scroll through the opened page by CDP after REA's scenario; CDP mobile emulation 360x800 @3 + prefers-reduced-motion no-preference, re-applied (clear + set) after REA's scenario + Android Chrome UA, cold cache (no throttling); REA inspect/bundle skipped (lean); custom structure pass (text features + animation libraries: no REA coverage) + layout and motion probes; Lighthouse 12 mobile simulate (Slow 4G, 4x CPU) when present",
+ "measurement": {
+  "protocol": "v2",
+  "profile": "v2-360",
+  "viewport": {
+   "width": 360,
+   "height": 800,
+   "device_scale_factor": 3
+  },
+  "reduced_motion": "no-preference",
+  "method": "protocol v2 (lean): REA scenario + CDP structure / layout / motion probes + Lighthouse; no REA inspect or bundle analysis",
+  "lighthouse_screen": {
+   "width": 360,
+   "height": 800,
+   "deviceScaleFactor": 3,
+   "mobile": true
+  },
+  "lighthouse_motion": "no-preference (default)",
+  "cdp_reapply": "clear + set",
+  "emulation_verified": true,
+  "emulation_mismatches": [],
+  "emulation_final": {
+   "android": true,
+   "screenWidth": 360,
+   "screenHeight": 800,
+   "width": 360,
+   "dpr": 3,
+   "coarsePointer": false,
+   "reducedMotion": false
+  },
+  "emulation_during_scenario": {
+   "ok": false,
+   "mismatches": [
+    "screen.width 800 != 360",
+    "screen.height 600 != 800"
+   ]
+  }
+ },
+ "driver": "rea",
+ "rea": {
+  "version": "6.8.0",
+  "scenario": {
+   "ok": true,
+   "exit": 0,
+   "ms": 19531,
+   "evidenceId": "ev_2e32a72ad6758b22a0ca324b1e795c6c52e214c02e4534b9c4fa4a483809c0b1",
+   "status": "incomplete",
+   "stepsCompleted": 32,
+   "stepsTotal": 32,
+   "failed": [],
+   "events": 159,
+   "error": null,
+   "sha256": "391878f92677f164519ba527ad70061a74bf4f935c57efb7928b65fbc65e4719",
+   "file": "_private/rea/C-BRN-206/rea-scenario.json"
+  },
+  "emulation": {
+   "duringScenario": {
+    "android": true,
+    "screenWidth": 800,
+    "screenHeight": 600,
+    "width": 360,
+    "dpr": 3,
+    "coarsePointer": false,
+    "reducedMotion": false
+   },
+   "afterScenario": {
+    "android": true,
+    "screenWidth": 800,
+    "screenHeight": 600,
+    "width": 500,
+    "dpr": 1,
+    "coarsePointer": false,
+    "reducedMotion": false
+   }
+  },
+  "inspectEvidenceId": null,
+  "bundleEvidenceId": null,
+  "inspectError": "skipped: lean profile v2-360",
+  "bundleError": "skipped: lean profile v2-360",
+  "domNodes": null,
+  "scripts": null,
+  "resources": null,
+  "completeness": null,
+  "bundleChunks": null,
+  "bundleEndpoints": [],
+  "bundleInferences": []
+ },
+ "network": {
+  "loadEventMs": 3242,
+  "requests": 52,
+  "bytes": 4533660,
+  "byType": {
+   "Document": {
+    "requests": 1,
+    "bytes": 27763
+   },
+   "Stylesheet": {
+    "requests": 23,
+    "bytes": 323975
+   },
+   "Script": {
+    "requests": 8,
+    "bytes": 344292
+   },
+   "Image": {
+    "requests": 18,
+    "bytes": 1347434
+   },
+   "Font": {
+    "requests": 2,
+    "bytes": 2490196
+   }
+  },
+  "protocols": [
+   "http/1.1",
+   "h2",
+   "h3"
+  ],
+  "scriptHosts": [
+   "code.jquery.com",
+   "t1.kakaocdn.net",
+   "mcard.barunsoncard.com"
+  ],
+  "scriptFiles": [
+   "jquery-1.12.4.min.js",
+   "kakao.min.js",
+   "photoswipe-ui-default.min.js",
+   "sns.js",
+   "photoswipe-gallery.js",
+   "preview.js",
+   "swiper-bundle.min.js",
+   "photoswipe.js"
+  ],
+  "fontFiles": [
+   {
+    "host": "hangeul.pstatic.net",
+    "file": "NanumMyeongjo.woff",
+    "bytes": 935845
+   },
+   {
+    "host": "hangeul.pstatic.net",
+    "file": "NanumMyeongjoBold.woff",
+    "bytes": 1554351
+   }
+  ],
+  "thirdPartyHosts": [
+   "hangeul.pstatic.net",
+   "fonts.googleapis.com",
+   "code.jquery.com",
+   "t1.kakaocdn.net",
+   "mcard-resources.barunsoncard.com",
+   "static.barunsoncard.com"
+  ]
+ },
+ "structure": {
+  "coverClicked": false,
+  "coverClickMethod": null,
+  "coverClickLanding": null,
+  "beforeOpen": {
+   "sectionCount": 0,
+   "features": {
+    "coverGate": false,
+    "toGuest": false,
+    "countdown": false,
+    "rsvp": false,
+    "wishes": false,
+    "gift": false,
+    "copyButton": false,
+    "maps": false,
+    "calendar": false,
+    "livestream": false,
+    "qr": false,
+    "loveStory": false,
+    "gallery": false,
+    "dressCode": false,
+    "quranVerse": false,
+    "protocol": false,
+    "timezoneLabel": [],
+    "watermark": false,
+    "instagramFilter": false,
+    "musicControl": false
+   },
+   "buttons": [],
+   "motion": {
+    "reducedMotionMatches": false,
+    "animations": 0,
+    "running": 0,
+    "runningCssAnimations": 0,
+    "runningCssTransitions": 0,
+    "runningWebAnimations": 0,
+    "runningInfinite": 0,
+    "gsapActiveTweens": null,
+    "playingVideos": 0
+   }
+  },
+  "afterOpen": {
+   "title": "바른손카드 모바일초대장",
+   "lang": "ko",
+   "generator": null,
+   "viewport": "width=device-width, initial-scale=1, user-scalable=yes",
+   "og": {
+    "image": false,
+    "title": false,
+    "description": false
+   },
+   "reducedMotionCss": false,
+   "libs": {
+    "gsap": false,
+    "scrollTrigger": false,
+    "aos": false,
+    "animateCss": false,
+    "wow": false,
+    "swiper": true,
+    "slick": false,
+    "owl": false,
+    "lottie": false,
+    "three": false,
+    "pixi": false,
+    "anime": false,
+    "motionOne": false,
+    "howler": false,
+    "jquery": true,
+    "bootstrap": false,
+    "tailwind": false,
+    "alpine": false,
+    "vue": false,
+    "nuxt": false,
+    "next": false,
+    "react": false,
+    "svelte": false,
+    "flutterWeb": false,
+    "wordpress": false,
+    "elementor": false,
+    "livewire": false,
+    "inertia": false
+   },
+   "sections": [],
+   "sectionCount": 0,
+   "buttons": [],
+   "media": {
+    "audio": [],
+    "video": 0,
+    "iframes": [],
+    "canvases": 0,
+    "svgs": 0,
+    "images": 18,
+    "lazyImages": 0
+   },
+   "forms": [],
+   "fontsUsed": [
+    "Nanum Myeongjo"
+   ],
+   "features": {
+    "coverGate": false,
+    "toGuest": false,
+    "countdown": false,
+    "rsvp": false,
+    "wishes": false,
+    "gift": false,
+    "copyButton": false,
+    "maps": false,
+    "calendar": false,
+    "livestream": false,
+    "qr": false,
+    "loveStory": false,
+    "gallery": false,
+    "dressCode": false,
+    "quranVerse": false,
+    "protocol": false,
+    "timezoneLabel": [],
+    "watermark": false,
+    "instagramFilter": false,
+    "musicControl": false
+   },
+   "domNodes": 187,
+   "docHeight": 4691,
+   "layout": {
+    "innerWidth": 360,
+    "scrollWidth": 360,
+    "horizontalOverflowPx": 0,
+    "overflowingElements": 0,
+    "smallTextElements": 0,
+    "interactiveTargets": 0,
+    "smallTargets": 0,
+    "viewportMeta": "width=device-width, initial-scale=1, user-scalable=yes",
+    "zoomBlocked": false
+   },
+   "motion": {
+    "reducedMotionMatches": false,
+    "animations": 0,
+    "running": 0,
+    "runningCssAnimations": 0,
+    "runningCssTransitions": 0,
+    "runningWebAnimations": 0,
+    "runningInfinite": 0,
+    "gsapActiveTweens": null,
+    "playingVideos": 0
+   }
+  }
+ },
+ "lighthouse": {
+  "ok": true,
+  "lighthouseVersion": "12.8.2",
+  "finalUrl": "https://mcard.barunsoncard.com/preview/1205",
+  "throttling": {
+   "rttMs": 150,
+   "throughputKbps": 1638.4,
+   "requestLatencyMs": 562.5,
+   "downloadThroughputKbps": 1474.5600000000002,
+   "uploadThroughputKbps": 675,
+   "cpuSlowdownMultiplier": 4
+  },
+  "screen": {
+   "mobile": true,
+   "width": 360,
+   "height": 800,
+   "deviceScaleFactor": 3,
+   "disabled": false
+  },
+  "scores": {
+   "performance": 55,
+   "accessibility": 83,
+   "best-practices": 93,
+   "seo": 42
+  },
+  "metrics": {
+   "fcpMs": 18119.717839999994,
+   "lcpMs": 21828.710609999995,
+   "tbtMs": 0,
+   "cls": 0,
+   "siMs": 18119.717839999994,
+   "ttiMs": 22199.609886999995
+  },
+  "byType": {
+   "total": {
+    "requests": 53,
+    "bytes": 4535716
+   },
+   "font": {
+    "requests": 2,
+    "bytes": 2490257
+   },
+   "image": {
+    "requests": 18,
+    "bytes": 1347429
+   },
+   "script": {
+    "requests": 8,
+    "bytes": 344543
+   },
+   "stylesheet": {
+    "requests": 23,
+    "bytes": 325271
+   },
+   "document": {
+    "requests": 1,
+    "bytes": 27945
+   },
+   "other": {
+    "requests": 1,
+    "bytes": 271
+   },
+   "media": {
+    "requests": 0,
+    "bytes": 0
+   },
+   "third-party": {
+    "requests": 22,
+    "bytes": 2790545
+   }
+  },
+  "totalBytes": 4568113,
+  "requests": 53,
+  "thirdParties": [
+   {
+    "entity": "jQuery CDN",
+    "bytes": 34114,
+    "blockingMs": 88.68685831622258
+   },
+   {
+    "entity": "kakao.com",
+    "bytes": 271,
+    "blockingMs": 10.000000000000002
+   },
+   {
+    "entity": "pstatic.net",
+    "bytes": 2492327,
+    "blockingMs": 0
+   },
+   {
+    "entity": "Google Fonts",
+    "bytes": 234481,
+    "blockingMs": 0
+   },
+   {
+    "entity": "kakaocdn.net",
+    "bytes": 29352,
+    "blockingMs": 0
+   }
+  ],
+  "fontDisplayIssues": 2,
+  "unusedJsBytes": 235670,
+  "a11yFailures": [
+   "image-alt"
+  ]
+ },
+ "files": {
+  "_private/rea/C-BRN-206/rea-scenario.json": "391878f92677f164519ba527ad70061a74bf4f935c57efb7928b65fbc65e4719",
+  "_private/lh/C-BRN-206.json": "f609766bac3b59d3370d39845977cb699f6b48c415c47d56238bf3e94f859a9a"
+ },
+ "screenshot": "_private/thumbs (competitor, not committed)"
+}

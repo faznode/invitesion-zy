@@ -1,0 +1,40 @@
+{
+ "code": "BRN",
+ "competitor": "barunson",
+ "observedAt": "2026-10-29T10:34:14.349+07:00",
+ "homepage": {
+  "url": "https://mcard.barunsoncard.com/",
+  "finalUrl": "https://mcard.barunsoncard.com/",
+  "skipped": null,
+  "links": 117
+ },
+ "catalogCandidates": [
+  "https://mcard.barunsoncard.com/",
+  "https://mcard.barunsoncard.com/Product/List/1/18/43/0/45_/0",
+  "https://mcard.barunsoncard.com/Product/Detail/1126",
+  "https://mcard.barunsoncard.com/Product/Detail/1121",
+  "https://mcard.barunsoncard.com/Product/Detail/10",
+  "https://mcard.barunsoncard.com/Product/Detail/1169",
+  "https://mcard.barunsoncard.com/Product/Detail/51",
+  "https://mcard.barunsoncard.com/Product/Detail/52",
+  "https://mcard.barunsoncard.com/Product/Detail/54",
+  "https://mcard.barunsoncard.com/Product/Detail/55",
+  "https://mcard.barunsoncard.com/Product/Detail/61",
+  "https://mcard.barunsoncard.com/Product/Detail/1130",
+  "https://mcard.barunsoncard.com/Product/Detail/1132",
+  "https://mcard.barunsoncard.com/Product/Detail/1152",
+  "https://mcard.barunsoncard.com/Product/Detail/1160"
+ ],
+ "catalog": {
+  "url": "https://mcard.barunsoncard.com/Product/List/1/18/43/0/45_/0",
+  "finalUrl": "https://mcard.barunsoncard.com/Product/List/1/18/43/0/45_/0",
+  "skipped": null,
+  "links": 73
+ },
+ "demos": [
+  {
+   "href": "https://www.barunsoncard.com/Event/SampleFree",
+   "label": "0원 샘플 신청하기"
+  }
+ ]
+}

@@ -1,0 +1,1 @@
+ALTER TABLE "guests" ADD COLUMN "invited_event_ids" jsonb;

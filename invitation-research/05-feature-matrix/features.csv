@@ -1,0 +1,188 @@
+feature_id,family,area,feature,criteria,ours_ref,modules
+FM-001,guest,personalization,Personalized link per guest,Full: each guest gets a unique link that renders the guest's identity,F-001;F-049,M-012;M-019
+FM-002,guest,personalization,Guest name on the cover,"Full: the guest's name appears on the cover (""Kepada Yth."")",F-002,M-013
+FM-003,guest,cover,"Cover gate before content (""Buka Undangan"")",Full: a cover screen the guest taps to open the invitation,F-003,M-013
+FM-004,guest,music,Background music on the guest page,Full: music plays after the guest opens the page,F-004,M-013
+FM-005,guest,music,Music pause/mute control,Full: a visible control pauses or mutes the music,F-004,M-013
+FM-006,guest,music,Music library for hosts,Full: hosts pick from a provided track library,F-072,M-027
+FM-007,guest,music,Custom music (upload or link),Full: hosts can use their own track,F-072,M-027
+FM-008,guest,timing,Countdown timer,Full: a live countdown to the event,F-005,M-013
+FM-009,guest,content,Opening greeting,Full: an opening greeting or salutation block,F-030,M-013
+FM-010,guest,content,Quote or verse block,Full: a quote or scripture block (provenance is governed separately by ADR-O04),F-029,M-006;M-013
+FM-011,guest,profiles,Couple/host profiles with full names and parents,Full: full names and parents are rendered for guests; Partial: captured or nicknames only,F-006,M-013;M-018
+FM-012,guest,profiles,Profile photos and social handles,Full: photos and social handles are rendered,F-006,M-013
+FM-013,guest,content,Love story / timeline,Full: a story or timeline section,F-007,M-013
+FM-014,guest,media,Photo gallery,Full: a gallery section; Partial: limited layout or count,F-008,M-013;M-027
+FM-015,guest,media,Gallery lightbox or slider,Full: photos open full-screen or in a slider,F-008,M-013
+FM-016,guest,media,Video inside the invitation,Full: a video (e.g. prewedding) plays inside the invitation,F-009,M-013;M-027
+FM-017,guest,events,Multiple events in one invitation,"Full: several events (e.g. akad + resepsi) each with date, time and place",F-010,M-013
+FM-018,guest,events,Local timezone labels (WIB/WITA/WIT),Full: times carry the event's own zone label; Partial: a label exists but is fixed or unreliable,F-033,M-013
+FM-019,guest,location,Map link to a navigation app,Full: a link opens the location in a maps app,F-011,M-013
+FM-020,guest,location,Embedded map,Full: a map is embedded in the page,F-011,M-013
+FM-021,guest,timing,Add to calendar / save the date,Full: a calendar button (ICS or Google Calendar),F-012,M-013
+FM-022,guest,rsvp,RSVP attend/decline,Full: guests answer attendance on the page,F-013,M-014
+FM-023,guest,rsvp,"RSVP ""maybe"" answer",Full: a tentative answer option,F-014,M-014
+FM-024,guest,rsvp,RSVP party size,Full: guests state how many attend within an allowance; Partial: count exists but allowance is not kept,F-015,M-014
+FM-025,guest,rsvp,RSVP deadline enforced,Full: answers close at a host-set deadline,F-016,M-014
+FM-026,guest,rsvp,Custom RSVP questions,Full: hosts add their own RSVP fields,F-017,M-014;M-021
+FM-027,guest,rsvp,Meal or dietary preferences,Full: RSVP collects meal choices or allergies,F-018,M-021
+FM-028,guest,rsvp,Per-event RSVP and guest eligibility,Full: guests see and answer only the events they are invited to,F-043,M-009
+FM-029,guest,rsvp,Named plus-ones / companions,Full: guests name their companions,,M-014
+FM-030,guest,social,Wishes / guestbook wall,Full: guests post wishes that are shown on the page,F-019,M-013;M-014
+FM-031,guest,social,Host replies to wishes,Full: hosts reply to a wish on the page,,M-019
+FM-032,guest,gifts,Gift accounts (bank / e-wallet),Full: account details for digital gifts are shown,F-021,M-013
+FM-033,guest,gifts,One-tap copy of account numbers,Full: a copy button next to each account number,F-021,M-013
+FM-034,guest,gifts,QRIS gift,Full: guests send a gift by scanning a QRIS code,F-022,M-013;M-025
+FM-035,guest,gifts,"Physical gift address (""titip kado"")",Full: an address or drop-off option for physical gifts; Partial: plain text only,F-023,M-009;M-013
+FM-036,guest,gifts,Item registry or vendor-fulfilled gifts,Full: guests buy listed items fulfilled by the vendor or a retailer,F-023,
+FM-037,guest,gifts,Cash or experience funds,"Full: guests contribute to named funds (honeymoon, house, …)",,
+FM-038,guest,gifts,Guest-paid greeting stickers or add-ons,Full: guests pay for decorative greetings or add-ons,,
+FM-039,guest,media,Livestream link,Full: a link to a livestream,F-024,M-013
+FM-040,guest,media,Embedded livestream/video player,Full: the stream or a video plays in the page,F-009,M-013
+FM-041,guest,content,Dress code,Full: a dress-code block,F-025,M-009
+FM-042,guest,dayof,QR pass for entry,Full: each guest gets a QR code used at check-in,F-026,M-013;M-035
+FM-043,guest,sharing,Share button on the guest page,Full: guests reshare via WhatsApp or social media from the page,F-027,M-013
+FM-044,guest,sharing,Instagram filter / hashtag block,Full: a hashtag or story-filter block,F-028,M-009
+FM-045,guest,social,Guest photo sharing / shared album,Full: guests upload or share event photos,,
+FM-046,guest,lifecycle,Read-only mode after the event or expiry,Full: the page stays readable but closed for answers,F-031,M-012;M-013
+FM-047,guest,sharing,Per-invitation OG card with image,Full: link previews show an image (og:image) for the invitation; Partial: title only,F-032,M-012
+FM-048,guest,i18n,Guest UI language choice,Full: the guest page is available in more than one language,F-034,M-013;M-034
+FM-049,guest,a11y,Elder-friendly / large-text mode,Full: a reading mode with larger text,F-035,M-013
+FM-050,guest,content,Auto-scroll mode,Full: the page can scroll itself,,M-013
+FM-051,guest,design,Per-template layouts and ornaments,"Full: templates differ in layout and ornament, not only colour",F-036,M-013
+FM-052,guest,motion,Scroll-reveal motion,Full: sections animate in on scroll (e.g. AOS / GSAP ScrollTrigger),F-037,M-013
+FM-053,guest,motion,Cinematic cover / opening animation,Full: an animated opening sequence,F-037,M-013
+FM-054,guest,motion,3D elements with fallback,Full: 3D content (WebGL) with a declared static fallback; Partial: 3D without a verified fallback,F-038,M-013
+FM-055,guest,motion,Reduced-motion support,Full: animated guest pages honour prefers-reduced-motion,,M-013
+FM-056,guest,content,Corporate agenda / speakers,Full: agenda and speaker blocks for corporate events,F-039,M-009
+FM-057,guest,content,"Ceremony-specific blocks (aqiqah, khitanan, …)",Full: event-type-specific profile blocks; Partial: name only,F-040,M-009
+FM-058,guest,content,Ticketing (free / paid / donation),Full: guests get or buy tickets,F-041,M-009;M-021
+FM-059,guest,dayof,Seating information for the guest,Full: the guest sees their table or seat,F-042,M-009;M-021
+FM-060,guest,privacy,Guest-facing privacy notice,Full: the guest page discloses data use and tracking,F-044,M-013
+FM-061,guest,content,Travel / accommodation section,Full: travel and hotel information for guests,,
+FM-062,guest,content,FAQ section,Full: a question-and-answer block for guests,,
+FM-063,guest,design,Multi-page invitation / website,Full: content spread over several pages,,M-013
+FM-064,guest,social,Event activity feed / guest comments,Full: a feed of updates or comments among guests,,
+FM-065,host,guests,Add guests one by one,Full: hosts add single guests,F-045,M-019
+FM-066,host,guests,Bulk guest import (CSV / Excel),Full: hosts upload a guest file,F-046,M-019
+FM-067,host,guests,Import from phone contacts,Full: hosts pick guests from the phone's contacts,F-046,M-019
+FM-068,host,guests,Guest list export,Full: hosts download the guest list,F-047,M-020
+FM-069,host,guests,Guest groups / tags,Full: structured groups or tags; Partial: free-text category,F-048,M-019
+FM-070,host,guests,Unlimited guests / recipients,Full: no cap on guests or recipients,,M-019
+FM-071,host,delivery,WhatsApp share per guest (wa.me),Full: one-tap WhatsApp message per guest with the personal link; Partial: manual or inconsistent,F-050,M-019
+FM-072,host,delivery,Editable share-message template,Full: hosts edit the message sent with the link,F-050,M-018;M-019
+FM-073,host,delivery,WhatsApp bulk sending (blast),Full: the product sends messages to many guests,F-051,M-040
+FM-074,host,delivery,E-mail invitation delivery,Full: the product sends invitations by e-mail,,
+FM-075,host,delivery,SMS / text delivery,Full: the product sends invitations by SMS,,
+FM-076,host,delivery,Reminders to guests,Full: scheduled reminders are sent,F-052,M-009
+FM-077,host,rsvp-ops,RSVP dashboard with totals,Full: aggregate RSVP totals and lists; Partial: per-guest list with minimal totals,F-053,M-019
+FM-078,host,rsvp-ops,Host RSVP override,Full: hosts change a guest's answer,F-054,M-019
+FM-079,host,dayof,QR check-in scanner,Full: staff scan guests' QR codes at the venue,F-055,M-019
+FM-080,host,dayof,Manual check-in,Full: staff mark guests as arrived,F-056,M-019
+FM-081,host,dayof,Greeting screen at the venue,Full: a display greets each guest by name on check-in,,
+FM-082,host,dayof,Attendance count,Full: live count of guests inside; Partial: count on the dashboard,F-056,M-019
+FM-083,host,dayof,On-site digital guestbook (kiosk),Full: guests sign a digital guestbook at the venue,F-057,
+FM-084,host,dayof,Souvenir claim tracking,Full: souvenir hand-out is tracked per guest,F-058,
+FM-085,host,insight,Per-guest open tracking,Full: hosts see whether each guest opened the link; Partial: collected but hard to see,F-059,M-012;M-020
+FM-086,host,insight,Analytics dashboard (opens / RSVPs),Full: a dashboard with opens and answers over time,F-059,M-020
+FM-087,host,moderation,Wish moderation (hide / delete),Full: hosts hide or delete wishes,F-060;F-020,M-019
+FM-088,host,editing,Edit after publishing,Full: hosts edit a published invitation,F-061,M-010;M-018
+FM-089,host,editing,Version history / restore,Full: hosts see and restore earlier versions; Partial: stored without UI,F-062,M-010
+FM-090,host,editing,Unlimited self-editing (no revision cap),Full: hosts edit without a revision limit on every paid tier; Partial: only on some tiers,F-063,M-035
+FM-091,host,lifecycle,Long active period on the entry paid tier,Full: at least 12 months or no expiry on the cheapest paid tier; Partial: long periods only on higher tiers,F-064,M-011
+FM-092,host,lifecycle,Custom slug,Full: hosts choose the invitation's URL slug,F-065,M-009
+FM-093,host,lifecycle,Custom domain / subdomain,Full: the invitation runs on the host's own domain or subdomain,F-066,
+FM-094,host,privacy,Password-protected / private invitation,Full: a password or access control on the invitation,F-067,
+FM-095,host,branding,Watermark removal,Full: the vendor credit can be removed,F-068,M-013
+FM-096,host,editing,Live preview while editing,Full: the editor shows the result as you type,F-069,M-018
+FM-097,host,editing,Autosave,Full: edits are saved automatically,F-070,M-018
+FM-098,host,media,Image upload,Full: hosts upload their own photos,F-071,M-027;M-028
+FM-099,host,media,Image crop / rotate,Full: hosts crop or rotate photos in the product,,M-027
+FM-100,host,editing,Section on/off toggles,Full: hosts enable or disable sections per invitation,,M-018;M-013
+FM-101,host,editing,Section reorder / page composition,Full: hosts reorder sections or pages,,M-018;M-013
+FM-102,host,design,Font choice,Full: hosts change the font family,F-036,M-013;M-018
+FM-103,host,design,Colour choice,Full: hosts change the colour scheme,F-036,M-013;M-018
+FM-104,host,editing,Guided creation wizard,Full: a step-by-step builder to a shareable invitation,,M-018
+FM-105,host,service,Done-for-you build by vendor staff,Full: vendor staff build the invitation for the host,,
+FM-106,host,design,Switch template after creation,Full: hosts change the theme of an existing invitation,F-074,M-018;M-025
+FM-107,host,design,Free theme switching,Full: switching themes costs nothing extra,F-074,M-025
+FM-108,host,lifecycle,Publish checklist / gate,Full: the product checks completeness before publishing,F-075,M-011
+FM-109,host,team,Multi-user access (co-host / usher),Full: more than one account manages an invitation,F-076,M-030
+FM-110,host,planning,Event planner / checklist,Full: a planning checklist for the host,F-073,M-022
+FM-111,host,planning,Seating planner,Full: hosts assign guests to tables,F-042,M-021
+FM-112,host,apps,Host mobile app,Full: a native app for hosts,,
+FM-113,host,post,Thank-you message after the event,Full: the product sends or shows thank-you messages,,
+FM-114,host,post,Post-event photo sharing,Full: hosts share photos with guests after the event,,
+FM-115,host,editing,Duplicate / reuse an invitation,Full: hosts copy an invitation as a starting point,,M-017
+FM-116,host,discovery,Template preview with placeholder data,Full: every template can be previewed with fictional data before buying,,M-005
+FM-117,host,support,Customer support channel (chat / WhatsApp),Full: a working support channel; Partial: placeholder or limited,F-100,M-001
+FM-118,business,packaging,Free drafting with paid publish/share,Full: creation is free and payment is due at publishing or sharing; Partial: short trial only,F-075;F-085,M-011;M-003
+FM-119,business,packaging,One-time price per invitation,Full: a single payment per invitation,F-085,M-003
+FM-120,business,packaging,Subscription / multi-invitation plan,Full: a plan covering many invitations,,M-003
+FM-121,business,packaging,Tiered feature ladder,Full: two or more paid tiers with different features or service,F-085,M-003;M-006
+FM-122,business,packaging,Public price list consistent across pages,Full: prices are published and agree everywhere; Partial: published but contradictory,F-085,M-003
+FM-123,business,payments,QRIS checkout,Full: automated QRIS payment; Partial: QRIS with manual confirmation,F-081,M-024;M-025
+FM-124,business,payments,Bank virtual accounts,Full: VA payment at checkout,F-082,M-025
+FM-125,business,payments,E-wallets,Full: direct e-wallet payment at checkout,F-082,M-025
+FM-126,business,payments,Card payments,Full: card payment at checkout; Partial: built but unverified,F-083,M-025
+FM-127,business,payments,Retail-outlet payment,Full: pay at convenience stores,,M-025
+FM-128,business,payments,Paylater,Full: a paylater option at checkout,,M-025
+FM-129,business,payments,Automated payment confirmation,Full: payments activate automatically via signed webhooks; Partial: some rails manual,F-086,M-025;M-026
+FM-130,business,payments,Invoices / receipts,Full: buyers receive an invoice or receipt,F-084,M-025
+FM-131,business,payments,Multi-currency pricing,Full: prices in more than one currency,F-085,M-003
+FM-132,business,growth,Coupons / promo codes,Full: discount codes at checkout,F-080,
+FM-133,business,growth,Affiliate programme,Full: commissions for referred sales,F-080,
+FM-134,business,growth,Referral programme,Full: customer-to-customer referral rewards,F-080,
+FM-135,business,partners,Reseller programme,Full: a published programme for resellers,F-079,M-035
+FM-136,business,partners,White-label branding for resellers,Full: resellers sell under their own brand,F-079,M-035
+FM-137,business,partners,Prepaid reseller credits,Full: resellers buy credits that pay for invitations,F-079,M-035
+FM-138,business,partners,Template marketplace (third-party designers),Full: outside designers publish templates,F-077,
+FM-139,business,partners,Designer revenue share,Full: designers earn a share of sales,F-078,
+FM-140,business,service,Custom design service,Full: a paid bespoke design option,,
+FM-141,business,packaging,Corporate / B2B package,Full: a package aimed at companies,,
+FM-142,business,admin,Admin order management,Full: staff manage and confirm orders,F-086,M-031
+FM-143,business,admin,Admin template CMS,Full: staff manage templates without code; Partial: stub,F-087,M-031
+FM-144,business,ai,AI copywriting,Full: AI drafts invitation text,F-088,M-040
+FM-145,business,ai,AI image / photo tools,Full: AI edits or stylises photos,F-088,M-040
+FM-146,business,products,Video invitation,Full: a video invitation product,F-089,
+FM-147,business,products,3D or greeting video product,Full: 3D or greeting video products,F-089,
+FM-148,business,products,Printed invitations,Full: printed invitations for sale,F-090,
+FM-149,business,products,E-card / image export,Full: export as an image or e-card,F-090,
+FM-150,business,platform-api,Partner API / webhooks,Full: a public API or outgoing webhooks,F-091,
+FM-151,business,revenue,Guest-side revenue (gifts / stickers),Full: guests buy items or add-ons on the invitation,,
+FM-152,platform,seo,Programmatic SEO pages,Full: many generated pages per event type or feature,F-092,M-002
+FM-153,platform,catalog,Public template catalog with filters,Full: a browsable catalog with filters,F-093,M-004
+FM-154,platform,catalog,Non-wedding event types (at least 10),Full: ten or more non-wedding event types are served,F-093,M-004;M-006
+FM-155,platform,catalog,Faith- and region-specific themes,"Full: themes for several faiths and regional traditions; Partial: one or two (see ../01-codebase-audit/niche-coverage.md)",,M-006
+FM-156,platform,perf,Guest-page Lighthouse performance score,"Full: median >= 90; Partial: 50-89; None: < 50 (Lighthouse 12.8.2 mobile, simulated Slow 4G + 4x CPU, eligible captures only)",C-INV-005,M-012;M-013
+FM-157,platform,perf,Guest-page lab LCP,"Full: median <= 2.5 s; Partial: <= 4.0 s; None: > 4.0 s (Lighthouse 12.8.2 mobile control points p10 2,500 / median 4,000 ms)",C-INV-005,M-012;M-013
+FM-158,platform,perf,Guest-page lab TBT (not INP),"Full: median <= 200 ms; Partial: <= 600 ms; None: > 600 ms (Lighthouse 12.8.2 mobile control points)",C-INV-005,M-012;M-013
+FM-159,platform,perf,Guest-page layout stability (CLS),"Full: median <= 0.10; Partial: <= 0.25; None: > 0.25",C-INV-005,M-012;M-013
+FM-160,platform,perf,Guest-page transfer weight (Lighthouse cold load),"Full: median <= 2,667 KiB; Partial: <= 4,000 KiB; None: > 4,000 KiB (Lighthouse 12.8.2 total-byte-weight control points)",C-INV-005,M-012;M-013;M-027
+FM-161,platform,perf,Image optimization (resizing / modern formats),Full: images are resized and served in modern formats,,M-027
+FM-162,platform,perf,Lazy-loaded images,"Full: images below the fold load lazily (loading=lazy or equivalent) in every eligible capture; Partial: some captures",,M-013
+FM-163,platform,a11y,Guest-page Lighthouse accessibility score,"Full: median >= 90; Partial: 50-89; None: < 50",C-INV-005,M-013;M-036
+FM-164,platform,a11y,Pinch-zoom allowed on the guest page,"Full: no eligible capture blocks zoom (user-scalable=no / maximum-scale=1); Partial: some block it; None: all block it",C-INV-005,M-012
+FM-165,platform,i18n,Product UI in two or more languages,Full: marketing and dashboard in two or more languages; Partial: some surfaces only,F-096,M-034
+FM-166,platform,security,Security headers / CSP,Full: enforced CSP and security headers; Partial: report-only or incomplete,F-094,M-032;M-033
+FM-167,platform,security,Rate limiting / anti-spam on guest actions,Full: guest writes are rate-limited or spam-filtered,F-095,M-032
+FM-168,platform,ops,Observability / error tracking,Full: error tracking and uptime monitoring,F-098,M-033
+FM-169,platform,ops,Public status page,Full: a public service status page,,
+FM-170,platform,privacy,Data retention / deletion controls,Full: users can delete data and retention is defined,F-099,M-035
+FM-171,platform,privacy,Published privacy policy,Full: a legal privacy policy is published; Partial: a marketing privacy page only,,
+FM-172,platform,privacy,Placeholder-only public samples,"Full: every public sample uses fictional data; None: public samples show real customers' events",,M-005
+FM-173,platform,privacy,Guest pages excluded from search indexing,Full: guest pages carry noindex; None: guest pages are indexable,,M-012
+FM-174,platform,apps,Android app,Full: an Android app is published,,
+FM-175,platform,apps,iOS app,Full: an iOS app is published,,
+FM-176,platform,support,Help centre / tutorials,Full: a help centre or tutorial library; Partial: marketing resources only,,M-002
+FM-177,platform,quality,Automated tests,Full: automated tests cover the core flows; Partial: some modules only,F-101,M-037
+FM-178,platform,quality,CI pipeline,Full: checks run automatically on every change,F-102,
+FM-179,platform,perf,Third-party entities on the guest page,"Full: 0 third-party entities; Partial: 1-3; None: more than 3 (median per theme over cold-load-eligible captures; Lighthouse third-party summary with the vendor's own entities excluded; fonts and CDNs count)",C-INV-005,M-012;M-033
+FM-180,guest,gifts,Platform-processed cash gift with payout to hosts,Full: guests pay a cash gift through the platform and hosts receive a payout (per side where relevant),F-022,M-013;M-025
+FM-181,host,guests,Guest self-registration / address-collection link,Full: one link lets guests add themselves or their contact details to the guest list,F-046,M-019
+FM-182,guest,navigation,Sticky section navigation,Full: a persistent menu jumps between sections of a long invitation,,M-013
+FM-183,host,design,Audience variants of one invitation,Full: one invitation renders different content or styles per guest group at no extra cost,F-048,M-006;M-012;M-013
+FM-184,host,discovery,Try-with-your-names instant preview,Full: a visitor types names and sees a theme rendered as their invitation before signing up or paying,,M-005
+FM-185,business,packaging,Publish before paying (reverse trial),Full: the invitation can be published and shared before payment for a limited period,F-075,M-011;M-024
+FM-186,host,dayof,Gift-envelope labels / gift logging at the desk,Full: the check-in desk records gifts or prints envelope labels per guest,,
+FM-187,platform,security,Non-guessable guest links,Full: guest links use opaque codes; None: links embed the guest's name or a guessable slug,F-001,M-012;M-015

@@ -1,0 +1,470 @@
+{
+ "id": "C-ENV-112",
+ "competitor": "enviory",
+ "kind": "demo",
+ "url": "https://enviory.com/rdct-6687484a60?tpl=rocaille",
+ "capturedAt": "2026-10-29T11:43:31.779+07:00",
+ "robots": {
+  "allowed": true,
+  "note": "Allow: /"
+ },
+ "method": "CDP mobile emulation 412x915 @2.625, Android Chrome UA, cold cache (no throttling) + REA 6.8.0 inspect-web-page/analyze-web-bundle; Lighthouse 12 mobile simulate (Slow 4G, 4x CPU) when present",
+ "rea": {
+  "inspectEvidenceId": "ev_bc7399369334e2d25179a5894a471037f94b8cabc223fbd2b0c27359f62fa933",
+  "bundleEvidenceId": "ev_c75af5ebf3f5777b87ff02de8974e350f1388a85d6fde27f6b9f21a9ab9da25e",
+  "inspectError": null,
+  "bundleError": null,
+  "domNodes": 155,
+  "scripts": 17,
+  "resources": 28,
+  "completeness": "policy_filtered",
+  "bundleChunks": 17,
+  "bundleEndpoints": [],
+  "bundleInferences": [
+   {
+    "kind": "endpoint_candidate",
+    "value": "u",
+    "confidence": "low",
+    "basis": [
+     {
+      "script_key": "scr_0d35f026d6dfbd0f6393cd3e6a5ce3d3986c4fb07f2b1a74f6071cc7dbb1513d",
+      "artifact_sha256": "b3dcf40de3f3d5d66a250e93f6ab98941f75d9ebb11d019fe1754ce31bd1db9c",
+      "line": 3,
+      "column": 35230,
+      "detector": "call:n.get:unverified-network-receiver"
+     }
+    ]
+   },
+   {
+    "kind": "endpoint_candidate",
+    "value": "name",
+    "confidence": "low",
+    "basis": [
+     {
+      "script_key": "scr_0d35f026d6dfbd0f6393cd3e6a5ce3d3986c4fb07f2b1a74f6071cc7dbb1513d",
+      "artifact_sha256": "b3dcf40de3f3d5d66a250e93f6ab98941f75d9ebb11d019fe1754ce31bd1db9c",
+      "line": 3,
+      "column": 35369,
+      "detector": "call:o.get:unverified-network-receiver"
+     }
+    ]
+   },
+   {
+    "kind": "vendor_fingerprint",
+    "value": "Next.js",
+    "confidence": "high",
+    "basis": [
+     {
+      "script_key": "scr_1052792c548d166445f36ad9e9a159ce2ef893ccbde970a0645b61be1e98db96",
+      "artifact_sha256": "59114f6c66168ad7bd52e9710a4dbc732394746edc864469f4d053c6c0a1b76b",
+      "line": null,
+      "column": null,
+      "detector": "next-runtime"
+     }
+    ]
+   },
+   {
+    "kind": "endpoint_candidate",
+    "value": "dpl",
+    "confidence": "low",
+    "basis": [
+     {
+      "script_key": "scr_1052792c548d166445f36ad9e9a159ce2ef893ccbde970a0645b61be1e98db96",
+      "artifact_sha256": "59114f6c66168ad7bd52e9710a4dbc732394746edc864469f4d053c6c0a1b76b",
+      "line": 1,
+      "column": 9524,
+      "detector": "call:r.get:unverified-network-receiver"
+     }
+    ]
+   },
+   {
+    "kind": "endpoint_candidate",
+    "value": "dpl",
+    "confidence": "low",
+    "basis": [
+     {
+      "script_key": "scr_1052792c548d166445f36ad9e9a159ce2ef893ccbde970a0645b61be1e98db96",
+      "artifact_sha256": "59114f6c66168ad7bd52e9710a4dbc732394746edc864469f4d053c6c0a1b76b",
+      "line": 1,
+      "column": 9547,
+      "detector": "call:r.delete:unverified-network-receiver"
+     }
+    ]
+   },
+   {
+    "kind": "endpoint_candidate",
+    "value": "dpl",
+    "confidence": "low",
+    "basis": [
+     {
+      "script_key": "scr_1052792c548d166445f36ad9e9a159ce2ef893ccbde970a0645b61be1e98db96",
+      "artifact_sha256": "59114f6c66168ad7bd52e9710a4dbc732394746edc864469f4d053c6c0a1b76b",
+      "line": 3,
+      "column": 2368,
+      "detector": "call:l.get:unverified-network-receiver"
+     }
+    ]
+   },
+   {
+    "kind": "vendor_fingerprint",
+    "value": "Next.js",
+    "confidence": "high",
+    "basis": [
+     {
+      "script_key": "scr_13d11a858cb64a92c80bc1ed1797612dd2cdff002b6b0398df8f779f6acdd1cb",
+      "artifact_sha256": "06c6915261c2cc7e4c12d4eabffb39a4c813f91ab4caf0ae4dddc248c9007eca",
+      "line": null,
+      "column": null,
+      "detector": "next-runtime"
+     }
+    ]
+   },
+   {
+    "kind": "vendor_fingerprint",
+    "value": "Next.js",
+    "confidence": "high",
+    "basis": [
+     {
+      "script_key": "scr_88e1612e7c1d1181625effad65533d660550831119622e71a2c4f3adf686face",
+      "artifact_sha256": "1079ba438948e40938666aced2962fa4f33a108eba4679c6819ecf0c09a42b57",
+      "line": null,
+      "column": null,
+      "detector": "next-runtime"
+     }
+    ]
+   },
+   {
+    "kind": "vendor_fingerprint",
+    "value": "Next.js",
+    "confidence": "high",
+    "basis": [
+     {
+      "script_key": "scr_a8a4f44cd766a503e054f9fd4c497134f9ba485e7b798fa9d35e333dd565cfda",
+      "artifact_sha256": "189be9dc92acfe3bdb3d14cded9df522ee679a6c9c94c4a13c821d7b55480bb7",
+      "line": null,
+      "column": null,
+      "detector": "next-runtime"
+     }
+    ]
+   },
+   {
+    "kind": "vendor_fingerprint",
+    "value": "React",
+    "confidence": "medium",
+    "basis": [
+     {
+      "script_key": "scr_e247b608b126d130fb7978d58f9e3b1eb04400335111c1ebd4709ee42012289a",
+      "artifact_sha256": "8f68f227b1f45ad9dde59e6d35dd7491c315d9bb9a2092e600fb53a72698f8aa",
+      "line": null,
+      "column": null,
+      "detector": "react-runtime"
+     }
+    ]
+   }
+  ]
+ },
+ "network": {
+  "loadEventMs": 3152,
+  "requests": 34,
+  "bytes": 6969134,
+  "byType": {
+   "Document": {
+    "requests": 1,
+    "bytes": 5808
+   },
+   "Other": {
+    "requests": 2,
+    "bytes": 2673
+   },
+   "Script": {
+    "requests": 14,
+    "bytes": 280480
+   },
+   "Stylesheet": {
+    "requests": 8,
+    "bytes": 26827
+   },
+   "Image": {
+    "requests": 4,
+    "bytes": 6557865
+   },
+   "Media": {
+    "requests": 1,
+    "bytes": 0
+   },
+   "Font": {
+    "requests": 4,
+    "bytes": 95481
+   }
+  },
+  "protocols": [
+   "h3"
+  ],
+  "scriptHosts": [
+   "enviory.com"
+  ],
+  "scriptFiles": [
+   "37izdbtglmhkm.js",
+   "36yaqkidkk98p.js",
+   "1omje1ehw_sx_.js",
+   "3zktz-1ygh6sy.js",
+   "2g4do3umo1kha.js",
+   "2tk6_dlthosge.js",
+   "turbopack-2vykj9ofcp5cd.js",
+   "1q4itoff--b7w.js",
+   "1lb0u7w33nck_.js",
+   "3oo74yffkypsg.js",
+   "3dhiri9lsfnla.js",
+   "0xwbes2ghrovd.js",
+   "37wszccyjscxh.js",
+   "1al9ix1ezx7ws.js"
+  ],
+  "fontFiles": [
+   {
+    "host": "fonts.gstatic.com",
+    "file": "u-4-0qaujRI2Pbsn2NhnsS5mew.woff2",
+    "bytes": 10779
+   },
+   {
+    "host": "enviory.com",
+    "file": "normal.woff2",
+    "bytes": 35375
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "u-490qaujRI2PbsvB_xynAxrUQRBXw.woff2",
+    "bytes": 10835
+   },
+   {
+    "host": "fonts.gstatic.com",
+    "file": "nuFiD-vYSZviVYUb_rj3ij__anPXDTzYgEM86xQ.woff2",
+    "bytes": 38492
+   }
+  ],
+  "thirdPartyHosts": [
+   "fonts.googleapis.com",
+   "fonts.gstatic.com"
+  ]
+ },
+ "structure": {
+  "coverClicked": false,
+  "beforeOpen": {
+   "sectionCount": 1,
+   "features": {
+    "coverGate": false,
+    "toGuest": false,
+    "countdown": false,
+    "rsvp": false,
+    "wishes": false,
+    "gift": false,
+    "copyButton": false,
+    "maps": false,
+    "calendar": false,
+    "livestream": false,
+    "qr": false,
+    "loveStory": false,
+    "gallery": false,
+    "dressCode": false,
+    "quranVerse": false,
+    "protocol": false,
+    "timezoneLabel": [],
+    "watermark": false,
+    "instagramFilter": false,
+    "musicControl": false
+   },
+   "buttons": [
+    "✎Ganti Data"
+   ]
+  },
+  "afterOpen": {
+   "title": "[name] [name] [name] & [name] [name] [name] — Undangan Pe…",
+   "lang": "id",
+   "generator": null,
+   "viewport": "width=device-width, initial-scale=1, maximum-scale=5",
+   "og": {
+    "image": true,
+    "title": true,
+    "description": true
+   },
+   "reducedMotionCss": true,
+   "libs": {
+    "gsap": false,
+    "scrollTrigger": false,
+    "aos": false,
+    "animateCss": false,
+    "wow": false,
+    "swiper": false,
+    "slick": false,
+    "owl": false,
+    "lottie": false,
+    "three": false,
+    "pixi": false,
+    "anime": false,
+    "motionOne": false,
+    "howler": false,
+    "jquery": false,
+    "bootstrap": false,
+    "tailwind": false,
+    "alpine": false,
+    "vue": false,
+    "nuxt": false,
+    "next": true,
+    "react": false,
+    "svelte": false,
+    "flutterWeb": false,
+    "wordpress": false,
+    "elementor": false,
+    "livewire": false,
+    "inertia": false
+   },
+   "sections": [
+    {
+     "tag": "section",
+     "id": "",
+     "cls": "Gate-module__hUE29a__scene",
+     "heading": "",
+     "h": 915
+    }
+   ],
+   "sectionCount": 1,
+   "buttons": [
+    "✎Ganti Data"
+   ],
+   "media": {
+    "audio": [
+     {
+      "autoplay": false,
+      "loop": true,
+      "type": "mp3"
+     }
+    ],
+    "video": 0,
+    "iframes": [],
+    "canvases": 0,
+    "svgs": 1,
+    "images": 5,
+    "lazyImages": 0
+   },
+   "forms": [],
+   "fontsUsed": [
+    "Halant",
+    "Playfair Display",
+    "Ballet"
+   ],
+   "features": {
+    "coverGate": false,
+    "toGuest": true,
+    "countdown": false,
+    "rsvp": false,
+    "wishes": false,
+    "gift": false,
+    "copyButton": false,
+    "maps": false,
+    "calendar": false,
+    "livestream": false,
+    "qr": false,
+    "loveStory": false,
+    "gallery": false,
+    "dressCode": false,
+    "quranVerse": false,
+    "protocol": false,
+    "timezoneLabel": [],
+    "watermark": false,
+    "instagramFilter": false,
+    "musicControl": false
+   },
+   "domNodes": 130,
+   "docHeight": 915
+  }
+ },
+ "lighthouse": {
+  "ok": true,
+  "lighthouseVersion": "12.8.2",
+  "finalUrl": "https://enviory.com/rdct-6687484a60?tpl=rocaille",
+  "throttling": {
+   "rttMs": 150,
+   "throughputKbps": 1638.4,
+   "requestLatencyMs": 562.5,
+   "downloadThroughputKbps": 1474.5600000000002,
+   "uploadThroughputKbps": 675,
+   "cpuSlowdownMultiplier": 4
+  },
+  "screen": {
+   "mobile": true,
+   "width": 412,
+   "height": 915,
+   "deviceScaleFactor": 2.625,
+   "disabled": false
+  },
+  "scores": {
+   "performance": 43,
+   "accessibility": 100,
+   "best-practices": 79,
+   "seo": 54
+  },
+  "metrics": {
+   "fcpMs": 4251.887999999999,
+   "lcpMs": 56443.54699999999,
+   "tbtMs": 641,
+   "cls": 0,
+   "siMs": 8053.708458782112,
+   "ttiMs": 56489.88619999999
+  },
+  "byType": {
+   "total": {
+    "requests": 37,
+    "bytes": 10504565
+   },
+   "image": {
+    "requests": 4,
+    "bytes": 6557870
+   },
+   "media": {
+    "requests": 1,
+    "bytes": 3521990
+   },
+   "script": {
+    "requests": 15,
+    "bytes": 296821
+   },
+   "font": {
+    "requests": 4,
+    "bytes": 95482
+   },
+   "stylesheet": {
+    "requests": 8,
+    "bytes": 22298
+   },
+   "document": {
+    "requests": 1,
+    "bytes": 6335
+   },
+   "other": {
+    "requests": 4,
+    "bytes": 3769
+   },
+   "third-party": {
+    "requests": 4,
+    "bytes": 61610
+   }
+  },
+  "totalBytes": 10511018,
+  "requests": 37,
+  "thirdParties": [
+   {
+    "entity": "Google Fonts",
+    "bytes": 61610,
+    "blockingMs": 0
+   }
+  ],
+  "fontDisplayIssues": 0,
+  "unusedJsBytes": 77000,
+  "a11yFailures": []
+ },
+ "files": {
+  "rea-inspect.json": "b1af3343183d7295aa1064068cc0f2e58bbf3367c3ae7e0b55a6e0e681aed8f0",
+  "rea-bundle.json": "dabde54c1c2ecd82f3827600f8c45e94509d042d925919fd65e32db9d988603c",
+  "_private/lh/C-ENV-112.json": "e52ab572491421e82aa3dfc50d6005bd148e18d5af6f724e195a7f16fe487d11"
+ },
+ "screenshot": "_private/thumbs (competitor, not committed)"
+}

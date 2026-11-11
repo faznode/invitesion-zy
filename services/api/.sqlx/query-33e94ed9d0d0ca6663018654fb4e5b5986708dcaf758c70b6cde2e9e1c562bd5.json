@@ -1,0 +1,30 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "update guests set invited_event_ids = nullif(invited_event_ids - $2::text, '[]'::jsonb) where invitation_id = $1 and (case when $3::text = '' then (category is null or category = '') else category = $3::text end) and coalesce(invited_event_ids, '[]'::jsonb) ? $2::text returning id",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "id",
+        "type_info": "Int4",
+        "origin": {
+          "Table": {
+            "table": "guests",
+            "name": "id"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Left": [
+        "Int4",
+        "Text",
+        "Text"
+      ]
+    },
+    "nullable": [
+      false
+    ]
+  },
+  "hash": "33e94ed9d0d0ca6663018654fb4e5b5986708dcaf758c70b6cde2e9e1c562bd5"
+}

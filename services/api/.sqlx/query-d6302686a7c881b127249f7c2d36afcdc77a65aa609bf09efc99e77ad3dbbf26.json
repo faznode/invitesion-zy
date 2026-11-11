@@ -1,0 +1,28 @@
+{
+  "db_name": "PostgreSQL",
+  "query": "select slug from invitations where slug = any($1)",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "slug",
+        "type_info": "Varchar",
+        "origin": {
+          "Table": {
+            "table": "invitations",
+            "name": "slug"
+          }
+        }
+      }
+    ],
+    "parameters": {
+      "Left": [
+        "TextArray"
+      ]
+    },
+    "nullable": [
+      false
+    ]
+  },
+  "hash": "d6302686a7c881b127249f7c2d36afcdc77a65aa609bf09efc99e77ad3dbbf26"
+}
